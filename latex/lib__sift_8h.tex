@@ -1,0 +1,157 @@
+\hypertarget{lib__sift_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+sift.h File Reference}
+\label{lib__sift_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+sift.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+sift.\+h}}
+
+
+The S\+I\+F\+T algorithmic chain.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for lib\+\_\+sift.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std}
+\begin{DoxyCompactList}\small\item\em the S\+I\+F\+T keypoint structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$ \hyperlink{lib__sift_8h_a6790d214eee136584171a7ff51788ed5}{sift\+\_\+compute\+\_\+points} (const float $\ast$x, int w, int h, int $\ast$n)
+\begin{DoxyCompactList}\small\item\em \+: compute the keypoints of an image (position, scale and orientation) Does not extract the S\+I\+F\+T descriptor \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift_8h_a4369f5c4f65d136cd91f083b26ee630c}{sift\+\_\+fill\+\_\+descriptors} (const float $\ast$x, int w, int h, struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$k, int n)
+\begin{DoxyCompactList}\small\item\em \+: compute the descriptors of a given set of oriented keypoints \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift_8h_a60ec07f15311f3348b8a3bd136262710}{sift\+\_\+find\+\_\+ori\+\_\+and\+\_\+fill\+\_\+descriptors} (const float $\ast$x, int w, int h, struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$k, int n)
+\begin{DoxyCompactList}\small\item\em \+: compute the descriptors of a given set of oriented keypoints \end{DoxyCompactList}\item 
+struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$ \hyperlink{lib__sift_8h_a5dfa56708b2b2856c2d278f1c9e02526}{sift\+\_\+compute\+\_\+features} (const float $\ast$x, int w, int h, int $\ast$n)
+\begin{DoxyCompactList}\small\item\em \+: compute keypoints and their descriptors (The standard S\+I\+F\+T method) \end{DoxyCompactList}\item 
+struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$ \hyperlink{lib__sift_8h_a5b62fe2f4bcb5e7360a5f865c70c15cb}{sift\+\_\+read\+\_\+from\+\_\+file} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, int $\ast$n)
+\item 
+struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$ \hyperlink{lib__sift_8h_a4704b31769dd8df94184d01951c7b4c8}{sift\+\_\+read\+\_\+keyslocation\+\_\+from\+\_\+file} (char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, int $\ast$n)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift_8h_a2adc0438755d58ff5457d9b9e5407036}{sift\+\_\+write\+\_\+to\+\_\+file} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$k, int n)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift_8h_a123c24ece16c9d407380a63ae2f639ef}{fprintf\+\_\+keypoint\+\_\+std} (F\+I\+L\+E $\ast$f, const struct \hyperlink{structsift__keypoint__std}{sift\+\_\+keypoint\+\_\+std} $\ast$k, int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The S\+I\+F\+T algorithmic chain. 
+
+\begin{DoxyAuthor}{Author}
+Ives Rey-\/\+Otero \href{mailto:ivesreyotero@gmail.com}{\tt ivesreyotero@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__sift_8h_a123c24ece16c9d407380a63ae2f639ef}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!fprintf\+\_\+keypoint\+\_\+std@{fprintf\+\_\+keypoint\+\_\+std}}
+\index{fprintf\+\_\+keypoint\+\_\+std@{fprintf\+\_\+keypoint\+\_\+std}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{fprintf\+\_\+keypoint\+\_\+std}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} fprintf\+\_\+keypoint\+\_\+std (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f, }
+\item[{const struct {\bf sift\+\_\+keypoint\+\_\+std} $\ast$}]{k, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a123c24ece16c9d407380a63ae2f639ef}
+\hypertarget{lib__sift_8h_a5dfa56708b2b2856c2d278f1c9e02526}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!sift\+\_\+compute\+\_\+features@{sift\+\_\+compute\+\_\+features}}
+\index{sift\+\_\+compute\+\_\+features@{sift\+\_\+compute\+\_\+features}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{sift\+\_\+compute\+\_\+features}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+keypoint\+\_\+std}$\ast$ sift\+\_\+compute\+\_\+features (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a5dfa56708b2b2856c2d278f1c9e02526}
+
+
+\+: compute keypoints and their descriptors (The standard S\+I\+F\+T method) 
+
+\+: compute keypoints and their descriptors (The standard S\+I\+F\+T method) assign default parameters
+
+Memory dynamic allocation
+
+Algorithm \hypertarget{lib__sift_8h_a6790d214eee136584171a7ff51788ed5}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!sift\+\_\+compute\+\_\+points@{sift\+\_\+compute\+\_\+points}}
+\index{sift\+\_\+compute\+\_\+points@{sift\+\_\+compute\+\_\+points}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{sift\+\_\+compute\+\_\+points}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+keypoint\+\_\+std}$\ast$ sift\+\_\+compute\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a6790d214eee136584171a7ff51788ed5}
+
+
+\+: compute the keypoints of an image (position, scale and orientation) Does not extract the S\+I\+F\+T descriptor 
+
+x input image of dimensions w  h
+
+n points to the integer that stores the number of extracted keypoints.
+
+\+: compute the keypoints of an image (position, scale and orientation) Does not extract the S\+I\+F\+T descriptor assign default parameters
+
+Memory dynamic allocation
+
+Algorithm \hypertarget{lib__sift_8h_a4369f5c4f65d136cd91f083b26ee630c}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!sift\+\_\+fill\+\_\+descriptors@{sift\+\_\+fill\+\_\+descriptors}}
+\index{sift\+\_\+fill\+\_\+descriptors@{sift\+\_\+fill\+\_\+descriptors}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{sift\+\_\+fill\+\_\+descriptors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+fill\+\_\+descriptors (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{struct {\bf sift\+\_\+keypoint\+\_\+std} $\ast$}]{k, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a4369f5c4f65d136cd91f083b26ee630c}
+
+
+\+: compute the descriptors of a given set of oriented keypoints 
+
+The oriented keypoints are provided by the user as a flat list of keypoint structure.
+
+\+: compute the descriptors of a given set of oriented keypoints assign default parameters
+
+algorithm \hypertarget{lib__sift_8h_a60ec07f15311f3348b8a3bd136262710}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!sift\+\_\+find\+\_\+ori\+\_\+and\+\_\+fill\+\_\+descriptors@{sift\+\_\+find\+\_\+ori\+\_\+and\+\_\+fill\+\_\+descriptors}}
+\index{sift\+\_\+find\+\_\+ori\+\_\+and\+\_\+fill\+\_\+descriptors@{sift\+\_\+find\+\_\+ori\+\_\+and\+\_\+fill\+\_\+descriptors}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{sift\+\_\+find\+\_\+ori\+\_\+and\+\_\+fill\+\_\+descriptors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+find\+\_\+ori\+\_\+and\+\_\+fill\+\_\+descriptors (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{struct {\bf sift\+\_\+keypoint\+\_\+std} $\ast$}]{k, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a60ec07f15311f3348b8a3bd136262710}
+
+
+\+: compute the descriptors of a given set of oriented keypoints 
+
+The keypoints are provided by the user as a flat list of keypoint structure. The routine computes one principal orientation and one descriptor per keypoint. assign default parameters
+
+algorithm \hypertarget{lib__sift_8h_a5b62fe2f4bcb5e7360a5f865c70c15cb}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!sift\+\_\+read\+\_\+from\+\_\+file@{sift\+\_\+read\+\_\+from\+\_\+file}}
+\index{sift\+\_\+read\+\_\+from\+\_\+file@{sift\+\_\+read\+\_\+from\+\_\+file}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{sift\+\_\+read\+\_\+from\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+keypoint\+\_\+std}$\ast$ sift\+\_\+read\+\_\+from\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a5b62fe2f4bcb5e7360a5f865c70c15cb}
+\hypertarget{lib__sift_8h_a4704b31769dd8df94184d01951c7b4c8}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!sift\+\_\+read\+\_\+keyslocation\+\_\+from\+\_\+file@{sift\+\_\+read\+\_\+keyslocation\+\_\+from\+\_\+file}}
+\index{sift\+\_\+read\+\_\+keyslocation\+\_\+from\+\_\+file@{sift\+\_\+read\+\_\+keyslocation\+\_\+from\+\_\+file}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{sift\+\_\+read\+\_\+keyslocation\+\_\+from\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+keypoint\+\_\+std}$\ast$ sift\+\_\+read\+\_\+keyslocation\+\_\+from\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{int $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a4704b31769dd8df94184d01951c7b4c8}
+\hypertarget{lib__sift_8h_a2adc0438755d58ff5457d9b9e5407036}{}\index{lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}!sift\+\_\+write\+\_\+to\+\_\+file@{sift\+\_\+write\+\_\+to\+\_\+file}}
+\index{sift\+\_\+write\+\_\+to\+\_\+file@{sift\+\_\+write\+\_\+to\+\_\+file}!lib\+\_\+sift.\+h@{lib\+\_\+sift.\+h}}
+\subsubsection[{sift\+\_\+write\+\_\+to\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+write\+\_\+to\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const struct {\bf sift\+\_\+keypoint\+\_\+std} $\ast$}]{k, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{lib__sift_8h_a2adc0438755d58ff5457d9b9e5407036}

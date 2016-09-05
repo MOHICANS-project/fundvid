@@ -1,0 +1,107 @@
+\hypertarget{jdapimin_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jdapimin.c File Reference}
+\label{jdapimin_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdapimin.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdapimin.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jdapimin.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jdapimin_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jdapimin_8c_a02b5c7eb58970a07cae85ffdcda9085d}{jpeg\+\_\+\+Create\+Decompress} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, int \hyperlink{jpeglib_8h_aad880fc4455c253781e8968f2239d56f}{version}, size\+\_\+t \hyperlink{jpeglib_8h_a9885948328df3b903394d3c36c4b632a}{structsize})
+\item 
+\hyperlink{jdapimin_8c_a5316489bc33f1996f960cbeccaf69f22}{jpeg\+\_\+destroy\+\_\+decompress} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdapimin_8c_a2cab10bfd64143fbc3d9b47e1884c01f}{jpeg\+\_\+abort\+\_\+decompress} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdapimin_8c_a232b092a5e71a301e1bf1ca208c311bd}{default\+\_\+decompress\+\_\+parms} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdapimin_8c_a9e2c5f9c528588907486e51a8a07d8d4}{jpeg\+\_\+read\+\_\+header} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{jpeglib_8h_a9945c510a99551ddb104602ac7a08f2a}{require\+\_\+image})
+\item 
+\hyperlink{jdapimin_8c_a4b6d4668b994eebc0c7759bd50a5ff2a}{jpeg\+\_\+consume\+\_\+input} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdapimin_8c_ab1d43f7a7e46bd9fa9e30d21346f4a8e}{jpeg\+\_\+input\+\_\+complete} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdapimin_8c_a5e714de61da48d0602030f7dfe6e96b2}{jpeg\+\_\+has\+\_\+multiple\+\_\+scans} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdapimin_8c_a78d1d93b2b605b33abd47a2c922bab2c}{jpeg\+\_\+finish\+\_\+decompress} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jdapimin_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jdapimin.\+c@{jdapimin.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jdapimin_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Function Documentation}
+\hypertarget{jdapimin_8c_a232b092a5e71a301e1bf1ca208c311bd}{}\index{jdapimin.\+c@{jdapimin.\+c}!default\+\_\+decompress\+\_\+parms@{default\+\_\+decompress\+\_\+parms}}
+\index{default\+\_\+decompress\+\_\+parms@{default\+\_\+decompress\+\_\+parms}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{default\+\_\+decompress\+\_\+parms}]{\setlength{\rightskip}{0pt plus 5cm}default\+\_\+decompress\+\_\+parms (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a232b092a5e71a301e1bf1ca208c311bd}
+\hypertarget{jdapimin_8c_a2cab10bfd64143fbc3d9b47e1884c01f}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+abort\+\_\+decompress@{jpeg\+\_\+abort\+\_\+decompress}}
+\index{jpeg\+\_\+abort\+\_\+decompress@{jpeg\+\_\+abort\+\_\+decompress}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+abort\+\_\+decompress}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+abort\+\_\+decompress (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a2cab10bfd64143fbc3d9b47e1884c01f}
+\hypertarget{jdapimin_8c_a4b6d4668b994eebc0c7759bd50a5ff2a}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+consume\+\_\+input@{jpeg\+\_\+consume\+\_\+input}}
+\index{jpeg\+\_\+consume\+\_\+input@{jpeg\+\_\+consume\+\_\+input}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+consume\+\_\+input}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+consume\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a4b6d4668b994eebc0c7759bd50a5ff2a}
+\hypertarget{jdapimin_8c_a02b5c7eb58970a07cae85ffdcda9085d}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+\+Create\+Decompress@{jpeg\+\_\+\+Create\+Decompress}}
+\index{jpeg\+\_\+\+Create\+Decompress@{jpeg\+\_\+\+Create\+Decompress}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+\+Create\+Decompress}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+\+Create\+Decompress (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{int}]{version, }
+\item[{size\+\_\+t}]{structsize}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a02b5c7eb58970a07cae85ffdcda9085d}
+\hypertarget{jdapimin_8c_a5316489bc33f1996f960cbeccaf69f22}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+destroy\+\_\+decompress@{jpeg\+\_\+destroy\+\_\+decompress}}
+\index{jpeg\+\_\+destroy\+\_\+decompress@{jpeg\+\_\+destroy\+\_\+decompress}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+destroy\+\_\+decompress}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+destroy\+\_\+decompress (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a5316489bc33f1996f960cbeccaf69f22}
+\hypertarget{jdapimin_8c_a78d1d93b2b605b33abd47a2c922bab2c}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+finish\+\_\+decompress@{jpeg\+\_\+finish\+\_\+decompress}}
+\index{jpeg\+\_\+finish\+\_\+decompress@{jpeg\+\_\+finish\+\_\+decompress}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+finish\+\_\+decompress}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+finish\+\_\+decompress (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a78d1d93b2b605b33abd47a2c922bab2c}
+\hypertarget{jdapimin_8c_a5e714de61da48d0602030f7dfe6e96b2}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+has\+\_\+multiple\+\_\+scans@{jpeg\+\_\+has\+\_\+multiple\+\_\+scans}}
+\index{jpeg\+\_\+has\+\_\+multiple\+\_\+scans@{jpeg\+\_\+has\+\_\+multiple\+\_\+scans}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+has\+\_\+multiple\+\_\+scans}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+has\+\_\+multiple\+\_\+scans (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a5e714de61da48d0602030f7dfe6e96b2}
+\hypertarget{jdapimin_8c_ab1d43f7a7e46bd9fa9e30d21346f4a8e}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+input\+\_\+complete@{jpeg\+\_\+input\+\_\+complete}}
+\index{jpeg\+\_\+input\+\_\+complete@{jpeg\+\_\+input\+\_\+complete}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+input\+\_\+complete}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+input\+\_\+complete (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_ab1d43f7a7e46bd9fa9e30d21346f4a8e}
+\hypertarget{jdapimin_8c_a9e2c5f9c528588907486e51a8a07d8d4}{}\index{jdapimin.\+c@{jdapimin.\+c}!jpeg\+\_\+read\+\_\+header@{jpeg\+\_\+read\+\_\+header}}
+\index{jpeg\+\_\+read\+\_\+header@{jpeg\+\_\+read\+\_\+header}!jdapimin.\+c@{jdapimin.\+c}}
+\subsubsection[{jpeg\+\_\+read\+\_\+header}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+read\+\_\+header (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf boolean}}]{require\+\_\+image}
+\end{DoxyParamCaption}
+)}\label{jdapimin_8c_a9e2c5f9c528588907486e51a8a07d8d4}

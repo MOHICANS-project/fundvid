@@ -1,0 +1,19 @@
+digraph "z_stream_s"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="z_stream_s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" state" ];
+  Node2 [label="internal_state",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structinternal__state.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gzhead" ];
+  Node3 [label="gz_header_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgz__header__s.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bl_desc\nl_desc\nd_desc" ];
+  Node4 [label="tree_desc_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structtree__desc__s.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" stat_desc" ];
+  Node5 [label="static_tree_desc_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstatic__tree__desc__s.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" static_tree" ];
+  Node6 [label="ct_data_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structct__data__s.html"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dyn_tree" ];
+  Node1 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" strm" ];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bl_tree\ndyn_ltree\ndyn_dtree" ];
+}

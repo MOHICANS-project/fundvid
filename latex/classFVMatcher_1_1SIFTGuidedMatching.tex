@@ -1,0 +1,126 @@
+\hypertarget{classFVMatcher_1_1SIFTGuidedMatching}{}\section{F\+V\+Matcher\+:\+:S\+I\+F\+T\+Guided\+Matching Class Reference}
+\label{classFVMatcher_1_1SIFTGuidedMatching}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching}}
+
+
+Implementation of the proposed guided S\+I\+F\+T matching strategy.  
+
+
+
+
+{\ttfamily \#include $<$sift\+\_\+guided\+\_\+matching.\+h$>$}
+
+
+
+Inheritance diagram for F\+V\+Matcher\+:\+:S\+I\+F\+T\+Guided\+Matching\+:
+% FIG 0
+
+
+Collaboration diagram for F\+V\+Matcher\+:\+:S\+I\+F\+T\+Guided\+Matching\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFVMatcher_1_1SIFTGuidedMatching_a991f0b34f3f1903d02a7ab9b9042ae25}{S\+I\+F\+T\+Guided\+Matching} (\hyperlink{classFUncertainty}{F\+Uncertainty} \&\+\_\+fu, \hyperlink{classFUncertainty}{F\+Uncertainty} \&\+\_\+fu\+\_\+inv, cv\+::\+Mat \&\+\_\+image0, cv\+::\+Mat \&\+\_\+image1, std\+::vector$<$ cv\+::\+Point2f $>$ \&\+\_\+inliers0, std\+::vector$<$ cv\+::\+Point2f $>$ \&\+\_\+inliers1, std\+::vector$<$ bool $>$ \&\+\_\+is\+\_\+core0, std\+::vector$<$ bool $>$ \&\+\_\+is\+\_\+core1, int \+\_\+depth, float \+\_\+th, double \+\_\+sigma\+\_\+high, double \+\_\+sigma\+\_\+low, double \+\_\+epsilon, double \+\_\+num\+\_\+pts, double \+\_\+k\+\_\+squared)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classFVMatcher_1_1SIFTGuidedMatching}{S\+I\+F\+T\+Guided\+Matching} constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFVMatcher_1_1SIFTGuidedMatching_a1ebeb67b04be63dce6921d47ff7507e8}{$\sim$\+S\+I\+F\+T\+Guided\+Matching} ()
+\item 
+std\+::vector$<$ \hyperlink{structFVMatcher_1_1FVMatch}{F\+V\+Matcher\+::\+F\+V\+Match} $>$ \hyperlink{classFVMatcher_1_1SIFTGuidedMatching_a007fb8fd3c1c4679ec4c34611444552a}{compute\+Matches} ()
+\begin{DoxyCompactList}\small\item\em Compute matches from the current sources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the proposed guided S\+I\+F\+T matching strategy. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFVMatcher_1_1SIFTGuidedMatching_a991f0b34f3f1903d02a7ab9b9042ae25}{}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching}!S\+I\+F\+T\+Guided\+Matching@{S\+I\+F\+T\+Guided\+Matching}}
+\index{S\+I\+F\+T\+Guided\+Matching@{S\+I\+F\+T\+Guided\+Matching}!F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching}}
+\subsubsection[{S\+I\+F\+T\+Guided\+Matching}]{\setlength{\rightskip}{0pt plus 5cm}F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching\+::\+S\+I\+F\+T\+Guided\+Matching (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Uncertainty} \&}]{\+\_\+fu, }
+\item[{{\bf F\+Uncertainty} \&}]{\+\_\+fu\+\_\+inv, }
+\item[{cv\+::\+Mat \&}]{\+\_\+image0, }
+\item[{cv\+::\+Mat \&}]{\+\_\+image1, }
+\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{\+\_\+inliers0, }
+\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{\+\_\+inliers1, }
+\item[{std\+::vector$<$ bool $>$ \&}]{\+\_\+is\+\_\+core0, }
+\item[{std\+::vector$<$ bool $>$ \&}]{\+\_\+is\+\_\+core1, }
+\item[{int}]{\+\_\+depth, }
+\item[{float}]{\+\_\+th, }
+\item[{double}]{\+\_\+sigma\+\_\+high, }
+\item[{double}]{\+\_\+sigma\+\_\+low, }
+\item[{double}]{\+\_\+epsilon, }
+\item[{double}]{\+\_\+num\+\_\+pts, }
+\item[{double}]{\+\_\+k\+\_\+squared}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classFVMatcher_1_1SIFTGuidedMatching_a991f0b34f3f1903d02a7ab9b9042ae25}
+
+
+\hyperlink{classFVMatcher_1_1SIFTGuidedMatching}{S\+I\+F\+T\+Guided\+Matching} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+fu} & uncertainty object from camera 0 to 1 \\
+\hline
+{\em \+\_\+fu\+\_\+inv} & uncertainty object from camera 1 to 0 \\
+\hline
+{\em \+\_\+image0} & image from camera 0 \\
+\hline
+{\em \+\_\+image1} & image from camera 1 \\
+\hline
+{\em \+\_\+inliers0} & inlier points from image 0 \\
+\hline
+{\em \+\_\+inliers1} & inlier points from image 1 \\
+\hline
+{\em \+\_\+is\+\_\+core0} & core points labels from image 0 \\
+\hline
+{\em \+\_\+is\+\_\+core1} & core points labels from image 1 \\
+\hline
+{\em \+\_\+depth} & depth of the knn matching stage \\
+\hline
+{\em \+\_\+th} & S\+I\+F\+T threshold \\
+\hline
+{\em \+\_\+sigma\+\_\+high} & std for highly confident epipolar bands \\
+\hline
+{\em \+\_\+sigma\+\_\+low} & std for lowly confident epipolar bands \\
+\hline
+{\em \+\_\+epsilon} & clustering parameter (radius of the neighborhood) \\
+\hline
+{\em \+\_\+num\+\_\+pts} & clustering parameter (minimum number of neighbors) \\
+\hline
+{\em \+\_\+k\+\_\+squared} & k$^\wedge$2 parameter epipolar line covariance \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFVMatcher_1_1SIFTGuidedMatching_a1ebeb67b04be63dce6921d47ff7507e8}{}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching}!````~S\+I\+F\+T\+Guided\+Matching@{$\sim$\+S\+I\+F\+T\+Guided\+Matching}}
+\index{````~S\+I\+F\+T\+Guided\+Matching@{$\sim$\+S\+I\+F\+T\+Guided\+Matching}!F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching}}
+\subsubsection[{$\sim$\+S\+I\+F\+T\+Guided\+Matching}]{\setlength{\rightskip}{0pt plus 5cm}virtual F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching\+::$\sim$\+S\+I\+F\+T\+Guided\+Matching (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classFVMatcher_1_1SIFTGuidedMatching_a1ebeb67b04be63dce6921d47ff7507e8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFVMatcher_1_1SIFTGuidedMatching_a007fb8fd3c1c4679ec4c34611444552a}{}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching}!compute\+Matches@{compute\+Matches}}
+\index{compute\+Matches@{compute\+Matches}!F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching}}
+\subsubsection[{compute\+Matches}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf F\+V\+Matcher\+::\+F\+V\+Match} $>$ F\+V\+Matcher\+::\+S\+I\+F\+T\+Guided\+Matching\+::compute\+Matches (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classFVMatcher_1_1SIFTGuidedMatching_a007fb8fd3c1c4679ec4c34611444552a}
+
+
+Compute matches from the current sources. 
+
+\begin{DoxyReturn}{Returns}
+vector of matches 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classFVMatcher_1_1AbstractMatcher_a201dc53542e0d9a10a08f8418b55d20a}{F\+V\+Matcher\+::\+Abstract\+Matcher}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/matchers/\hyperlink{sift__guided__matching_8h}{sift\+\_\+guided\+\_\+matching.\+h}\item 
+src/matchers/\hyperlink{sift__guided__matching_8cpp}{sift\+\_\+guided\+\_\+matching.\+cpp}\end{DoxyCompactItemize}

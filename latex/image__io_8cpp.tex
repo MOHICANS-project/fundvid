@@ -1,0 +1,57 @@
+\hypertarget{image__io_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/lib\+Image/image\+\_\+io.cpp File Reference}
+\label{image__io_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/lib\+Image/image\+\_\+io.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/lib\+Image/image\+\_\+io.\+cpp}}
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}png.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/demo/lib\+Image/image\+\_\+io.\+hpp\char`\"{}}\\*
+Include dependency graph for image\+\_\+io.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlibs_1_1my__error__mgr}{libs\+::my\+\_\+error\+\_\+mgr}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibs}{libs}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Format \hyperlink{namespacelibs_ab1c6acb4edc87092a77e374b1f60437d}{libs\+::\+Get\+Format} (const char $\ast$c)
+\item 
+int \hyperlink{namespacelibs_a22deb9b91e45d9bdd4c133844a9b3628}{libs\+::\+Read\+Image} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a5a6ca9606546052cbf2f57eb2569a7a6}{libs\+::\+Write\+Image} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&ptr, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a20d071ac9b7e93b2c73fea6c5cb82ecf}{libs\+::\+Read\+Jpg} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+\hyperlink{namespacelibs_ae3d9972f22717e1b37bfb1c1bb4ff9ce}{libs\+::jpeg\+\_\+error} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo)
+\item 
+int \hyperlink{namespacelibs_a78d4f9dec931d81700309eb2f55e0524}{libs\+::\+Read\+Jpg\+Stream} (F\+I\+L\+E $\ast$file, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_ae167e9755ed191d274866519b1f1f0f3}{libs\+::\+Write\+Jpg} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality})
+\item 
+int \hyperlink{namespacelibs_ac031313b64f4a38adfd703fb1fcf84a0}{libs\+::\+Write\+Jpg\+Stream} (F\+I\+L\+E $\ast$file, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality})
+\item 
+int \hyperlink{namespacelibs_aef3395c9397fc7be44b6f7fb79220b94}{libs\+::\+Read\+Png} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_afc37a774666cd905d9fd7e46628feb35}{libs\+::\+Read\+Png\+Stream} (F\+I\+L\+E $\ast$file, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a21882f6f7752c1720a05412cb3e8b4bc}{libs\+::\+Write\+Png} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&ptr, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a0a38559601a8a00a5fa2500a2fb35d70}{libs\+::\+Write\+Png\+Stream} (F\+I\+L\+E $\ast$file, const vector$<$ unsigned char $>$ \&ptr, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a1c80ecbaf84e21c204664a539cd96f92}{libs\+::\+Read\+Pnm} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$array, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_ab921438155ebe348b31d5cb46490a343}{libs\+::\+Read\+Pnm\+Stream} (F\+I\+L\+E $\ast$file, vector$<$ unsigned char $>$ $\ast$array, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a35c75283787ee9dd136cf9121a45bafd}{libs\+::\+Write\+Pnm} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a11a9140d37cc5169fa8892657e31a941}{libs\+::\+Write\+Pnm\+Stream} (F\+I\+L\+E $\ast$file, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{structz__stream__s}{}\section{z\+\_\+stream\+\_\+s Struct Reference}
+\label{structz__stream__s}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+
+
+{\ttfamily \#include $<$zlib.\+h$>$}
+
+
+
+Collaboration diagram for z\+\_\+stream\+\_\+s\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+z\+\_\+const Bytef $\ast$ \hyperlink{structz__stream__s_a71613678076af3a9a4bb28d51a146150}{next\+\_\+in}
+\item 
+u\+Int \hyperlink{structz__stream__s_a0cf177f50dbb49692f27480cbcfde794}{avail\+\_\+in}
+\item 
+u\+Long \hyperlink{structz__stream__s_aa8f408b9632737dc21519fa1ed34b08d}{total\+\_\+in}
+\item 
+Bytef $\ast$ \hyperlink{structz__stream__s_aed4a02cfe93e975314fed50b04427bf3}{next\+\_\+out}
+\item 
+u\+Int \hyperlink{structz__stream__s_a45ad2364307af9d944fd39d4eca3ca3c}{avail\+\_\+out}
+\item 
+u\+Long \hyperlink{structz__stream__s_abae26f1f236cf920250b9d37fdf009c1}{total\+\_\+out}
+\item 
+z\+\_\+const char $\ast$ \hyperlink{structz__stream__s_af116e1f45cb4399c0568b23b3e8b8c16}{msg}
+\item 
+struct \hyperlink{structinternal__state}{internal\+\_\+state} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$ \hyperlink{structz__stream__s_ac4a114217a1868dc6fbe7d1f5bda126b}{state}
+\item 
+alloc\+\_\+func \hyperlink{structz__stream__s_a23a2299c384f808e76e9908f21216b0f}{zalloc}
+\item 
+free\+\_\+func \hyperlink{structz__stream__s_a89eb750ade7f4f0b56bfdadf13344982}{zfree}
+\item 
+voidpf \hyperlink{structz__stream__s_ab72467f908d2ce65d5b42ee6556ef8bb}{opaque}
+\item 
+int \hyperlink{structz__stream__s_a9d8f63877d7639a8bca60f9fc3704fc4}{data\+\_\+type}
+\item 
+u\+Long \hyperlink{structz__stream__s_ade2217fe31e671be1257731883201223}{adler}
+\item 
+u\+Long \hyperlink{structz__stream__s_add73791dd19b49c9c68f3f3d328c37db}{reserved}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structz__stream__s_ade2217fe31e671be1257731883201223}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!adler@{adler}}
+\index{adler@{adler}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{adler}]{\setlength{\rightskip}{0pt plus 5cm}u\+Long z\+\_\+stream\+\_\+s\+::adler}\label{structz__stream__s_ade2217fe31e671be1257731883201223}
+\hypertarget{structz__stream__s_a0cf177f50dbb49692f27480cbcfde794}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!avail\+\_\+in@{avail\+\_\+in}}
+\index{avail\+\_\+in@{avail\+\_\+in}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{avail\+\_\+in}]{\setlength{\rightskip}{0pt plus 5cm}u\+Int z\+\_\+stream\+\_\+s\+::avail\+\_\+in}\label{structz__stream__s_a0cf177f50dbb49692f27480cbcfde794}
+\hypertarget{structz__stream__s_a45ad2364307af9d944fd39d4eca3ca3c}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!avail\+\_\+out@{avail\+\_\+out}}
+\index{avail\+\_\+out@{avail\+\_\+out}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{avail\+\_\+out}]{\setlength{\rightskip}{0pt plus 5cm}u\+Int z\+\_\+stream\+\_\+s\+::avail\+\_\+out}\label{structz__stream__s_a45ad2364307af9d944fd39d4eca3ca3c}
+\hypertarget{structz__stream__s_a9d8f63877d7639a8bca60f9fc3704fc4}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!data\+\_\+type@{data\+\_\+type}}
+\index{data\+\_\+type@{data\+\_\+type}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{data\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}int z\+\_\+stream\+\_\+s\+::data\+\_\+type}\label{structz__stream__s_a9d8f63877d7639a8bca60f9fc3704fc4}
+\hypertarget{structz__stream__s_af116e1f45cb4399c0568b23b3e8b8c16}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!msg@{msg}}
+\index{msg@{msg}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{msg}]{\setlength{\rightskip}{0pt plus 5cm}z\+\_\+const char$\ast$ z\+\_\+stream\+\_\+s\+::msg}\label{structz__stream__s_af116e1f45cb4399c0568b23b3e8b8c16}
+\hypertarget{structz__stream__s_a71613678076af3a9a4bb28d51a146150}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!next\+\_\+in@{next\+\_\+in}}
+\index{next\+\_\+in@{next\+\_\+in}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{next\+\_\+in}]{\setlength{\rightskip}{0pt plus 5cm}z\+\_\+const Bytef$\ast$ z\+\_\+stream\+\_\+s\+::next\+\_\+in}\label{structz__stream__s_a71613678076af3a9a4bb28d51a146150}
+\hypertarget{structz__stream__s_aed4a02cfe93e975314fed50b04427bf3}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!next\+\_\+out@{next\+\_\+out}}
+\index{next\+\_\+out@{next\+\_\+out}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{next\+\_\+out}]{\setlength{\rightskip}{0pt plus 5cm}Bytef$\ast$ z\+\_\+stream\+\_\+s\+::next\+\_\+out}\label{structz__stream__s_aed4a02cfe93e975314fed50b04427bf3}
+\hypertarget{structz__stream__s_ab72467f908d2ce65d5b42ee6556ef8bb}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!opaque@{opaque}}
+\index{opaque@{opaque}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{opaque}]{\setlength{\rightskip}{0pt plus 5cm}voidpf z\+\_\+stream\+\_\+s\+::opaque}\label{structz__stream__s_ab72467f908d2ce65d5b42ee6556ef8bb}
+\hypertarget{structz__stream__s_add73791dd19b49c9c68f3f3d328c37db}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!reserved@{reserved}}
+\index{reserved@{reserved}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}u\+Long z\+\_\+stream\+\_\+s\+::reserved}\label{structz__stream__s_add73791dd19b49c9c68f3f3d328c37db}
+\hypertarget{structz__stream__s_ac4a114217a1868dc6fbe7d1f5bda126b}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!state@{state}}
+\index{state@{state}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf internal\+\_\+state} {\bf F\+A\+R}$\ast$ z\+\_\+stream\+\_\+s\+::state}\label{structz__stream__s_ac4a114217a1868dc6fbe7d1f5bda126b}
+\hypertarget{structz__stream__s_aa8f408b9632737dc21519fa1ed34b08d}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!total\+\_\+in@{total\+\_\+in}}
+\index{total\+\_\+in@{total\+\_\+in}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{total\+\_\+in}]{\setlength{\rightskip}{0pt plus 5cm}u\+Long z\+\_\+stream\+\_\+s\+::total\+\_\+in}\label{structz__stream__s_aa8f408b9632737dc21519fa1ed34b08d}
+\hypertarget{structz__stream__s_abae26f1f236cf920250b9d37fdf009c1}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!total\+\_\+out@{total\+\_\+out}}
+\index{total\+\_\+out@{total\+\_\+out}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{total\+\_\+out}]{\setlength{\rightskip}{0pt plus 5cm}u\+Long z\+\_\+stream\+\_\+s\+::total\+\_\+out}\label{structz__stream__s_abae26f1f236cf920250b9d37fdf009c1}
+\hypertarget{structz__stream__s_a23a2299c384f808e76e9908f21216b0f}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!zalloc@{zalloc}}
+\index{zalloc@{zalloc}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{zalloc}]{\setlength{\rightskip}{0pt plus 5cm}alloc\+\_\+func z\+\_\+stream\+\_\+s\+::zalloc}\label{structz__stream__s_a23a2299c384f808e76e9908f21216b0f}
+\hypertarget{structz__stream__s_a89eb750ade7f4f0b56bfdadf13344982}{}\index{z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}!zfree@{zfree}}
+\index{zfree@{zfree}!z\+\_\+stream\+\_\+s@{z\+\_\+stream\+\_\+s}}
+\subsubsection[{zfree}]{\setlength{\rightskip}{0pt plus 5cm}free\+\_\+func z\+\_\+stream\+\_\+s\+::zfree}\label{structz__stream__s_a89eb750ade7f4f0b56bfdadf13344982}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/\hyperlink{zlib_8h}{zlib.\+h}\end{DoxyCompactItemize}

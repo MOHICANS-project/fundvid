@@ -1,0 +1,24 @@
+\hypertarget{libOrsa_2libNumerics_2numerics_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/lib\+Numerics/numerics.h File Reference}
+\label{libOrsa_2libNumerics_2numerics_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/lib\+Numerics/numerics.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/lib\+Numerics/numerics.\+h}}
+{\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\\*
+Include dependency graph for numerics.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlibNumerics_1_1SVD}{lib\+Numerics\+::\+S\+V\+D}
+\begin{DoxyCompactList}\small\item\em Singular Value Decomposition\+: U diag(\+D) V, U in O(m), V in O(n), D$>$=0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibNumerics}{lib\+Numerics}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespacelibNumerics_a83b960893bb9aaf17a880a15b4a02e61}{lib\+Numerics\+::solve\+L\+U} (const matrix$<$ flnum $>$ \&A, const vector$<$ flnum $>$ \&B, vector$<$ flnum $>$ \&X)
+\begin{DoxyCompactList}\small\item\em Resolution by L\+U decomposition with pivot. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacelibNumerics_ac993a04d2694e745c733feea22111a48}{lib\+Numerics\+::solve\+L\+U} (matrix$<$ flnum $>$ A, vector$<$ flnum $>$ \&X)
+\begin{DoxyCompactList}\small\item\em Replace X by A$^\wedge$\{-\/1\}X, by L\+U solver. \end{DoxyCompactList}\end{DoxyCompactItemize}

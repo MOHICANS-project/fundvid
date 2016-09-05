@@ -1,0 +1,198 @@
+\hypertarget{jutils_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jutils.c File Reference}
+\label{jutils_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jutils.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jutils.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jutils.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jutils_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\item 
+\#define \hyperlink{jutils_8c_a086eb1567ada82ad0a5fd1aba51de759}{F\+M\+E\+M\+C\+O\+P\+Y}(dest,  src,  size)~\hyperlink{jinclude_8h_a7667d1f5e2470cb2a98c26e1d61cf35a}{M\+E\+M\+C\+O\+P\+Y}(dest,src,size)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jutils_8c_a0c5aa3b56cb24dd9ed819c8252c61b80}{jdiv\+\_\+round\+\_\+up} (long a, long \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b})
+\item 
+\hyperlink{jutils_8c_a9f91b295901b3868694a217759d073c4}{jround\+\_\+up} (long a, long \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b})
+\item 
+\hyperlink{jutils_8c_ae2a8a73df80d5302a5b524d048fa9fb5}{jcopy\+\_\+sample\+\_\+rows} (\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} input\+\_\+array, int \hyperlink{jpegint_8h_ad84abcd48f39ce30a878dc2e900eb9f7}{source\+\_\+row}, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jpegint_8h_ad8327cda75d2d423f92ba7da5304b772}{output\+\_\+array}, int \hyperlink{jpegint_8h_afae011342ef411f39c22dfbe9509373e}{dest\+\_\+row}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{jpegint_8h_acca252572c592a6643dbe8151f363412}{num\+\_\+cols})
+\item 
+\hyperlink{jutils_8c_a6aad126647ba708534f3be1676d29efb}{jcopy\+\_\+block\+\_\+row} (\hyperlink{jpeglib_8h_a04dea0959d9bd9e8ddad83597161453b}{J\+B\+L\+O\+C\+K\+R\+O\+W} input\+\_\+row, \hyperlink{jpeglib_8h_a04dea0959d9bd9e8ddad83597161453b}{J\+B\+L\+O\+C\+K\+R\+O\+W} \hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{jpegint_8h_ac794c67860ca56fc95e4f0f34632bdeb}{num\+\_\+blocks})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{jutils_8c_a1ad5512a487bb993817e9755933fb751}{jpeg\+\_\+natural\+\_\+order} \mbox{[}\hyperlink{jpeglib_8h_af89dff4200396563157d4a1e59da3bdf}{D\+C\+T\+S\+I\+Z\+E2}+16\mbox{]}
+\item 
+const int \hyperlink{jutils_8c_a82d22a6134c174b16ca39757aed2f4f4}{jpeg\+\_\+natural\+\_\+order7} \mbox{[}7 $\ast$7+16\mbox{]}
+\item 
+const int \hyperlink{jutils_8c_acaf9872a6cd88101644fa2de48149685}{jpeg\+\_\+natural\+\_\+order6} \mbox{[}6 $\ast$6+16\mbox{]}
+\item 
+const int \hyperlink{jutils_8c_a5adbdc98a0058aaff6820cbb0a9161b2}{jpeg\+\_\+natural\+\_\+order5} \mbox{[}5 $\ast$5+16\mbox{]}
+\item 
+const int \hyperlink{jutils_8c_a111a0f136408080ed8825637f88f4de6}{jpeg\+\_\+natural\+\_\+order4} \mbox{[}4 $\ast$4+16\mbox{]}
+\item 
+const int \hyperlink{jutils_8c_adb2718503280e6a1ae3a1ba02ead6d78}{jpeg\+\_\+natural\+\_\+order3} \mbox{[}3 $\ast$3+16\mbox{]}
+\item 
+const int \hyperlink{jutils_8c_a5421fa0fa95c875a59d54c022edb508b}{jpeg\+\_\+natural\+\_\+order2} \mbox{[}2 $\ast$2+16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jutils_8c_a086eb1567ada82ad0a5fd1aba51de759}{}\index{jutils.\+c@{jutils.\+c}!F\+M\+E\+M\+C\+O\+P\+Y@{F\+M\+E\+M\+C\+O\+P\+Y}}
+\index{F\+M\+E\+M\+C\+O\+P\+Y@{F\+M\+E\+M\+C\+O\+P\+Y}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{F\+M\+E\+M\+C\+O\+P\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+M\+E\+M\+C\+O\+P\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{dest, }
+\item[{}]{src, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~{\bf M\+E\+M\+C\+O\+P\+Y}(dest,src,size)}\label{jutils_8c_a086eb1567ada82ad0a5fd1aba51de759}
+\hypertarget{jutils_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jutils.\+c@{jutils.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jutils_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Function Documentation}
+\hypertarget{jutils_8c_a6aad126647ba708534f3be1676d29efb}{}\index{jutils.\+c@{jutils.\+c}!jcopy\+\_\+block\+\_\+row@{jcopy\+\_\+block\+\_\+row}}
+\index{jcopy\+\_\+block\+\_\+row@{jcopy\+\_\+block\+\_\+row}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jcopy\+\_\+block\+\_\+row}]{\setlength{\rightskip}{0pt plus 5cm}jcopy\+\_\+block\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{{\bf J\+B\+L\+O\+C\+K\+R\+O\+W}}]{input\+\_\+row, }
+\item[{{\bf J\+B\+L\+O\+C\+K\+R\+O\+W}}]{output\+\_\+row, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{num\+\_\+blocks}
+\end{DoxyParamCaption}
+)}\label{jutils_8c_a6aad126647ba708534f3be1676d29efb}
+\hypertarget{jutils_8c_ae2a8a73df80d5302a5b524d048fa9fb5}{}\index{jutils.\+c@{jutils.\+c}!jcopy\+\_\+sample\+\_\+rows@{jcopy\+\_\+sample\+\_\+rows}}
+\index{jcopy\+\_\+sample\+\_\+rows@{jcopy\+\_\+sample\+\_\+rows}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jcopy\+\_\+sample\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}jcopy\+\_\+sample\+\_\+rows (
+\begin{DoxyParamCaption}
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{input\+\_\+array, }
+\item[{int}]{source\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+array, }
+\item[{int}]{dest\+\_\+row, }
+\item[{int}]{num\+\_\+rows, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{num\+\_\+cols}
+\end{DoxyParamCaption}
+)}\label{jutils_8c_ae2a8a73df80d5302a5b524d048fa9fb5}
+\hypertarget{jutils_8c_a0c5aa3b56cb24dd9ed819c8252c61b80}{}\index{jutils.\+c@{jutils.\+c}!jdiv\+\_\+round\+\_\+up@{jdiv\+\_\+round\+\_\+up}}
+\index{jdiv\+\_\+round\+\_\+up@{jdiv\+\_\+round\+\_\+up}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jdiv\+\_\+round\+\_\+up}]{\setlength{\rightskip}{0pt plus 5cm}jdiv\+\_\+round\+\_\+up (
+\begin{DoxyParamCaption}
+\item[{long}]{a, }
+\item[{long}]{b}
+\end{DoxyParamCaption}
+)}\label{jutils_8c_a0c5aa3b56cb24dd9ed819c8252c61b80}
+\hypertarget{jutils_8c_a9f91b295901b3868694a217759d073c4}{}\index{jutils.\+c@{jutils.\+c}!jround\+\_\+up@{jround\+\_\+up}}
+\index{jround\+\_\+up@{jround\+\_\+up}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jround\+\_\+up}]{\setlength{\rightskip}{0pt plus 5cm}jround\+\_\+up (
+\begin{DoxyParamCaption}
+\item[{long}]{a, }
+\item[{long}]{b}
+\end{DoxyParamCaption}
+)}\label{jutils_8c_a9f91b295901b3868694a217759d073c4}
+
+
+\subsection{Variable Documentation}
+\hypertarget{jutils_8c_a1ad5512a487bb993817e9755933fb751}{}\index{jutils.\+c@{jutils.\+c}!jpeg\+\_\+natural\+\_\+order@{jpeg\+\_\+natural\+\_\+order}}
+\index{jpeg\+\_\+natural\+\_\+order@{jpeg\+\_\+natural\+\_\+order}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jpeg\+\_\+natural\+\_\+order}]{\setlength{\rightskip}{0pt plus 5cm}const int jpeg\+\_\+natural\+\_\+order\mbox{[}{\bf D\+C\+T\+S\+I\+Z\+E2}+16\mbox{]}}\label{jutils_8c_a1ad5512a487bb993817e9755933fb751}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,  1,  8, 16,  9,  2,  3, 10,
+ 17, 24, 32, 25, 18, 11,  4,  5,
+ 12, 19, 26, 33, 40, 48, 41, 34,
+ 27, 20, 13,  6,  7, 14, 21, 28,
+ 35, 42, 49, 56, 57, 50, 43, 36,
+ 29, 22, 15, 23, 30, 37, 44, 51,
+ 58, 59, 52, 45, 38, 31, 39, 46,
+ 53, 60, 61, 54, 47, 55, 62, 63,
+ 63, 63, 63, 63, 63, 63, 63, 63, 
+ 63, 63, 63, 63, 63, 63, 63, 63
+\}
+\end{DoxyCode}
+\hypertarget{jutils_8c_a5421fa0fa95c875a59d54c022edb508b}{}\index{jutils.\+c@{jutils.\+c}!jpeg\+\_\+natural\+\_\+order2@{jpeg\+\_\+natural\+\_\+order2}}
+\index{jpeg\+\_\+natural\+\_\+order2@{jpeg\+\_\+natural\+\_\+order2}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jpeg\+\_\+natural\+\_\+order2}]{\setlength{\rightskip}{0pt plus 5cm}const int jpeg\+\_\+natural\+\_\+order2\mbox{[}2 $\ast$2+16\mbox{]}}\label{jutils_8c_a5421fa0fa95c875a59d54c022edb508b}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,  1,  8,  9,
+ 63, 63, 63, 63, 63, 63, 63, 63, 
+ 63, 63, 63, 63, 63, 63, 63, 63
+\}
+\end{DoxyCode}
+\hypertarget{jutils_8c_adb2718503280e6a1ae3a1ba02ead6d78}{}\index{jutils.\+c@{jutils.\+c}!jpeg\+\_\+natural\+\_\+order3@{jpeg\+\_\+natural\+\_\+order3}}
+\index{jpeg\+\_\+natural\+\_\+order3@{jpeg\+\_\+natural\+\_\+order3}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jpeg\+\_\+natural\+\_\+order3}]{\setlength{\rightskip}{0pt plus 5cm}const int jpeg\+\_\+natural\+\_\+order3\mbox{[}3 $\ast$3+16\mbox{]}}\label{jutils_8c_adb2718503280e6a1ae3a1ba02ead6d78}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,  1,  8, 16,  9,  2, 10, 17,
+ 18,
+ 63, 63, 63, 63, 63, 63, 63, 63, 
+ 63, 63, 63, 63, 63, 63, 63, 63
+\}
+\end{DoxyCode}
+\hypertarget{jutils_8c_a111a0f136408080ed8825637f88f4de6}{}\index{jutils.\+c@{jutils.\+c}!jpeg\+\_\+natural\+\_\+order4@{jpeg\+\_\+natural\+\_\+order4}}
+\index{jpeg\+\_\+natural\+\_\+order4@{jpeg\+\_\+natural\+\_\+order4}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jpeg\+\_\+natural\+\_\+order4}]{\setlength{\rightskip}{0pt plus 5cm}const int jpeg\+\_\+natural\+\_\+order4\mbox{[}4 $\ast$4+16\mbox{]}}\label{jutils_8c_a111a0f136408080ed8825637f88f4de6}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,  1,  8, 16,  9,  2,  3, 10,
+ 17, 24, 25, 18, 11, 19, 26, 27,
+ 63, 63, 63, 63, 63, 63, 63, 63, 
+ 63, 63, 63, 63, 63, 63, 63, 63
+\}
+\end{DoxyCode}
+\hypertarget{jutils_8c_a5adbdc98a0058aaff6820cbb0a9161b2}{}\index{jutils.\+c@{jutils.\+c}!jpeg\+\_\+natural\+\_\+order5@{jpeg\+\_\+natural\+\_\+order5}}
+\index{jpeg\+\_\+natural\+\_\+order5@{jpeg\+\_\+natural\+\_\+order5}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jpeg\+\_\+natural\+\_\+order5}]{\setlength{\rightskip}{0pt plus 5cm}const int jpeg\+\_\+natural\+\_\+order5\mbox{[}5 $\ast$5+16\mbox{]}}\label{jutils_8c_a5adbdc98a0058aaff6820cbb0a9161b2}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,  1,  8, 16,  9,  2,  3, 10,
+ 17, 24, 32, 25, 18, 11,  4, 12,
+ 19, 26, 33, 34, 27, 20, 28, 35,
+ 36,
+ 63, 63, 63, 63, 63, 63, 63, 63, 
+ 63, 63, 63, 63, 63, 63, 63, 63
+\}
+\end{DoxyCode}
+\hypertarget{jutils_8c_acaf9872a6cd88101644fa2de48149685}{}\index{jutils.\+c@{jutils.\+c}!jpeg\+\_\+natural\+\_\+order6@{jpeg\+\_\+natural\+\_\+order6}}
+\index{jpeg\+\_\+natural\+\_\+order6@{jpeg\+\_\+natural\+\_\+order6}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jpeg\+\_\+natural\+\_\+order6}]{\setlength{\rightskip}{0pt plus 5cm}const int jpeg\+\_\+natural\+\_\+order6\mbox{[}6 $\ast$6+16\mbox{]}}\label{jutils_8c_acaf9872a6cd88101644fa2de48149685}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,  1,  8, 16,  9,  2,  3, 10,
+ 17, 24, 32, 25, 18, 11,  4,  5,
+ 12, 19, 26, 33, 40, 41, 34, 27,
+ 20, 13, 21, 28, 35, 42, 43, 36,
+ 29, 37, 44, 45,
+ 63, 63, 63, 63, 63, 63, 63, 63, 
+ 63, 63, 63, 63, 63, 63, 63, 63
+\}
+\end{DoxyCode}
+\hypertarget{jutils_8c_a82d22a6134c174b16ca39757aed2f4f4}{}\index{jutils.\+c@{jutils.\+c}!jpeg\+\_\+natural\+\_\+order7@{jpeg\+\_\+natural\+\_\+order7}}
+\index{jpeg\+\_\+natural\+\_\+order7@{jpeg\+\_\+natural\+\_\+order7}!jutils.\+c@{jutils.\+c}}
+\subsubsection[{jpeg\+\_\+natural\+\_\+order7}]{\setlength{\rightskip}{0pt plus 5cm}const int jpeg\+\_\+natural\+\_\+order7\mbox{[}7 $\ast$7+16\mbox{]}}\label{jutils_8c_a82d22a6134c174b16ca39757aed2f4f4}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  0,  1,  8, 16,  9,  2,  3, 10,
+ 17, 24, 32, 25, 18, 11,  4,  5,
+ 12, 19, 26, 33, 40, 48, 41, 34,
+ 27, 20, 13,  6, 14, 21, 28, 35,
+ 42, 49, 50, 43, 36, 29, 22, 30,
+ 37, 44, 51, 52, 45, 38, 46, 53,
+ 54,
+ 63, 63, 63, 63, 63, 63, 63, 63, 
+ 63, 63, 63, 63, 63, 63, 63, 63
+\}
+\end{DoxyCode}

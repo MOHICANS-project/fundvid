@@ -1,0 +1,252 @@
+\hypertarget{classImage}{}\section{Image$<$ T $>$ Class Template Reference}
+\label{classImage}\index{Image$<$ T $>$@{Image$<$ T $>$}}
+
+
+{\ttfamily \#include $<$image.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \hyperlink{classImage_a532d996f3d6ea53501de88a35f0bba5f}{Tpixel}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImage_a889b7256a9d9df6ed3dee42a08794274}{Image} ()
+\item 
+\hyperlink{classImage_af13d46d721b7ee7f6517f2fa5840ef56}{Image} (size\+\_\+t \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, size\+\_\+t height, const T \hyperlink{jpeglib_8h_aa0ccb5ee6d882ee3605ff47745c6467b}{val}=T())
+\item 
+\hyperlink{classImage_af2f52548203c77be63f82d634106fb49}{Image} (size\+\_\+t \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, size\+\_\+t height, const T $\ast$imdata)
+\item 
+\hyperlink{classImage_a2657143ec64e1b0ff259cd69acf684b2}{Image} (const \hyperlink{classImage}{Image}$<$ T $>$ \&I)
+\item 
+\hyperlink{classImage}{Image} \& \hyperlink{classImage_afb4bc519119333df573225437df76f0a}{operator=} (const \hyperlink{classImage}{Image}$<$ T $>$ \&I)
+\item 
+virtual \hyperlink{classImage_a442db396da0128536b9903407c85ec81}{$\sim$\+Image} ()
+\item 
+size\+\_\+t \hyperlink{classImage_ab990be0777e20426a1fff829d11763dd}{Width} () const 
+\begin{DoxyCompactList}\small\item\em Retrieve the width of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classImage_ac6f50b73173a066f035b2a8c3a8e0bed}{Height} () const 
+\begin{DoxyCompactList}\small\item\em Retrieve the height of the image. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classImage_a79cd5a98818f7b6ad94c05172e59923b}{Depth} () const 
+\begin{DoxyCompactList}\small\item\em Return the depth in byte of the pixel (unsigned char will return 1) \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{classImage_a819025b2a8a13f50c5231267f24b6ece}{data} () const 
+\begin{DoxyCompactList}\small\item\em image memory access \end{DoxyCompactList}\item 
+const T \& \hyperlink{classImage_a172d2dfb12c97589c01f6cf36afea627}{operator()} (size\+\_\+t y, size\+\_\+t x) const 
+\begin{DoxyCompactList}\small\item\em random pixel access \end{DoxyCompactList}\item 
+T \& \hyperlink{classImage_a31002b200e1ffde294273ebb90cc0a02}{operator()} (size\+\_\+t y, size\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em random pixel access \end{DoxyCompactList}\item 
+bool \hyperlink{classImage_af60b4a0a3a7818b1411a4cbcad59ce26}{operator==} (const \hyperlink{classImage}{Image}$<$ T $>$ \&img) const 
+\item 
+bool \hyperlink{classImage_a45eb1e216574191cdce62e545bc11550}{Contains} (size\+\_\+t y, size\+\_\+t x) const 
+\begin{DoxyCompactList}\small\item\em Tell if a point is inside the image. \end{DoxyCompactList}\item 
+bool \hyperlink{classImage_a24e2196e8a4eb09c7a7a4c7263f34921}{Contains} (double y, double x) const 
+\begin{DoxyCompactList}\small\item\em Tell if a point is inside the image. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classImage_acee82adf192afb203322716e69abb333}{fill} (const T \&\hyperlink{jpeglib_8h_aa0ccb5ee6d882ee3605ff47745c6467b}{val})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classImage_a8840ba0393a40cbe7cc7b068c9cf7a3a}{\+\_\+data}
+\item 
+size\+\_\+t \hyperlink{classImage_ac8b95e3c2a725ef222ba9b84c9fe92b1}{\+\_\+width}
+\item 
+size\+\_\+t \hyperlink{classImage_a29f681d826e113d2c4b20d91577ee9ae}{\+\_\+height}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classImage_a4be6487c93944783e5935fb7efcee53a}{operator$<$$<$} (ostream \&os, const \hyperlink{classImage}{Image}$<$ T $>$ \&im)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classImage_a532d996f3d6ea53501de88a35f0bba5f}{}\index{Image@{Image}!Tpixel@{Tpixel}}
+\index{Tpixel@{Tpixel}!Image@{Image}}
+\subsubsection[{Tpixel}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef T {\bf Image}$<$ T $>$\+::{\bf Tpixel}}\label{classImage_a532d996f3d6ea53501de88a35f0bba5f}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classImage_a889b7256a9d9df6ed3dee42a08794274}{}\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Image}$<$ T $>$\+::{\bf Image} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a889b7256a9d9df6ed3dee42a08794274}
+\hypertarget{classImage_af13d46d721b7ee7f6517f2fa5840ef56}{}\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Image}$<$ T $>$\+::{\bf Image} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{width, }
+\item[{size\+\_\+t}]{height, }
+\item[{const T}]{val = {\ttfamily T()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_af13d46d721b7ee7f6517f2fa5840ef56}
+\hypertarget{classImage_af2f52548203c77be63f82d634106fb49}{}\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Image}$<$ T $>$\+::{\bf Image} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{width, }
+\item[{size\+\_\+t}]{height, }
+\item[{const T $\ast$}]{imdata}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_af2f52548203c77be63f82d634106fb49}
+\hypertarget{classImage_a2657143ec64e1b0ff259cd69acf684b2}{}\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Image}$<$ T $>$\+::{\bf Image} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ T $>$ \&}]{I}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a2657143ec64e1b0ff259cd69acf684b2}
+\hypertarget{classImage_a442db396da0128536b9903407c85ec81}{}\index{Image@{Image}!````~Image@{$\sim$\+Image}}
+\index{````~Image@{$\sim$\+Image}!Image@{Image}}
+\subsubsection[{$\sim$\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ virtual {\bf Image}$<$ T $>$\+::$\sim${\bf Image} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classImage_a442db396da0128536b9903407c85ec81}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classImage_a45eb1e216574191cdce62e545bc11550}{}\index{Image@{Image}!Contains@{Contains}}
+\index{Contains@{Contains}!Image@{Image}}
+\subsubsection[{Contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Image}$<$ T $>$\+::Contains (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{y, }
+\item[{size\+\_\+t}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a45eb1e216574191cdce62e545bc11550}
+
+
+Tell if a point is inside the image. 
+
+\hypertarget{classImage_a24e2196e8a4eb09c7a7a4c7263f34921}{}\index{Image@{Image}!Contains@{Contains}}
+\index{Contains@{Contains}!Image@{Image}}
+\subsubsection[{Contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Image}$<$ T $>$\+::Contains (
+\begin{DoxyParamCaption}
+\item[{double}]{y, }
+\item[{double}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a24e2196e8a4eb09c7a7a4c7263f34921}
+
+
+Tell if a point is inside the image. 
+
+\hypertarget{classImage_a819025b2a8a13f50c5231267f24b6ece}{}\index{Image@{Image}!data@{data}}
+\index{data@{data}!Image@{Image}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T$\ast$ {\bf Image}$<$ T $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a819025b2a8a13f50c5231267f24b6ece}
+
+
+image memory access 
+
+\hypertarget{classImage_a79cd5a98818f7b6ad94c05172e59923b}{}\index{Image@{Image}!Depth@{Depth}}
+\index{Depth@{Depth}!Image@{Image}}
+\subsubsection[{Depth}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ size\+\_\+t {\bf Image}$<$ T $>$\+::Depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a79cd5a98818f7b6ad94c05172e59923b}
+
+
+Return the depth in byte of the pixel (unsigned char will return 1) 
+
+\hypertarget{classImage_acee82adf192afb203322716e69abb333}{}\index{Image@{Image}!fill@{fill}}
+\index{fill@{fill}!Image@{Image}}
+\subsubsection[{fill}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf Image}$<$ T $>$\+::fill (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_acee82adf192afb203322716e69abb333}
+\hypertarget{classImage_ac6f50b73173a066f035b2a8c3a8e0bed}{}\index{Image@{Image}!Height@{Height}}
+\index{Height@{Height}!Image@{Image}}
+\subsubsection[{Height}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ size\+\_\+t {\bf Image}$<$ T $>$\+::Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_ac6f50b73173a066f035b2a8c3a8e0bed}
+
+
+Retrieve the height of the image. 
+
+\hypertarget{classImage_a172d2dfb12c97589c01f6cf36afea627}{}\index{Image@{Image}!operator()@{operator()}}
+\index{operator()@{operator()}!Image@{Image}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const T\& {\bf Image}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{y, }
+\item[{size\+\_\+t}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a172d2dfb12c97589c01f6cf36afea627}
+
+
+random pixel access 
+
+\hypertarget{classImage_a31002b200e1ffde294273ebb90cc0a02}{}\index{Image@{Image}!operator()@{operator()}}
+\index{operator()@{operator()}!Image@{Image}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf Image}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{y, }
+\item[{size\+\_\+t}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_a31002b200e1ffde294273ebb90cc0a02}
+
+
+random pixel access 
+
+\hypertarget{classImage_afb4bc519119333df573225437df76f0a}{}\index{Image@{Image}!operator=@{operator=}}
+\index{operator=@{operator=}!Image@{Image}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Image}\& {\bf Image}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ T $>$ \&}]{I}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_afb4bc519119333df573225437df76f0a}
+\hypertarget{classImage_af60b4a0a3a7818b1411a4cbcad59ce26}{}\index{Image@{Image}!operator==@{operator==}}
+\index{operator==@{operator==}!Image@{Image}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Image}$<$ T $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ T $>$ \&}]{img}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_af60b4a0a3a7818b1411a4cbcad59ce26}
+\hypertarget{classImage_ab990be0777e20426a1fff829d11763dd}{}\index{Image@{Image}!Width@{Width}}
+\index{Width@{Width}!Image@{Image}}
+\subsubsection[{Width}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ size\+\_\+t {\bf Image}$<$ T $>$\+::Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classImage_ab990be0777e20426a1fff829d11763dd}
+
+
+Retrieve the width of the image. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classImage_a4be6487c93944783e5935fb7efcee53a}{}\index{Image@{Image}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Image@{Image}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Image}$<$ T $>$ \&}]{im}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classImage_a4be6487c93944783e5935fb7efcee53a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classImage_a8840ba0393a40cbe7cc7b068c9cf7a3a}{}\index{Image@{Image}!\+\_\+data@{\+\_\+data}}
+\index{\+\_\+data@{\+\_\+data}!Image@{Image}}
+\subsubsection[{\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T$\ast$ {\bf Image}$<$ T $>$\+::\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}\label{classImage_a8840ba0393a40cbe7cc7b068c9cf7a3a}
+\hypertarget{classImage_a29f681d826e113d2c4b20d91577ee9ae}{}\index{Image@{Image}!\+\_\+height@{\+\_\+height}}
+\index{\+\_\+height@{\+\_\+height}!Image@{Image}}
+\subsubsection[{\+\_\+height}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ size\+\_\+t {\bf Image}$<$ T $>$\+::\+\_\+height\hspace{0.3cm}{\ttfamily [protected]}}\label{classImage_a29f681d826e113d2c4b20d91577ee9ae}
+\hypertarget{classImage_ac8b95e3c2a725ef222ba9b84c9fe92b1}{}\index{Image@{Image}!\+\_\+width@{\+\_\+width}}
+\index{\+\_\+width@{\+\_\+width}!Image@{Image}}
+\subsubsection[{\+\_\+width}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ size\+\_\+t {\bf Image}$<$ T $>$\+::\+\_\+width\hspace{0.3cm}{\ttfamily [protected]}}\label{classImage_ac8b95e3c2a725ef222ba9b84c9fe92b1}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/lib\+Image/\hyperlink{image_8hpp}{image.\+hpp}\end{DoxyCompactItemize}

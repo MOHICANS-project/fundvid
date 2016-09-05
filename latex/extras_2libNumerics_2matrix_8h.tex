@@ -1,0 +1,84 @@
+\hypertarget{extras_2libNumerics_2matrix_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/extras/lib\+Numerics/matrix.h File Reference}
+\label{extras_2libNumerics_2matrix_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+Numerics/matrix.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+Numerics/matrix.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/lib\+Numerics/matrix.\+cpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/lib\+Numerics/vector.\+cpp\char`\"{}}\\*
+Include dependency graph for matrix.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Column vector class (template) \end{DoxyCompactList}\item 
+class \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Matrix class. \end{DoxyCompactList}\item 
+class \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Matrix class. \end{DoxyCompactList}\item 
+class \hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Column vector class (template) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibNumerics}{lib\+Numerics}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\matrix$<$ T $>$ \hyperlink{namespacelibNumerics_a9a38d6b5bcfe38eda9fe9044f9503035}{lib\+Numerics\+::cat} (const matrix$<$ T $>$ \&, const matrix$<$ T $>$ \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibNumerics_ae875caf670c26d44ce34bfe5f555cb90}{lib\+Numerics\+::swap} (matrix$<$ T $>$ \&, matrix$<$ T $>$ \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::ostream \& \hyperlink{extras_2libNumerics_2matrix_8h_ab98783ca36be545453e53aa6a4e6a3b7}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ T $>$ \&m)
+\begin{DoxyCompactList}\small\item\em Output matrix coefficients. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::istream \& \hyperlink{extras_2libNumerics_2matrix_8h_a843e48056e577de95bf8d5b9c541df18}{operator$>$$>$} (std\+::istream \&in, \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ T $>$ \&m)
+\begin{DoxyCompactList}\small\item\em Input matrix. Need to know the dimensions in advance... \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{extras_2libNumerics_2matrix_8h_aec25aac3165f59e8bd8e8f87717b3df9}{dot} (const \hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector}$<$ T $>$ \&u, const \hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector}$<$ T $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector}$<$ T $>$ \hyperlink{extras_2libNumerics_2matrix_8h_aa0f74ef09bc0e23f247a190a98eef6a2}{cross} (const \hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector}$<$ T $>$ \&u, const \hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector}$<$ T $>$ \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{extras_2libNumerics_2matrix_8h_aa0f74ef09bc0e23f247a190a98eef6a2}{}\index{extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}!cross@{cross}}
+\index{cross@{cross}!extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf lib\+Numerics\+::vector}$<$T$>$ cross (
+\begin{DoxyParamCaption}
+\item[{const {\bf lib\+Numerics\+::vector}$<$ T $>$ \&}]{u, }
+\item[{const {\bf lib\+Numerics\+::vector}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\label{extras_2libNumerics_2matrix_8h_aa0f74ef09bc0e23f247a190a98eef6a2}
+\hypertarget{extras_2libNumerics_2matrix_8h_aec25aac3165f59e8bd8e8f87717b3df9}{}\index{extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}!dot@{dot}}
+\index{dot@{dot}!extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}}
+\subsubsection[{dot}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf lib\+Numerics\+::vector}$<$ T $>$ \&}]{u, }
+\item[{const {\bf lib\+Numerics\+::vector}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\label{extras_2libNumerics_2matrix_8h_aec25aac3165f59e8bd8e8f87717b3df9}
+\hypertarget{extras_2libNumerics_2matrix_8h_ab98783ca36be545453e53aa6a4e6a3b7}{}\index{extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{extras_2libNumerics_2matrix_8h_ab98783ca36be545453e53aa6a4e6a3b7}
+
+
+Output matrix coefficients. 
+
+\hypertarget{extras_2libNumerics_2matrix_8h_a843e48056e577de95bf8d5b9c541df18}{}\index{extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!extras/lib\+Numerics/matrix.\+h@{extras/lib\+Numerics/matrix.\+h}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{in, }
+\item[{{\bf lib\+Numerics\+::matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{extras_2libNumerics_2matrix_8h_a843e48056e577de95bf8d5b9c541df18}
+
+
+Input matrix. Need to know the dimensions in advance... 
+

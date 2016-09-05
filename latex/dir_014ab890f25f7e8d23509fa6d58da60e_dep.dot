@@ -1,0 +1,9 @@
+digraph "src/third_party/orsa-fundamental_1.0/src/third_party/CppUnitLite" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4a27f9e785ec53a1db7bb603f435ba9e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="third_party" fontname="Helvetica", fontsize="10", URL="dir_4a27f9e785ec53a1db7bb603f435ba9e.html"]
+  dir_014ab890f25f7e8d23509fa6d58da60e [shape=box, label="CppUnitLite", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_014ab890f25f7e8d23509fa6d58da60e.html"];
+  }
+}

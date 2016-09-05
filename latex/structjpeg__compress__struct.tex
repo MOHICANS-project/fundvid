@@ -1,0 +1,381 @@
+\hypertarget{structjpeg__compress__struct}{}\section{jpeg\+\_\+compress\+\_\+struct Struct Reference}
+\label{structjpeg__compress__struct}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+
+
+{\ttfamily \#include $<$jpeglib.\+h$>$}
+
+
+
+Collaboration diagram for jpeg\+\_\+compress\+\_\+struct\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structjpeg__compress__struct_a831013770bec36f77dd2048c8771513c}{jpeg\+\_\+common\+\_\+fields}
+\item 
+struct \hyperlink{structjpeg__destination__mgr}{jpeg\+\_\+destination\+\_\+mgr} $\ast$ \hyperlink{structjpeg__compress__struct_ab31c2c756e309dee8d0318557353ba40}{dest}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_ac8e50a2c70252c53f3e10b886818f2cf}{image\+\_\+width}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_a30863835e7785b7df800811f842b2da0}{image\+\_\+height}
+\item 
+int \hyperlink{structjpeg__compress__struct_af5b66b039ea5a96bb2f5cf0254115837}{input\+\_\+components}
+\item 
+\hyperlink{jpeglib_8h_a6ea40239360b06efe6377f125f1134f3}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+C\+E} \hyperlink{structjpeg__compress__struct_ac27d1dfbbbd677aab9fb570c58ca960d}{in\+\_\+color\+\_\+space}
+\item 
+double \hyperlink{structjpeg__compress__struct_ac5d2e16382ea12fb4e3bd6a69f7831ea}{input\+\_\+gamma}
+\item 
+unsigned int \hyperlink{structjpeg__compress__struct_a16eb7e2e1ac30c42e8bd753bde43129c}{scale\+\_\+num}
+\item 
+unsigned int \hyperlink{structjpeg__compress__struct_ab30f569483d6c25032aa2c18c885e91c}{scale\+\_\+denom}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_ab433b317fcbe32212122621e476ac9d8}{jpeg\+\_\+width}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_abc2cf065c0faab28327f7238949f76d3}{jpeg\+\_\+height}
+\item 
+int \hyperlink{structjpeg__compress__struct_a64c5b59e436f7d3d1d38b58d49993469}{data\+\_\+precision}
+\item 
+int \hyperlink{structjpeg__compress__struct_a524f0284a6fcf96b21c8a745282c15e2}{num\+\_\+components}
+\item 
+\hyperlink{jpeglib_8h_a6ea40239360b06efe6377f125f1134f3}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+C\+E} \hyperlink{structjpeg__compress__struct_a7fb5305ec135340eddc2ebabec6a84d7}{jpeg\+\_\+color\+\_\+space}
+\item 
+\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info} $\ast$ \hyperlink{structjpeg__compress__struct_a4d37d3f336cc11acafef541bf8ed38cc}{comp\+\_\+info}
+\item 
+\hyperlink{structJQUANT__TBL}{J\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+L} $\ast$ \hyperlink{structjpeg__compress__struct_a70a194c6a9c1744e1ed3a97232fb97f5}{quant\+\_\+tbl\+\_\+ptrs} \mbox{[}\hyperlink{jpeglib_8h_ab3254a23612ea48615001fffc0c9f691}{N\+U\+M\+\_\+\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+int \hyperlink{structjpeg__compress__struct_a3d8545504353556fae60e1e865d2c600}{q\+\_\+scale\+\_\+factor} \mbox{[}\hyperlink{jpeglib_8h_ab3254a23612ea48615001fffc0c9f691}{N\+U\+M\+\_\+\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{structJHUFF__TBL}{J\+H\+U\+F\+F\+\_\+\+T\+B\+L} $\ast$ \hyperlink{structjpeg__compress__struct_a6a69e90a68e1f7f46774d83ba3737a4e}{dc\+\_\+huff\+\_\+tbl\+\_\+ptrs} \mbox{[}\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{structJHUFF__TBL}{J\+H\+U\+F\+F\+\_\+\+T\+B\+L} $\ast$ \hyperlink{structjpeg__compress__struct_a98d33cae3c8eee8f1f8d662e31cb905d}{ac\+\_\+huff\+\_\+tbl\+\_\+ptrs} \mbox{[}\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structjpeg__compress__struct_a736d867907116e88b3b38422fb2688c5}{arith\+\_\+dc\+\_\+\+L} \mbox{[}\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structjpeg__compress__struct_a6ba30334643b7a5280343fe0e5e49e1e}{arith\+\_\+dc\+\_\+\+U} \mbox{[}\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structjpeg__compress__struct_ac1994386d3fa3ff139b63bf4bb4dcc36}{arith\+\_\+ac\+\_\+\+K} \mbox{[}\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+int \hyperlink{structjpeg__compress__struct_abf2f96c340659a09a9ce08469a17e08b}{num\+\_\+scans}
+\item 
+const \hyperlink{structjpeg__scan__info}{jpeg\+\_\+scan\+\_\+info} $\ast$ \hyperlink{structjpeg__compress__struct_a545fed3fef0d0c5962dbe0e80c067c03}{scan\+\_\+info}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_a7f9dfd37243943bc138815bcf1e89584}{raw\+\_\+data\+\_\+in}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_a93a42fe4e984ab0afff45636e23d538a}{arith\+\_\+code}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_a2ed9c1e2bd808fd684338a009a164ef3}{optimize\+\_\+coding}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_abf474ed47e9f0a9c066bc47de5b0e8e7}{C\+C\+I\+R601\+\_\+sampling}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_a683db079af3beb44eaab5b421a5a9d4f}{do\+\_\+fancy\+\_\+downsampling}
+\item 
+int \hyperlink{structjpeg__compress__struct_a0e14f65876566ff8eec195d124535307}{smoothing\+\_\+factor}
+\item 
+\hyperlink{jpeglib_8h_ae4245c819e9217a321fb23f1a106d563}{J\+\_\+\+D\+C\+T\+\_\+\+M\+E\+T\+H\+O\+D} \hyperlink{structjpeg__compress__struct_ab782f698c650e8ec5f9b47043691d3c1}{dct\+\_\+method}
+\item 
+unsigned int \hyperlink{structjpeg__compress__struct_a57ad1f6d9015e25fe272c645dcc3f71e}{restart\+\_\+interval}
+\item 
+int \hyperlink{structjpeg__compress__struct_a9636f9df88d5a3ae56f0bb9a5f923db7}{restart\+\_\+in\+\_\+rows}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_a12178443b9177fd4bdddc66ce4e08e12}{write\+\_\+\+J\+F\+I\+F\+\_\+header}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structjpeg__compress__struct_a8e2468a5bffedad2257c715a59ded2e0}{J\+F\+I\+F\+\_\+major\+\_\+version}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structjpeg__compress__struct_a9653a22025ac9ff342d6f4221e2a9564}{J\+F\+I\+F\+\_\+minor\+\_\+version}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structjpeg__compress__struct_a8f3a056ed558bf7be4ff52999416a525}{density\+\_\+unit}
+\item 
+\hyperlink{jmorecfg_8h_a805c2c164bdd38d72a30c46e84fb568b}{U\+I\+N\+T16} \hyperlink{structjpeg__compress__struct_adef3c4b809ebca2a853b5659e177deaa}{X\+\_\+density}
+\item 
+\hyperlink{jmorecfg_8h_a805c2c164bdd38d72a30c46e84fb568b}{U\+I\+N\+T16} \hyperlink{structjpeg__compress__struct_a978dc1c187fab34211757a134ebf4adb}{Y\+\_\+density}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_a39c549a441052b38df2dfd7359c68814}{write\+\_\+\+Adobe\+\_\+marker}
+\item 
+\hyperlink{jpeglib_8h_a26af503ae521188ce89abc2c7adee7f0}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+R\+A\+N\+S\+F\+O\+R\+M} \hyperlink{structjpeg__compress__struct_a3533c65068c4cec8f048019d2b1c0557}{color\+\_\+transform}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_aefb3f2e6479374ba03e7d0421dcfb086}{next\+\_\+scanline}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__compress__struct_ae3b16d173e7feef7b6b0e823fd2fde3f}{progressive\+\_\+mode}
+\item 
+int \hyperlink{structjpeg__compress__struct_ae8de4e6079b80e3a81135d07934c640d}{max\+\_\+h\+\_\+samp\+\_\+factor}
+\item 
+int \hyperlink{structjpeg__compress__struct_a9e03a4eb7af87c682937caed3d341d4a}{max\+\_\+v\+\_\+samp\+\_\+factor}
+\item 
+int \hyperlink{structjpeg__compress__struct_a99a75ca2f7569dcb4444e7cb35ce916f}{min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size}
+\item 
+int \hyperlink{structjpeg__compress__struct_a5d63d182b17f0885fcabf88c6a08a9a5}{min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_aef01162f4c66434929f933a40e695f9e}{total\+\_\+i\+M\+C\+U\+\_\+rows}
+\item 
+int \hyperlink{structjpeg__compress__struct_a3387358088abbec1c8838499966c8f06}{comps\+\_\+in\+\_\+scan}
+\item 
+\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info} $\ast$ \hyperlink{structjpeg__compress__struct_a1cacb367b7d69227d3086ff105bca9ab}{cur\+\_\+comp\+\_\+info} \mbox{[}\hyperlink{jpeglib_8h_adc7013da016c19051dc623fb3d8b35b4}{M\+A\+X\+\_\+\+C\+O\+M\+P\+S\+\_\+\+I\+N\+\_\+\+S\+C\+A\+N}\mbox{]}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_a97f0c5e0ae932d1810007077443da684}{M\+C\+Us\+\_\+per\+\_\+row}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structjpeg__compress__struct_ab605396740a26114095bf99c7c7349fb}{M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan}
+\item 
+int \hyperlink{structjpeg__compress__struct_ac32cf016a916984f68f158e5310a16bb}{blocks\+\_\+in\+\_\+\+M\+C\+U}
+\item 
+int \hyperlink{structjpeg__compress__struct_a6debf977451892aae1116b47c5c1c95f}{M\+C\+U\+\_\+membership} \mbox{[}\hyperlink{jpeglib_8h_a4f270f4efb3fc0bb09f0d5ffa51ca327}{C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}
+\item 
+int \hyperlink{structjpeg__compress__struct_adda4b7ef0dda94b38b6e34df42769d81}{Ss}
+\item 
+int \hyperlink{structjpeg__compress__struct_af2c1fe7c62791cda75219c10d71132d9}{Se}
+\item 
+int \hyperlink{structjpeg__compress__struct_a301a95efc904d22aca78592f7a21673a}{Ah}
+\item 
+int \hyperlink{structjpeg__compress__struct_a4160152697f6042b8fe1d6838a8118e2}{Al}
+\item 
+int \hyperlink{structjpeg__compress__struct_aad43e172d1ec5dd1e369b72ed8753410}{block\+\_\+size}
+\item 
+const int $\ast$ \hyperlink{structjpeg__compress__struct_a40fe112672c5c26f6bc53978a2b9a2a1}{natural\+\_\+order}
+\item 
+int \hyperlink{structjpeg__compress__struct_acb8a6365a8225a8d14d88b5d3c1d03c3}{lim\+\_\+\+Se}
+\item 
+struct \hyperlink{structjpeg__comp__master}{jpeg\+\_\+comp\+\_\+master} $\ast$ \hyperlink{structjpeg__compress__struct_a50b9c60f47c9fff393d7d5b3a7b3618e}{master}
+\item 
+struct \hyperlink{structjpeg__c__main__controller}{jpeg\+\_\+c\+\_\+main\+\_\+controller} $\ast$ \hyperlink{structjpeg__compress__struct_ab1bb86e9c2ade498b09a9a19d60e6570}{main}
+\item 
+struct \hyperlink{structjpeg__c__prep__controller}{jpeg\+\_\+c\+\_\+prep\+\_\+controller} $\ast$ \hyperlink{structjpeg__compress__struct_a66875fd858cd11fb7a696a717c5c7b76}{prep}
+\item 
+struct \hyperlink{structjpeg__c__coef__controller}{jpeg\+\_\+c\+\_\+coef\+\_\+controller} $\ast$ \hyperlink{structjpeg__compress__struct_ad54865b66c30ce332c6757d56393dedc}{coef}
+\item 
+struct \hyperlink{structjpeg__marker__writer}{jpeg\+\_\+marker\+\_\+writer} $\ast$ \hyperlink{structjpeg__compress__struct_a909e4ca5c3c48f380a53cc1b068eea12}{marker}
+\item 
+struct \hyperlink{structjpeg__color__converter}{jpeg\+\_\+color\+\_\+converter} $\ast$ \hyperlink{structjpeg__compress__struct_a7c51e665f18d6e5a0fed053c470f4914}{cconvert}
+\item 
+struct \hyperlink{structjpeg__downsampler}{jpeg\+\_\+downsampler} $\ast$ \hyperlink{structjpeg__compress__struct_a65a72b804640a0c339863f6562098113}{downsample}
+\item 
+struct \hyperlink{structjpeg__forward__dct}{jpeg\+\_\+forward\+\_\+dct} $\ast$ \hyperlink{structjpeg__compress__struct_ac113c777486860f0b2f3784345073a83}{fdct}
+\item 
+struct \hyperlink{structjpeg__entropy__encoder}{jpeg\+\_\+entropy\+\_\+encoder} $\ast$ \hyperlink{structjpeg__compress__struct_a30477f9e5f6be16823e1aff2762ae270}{entropy}
+\item 
+\hyperlink{structjpeg__scan__info}{jpeg\+\_\+scan\+\_\+info} $\ast$ \hyperlink{structjpeg__compress__struct_ab4a2c220ed2cda1b0d4c88518d02a229}{script\+\_\+space}
+\item 
+int \hyperlink{structjpeg__compress__struct_ae50a683b4baddef6571900ca6240b1a3}{script\+\_\+space\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structjpeg__compress__struct_a98d33cae3c8eee8f1f8d662e31cb905d}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!ac\+\_\+huff\+\_\+tbl\+\_\+ptrs@{ac\+\_\+huff\+\_\+tbl\+\_\+ptrs}}
+\index{ac\+\_\+huff\+\_\+tbl\+\_\+ptrs@{ac\+\_\+huff\+\_\+tbl\+\_\+ptrs}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{ac\+\_\+huff\+\_\+tbl\+\_\+ptrs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+H\+U\+F\+F\+\_\+\+T\+B\+L}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::ac\+\_\+huff\+\_\+tbl\+\_\+ptrs\mbox{[}{\bf N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structjpeg__compress__struct_a98d33cae3c8eee8f1f8d662e31cb905d}
+\hypertarget{structjpeg__compress__struct_a301a95efc904d22aca78592f7a21673a}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!Ah@{Ah}}
+\index{Ah@{Ah}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{Ah}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::\+Ah}\label{structjpeg__compress__struct_a301a95efc904d22aca78592f7a21673a}
+\hypertarget{structjpeg__compress__struct_a4160152697f6042b8fe1d6838a8118e2}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!Al@{Al}}
+\index{Al@{Al}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{Al}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::\+Al}\label{structjpeg__compress__struct_a4160152697f6042b8fe1d6838a8118e2}
+\hypertarget{structjpeg__compress__struct_ac1994386d3fa3ff139b63bf4bb4dcc36}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!arith\+\_\+ac\+\_\+\+K@{arith\+\_\+ac\+\_\+\+K}}
+\index{arith\+\_\+ac\+\_\+\+K@{arith\+\_\+ac\+\_\+\+K}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{arith\+\_\+ac\+\_\+\+K}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} jpeg\+\_\+compress\+\_\+struct\+::arith\+\_\+ac\+\_\+\+K\mbox{[}{\bf N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structjpeg__compress__struct_ac1994386d3fa3ff139b63bf4bb4dcc36}
+\hypertarget{structjpeg__compress__struct_a93a42fe4e984ab0afff45636e23d538a}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!arith\+\_\+code@{arith\+\_\+code}}
+\index{arith\+\_\+code@{arith\+\_\+code}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{arith\+\_\+code}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::arith\+\_\+code}\label{structjpeg__compress__struct_a93a42fe4e984ab0afff45636e23d538a}
+\hypertarget{structjpeg__compress__struct_a736d867907116e88b3b38422fb2688c5}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!arith\+\_\+dc\+\_\+\+L@{arith\+\_\+dc\+\_\+\+L}}
+\index{arith\+\_\+dc\+\_\+\+L@{arith\+\_\+dc\+\_\+\+L}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{arith\+\_\+dc\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} jpeg\+\_\+compress\+\_\+struct\+::arith\+\_\+dc\+\_\+\+L\mbox{[}{\bf N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structjpeg__compress__struct_a736d867907116e88b3b38422fb2688c5}
+\hypertarget{structjpeg__compress__struct_a6ba30334643b7a5280343fe0e5e49e1e}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!arith\+\_\+dc\+\_\+\+U@{arith\+\_\+dc\+\_\+\+U}}
+\index{arith\+\_\+dc\+\_\+\+U@{arith\+\_\+dc\+\_\+\+U}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{arith\+\_\+dc\+\_\+\+U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} jpeg\+\_\+compress\+\_\+struct\+::arith\+\_\+dc\+\_\+\+U\mbox{[}{\bf N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structjpeg__compress__struct_a6ba30334643b7a5280343fe0e5e49e1e}
+\hypertarget{structjpeg__compress__struct_aad43e172d1ec5dd1e369b72ed8753410}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!block\+\_\+size@{block\+\_\+size}}
+\index{block\+\_\+size@{block\+\_\+size}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{block\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::block\+\_\+size}\label{structjpeg__compress__struct_aad43e172d1ec5dd1e369b72ed8753410}
+\hypertarget{structjpeg__compress__struct_ac32cf016a916984f68f158e5310a16bb}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!blocks\+\_\+in\+\_\+\+M\+C\+U@{blocks\+\_\+in\+\_\+\+M\+C\+U}}
+\index{blocks\+\_\+in\+\_\+\+M\+C\+U@{blocks\+\_\+in\+\_\+\+M\+C\+U}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{blocks\+\_\+in\+\_\+\+M\+C\+U}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::blocks\+\_\+in\+\_\+\+M\+C\+U}\label{structjpeg__compress__struct_ac32cf016a916984f68f158e5310a16bb}
+\hypertarget{structjpeg__compress__struct_abf474ed47e9f0a9c066bc47de5b0e8e7}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!C\+C\+I\+R601\+\_\+sampling@{C\+C\+I\+R601\+\_\+sampling}}
+\index{C\+C\+I\+R601\+\_\+sampling@{C\+C\+I\+R601\+\_\+sampling}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{C\+C\+I\+R601\+\_\+sampling}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::\+C\+C\+I\+R601\+\_\+sampling}\label{structjpeg__compress__struct_abf474ed47e9f0a9c066bc47de5b0e8e7}
+\hypertarget{structjpeg__compress__struct_a7c51e665f18d6e5a0fed053c470f4914}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!cconvert@{cconvert}}
+\index{cconvert@{cconvert}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{cconvert}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+color\+\_\+converter}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::cconvert}\label{structjpeg__compress__struct_a7c51e665f18d6e5a0fed053c470f4914}
+\hypertarget{structjpeg__compress__struct_ad54865b66c30ce332c6757d56393dedc}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!coef@{coef}}
+\index{coef@{coef}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{coef}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+c\+\_\+coef\+\_\+controller}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::coef}\label{structjpeg__compress__struct_ad54865b66c30ce332c6757d56393dedc}
+\hypertarget{structjpeg__compress__struct_a3533c65068c4cec8f048019d2b1c0557}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!color\+\_\+transform@{color\+\_\+transform}}
+\index{color\+\_\+transform@{color\+\_\+transform}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{color\+\_\+transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+R\+A\+N\+S\+F\+O\+R\+M} jpeg\+\_\+compress\+\_\+struct\+::color\+\_\+transform}\label{structjpeg__compress__struct_a3533c65068c4cec8f048019d2b1c0557}
+\hypertarget{structjpeg__compress__struct_a4d37d3f336cc11acafef541bf8ed38cc}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!comp\+\_\+info@{comp\+\_\+info}}
+\index{comp\+\_\+info@{comp\+\_\+info}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{comp\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jpeg\+\_\+component\+\_\+info}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::comp\+\_\+info}\label{structjpeg__compress__struct_a4d37d3f336cc11acafef541bf8ed38cc}
+\hypertarget{structjpeg__compress__struct_a3387358088abbec1c8838499966c8f06}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!comps\+\_\+in\+\_\+scan@{comps\+\_\+in\+\_\+scan}}
+\index{comps\+\_\+in\+\_\+scan@{comps\+\_\+in\+\_\+scan}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{comps\+\_\+in\+\_\+scan}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::comps\+\_\+in\+\_\+scan}\label{structjpeg__compress__struct_a3387358088abbec1c8838499966c8f06}
+\hypertarget{structjpeg__compress__struct_a1cacb367b7d69227d3086ff105bca9ab}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!cur\+\_\+comp\+\_\+info@{cur\+\_\+comp\+\_\+info}}
+\index{cur\+\_\+comp\+\_\+info@{cur\+\_\+comp\+\_\+info}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{cur\+\_\+comp\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jpeg\+\_\+component\+\_\+info}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::cur\+\_\+comp\+\_\+info\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+M\+P\+S\+\_\+\+I\+N\+\_\+\+S\+C\+A\+N}\mbox{]}}\label{structjpeg__compress__struct_a1cacb367b7d69227d3086ff105bca9ab}
+\hypertarget{structjpeg__compress__struct_a64c5b59e436f7d3d1d38b58d49993469}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!data\+\_\+precision@{data\+\_\+precision}}
+\index{data\+\_\+precision@{data\+\_\+precision}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{data\+\_\+precision}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::data\+\_\+precision}\label{structjpeg__compress__struct_a64c5b59e436f7d3d1d38b58d49993469}
+\hypertarget{structjpeg__compress__struct_a6a69e90a68e1f7f46774d83ba3737a4e}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!dc\+\_\+huff\+\_\+tbl\+\_\+ptrs@{dc\+\_\+huff\+\_\+tbl\+\_\+ptrs}}
+\index{dc\+\_\+huff\+\_\+tbl\+\_\+ptrs@{dc\+\_\+huff\+\_\+tbl\+\_\+ptrs}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{dc\+\_\+huff\+\_\+tbl\+\_\+ptrs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+H\+U\+F\+F\+\_\+\+T\+B\+L}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::dc\+\_\+huff\+\_\+tbl\+\_\+ptrs\mbox{[}{\bf N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structjpeg__compress__struct_a6a69e90a68e1f7f46774d83ba3737a4e}
+\hypertarget{structjpeg__compress__struct_ab782f698c650e8ec5f9b47043691d3c1}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!dct\+\_\+method@{dct\+\_\+method}}
+\index{dct\+\_\+method@{dct\+\_\+method}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{dct\+\_\+method}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+\_\+\+D\+C\+T\+\_\+\+M\+E\+T\+H\+O\+D} jpeg\+\_\+compress\+\_\+struct\+::dct\+\_\+method}\label{structjpeg__compress__struct_ab782f698c650e8ec5f9b47043691d3c1}
+\hypertarget{structjpeg__compress__struct_a8f3a056ed558bf7be4ff52999416a525}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!density\+\_\+unit@{density\+\_\+unit}}
+\index{density\+\_\+unit@{density\+\_\+unit}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{density\+\_\+unit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} jpeg\+\_\+compress\+\_\+struct\+::density\+\_\+unit}\label{structjpeg__compress__struct_a8f3a056ed558bf7be4ff52999416a525}
+\hypertarget{structjpeg__compress__struct_ab31c2c756e309dee8d0318557353ba40}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!dest@{dest}}
+\index{dest@{dest}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{dest}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+destination\+\_\+mgr}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::dest}\label{structjpeg__compress__struct_ab31c2c756e309dee8d0318557353ba40}
+\hypertarget{structjpeg__compress__struct_a683db079af3beb44eaab5b421a5a9d4f}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!do\+\_\+fancy\+\_\+downsampling@{do\+\_\+fancy\+\_\+downsampling}}
+\index{do\+\_\+fancy\+\_\+downsampling@{do\+\_\+fancy\+\_\+downsampling}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{do\+\_\+fancy\+\_\+downsampling}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::do\+\_\+fancy\+\_\+downsampling}\label{structjpeg__compress__struct_a683db079af3beb44eaab5b421a5a9d4f}
+\hypertarget{structjpeg__compress__struct_a65a72b804640a0c339863f6562098113}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!downsample@{downsample}}
+\index{downsample@{downsample}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{downsample}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+downsampler}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::downsample}\label{structjpeg__compress__struct_a65a72b804640a0c339863f6562098113}
+\hypertarget{structjpeg__compress__struct_a30477f9e5f6be16823e1aff2762ae270}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!entropy@{entropy}}
+\index{entropy@{entropy}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{entropy}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+entropy\+\_\+encoder}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::entropy}\label{structjpeg__compress__struct_a30477f9e5f6be16823e1aff2762ae270}
+\hypertarget{structjpeg__compress__struct_ac113c777486860f0b2f3784345073a83}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!fdct@{fdct}}
+\index{fdct@{fdct}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{fdct}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+forward\+\_\+dct}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::fdct}\label{structjpeg__compress__struct_ac113c777486860f0b2f3784345073a83}
+\hypertarget{structjpeg__compress__struct_a30863835e7785b7df800811f842b2da0}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!image\+\_\+height@{image\+\_\+height}}
+\index{image\+\_\+height@{image\+\_\+height}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{image\+\_\+height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::image\+\_\+height}\label{structjpeg__compress__struct_a30863835e7785b7df800811f842b2da0}
+\hypertarget{structjpeg__compress__struct_ac8e50a2c70252c53f3e10b886818f2cf}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!image\+\_\+width@{image\+\_\+width}}
+\index{image\+\_\+width@{image\+\_\+width}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{image\+\_\+width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::image\+\_\+width}\label{structjpeg__compress__struct_ac8e50a2c70252c53f3e10b886818f2cf}
+\hypertarget{structjpeg__compress__struct_ac27d1dfbbbd677aab9fb570c58ca960d}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!in\+\_\+color\+\_\+space@{in\+\_\+color\+\_\+space}}
+\index{in\+\_\+color\+\_\+space@{in\+\_\+color\+\_\+space}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{in\+\_\+color\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+C\+E} jpeg\+\_\+compress\+\_\+struct\+::in\+\_\+color\+\_\+space}\label{structjpeg__compress__struct_ac27d1dfbbbd677aab9fb570c58ca960d}
+\hypertarget{structjpeg__compress__struct_af5b66b039ea5a96bb2f5cf0254115837}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!input\+\_\+components@{input\+\_\+components}}
+\index{input\+\_\+components@{input\+\_\+components}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{input\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::input\+\_\+components}\label{structjpeg__compress__struct_af5b66b039ea5a96bb2f5cf0254115837}
+\hypertarget{structjpeg__compress__struct_ac5d2e16382ea12fb4e3bd6a69f7831ea}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!input\+\_\+gamma@{input\+\_\+gamma}}
+\index{input\+\_\+gamma@{input\+\_\+gamma}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{input\+\_\+gamma}]{\setlength{\rightskip}{0pt plus 5cm}double jpeg\+\_\+compress\+\_\+struct\+::input\+\_\+gamma}\label{structjpeg__compress__struct_ac5d2e16382ea12fb4e3bd6a69f7831ea}
+\hypertarget{structjpeg__compress__struct_a8e2468a5bffedad2257c715a59ded2e0}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!J\+F\+I\+F\+\_\+major\+\_\+version@{J\+F\+I\+F\+\_\+major\+\_\+version}}
+\index{J\+F\+I\+F\+\_\+major\+\_\+version@{J\+F\+I\+F\+\_\+major\+\_\+version}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{J\+F\+I\+F\+\_\+major\+\_\+version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} jpeg\+\_\+compress\+\_\+struct\+::\+J\+F\+I\+F\+\_\+major\+\_\+version}\label{structjpeg__compress__struct_a8e2468a5bffedad2257c715a59ded2e0}
+\hypertarget{structjpeg__compress__struct_a9653a22025ac9ff342d6f4221e2a9564}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!J\+F\+I\+F\+\_\+minor\+\_\+version@{J\+F\+I\+F\+\_\+minor\+\_\+version}}
+\index{J\+F\+I\+F\+\_\+minor\+\_\+version@{J\+F\+I\+F\+\_\+minor\+\_\+version}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{J\+F\+I\+F\+\_\+minor\+\_\+version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} jpeg\+\_\+compress\+\_\+struct\+::\+J\+F\+I\+F\+\_\+minor\+\_\+version}\label{structjpeg__compress__struct_a9653a22025ac9ff342d6f4221e2a9564}
+\hypertarget{structjpeg__compress__struct_a7fb5305ec135340eddc2ebabec6a84d7}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!jpeg\+\_\+color\+\_\+space@{jpeg\+\_\+color\+\_\+space}}
+\index{jpeg\+\_\+color\+\_\+space@{jpeg\+\_\+color\+\_\+space}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{jpeg\+\_\+color\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+C\+E} jpeg\+\_\+compress\+\_\+struct\+::jpeg\+\_\+color\+\_\+space}\label{structjpeg__compress__struct_a7fb5305ec135340eddc2ebabec6a84d7}
+\hypertarget{structjpeg__compress__struct_a831013770bec36f77dd2048c8771513c}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!jpeg\+\_\+common\+\_\+fields@{jpeg\+\_\+common\+\_\+fields}}
+\index{jpeg\+\_\+common\+\_\+fields@{jpeg\+\_\+common\+\_\+fields}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{jpeg\+\_\+common\+\_\+fields}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+compress\+\_\+struct\+::jpeg\+\_\+common\+\_\+fields}\label{structjpeg__compress__struct_a831013770bec36f77dd2048c8771513c}
+\hypertarget{structjpeg__compress__struct_abc2cf065c0faab28327f7238949f76d3}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!jpeg\+\_\+height@{jpeg\+\_\+height}}
+\index{jpeg\+\_\+height@{jpeg\+\_\+height}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{jpeg\+\_\+height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::jpeg\+\_\+height}\label{structjpeg__compress__struct_abc2cf065c0faab28327f7238949f76d3}
+\hypertarget{structjpeg__compress__struct_ab433b317fcbe32212122621e476ac9d8}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!jpeg\+\_\+width@{jpeg\+\_\+width}}
+\index{jpeg\+\_\+width@{jpeg\+\_\+width}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{jpeg\+\_\+width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::jpeg\+\_\+width}\label{structjpeg__compress__struct_ab433b317fcbe32212122621e476ac9d8}
+\hypertarget{structjpeg__compress__struct_acb8a6365a8225a8d14d88b5d3c1d03c3}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!lim\+\_\+\+Se@{lim\+\_\+\+Se}}
+\index{lim\+\_\+\+Se@{lim\+\_\+\+Se}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{lim\+\_\+\+Se}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::lim\+\_\+\+Se}\label{structjpeg__compress__struct_acb8a6365a8225a8d14d88b5d3c1d03c3}
+\hypertarget{structjpeg__compress__struct_ab1bb86e9c2ade498b09a9a19d60e6570}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!main@{main}}
+\index{main@{main}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+c\+\_\+main\+\_\+controller}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::main}\label{structjpeg__compress__struct_ab1bb86e9c2ade498b09a9a19d60e6570}
+\hypertarget{structjpeg__compress__struct_a909e4ca5c3c48f380a53cc1b068eea12}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!marker@{marker}}
+\index{marker@{marker}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{marker}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+marker\+\_\+writer}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::marker}\label{structjpeg__compress__struct_a909e4ca5c3c48f380a53cc1b068eea12}
+\hypertarget{structjpeg__compress__struct_a50b9c60f47c9fff393d7d5b3a7b3618e}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!master@{master}}
+\index{master@{master}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{master}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+comp\+\_\+master}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::master}\label{structjpeg__compress__struct_a50b9c60f47c9fff393d7d5b3a7b3618e}
+\hypertarget{structjpeg__compress__struct_ae8de4e6079b80e3a81135d07934c640d}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!max\+\_\+h\+\_\+samp\+\_\+factor@{max\+\_\+h\+\_\+samp\+\_\+factor}}
+\index{max\+\_\+h\+\_\+samp\+\_\+factor@{max\+\_\+h\+\_\+samp\+\_\+factor}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{max\+\_\+h\+\_\+samp\+\_\+factor}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::max\+\_\+h\+\_\+samp\+\_\+factor}\label{structjpeg__compress__struct_ae8de4e6079b80e3a81135d07934c640d}
+\hypertarget{structjpeg__compress__struct_a9e03a4eb7af87c682937caed3d341d4a}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!max\+\_\+v\+\_\+samp\+\_\+factor@{max\+\_\+v\+\_\+samp\+\_\+factor}}
+\index{max\+\_\+v\+\_\+samp\+\_\+factor@{max\+\_\+v\+\_\+samp\+\_\+factor}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{max\+\_\+v\+\_\+samp\+\_\+factor}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::max\+\_\+v\+\_\+samp\+\_\+factor}\label{structjpeg__compress__struct_a9e03a4eb7af87c682937caed3d341d4a}
+\hypertarget{structjpeg__compress__struct_a6debf977451892aae1116b47c5c1c95f}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!M\+C\+U\+\_\+membership@{M\+C\+U\+\_\+membership}}
+\index{M\+C\+U\+\_\+membership@{M\+C\+U\+\_\+membership}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{M\+C\+U\+\_\+membership}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::\+M\+C\+U\+\_\+membership\mbox{[}{\bf C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}}\label{structjpeg__compress__struct_a6debf977451892aae1116b47c5c1c95f}
+\hypertarget{structjpeg__compress__struct_ab605396740a26114095bf99c7c7349fb}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan@{M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan}}
+\index{M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan@{M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::\+M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan}\label{structjpeg__compress__struct_ab605396740a26114095bf99c7c7349fb}
+\hypertarget{structjpeg__compress__struct_a97f0c5e0ae932d1810007077443da684}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!M\+C\+Us\+\_\+per\+\_\+row@{M\+C\+Us\+\_\+per\+\_\+row}}
+\index{M\+C\+Us\+\_\+per\+\_\+row@{M\+C\+Us\+\_\+per\+\_\+row}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{M\+C\+Us\+\_\+per\+\_\+row}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::\+M\+C\+Us\+\_\+per\+\_\+row}\label{structjpeg__compress__struct_a97f0c5e0ae932d1810007077443da684}
+\hypertarget{structjpeg__compress__struct_a99a75ca2f7569dcb4444e7cb35ce916f}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size@{min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size}}
+\index{min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size@{min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size}\label{structjpeg__compress__struct_a99a75ca2f7569dcb4444e7cb35ce916f}
+\hypertarget{structjpeg__compress__struct_a5d63d182b17f0885fcabf88c6a08a9a5}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size@{min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size}}
+\index{min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size@{min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size}\label{structjpeg__compress__struct_a5d63d182b17f0885fcabf88c6a08a9a5}
+\hypertarget{structjpeg__compress__struct_a40fe112672c5c26f6bc53978a2b9a2a1}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!natural\+\_\+order@{natural\+\_\+order}}
+\index{natural\+\_\+order@{natural\+\_\+order}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{natural\+\_\+order}]{\setlength{\rightskip}{0pt plus 5cm}const int$\ast$ jpeg\+\_\+compress\+\_\+struct\+::natural\+\_\+order}\label{structjpeg__compress__struct_a40fe112672c5c26f6bc53978a2b9a2a1}
+\hypertarget{structjpeg__compress__struct_aefb3f2e6479374ba03e7d0421dcfb086}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!next\+\_\+scanline@{next\+\_\+scanline}}
+\index{next\+\_\+scanline@{next\+\_\+scanline}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{next\+\_\+scanline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::next\+\_\+scanline}\label{structjpeg__compress__struct_aefb3f2e6479374ba03e7d0421dcfb086}
+\hypertarget{structjpeg__compress__struct_a524f0284a6fcf96b21c8a745282c15e2}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!num\+\_\+components@{num\+\_\+components}}
+\index{num\+\_\+components@{num\+\_\+components}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{num\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::num\+\_\+components}\label{structjpeg__compress__struct_a524f0284a6fcf96b21c8a745282c15e2}
+\hypertarget{structjpeg__compress__struct_abf2f96c340659a09a9ce08469a17e08b}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!num\+\_\+scans@{num\+\_\+scans}}
+\index{num\+\_\+scans@{num\+\_\+scans}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{num\+\_\+scans}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::num\+\_\+scans}\label{structjpeg__compress__struct_abf2f96c340659a09a9ce08469a17e08b}
+\hypertarget{structjpeg__compress__struct_a2ed9c1e2bd808fd684338a009a164ef3}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!optimize\+\_\+coding@{optimize\+\_\+coding}}
+\index{optimize\+\_\+coding@{optimize\+\_\+coding}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{optimize\+\_\+coding}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::optimize\+\_\+coding}\label{structjpeg__compress__struct_a2ed9c1e2bd808fd684338a009a164ef3}
+\hypertarget{structjpeg__compress__struct_a66875fd858cd11fb7a696a717c5c7b76}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!prep@{prep}}
+\index{prep@{prep}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{prep}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+c\+\_\+prep\+\_\+controller}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::prep}\label{structjpeg__compress__struct_a66875fd858cd11fb7a696a717c5c7b76}
+\hypertarget{structjpeg__compress__struct_ae3b16d173e7feef7b6b0e823fd2fde3f}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!progressive\+\_\+mode@{progressive\+\_\+mode}}
+\index{progressive\+\_\+mode@{progressive\+\_\+mode}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{progressive\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::progressive\+\_\+mode}\label{structjpeg__compress__struct_ae3b16d173e7feef7b6b0e823fd2fde3f}
+\hypertarget{structjpeg__compress__struct_a3d8545504353556fae60e1e865d2c600}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!q\+\_\+scale\+\_\+factor@{q\+\_\+scale\+\_\+factor}}
+\index{q\+\_\+scale\+\_\+factor@{q\+\_\+scale\+\_\+factor}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{q\+\_\+scale\+\_\+factor}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::q\+\_\+scale\+\_\+factor\mbox{[}{\bf N\+U\+M\+\_\+\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structjpeg__compress__struct_a3d8545504353556fae60e1e865d2c600}
+\hypertarget{structjpeg__compress__struct_a70a194c6a9c1744e1ed3a97232fb97f5}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!quant\+\_\+tbl\+\_\+ptrs@{quant\+\_\+tbl\+\_\+ptrs}}
+\index{quant\+\_\+tbl\+\_\+ptrs@{quant\+\_\+tbl\+\_\+ptrs}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{quant\+\_\+tbl\+\_\+ptrs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+L}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::quant\+\_\+tbl\+\_\+ptrs\mbox{[}{\bf N\+U\+M\+\_\+\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structjpeg__compress__struct_a70a194c6a9c1744e1ed3a97232fb97f5}
+\hypertarget{structjpeg__compress__struct_a7f9dfd37243943bc138815bcf1e89584}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!raw\+\_\+data\+\_\+in@{raw\+\_\+data\+\_\+in}}
+\index{raw\+\_\+data\+\_\+in@{raw\+\_\+data\+\_\+in}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{raw\+\_\+data\+\_\+in}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::raw\+\_\+data\+\_\+in}\label{structjpeg__compress__struct_a7f9dfd37243943bc138815bcf1e89584}
+\hypertarget{structjpeg__compress__struct_a9636f9df88d5a3ae56f0bb9a5f923db7}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!restart\+\_\+in\+\_\+rows@{restart\+\_\+in\+\_\+rows}}
+\index{restart\+\_\+in\+\_\+rows@{restart\+\_\+in\+\_\+rows}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{restart\+\_\+in\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::restart\+\_\+in\+\_\+rows}\label{structjpeg__compress__struct_a9636f9df88d5a3ae56f0bb9a5f923db7}
+\hypertarget{structjpeg__compress__struct_a57ad1f6d9015e25fe272c645dcc3f71e}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!restart\+\_\+interval@{restart\+\_\+interval}}
+\index{restart\+\_\+interval@{restart\+\_\+interval}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{restart\+\_\+interval}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int jpeg\+\_\+compress\+\_\+struct\+::restart\+\_\+interval}\label{structjpeg__compress__struct_a57ad1f6d9015e25fe272c645dcc3f71e}
+\hypertarget{structjpeg__compress__struct_ab30f569483d6c25032aa2c18c885e91c}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!scale\+\_\+denom@{scale\+\_\+denom}}
+\index{scale\+\_\+denom@{scale\+\_\+denom}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{scale\+\_\+denom}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int jpeg\+\_\+compress\+\_\+struct\+::scale\+\_\+denom}\label{structjpeg__compress__struct_ab30f569483d6c25032aa2c18c885e91c}
+\hypertarget{structjpeg__compress__struct_a16eb7e2e1ac30c42e8bd753bde43129c}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!scale\+\_\+num@{scale\+\_\+num}}
+\index{scale\+\_\+num@{scale\+\_\+num}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{scale\+\_\+num}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int jpeg\+\_\+compress\+\_\+struct\+::scale\+\_\+num}\label{structjpeg__compress__struct_a16eb7e2e1ac30c42e8bd753bde43129c}
+\hypertarget{structjpeg__compress__struct_a545fed3fef0d0c5962dbe0e80c067c03}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!scan\+\_\+info@{scan\+\_\+info}}
+\index{scan\+\_\+info@{scan\+\_\+info}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{scan\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf jpeg\+\_\+scan\+\_\+info}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::scan\+\_\+info}\label{structjpeg__compress__struct_a545fed3fef0d0c5962dbe0e80c067c03}
+\hypertarget{structjpeg__compress__struct_ab4a2c220ed2cda1b0d4c88518d02a229}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!script\+\_\+space@{script\+\_\+space}}
+\index{script\+\_\+space@{script\+\_\+space}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{script\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf jpeg\+\_\+scan\+\_\+info}$\ast$ jpeg\+\_\+compress\+\_\+struct\+::script\+\_\+space}\label{structjpeg__compress__struct_ab4a2c220ed2cda1b0d4c88518d02a229}
+\hypertarget{structjpeg__compress__struct_ae50a683b4baddef6571900ca6240b1a3}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!script\+\_\+space\+\_\+size@{script\+\_\+space\+\_\+size}}
+\index{script\+\_\+space\+\_\+size@{script\+\_\+space\+\_\+size}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{script\+\_\+space\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::script\+\_\+space\+\_\+size}\label{structjpeg__compress__struct_ae50a683b4baddef6571900ca6240b1a3}
+\hypertarget{structjpeg__compress__struct_af2c1fe7c62791cda75219c10d71132d9}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!Se@{Se}}
+\index{Se@{Se}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{Se}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::\+Se}\label{structjpeg__compress__struct_af2c1fe7c62791cda75219c10d71132d9}
+\hypertarget{structjpeg__compress__struct_a0e14f65876566ff8eec195d124535307}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!smoothing\+\_\+factor@{smoothing\+\_\+factor}}
+\index{smoothing\+\_\+factor@{smoothing\+\_\+factor}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{smoothing\+\_\+factor}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::smoothing\+\_\+factor}\label{structjpeg__compress__struct_a0e14f65876566ff8eec195d124535307}
+\hypertarget{structjpeg__compress__struct_adda4b7ef0dda94b38b6e34df42769d81}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!Ss@{Ss}}
+\index{Ss@{Ss}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{Ss}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+compress\+\_\+struct\+::\+Ss}\label{structjpeg__compress__struct_adda4b7ef0dda94b38b6e34df42769d81}
+\hypertarget{structjpeg__compress__struct_aef01162f4c66434929f933a40e695f9e}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!total\+\_\+i\+M\+C\+U\+\_\+rows@{total\+\_\+i\+M\+C\+U\+\_\+rows}}
+\index{total\+\_\+i\+M\+C\+U\+\_\+rows@{total\+\_\+i\+M\+C\+U\+\_\+rows}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{total\+\_\+i\+M\+C\+U\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} jpeg\+\_\+compress\+\_\+struct\+::total\+\_\+i\+M\+C\+U\+\_\+rows}\label{structjpeg__compress__struct_aef01162f4c66434929f933a40e695f9e}
+\hypertarget{structjpeg__compress__struct_a39c549a441052b38df2dfd7359c68814}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!write\+\_\+\+Adobe\+\_\+marker@{write\+\_\+\+Adobe\+\_\+marker}}
+\index{write\+\_\+\+Adobe\+\_\+marker@{write\+\_\+\+Adobe\+\_\+marker}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{write\+\_\+\+Adobe\+\_\+marker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::write\+\_\+\+Adobe\+\_\+marker}\label{structjpeg__compress__struct_a39c549a441052b38df2dfd7359c68814}
+\hypertarget{structjpeg__compress__struct_a12178443b9177fd4bdddc66ce4e08e12}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!write\+\_\+\+J\+F\+I\+F\+\_\+header@{write\+\_\+\+J\+F\+I\+F\+\_\+header}}
+\index{write\+\_\+\+J\+F\+I\+F\+\_\+header@{write\+\_\+\+J\+F\+I\+F\+\_\+header}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{write\+\_\+\+J\+F\+I\+F\+\_\+header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+compress\+\_\+struct\+::write\+\_\+\+J\+F\+I\+F\+\_\+header}\label{structjpeg__compress__struct_a12178443b9177fd4bdddc66ce4e08e12}
+\hypertarget{structjpeg__compress__struct_adef3c4b809ebca2a853b5659e177deaa}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!X\+\_\+density@{X\+\_\+density}}
+\index{X\+\_\+density@{X\+\_\+density}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{X\+\_\+density}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} jpeg\+\_\+compress\+\_\+struct\+::\+X\+\_\+density}\label{structjpeg__compress__struct_adef3c4b809ebca2a853b5659e177deaa}
+\hypertarget{structjpeg__compress__struct_a978dc1c187fab34211757a134ebf4adb}{}\index{jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}!Y\+\_\+density@{Y\+\_\+density}}
+\index{Y\+\_\+density@{Y\+\_\+density}!jpeg\+\_\+compress\+\_\+struct@{jpeg\+\_\+compress\+\_\+struct}}
+\subsubsection[{Y\+\_\+density}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} jpeg\+\_\+compress\+\_\+struct\+::\+Y\+\_\+density}\label{structjpeg__compress__struct_a978dc1c187fab34211757a134ebf4adb}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/\hyperlink{jpeglib_8h}{jpeglib.\+h}\end{DoxyCompactItemize}

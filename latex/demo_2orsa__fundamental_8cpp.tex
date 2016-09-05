@@ -1,0 +1,138 @@
+\hypertarget{demo_2orsa__fundamental_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/orsa\+\_\+fundamental.cpp File Reference}
+\label{demo_2orsa__fundamental_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/orsa\+\_\+fundamental.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/orsa\+\_\+fundamental.\+cpp}}
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/cmd\+Line.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/lib\+Image/image.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/lib\+Image/image\+\_\+drawing.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/lib\+Image/image\+\_\+io.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/sift\+Match.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/warping.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/extras/sift/library.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/lib\+Orsa/fundamental\+\_\+model.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/extras/lib\+Numerics/numerics.\+h\char`\"{}}\\*
+Include dependency graph for orsa\+\_\+fundamental.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{demo_2orsa__fundamental_8cpp_a1cb2da590e0fcd7a4d4f28478af08641}{O\+R\+S\+A} (const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+matchings, int w1, int h1, int w2, int h2, double precision, \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&F, std\+::vector$<$ int $>$ \&vec\+\_\+inliers)
+\begin{DoxyCompactList}\small\item\em O\+R\+S\+A fundamental estimation. \end{DoxyCompactList}\item 
+\hyperlink{structMatch}{Match} \hyperlink{demo_2orsa__fundamental_8cpp_a772bd905d3bf8937d0cf5a9ece6422ef}{inv} (const \hyperlink{structMatch}{Match} \&m)
+\begin{DoxyCompactList}\small\item\em Inverse match. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo_2orsa__fundamental_8cpp_a58ac817d29961a7f9b6238ecc023ce1d}{draw\+\_\+small\+\_\+epi} (const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&F, const \hyperlink{structMatch}{Match} \&m, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&T, double half\+Length, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$out)
+\begin{DoxyCompactList}\small\item\em Draw portion of epipolar line associated to (m.\+x1,m.\+y1). \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo_2orsa__fundamental_8cpp_aa452eaf7f0016ce5cfcda8ab3047a0d1}{display\+\_\+error} (const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&F, const \hyperlink{structMatch}{Match} \&m, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&H, \hyperlink{classRect}{Rect} R, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$out)
+\begin{DoxyCompactList}\small\item\em Show epipolar line corresponding to (m.\+x1,m.\+y1) and orthogonal projection of (m.\+x2,m.\+y2) on this line. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo_2orsa__fundamental_8cpp_a1f476956edfdc6221bf0c8f8a45b003b}{display\+\_\+match} (const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+matchings, std\+::vector$<$ int $>$ \&vec\+\_\+inliers, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ $\ast$F, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&H1, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&H2, const \hyperlink{classRect}{Rect} \&R1, const \hyperlink{classRect}{Rect} \&R2, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$in, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$out)
+\begin{DoxyCompactList}\small\item\em Output inlier and oulier matches in image files. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \hyperlink{demo_2orsa__fundamental_8cpp_adc7a2b94c98c3c8203d48569ddcc9b50}{zoomtrans} (double z, double dx, double dy)
+\begin{DoxyCompactList}\small\item\em Return 3x3 zoom-\/translation matrix. \end{DoxyCompactList}\item 
+int \hyperlink{demo_2orsa__fundamental_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{demo_2orsa__fundamental_8cpp_aa452eaf7f0016ce5cfcda8ab3047a0d1}{}\index{demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}!display\+\_\+error@{display\+\_\+error}}
+\index{display\+\_\+error@{display\+\_\+error}!demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}}
+\subsubsection[{display\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} display\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{F, }
+\item[{const {\bf Match} \&}]{m, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{H, }
+\item[{{\bf Rect}}]{R, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\label{demo_2orsa__fundamental_8cpp_aa452eaf7f0016ce5cfcda8ab3047a0d1}
+
+
+Show epipolar line corresponding to (m.\+x1,m.\+y1) and orthogonal projection of (m.\+x2,m.\+y2) on this line. 
+
+Epipolar line is clipped inside rectangle  and coordinates are transformed by homography  before display. \hypertarget{demo_2orsa__fundamental_8cpp_a1f476956edfdc6221bf0c8f8a45b003b}{}\index{demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}!display\+\_\+match@{display\+\_\+match}}
+\index{display\+\_\+match@{display\+\_\+match}!demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}}
+\subsubsection[{display\+\_\+match}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} display\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+matchings, }
+\item[{std\+::vector$<$ int $>$ \&}]{vec\+\_\+inliers, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ $\ast$}]{F, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{H1, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{H2, }
+\item[{const {\bf Rect} \&}]{R1, }
+\item[{const {\bf Rect} \&}]{R2, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{in, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\label{demo_2orsa__fundamental_8cpp_a1f476956edfdc6221bf0c8f8a45b003b}
+
+
+Output inlier and oulier matches in image files. 
+
+\hypertarget{demo_2orsa__fundamental_8cpp_a58ac817d29961a7f9b6238ecc023ce1d}{}\index{demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}!draw\+\_\+small\+\_\+epi@{draw\+\_\+small\+\_\+epi}}
+\index{draw\+\_\+small\+\_\+epi@{draw\+\_\+small\+\_\+epi}!demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}}
+\subsubsection[{draw\+\_\+small\+\_\+epi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} draw\+\_\+small\+\_\+epi (
+\begin{DoxyParamCaption}
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{F, }
+\item[{const {\bf Match} \&}]{m, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{T, }
+\item[{double}]{half\+Length, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\label{demo_2orsa__fundamental_8cpp_a58ac817d29961a7f9b6238ecc023ce1d}
+
+
+Draw portion of epipolar line associated to (m.\+x1,m.\+y1). 
+
+The center of the segment is the projection of (m.\+x2,m.\+y2) on the line. \hypertarget{demo_2orsa__fundamental_8cpp_a772bd905d3bf8937d0cf5a9ece6422ef}{}\index{demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}!inv@{inv}}
+\index{inv@{inv}!demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}}
+\subsubsection[{inv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Match} inv (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match} \&}]{m}
+\end{DoxyParamCaption}
+)}\label{demo_2orsa__fundamental_8cpp_a772bd905d3bf8937d0cf5a9ece6422ef}
+
+
+Inverse match. 
+
+\hypertarget{demo_2orsa__fundamental_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}!main@{main}}
+\index{main@{main}!demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{demo_2orsa__fundamental_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{demo_2orsa__fundamental_8cpp_a1cb2da590e0fcd7a4d4f28478af08641}{}\index{demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}!O\+R\+S\+A@{O\+R\+S\+A}}
+\index{O\+R\+S\+A@{O\+R\+S\+A}!demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}}
+\subsubsection[{O\+R\+S\+A}]{\setlength{\rightskip}{0pt plus 5cm}bool O\+R\+S\+A (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+matchings, }
+\item[{int}]{w1, }
+\item[{int}]{h1, }
+\item[{int}]{w2, }
+\item[{int}]{h2, }
+\item[{double}]{precision, }
+\item[{{\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{F, }
+\item[{std\+::vector$<$ int $>$ \&}]{vec\+\_\+inliers}
+\end{DoxyParamCaption}
+)}\label{demo_2orsa__fundamental_8cpp_a1cb2da590e0fcd7a4d4f28478af08641}
+
+
+O\+R\+S\+A fundamental estimation. 
+
+\hypertarget{demo_2orsa__fundamental_8cpp_adc7a2b94c98c3c8203d48569ddcc9b50}{}\index{demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}!zoomtrans@{zoomtrans}}
+\index{zoomtrans@{zoomtrans}!demo/orsa\+\_\+fundamental.\+cpp@{demo/orsa\+\_\+fundamental.\+cpp}}
+\subsubsection[{zoomtrans}]{\setlength{\rightskip}{0pt plus 5cm}{\bf lib\+Numerics\+::matrix}$<$double$>$ zoomtrans (
+\begin{DoxyParamCaption}
+\item[{double}]{z, }
+\item[{double}]{dx, }
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+)}\label{demo_2orsa__fundamental_8cpp_adc7a2b94c98c3c8203d48569ddcc9b50}
+
+
+Return 3x3 zoom-\/translation matrix. 
+

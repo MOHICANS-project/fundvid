@@ -1,0 +1,103 @@
+\hypertarget{lib__discrete_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+discrete.cpp File Reference}
+\label{lib__discrete_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+discrete.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+discrete.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+discrete.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+util.\+h\char`\"{}}\\*
+Include dependency graph for lib\+\_\+discrete.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__discrete_8cpp_a292ba7ae3a72f43bd8c50eaf2320a1be}{sift\+\_\+compute\+\_\+gradient} (const float $\ast$im, float $\ast$im\+\_\+x, float $\ast$im\+\_\+y, int w, int h)
+\begin{DoxyCompactList}\small\item\em Compute image gradient via symmetric finite difference schemes. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__discrete_8cpp_a8a3ba75fe8c47a914789c9d8962e3f02}{sift\+\_\+add\+\_\+gaussian\+\_\+blur} (const float $\ast$in, float $\ast$out, int w, int h, float sigma)
+\begin{DoxyCompactList}\small\item\em Discrete Gaussian convolution on image. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__discrete_8cpp_af305b531c5078f050cee7043b6447da3}{sift\+\_\+subsample\+\_\+by2} (const float $\ast$in, float $\ast$out, int wi, int hi)
+\begin{DoxyCompactList}\small\item\em sub sampling by factor 2, keeping sample (0,0) \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__discrete_8cpp_a35c3cc963ba35ad247350cd4aa691c8e}{sift\+\_\+oversample\+\_\+bilin} (const float $\ast$in, int wi, int hi, float $\ast$out, int wo, int ho, float delta\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Interpolate the image with a bilinear model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__discrete_8cpp_a8a3ba75fe8c47a914789c9d8962e3f02}{}\index{lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}!sift\+\_\+add\+\_\+gaussian\+\_\+blur@{sift\+\_\+add\+\_\+gaussian\+\_\+blur}}
+\index{sift\+\_\+add\+\_\+gaussian\+\_\+blur@{sift\+\_\+add\+\_\+gaussian\+\_\+blur}!lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}}
+\subsubsection[{sift\+\_\+add\+\_\+gaussian\+\_\+blur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+add\+\_\+gaussian\+\_\+blur (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{in, }
+\item[{float $\ast$}]{out, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{float}]{sigma}
+\end{DoxyParamCaption}
+)}\label{lib__discrete_8cpp_a8a3ba75fe8c47a914789c9d8962e3f02}
+
+
+Discrete Gaussian convolution on image. 
+
+Applies in each direction monodimensional sampled Gaussian kernel and truncated at radius 4.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & input image of size w X h. \\
+\hline
+{\em out} & output image of size w X h. \\
+\hline
+{\em sigma} & standard deviation of the Gaussian kernel \\
+\hline
+\end{DoxyParams}
+\hypertarget{lib__discrete_8cpp_a292ba7ae3a72f43bd8c50eaf2320a1be}{}\index{lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}!sift\+\_\+compute\+\_\+gradient@{sift\+\_\+compute\+\_\+gradient}}
+\index{sift\+\_\+compute\+\_\+gradient@{sift\+\_\+compute\+\_\+gradient}!lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}}
+\subsubsection[{sift\+\_\+compute\+\_\+gradient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+compute\+\_\+gradient (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{im, }
+\item[{float $\ast$}]{im\+\_\+x, }
+\item[{float $\ast$}]{im\+\_\+y, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{lib__discrete_8cpp_a292ba7ae3a72f43bd8c50eaf2320a1be}
+
+
+Compute image gradient via symmetric finite difference schemes. 
+
+\hyperlink{classImage}{Image} Gradient.
+
+image extension \+: symmetrization at x=-\/1/2 Computing im\+\_\+y
+
+Computing im\+\_\+x \hypertarget{lib__discrete_8cpp_a35c3cc963ba35ad247350cd4aa691c8e}{}\index{lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}!sift\+\_\+oversample\+\_\+bilin@{sift\+\_\+oversample\+\_\+bilin}}
+\index{sift\+\_\+oversample\+\_\+bilin@{sift\+\_\+oversample\+\_\+bilin}!lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}}
+\subsubsection[{sift\+\_\+oversample\+\_\+bilin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+oversample\+\_\+bilin (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{in, }
+\item[{int}]{wi, }
+\item[{int}]{hi, }
+\item[{float $\ast$}]{out, }
+\item[{int}]{wo, }
+\item[{int}]{ho, }
+\item[{float}]{delta\+\_\+out}
+\end{DoxyParamCaption}
+)}\label{lib__discrete_8cpp_a35c3cc963ba35ad247350cd4aa691c8e}
+
+
+Interpolate the image with a bilinear model. 
+
+the inter-\/pixel distance in the output image is delta\+\_\+out
+
+in \+: input digital image with (wi X hi) samples. out \+: output digital image with (wo X ho) samples, with wo =  wi / delta\+\_\+out  and ho =  hi / delta\+\_\+out  \hypertarget{lib__discrete_8cpp_af305b531c5078f050cee7043b6447da3}{}\index{lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}!sift\+\_\+subsample\+\_\+by2@{sift\+\_\+subsample\+\_\+by2}}
+\index{sift\+\_\+subsample\+\_\+by2@{sift\+\_\+subsample\+\_\+by2}!lib\+\_\+discrete.\+cpp@{lib\+\_\+discrete.\+cpp}}
+\subsubsection[{sift\+\_\+subsample\+\_\+by2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+subsample\+\_\+by2 (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{in, }
+\item[{float $\ast$}]{out, }
+\item[{int}]{wi, }
+\item[{int}]{hi}
+\end{DoxyParamCaption}
+)}\label{lib__discrete_8cpp_af305b531c5078f050cee7043b6447da3}
+
+
+sub sampling by factor 2, keeping sample (0,0) 
+
+\hyperlink{classImage}{Image} subsampling by a factor 2. 

@@ -1,0 +1,109 @@
+\hypertarget{Test_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/\+Cpp\+Unit\+Lite/\+Test.h File Reference}
+\label{Test_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/\+Cpp\+Unit\+Lite/\+Test.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/\+Cpp\+Unit\+Lite/\+Test.\+h}}
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/\+Cpp\+Unit\+Lite/\+Simple\+String.\+h\char`\"{}}\\*
+Include dependency graph for Test.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classTest}{Test}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Test_8h_a13fb650bc56807117ccc8c53d4c957c9}{T\+E\+S\+T}(test\+Group,  test\+Name)
+\item 
+\#define \hyperlink{Test_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+C\+K}(condition)
+\item 
+\#define \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L}(expected,  actual)~\{ if ((expected) != (actual)) result\+\_\+.\+add\+Failure(\hyperlink{classFailure}{Failure}(name\+\_\+, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \hyperlink{SimpleString_8h_aae8fbaca93e17fbf5c66ebcd77d329f8}{String\+From}(expected), \hyperlink{SimpleString_8h_aae8fbaca93e17fbf5c66ebcd77d329f8}{String\+From}(actual))); \}
+\item 
+\#define \hyperlink{Test_8h_a7921a0c4f152a7879e78fe6fc2905590}{L\+O\+N\+G\+S\+\_\+\+E\+Q\+U\+A\+L}(expected,  actual)
+\item 
+\#define \hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L}(expected,  actual,  threshold)
+\item 
+\#define \hyperlink{Test_8h_a5b870ba9f143d10f76df4fa5aa01d58f}{F\+A\+I\+L}(text)~\{ result\+\_\+.\+add\+Failure (\hyperlink{classFailure}{Failure} (name\+\_\+, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,(text))); return; \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{Test_8h_a3e1cfef60e774a81f30eaddf26a3a274}{}\index{Test.\+h@{Test.\+h}!C\+H\+E\+C\+K@{C\+H\+E\+C\+K}}
+\index{C\+H\+E\+C\+K@{C\+H\+E\+C\+K}!Test.\+h@{Test.\+h}}
+\subsubsection[{C\+H\+E\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K(
+\begin{DoxyParamCaption}
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)}\label{Test_8h_a3e1cfef60e774a81f30eaddf26a3a274}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \textcolor{keywordflow}{if} (!(condition)) \(\backslash\)
+\{ result\_.addFailure (\hyperlink{classFailure}{Failure} (name\_, \_\_FILE\_\_,\_\_LINE\_\_, #condition)); \textcolor{keywordflow}{return}; \} \}
+\end{DoxyCode}
+\hypertarget{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{}\index{Test.\+h@{Test.\+h}!C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L@{C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L}}
+\index{C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L@{C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L}!Test.\+h@{Test.\+h}}
+\subsubsection[{C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L(
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)~\{ if ((expected) != (actual)) result\+\_\+.\+add\+Failure({\bf Failure}(name\+\_\+, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, {\bf String\+From}(expected), {\bf String\+From}(actual))); \}}\label{Test_8h_ad8fa79f5d491cc01af302832785e90fe}
+\hypertarget{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{}\index{Test.\+h@{Test.\+h}!D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L@{D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L}}
+\index{D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L@{D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L}!Test.\+h@{Test.\+h}}
+\subsubsection[{D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L(
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual, }
+\item[{}]{threshold}
+\end{DoxyParamCaption}
+)}\label{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \textcolor{keywordtype}{double} actualTemp = (double) actual; \(\backslash\)
+  double expectedTemp = (double) expected; \(\backslash\)
+  if (fabs ((expectedTemp)-(actualTemp)) > threshold) \(\backslash\)
+\{ result\_.addFailure (\hyperlink{classFailure}{Failure} (name\_, \_\_FILE\_\_, \_\_LINE\_\_, \(\backslash\)
+\hyperlink{SimpleString_8h_a836e9372c54cba69e57a63eb751f224b}{StringFrom}(expectedTemp), \hyperlink{SimpleString_8h_a836e9372c54cba69e57a63eb751f224b}{StringFrom}(actualTemp))); \textcolor{keywordflow}{return}; \} \}
+\end{DoxyCode}
+\hypertarget{Test_8h_a5b870ba9f143d10f76df4fa5aa01d58f}{}\index{Test.\+h@{Test.\+h}!F\+A\+I\+L@{F\+A\+I\+L}}
+\index{F\+A\+I\+L@{F\+A\+I\+L}!Test.\+h@{Test.\+h}}
+\subsubsection[{F\+A\+I\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+I\+L(
+\begin{DoxyParamCaption}
+\item[{}]{text}
+\end{DoxyParamCaption}
+)~\{ result\+\_\+.\+add\+Failure ({\bf Failure} (name\+\_\+, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,(text))); return; \}}\label{Test_8h_a5b870ba9f143d10f76df4fa5aa01d58f}
+\hypertarget{Test_8h_a7921a0c4f152a7879e78fe6fc2905590}{}\index{Test.\+h@{Test.\+h}!L\+O\+N\+G\+S\+\_\+\+E\+Q\+U\+A\+L@{L\+O\+N\+G\+S\+\_\+\+E\+Q\+U\+A\+L}}
+\index{L\+O\+N\+G\+S\+\_\+\+E\+Q\+U\+A\+L@{L\+O\+N\+G\+S\+\_\+\+E\+Q\+U\+A\+L}!Test.\+h@{Test.\+h}}
+\subsubsection[{L\+O\+N\+G\+S\+\_\+\+E\+Q\+U\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+N\+G\+S\+\_\+\+E\+Q\+U\+A\+L(
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}\label{Test_8h_a7921a0c4f152a7879e78fe6fc2905590}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \textcolor{keywordtype}{long} actualTemp = actual; \(\backslash\)
+  long expectedTemp = expected; \(\backslash\)
+  if ((expectedTemp) != (actualTemp)) \(\backslash\)
+\{ result\_.addFailure (\hyperlink{classFailure}{Failure} (name\_, \_\_FILE\_\_, \_\_LINE\_\_, \hyperlink{SimpleString_8h_a836e9372c54cba69e57a63eb751f224b}{StringFrom}(expectedTemp), \(\backslash\)
+\hyperlink{SimpleString_8h_a836e9372c54cba69e57a63eb751f224b}{StringFrom}(actualTemp))); \textcolor{keywordflow}{return}; \} \}
+\end{DoxyCode}
+\hypertarget{Test_8h_a13fb650bc56807117ccc8c53d4c957c9}{}\index{Test.\+h@{Test.\+h}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!Test.\+h@{Test.\+h}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T(
+\begin{DoxyParamCaption}
+\item[{}]{test\+Group, }
+\item[{}]{test\+Name}
+\end{DoxyParamCaption}
+)}\label{Test_8h_a13fb650bc56807117ccc8c53d4c957c9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{class }testGroup##\_##testName##\_##\hyperlink{classTest}{Test} : \textcolor{keyword}{public} \hyperlink{classTest}{Test} \(\backslash\)
+\{ \textcolor{keyword}{public}:\(\backslash\)
+  testGroup##\_##testName##\_##\hyperlink{classTest_ad8ba311564adee8c7e172a0f7bd05e9f}{Test} () : Test (#testName \textcolor{stringliteral}{"Test"}) \{\} \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{\(\backslash\)}
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{  void} \hyperlink{classTest_aea30a1dd3a3020152db8a8bbb8e4e3f5}{run} (\hyperlink{classTestResult}{TestResult}& result\_)\(\backslash\)
+  ;\} \(\backslash\)
+  testGroup##\_##testName##Instance; \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{\(\backslash\)}
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{  void} testGroup##\_##testName##\_##\hyperlink{classTest_aea30a1dd3a3020152db8a8bbb8e4e3f5}{Test::run} (\hyperlink{classTestResult}{TestResult}& result\_)
+\end{DoxyCode}

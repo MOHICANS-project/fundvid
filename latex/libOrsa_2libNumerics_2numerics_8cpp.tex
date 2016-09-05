@@ -1,0 +1,29 @@
+\hypertarget{libOrsa_2libNumerics_2numerics_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/lib\+Numerics/numerics.cpp File Reference}
+\label{libOrsa_2libNumerics_2numerics_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/lib\+Numerics/numerics.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/lib\+Numerics/numerics.\+cpp}}
+{\ttfamily \#include \char`\"{}numerics.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+Include dependency graph for numerics.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlibNumerics_1_1SVDElement}{lib\+Numerics\+::\+S\+V\+D\+Element}
+\begin{DoxyCompactList}\small\item\em Functor to sort elements of a vector by decreasing value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibNumerics}{lib\+Numerics}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+flnum \hyperlink{namespacelibNumerics_aa930962fb0da51a6fc4578da5e3da2f1}{lib\+Numerics\+::\+A\+B\+S} (flnum x)
+\item 
+bool \hyperlink{namespacelibNumerics_a83b960893bb9aaf17a880a15b4a02e61}{lib\+Numerics\+::solve\+L\+U} (const matrix$<$ flnum $>$ \&A, const vector$<$ flnum $>$ \&B, vector$<$ flnum $>$ \&X)
+\begin{DoxyCompactList}\small\item\em Resolution by L\+U decomposition with pivot. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacelibNumerics_ac993a04d2694e745c733feea22111a48}{lib\+Numerics\+::solve\+L\+U} (matrix$<$ flnum $>$ A, vector$<$ flnum $>$ \&X)
+\begin{DoxyCompactList}\small\item\em Replace X by A$^\wedge$\{-\/1\}X, by L\+U solver. \end{DoxyCompactList}\end{DoxyCompactItemize}

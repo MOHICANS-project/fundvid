@@ -1,0 +1,70 @@
+\hypertarget{structjpeg__marker__reader}{}\section{jpeg\+\_\+marker\+\_\+reader Struct Reference}
+\label{structjpeg__marker__reader}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+
+
+{\ttfamily \#include $<$jpegint.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structjpeg__marker__reader_af23250da87f9da190c88459aa565f2b1}{J\+M\+E\+T\+H\+O\+D} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void}, \hyperlink{jdmarker_8c_a1c08f1ba460e1a19d2dbc877b47c8b5f}{reset\+\_\+marker\+\_\+reader},(\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo))
+\item 
+\hyperlink{structjpeg__marker__reader_a6a2541cbeb37477c71ba6bc237e559a1}{J\+M\+E\+T\+H\+O\+D} (int, \hyperlink{jdmarker_8c_a8ff81a078a99e98efe6051366512c5f6}{read\+\_\+markers},(\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+jpeg\+\_\+marker\+\_\+parser\+\_\+method \hyperlink{structjpeg__marker__reader_a23e67f5a0fa37ea69483dad72217123e}{read\+\_\+restart\+\_\+marker}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__marker__reader_ad67711d91054e97e76fbe5254aac644c}{saw\+\_\+\+S\+O\+I}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__marker__reader_a1bf77ef7dfb6dfe58a03d041eb0dcd40}{saw\+\_\+\+S\+O\+F}
+\item 
+int \hyperlink{structjpeg__marker__reader_aac8d40171c73a18f129cd1b62d2fd06b}{next\+\_\+restart\+\_\+num}
+\item 
+unsigned int \hyperlink{structjpeg__marker__reader_ad29dee6159ab74f195fe5d88139306ce}{discarded\+\_\+bytes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structjpeg__marker__reader_af23250da87f9da190c88459aa565f2b1}{}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}!J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}}
+\index{J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}!jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+\subsubsection[{J\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+marker\+\_\+reader\+::\+J\+M\+E\+T\+H\+O\+D (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{, }
+\item[{{\bf reset\+\_\+marker\+\_\+reader}}]{, }
+\item[{({\bf j\+\_\+decompress\+\_\+ptr} cinfo)}]{}
+\end{DoxyParamCaption}
+)}\label{structjpeg__marker__reader_af23250da87f9da190c88459aa565f2b1}
+\hypertarget{structjpeg__marker__reader_a6a2541cbeb37477c71ba6bc237e559a1}{}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}!J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}}
+\index{J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}!jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+\subsubsection[{J\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+marker\+\_\+reader\+::\+J\+M\+E\+T\+H\+O\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf read\+\_\+markers}}]{, }
+\item[{({\bf j\+\_\+decompress\+\_\+ptr} cinfo)}]{}
+\end{DoxyParamCaption}
+)}\label{structjpeg__marker__reader_a6a2541cbeb37477c71ba6bc237e559a1}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structjpeg__marker__reader_ad29dee6159ab74f195fe5d88139306ce}{}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}!discarded\+\_\+bytes@{discarded\+\_\+bytes}}
+\index{discarded\+\_\+bytes@{discarded\+\_\+bytes}!jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+\subsubsection[{discarded\+\_\+bytes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int jpeg\+\_\+marker\+\_\+reader\+::discarded\+\_\+bytes}\label{structjpeg__marker__reader_ad29dee6159ab74f195fe5d88139306ce}
+\hypertarget{structjpeg__marker__reader_aac8d40171c73a18f129cd1b62d2fd06b}{}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}!next\+\_\+restart\+\_\+num@{next\+\_\+restart\+\_\+num}}
+\index{next\+\_\+restart\+\_\+num@{next\+\_\+restart\+\_\+num}!jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+\subsubsection[{next\+\_\+restart\+\_\+num}]{\setlength{\rightskip}{0pt plus 5cm}int jpeg\+\_\+marker\+\_\+reader\+::next\+\_\+restart\+\_\+num}\label{structjpeg__marker__reader_aac8d40171c73a18f129cd1b62d2fd06b}
+\hypertarget{structjpeg__marker__reader_a23e67f5a0fa37ea69483dad72217123e}{}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}!read\+\_\+restart\+\_\+marker@{read\+\_\+restart\+\_\+marker}}
+\index{read\+\_\+restart\+\_\+marker@{read\+\_\+restart\+\_\+marker}!jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+\subsubsection[{read\+\_\+restart\+\_\+marker}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+marker\+\_\+parser\+\_\+method jpeg\+\_\+marker\+\_\+reader\+::read\+\_\+restart\+\_\+marker}\label{structjpeg__marker__reader_a23e67f5a0fa37ea69483dad72217123e}
+\hypertarget{structjpeg__marker__reader_a1bf77ef7dfb6dfe58a03d041eb0dcd40}{}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}!saw\+\_\+\+S\+O\+F@{saw\+\_\+\+S\+O\+F}}
+\index{saw\+\_\+\+S\+O\+F@{saw\+\_\+\+S\+O\+F}!jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+\subsubsection[{saw\+\_\+\+S\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+marker\+\_\+reader\+::saw\+\_\+\+S\+O\+F}\label{structjpeg__marker__reader_a1bf77ef7dfb6dfe58a03d041eb0dcd40}
+\hypertarget{structjpeg__marker__reader_ad67711d91054e97e76fbe5254aac644c}{}\index{jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}!saw\+\_\+\+S\+O\+I@{saw\+\_\+\+S\+O\+I}}
+\index{saw\+\_\+\+S\+O\+I@{saw\+\_\+\+S\+O\+I}!jpeg\+\_\+marker\+\_\+reader@{jpeg\+\_\+marker\+\_\+reader}}
+\subsubsection[{saw\+\_\+\+S\+O\+I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+marker\+\_\+reader\+::saw\+\_\+\+S\+O\+I}\label{structjpeg__marker__reader_ad67711d91054e97e76fbe5254aac644c}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/\hyperlink{jpegint_8h}{jpegint.\+h}\end{DoxyCompactItemize}

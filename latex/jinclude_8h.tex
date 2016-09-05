@@ -1,0 +1,72 @@
+\hypertarget{jinclude_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jinclude.h File Reference}
+\label{jinclude_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jinclude.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jinclude.\+h}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jconfig.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for jinclude.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jinclude_8h_ab03c836a6c25465d9185bf2c2ac5df1f}{J\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}~/$\ast$ so that jpeglib.\+h doesn\textquotesingle{}t do it again $\ast$/
+\item 
+\#define \hyperlink{jinclude_8h_ab6fd51f67468844ba3d2400aa5f73787}{M\+E\+M\+Z\+E\+R\+O}(target,  size)~memset((\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$)(target), 0, (size\+\_\+t)(size))
+\item 
+\#define \hyperlink{jinclude_8h_a7667d1f5e2470cb2a98c26e1d61cf35a}{M\+E\+M\+C\+O\+P\+Y}(dest,  src,  size)~memcpy((\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$)(dest), (const \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$)(src), (size\+\_\+t)(size))
+\item 
+\#define \hyperlink{jinclude_8h_ab4e7a10b0e2cf79aa0978d3bbe1e1268}{S\+I\+Z\+E\+O\+F}(\hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object})~((size\+\_\+t) sizeof(\hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object}))
+\item 
+\#define \hyperlink{jinclude_8h_abbbfd5a98b19f431a14b0f30406753b1}{J\+F\+R\+E\+A\+D}(file,  buf,  sizeofbuf)~((size\+\_\+t) fread((\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$) (buf), (size\+\_\+t) 1, (size\+\_\+t) (sizeofbuf), (file)))
+\item 
+\#define \hyperlink{jinclude_8h_abb6b1c2f0cea2d618a4e566716700fed}{J\+F\+W\+R\+I\+T\+E}(file,  buf,  sizeofbuf)~((size\+\_\+t) fwrite((const \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$) (buf), (size\+\_\+t) 1, (size\+\_\+t) (sizeofbuf), (file)))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jinclude_8h_ab03c836a6c25465d9185bf2c2ac5df1f}{}\index{jinclude.\+h@{jinclude.\+h}!J\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{J\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{J\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{J\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!jinclude.\+h@{jinclude.\+h}}
+\subsubsection[{J\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D~/$\ast$ so that jpeglib.\+h doesn\textquotesingle{}t do it again $\ast$/}\label{jinclude_8h_ab03c836a6c25465d9185bf2c2ac5df1f}
+\hypertarget{jinclude_8h_abbbfd5a98b19f431a14b0f30406753b1}{}\index{jinclude.\+h@{jinclude.\+h}!J\+F\+R\+E\+A\+D@{J\+F\+R\+E\+A\+D}}
+\index{J\+F\+R\+E\+A\+D@{J\+F\+R\+E\+A\+D}!jinclude.\+h@{jinclude.\+h}}
+\subsubsection[{J\+F\+R\+E\+A\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+F\+R\+E\+A\+D(
+\begin{DoxyParamCaption}
+\item[{}]{file, }
+\item[{}]{buf, }
+\item[{}]{sizeofbuf}
+\end{DoxyParamCaption}
+)~((size\+\_\+t) fread(({\bf void} $\ast$) (buf), (size\+\_\+t) 1, (size\+\_\+t) (sizeofbuf), (file)))}\label{jinclude_8h_abbbfd5a98b19f431a14b0f30406753b1}
+\hypertarget{jinclude_8h_abb6b1c2f0cea2d618a4e566716700fed}{}\index{jinclude.\+h@{jinclude.\+h}!J\+F\+W\+R\+I\+T\+E@{J\+F\+W\+R\+I\+T\+E}}
+\index{J\+F\+W\+R\+I\+T\+E@{J\+F\+W\+R\+I\+T\+E}!jinclude.\+h@{jinclude.\+h}}
+\subsubsection[{J\+F\+W\+R\+I\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+F\+W\+R\+I\+T\+E(
+\begin{DoxyParamCaption}
+\item[{}]{file, }
+\item[{}]{buf, }
+\item[{}]{sizeofbuf}
+\end{DoxyParamCaption}
+)~((size\+\_\+t) fwrite((const {\bf void} $\ast$) (buf), (size\+\_\+t) 1, (size\+\_\+t) (sizeofbuf), (file)))}\label{jinclude_8h_abb6b1c2f0cea2d618a4e566716700fed}
+\hypertarget{jinclude_8h_a7667d1f5e2470cb2a98c26e1d61cf35a}{}\index{jinclude.\+h@{jinclude.\+h}!M\+E\+M\+C\+O\+P\+Y@{M\+E\+M\+C\+O\+P\+Y}}
+\index{M\+E\+M\+C\+O\+P\+Y@{M\+E\+M\+C\+O\+P\+Y}!jinclude.\+h@{jinclude.\+h}}
+\subsubsection[{M\+E\+M\+C\+O\+P\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+M\+C\+O\+P\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{dest, }
+\item[{}]{src, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~memcpy(({\bf void} $\ast$)(dest), (const {\bf void} $\ast$)(src), (size\+\_\+t)(size))}\label{jinclude_8h_a7667d1f5e2470cb2a98c26e1d61cf35a}
+\hypertarget{jinclude_8h_ab6fd51f67468844ba3d2400aa5f73787}{}\index{jinclude.\+h@{jinclude.\+h}!M\+E\+M\+Z\+E\+R\+O@{M\+E\+M\+Z\+E\+R\+O}}
+\index{M\+E\+M\+Z\+E\+R\+O@{M\+E\+M\+Z\+E\+R\+O}!jinclude.\+h@{jinclude.\+h}}
+\subsubsection[{M\+E\+M\+Z\+E\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+M\+Z\+E\+R\+O(
+\begin{DoxyParamCaption}
+\item[{}]{target, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~memset(({\bf void} $\ast$)(target), 0, (size\+\_\+t)(size))}\label{jinclude_8h_ab6fd51f67468844ba3d2400aa5f73787}
+\hypertarget{jinclude_8h_ab4e7a10b0e2cf79aa0978d3bbe1e1268}{}\index{jinclude.\+h@{jinclude.\+h}!S\+I\+Z\+E\+O\+F@{S\+I\+Z\+E\+O\+F}}
+\index{S\+I\+Z\+E\+O\+F@{S\+I\+Z\+E\+O\+F}!jinclude.\+h@{jinclude.\+h}}
+\subsubsection[{S\+I\+Z\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+I\+Z\+E\+O\+F(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf object}}
+\end{DoxyParamCaption}
+)~((size\+\_\+t) sizeof({\bf object}))}\label{jinclude_8h_ab4e7a10b0e2cf79aa0978d3bbe1e1268}

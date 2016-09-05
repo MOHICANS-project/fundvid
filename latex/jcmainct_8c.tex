@@ -1,0 +1,70 @@
+\hypertarget{jcmainct_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jcmainct.c File Reference}
+\label{jcmainct_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jcmainct.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jcmainct.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jcmainct.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__main__controller}{my\+\_\+main\+\_\+controller}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jcmainct_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__main__controller}{my\+\_\+main\+\_\+controller} $\ast$ \hyperlink{jcmainct_8c_a49ad9801b57fe5efcdb472832d31510d}{my\+\_\+main\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jcmainct_8c_a2a2c08a6aa3b689bbc62c44d92a00091}{M\+E\+T\+H\+O\+D\+D\+E\+F} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void})
+\item 
+\hyperlink{jcmainct_8c_a432e24c5dd0f64207ff368a63597f792}{process\+\_\+data\+\_\+simple\+\_\+main} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} $\ast$in\+\_\+row\+\_\+ctr, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} in\+\_\+rows\+\_\+avail)
+\item 
+\hyperlink{jcmainct_8c_a0d6a60ea5dc981f67b5abcf8d786a1b2}{jinit\+\_\+c\+\_\+main\+\_\+controller} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{jpegint_8h_a9f676e1b53dd5c4980de805fdd0bc853}{need\+\_\+full\+\_\+buffer})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jcmainct_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jcmainct.\+c@{jcmainct.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jcmainct.\+c@{jcmainct.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jcmainct_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jcmainct_8c_a49ad9801b57fe5efcdb472832d31510d}{}\index{jcmainct.\+c@{jcmainct.\+c}!my\+\_\+main\+\_\+ptr@{my\+\_\+main\+\_\+ptr}}
+\index{my\+\_\+main\+\_\+ptr@{my\+\_\+main\+\_\+ptr}!jcmainct.\+c@{jcmainct.\+c}}
+\subsubsection[{my\+\_\+main\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+main\+\_\+controller}$\ast$ {\bf my\+\_\+main\+\_\+ptr}}\label{jcmainct_8c_a49ad9801b57fe5efcdb472832d31510d}
+
+
+\subsection{Function Documentation}
+\hypertarget{jcmainct_8c_a0d6a60ea5dc981f67b5abcf8d786a1b2}{}\index{jcmainct.\+c@{jcmainct.\+c}!jinit\+\_\+c\+\_\+main\+\_\+controller@{jinit\+\_\+c\+\_\+main\+\_\+controller}}
+\index{jinit\+\_\+c\+\_\+main\+\_\+controller@{jinit\+\_\+c\+\_\+main\+\_\+controller}!jcmainct.\+c@{jcmainct.\+c}}
+\subsubsection[{jinit\+\_\+c\+\_\+main\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}jinit\+\_\+c\+\_\+main\+\_\+controller (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf boolean}}]{need\+\_\+full\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{jcmainct_8c_a0d6a60ea5dc981f67b5abcf8d786a1b2}
+\hypertarget{jcmainct_8c_a2a2c08a6aa3b689bbc62c44d92a00091}{}\index{jcmainct.\+c@{jcmainct.\+c}!M\+E\+T\+H\+O\+D\+D\+E\+F@{M\+E\+T\+H\+O\+D\+D\+E\+F}}
+\index{M\+E\+T\+H\+O\+D\+D\+E\+F@{M\+E\+T\+H\+O\+D\+D\+E\+F}!jcmainct.\+c@{jcmainct.\+c}}
+\subsubsection[{M\+E\+T\+H\+O\+D\+D\+E\+F}]{\setlength{\rightskip}{0pt plus 5cm}M\+E\+T\+H\+O\+D\+D\+E\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{jcmainct_8c_a2a2c08a6aa3b689bbc62c44d92a00091}
+\hypertarget{jcmainct_8c_a432e24c5dd0f64207ff368a63597f792}{}\index{jcmainct.\+c@{jcmainct.\+c}!process\+\_\+data\+\_\+simple\+\_\+main@{process\+\_\+data\+\_\+simple\+\_\+main}}
+\index{process\+\_\+data\+\_\+simple\+\_\+main@{process\+\_\+data\+\_\+simple\+\_\+main}!jcmainct.\+c@{jcmainct.\+c}}
+\subsubsection[{process\+\_\+data\+\_\+simple\+\_\+main}]{\setlength{\rightskip}{0pt plus 5cm}process\+\_\+data\+\_\+simple\+\_\+main (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} $\ast$}]{in\+\_\+row\+\_\+ctr, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{in\+\_\+rows\+\_\+avail}
+\end{DoxyParamCaption}
+)}\label{jcmainct_8c_a432e24c5dd0f64207ff368a63597f792}

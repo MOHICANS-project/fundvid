@@ -1,0 +1,9 @@
+digraph "src/third_party/orsa-fundamental_1.0/src/extras/libMatch" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_01fbf893a95991415cb660355a93b011 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="extras" fontname="Helvetica", fontsize="10", URL="dir_01fbf893a95991415cb660355a93b011.html"]
+  dir_3fd73fb64a34e662208b6553de543e15 [shape=box, label="libMatch", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_3fd73fb64a34e662208b6553de543e15.html"];
+  }
+}

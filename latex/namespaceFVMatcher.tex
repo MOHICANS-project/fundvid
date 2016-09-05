@@ -1,0 +1,34 @@
+\hypertarget{namespaceFVMatcher}{}\section{F\+V\+Matcher Namespace Reference}
+\label{namespaceFVMatcher}\index{F\+V\+Matcher@{F\+V\+Matcher}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFVMatcher_1_1AbstractMatcher}{Abstract\+Matcher}
+\begin{DoxyCompactList}\small\item\em Interface for getting keypoints matches from two sources. \end{DoxyCompactList}\item 
+struct \hyperlink{structFVMatcher_1_1FVMatch}{F\+V\+Match}
+\item 
+class \hyperlink{classFVMatcher_1_1SIFTGuidedMatching}{S\+I\+F\+T\+Guided\+Matching}
+\begin{DoxyCompactList}\small\item\em Implementation of the proposed guided S\+I\+F\+T matching strategy. \end{DoxyCompactList}\item 
+class \hyperlink{classFVMatcher_1_1SIFTOpenCVMatcher}{S\+I\+F\+T\+Open\+C\+V\+Matcher}
+\begin{DoxyCompactList}\small\item\em S\+I\+F\+T matcher on an image sequence using the Open\+C\+V S\+I\+F\+T implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespaceFVMatcher_a93764d97fb5a4a63cc23aa47c77416bc}{check\+Match} (Eigen\+::\+Vector3d \&xp, cv\+::\+Mat \&Fold, double k\+\_\+squared, Eigen\+::\+Matrix3d \&Cov\+\_\+line, Eigen\+::\+Vector3d \&testpoint, int height, int width)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceFVMatcher_a93764d97fb5a4a63cc23aa47c77416bc}{}\index{F\+V\+Matcher@{F\+V\+Matcher}!check\+Match@{check\+Match}}
+\index{check\+Match@{check\+Match}!F\+V\+Matcher@{F\+V\+Matcher}}
+\subsubsection[{check\+Match}]{\setlength{\rightskip}{0pt plus 5cm}bool F\+V\+Matcher\+::check\+Match (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector3d \&}]{xp, }
+\item[{cv\+::\+Mat \&}]{Fold, }
+\item[{double}]{k\+\_\+squared, }
+\item[{Eigen\+::\+Matrix3d \&}]{Cov\+\_\+line, }
+\item[{Eigen\+::\+Vector3d \&}]{testpoint, }
+\item[{int}]{height, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\label{namespaceFVMatcher_a93764d97fb5a4a63cc23aa47c77416bc}

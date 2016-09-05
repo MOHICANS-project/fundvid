@@ -1,0 +1,355 @@
+\hypertarget{demo__lib__sift_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/extras/sift/demo\+\_\+lib\+\_\+sift.cpp File Reference}
+\label{demo__lib__sift_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/demo\+\_\+lib\+\_\+sift.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/demo\+\_\+lib\+\_\+sift.\+cpp}}
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/demo\+\_\+lib\+\_\+sift.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/library.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/filter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/domain.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/splines.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/lib\+L\+W\+Image/\+L\+W\+Image.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/lib\+Numerics/numerics.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+Include dependency graph for demo\+\_\+lib\+\_\+sift.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{demo__lib__sift_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classLWImage}{L\+W\+Image}$<$ float $>$ \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_a37fa4dbbbbd70b1e58d30b4a10bd8db9}{default\+\_\+sift\+\_\+parameters} (\hyperlink{structsiftPar}{sift\+Par} \&par)
+\begin{DoxyCompactList}\small\item\em S\+I\+F\+T. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_a74528d51decd802529dee7179cf6d13a}{Octave\+Keypoints} (\hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&image, float oct\+Size, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\begin{DoxyCompactList}\small\item\em S\+I\+F\+T Keypoint detection. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_ab81a2824f17e33fa9b7467c04e6c5e7d}{Find\+Max\+Min} (const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} $\ast$dogs, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&blur, int s, float oct\+Size, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\begin{DoxyCompactList}\small\item\em Find the local maxima and minima of the D\+O\+G images in scale space. Return the keypoints for these locations. \end{DoxyCompactList}\item 
+bool \hyperlink{demo__lib__sift_8cpp_acdaeb1923f862ecc185ccd0175bd5f73}{Local\+Max\+Min} (float \hyperlink{jpeglib_8h_aa0ccb5ee6d882ee3605ff47745c6467b}{val}, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&dog, int y0, int x0)
+\item 
+int \hyperlink{demo__lib__sift_8cpp_a613400cb7007eb4cd7adc0f4c2fe8782}{Not\+On\+Edge} (const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&dog, int r, int c, float oct\+Size, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+float \hyperlink{demo__lib__sift_8cpp_a15ba2b3f2dd964ad7d8b370400004826}{Fit\+Quadratic} (std\+::vector$<$ float $>$ \&offset, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} $\ast$dogs, int r, int c)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_aea50b3639da3e0ef8e726ebf5a4a486d}{Interp\+Key\+Point} (const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} $\ast$dogs, int s, int r, int c, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&grad, \hyperlink{classLWImage}{L\+W\+Image}$<$ bool $>$ \&map, float oct\+Size, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, int moves\+Remain, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_ac30041b6bdaf2f84dd1e1305e1b6d32d}{Assign\+Ori\+Hist} (const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&grad, float oct\+Size, float oct\+Scale, float oct\+Row, float oct\+Col, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_ae9e9de3f992a12c3af37a7b6784d2412}{Smooth\+Histogram} (float $\ast$hist, int bins)
+\item 
+float \hyperlink{demo__lib__sift_8cpp_a6d915e8cfe0581dada445a5c6e038ca0}{Interp\+Peak} (float a, float \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}, float c)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_a8fc7dec93af45c0d929762b9510a6490}{Make\+Keypoint} (const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&grad, float oct\+Size, float oct\+Scale, float oct\+Row, float oct\+Col, float angle, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_a02e24df2b71655e48a23d8f303019684}{Make\+Keypoint\+Sample} (\hyperlink{structkeypoint}{keypoint} \&key, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&grad, float scale, float row, float col, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_aab9d2443a94a2a115a73b054f1dbd86c}{Normalize\+Vec} (float $\ast$vec)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_ac8cb74d5678de1263a716c80323d5ed7}{Key\+Sample\+Vec} (\hyperlink{structkeypoint}{keypoint} \&key, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&grad, float scale, float row, float col, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_a25f277646551875059b1405c6a896149}{Key\+Sample} (float index\mbox{[}\hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size}\mbox{]}\mbox{[}\hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size}\mbox{]}\mbox{[}\hyperlink{demo__lib__sift_8h_a3084318119345a92d7ba2de55777af45}{Ori\+Size}\mbox{]}, \hyperlink{structkeypoint}{keypoint} \&key, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&grad, float scale, float row, float col, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_a24c893c8fd75e1325f5c6fd9de5ea8fc}{Add\+Sample} (float index\mbox{[}\hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size}\mbox{]}\mbox{[}\hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size}\mbox{]}\mbox{[}\hyperlink{demo__lib__sift_8h_a3084318119345a92d7ba2de55777af45}{Ori\+Size}\mbox{]}, \hyperlink{structkeypoint}{keypoint} \&key, const \hyperlink{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{flimage} \&grad, int r, int c, float rpos, float cpos, float rx, float cx, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_afba4440761952518990bd98bd0383ff5}{Place\+In\+Index} (float index\mbox{[}\hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size}\mbox{]}\mbox{[}\hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size}\mbox{]}\mbox{[}\hyperlink{demo__lib__sift_8h_a3084318119345a92d7ba2de55777af45}{Ori\+Size}\mbox{]}, float mag, float ori, float rx, float cx, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_a852a0dd7feaf286691ebbac49e1541b4}{compute\+\_\+sift\+\_\+keypoints} (float $\ast$input, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+float \hyperlink{demo__lib__sift_8cpp_acf1edfc6b1e5e7356410b89c39364b7b}{Dist\+Squared} (\hyperlink{structkeypoint}{keypoint} \&k1, \hyperlink{structkeypoint}{keypoint} \&k2, float tdist, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\begin{DoxyCompactList}\small\item\em S\+I\+F\+T keypoint matching. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \hyperlink{demo__lib__sift_8cpp_a4938f3838a13c77bf700bf76e98584bb}{Check\+For\+Match} (\hyperlink{structkeypoint}{keypoint} \&key, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&klist, keypointslist\+::size\+\_\+type \&min, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8cpp_ad68534d4cc31e47f33d12f9afcd16f2b}{compute\+\_\+sift\+\_\+matches} (\hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&keys1, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&keys2, \hyperlink{demo__lib__sift_8h_a9dd1efc4e68780ad8514aece4af00223}{matchingslist} \&matchings, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{demo__lib__sift_8cpp_a525335710b53cb064ca56b936120431e}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}}
+\index{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}\label{demo__lib__sift_8cpp_a525335710b53cb064ca56b936120431e}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!flimage@{flimage}}
+\index{flimage@{flimage}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{flimage}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf L\+W\+Image}$<$float$>$ {\bf flimage}}\label{demo__lib__sift_8cpp_ad055a5a30bdd26f8623eab8bcdc6478c}
+
+
+\subsection{Function Documentation}
+\hypertarget{demo__lib__sift_8cpp_a24c893c8fd75e1325f5c6fd9de5ea8fc}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Add\+Sample@{Add\+Sample}}
+\index{Add\+Sample@{Add\+Sample}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Add\+Sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Add\+Sample (
+\begin{DoxyParamCaption}
+\item[{float}]{index\mbox{[}\+Index\+Size\mbox{]}\mbox{[}\+Index\+Size\mbox{]}\mbox{[}\+Ori\+Size\mbox{]}, }
+\item[{{\bf keypoint} \&}]{key, }
+\item[{const {\bf flimage} \&}]{grad, }
+\item[{int}]{r, }
+\item[{int}]{c, }
+\item[{float}]{rpos, }
+\item[{float}]{cpos, }
+\item[{float}]{rx, }
+\item[{float}]{cx, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a24c893c8fd75e1325f5c6fd9de5ea8fc}
+\hypertarget{demo__lib__sift_8cpp_ac30041b6bdaf2f84dd1e1305e1b6d32d}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Assign\+Ori\+Hist@{Assign\+Ori\+Hist}}
+\index{Assign\+Ori\+Hist@{Assign\+Ori\+Hist}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Assign\+Ori\+Hist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Assign\+Ori\+Hist (
+\begin{DoxyParamCaption}
+\item[{const {\bf flimage} \&}]{grad, }
+\item[{float}]{oct\+Size, }
+\item[{float}]{oct\+Scale, }
+\item[{float}]{oct\+Row, }
+\item[{float}]{oct\+Col, }
+\item[{{\bf keypointslist} \&}]{keys, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_ac30041b6bdaf2f84dd1e1305e1b6d32d}
+
+\begin{DoxyItemize}
+\item Compute histogram of orientation in a neighborhood weighted by gradient and distance to center
+\item Look for local (3-\/neighborhood) maximum with valuer larger or equal than par.\+Ori\+Hist\+Thresh $\ast$ maxval 
+\end{DoxyItemize}\hypertarget{demo__lib__sift_8cpp_a4938f3838a13c77bf700bf76e98584bb}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Check\+For\+Match@{Check\+For\+Match}}
+\index{Check\+For\+Match@{Check\+For\+Match}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Check\+For\+Match}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$float,float$>$ Check\+For\+Match (
+\begin{DoxyParamCaption}
+\item[{{\bf keypoint} \&}]{key, }
+\item[{{\bf keypointslist} \&}]{klist, }
+\item[{keypointslist\+::size\+\_\+type \&}]{min, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a4938f3838a13c77bf700bf76e98584bb}
+\hypertarget{demo__lib__sift_8cpp_a852a0dd7feaf286691ebbac49e1541b4}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!compute\+\_\+sift\+\_\+keypoints@{compute\+\_\+sift\+\_\+keypoints}}
+\index{compute\+\_\+sift\+\_\+keypoints@{compute\+\_\+sift\+\_\+keypoints}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{compute\+\_\+sift\+\_\+keypoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} compute\+\_\+sift\+\_\+keypoints (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{input, }
+\item[{{\bf keypointslist} \&}]{keys, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a852a0dd7feaf286691ebbac49e1541b4}
+Make zoom of image if necessary
+
+Apply initial smoothing to input image to raise its smoothing to par.\+Init\+Sigma. We assume image from camera has smoothing of sigma = 0.\+5, which becomes sigma = 1.\+0 if image has been doubled. increase = sqrt(Init$^\wedge$2 -\/ Current$^\wedge$2)
+
+Convolve by par.\+Init\+Sigma at each step inside Octave\+Keypoints by steps of Subsample of factor 2 while reasonable image size
+
+Keep reducing image by factors of 2 until one dimension is smaller than minimum size at which a feature could be detected. \hypertarget{demo__lib__sift_8cpp_ad68534d4cc31e47f33d12f9afcd16f2b}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!compute\+\_\+sift\+\_\+matches@{compute\+\_\+sift\+\_\+matches}}
+\index{compute\+\_\+sift\+\_\+matches@{compute\+\_\+sift\+\_\+matches}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{compute\+\_\+sift\+\_\+matches}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} compute\+\_\+sift\+\_\+matches (
+\begin{DoxyParamCaption}
+\item[{{\bf keypointslist} \&}]{keys1, }
+\item[{{\bf keypointslist} \&}]{keys2, }
+\item[{{\bf matchingslist} \&}]{matchings, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_ad68534d4cc31e47f33d12f9afcd16f2b}
+\hypertarget{demo__lib__sift_8cpp_a37fa4dbbbbd70b1e58d30b4a10bd8db9}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!default\+\_\+sift\+\_\+parameters@{default\+\_\+sift\+\_\+parameters}}
+\index{default\+\_\+sift\+\_\+parameters@{default\+\_\+sift\+\_\+parameters}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{default\+\_\+sift\+\_\+parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} default\+\_\+sift\+\_\+parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a37fa4dbbbbd70b1e58d30b4a10bd8db9}
+
+
+S\+I\+F\+T. 
+
+\hypertarget{demo__lib__sift_8cpp_acf1edfc6b1e5e7356410b89c39364b7b}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Dist\+Squared@{Dist\+Squared}}
+\index{Dist\+Squared@{Dist\+Squared}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Dist\+Squared}]{\setlength{\rightskip}{0pt plus 5cm}float Dist\+Squared (
+\begin{DoxyParamCaption}
+\item[{{\bf keypoint} \&}]{k1, }
+\item[{{\bf keypoint} \&}]{k2, }
+\item[{float}]{tdist, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_acf1edfc6b1e5e7356410b89c39364b7b}
+
+
+S\+I\+F\+T keypoint matching. 
+
+\hypertarget{demo__lib__sift_8cpp_ab81a2824f17e33fa9b7467c04e6c5e7d}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Find\+Max\+Min@{Find\+Max\+Min}}
+\index{Find\+Max\+Min@{Find\+Max\+Min}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Find\+Max\+Min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Find\+Max\+Min (
+\begin{DoxyParamCaption}
+\item[{const {\bf flimage} $\ast$}]{dogs, }
+\item[{const {\bf flimage} \&}]{blur, }
+\item[{int}]{s, }
+\item[{float}]{oct\+Size, }
+\item[{{\bf keypointslist} \&}]{keys, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_ab81a2824f17e33fa9b7467c04e6c5e7d}
+
+
+Find the local maxima and minima of the D\+O\+G images in scale space. Return the keypoints for these locations. 
+
+For each point at each scale we decide if it is a local maxima\+:
+\begin{DoxyItemize}
+\item $\vert$dogs(x,y,s)$\vert$ $>$ 0.\+8 $\ast$ par.\+Peak\+Thresh
+\item Local maximum or minimum in s-\/1,s,s+1
+\item Noton\+Edge\+: ratio of the two principle curvatures of the D\+O\+G function at this point be below a threshold. blur\mbox{[}par.\+Scales+1\mbox{]} is not used in order to look for extrema while these could be computed using avalaible blur and dogs 
+\end{DoxyItemize}\hypertarget{demo__lib__sift_8cpp_a15ba2b3f2dd964ad7d8b370400004826}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Fit\+Quadratic@{Fit\+Quadratic}}
+\index{Fit\+Quadratic@{Fit\+Quadratic}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Fit\+Quadratic}]{\setlength{\rightskip}{0pt plus 5cm}float Fit\+Quadratic (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float $>$ \&}]{offset, }
+\item[{const {\bf flimage} $\ast$}]{dogs, }
+\item[{int}]{r, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a15ba2b3f2dd964ad7d8b370400004826}
+\hypertarget{demo__lib__sift_8cpp_aea50b3639da3e0ef8e726ebf5a4a486d}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Interp\+Key\+Point@{Interp\+Key\+Point}}
+\index{Interp\+Key\+Point@{Interp\+Key\+Point}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Interp\+Key\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Interp\+Key\+Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf flimage} $\ast$}]{dogs, }
+\item[{int}]{s, }
+\item[{int}]{r, }
+\item[{int}]{c, }
+\item[{const {\bf flimage} \&}]{grad, }
+\item[{{\bf L\+W\+Image}$<$ bool $>$ \&}]{map, }
+\item[{float}]{oct\+Size, }
+\item[{{\bf keypointslist} \&}]{keys, }
+\item[{int}]{moves\+Remain, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_aea50b3639da3e0ef8e726ebf5a4a486d}
+always use histogram of orientations \hypertarget{demo__lib__sift_8cpp_a6d915e8cfe0581dada445a5c6e038ca0}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Interp\+Peak@{Interp\+Peak}}
+\index{Interp\+Peak@{Interp\+Peak}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Interp\+Peak}]{\setlength{\rightskip}{0pt plus 5cm}float Interp\+Peak (
+\begin{DoxyParamCaption}
+\item[{float}]{a, }
+\item[{float}]{b, }
+\item[{float}]{c}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a6d915e8cfe0581dada445a5c6e038ca0}
+\hypertarget{demo__lib__sift_8cpp_a25f277646551875059b1405c6a896149}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Key\+Sample@{Key\+Sample}}
+\index{Key\+Sample@{Key\+Sample}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Key\+Sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Key\+Sample (
+\begin{DoxyParamCaption}
+\item[{float}]{index\mbox{[}\+Index\+Size\mbox{]}\mbox{[}\+Index\+Size\mbox{]}\mbox{[}\+Ori\+Size\mbox{]}, }
+\item[{{\bf keypoint} \&}]{key, }
+\item[{const {\bf flimage} \&}]{grad, }
+\item[{float}]{scale, }
+\item[{float}]{row, }
+\item[{float}]{col, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a25f277646551875059b1405c6a896149}
+\hypertarget{demo__lib__sift_8cpp_ac8cb74d5678de1263a716c80323d5ed7}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Key\+Sample\+Vec@{Key\+Sample\+Vec}}
+\index{Key\+Sample\+Vec@{Key\+Sample\+Vec}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Key\+Sample\+Vec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Key\+Sample\+Vec (
+\begin{DoxyParamCaption}
+\item[{{\bf keypoint} \&}]{key, }
+\item[{const {\bf flimage} \&}]{grad, }
+\item[{float}]{scale, }
+\item[{float}]{row, }
+\item[{float}]{col, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_ac8cb74d5678de1263a716c80323d5ed7}
+\hypertarget{demo__lib__sift_8cpp_acdaeb1923f862ecc185ccd0175bd5f73}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Local\+Max\+Min@{Local\+Max\+Min}}
+\index{Local\+Max\+Min@{Local\+Max\+Min}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Local\+Max\+Min}]{\setlength{\rightskip}{0pt plus 5cm}bool Local\+Max\+Min (
+\begin{DoxyParamCaption}
+\item[{float}]{val, }
+\item[{const {\bf flimage} \&}]{dog, }
+\item[{int}]{y0, }
+\item[{int}]{x0}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_acdaeb1923f862ecc185ccd0175bd5f73}
+\hypertarget{demo__lib__sift_8cpp_a8fc7dec93af45c0d929762b9510a6490}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Make\+Keypoint@{Make\+Keypoint}}
+\index{Make\+Keypoint@{Make\+Keypoint}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Make\+Keypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Make\+Keypoint (
+\begin{DoxyParamCaption}
+\item[{const {\bf flimage} \&}]{grad, }
+\item[{float}]{oct\+Size, }
+\item[{float}]{oct\+Scale, }
+\item[{float}]{oct\+Row, }
+\item[{float}]{oct\+Col, }
+\item[{float}]{angle, }
+\item[{{\bf keypointslist} \&}]{keys, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a8fc7dec93af45c0d929762b9510a6490}
+\hypertarget{demo__lib__sift_8cpp_a02e24df2b71655e48a23d8f303019684}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Make\+Keypoint\+Sample@{Make\+Keypoint\+Sample}}
+\index{Make\+Keypoint\+Sample@{Make\+Keypoint\+Sample}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Make\+Keypoint\+Sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Make\+Keypoint\+Sample (
+\begin{DoxyParamCaption}
+\item[{{\bf keypoint} \&}]{key, }
+\item[{const {\bf flimage} \&}]{grad, }
+\item[{float}]{scale, }
+\item[{float}]{row, }
+\item[{float}]{col, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a02e24df2b71655e48a23d8f303019684}
+Q\+U\+E\+S\+T\+I\+O\+N\+: why is the vector quantized to integer \hypertarget{demo__lib__sift_8cpp_aab9d2443a94a2a115a73b054f1dbd86c}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Normalize\+Vec@{Normalize\+Vec}}
+\index{Normalize\+Vec@{Normalize\+Vec}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Normalize\+Vec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Normalize\+Vec (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{vec}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_aab9d2443a94a2a115a73b054f1dbd86c}
+\hypertarget{demo__lib__sift_8cpp_a613400cb7007eb4cd7adc0f4c2fe8782}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Not\+On\+Edge@{Not\+On\+Edge}}
+\index{Not\+On\+Edge@{Not\+On\+Edge}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Not\+On\+Edge}]{\setlength{\rightskip}{0pt plus 5cm}int Not\+On\+Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf flimage} \&}]{dog, }
+\item[{int}]{r, }
+\item[{int}]{c, }
+\item[{float}]{oct\+Size, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a613400cb7007eb4cd7adc0f4c2fe8782}
+Det H =  l\+\_\+i
+
+tr H =  l\+\_\+i
+
+As we do not desire edges but only corners we demand l\+\_\+max / l\+\_\+min less than a threshold In practice if A = k B, A$\ast$\+B = k B$^\wedge$2 (A + B)$^\wedge$2 = (k+1)$^\wedge$2 $\ast$ B$^\wedge$2 k B$^\wedge$2 $>$ t $\ast$ (k+1)$^\wedge$2 $\ast$ B$^\wedge$2 sii k / (k+1)$^\wedge$2 $>$ t This is a decreasing function for k $>$ 1 and value 0.\+3 at k=1. Setting t = 0.\+08, means k$<$=10 \hypertarget{demo__lib__sift_8cpp_a74528d51decd802529dee7179cf6d13a}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Octave\+Keypoints@{Octave\+Keypoints}}
+\index{Octave\+Keypoints@{Octave\+Keypoints}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Octave\+Keypoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Octave\+Keypoints (
+\begin{DoxyParamCaption}
+\item[{{\bf flimage} \&}]{image, }
+\item[{float}]{oct\+Size, }
+\item[{{\bf keypointslist} \&}]{keys, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_a74528d51decd802529dee7179cf6d13a}
+
+
+S\+I\+F\+T Keypoint detection. 
+
+E\+X\+T\+R\+E\+M\+A D\+E\+T\+E\+C\+T\+I\+O\+N I\+N O\+N\+E S\+C\+A\+L\+E-\/\+S\+P\+A\+C\+E O\+C\+T\+A\+V\+E\+:
+
+par.\+Scales determine how many steps we perform to pass from one scale to the next one\+: sig\+I --$>$ 2$\ast$sig\+I At each step we pass from sigma\+\_\+0 --$>$ sigma0 $\ast$ (1 + R) At the last step sig\+I $\ast$ (1 + R)$^\wedge$par.Scales = 2 $\ast$ sig\+I (1+\+R) = 2 $^\wedge$(1 / par.\+Scales) it is called sigma\+Ratio It seems that blur\mbox{[}par.\+Scales+1\mbox{]} is compared in two succesive iterations dogs\mbox{[}i\mbox{]} = dogs\mbox{[}i\mbox{]} -\/ blur\mbox{[}i+1\mbox{]} \hypertarget{demo__lib__sift_8cpp_afba4440761952518990bd98bd0383ff5}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Place\+In\+Index@{Place\+In\+Index}}
+\index{Place\+In\+Index@{Place\+In\+Index}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Place\+In\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Place\+In\+Index (
+\begin{DoxyParamCaption}
+\item[{float}]{index\mbox{[}\+Index\+Size\mbox{]}\mbox{[}\+Index\+Size\mbox{]}\mbox{[}\+Ori\+Size\mbox{]}, }
+\item[{float}]{mag, }
+\item[{float}]{ori, }
+\item[{float}]{rx, }
+\item[{float}]{cx, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_afba4440761952518990bd98bd0383ff5}
+\hypertarget{demo__lib__sift_8cpp_ae9e9de3f992a12c3af37a7b6784d2412}{}\index{demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}!Smooth\+Histogram@{Smooth\+Histogram}}
+\index{Smooth\+Histogram@{Smooth\+Histogram}!demo\+\_\+lib\+\_\+sift.\+cpp@{demo\+\_\+lib\+\_\+sift.\+cpp}}
+\subsubsection[{Smooth\+Histogram}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Smooth\+Histogram (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{hist, }
+\item[{int}]{bins}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8cpp_ae9e9de3f992a12c3af37a7b6784d2412}

@@ -1,0 +1,261 @@
+\hypertarget{jquant1_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jquant1.c File Reference}
+\label{jquant1_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jquant1.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jquant1.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jquant1.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__cquantizer}{my\+\_\+cquantizer}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jquant1_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\item 
+\#define \hyperlink{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}~16	/$\ast$ dimension of dither matrix $\ast$/
+\item 
+\#define \hyperlink{jquant1_8c_a8e8cf025d4899bba7f2b4871576fd143}{O\+D\+I\+T\+H\+E\+R\+\_\+\+C\+E\+L\+L\+S}~(\hyperlink{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}$\ast$\hyperlink{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E})	/$\ast$ \# cells in matrix $\ast$/
+\item 
+\#define \hyperlink{jquant1_8c_a5f6aa80d61598a282061ee4cc55235c5}{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+S\+K}~(\hyperlink{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}-\/1) /$\ast$ mask for wrapping around counters $\ast$/
+\item 
+\#define \hyperlink{jquant1_8c_aab2c575f4e3d73fa8e03c145e00459df}{M\+A\+X\+\_\+\+Q\+\_\+\+C\+O\+M\+P\+S}~4		/$\ast$ max components I can handle $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{jquant1_8c_a63235b04bf6d9063936f11c217a09bf3}{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X}\mbox{[}\hyperlink{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}\mbox{[}\hyperlink{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}
+\item 
+typedef int($\ast$ \hyperlink{jquant1_8c_adf00bce01b4be95b97238b73f71a24ea}{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+P\+T\+R})\mbox{[}\hyperlink{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}
+\item 
+typedef \hyperlink{jmorecfg_8h_a57de7cb8e702b1746127a4d5137fa455}{I\+N\+T16} \hyperlink{jquant1_8c_afcfbf557d4161d6cbe1f142c3d3719af}{F\+S\+E\+R\+R\+O\+R}
+\item 
+typedef int \hyperlink{jquant1_8c_a99e4efe75d48f7e91e442df4b8f2c51b}{L\+O\+C\+F\+S\+E\+R\+R\+O\+R}
+\item 
+typedef \hyperlink{jquant1_8c_afcfbf557d4161d6cbe1f142c3d3719af}{F\+S\+E\+R\+R\+O\+R} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$ \hyperlink{jquant1_8c_a930ab0c20ada7242a123ab0f60de3c77}{F\+S\+E\+R\+R\+P\+T\+R}
+\item 
+typedef \hyperlink{structmy__cquantizer}{my\+\_\+cquantizer} $\ast$ \hyperlink{jquant1_8c_a34a4fd5e9edf7906fa37450722f459b3}{my\+\_\+cquantize\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jquant1_8c_ab5d9a16bb33d85a1b44ab4c093e06055}{select\+\_\+ncolors} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, int Ncolors\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{jquant1_8c_afce74e0cd4ab990ec7bd30f54ca315ae}{output\+\_\+value} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, int ci, int j, int maxj)
+\item 
+\hyperlink{jquant1_8c_a7776aedb6f4207424e362efa398045ca}{largest\+\_\+input\+\_\+value} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, int ci, int j, int maxj)
+\item 
+\hyperlink{jquant1_8c_a909cb020542b3cabf723718922a9721d}{create\+\_\+colormap} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jquant1_8c_a8a21fbce6e50e0862a91b9588c8cad14}{create\+\_\+colorindex} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jquant1_8c_a927b20e4c317e67832e2bebd38540618}{make\+\_\+odither\+\_\+array} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, int ncolors)
+\item 
+\hyperlink{jquant1_8c_a42d73068d733c88e07bc8dc010551b2d}{create\+\_\+odither\+\_\+tables} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jquant1_8c_a7cd0ab37d067e082d52761a72a34f393}{color\+\_\+quantize} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} input\+\_\+buf, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jquant1_8c_a21078ef0a922cf067a9abefd643587a8}{color\+\_\+quantize3} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} input\+\_\+buf, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jquant1_8c_afc3bd33f61f864c151728c40524f4a3d}{quantize\+\_\+ord\+\_\+dither} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} input\+\_\+buf, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jquant1_8c_a4073442f98bc77f21346ee43500c28df}{quantize3\+\_\+ord\+\_\+dither} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} input\+\_\+buf, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jquant1_8c_a58d7ca426df6f424c01cc38188f6d517}{quantize\+\_\+fs\+\_\+dither} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} input\+\_\+buf, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jquant1_8c_a5708b339d001ab437e1253d97237da75}{alloc\+\_\+fs\+\_\+workspace} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jquant1_8c_ae04515d24a19343ba4d4c83f57aa7ead}{start\+\_\+pass\+\_\+1\+\_\+quant} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} is\+\_\+pre\+\_\+scan)
+\item 
+\hyperlink{jquant1_8c_a9a121532b0a0117049fbdd31e39294da}{finish\+\_\+pass\+\_\+1\+\_\+quant} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jquant1_8c_ad633674323e7669d79b861e59cf9df1e}{new\+\_\+color\+\_\+map\+\_\+1\+\_\+quant} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jquant1_8c_a5a9591c850cb268bdac2969f67602c03}{jinit\+\_\+1pass\+\_\+quantizer} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jquant1_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jquant1.\+c@{jquant1.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jquant1_8c_ad5c3cdfae3019b8223973041a2a1304b}
+\hypertarget{jquant1_8c_aab2c575f4e3d73fa8e03c145e00459df}{}\index{jquant1.\+c@{jquant1.\+c}!M\+A\+X\+\_\+\+Q\+\_\+\+C\+O\+M\+P\+S@{M\+A\+X\+\_\+\+Q\+\_\+\+C\+O\+M\+P\+S}}
+\index{M\+A\+X\+\_\+\+Q\+\_\+\+C\+O\+M\+P\+S@{M\+A\+X\+\_\+\+Q\+\_\+\+C\+O\+M\+P\+S}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{M\+A\+X\+\_\+\+Q\+\_\+\+C\+O\+M\+P\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+Q\+\_\+\+C\+O\+M\+P\+S~4		/$\ast$ max components I can handle $\ast$/}\label{jquant1_8c_aab2c575f4e3d73fa8e03c145e00459df}
+\hypertarget{jquant1_8c_a8e8cf025d4899bba7f2b4871576fd143}{}\index{jquant1.\+c@{jquant1.\+c}!O\+D\+I\+T\+H\+E\+R\+\_\+\+C\+E\+L\+L\+S@{O\+D\+I\+T\+H\+E\+R\+\_\+\+C\+E\+L\+L\+S}}
+\index{O\+D\+I\+T\+H\+E\+R\+\_\+\+C\+E\+L\+L\+S@{O\+D\+I\+T\+H\+E\+R\+\_\+\+C\+E\+L\+L\+S}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{O\+D\+I\+T\+H\+E\+R\+\_\+\+C\+E\+L\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+D\+I\+T\+H\+E\+R\+\_\+\+C\+E\+L\+L\+S~({\bf O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}$\ast${\bf O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E})	/$\ast$ \# cells in matrix $\ast$/}\label{jquant1_8c_a8e8cf025d4899bba7f2b4871576fd143}
+\hypertarget{jquant1_8c_a5f6aa80d61598a282061ee4cc55235c5}{}\index{jquant1.\+c@{jquant1.\+c}!O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+S\+K@{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+S\+K}}
+\index{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+S\+K@{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+S\+K}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+S\+K~({\bf O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}-\/1) /$\ast$ mask for wrapping around counters $\ast$/}\label{jquant1_8c_a5f6aa80d61598a282061ee4cc55235c5}
+\hypertarget{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}{}\index{jquant1.\+c@{jquant1.\+c}!O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E@{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}}
+\index{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E@{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E~16	/$\ast$ dimension of dither matrix $\ast$/}\label{jquant1_8c_aabb62f5897871f403fdbee26839f5a22}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jquant1_8c_afcfbf557d4161d6cbe1f142c3d3719af}{}\index{jquant1.\+c@{jquant1.\+c}!F\+S\+E\+R\+R\+O\+R@{F\+S\+E\+R\+R\+O\+R}}
+\index{F\+S\+E\+R\+R\+O\+R@{F\+S\+E\+R\+R\+O\+R}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{F\+S\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf I\+N\+T16} {\bf F\+S\+E\+R\+R\+O\+R}}\label{jquant1_8c_afcfbf557d4161d6cbe1f142c3d3719af}
+\hypertarget{jquant1_8c_a930ab0c20ada7242a123ab0f60de3c77}{}\index{jquant1.\+c@{jquant1.\+c}!F\+S\+E\+R\+R\+P\+T\+R@{F\+S\+E\+R\+R\+P\+T\+R}}
+\index{F\+S\+E\+R\+R\+P\+T\+R@{F\+S\+E\+R\+R\+P\+T\+R}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{F\+S\+E\+R\+R\+P\+T\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf F\+S\+E\+R\+R\+O\+R} {\bf F\+A\+R}$\ast$ {\bf F\+S\+E\+R\+R\+P\+T\+R}}\label{jquant1_8c_a930ab0c20ada7242a123ab0f60de3c77}
+\hypertarget{jquant1_8c_a99e4efe75d48f7e91e442df4b8f2c51b}{}\index{jquant1.\+c@{jquant1.\+c}!L\+O\+C\+F\+S\+E\+R\+R\+O\+R@{L\+O\+C\+F\+S\+E\+R\+R\+O\+R}}
+\index{L\+O\+C\+F\+S\+E\+R\+R\+O\+R@{L\+O\+C\+F\+S\+E\+R\+R\+O\+R}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{L\+O\+C\+F\+S\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf L\+O\+C\+F\+S\+E\+R\+R\+O\+R}}\label{jquant1_8c_a99e4efe75d48f7e91e442df4b8f2c51b}
+\hypertarget{jquant1_8c_a34a4fd5e9edf7906fa37450722f459b3}{}\index{jquant1.\+c@{jquant1.\+c}!my\+\_\+cquantize\+\_\+ptr@{my\+\_\+cquantize\+\_\+ptr}}
+\index{my\+\_\+cquantize\+\_\+ptr@{my\+\_\+cquantize\+\_\+ptr}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{my\+\_\+cquantize\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+cquantizer}$\ast$ {\bf my\+\_\+cquantize\+\_\+ptr}}\label{jquant1_8c_a34a4fd5e9edf7906fa37450722f459b3}
+\hypertarget{jquant1_8c_a63235b04bf6d9063936f11c217a09bf3}{}\index{jquant1.\+c@{jquant1.\+c}!O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X@{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X}}
+\index{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X@{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X}]{\setlength{\rightskip}{0pt plus 5cm}typedef int O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\mbox{[}{\bf O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}\mbox{[}{\bf O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}}\label{jquant1_8c_a63235b04bf6d9063936f11c217a09bf3}
+\hypertarget{jquant1_8c_adf00bce01b4be95b97238b73f71a24ea}{}\index{jquant1.\+c@{jquant1.\+c}!O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+P\+T\+R@{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+P\+T\+R}}
+\index{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+P\+T\+R@{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+P\+T\+R}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+P\+T\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ O\+D\+I\+T\+H\+E\+R\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+P\+T\+R)\mbox{[}{\bf O\+D\+I\+T\+H\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}}\label{jquant1_8c_adf00bce01b4be95b97238b73f71a24ea}
+
+
+\subsection{Function Documentation}
+\hypertarget{jquant1_8c_a5708b339d001ab437e1253d97237da75}{}\index{jquant1.\+c@{jquant1.\+c}!alloc\+\_\+fs\+\_\+workspace@{alloc\+\_\+fs\+\_\+workspace}}
+\index{alloc\+\_\+fs\+\_\+workspace@{alloc\+\_\+fs\+\_\+workspace}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{alloc\+\_\+fs\+\_\+workspace}]{\setlength{\rightskip}{0pt plus 5cm}alloc\+\_\+fs\+\_\+workspace (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a5708b339d001ab437e1253d97237da75}
+\hypertarget{jquant1_8c_a7cd0ab37d067e082d52761a72a34f393}{}\index{jquant1.\+c@{jquant1.\+c}!color\+\_\+quantize@{color\+\_\+quantize}}
+\index{color\+\_\+quantize@{color\+\_\+quantize}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{color\+\_\+quantize}]{\setlength{\rightskip}{0pt plus 5cm}color\+\_\+quantize (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{input\+\_\+buf, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a7cd0ab37d067e082d52761a72a34f393}
+\hypertarget{jquant1_8c_a21078ef0a922cf067a9abefd643587a8}{}\index{jquant1.\+c@{jquant1.\+c}!color\+\_\+quantize3@{color\+\_\+quantize3}}
+\index{color\+\_\+quantize3@{color\+\_\+quantize3}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{color\+\_\+quantize3}]{\setlength{\rightskip}{0pt plus 5cm}color\+\_\+quantize3 (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{input\+\_\+buf, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a21078ef0a922cf067a9abefd643587a8}
+\hypertarget{jquant1_8c_a8a21fbce6e50e0862a91b9588c8cad14}{}\index{jquant1.\+c@{jquant1.\+c}!create\+\_\+colorindex@{create\+\_\+colorindex}}
+\index{create\+\_\+colorindex@{create\+\_\+colorindex}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{create\+\_\+colorindex}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+colorindex (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a8a21fbce6e50e0862a91b9588c8cad14}
+\hypertarget{jquant1_8c_a909cb020542b3cabf723718922a9721d}{}\index{jquant1.\+c@{jquant1.\+c}!create\+\_\+colormap@{create\+\_\+colormap}}
+\index{create\+\_\+colormap@{create\+\_\+colormap}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{create\+\_\+colormap}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+colormap (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a909cb020542b3cabf723718922a9721d}
+\hypertarget{jquant1_8c_a42d73068d733c88e07bc8dc010551b2d}{}\index{jquant1.\+c@{jquant1.\+c}!create\+\_\+odither\+\_\+tables@{create\+\_\+odither\+\_\+tables}}
+\index{create\+\_\+odither\+\_\+tables@{create\+\_\+odither\+\_\+tables}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{create\+\_\+odither\+\_\+tables}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+odither\+\_\+tables (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a42d73068d733c88e07bc8dc010551b2d}
+\hypertarget{jquant1_8c_a9a121532b0a0117049fbdd31e39294da}{}\index{jquant1.\+c@{jquant1.\+c}!finish\+\_\+pass\+\_\+1\+\_\+quant@{finish\+\_\+pass\+\_\+1\+\_\+quant}}
+\index{finish\+\_\+pass\+\_\+1\+\_\+quant@{finish\+\_\+pass\+\_\+1\+\_\+quant}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{finish\+\_\+pass\+\_\+1\+\_\+quant}]{\setlength{\rightskip}{0pt plus 5cm}finish\+\_\+pass\+\_\+1\+\_\+quant (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a9a121532b0a0117049fbdd31e39294da}
+\hypertarget{jquant1_8c_a5a9591c850cb268bdac2969f67602c03}{}\index{jquant1.\+c@{jquant1.\+c}!jinit\+\_\+1pass\+\_\+quantizer@{jinit\+\_\+1pass\+\_\+quantizer}}
+\index{jinit\+\_\+1pass\+\_\+quantizer@{jinit\+\_\+1pass\+\_\+quantizer}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{jinit\+\_\+1pass\+\_\+quantizer}]{\setlength{\rightskip}{0pt plus 5cm}jinit\+\_\+1pass\+\_\+quantizer (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a5a9591c850cb268bdac2969f67602c03}
+\hypertarget{jquant1_8c_a7776aedb6f4207424e362efa398045ca}{}\index{jquant1.\+c@{jquant1.\+c}!largest\+\_\+input\+\_\+value@{largest\+\_\+input\+\_\+value}}
+\index{largest\+\_\+input\+\_\+value@{largest\+\_\+input\+\_\+value}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{largest\+\_\+input\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}largest\+\_\+input\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{int}]{ci, }
+\item[{int}]{j, }
+\item[{int}]{maxj}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a7776aedb6f4207424e362efa398045ca}
+\hypertarget{jquant1_8c_a927b20e4c317e67832e2bebd38540618}{}\index{jquant1.\+c@{jquant1.\+c}!make\+\_\+odither\+\_\+array@{make\+\_\+odither\+\_\+array}}
+\index{make\+\_\+odither\+\_\+array@{make\+\_\+odither\+\_\+array}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{make\+\_\+odither\+\_\+array}]{\setlength{\rightskip}{0pt plus 5cm}make\+\_\+odither\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{int}]{ncolors}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a927b20e4c317e67832e2bebd38540618}
+\hypertarget{jquant1_8c_ad633674323e7669d79b861e59cf9df1e}{}\index{jquant1.\+c@{jquant1.\+c}!new\+\_\+color\+\_\+map\+\_\+1\+\_\+quant@{new\+\_\+color\+\_\+map\+\_\+1\+\_\+quant}}
+\index{new\+\_\+color\+\_\+map\+\_\+1\+\_\+quant@{new\+\_\+color\+\_\+map\+\_\+1\+\_\+quant}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{new\+\_\+color\+\_\+map\+\_\+1\+\_\+quant}]{\setlength{\rightskip}{0pt plus 5cm}new\+\_\+color\+\_\+map\+\_\+1\+\_\+quant (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_ad633674323e7669d79b861e59cf9df1e}
+\hypertarget{jquant1_8c_afce74e0cd4ab990ec7bd30f54ca315ae}{}\index{jquant1.\+c@{jquant1.\+c}!output\+\_\+value@{output\+\_\+value}}
+\index{output\+\_\+value@{output\+\_\+value}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{output\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}output\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{int}]{ci, }
+\item[{int}]{j, }
+\item[{int}]{maxj}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_afce74e0cd4ab990ec7bd30f54ca315ae}
+\hypertarget{jquant1_8c_a4073442f98bc77f21346ee43500c28df}{}\index{jquant1.\+c@{jquant1.\+c}!quantize3\+\_\+ord\+\_\+dither@{quantize3\+\_\+ord\+\_\+dither}}
+\index{quantize3\+\_\+ord\+\_\+dither@{quantize3\+\_\+ord\+\_\+dither}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{quantize3\+\_\+ord\+\_\+dither}]{\setlength{\rightskip}{0pt plus 5cm}quantize3\+\_\+ord\+\_\+dither (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{input\+\_\+buf, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a4073442f98bc77f21346ee43500c28df}
+\hypertarget{jquant1_8c_a58d7ca426df6f424c01cc38188f6d517}{}\index{jquant1.\+c@{jquant1.\+c}!quantize\+\_\+fs\+\_\+dither@{quantize\+\_\+fs\+\_\+dither}}
+\index{quantize\+\_\+fs\+\_\+dither@{quantize\+\_\+fs\+\_\+dither}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{quantize\+\_\+fs\+\_\+dither}]{\setlength{\rightskip}{0pt plus 5cm}quantize\+\_\+fs\+\_\+dither (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{input\+\_\+buf, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_a58d7ca426df6f424c01cc38188f6d517}
+\hypertarget{jquant1_8c_afc3bd33f61f864c151728c40524f4a3d}{}\index{jquant1.\+c@{jquant1.\+c}!quantize\+\_\+ord\+\_\+dither@{quantize\+\_\+ord\+\_\+dither}}
+\index{quantize\+\_\+ord\+\_\+dither@{quantize\+\_\+ord\+\_\+dither}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{quantize\+\_\+ord\+\_\+dither}]{\setlength{\rightskip}{0pt plus 5cm}quantize\+\_\+ord\+\_\+dither (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{input\+\_\+buf, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_afc3bd33f61f864c151728c40524f4a3d}
+\hypertarget{jquant1_8c_ab5d9a16bb33d85a1b44ab4c093e06055}{}\index{jquant1.\+c@{jquant1.\+c}!select\+\_\+ncolors@{select\+\_\+ncolors}}
+\index{select\+\_\+ncolors@{select\+\_\+ncolors}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{select\+\_\+ncolors}]{\setlength{\rightskip}{0pt plus 5cm}select\+\_\+ncolors (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{int}]{Ncolors\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_ab5d9a16bb33d85a1b44ab4c093e06055}
+\hypertarget{jquant1_8c_ae04515d24a19343ba4d4c83f57aa7ead}{}\index{jquant1.\+c@{jquant1.\+c}!start\+\_\+pass\+\_\+1\+\_\+quant@{start\+\_\+pass\+\_\+1\+\_\+quant}}
+\index{start\+\_\+pass\+\_\+1\+\_\+quant@{start\+\_\+pass\+\_\+1\+\_\+quant}!jquant1.\+c@{jquant1.\+c}}
+\subsubsection[{start\+\_\+pass\+\_\+1\+\_\+quant}]{\setlength{\rightskip}{0pt plus 5cm}start\+\_\+pass\+\_\+1\+\_\+quant (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf boolean}}]{is\+\_\+pre\+\_\+scan}
+\end{DoxyParamCaption}
+)}\label{jquant1_8c_ae04515d24a19343ba4d4c83f57aa7ead}

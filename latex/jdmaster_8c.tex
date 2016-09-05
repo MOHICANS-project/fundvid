@@ -1,0 +1,111 @@
+\hypertarget{jdmaster_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jdmaster.c File Reference}
+\label{jdmaster_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdmaster.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdmaster.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jdmaster.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__decomp__master}{my\+\_\+decomp\+\_\+master}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jdmaster_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__decomp__master}{my\+\_\+decomp\+\_\+master} $\ast$ \hyperlink{jdmaster_8c_af43dd881aff77d1ea12de4e5b15ab954}{my\+\_\+master\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jdmaster_8c_a9cfe492206e2b676273882eef47e2f32}{use\+\_\+merged\+\_\+upsample} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdmaster_8c_a50c2a1cce045b43e7e8f1dc659b6f964}{jpeg\+\_\+calc\+\_\+output\+\_\+dimensions} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdmaster_8c_adb1529a325b62a72961838ae383c1b0a}{prepare\+\_\+range\+\_\+limit\+\_\+table} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdmaster_8c_a440a4f3af47f35f6dd2a353329bc3baf}{master\+\_\+selection} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdmaster_8c_a67420f4157afdc9fdf730941dbaf8503}{prepare\+\_\+for\+\_\+output\+\_\+pass} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdmaster_8c_a38d4530fe1a7a3442c983735c656dfd0}{finish\+\_\+output\+\_\+pass} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdmaster_8c_ad8b39616cacda419486b3c18393da358}{jpeg\+\_\+new\+\_\+colormap} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdmaster_8c_a103160e5ec5fd80c654e74f633b14818}{jinit\+\_\+master\+\_\+decompress} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jdmaster_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jdmaster.\+c@{jdmaster.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jdmaster_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jdmaster_8c_af43dd881aff77d1ea12de4e5b15ab954}{}\index{jdmaster.\+c@{jdmaster.\+c}!my\+\_\+master\+\_\+ptr@{my\+\_\+master\+\_\+ptr}}
+\index{my\+\_\+master\+\_\+ptr@{my\+\_\+master\+\_\+ptr}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{my\+\_\+master\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+decomp\+\_\+master}$\ast$ {\bf my\+\_\+master\+\_\+ptr}}\label{jdmaster_8c_af43dd881aff77d1ea12de4e5b15ab954}
+
+
+\subsection{Function Documentation}
+\hypertarget{jdmaster_8c_a38d4530fe1a7a3442c983735c656dfd0}{}\index{jdmaster.\+c@{jdmaster.\+c}!finish\+\_\+output\+\_\+pass@{finish\+\_\+output\+\_\+pass}}
+\index{finish\+\_\+output\+\_\+pass@{finish\+\_\+output\+\_\+pass}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{finish\+\_\+output\+\_\+pass}]{\setlength{\rightskip}{0pt plus 5cm}finish\+\_\+output\+\_\+pass (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_a38d4530fe1a7a3442c983735c656dfd0}
+\hypertarget{jdmaster_8c_a103160e5ec5fd80c654e74f633b14818}{}\index{jdmaster.\+c@{jdmaster.\+c}!jinit\+\_\+master\+\_\+decompress@{jinit\+\_\+master\+\_\+decompress}}
+\index{jinit\+\_\+master\+\_\+decompress@{jinit\+\_\+master\+\_\+decompress}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{jinit\+\_\+master\+\_\+decompress}]{\setlength{\rightskip}{0pt plus 5cm}jinit\+\_\+master\+\_\+decompress (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_a103160e5ec5fd80c654e74f633b14818}
+\hypertarget{jdmaster_8c_a50c2a1cce045b43e7e8f1dc659b6f964}{}\index{jdmaster.\+c@{jdmaster.\+c}!jpeg\+\_\+calc\+\_\+output\+\_\+dimensions@{jpeg\+\_\+calc\+\_\+output\+\_\+dimensions}}
+\index{jpeg\+\_\+calc\+\_\+output\+\_\+dimensions@{jpeg\+\_\+calc\+\_\+output\+\_\+dimensions}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{jpeg\+\_\+calc\+\_\+output\+\_\+dimensions}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+calc\+\_\+output\+\_\+dimensions (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_a50c2a1cce045b43e7e8f1dc659b6f964}
+\hypertarget{jdmaster_8c_ad8b39616cacda419486b3c18393da358}{}\index{jdmaster.\+c@{jdmaster.\+c}!jpeg\+\_\+new\+\_\+colormap@{jpeg\+\_\+new\+\_\+colormap}}
+\index{jpeg\+\_\+new\+\_\+colormap@{jpeg\+\_\+new\+\_\+colormap}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{jpeg\+\_\+new\+\_\+colormap}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+new\+\_\+colormap (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_ad8b39616cacda419486b3c18393da358}
+\hypertarget{jdmaster_8c_a440a4f3af47f35f6dd2a353329bc3baf}{}\index{jdmaster.\+c@{jdmaster.\+c}!master\+\_\+selection@{master\+\_\+selection}}
+\index{master\+\_\+selection@{master\+\_\+selection}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{master\+\_\+selection}]{\setlength{\rightskip}{0pt plus 5cm}master\+\_\+selection (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_a440a4f3af47f35f6dd2a353329bc3baf}
+\hypertarget{jdmaster_8c_a67420f4157afdc9fdf730941dbaf8503}{}\index{jdmaster.\+c@{jdmaster.\+c}!prepare\+\_\+for\+\_\+output\+\_\+pass@{prepare\+\_\+for\+\_\+output\+\_\+pass}}
+\index{prepare\+\_\+for\+\_\+output\+\_\+pass@{prepare\+\_\+for\+\_\+output\+\_\+pass}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{prepare\+\_\+for\+\_\+output\+\_\+pass}]{\setlength{\rightskip}{0pt plus 5cm}prepare\+\_\+for\+\_\+output\+\_\+pass (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_a67420f4157afdc9fdf730941dbaf8503}
+\hypertarget{jdmaster_8c_adb1529a325b62a72961838ae383c1b0a}{}\index{jdmaster.\+c@{jdmaster.\+c}!prepare\+\_\+range\+\_\+limit\+\_\+table@{prepare\+\_\+range\+\_\+limit\+\_\+table}}
+\index{prepare\+\_\+range\+\_\+limit\+\_\+table@{prepare\+\_\+range\+\_\+limit\+\_\+table}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{prepare\+\_\+range\+\_\+limit\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}prepare\+\_\+range\+\_\+limit\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_adb1529a325b62a72961838ae383c1b0a}
+\hypertarget{jdmaster_8c_a9cfe492206e2b676273882eef47e2f32}{}\index{jdmaster.\+c@{jdmaster.\+c}!use\+\_\+merged\+\_\+upsample@{use\+\_\+merged\+\_\+upsample}}
+\index{use\+\_\+merged\+\_\+upsample@{use\+\_\+merged\+\_\+upsample}!jdmaster.\+c@{jdmaster.\+c}}
+\subsubsection[{use\+\_\+merged\+\_\+upsample}]{\setlength{\rightskip}{0pt plus 5cm}use\+\_\+merged\+\_\+upsample (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdmaster_8c_a9cfe492206e2b676273882eef47e2f32}

@@ -1,0 +1,14 @@
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/third_party/CppUnitLite/CMakeFiles/CppUnitLite.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/extras/libNumerics/CMakeFiles/Numerics.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/libOrsa/CMakeFiles/Orsa.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/extras/libNumerics/CMakeFiles/ccmath_svd_test.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/libOrsa/CMakeFiles/cubicRoots_test.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/demo/CMakeFiles/demo_orsa_fundamental.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/libOrsa/CMakeFiles/fundamental_model_test.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/libOrsa/CMakeFiles/fundamental_orsa_test.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/demo/libImage/CMakeFiles/image.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/demo/libImage/CMakeFiles/image_drawing_test.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/demo/libImage/CMakeFiles/image_io_test.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/demo/libImage/CMakeFiles/image_test.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/demo/CMakeFiles/put_epipolar.dir
+/home/nicola/Downloads/orsa-fundamental_1.0/Build/extras/sift/CMakeFiles/sift.dir

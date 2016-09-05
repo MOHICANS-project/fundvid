@@ -1,0 +1,121 @@
+\hypertarget{classFUncertainty}{}\section{F\+Uncertainty Class Reference}
+\label{classFUncertainty}\index{F\+Uncertainty@{F\+Uncertainty}}
+
+
+Class which manages the uncertainty of the F estimation.  
+
+
+
+
+{\ttfamily \#include $<$f\+\_\+uncertainty.\+h$>$}
+
+
+
+Collaboration diagram for F\+Uncertainty\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFUncertainty_aa4a2cfa475eb5e215324c92893acd61d}{F\+Uncertainty} (Eigen\+::\+Matrix3d \+\_\+\+F, Eigen\+::\+Matrix$<$ double, 9, 9 $>$ \+\_\+\+Cov, double \+\_\+sigma)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classFUncertainty}{F\+Uncertainty} constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFUncertainty_a9c05e86636b662b06a65990c2925097d}{$\sim$\+F\+Uncertainty} ()
+\item 
+void \hyperlink{classFUncertainty_a6429cf931768edfe8bfae562ffd4f231}{get\+Epipolar\+Line\+Covariance} (const Eigen\+::\+Vector3d \&x, Eigen\+::\+Matrix$<$ double, 3, 3 $>$ \&Cov\+\_\+line)
+\begin{DoxyCompactList}\small\item\em Evaluates the covariance of the epipolar line drawn from the given point. \end{DoxyCompactList}\item 
+void \hyperlink{classFUncertainty_a3d64fda89d901f85ab0eac214c0b8f4e}{set\+Sigma} (double sigma)
+\begin{DoxyCompactList}\small\item\em Sigma parameter setter. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix3d \& \hyperlink{classFUncertainty_ad769516a8a9c9e1eaa74d73d75c93cf2}{get\+F} () const 
+\begin{DoxyCompactList}\small\item\em Fundamental matrix getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which manages the uncertainty of the F estimation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFUncertainty_aa4a2cfa475eb5e215324c92893acd61d}{}\index{F\+Uncertainty@{F\+Uncertainty}!F\+Uncertainty@{F\+Uncertainty}}
+\index{F\+Uncertainty@{F\+Uncertainty}!F\+Uncertainty@{F\+Uncertainty}}
+\subsubsection[{F\+Uncertainty}]{\setlength{\rightskip}{0pt plus 5cm}F\+Uncertainty\+::\+F\+Uncertainty (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix3d}]{\+\_\+\+F, }
+\item[{Eigen\+::\+Matrix$<$ double, 9, 9 $>$}]{\+\_\+\+Cov, }
+\item[{double}]{\+\_\+sigma}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classFUncertainty_aa4a2cfa475eb5e215324c92893acd61d}
+
+
+\hyperlink{classFUncertainty}{F\+Uncertainty} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+F} & fundamental matrix \\
+\hline
+{\em \+\_\+\+Cov} & fundamental matrix covariance \\
+\hline
+{\em \+\_\+sigma} & standard deviation used in epipolar band covariance \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFUncertainty_a9c05e86636b662b06a65990c2925097d}{}\index{F\+Uncertainty@{F\+Uncertainty}!````~F\+Uncertainty@{$\sim$\+F\+Uncertainty}}
+\index{````~F\+Uncertainty@{$\sim$\+F\+Uncertainty}!F\+Uncertainty@{F\+Uncertainty}}
+\subsubsection[{$\sim$\+F\+Uncertainty}]{\setlength{\rightskip}{0pt plus 5cm}virtual F\+Uncertainty\+::$\sim$\+F\+Uncertainty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classFUncertainty_a9c05e86636b662b06a65990c2925097d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFUncertainty_a6429cf931768edfe8bfae562ffd4f231}{}\index{F\+Uncertainty@{F\+Uncertainty}!get\+Epipolar\+Line\+Covariance@{get\+Epipolar\+Line\+Covariance}}
+\index{get\+Epipolar\+Line\+Covariance@{get\+Epipolar\+Line\+Covariance}!F\+Uncertainty@{F\+Uncertainty}}
+\subsubsection[{get\+Epipolar\+Line\+Covariance}]{\setlength{\rightskip}{0pt plus 5cm}void F\+Uncertainty\+::get\+Epipolar\+Line\+Covariance (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector3d \&}]{x, }
+\item[{Eigen\+::\+Matrix$<$ double, 3, 3 $>$ \&}]{Cov\+\_\+line}
+\end{DoxyParamCaption}
+)}\label{classFUncertainty_a6429cf931768edfe8bfae562ffd4f231}
+
+
+Evaluates the covariance of the epipolar line drawn from the given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the point in the first image \\
+\hline
+{\em Cov\+\_\+line} & the output covariance of the epipolar line F$\ast$x \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFUncertainty_ad769516a8a9c9e1eaa74d73d75c93cf2}{}\index{F\+Uncertainty@{F\+Uncertainty}!get\+F@{get\+F}}
+\index{get\+F@{get\+F}!F\+Uncertainty@{F\+Uncertainty}}
+\subsubsection[{get\+F}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix3d\& F\+Uncertainty\+::get\+F (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classFUncertainty_ad769516a8a9c9e1eaa74d73d75c93cf2}
+
+
+Fundamental matrix getter. 
+
+\begin{DoxyReturn}{Returns}
+the fundamental matrix 
+\end{DoxyReturn}
+\hypertarget{classFUncertainty_a3d64fda89d901f85ab0eac214c0b8f4e}{}\index{F\+Uncertainty@{F\+Uncertainty}!set\+Sigma@{set\+Sigma}}
+\index{set\+Sigma@{set\+Sigma}!F\+Uncertainty@{F\+Uncertainty}}
+\subsubsection[{set\+Sigma}]{\setlength{\rightskip}{0pt plus 5cm}void F\+Uncertainty\+::set\+Sigma (
+\begin{DoxyParamCaption}
+\item[{double}]{sigma}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classFUncertainty_a3d64fda89d901f85ab0eac214c0b8f4e}
+
+
+Sigma parameter setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma} & the new epipolar band standard deviation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/estimation/\hyperlink{f__uncertainty_8h}{f\+\_\+uncertainty.\+h}\item 
+src/estimation/\hyperlink{f__uncertainty_8cpp}{f\+\_\+uncertainty.\+cpp}\end{DoxyCompactItemize}

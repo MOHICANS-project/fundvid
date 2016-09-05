@@ -1,0 +1,107 @@
+\hypertarget{classFundMatOptimizer}{}\section{Fund\+Mat\+Optimizer Class Reference}
+\label{classFundMatOptimizer}\index{Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}}
+
+
+Generic interface for fundamental matrix optimization.  
+
+
+
+
+{\ttfamily \#include $<$fundmat\+\_\+optimizer.\+h$>$}
+
+
+
+Inheritance diagram for Fund\+Mat\+Optimizer\+:
+% FIG 0
+
+
+Collaboration diagram for Fund\+Mat\+Optimizer\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFundMatOptimizer_ab8b1130d8f0e3db31a453cb9f176885b}{Fund\+Mat\+Optimizer} ()
+\item 
+virtual \hyperlink{classFundMatOptimizer_aa9f02c90f2f4a56cf9f6bf6397907b8a}{$\sim$\+Fund\+Mat\+Optimizer} ()
+\item 
+virtual void \hyperlink{classFundMatOptimizer_a608a81ada669a6105b274d193039b081}{opt\+Fund\+Mat} (double F\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, double $\ast$$\ast$p0, double $\ast$$\ast$p1, int n)=0
+\begin{DoxyCompactList}\small\item\em Optimize the fundamental matrix given in input. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFundMatOptimizer_a6a61af2de52b5dc0a8fc20420a5d8b2e}{get\+Covar\+F} (double Cov\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})=0
+\begin{DoxyCompactList}\small\item\em Get the covariance matrix representing the uncertainty of the F estimation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic interface for fundamental matrix optimization. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFundMatOptimizer_ab8b1130d8f0e3db31a453cb9f176885b}{}\index{Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}!Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}}
+\index{Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}!Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}}
+\subsubsection[{Fund\+Mat\+Optimizer}]{\setlength{\rightskip}{0pt plus 5cm}Fund\+Mat\+Optimizer\+::\+Fund\+Mat\+Optimizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classFundMatOptimizer_ab8b1130d8f0e3db31a453cb9f176885b}
+\hypertarget{classFundMatOptimizer_aa9f02c90f2f4a56cf9f6bf6397907b8a}{}\index{Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}!````~Fund\+Mat\+Optimizer@{$\sim$\+Fund\+Mat\+Optimizer}}
+\index{````~Fund\+Mat\+Optimizer@{$\sim$\+Fund\+Mat\+Optimizer}!Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}}
+\subsubsection[{$\sim$\+Fund\+Mat\+Optimizer}]{\setlength{\rightskip}{0pt plus 5cm}virtual Fund\+Mat\+Optimizer\+::$\sim$\+Fund\+Mat\+Optimizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classFundMatOptimizer_aa9f02c90f2f4a56cf9f6bf6397907b8a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFundMatOptimizer_a6a61af2de52b5dc0a8fc20420a5d8b2e}{}\index{Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}!get\+Covar\+F@{get\+Covar\+F}}
+\index{get\+Covar\+F@{get\+Covar\+F}!Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}}
+\subsubsection[{get\+Covar\+F}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fund\+Mat\+Optimizer\+::get\+Covar\+F (
+\begin{DoxyParamCaption}
+\item[{double}]{Cov\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classFundMatOptimizer_a6a61af2de52b5dc0a8fc20420a5d8b2e}
+
+
+Get the covariance matrix representing the uncertainty of the F estimation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & 9x9 covariance matrix to fill \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classLMFundMatOptimizer_a65104fdc336ff8f464229578b3b650b7}{L\+M\+Fund\+Mat\+Optimizer}.
+
+\hypertarget{classFundMatOptimizer_a608a81ada669a6105b274d193039b081}{}\index{Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}!opt\+Fund\+Mat@{opt\+Fund\+Mat}}
+\index{opt\+Fund\+Mat@{opt\+Fund\+Mat}!Fund\+Mat\+Optimizer@{Fund\+Mat\+Optimizer}}
+\subsubsection[{opt\+Fund\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fund\+Mat\+Optimizer\+::opt\+Fund\+Mat (
+\begin{DoxyParamCaption}
+\item[{double}]{F\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, }
+\item[{double $\ast$$\ast$}]{p0, }
+\item[{double $\ast$$\ast$}]{p1, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classFundMatOptimizer_a608a81ada669a6105b274d193039b081}
+
+
+Optimize the fundamental matrix given in input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & input fundamental matrix, it will contain the optimized version at the end \\
+\hline
+{\em p0} & inlier points from image 0 \\
+\hline
+{\em p1} & inlier points from image 1 \\
+\hline
+{\em n} & number of points \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classLMFundMatOptimizer_a3e0094bab00c0ac0311d2cc1a5cadc38}{L\+M\+Fund\+Mat\+Optimizer}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/estimation/\hyperlink{fundmat__optimizer_8h}{fundmat\+\_\+optimizer.\+h}\end{DoxyCompactItemize}

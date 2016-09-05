@@ -1,0 +1,143 @@
+\hypertarget{crc32_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/zlib/crc32.c File Reference}
+\label{crc32_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/crc32.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/crc32.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/zlib/zutil.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/zlib/crc32.\+h\char`\"{}}\\*
+Include dependency graph for crc32.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{crc32_8c_a08023ea6765c99d60a6a3840cd07156e}{local}~static
+\item 
+\#define \hyperlink{crc32_8c_a0249fed12d0a7eab9daea105c257da86}{T\+B\+L\+S}~1
+\item 
+\#define \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}~\hyperlink{png_8c_abe3a3dd2f471e670e252fcc0835d57c0}{crc} = \hyperlink{crc32_8h_a986309491edc1f872ec298c2c5fa5157}{crc\+\_\+table}\mbox{[}0\mbox{]}\mbox{[}((int)\hyperlink{png_8c_abe3a3dd2f471e670e252fcc0835d57c0}{crc} $^\wedge$ ($\ast$buf++)) \& 0xff\mbox{]} $^\wedge$ (crc $>$$>$ 8)
+\item 
+\#define \hyperlink{crc32_8c_aed1b41414efee0773c67c28e09317455}{D\+O8}~\hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}; \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}; \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}; \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}; \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}; \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}; \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}; \hyperlink{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{D\+O1}
+\item 
+\#define \hyperlink{crc32_8c_a366ddceacb9041c5f12bb75fa6d75163}{G\+F2\+\_\+\+D\+I\+M}~32      /$\ast$ dimension of G\+F(2) vectors (\hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length} of C\+R\+C) $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} unsigned long \hyperlink{crc32_8c_a388bdea9cd672b42ff9d424c3357a71c}{gf2\+\_\+matrix\+\_\+times} \hyperlink{crc32_8c_ab5e9ce61df5c0090a4c91ed4df20bd15}{O\+F} ((unsigned long $\ast$mat, unsigned long vec))
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{crc32_8c_a797362ba54180ad549b381abfcde80c3}{gf2\+\_\+matrix\+\_\+square} \hyperlink{crc32_8c_a97302400540a4804a933ce8f829f1517}{O\+F} ((unsigned long $\ast$square, unsigned long $\ast$mat))
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} u\+Long \hyperlink{crc32_8c_a36a8eb95bf402949b5a68f7157df7ca2}{crc32\+\_\+combine\+\_\+} \hyperlink{crc32_8c_aafbb122e835f0f7f8e60a29d785fc0a9}{O\+F} ((u\+Long crc1, u\+Long crc2, z\+\_\+off64\+\_\+t len2))
+\item 
+const z\+\_\+crc\+\_\+t \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$Z\+E\+X\+P\+O\+R\+T \hyperlink{crc32_8c_a7d4540ffeee6cb5c74978e3040b7a69a}{get\+\_\+crc\+\_\+table} ()
+\item 
+unsigned long Z\+E\+X\+P\+O\+R\+T \hyperlink{crc32_8c_af5a1c7b05170540ef3bb084e6cf903c4}{crc32} (unsigned long \hyperlink{png_8c_abe3a3dd2f471e670e252fcc0835d57c0}{crc}, const unsigned char \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$buf, u\+Int len)
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} unsigned long \hyperlink{crc32_8c_a388bdea9cd672b42ff9d424c3357a71c}{gf2\+\_\+matrix\+\_\+times} (unsigned long $\ast$mat, unsigned long vec)
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{crc32_8c_a797362ba54180ad549b381abfcde80c3}{gf2\+\_\+matrix\+\_\+square} (unsigned long $\ast$square, unsigned long $\ast$mat)
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} u\+Long \hyperlink{crc32_8c_a36a8eb95bf402949b5a68f7157df7ca2}{crc32\+\_\+combine\+\_\+} (u\+Long crc1, u\+Long crc2, z\+\_\+off64\+\_\+t len2)
+\item 
+u\+Long Z\+E\+X\+P\+O\+R\+T \hyperlink{crc32_8c_aa7a1dc42a5d07c76263f4130f23d4515}{crc32\+\_\+combine} (u\+Long crc1, u\+Long crc2, z\+\_\+off\+\_\+t len2)
+\item 
+u\+Long Z\+E\+X\+P\+O\+R\+T \hyperlink{crc32_8c_ac14c100da9646dc4b3d1422ffe736829}{crc32\+\_\+combine64} (u\+Long crc1, u\+Long crc2, z\+\_\+off64\+\_\+t len2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}{}\index{crc32.\+c@{crc32.\+c}!D\+O1@{D\+O1}}
+\index{D\+O1@{D\+O1}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{D\+O1}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O1~{\bf crc} = {\bf crc\+\_\+table}\mbox{[}0\mbox{]}\mbox{[}((int){\bf crc} $^\wedge$ ($\ast$buf++)) \& 0xff\mbox{]} $^\wedge$ (crc $>$$>$ 8)}\label{crc32_8c_aff265ea9630e020c8ac850c18d5d972f}
+\hypertarget{crc32_8c_aed1b41414efee0773c67c28e09317455}{}\index{crc32.\+c@{crc32.\+c}!D\+O8@{D\+O8}}
+\index{D\+O8@{D\+O8}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{D\+O8}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O8~{\bf D\+O1}; {\bf D\+O1}; {\bf D\+O1}; {\bf D\+O1}; {\bf D\+O1}; {\bf D\+O1}; {\bf D\+O1}; {\bf D\+O1}}\label{crc32_8c_aed1b41414efee0773c67c28e09317455}
+\hypertarget{crc32_8c_a366ddceacb9041c5f12bb75fa6d75163}{}\index{crc32.\+c@{crc32.\+c}!G\+F2\+\_\+\+D\+I\+M@{G\+F2\+\_\+\+D\+I\+M}}
+\index{G\+F2\+\_\+\+D\+I\+M@{G\+F2\+\_\+\+D\+I\+M}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{G\+F2\+\_\+\+D\+I\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+F2\+\_\+\+D\+I\+M~32      /$\ast$ dimension of G\+F(2) vectors ({\bf length} of C\+R\+C) $\ast$/}\label{crc32_8c_a366ddceacb9041c5f12bb75fa6d75163}
+\hypertarget{crc32_8c_a08023ea6765c99d60a6a3840cd07156e}{}\index{crc32.\+c@{crc32.\+c}!local@{local}}
+\index{local@{local}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{local}]{\setlength{\rightskip}{0pt plus 5cm}\#define local~static}\label{crc32_8c_a08023ea6765c99d60a6a3840cd07156e}
+\hypertarget{crc32_8c_a0249fed12d0a7eab9daea105c257da86}{}\index{crc32.\+c@{crc32.\+c}!T\+B\+L\+S@{T\+B\+L\+S}}
+\index{T\+B\+L\+S@{T\+B\+L\+S}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{T\+B\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+B\+L\+S~1}\label{crc32_8c_a0249fed12d0a7eab9daea105c257da86}
+
+
+\subsection{Function Documentation}
+\hypertarget{crc32_8c_af5a1c7b05170540ef3bb084e6cf903c4}{}\index{crc32.\+c@{crc32.\+c}!crc32@{crc32}}
+\index{crc32@{crc32}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{crc32}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Z\+E\+X\+P\+O\+R\+T crc32 (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{crc, }
+\item[{const unsigned char {\bf F\+A\+R} $\ast$}]{buf, }
+\item[{u\+Int}]{len}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_af5a1c7b05170540ef3bb084e6cf903c4}
+\hypertarget{crc32_8c_aa7a1dc42a5d07c76263f4130f23d4515}{}\index{crc32.\+c@{crc32.\+c}!crc32\+\_\+combine@{crc32\+\_\+combine}}
+\index{crc32\+\_\+combine@{crc32\+\_\+combine}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{crc32\+\_\+combine}]{\setlength{\rightskip}{0pt plus 5cm}u\+Long Z\+E\+X\+P\+O\+R\+T crc32\+\_\+combine (
+\begin{DoxyParamCaption}
+\item[{u\+Long}]{crc1, }
+\item[{u\+Long}]{crc2, }
+\item[{z\+\_\+off\+\_\+t}]{len2}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_aa7a1dc42a5d07c76263f4130f23d4515}
+\hypertarget{crc32_8c_ac14c100da9646dc4b3d1422ffe736829}{}\index{crc32.\+c@{crc32.\+c}!crc32\+\_\+combine64@{crc32\+\_\+combine64}}
+\index{crc32\+\_\+combine64@{crc32\+\_\+combine64}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{crc32\+\_\+combine64}]{\setlength{\rightskip}{0pt plus 5cm}u\+Long Z\+E\+X\+P\+O\+R\+T crc32\+\_\+combine64 (
+\begin{DoxyParamCaption}
+\item[{u\+Long}]{crc1, }
+\item[{u\+Long}]{crc2, }
+\item[{z\+\_\+off64\+\_\+t}]{len2}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_ac14c100da9646dc4b3d1422ffe736829}
+\hypertarget{crc32_8c_a36a8eb95bf402949b5a68f7157df7ca2}{}\index{crc32.\+c@{crc32.\+c}!crc32\+\_\+combine\+\_\+@{crc32\+\_\+combine\+\_\+}}
+\index{crc32\+\_\+combine\+\_\+@{crc32\+\_\+combine\+\_\+}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{crc32\+\_\+combine\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} u\+Long crc32\+\_\+combine\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{u\+Long}]{crc1, }
+\item[{u\+Long}]{crc2, }
+\item[{z\+\_\+off64\+\_\+t}]{len2}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_a36a8eb95bf402949b5a68f7157df7ca2}
+\hypertarget{crc32_8c_a7d4540ffeee6cb5c74978e3040b7a69a}{}\index{crc32.\+c@{crc32.\+c}!get\+\_\+crc\+\_\+table@{get\+\_\+crc\+\_\+table}}
+\index{get\+\_\+crc\+\_\+table@{get\+\_\+crc\+\_\+table}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{get\+\_\+crc\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}const z\+\_\+crc\+\_\+t {\bf F\+A\+R}$\ast$ Z\+E\+X\+P\+O\+R\+T get\+\_\+crc\+\_\+table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_a7d4540ffeee6cb5c74978e3040b7a69a}
+\hypertarget{crc32_8c_a797362ba54180ad549b381abfcde80c3}{}\index{crc32.\+c@{crc32.\+c}!gf2\+\_\+matrix\+\_\+square@{gf2\+\_\+matrix\+\_\+square}}
+\index{gf2\+\_\+matrix\+\_\+square@{gf2\+\_\+matrix\+\_\+square}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{gf2\+\_\+matrix\+\_\+square}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} {\bf void} gf2\+\_\+matrix\+\_\+square (
+\begin{DoxyParamCaption}
+\item[{unsigned long $\ast$}]{square, }
+\item[{unsigned long $\ast$}]{mat}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_a797362ba54180ad549b381abfcde80c3}
+\hypertarget{crc32_8c_a388bdea9cd672b42ff9d424c3357a71c}{}\index{crc32.\+c@{crc32.\+c}!gf2\+\_\+matrix\+\_\+times@{gf2\+\_\+matrix\+\_\+times}}
+\index{gf2\+\_\+matrix\+\_\+times@{gf2\+\_\+matrix\+\_\+times}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{gf2\+\_\+matrix\+\_\+times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} unsigned long gf2\+\_\+matrix\+\_\+times (
+\begin{DoxyParamCaption}
+\item[{unsigned long $\ast$}]{mat, }
+\item[{unsigned long}]{vec}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_a388bdea9cd672b42ff9d424c3357a71c}
+\hypertarget{crc32_8c_ab5e9ce61df5c0090a4c91ed4df20bd15}{}\index{crc32.\+c@{crc32.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} unsigned long {\bf gf2\+\_\+matrix\+\_\+times} O\+F (
+\begin{DoxyParamCaption}
+\item[{(unsigned long $\ast$mat, unsigned long vec)}]{}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_ab5e9ce61df5c0090a4c91ed4df20bd15}
+\hypertarget{crc32_8c_a97302400540a4804a933ce8f829f1517}{}\index{crc32.\+c@{crc32.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} {\bf void} {\bf gf2\+\_\+matrix\+\_\+square} O\+F (
+\begin{DoxyParamCaption}
+\item[{(unsigned long $\ast$square, unsigned long $\ast$mat)}]{}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_a97302400540a4804a933ce8f829f1517}
+\hypertarget{crc32_8c_aafbb122e835f0f7f8e60a29d785fc0a9}{}\index{crc32.\+c@{crc32.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!crc32.\+c@{crc32.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} u\+Long {\bf crc32\+\_\+combine\+\_\+} O\+F (
+\begin{DoxyParamCaption}
+\item[{(u\+Long crc1, u\+Long crc2, z\+\_\+off64\+\_\+t len2)}]{}
+\end{DoxyParamCaption}
+)}\label{crc32_8c_aafbb122e835f0f7f8e60a29d785fc0a9}

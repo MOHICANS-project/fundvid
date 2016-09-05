@@ -1,0 +1,124 @@
+\hypertarget{jmemsys_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jmemsys.h File Reference}
+\label{jmemsys_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jmemsys.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jmemsys.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jmemsys_8h_a7b31776a5d7d5be0ab44c4993a174434}{M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+N\+K}~1000000000\+L
+\item 
+\#define \hyperlink{jmemsys_8h_a83c496c242b727d7c2def22f79f75d1a}{T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H}~64	/$\ast$ max \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length} of a temporary file\textquotesingle{}s name $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct} $\ast$ \hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}
+\item 
+typedef struct \hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct} \hyperlink{jmemsys_8h_a053e143ffd76dfe3b362c09f7019ea93}{backing\+\_\+store\+\_\+info}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jmemsys_8h_a5ce30fec80b14fafc7f90fa5acb79d96}{E\+X\+T\+E\+R\+N} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$) \hyperlink{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}{jpeg\+\_\+get\+\_\+small} \hyperlink{jmemnobs_8c_a71e083248c713fdce8bbd2aa40652425}{J\+P\+P}((\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo
+\item 
+\hyperlink{jmemsys_8h_a0b8bf618fbcb2fd4f0ce2f463bb38fbd}{E\+X\+T\+E\+R\+N} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void}) \hyperlink{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}{jpeg\+\_\+free\+\_\+small} \hyperlink{jmemnobs_8c_a71e083248c713fdce8bbd2aa40652425}{J\+P\+P}((\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo
+\item 
+\hyperlink{jmemsys_8h_adb63338e2bdebe2829ac4f66de214491}{E\+X\+T\+E\+R\+N} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$) \hyperlink{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}{jpeg\+\_\+get\+\_\+large} \hyperlink{jmemnobs_8c_a71e083248c713fdce8bbd2aa40652425}{J\+P\+P}((\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo
+\item 
+\hyperlink{jmemsys_8h_a8283064f1787f992670efe23865be625}{E\+X\+T\+E\+R\+N} (long) \hyperlink{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}{jpeg\+\_\+mem\+\_\+available} \hyperlink{jmemnobs_8c_a71e083248c713fdce8bbd2aa40652425}{J\+P\+P}((\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$ \hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object}
+\item 
+long \hyperlink{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}{min\+\_\+bytes\+\_\+needed}
+\item 
+long long \hyperlink{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}{max\+\_\+bytes\+\_\+needed}
+\item 
+long long long \hyperlink{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}{already\+\_\+allocated}
+\item 
+\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr} \hyperlink{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}{info}
+\item 
+\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr} long \hyperlink{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}{total\+\_\+bytes\+\_\+needed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jmemsys_8h_a7b31776a5d7d5be0ab44c4993a174434}{}\index{jmemsys.\+h@{jmemsys.\+h}!M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+N\+K@{M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+N\+K}}
+\index{M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+N\+K@{M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+N\+K}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+N\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+N\+K~1000000000\+L}\label{jmemsys_8h_a7b31776a5d7d5be0ab44c4993a174434}
+\hypertarget{jmemsys_8h_a83c496c242b727d7c2def22f79f75d1a}{}\index{jmemsys.\+h@{jmemsys.\+h}!T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H@{T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H@{T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+T\+H~64	/$\ast$ max {\bf length} of a temporary file\textquotesingle{}s name $\ast$/}\label{jmemsys_8h_a83c496c242b727d7c2def22f79f75d1a}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jmemsys_8h_a053e143ffd76dfe3b362c09f7019ea93}{}\index{jmemsys.\+h@{jmemsys.\+h}!backing\+\_\+store\+\_\+info@{backing\+\_\+store\+\_\+info}}
+\index{backing\+\_\+store\+\_\+info@{backing\+\_\+store\+\_\+info}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{backing\+\_\+store\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf backing\+\_\+store\+\_\+struct}  {\bf backing\+\_\+store\+\_\+info}}\label{jmemsys_8h_a053e143ffd76dfe3b362c09f7019ea93}
+\hypertarget{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{}\index{jmemsys.\+h@{jmemsys.\+h}!backing\+\_\+store\+\_\+ptr@{backing\+\_\+store\+\_\+ptr}}
+\index{backing\+\_\+store\+\_\+ptr@{backing\+\_\+store\+\_\+ptr}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{backing\+\_\+store\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf backing\+\_\+store\+\_\+struct}$\ast$ {\bf backing\+\_\+store\+\_\+ptr}}\label{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}
+
+
+\subsection{Function Documentation}
+\hypertarget{jmemsys_8h_a5ce30fec80b14fafc7f90fa5acb79d96}{}\index{jmemsys.\+h@{jmemsys.\+h}!E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}}
+\index{E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{E\+X\+T\+E\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}E\+X\+T\+E\+R\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{jmemsys_8h_a5ce30fec80b14fafc7f90fa5acb79d96}
+\hypertarget{jmemsys_8h_a0b8bf618fbcb2fd4f0ce2f463bb38fbd}{}\index{jmemsys.\+h@{jmemsys.\+h}!E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}}
+\index{E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{E\+X\+T\+E\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}E\+X\+T\+E\+R\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{jmemsys_8h_a0b8bf618fbcb2fd4f0ce2f463bb38fbd}
+\hypertarget{jmemsys_8h_adb63338e2bdebe2829ac4f66de214491}{}\index{jmemsys.\+h@{jmemsys.\+h}!E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}}
+\index{E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{E\+X\+T\+E\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}E\+X\+T\+E\+R\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf void} {\bf F\+A\+R} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{jmemsys_8h_adb63338e2bdebe2829ac4f66de214491}
+\hypertarget{jmemsys_8h_a8283064f1787f992670efe23865be625}{}\index{jmemsys.\+h@{jmemsys.\+h}!E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}}
+\index{E\+X\+T\+E\+R\+N@{E\+X\+T\+E\+R\+N}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{E\+X\+T\+E\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}E\+X\+T\+E\+R\+N (
+\begin{DoxyParamCaption}
+\item[{long}]{}
+\end{DoxyParamCaption}
+)}\label{jmemsys_8h_a8283064f1787f992670efe23865be625}
+
+
+\subsection{Variable Documentation}
+\hypertarget{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}{}\index{jmemsys.\+h@{jmemsys.\+h}!already\+\_\+allocated@{already\+\_\+allocated}}
+\index{already\+\_\+allocated@{already\+\_\+allocated}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{already\+\_\+allocated}]{\setlength{\rightskip}{0pt plus 5cm}long long long already\+\_\+allocated}\label{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}
+\hypertarget{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}{}\index{jmemsys.\+h@{jmemsys.\+h}!info@{info}}
+\index{info@{info}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf backing\+\_\+store\+\_\+ptr} info}\label{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}
+\hypertarget{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}{}\index{jmemsys.\+h@{jmemsys.\+h}!max\+\_\+bytes\+\_\+needed@{max\+\_\+bytes\+\_\+needed}}
+\index{max\+\_\+bytes\+\_\+needed@{max\+\_\+bytes\+\_\+needed}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{max\+\_\+bytes\+\_\+needed}]{\setlength{\rightskip}{0pt plus 5cm}long long max\+\_\+bytes\+\_\+needed}\label{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}
+\hypertarget{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}{}\index{jmemsys.\+h@{jmemsys.\+h}!min\+\_\+bytes\+\_\+needed@{min\+\_\+bytes\+\_\+needed}}
+\index{min\+\_\+bytes\+\_\+needed@{min\+\_\+bytes\+\_\+needed}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{min\+\_\+bytes\+\_\+needed}]{\setlength{\rightskip}{0pt plus 5cm}long min\+\_\+bytes\+\_\+needed}\label{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}
+\hypertarget{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{}\index{jmemsys.\+h@{jmemsys.\+h}!object@{object}}
+\index{object@{object}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf F\+A\+R} $\ast$ object}\label{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}
+\hypertarget{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{}\index{jmemsys.\+h@{jmemsys.\+h}!sizeofobject@{sizeofobject}}
+\index{sizeofobject@{sizeofobject}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{sizeofobject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf F\+A\+R} size\+\_\+t sizeofobject}\label{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}
+\hypertarget{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}{}\index{jmemsys.\+h@{jmemsys.\+h}!total\+\_\+bytes\+\_\+needed@{total\+\_\+bytes\+\_\+needed}}
+\index{total\+\_\+bytes\+\_\+needed@{total\+\_\+bytes\+\_\+needed}!jmemsys.\+h@{jmemsys.\+h}}
+\subsubsection[{total\+\_\+bytes\+\_\+needed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf backing\+\_\+store\+\_\+ptr} long total\+\_\+bytes\+\_\+needed}\label{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}

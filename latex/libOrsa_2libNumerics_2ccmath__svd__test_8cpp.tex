@@ -1,0 +1,63 @@
+\hypertarget{libOrsa_2libNumerics_2ccmath__svd__test_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.cpp File Reference}
+\label{libOrsa_2libNumerics_2ccmath__svd__test_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp}}
+{\ttfamily \#include \char`\"{}numerics.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cpp\+Unit\+Lite/\+Test\+Harness.\+h\char`\"{}}\\*
+Include dependency graph for ccmath\+\_\+svd\+\_\+test.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_aa5ae4e7db90233aad3e266f5673953dc}{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}(a,  \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b},  tolerance)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_afc05b39bec4d39c6372b520fcb999eb6}{T\+E\+S\+T} (S\+V\+D\+Test, Decomposition)
+\item 
+int \hyperlink{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_aa5ae4e7db90233aad3e266f5673953dc}{}\index{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp@{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp}!E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}!lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp@{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{{\bf b}, }
+\item[{}]{tolerance}
+\end{DoxyParamCaption}
+)}\label{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_aa5ae4e7db90233aad3e266f5673953dc}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  bool dims\_match = (a.nrow() == \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.nrow()) && (a.ncol() == \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.ncol()); \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{\(\backslash\)}
+\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{  CHECK\_EQUAL}(a.nrow(),\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.nrow()); \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{\(\backslash\)}
+\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{  CHECK\_EQUAL}(a.ncol(),\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.ncol()); \(\backslash\)
+  if (dims\_match) \{ \(\backslash\)
+    for (\textcolor{keywordtype}{int} r = 0; r < a.nrow(); ++r) \{ \(\backslash\)
+      for (\textcolor{keywordtype}{int} c = 0; c < a.ncol(); ++c) \{ \hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{\(\backslash\)}
+\hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{        DOUBLES\_EQUAL}(a(r, c), \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}(r, c), tolerance); \(\backslash\)
+      \} \(\backslash\)
+    \} \(\backslash\)
+  \} \(\backslash\)
+\} \textcolor{keywordflow}{while}(\textcolor{keyword}{false});
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp@{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp@{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_afc05b39bec4d39c6372b520fcb999eb6}{}\index{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp@{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp@{lib\+Orsa/lib\+Numerics/ccmath\+\_\+svd\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{S\+V\+D\+Test}]{, }
+\item[{Decomposition}]{}
+\end{DoxyParamCaption}
+)}\label{libOrsa_2libNumerics_2ccmath__svd__test_8cpp_afc05b39bec4d39c6372b520fcb999eb6}

@@ -1,0 +1,27 @@
+digraph "src/third_party/orsa-fundamental_1.0/src/extras/libNumerics/numerics.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/third_party/orsa\l-fundamental_1.0/src\l/extras/libNumerics/numerics.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="src/estimation/orsa\l_estimator.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$orsa__estimator_8h.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/estimation/orsa\l_estimator.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$orsa__estimator_8cpp.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="This file contains the demo&#39;s main() function. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/third_party/orsa\l-fundamental_1.0/src\l/demo/warping.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$warping_8hpp.html",tooltip="Warp images. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/third_party/orsa\l-fundamental_1.0/src\l/demo/fundamental_graphical\l_output.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fundamental__graphical__output_8cpp.html",tooltip="Graphical output to show fundamental matrix estimation. "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="src/third_party/orsa\l-fundamental_1.0/src\l/demo/orsa_fundamental.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$demo_2orsa__fundamental_8cpp.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="src/third_party/orsa\l-fundamental_1.0/src\l/extras/libNumerics/ccmath\l_svd_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$extras_2libNumerics_2ccmath__svd__test_8cpp.html"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="src/third_party/orsa\l-fundamental_1.0/src\l/extras/libNumerics/numerics.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$extras_2libNumerics_2numerics_8cpp.html"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="src/third_party/orsa\l-fundamental_1.0/src\l/extras/sift/demo_lib\l_sift.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$demo__lib__sift_8cpp.html"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="src/third_party/orsa\l-fundamental_1.0/src\l/libOrsa/fundamental_model.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fundamental__model_8cpp.html",tooltip="Fundamental matrix model. "];
+}

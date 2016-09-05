@@ -1,0 +1,52 @@
+\hypertarget{orsa__estimator_8cpp}{}\section{src/estimation/orsa\+\_\+estimator.cpp File Reference}
+\label{orsa__estimator_8cpp}\index{src/estimation/orsa\+\_\+estimator.\+cpp@{src/estimation/orsa\+\_\+estimator.\+cpp}}
+{\ttfamily \#include \char`\"{}orsa\+\_\+estimator.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/fundamental\+\_\+model.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/exceptions/estimation\+\_\+error\+\_\+exception.\+h\char`\"{}}\\*
+Include dependency graph for orsa\+\_\+estimator.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{orsa__estimator_8cpp_a7870408417a0fade4b7cff3b34c34afd}{point2fto\+Orsa\+Match} (const std\+::vector$<$ cv\+::\+Point2f $>$ \&in0, const std\+::vector$<$ cv\+::\+Point2f $>$ \&in1, std\+::vector$<$ Match $>$ \&out)
+\item 
+std\+::pair$<$ double, double $>$ \hyperlink{orsa__estimator_8cpp_ae61d10477151332680a0e608d0ec4ad2}{stats} (const std\+::vector$<$ Match $>$ \&vec\+\_\+matchings, const std\+::vector$<$ int $>$ \&vec\+\_\+inliers, const lib\+Numerics\+::matrix$<$ double $>$ \&F)
+\item 
+bool \hyperlink{orsa__estimator_8cpp_a4b9a50059cfc2c896ce3ab1773ffbe64}{exec\+\_\+orsa} (const std\+::vector$<$ Match $>$ \&vec\+\_\+matchings, int w1, int h1, int w2, int h2, double precision, lib\+Numerics\+::matrix$<$ double $>$ \&F, std\+::vector$<$ int $>$ \&vec\+\_\+inliers, int numiter)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{orsa__estimator_8cpp_a4b9a50059cfc2c896ce3ab1773ffbe64}{}\index{orsa\+\_\+estimator.\+cpp@{orsa\+\_\+estimator.\+cpp}!exec\+\_\+orsa@{exec\+\_\+orsa}}
+\index{exec\+\_\+orsa@{exec\+\_\+orsa}!orsa\+\_\+estimator.\+cpp@{orsa\+\_\+estimator.\+cpp}}
+\subsubsection[{exec\+\_\+orsa}]{\setlength{\rightskip}{0pt plus 5cm}bool exec\+\_\+orsa (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Match $>$ \&}]{vec\+\_\+matchings, }
+\item[{int}]{w1, }
+\item[{int}]{h1, }
+\item[{int}]{w2, }
+\item[{int}]{h2, }
+\item[{double}]{precision, }
+\item[{lib\+Numerics\+::matrix$<$ double $>$ \&}]{F, }
+\item[{std\+::vector$<$ int $>$ \&}]{vec\+\_\+inliers, }
+\item[{int}]{numiter}
+\end{DoxyParamCaption}
+)}\label{orsa__estimator_8cpp_a4b9a50059cfc2c896ce3ab1773ffbe64}
+\hypertarget{orsa__estimator_8cpp_a7870408417a0fade4b7cff3b34c34afd}{}\index{orsa\+\_\+estimator.\+cpp@{orsa\+\_\+estimator.\+cpp}!point2fto\+Orsa\+Match@{point2fto\+Orsa\+Match}}
+\index{point2fto\+Orsa\+Match@{point2fto\+Orsa\+Match}!orsa\+\_\+estimator.\+cpp@{orsa\+\_\+estimator.\+cpp}}
+\subsubsection[{point2fto\+Orsa\+Match}]{\setlength{\rightskip}{0pt plus 5cm}void point2fto\+Orsa\+Match (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{in0, }
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{in1, }
+\item[{std\+::vector$<$ Match $>$ \&}]{out}
+\end{DoxyParamCaption}
+)}\label{orsa__estimator_8cpp_a7870408417a0fade4b7cff3b34c34afd}
+\hypertarget{orsa__estimator_8cpp_ae61d10477151332680a0e608d0ec4ad2}{}\index{orsa\+\_\+estimator.\+cpp@{orsa\+\_\+estimator.\+cpp}!stats@{stats}}
+\index{stats@{stats}!orsa\+\_\+estimator.\+cpp@{orsa\+\_\+estimator.\+cpp}}
+\subsubsection[{stats}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$double,double$>$ stats (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Match $>$ \&}]{vec\+\_\+matchings, }
+\item[{const std\+::vector$<$ int $>$ \&}]{vec\+\_\+inliers, }
+\item[{const lib\+Numerics\+::matrix$<$ double $>$ \&}]{F}
+\end{DoxyParamCaption}
+)}\label{orsa__estimator_8cpp_ae61d10477151332680a0e608d0ec4ad2}

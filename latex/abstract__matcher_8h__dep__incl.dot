@@ -1,0 +1,22 @@
+digraph "src/matchers/abstract_matcher.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/matchers/abstract\l_matcher.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="src/fundamentalmat\l_solver.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fundamentalmat__solver_8h.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="src/fundamentalmat\l_solver.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fundamentalmat__solver_8cpp.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="This file contains the demo&#39;s main() function. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="src/matchers/sift_guided\l_matching.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sift__guided__matching_8h.html"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="src/matchers/sift_guided\l_matching.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sift__guided__matching_8cpp.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="src/matchers/sift_opencv\l_matcher.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sift__opencv__matcher_8h.html"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="src/matchers/sift_opencv\l_matcher.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sift__opencv__matcher_8cpp.html"];
+}

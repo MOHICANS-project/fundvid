@@ -1,0 +1,157 @@
+\hypertarget{image__io__test_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/lib\+Image/image\+\_\+io\+\_\+test.cpp File Reference}
+\label{image__io__test_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/lib\+Image/image\+\_\+io\+\_\+test.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/lib\+Image/image\+\_\+io\+\_\+test.\+cpp}}
+{\ttfamily \#include \char`\"{}../../../src/demo/lib\+Image/image\+\_\+io.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/testing/testing.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/demo/lib\+Image/image.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/demo/lib\+Image/pixel\+Types.\+hpp\char`\"{}}\\*
+Include dependency graph for image\+\_\+io\+\_\+test.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{image__io__test_8cpp_a20f44fcd99da3c2b2ddf03ff6d57c97a}{T\+H\+I\+S\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R}~\char`\"{}../../../src/demo/lib\+Image/\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{image__io__test_8cpp_a600496b147e5f8e0535b087e079a9aca}{T\+E\+S\+T} (Read\+Jpg, Jpg\+\_\+\+Color)
+\item 
+\hyperlink{image__io__test_8cpp_a8430f6193f6ab493b9d6ea2640e5174b}{T\+E\+S\+T} (Read\+Jpg, Jpg\+\_\+\+Monochrome)
+\item 
+\hyperlink{image__io__test_8cpp_a5f411ee7649a69fc383ecf4ff6956189}{T\+E\+S\+T} (Read\+Png, Png\+\_\+\+Monochrome)
+\item 
+\hyperlink{image__io__test_8cpp_ab49af7fcdbd562ca5f1500bdf037c91d}{T\+E\+S\+T} (Get\+Format, filenames)
+\item 
+\hyperlink{image__io__test_8cpp_acd7dd84785006d7ca0db5de3197d3f06}{T\+E\+S\+T} (Image\+I\+O\+Test, Png\+\_\+\+Out)
+\item 
+\hyperlink{image__io__test_8cpp_a60e82a0fc77f92f17ec966ff793c4fbd}{T\+E\+S\+T} (Image\+I\+O\+Test, Invalid\+Files)
+\item 
+\hyperlink{image__io__test_8cpp_a44c65230a9483494bff26404b8d86957}{T\+E\+S\+T} (Image\+I\+O\+Test, Jpg)
+\item 
+\hyperlink{image__io__test_8cpp_a5c3ae69049ad2bf9e6feef072339a424}{T\+E\+S\+T} (Read\+Pnm, Pgm)
+\item 
+\hyperlink{image__io__test_8cpp_adf9a15aad4001969f15b10a8697d7cf6}{T\+E\+S\+T} (Read\+Pnm, Pgm\+Comments)
+\item 
+\hyperlink{image__io__test_8cpp_ae0a3ad73a7c51fc58534b484a5757b55}{T\+E\+S\+T} (Image\+I\+O\+Test, Pgm)
+\item 
+\hyperlink{image__io__test_8cpp_a98f07f3bdacb7b784515d01070a5affe}{T\+E\+S\+T} (Read\+Pnm, Ppm)
+\item 
+\hyperlink{image__io__test_8cpp_a700b32fa7d89341076651f91bfbd1c1c}{T\+E\+S\+T} (Image\+I\+O\+Test, Ppm)
+\item 
+int \hyperlink{image__io__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{image__io__test_8cpp_a20f44fcd99da3c2b2ddf03ff6d57c97a}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+H\+I\+S\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R@{T\+H\+I\+S\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R}}
+\index{T\+H\+I\+S\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R@{T\+H\+I\+S\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+H\+I\+S\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+I\+S\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+R~\char`\"{}../../../src/demo/lib\+Image/\char`\"{}}\label{image__io__test_8cpp_a20f44fcd99da3c2b2ddf03ff6d57c97a}
+
+
+\subsection{Function Documentation}
+\hypertarget{image__io__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{image__io__test_8cpp_a600496b147e5f8e0535b087e079a9aca}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Read\+Jpg}]{, }
+\item[{Jpg\+\_\+\+Color}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a600496b147e5f8e0535b087e079a9aca}
+\hypertarget{image__io__test_8cpp_a8430f6193f6ab493b9d6ea2640e5174b}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Read\+Jpg}]{, }
+\item[{Jpg\+\_\+\+Monochrome}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a8430f6193f6ab493b9d6ea2640e5174b}
+\hypertarget{image__io__test_8cpp_a5f411ee7649a69fc383ecf4ff6956189}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Read\+Png}]{, }
+\item[{Png\+\_\+\+Monochrome}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a5f411ee7649a69fc383ecf4ff6956189}
+\hypertarget{image__io__test_8cpp_ab49af7fcdbd562ca5f1500bdf037c91d}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Get\+Format}]{, }
+\item[{filenames}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_ab49af7fcdbd562ca5f1500bdf037c91d}
+\hypertarget{image__io__test_8cpp_acd7dd84785006d7ca0db5de3197d3f06}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Image\+I\+O\+Test}]{, }
+\item[{Png\+\_\+\+Out}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_acd7dd84785006d7ca0db5de3197d3f06}
+\hypertarget{image__io__test_8cpp_a60e82a0fc77f92f17ec966ff793c4fbd}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Image\+I\+O\+Test}]{, }
+\item[{Invalid\+Files}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a60e82a0fc77f92f17ec966ff793c4fbd}
+\hypertarget{image__io__test_8cpp_a44c65230a9483494bff26404b8d86957}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Image\+I\+O\+Test}]{, }
+\item[{Jpg}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a44c65230a9483494bff26404b8d86957}
+\hypertarget{image__io__test_8cpp_a5c3ae69049ad2bf9e6feef072339a424}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Read\+Pnm}]{, }
+\item[{Pgm}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a5c3ae69049ad2bf9e6feef072339a424}
+\hypertarget{image__io__test_8cpp_adf9a15aad4001969f15b10a8697d7cf6}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Read\+Pnm}]{, }
+\item[{Pgm\+Comments}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_adf9a15aad4001969f15b10a8697d7cf6}
+\hypertarget{image__io__test_8cpp_ae0a3ad73a7c51fc58534b484a5757b55}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Image\+I\+O\+Test}]{, }
+\item[{Pgm}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_ae0a3ad73a7c51fc58534b484a5757b55}
+\hypertarget{image__io__test_8cpp_a98f07f3bdacb7b784515d01070a5affe}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Read\+Pnm}]{, }
+\item[{Ppm}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a98f07f3bdacb7b784515d01070a5affe}
+\hypertarget{image__io__test_8cpp_a700b32fa7d89341076651f91bfbd1c1c}{}\index{image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!image\+\_\+io\+\_\+test.\+cpp@{image\+\_\+io\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Image\+I\+O\+Test}]{, }
+\item[{Ppm}]{}
+\end{DoxyParamCaption}
+)}\label{image__io__test_8cpp_a700b32fa7d89341076651f91bfbd1c1c}

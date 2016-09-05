@@ -1,0 +1,88 @@
+\hypertarget{namespacelibNumerics}{}\section{lib\+Numerics Namespace Reference}
+\label{namespacelibNumerics}\index{lib\+Numerics@{lib\+Numerics}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlibNumerics_1_1matrix}{matrix}
+\begin{DoxyCompactList}\small\item\em Matrix class. \end{DoxyCompactList}\item 
+class \hyperlink{classlibNumerics_1_1SVD}{S\+V\+D}
+\begin{DoxyCompactList}\small\item\em Singular Value Decomposition\+: U diag(\+D) V, U in O(m), V in O(n), D$>$=0. \end{DoxyCompactList}\item 
+class \hyperlink{classlibNumerics_1_1SVDElement}{S\+V\+D\+Element}
+\begin{DoxyCompactList}\small\item\em Functor to sort elements of a vector by decreasing value. \end{DoxyCompactList}\item 
+class \hyperlink{classlibNumerics_1_1vector}{vector}
+\begin{DoxyCompactList}\small\item\em Column vector class (template) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{namespacelibNumerics_a9a38d6b5bcfe38eda9fe9044f9503035}{cat} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibNumerics_ae875caf670c26d44ce34bfe5f555cb90}{swap} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&, \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&)
+\item 
+\hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} \hyperlink{namespacelibNumerics_aa930962fb0da51a6fc4578da5e3da2f1}{A\+B\+S} (\hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} x)
+\item 
+bool \hyperlink{namespacelibNumerics_a83b960893bb9aaf17a880a15b4a02e61}{solve\+L\+U} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \&A, const \hyperlink{classlibNumerics_1_1vector}{vector}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \&B, \hyperlink{classlibNumerics_1_1vector}{vector}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \&X)
+\begin{DoxyCompactList}\small\item\em Resolution by L\+U decomposition with pivot. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacelibNumerics_ac993a04d2694e745c733feea22111a48}{solve\+L\+U} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ A, \hyperlink{classlibNumerics_1_1vector}{vector}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \&X)
+\begin{DoxyCompactList}\small\item\em Replace X by A$^\wedge$\{-\/1\}X, by L\+U solver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{}\index{lib\+Numerics@{lib\+Numerics}!flnum@{flnum}}
+\index{flnum@{flnum}!lib\+Numerics@{lib\+Numerics}}
+\subsubsection[{flnum}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf lib\+Numerics\+::flnum}}\label{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacelibNumerics_aa930962fb0da51a6fc4578da5e3da2f1}{}\index{lib\+Numerics@{lib\+Numerics}!A\+B\+S@{A\+B\+S}}
+\index{A\+B\+S@{A\+B\+S}!lib\+Numerics@{lib\+Numerics}}
+\subsubsection[{A\+B\+S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flnum} lib\+Numerics\+::\+A\+B\+S (
+\begin{DoxyParamCaption}
+\item[{{\bf flnum}}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibNumerics_aa930962fb0da51a6fc4578da5e3da2f1}
+\hypertarget{namespacelibNumerics_a9a38d6b5bcfe38eda9fe9044f9503035}{}\index{lib\+Numerics@{lib\+Numerics}!cat@{cat}}
+\index{cat@{cat}!lib\+Numerics@{lib\+Numerics}}
+\subsubsection[{cat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf matrix}$<$ T $>$ lib\+Numerics\+::cat (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{, }
+\item[{const {\bf matrix}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)}\label{namespacelibNumerics_a9a38d6b5bcfe38eda9fe9044f9503035}
+\hypertarget{namespacelibNumerics_a83b960893bb9aaf17a880a15b4a02e61}{}\index{lib\+Numerics@{lib\+Numerics}!solve\+L\+U@{solve\+L\+U}}
+\index{solve\+L\+U@{solve\+L\+U}!lib\+Numerics@{lib\+Numerics}}
+\subsubsection[{solve\+L\+U}]{\setlength{\rightskip}{0pt plus 5cm}bool lib\+Numerics\+::solve\+L\+U (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ {\bf flnum} $>$ \&}]{A, }
+\item[{const {\bf vector}$<$ {\bf flnum} $>$ \&}]{B, }
+\item[{{\bf vector}$<$ {\bf flnum} $>$ \&}]{X}
+\end{DoxyParamCaption}
+)}\label{namespacelibNumerics_a83b960893bb9aaf17a880a15b4a02e61}
+
+
+Resolution by L\+U decomposition with pivot. 
+
+Solve system A\+X = B. \hypertarget{namespacelibNumerics_ac993a04d2694e745c733feea22111a48}{}\index{lib\+Numerics@{lib\+Numerics}!solve\+L\+U@{solve\+L\+U}}
+\index{solve\+L\+U@{solve\+L\+U}!lib\+Numerics@{lib\+Numerics}}
+\subsubsection[{solve\+L\+U}]{\setlength{\rightskip}{0pt plus 5cm}bool lib\+Numerics\+::solve\+L\+U (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ {\bf flnum} $>$}]{A, }
+\item[{{\bf vector}$<$ {\bf flnum} $>$ \&}]{X}
+\end{DoxyParamCaption}
+)}\label{namespacelibNumerics_ac993a04d2694e745c733feea22111a48}
+
+
+Replace X by A$^\wedge$\{-\/1\}X, by L\+U solver. 
+
+\hypertarget{namespacelibNumerics_ae875caf670c26d44ce34bfe5f555cb90}{}\index{lib\+Numerics@{lib\+Numerics}!swap@{swap}}
+\index{swap@{swap}!lib\+Numerics@{lib\+Numerics}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf void} lib\+Numerics\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ T $>$ \&}]{, }
+\item[{{\bf matrix}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)}\label{namespacelibNumerics_ae875caf670c26d44ce34bfe5f555cb90}

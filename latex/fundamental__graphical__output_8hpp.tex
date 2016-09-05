@@ -1,0 +1,72 @@
+\hypertarget{fundamental__graphical__output_8hpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/fundamental\+\_\+graphical\+\_\+output.hpp File Reference}
+\label{fundamental__graphical__output_8hpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/fundamental\+\_\+graphical\+\_\+output.\+hpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/fundamental\+\_\+graphical\+\_\+output.\+hpp}}
+
+
+Graphical output to show fundamental matrix estimation.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}lib\+Orsa/match.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+Orsa/lib\+Numerics/matrix.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+Image/image.\+hpp\char`\"{}}\\*
+Include dependency graph for fundamental\+\_\+graphical\+\_\+output.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{fundamental__graphical__output_8hpp_a00226bf9c72ade78aedae187bf8c6377}{fundamental\+\_\+graphical\+\_\+output} (const \hyperlink{classImage}{Image}$<$ unsigned char $>$ \&image1, const \hyperlink{classImage}{Image}$<$ unsigned char $>$ \&image2, const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+all, std\+::vector$<$ int $>$ vec\+\_\+in, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ $\ast$F, const char $\ast$file\+In, const char $\ast$file\+Out, const char $\ast$file\+Epi)
+\begin{DoxyCompactList}\small\item\em Graphical output for estimated fundamental matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Graphical output to show fundamental matrix estimation. 
+
+\begin{DoxyAuthor}{Author}
+Lionel Moisan, Pascal Monasse, Pierre Moulon
+\end{DoxyAuthor}
+Copyright (c) 2016 Lionel Moisan, Pascal Monasse, Pierre Moulon All rights reserved.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+\subsection{Function Documentation}
+\hypertarget{fundamental__graphical__output_8hpp_a00226bf9c72ade78aedae187bf8c6377}{}\index{fundamental\+\_\+graphical\+\_\+output.\+hpp@{fundamental\+\_\+graphical\+\_\+output.\+hpp}!fundamental\+\_\+graphical\+\_\+output@{fundamental\+\_\+graphical\+\_\+output}}
+\index{fundamental\+\_\+graphical\+\_\+output@{fundamental\+\_\+graphical\+\_\+output}!fundamental\+\_\+graphical\+\_\+output.\+hpp@{fundamental\+\_\+graphical\+\_\+output.\+hpp}}
+\subsubsection[{fundamental\+\_\+graphical\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} fundamental\+\_\+graphical\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ unsigned char $>$ \&}]{image1, }
+\item[{const {\bf Image}$<$ unsigned char $>$ \&}]{image2, }
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+all, }
+\item[{std\+::vector$<$ int $>$}]{vec\+\_\+in, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ $\ast$}]{F, }
+\item[{const char $\ast$}]{file\+In, }
+\item[{const char $\ast$}]{file\+Out, }
+\item[{const char $\ast$}]{file\+Epi}
+\end{DoxyParamCaption}
+)}\label{fundamental__graphical__output_8hpp_a00226bf9c72ade78aedae187bf8c6377}
+
+
+Graphical output for estimated fundamental matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image1,image2} & Left and right images. \\
+\hline
+{\em vec\+\_\+all} & All correspondences. \\
+\hline
+{\em vec\+\_\+in} & Index in vec\+\_\+all of inliers. \\
+\hline
+{\em F} & Estimated fundamental matrix (null pointer if failure). \\
+\hline
+{\em file\+In} & File name of inlier correspondences (can be null). \\
+\hline
+{\em file\+Out} & File name of outlier correspondences (can be null). \\
+\hline
+{\em file\+Epi} & File name of output epipolar lines (can be null). \\
+\hline
+\end{DoxyParams}

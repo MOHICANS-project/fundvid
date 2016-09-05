@@ -1,0 +1,83 @@
+\hypertarget{warping_8hpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/warping.hpp File Reference}
+\label{warping_8hpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/warping.\+hpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/warping.\+hpp}}
+
+
+Warp images.  
+
+
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/lib\+Image/sample.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/\+Rect.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/extras/lib\+Numerics/numerics.\+h\char`\"{}}\\*
+Include dependency graph for warping.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{warping_8hpp_a66efd28339d9dff5366a51a9fa29c278}{Transform\+H} (const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&H, double \&x, double \&y)
+\begin{DoxyCompactList}\small\item\em Apply homography transform. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Image $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{warping_8hpp_acd0bce3772a99693ac976327e302b138}{Warp} (const \hyperlink{classImage}{Image} \&im, \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ H, \hyperlink{classImage}{Image} \&out)
+\begin{DoxyCompactList}\small\item\em Warp an image given a homography. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Image $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{warping_8hpp_a392cea758d7723287f79fe94f88dcde9}{Warp} (const \hyperlink{classImage}{Image} \&im\+A, \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ H\+A, const \hyperlink{classImage}{Image} \&im\+B, \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ H\+B, \hyperlink{classImage}{Image} \&out)
+\begin{DoxyCompactList}\small\item\em Warp image\+A and image\+B with homographies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Warp images. 
+
+\begin{DoxyAuthor}{Author}
+Pascal Monasse, Pierre Moulon
+\end{DoxyAuthor}
+Copyright (c) 2011-\/2012 Pascal Monasse, Pierre Moulon All rights reserved.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+\subsection{Function Documentation}
+\hypertarget{warping_8hpp_a66efd28339d9dff5366a51a9fa29c278}{}\index{warping.\+hpp@{warping.\+hpp}!Transform\+H@{Transform\+H}}
+\index{Transform\+H@{Transform\+H}!warping.\+hpp@{warping.\+hpp}}
+\subsubsection[{Transform\+H}]{\setlength{\rightskip}{0pt plus 5cm}bool Transform\+H (
+\begin{DoxyParamCaption}
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{H, }
+\item[{double \&}]{x, }
+\item[{double \&}]{y}
+\end{DoxyParamCaption}
+)}\label{warping_8hpp_a66efd28339d9dff5366a51a9fa29c278}
+
+
+Apply homography transform. 
+
+Indicate if {\itshape H} is orientation preserving around the point. \hypertarget{warping_8hpp_acd0bce3772a99693ac976327e302b138}{}\index{warping.\+hpp@{warping.\+hpp}!Warp@{Warp}}
+\index{Warp@{Warp}!warping.\+hpp@{warping.\+hpp}}
+\subsubsection[{Warp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Image $>$ {\bf void} Warp (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image} \&}]{im, }
+\item[{{\bf lib\+Numerics\+::matrix}$<$ double $>$}]{H, }
+\item[{{\bf Image} \&}]{out}
+\end{DoxyParamCaption}
+)}\label{warping_8hpp_acd0bce3772a99693ac976327e302b138}
+
+
+Warp an image given a homography. 
+
+\hypertarget{warping_8hpp_a392cea758d7723287f79fe94f88dcde9}{}\index{warping.\+hpp@{warping.\+hpp}!Warp@{Warp}}
+\index{Warp@{Warp}!warping.\+hpp@{warping.\+hpp}}
+\subsubsection[{Warp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Image $>$ {\bf void} Warp (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image} \&}]{im\+A, }
+\item[{{\bf lib\+Numerics\+::matrix}$<$ double $>$}]{H\+A, }
+\item[{const {\bf Image} \&}]{im\+B, }
+\item[{{\bf lib\+Numerics\+::matrix}$<$ double $>$}]{H\+B, }
+\item[{{\bf Image} \&}]{out}
+\end{DoxyParamCaption}
+)}\label{warping_8hpp_a392cea758d7723287f79fe94f88dcde9}
+
+
+Warp image\+A and image\+B with homographies. 
+
+Use backward mapping with bilinear sampling. For destination pixel search which pixels from im\+A and im\+B contribute. Perform a mean blending in the overlap zone, transfered original value in the other part. 

@@ -1,0 +1,14 @@
+digraph "src/third_party/orsa-fundamental_1.0" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a211f40d56639f7267c2899a15d7a55d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="third_party" fontname="Helvetica", fontsize="10", URL="dir_a211f40d56639f7267c2899a15d7a55d.html"]
+  subgraph clusterdir_e4849f02626d60bad1434728acfd1445 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e4849f02626d60bad1434728acfd1445.html"];
+    dir_e4849f02626d60bad1434728acfd1445 [shape=plaintext label="orsa-fundamental_1.0"];
+    dir_072e6c25deaba41a37c860babdd036ab [shape=box label="Build" color="red" fillcolor="white" style="filled" URL="dir_072e6c25deaba41a37c860babdd036ab.html"];
+    dir_54d8ad77591c48ad1d4550f250508655 [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_54d8ad77591c48ad1d4550f250508655.html"];
+  }
+  }
+}

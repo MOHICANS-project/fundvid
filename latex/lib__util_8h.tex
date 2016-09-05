@@ -1,0 +1,215 @@
+\hypertarget{lib__util_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+util.h File Reference}
+\label{lib__util_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+util.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+util.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for lib\+\_\+util.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lib__util_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+P\+I}~3.\+14159265358979323846
+\item 
+\#define \hyperlink{lib__util_8h_a66b3ab30f1332874326ed93969e496e0}{M\+\_\+\+S\+Q\+R\+T2}~1.\+41421356237309504880
+\item 
+\#define \hyperlink{lib__util_8h_a92428112a5d24721208748774a4f23e6}{M\+\_\+\+L\+N2}~0.\+693147180559945309417
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename type $>$ }\\type $\ast$ \hyperlink{lib__util_8h_ace58ef38c3c0d4666826b217df1965e5}{xmalloc} (size\+\_\+t size)
+\item 
+{\footnotesize template$<$typename type $>$ }\\type $\ast$ \hyperlink{lib__util_8h_aea30f9ff8c77860d3e13223c44e7ae76}{xrealloc} (type $\ast$p, size\+\_\+t size)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$ \hyperlink{lib__util_8h_a9f6bc6d637434a7cca469629ed0594ed}{xrealloc} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$p, size\+\_\+t size)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__util_8h_ab894db7e9606b443c4adb0ac03625c76}{xfree} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$p)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__util_8h_aac4af98c0659128bd91aa86217f541d1}{fatal\+\_\+error} (const char $\ast$format,...)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__util_8h_adacf73b93ca6fa3985f2999f7d6b3b29}{debug} (const char $\ast$format,...)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__util_8h_a28f4c40f6361c163b029d3cd7d651e8b}{linear\+\_\+conversion} (const float $\ast$in, float $\ast$out, int l)
+\item 
+float \hyperlink{lib__util_8h_af42bde92a12dfb0379ae068a8b06fe24}{array\+\_\+max} (const float $\ast$array, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length})
+\item 
+float \hyperlink{lib__util_8h_a689748510537f669ebd568c4b63b21f3}{array\+\_\+min} (const float $\ast$array, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length})
+\item 
+float \hyperlink{lib__util_8h_aae58dc387bfb88401c9135b4eb49d916}{find\+\_\+array\+\_\+max} (const float $\ast$array, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length}, int $\ast$position)
+\item 
+float \hyperlink{lib__util_8h_a106f18f53d59b3a447f5cf93b080749c}{find\+\_\+array\+\_\+min} (const float $\ast$array, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length}, int $\ast$position)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__util_8h_a54ac5b39b45aef4b707f5afed3def8a6}{find\+\_\+array\+\_\+two\+\_\+min} (const float $\ast$array, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length}, float $\ast$min\+A, float $\ast$min\+B, int $\ast$i\+A, int $\ast$i\+B)
+\item 
+float \hyperlink{lib__util_8h_ad92530eb05c6e491516f291ff399ec5c}{array\+\_\+l2norm} (const float $\ast$array, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length})
+\item 
+float \hyperlink{lib__util_8h_a2752739ba6649dddcdc87cbf9c04f055}{euclidean\+\_\+distance\+\_\+square} (const float $\ast$a1, const float $\ast$a2, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length})
+\item 
+float \hyperlink{lib__util_8h_ac94e87c71bcadf42efc3a9931a7fa2b7}{euclidean\+\_\+distance} (const float $\ast$a1, const float $\ast$a2, int \hyperlink{png_8c_a209c8e470817686b5ca6730db67f8d67}{length})
+\item 
+float \hyperlink{lib__util_8h_a3eddd8cc73cc2dcb8e5df01558304070}{modulus} (float x, float y)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__util_8h_a14e29b2ad2b1bc3e001d9b8e768c822a}{apply\+\_\+rotation} (float x, float y, float $\ast$rx, float $\ast$ry, float alpha)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{lib__util_8h_a92428112a5d24721208748774a4f23e6}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!M\+\_\+\+L\+N2@{M\+\_\+\+L\+N2}}
+\index{M\+\_\+\+L\+N2@{M\+\_\+\+L\+N2}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{M\+\_\+\+L\+N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+L\+N2~0.\+693147180559945309417}\label{lib__util_8h_a92428112a5d24721208748774a4f23e6}
+\hypertarget{lib__util_8h_ae71449b1cc6e6250b91f539153a7a0d3}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!M\+\_\+\+P\+I@{M\+\_\+\+P\+I}}
+\index{M\+\_\+\+P\+I@{M\+\_\+\+P\+I}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{M\+\_\+\+P\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+P\+I~3.\+14159265358979323846}\label{lib__util_8h_ae71449b1cc6e6250b91f539153a7a0d3}
+\hypertarget{lib__util_8h_a66b3ab30f1332874326ed93969e496e0}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!M\+\_\+\+S\+Q\+R\+T2@{M\+\_\+\+S\+Q\+R\+T2}}
+\index{M\+\_\+\+S\+Q\+R\+T2@{M\+\_\+\+S\+Q\+R\+T2}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{M\+\_\+\+S\+Q\+R\+T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+S\+Q\+R\+T2~1.\+41421356237309504880}\label{lib__util_8h_a66b3ab30f1332874326ed93969e496e0}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__util_8h_a14e29b2ad2b1bc3e001d9b8e768c822a}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!apply\+\_\+rotation@{apply\+\_\+rotation}}
+\index{apply\+\_\+rotation@{apply\+\_\+rotation}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{apply\+\_\+rotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} apply\+\_\+rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float $\ast$}]{rx, }
+\item[{float $\ast$}]{ry, }
+\item[{float}]{alpha}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a14e29b2ad2b1bc3e001d9b8e768c822a}
+\hypertarget{lib__util_8h_ad92530eb05c6e491516f291ff399ec5c}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!array\+\_\+l2norm@{array\+\_\+l2norm}}
+\index{array\+\_\+l2norm@{array\+\_\+l2norm}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{array\+\_\+l2norm}]{\setlength{\rightskip}{0pt plus 5cm}float array\+\_\+l2norm (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_ad92530eb05c6e491516f291ff399ec5c}
+\hypertarget{lib__util_8h_af42bde92a12dfb0379ae068a8b06fe24}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!array\+\_\+max@{array\+\_\+max}}
+\index{array\+\_\+max@{array\+\_\+max}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{array\+\_\+max}]{\setlength{\rightskip}{0pt plus 5cm}float array\+\_\+max (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_af42bde92a12dfb0379ae068a8b06fe24}
+\hypertarget{lib__util_8h_a689748510537f669ebd568c4b63b21f3}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!array\+\_\+min@{array\+\_\+min}}
+\index{array\+\_\+min@{array\+\_\+min}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{array\+\_\+min}]{\setlength{\rightskip}{0pt plus 5cm}float array\+\_\+min (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a689748510537f669ebd568c4b63b21f3}
+\hypertarget{lib__util_8h_adacf73b93ca6fa3985f2999f7d6b3b29}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!debug@{debug}}
+\index{debug@{debug}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_adacf73b93ca6fa3985f2999f7d6b3b29}
+\hypertarget{lib__util_8h_ac94e87c71bcadf42efc3a9931a7fa2b7}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!euclidean\+\_\+distance@{euclidean\+\_\+distance}}
+\index{euclidean\+\_\+distance@{euclidean\+\_\+distance}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{euclidean\+\_\+distance}]{\setlength{\rightskip}{0pt plus 5cm}float euclidean\+\_\+distance (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{a1, }
+\item[{const float $\ast$}]{a2, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_ac94e87c71bcadf42efc3a9931a7fa2b7}
+\hypertarget{lib__util_8h_a2752739ba6649dddcdc87cbf9c04f055}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!euclidean\+\_\+distance\+\_\+square@{euclidean\+\_\+distance\+\_\+square}}
+\index{euclidean\+\_\+distance\+\_\+square@{euclidean\+\_\+distance\+\_\+square}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{euclidean\+\_\+distance\+\_\+square}]{\setlength{\rightskip}{0pt plus 5cm}float euclidean\+\_\+distance\+\_\+square (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{a1, }
+\item[{const float $\ast$}]{a2, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a2752739ba6649dddcdc87cbf9c04f055}
+\hypertarget{lib__util_8h_aac4af98c0659128bd91aa86217f541d1}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!fatal\+\_\+error@{fatal\+\_\+error}}
+\index{fatal\+\_\+error@{fatal\+\_\+error}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{fatal\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} fatal\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_aac4af98c0659128bd91aa86217f541d1}
+\hypertarget{lib__util_8h_aae58dc387bfb88401c9135b4eb49d916}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!find\+\_\+array\+\_\+max@{find\+\_\+array\+\_\+max}}
+\index{find\+\_\+array\+\_\+max@{find\+\_\+array\+\_\+max}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{find\+\_\+array\+\_\+max}]{\setlength{\rightskip}{0pt plus 5cm}float find\+\_\+array\+\_\+max (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{array, }
+\item[{int}]{length, }
+\item[{int $\ast$}]{position}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_aae58dc387bfb88401c9135b4eb49d916}
+\hypertarget{lib__util_8h_a106f18f53d59b3a447f5cf93b080749c}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!find\+\_\+array\+\_\+min@{find\+\_\+array\+\_\+min}}
+\index{find\+\_\+array\+\_\+min@{find\+\_\+array\+\_\+min}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{find\+\_\+array\+\_\+min}]{\setlength{\rightskip}{0pt plus 5cm}float find\+\_\+array\+\_\+min (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{array, }
+\item[{int}]{length, }
+\item[{int $\ast$}]{position}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a106f18f53d59b3a447f5cf93b080749c}
+\hypertarget{lib__util_8h_a54ac5b39b45aef4b707f5afed3def8a6}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!find\+\_\+array\+\_\+two\+\_\+min@{find\+\_\+array\+\_\+two\+\_\+min}}
+\index{find\+\_\+array\+\_\+two\+\_\+min@{find\+\_\+array\+\_\+two\+\_\+min}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{find\+\_\+array\+\_\+two\+\_\+min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} find\+\_\+array\+\_\+two\+\_\+min (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{array, }
+\item[{int}]{length, }
+\item[{float $\ast$}]{min\+A, }
+\item[{float $\ast$}]{min\+B, }
+\item[{int $\ast$}]{i\+A, }
+\item[{int $\ast$}]{i\+B}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a54ac5b39b45aef4b707f5afed3def8a6}
+\hypertarget{lib__util_8h_a28f4c40f6361c163b029d3cd7d651e8b}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!linear\+\_\+conversion@{linear\+\_\+conversion}}
+\index{linear\+\_\+conversion@{linear\+\_\+conversion}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{linear\+\_\+conversion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} linear\+\_\+conversion (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{in, }
+\item[{float $\ast$}]{out, }
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a28f4c40f6361c163b029d3cd7d651e8b}
+\hypertarget{lib__util_8h_a3eddd8cc73cc2dcb8e5df01558304070}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!modulus@{modulus}}
+\index{modulus@{modulus}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{modulus}]{\setlength{\rightskip}{0pt plus 5cm}float modulus (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a3eddd8cc73cc2dcb8e5df01558304070}
+\hypertarget{lib__util_8h_ab894db7e9606b443c4adb0ac03625c76}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!xfree@{xfree}}
+\index{xfree@{xfree}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{xfree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} xfree (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_ab894db7e9606b443c4adb0ac03625c76}
+\hypertarget{lib__util_8h_ace58ef38c3c0d4666826b217df1965e5}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!xmalloc@{xmalloc}}
+\index{xmalloc@{xmalloc}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{xmalloc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type $>$ {\bf void} $\ast$ xmalloc (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_ace58ef38c3c0d4666826b217df1965e5}
+\hypertarget{lib__util_8h_aea30f9ff8c77860d3e13223c44e7ae76}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!xrealloc@{xrealloc}}
+\index{xrealloc@{xrealloc}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{xrealloc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type $>$ type$\ast$ xrealloc (
+\begin{DoxyParamCaption}
+\item[{type $\ast$}]{p, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_aea30f9ff8c77860d3e13223c44e7ae76}
+\hypertarget{lib__util_8h_a9f6bc6d637434a7cca469629ed0594ed}{}\index{lib\+\_\+util.\+h@{lib\+\_\+util.\+h}!xrealloc@{xrealloc}}
+\index{xrealloc@{xrealloc}!lib\+\_\+util.\+h@{lib\+\_\+util.\+h}}
+\subsubsection[{xrealloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void}$\ast$ xrealloc (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{p, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\label{lib__util_8h_a9f6bc6d637434a7cca469629ed0594ed}

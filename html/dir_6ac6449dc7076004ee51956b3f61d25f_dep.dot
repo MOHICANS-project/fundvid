@@ -1,0 +1,13 @@
+digraph "src/third_party/orsa-fundamental_1.0/Build/CMakeFiles" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_072e6c25deaba41a37c860babdd036ab {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Build" fontname="Helvetica", fontsize="10", URL="dir_072e6c25deaba41a37c860babdd036ab.html"]
+  subgraph clusterdir_6ac6449dc7076004ee51956b3f61d25f {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6ac6449dc7076004ee51956b3f61d25f.html"];
+    dir_6ac6449dc7076004ee51956b3f61d25f [shape=plaintext label="CMakeFiles"];
+    dir_27185d384f4b1cd642fc95e37ee1478b [shape=box label="3.0.2" color="red" fillcolor="white" style="filled" URL="dir_27185d384f4b1cd642fc95e37ee1478b.html"];
+  }
+  }
+}

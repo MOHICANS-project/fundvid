@@ -1,0 +1,107 @@
+\hypertarget{jctrans_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jctrans.c File Reference}
+\label{jctrans_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jctrans.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jctrans.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jctrans.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__coef__controller}{my\+\_\+coef\+\_\+controller}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jctrans_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__coef__controller}{my\+\_\+coef\+\_\+controller} $\ast$ \hyperlink{jctrans_8c_a5d04f73726165ed3ba748a4065eec2e8}{my\+\_\+coef\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jctrans_8c_a346bddc5d045874c344a40893d449c44}{L\+O\+C\+A\+L} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void})
+\item 
+\hyperlink{jctrans_8c_a8e350f6a1833cf2fb191652e7d31bd35}{jpeg\+\_\+copy\+\_\+critical\+\_\+parameters} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} srcinfo, \hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} \hyperlink{transupp_8h_a6d4c7cd4ab2a414a321275ba88bbf5fe}{dstinfo})
+\item 
+\hyperlink{jctrans_8c_ae87fac6bd08f4b513d2f7f5629586733}{transencode\+\_\+master\+\_\+selection} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a994f4cba141d82ded90af38e51223f0b}{jvirt\+\_\+barray\+\_\+ptr} $\ast$\hyperlink{jpeglib_8h_ae1a27a4c6e509a29fd9c75cc5cd8002c}{coef\+\_\+arrays})
+\item 
+\hyperlink{jctrans_8c_a36af8147c149ad95035fc08ff3012ef5}{start\+\_\+i\+M\+C\+U\+\_\+row} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jctrans_8c_a20406feb4d5cefd170401ea1987f0e83}{start\+\_\+pass\+\_\+coef} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpegint_8h_a1f0803342372ac62b6903c399399c874}{J\+\_\+\+B\+U\+F\+\_\+\+M\+O\+D\+E} pass\+\_\+mode)
+\item 
+\hyperlink{jctrans_8c_afeb2983cdfa6bbf70ad8e8c2242a6dd1}{compress\+\_\+output} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf)
+\item 
+\hyperlink{jctrans_8c_a2d0f2e62798045ee758674e9c73b64ff}{transencode\+\_\+coef\+\_\+controller} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a994f4cba141d82ded90af38e51223f0b}{jvirt\+\_\+barray\+\_\+ptr} $\ast$\hyperlink{jpeglib_8h_ae1a27a4c6e509a29fd9c75cc5cd8002c}{coef\+\_\+arrays})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jctrans_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jctrans.\+c@{jctrans.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jctrans_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jctrans_8c_a5d04f73726165ed3ba748a4065eec2e8}{}\index{jctrans.\+c@{jctrans.\+c}!my\+\_\+coef\+\_\+ptr@{my\+\_\+coef\+\_\+ptr}}
+\index{my\+\_\+coef\+\_\+ptr@{my\+\_\+coef\+\_\+ptr}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{my\+\_\+coef\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+coef\+\_\+controller}$\ast$ {\bf my\+\_\+coef\+\_\+ptr}}\label{jctrans_8c_a5d04f73726165ed3ba748a4065eec2e8}
+
+
+\subsection{Function Documentation}
+\hypertarget{jctrans_8c_afeb2983cdfa6bbf70ad8e8c2242a6dd1}{}\index{jctrans.\+c@{jctrans.\+c}!compress\+\_\+output@{compress\+\_\+output}}
+\index{compress\+\_\+output@{compress\+\_\+output}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{compress\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}compress\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf}
+\end{DoxyParamCaption}
+)}\label{jctrans_8c_afeb2983cdfa6bbf70ad8e8c2242a6dd1}
+\hypertarget{jctrans_8c_a8e350f6a1833cf2fb191652e7d31bd35}{}\index{jctrans.\+c@{jctrans.\+c}!jpeg\+\_\+copy\+\_\+critical\+\_\+parameters@{jpeg\+\_\+copy\+\_\+critical\+\_\+parameters}}
+\index{jpeg\+\_\+copy\+\_\+critical\+\_\+parameters@{jpeg\+\_\+copy\+\_\+critical\+\_\+parameters}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{jpeg\+\_\+copy\+\_\+critical\+\_\+parameters}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+copy\+\_\+critical\+\_\+parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{srcinfo, }
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{dstinfo}
+\end{DoxyParamCaption}
+)}\label{jctrans_8c_a8e350f6a1833cf2fb191652e7d31bd35}
+\hypertarget{jctrans_8c_a346bddc5d045874c344a40893d449c44}{}\index{jctrans.\+c@{jctrans.\+c}!L\+O\+C\+A\+L@{L\+O\+C\+A\+L}}
+\index{L\+O\+C\+A\+L@{L\+O\+C\+A\+L}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{L\+O\+C\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+C\+A\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{jctrans_8c_a346bddc5d045874c344a40893d449c44}
+\hypertarget{jctrans_8c_a36af8147c149ad95035fc08ff3012ef5}{}\index{jctrans.\+c@{jctrans.\+c}!start\+\_\+i\+M\+C\+U\+\_\+row@{start\+\_\+i\+M\+C\+U\+\_\+row}}
+\index{start\+\_\+i\+M\+C\+U\+\_\+row@{start\+\_\+i\+M\+C\+U\+\_\+row}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{start\+\_\+i\+M\+C\+U\+\_\+row}]{\setlength{\rightskip}{0pt plus 5cm}start\+\_\+i\+M\+C\+U\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jctrans_8c_a36af8147c149ad95035fc08ff3012ef5}
+\hypertarget{jctrans_8c_a20406feb4d5cefd170401ea1987f0e83}{}\index{jctrans.\+c@{jctrans.\+c}!start\+\_\+pass\+\_\+coef@{start\+\_\+pass\+\_\+coef}}
+\index{start\+\_\+pass\+\_\+coef@{start\+\_\+pass\+\_\+coef}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{start\+\_\+pass\+\_\+coef}]{\setlength{\rightskip}{0pt plus 5cm}start\+\_\+pass\+\_\+coef (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+\_\+\+B\+U\+F\+\_\+\+M\+O\+D\+E}}]{pass\+\_\+mode}
+\end{DoxyParamCaption}
+)}\label{jctrans_8c_a20406feb4d5cefd170401ea1987f0e83}
+\hypertarget{jctrans_8c_a2d0f2e62798045ee758674e9c73b64ff}{}\index{jctrans.\+c@{jctrans.\+c}!transencode\+\_\+coef\+\_\+controller@{transencode\+\_\+coef\+\_\+controller}}
+\index{transencode\+\_\+coef\+\_\+controller@{transencode\+\_\+coef\+\_\+controller}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{transencode\+\_\+coef\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}transencode\+\_\+coef\+\_\+controller (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf jvirt\+\_\+barray\+\_\+ptr} $\ast$}]{coef\+\_\+arrays}
+\end{DoxyParamCaption}
+)}\label{jctrans_8c_a2d0f2e62798045ee758674e9c73b64ff}
+\hypertarget{jctrans_8c_ae87fac6bd08f4b513d2f7f5629586733}{}\index{jctrans.\+c@{jctrans.\+c}!transencode\+\_\+master\+\_\+selection@{transencode\+\_\+master\+\_\+selection}}
+\index{transencode\+\_\+master\+\_\+selection@{transencode\+\_\+master\+\_\+selection}!jctrans.\+c@{jctrans.\+c}}
+\subsubsection[{transencode\+\_\+master\+\_\+selection}]{\setlength{\rightskip}{0pt plus 5cm}transencode\+\_\+master\+\_\+selection (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf jvirt\+\_\+barray\+\_\+ptr} $\ast$}]{coef\+\_\+arrays}
+\end{DoxyParamCaption}
+)}\label{jctrans_8c_ae87fac6bd08f4b513d2f7f5629586733}

@@ -1,0 +1,46 @@
+digraph "jpeg_decompress_struct"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jpeg_decompress_struct",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cquantize" ];
+  Node2 [label="jpeg_color_quantizer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__color__quantizer.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quant_tbl_ptrs" ];
+  Node3 [label="JQUANT_TBL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structJQUANT__TBL.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ac_huff_tbl_ptrs\ndc_huff_tbl_ptrs" ];
+  Node4 [label="JHUFF_TBL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structJHUFF__TBL.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" idct" ];
+  Node5 [label="jpeg_inverse_dct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__inverse__dct.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cur_comp_info\ncomp_info" ];
+  Node6 [label="jpeg_component_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__component__info.html"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quant_table" ];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" src" ];
+  Node7 [label="jpeg_source_mgr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__source__mgr.html"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" coef" ];
+  Node8 [label="jpeg_d_coef_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__d__coef__controller.html"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" coef_arrays" ];
+  Node9 [label="jvirt_barray_control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjvirt__barray__control.html"];
+  Node9 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" b_s_info" ];
+  Node10 [label="backing_store_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbacking__store__struct.html"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" marker_list" ];
+  Node11 [label="jpeg_marker_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__marker__struct.html"];
+  Node11 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cconvert" ];
+  Node12 [label="jpeg_color_deconverter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__color__deconverter.html"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entropy" ];
+  Node13 [label="jpeg_entropy_decoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__entropy__decoder.html"];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" marker" ];
+  Node14 [label="jpeg_marker_reader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__marker__reader.html"];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" main" ];
+  Node15 [label="jpeg_d_main_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__d__main__controller.html"];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" upsample" ];
+  Node16 [label="jpeg_upsampler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__upsampler.html"];
+  Node17 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" inputctl" ];
+  Node17 [label="jpeg_input_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__input__controller.html"];
+  Node18 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" post" ];
+  Node18 [label="jpeg_d_post_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__d__post__controller.html"];
+  Node19 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" master" ];
+  Node19 [label="jpeg_decomp_master",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__decomp__master.html"];
+}

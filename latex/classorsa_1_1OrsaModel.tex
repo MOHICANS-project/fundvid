@@ -1,0 +1,362 @@
+\hypertarget{classorsa_1_1OrsaModel}{}\section{orsa\+:\+:Orsa\+Model Class Reference}
+\label{classorsa_1_1OrsaModel}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+
+
+Generic class for model estimation with O\+R\+S\+A algorithm.  
+
+
+
+
+{\ttfamily \#include $<$orsa\+\_\+model.\+hpp$>$}
+
+
+
+Inheritance diagram for orsa\+:\+:Orsa\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for orsa\+:\+:Orsa\+Model\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classlibNumerics_1_1vector}{lib\+Numerics\+::vector}$<$ double $>$ \hyperlink{classorsa_1_1OrsaModel_a3e690ba72d88880cc9d7074350c09104}{Vec}
+\item 
+typedef \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat}
+\item 
+typedef \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \hyperlink{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{Model}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorsa_1_1OrsaModel_aa105bf621d52f6cd027f8cf32d1c9870}{Orsa\+Model} (const \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \&x1, int w1, int h1, const \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \&x2, int w2, int h2)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classorsa_1_1OrsaModel_af4acb7fcac10b31b641727cdb4a09d25}{$\sim$\+Orsa\+Model} ()
+\item 
+virtual int \hyperlink{classorsa_1_1OrsaModel_a3d2e0a09f6ddc02c3b9ee85a1ceb1ee7}{Size\+Sample} () const =0
+\begin{DoxyCompactList}\small\item\em Minimum number of points required to compute a model. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classorsa_1_1OrsaModel_a4567e2e9a7d39e2bcbbc9af9e9d9ddc7}{Nb\+Models} () const =0
+\begin{DoxyCompactList}\small\item\em Maximum number of models possibly computed from a sample. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classorsa_1_1OrsaModel_abf92fafced441e3458792629e0054b37}{Dist\+To\+Point} () const =0
+\begin{DoxyCompactList}\small\item\em Indicate if distance used to distinguish inlier/outlier is to a point (true) or a line (false). \end{DoxyCompactList}\item 
+virtual double \hyperlink{classorsa_1_1OrsaModel_a397468af3d73039fadc513d9db343104}{Error} (const \hyperlink{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{Model} \&model, int index, int $\ast$side=0) const =0
+\begin{DoxyCompactList}\small\item\em Computes the square error associated to a correspondence with model. \end{DoxyCompactList}\item 
+virtual \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classorsa_1_1OrsaModel_ab08fb727f3802b4b3531e2094069b4df}{Fit} (const std\+::vector$<$ int $>$ \&indices, std\+::vector$<$ \hyperlink{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{Model} $>$ $\ast$models) const =0
+\begin{DoxyCompactList}\small\item\em Computes the models associated to indexed sample. \end{DoxyCompactList}\item 
+virtual \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classorsa_1_1OrsaModel_aeadc8d2c929a7740e84ce17396c1cc28}{Unnormalize} (\hyperlink{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{Model} $\ast$model) const =0
+\begin{DoxyCompactList}\small\item\em Unnormalize a given model. \end{DoxyCompactList}\item 
+double \hyperlink{classorsa_1_1OrsaModel_a8494a42c403f1f1731cae066240c473e}{orsa} (std\+::vector$<$ int $>$ \&vec\+\_\+inliers, size\+\_\+t n\+Iter=1000, double $\ast$precision=N\+U\+L\+L, \hyperlink{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{Model} $\ast$model=N\+U\+L\+L, bool b\+Verbose=false) const 
+\begin{DoxyCompactList}\small\item\em Generic implementation of O\+R\+S\+A (Optimized Random Sampling Algorithm). \end{DoxyCompactList}\item 
+bool \hyperlink{classorsa_1_1OrsaModel_a5250601a093bdd964cebf0617c2e0fbc}{Compute\+Model} (const std\+::vector$<$ int $>$ \&indices, \hyperlink{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{Model} $\ast$model) const 
+\begin{DoxyCompactList}\small\item\em Compute model from points. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classorsa_1_1OrsaModel_a7ff87f259175fe5aff2ba961dc3f7b5f}{set\+Refine\+Until\+Convergence} (bool value)
+\begin{DoxyCompactList}\small\item\em Enable the model refinement until convergence. \end{DoxyCompactList}\item 
+bool \hyperlink{classorsa_1_1OrsaModel_a95dd90753a127eac25c2977393ad9149}{get\+Refine\+Until\+Convergence} () const 
+\begin{DoxyCompactList}\small\item\em Return if convergence check is on or off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \hyperlink{classorsa_1_1OrsaModel_ab910d0735b9df04f62e76f2ba9a5f422}{x1\+\_\+}
+\begin{DoxyCompactList}\small\item\em Points in image 1. \end{DoxyCompactList}\item 
+\hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \hyperlink{classorsa_1_1OrsaModel_afbc2fa3dd7b4403dbc8779491c2a0de2}{x2\+\_\+}
+\begin{DoxyCompactList}\small\item\em Points in image 2. \end{DoxyCompactList}\item 
+\hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \hyperlink{classorsa_1_1OrsaModel_a2a743045785ff7a0bbb96f511d9796df}{N1\+\_\+}
+\begin{DoxyCompactList}\small\item\em Normalization for x1\+\_\+. \end{DoxyCompactList}\item 
+\hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \hyperlink{classorsa_1_1OrsaModel_aa94cb453d88889164c75bb73edee6ebe}{N2\+\_\+}
+\begin{DoxyCompactList}\small\item\em Normalization for x2\+\_\+. \end{DoxyCompactList}\item 
+double \hyperlink{classorsa_1_1OrsaModel_a5ebaac101d5e4b50fa3be78af2a5ee5d}{logalpha0\+\_\+} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Log probability of error$<$=1, set by subclass. \end{DoxyCompactList}\item 
+bool \hyperlink{classorsa_1_1OrsaModel_a360ddef39b62baaf9bd225765619c8fe}{b\+Convergence}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic class for model estimation with O\+R\+S\+A algorithm. 
+
+Subclasses must follow this interface\+:
+\begin{DoxyEnumerate}
+\item \hyperlink{classorsa_1_1OrsaModel_a3d2e0a09f6ddc02c3b9ee85a1ceb1ee7}{Size\+Sample()} Number correspondences necessary to compute a model.
+\item \hyperlink{classorsa_1_1OrsaModel_a4567e2e9a7d39e2bcbbc9af9e9d9ddc7}{Nb\+Models()} Number models from sample of \hyperlink{classorsa_1_1OrsaModel_a3d2e0a09f6ddc02c3b9ee85a1ceb1ee7}{Size\+Sample()} correspondences.
+\item \hyperlink{classorsa_1_1OrsaModel_abf92fafced441e3458792629e0054b37}{Dist\+To\+Point()} Residual is distance to a point or to a line?
+\item Fit(const vector$<$size\+\_\+t$>$ \&indices, vector$<$\+Model$>$ $\ast$models) Compute model(s) compatible with indexed correspondences.
+\item Error(const Model \&model, size\+\_\+t index) Reprojection square error for indexed correspondence.
+\item Unnormalize(\+Model $\ast$model) Unnormalize a given model (from normalized to image space). 
+\end{DoxyEnumerate}
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Mat@{Mat}}
+\index{Mat@{Mat}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Mat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf lib\+Numerics\+::matrix}$<$double$>$ {\bf orsa\+::\+Orsa\+Model\+::\+Mat}}\label{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}
+\hypertarget{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Model@{Model}}
+\index{Model@{Model}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Model}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Mat} {\bf orsa\+::\+Orsa\+Model\+::\+Model}}\label{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}
+\hypertarget{classorsa_1_1OrsaModel_a3e690ba72d88880cc9d7074350c09104}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Vec@{Vec}}
+\index{Vec@{Vec}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Vec}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf lib\+Numerics\+::vector}$<$double$>$ {\bf orsa\+::\+Orsa\+Model\+::\+Vec}}\label{classorsa_1_1OrsaModel_a3e690ba72d88880cc9d7074350c09104}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorsa_1_1OrsaModel_aa105bf621d52f6cd027f8cf32d1c9870}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Orsa\+Model@{Orsa\+Model}}
+\index{Orsa\+Model@{Orsa\+Model}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Orsa\+Model}]{\setlength{\rightskip}{0pt plus 5cm}orsa\+::\+Orsa\+Model\+::\+Orsa\+Model (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{x1, }
+\item[{int}]{w1, }
+\item[{int}]{h1, }
+\item[{const {\bf Mat} \&}]{x2, }
+\item[{int}]{w2, }
+\item[{int}]{h2}
+\end{DoxyParamCaption}
+)}\label{classorsa_1_1OrsaModel_aa105bf621d52f6cd027f8cf32d1c9870}
+
+
+Constructor. 
+
+Points are normalized according to image dimensions.
+
+Subclass must initialize logalpha0\+\_\+ and take account of normalization in doing that. Matrices {\itshape x1} and {\itshape x2} are 2xn, representing Cartesian coordinates. \hypertarget{classorsa_1_1OrsaModel_af4acb7fcac10b31b641727cdb4a09d25}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!````~Orsa\+Model@{$\sim$\+Orsa\+Model}}
+\index{````~Orsa\+Model@{$\sim$\+Orsa\+Model}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{$\sim$\+Orsa\+Model}]{\setlength{\rightskip}{0pt plus 5cm}virtual orsa\+::\+Orsa\+Model\+::$\sim$\+Orsa\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classorsa_1_1OrsaModel_af4acb7fcac10b31b641727cdb4a09d25}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorsa_1_1OrsaModel_a5250601a093bdd964cebf0617c2e0fbc}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Compute\+Model@{Compute\+Model}}
+\index{Compute\+Model@{Compute\+Model}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Compute\+Model}]{\setlength{\rightskip}{0pt plus 5cm}bool orsa\+::\+Orsa\+Model\+::\+Compute\+Model (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{indices, }
+\item[{{\bf Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+) const}\label{classorsa_1_1OrsaModel_a5250601a093bdd964cebf0617c2e0fbc}
+
+
+Compute model from points. 
+
+If multiple solutions are possible, return false. \hypertarget{classorsa_1_1OrsaModel_abf92fafced441e3458792629e0054b37}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Dist\+To\+Point@{Dist\+To\+Point}}
+\index{Dist\+To\+Point@{Dist\+To\+Point}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Dist\+To\+Point}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool orsa\+::\+Orsa\+Model\+::\+Dist\+To\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classorsa_1_1OrsaModel_abf92fafced441e3458792629e0054b37}
+
+
+Indicate if distance used to distinguish inlier/outlier is to a point (true) or a line (false). 
+
+
+\begin{DoxyItemize}
+\item homography -\/$>$ true
+\item fundamental -\/$>$ false 
+\end{DoxyItemize}
+
+Implemented in \hyperlink{classorsa_1_1FundamentalModel_ab1a29cf875eb1a5b37d55a7264aeee25}{orsa\+::\+Fundamental\+Model}.
+
+\hypertarget{classorsa_1_1OrsaModel_a397468af3d73039fadc513d9db343104}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Error@{Error}}
+\index{Error@{Error}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}virtual double orsa\+::\+Orsa\+Model\+::\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model} \&}]{model, }
+\item[{int}]{index, }
+\item[{int $\ast$}]{side = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classorsa_1_1OrsaModel_a397468af3d73039fadc513d9db343104}
+
+
+Computes the square error associated to a correspondence with model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The considered model to evaluate. \\
+\hline
+{\em index} & The point index stored in the Kernel. \\
+\hline
+{\em side} & In which image is the error measured? \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classorsa_1_1FundamentalModel_a8cf06b60d6120bc9ee543376ce5dc0d6}{orsa\+::\+Fundamental\+Model}.
+
+\hypertarget{classorsa_1_1OrsaModel_ab08fb727f3802b4b3531e2094069b4df}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Fit@{Fit}}
+\index{Fit@{Fit}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Fit}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} orsa\+::\+Orsa\+Model\+::\+Fit (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{indices, }
+\item[{std\+::vector$<$ {\bf Model} $>$ $\ast$}]{models}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classorsa_1_1OrsaModel_ab08fb727f3802b4b3531e2094069b4df}
+
+
+Computes the models associated to indexed sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Indices of points to consider for model estimation. \\
+\hline
+{\em models} & Estimated model(s) from sampled point. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classorsa_1_1FundamentalModel_a283d79e9cf1f43f334ca04b586329752}{orsa\+::\+Fundamental\+Model}.
+
+\hypertarget{classorsa_1_1OrsaModel_a95dd90753a127eac25c2977393ad9149}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!get\+Refine\+Until\+Convergence@{get\+Refine\+Until\+Convergence}}
+\index{get\+Refine\+Until\+Convergence@{get\+Refine\+Until\+Convergence}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{get\+Refine\+Until\+Convergence}]{\setlength{\rightskip}{0pt plus 5cm}bool orsa\+::\+Orsa\+Model\+::get\+Refine\+Until\+Convergence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classorsa_1_1OrsaModel_a95dd90753a127eac25c2977393ad9149}
+
+
+Return if convergence check is on or off. 
+
+Iterative refinement N\+F\+A/\+R\+M\+S\+E. \hypertarget{classorsa_1_1OrsaModel_a4567e2e9a7d39e2bcbbc9af9e9d9ddc7}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Nb\+Models@{Nb\+Models}}
+\index{Nb\+Models@{Nb\+Models}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Nb\+Models}]{\setlength{\rightskip}{0pt plus 5cm}virtual int orsa\+::\+Orsa\+Model\+::\+Nb\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classorsa_1_1OrsaModel_a4567e2e9a7d39e2bcbbc9af9e9d9ddc7}
+
+
+Maximum number of models possibly computed from a sample. 
+
+
+\begin{DoxyItemize}
+\item homography -\/$>$ 1
+\item fundamental 7 pts -\/$>$ 3
+\item fundamental 8 pts -\/$>$ 1 
+\end{DoxyItemize}
+
+Implemented in \hyperlink{classorsa_1_1FundamentalModel_a16c8e7f3d6ce21236a2156e8daa4aedb}{orsa\+::\+Fundamental\+Model}.
+
+\hypertarget{classorsa_1_1OrsaModel_a8494a42c403f1f1731cae066240c473e}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!orsa@{orsa}}
+\index{orsa@{orsa}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{orsa}]{\setlength{\rightskip}{0pt plus 5cm}double orsa\+::\+Orsa\+Model\+::orsa (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$ \&}]{vec\+\_\+inliers, }
+\item[{size\+\_\+t}]{n\+Iter = {\ttfamily 1000}, }
+\item[{double $\ast$}]{precision = {\ttfamily NULL}, }
+\item[{{\bf Model} $\ast$}]{model = {\ttfamily NULL}, }
+\item[{bool}]{b\+Verbose = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\label{classorsa_1_1OrsaModel_a8494a42c403f1f1731cae066240c473e}
+
+
+Generic implementation of O\+R\+S\+A (Optimized Random Sampling Algorithm). 
+
+Generic implementation of \textquotesingle{}O\+R\+S\+A\textquotesingle{}\+: A Probabilistic Criterion to Detect Rigid Point Matches Between Two Images and Estimate the Fundamental Matrix.
+
+Bibtex \+: \{D\+B\+L\+P\+:journals/ijcv/\+Moisan\+S04, author = \{Lionel Moisan and B\{\textbackslash{}\textquotesingle{}e\}renger Stival\}, title = \{A Probabilistic Criterion to Detect Rigid Point Matches Between Two Images and Estimate the Fundamental Matrix\}, journal = \{International Journal of Computer Vision\}, volume = \{57\}, number = \{3\}, year = \{2004\}, pages = \{201-\/218\}, ee = \{\href{http://dx.doi.org/10.1023/B:VISI.0000013094.38752.54}{\tt http\+://dx.\+doi.\+org/10.\+1023/\+B\+:\+V\+I\+S\+I.\+0000013094.\+38752.\+54}\}, bibsource = \{D\+B\+L\+P, \href{http://dblp.uni-trier.de}{\tt http\+://dblp.\+uni-\/trier.\+de}\} \} \begin{DoxyVerb}ORSA is based on an a contrario criterion of
+inlier/outlier discrimination, is parameter free and relies on an optimized
+random sampling procedure. It returns the log of NFA and optionally
+the best estimated model.
+
+\param vec_inliers Output vector of inlier indices.
+\param nIter The number of iterations.
+\param precision (input/output) threshold for inlier discrimination.
+\param model The best computed model.
+\param bVerbose Display optimization statistics.  \end{DoxyVerb}
+ \hypertarget{classorsa_1_1OrsaModel_a7ff87f259175fe5aff2ba961dc3f7b5f}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!set\+Refine\+Until\+Convergence@{set\+Refine\+Until\+Convergence}}
+\index{set\+Refine\+Until\+Convergence@{set\+Refine\+Until\+Convergence}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{set\+Refine\+Until\+Convergence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Orsa\+Model\+::set\+Refine\+Until\+Convergence (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{classorsa_1_1OrsaModel_a7ff87f259175fe5aff2ba961dc3f7b5f}
+
+
+Enable the model refinement until convergence. 
+
+Toggle iterative refinement N\+F\+A/\+R\+M\+S\+E. \hypertarget{classorsa_1_1OrsaModel_a3d2e0a09f6ddc02c3b9ee85a1ceb1ee7}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Size\+Sample@{Size\+Sample}}
+\index{Size\+Sample@{Size\+Sample}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Size\+Sample}]{\setlength{\rightskip}{0pt plus 5cm}virtual int orsa\+::\+Orsa\+Model\+::\+Size\+Sample (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classorsa_1_1OrsaModel_a3d2e0a09f6ddc02c3b9ee85a1ceb1ee7}
+
+
+Minimum number of points required to compute a model. 
+
+
+\begin{DoxyItemize}
+\item homography -\/$>$ 4
+\item fundamental 7 pts -\/$>$ 7
+\item fundamental 8 pts -\/$>$ 8 
+\end{DoxyItemize}
+
+Implemented in \hyperlink{classorsa_1_1FundamentalModel_ac3870d76a0670fa5e07c1d72e39120ab}{orsa\+::\+Fundamental\+Model}.
+
+\hypertarget{classorsa_1_1OrsaModel_aeadc8d2c929a7740e84ce17396c1cc28}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!Unnormalize@{Unnormalize}}
+\index{Unnormalize@{Unnormalize}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{Unnormalize}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} orsa\+::\+Orsa\+Model\+::\+Unnormalize (
+\begin{DoxyParamCaption}
+\item[{{\bf Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classorsa_1_1OrsaModel_aeadc8d2c929a7740e84ce17396c1cc28}
+
+
+Unnormalize a given model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The model to unnormalize. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classorsa_1_1FundamentalModel_a1b305ca23105777011dcf987bdde6998}{orsa\+::\+Fundamental\+Model}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorsa_1_1OrsaModel_a360ddef39b62baaf9bd225765619c8fe}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!b\+Convergence@{b\+Convergence}}
+\index{b\+Convergence@{b\+Convergence}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{b\+Convergence}]{\setlength{\rightskip}{0pt plus 5cm}bool orsa\+::\+Orsa\+Model\+::b\+Convergence\hspace{0.3cm}{\ttfamily [protected]}}\label{classorsa_1_1OrsaModel_a360ddef39b62baaf9bd225765619c8fe}
+\hypertarget{classorsa_1_1OrsaModel_a5ebaac101d5e4b50fa3be78af2a5ee5d}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!logalpha0\+\_\+@{logalpha0\+\_\+}}
+\index{logalpha0\+\_\+@{logalpha0\+\_\+}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{logalpha0\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}double orsa\+::\+Orsa\+Model\+::logalpha0\+\_\+\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\label{classorsa_1_1OrsaModel_a5ebaac101d5e4b50fa3be78af2a5ee5d}
+
+
+Log probability of error$<$=1, set by subclass. 
+
+\hypertarget{classorsa_1_1OrsaModel_a2a743045785ff7a0bbb96f511d9796df}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!N1\+\_\+@{N1\+\_\+}}
+\index{N1\+\_\+@{N1\+\_\+}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{N1\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat} orsa\+::\+Orsa\+Model\+::\+N1\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{classorsa_1_1OrsaModel_a2a743045785ff7a0bbb96f511d9796df}
+
+
+Normalization for x1\+\_\+. 
+
+\hypertarget{classorsa_1_1OrsaModel_aa94cb453d88889164c75bb73edee6ebe}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!N2\+\_\+@{N2\+\_\+}}
+\index{N2\+\_\+@{N2\+\_\+}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{N2\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat} orsa\+::\+Orsa\+Model\+::\+N2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{classorsa_1_1OrsaModel_aa94cb453d88889164c75bb73edee6ebe}
+
+
+Normalization for x2\+\_\+. 
+
+\hypertarget{classorsa_1_1OrsaModel_ab910d0735b9df04f62e76f2ba9a5f422}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!x1\+\_\+@{x1\+\_\+}}
+\index{x1\+\_\+@{x1\+\_\+}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{x1\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat} orsa\+::\+Orsa\+Model\+::x1\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{classorsa_1_1OrsaModel_ab910d0735b9df04f62e76f2ba9a5f422}
+
+
+Points in image 1. 
+
+\hypertarget{classorsa_1_1OrsaModel_afbc2fa3dd7b4403dbc8779491c2a0de2}{}\index{orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}!x2\+\_\+@{x2\+\_\+}}
+\index{x2\+\_\+@{x2\+\_\+}!orsa\+::\+Orsa\+Model@{orsa\+::\+Orsa\+Model}}
+\subsubsection[{x2\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat} orsa\+::\+Orsa\+Model\+::x2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{classorsa_1_1OrsaModel_afbc2fa3dd7b4403dbc8779491c2a0de2}
+
+
+Points in image 2. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/\hyperlink{orsa__model_8hpp}{orsa\+\_\+model.\+hpp}\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/\hyperlink{orsa__model_8cpp}{orsa\+\_\+model.\+cpp}\end{DoxyCompactItemize}

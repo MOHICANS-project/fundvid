@@ -1,0 +1,76 @@
+\hypertarget{image__io_8hpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/lib\+Image/image\+\_\+io.hpp File Reference}
+\label{image__io_8hpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/lib\+Image/image\+\_\+io.\+hpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/lib\+Image/image\+\_\+io.\+hpp}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/demo/lib\+Image/image\+\_\+converter.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/demo/lib\+Image/image.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/demo/lib\+Image/pixel\+Types.\+hpp\char`\"{}}\\*
+Include dependency graph for image\+\_\+io.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelibs}{libs}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{namespacelibs_a90e2a46b7e02c762706ee6be80091c7a}{libs\+::uchar}
+\item 
+typedef \hyperlink{classImage}{Image}$<$ uchar $>$ \hyperlink{namespacelibs_a16118b81f5f0fc54cea32159a5530299}{libs\+::\+Byte\+Image}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752}{libs\+::\+Format} \{ \hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a3b3feebbfff158c46cb1a815c2a03d65}{libs\+::\+Pnm}, 
+\hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752ae5e58ecfb1afb18e0f4ad9fbbb15e7b3}{libs\+::\+Png}, 
+\hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a1c4e75b56624380b0bae2dfa46ade686}{libs\+::\+Jpg}, 
+\hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a457d8e698dc3640a6be5692ea8e920c8}{libs\+::\+Unknown}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Format \hyperlink{namespacelibs_ab1c6acb4edc87092a77e374b1f60437d}{libs\+::\+Get\+Format} (const char $\ast$c)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{namespacelibs_a07baf752525291b560e9036e9905ce10}{libs\+::\+Read\+Image} (const char $\ast$, \hyperlink{classImage}{Image}$<$ T $>$ $\ast$)
+\begin{DoxyCompactList}\small\item\em Try to load the given file in the image$<$\+T$>$ image. \end{DoxyCompactList}\item 
+int \hyperlink{namespacelibs_a7d9169f2d4916c38c0166586cf939755}{libs\+::\+Read\+Image} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\begin{DoxyCompactList}\small\item\em Open an png image with unsigned char as memory target. \end{DoxyCompactList}\item 
+int \hyperlink{namespacelibs_ad2f60d0c6ebf3a56362b55a21babf489}{libs\+::\+Read\+Png} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_ace195af6d81306f7dd5e1374e52fac2d}{libs\+::\+Read\+Png\+Stream} (F\+I\+L\+E $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{namespacelibs_a299078d410d26bb41a2e22c13f1ae40d}{libs\+::\+Write\+Image} (const char $\ast$, const \hyperlink{classImage}{Image}$<$ T $>$ \&)
+\item 
+int \hyperlink{namespacelibs_a87f8bfd0c303e88879ea628b4ac42a70}{libs\+::\+Write\+Image} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a385c16aed3480c8a1924d9441e9e50f7}{libs\+::\+Write\+Png} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_ae001b8e0512de6a8fca9f7d413721ee2}{libs\+::\+Write\+Png\+Stream} (F\+I\+L\+E $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{namespacelibs_a67277ddab96cb013be33e96ddb4b98ff}{libs\+::\+Write\+Jpg} (const char $\ast$, const \hyperlink{classImage}{Image}$<$ T $>$ \&, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality}=90)
+\item 
+int \hyperlink{namespacelibs_a7f21701cab9cc35c4375bf9c5ffc9908}{libs\+::\+Write\+Jpg} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality}=90)
+\item 
+int \hyperlink{namespacelibs_ae4e6e197dfd59e7a07bd7ec66fc11752}{libs\+::\+Write\+Jpg\+Stream} (F\+I\+L\+E $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality}=90)
+\item 
+int \hyperlink{namespacelibs_aee6a1b332895dd0ce936cfc1afb7824a}{libs\+::\+Read\+Jpg} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\begin{DoxyCompactList}\small\item\em Open a jpg image with unsigned char as memory target. \end{DoxyCompactList}\item 
+int \hyperlink{namespacelibs_a12fde982bc6282e9a3d6a0b59cc6a2b1}{libs\+::\+Read\+Jpg\+Stream} (F\+I\+L\+E $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_aa50771ff6835e3b84083ae83625384f0}{libs\+::\+Read\+Pnm} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a167607e1384098c7d08f1fe00413ecc7}{libs\+::\+Read\+Pnm\+Stream} (F\+I\+L\+E $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a6a898fc190fcae0d8e80b15643ac80bf}{libs\+::\+Write\+Pnm} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_ae8cc629b87a1c7373faf53b42cecbe55}{libs\+::\+Write\+Pnm\+Stream} (F\+I\+L\+E $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacelibs_abf82a4e75a7c51affb5ada5bbb6713c2}{libs\+::\+Read\+Image} (const char $\ast$path, \hyperlink{classImage}{Image}$<$ unsigned char $>$ $\ast$im)
+\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacelibs_afeeb48d777be860b4e04064a1080fa37}{libs\+::\+Read\+Image} (const char $\ast$path, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$im)
+\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacelibs_a3550905ac3a9a44683369036b8913bf2}{libs\+::\+Read\+Image} (const char $\ast$path, \hyperlink{classImage}{Image}$<$ \hyperlink{classRGBA}{R\+G\+B\+A} $>$ $\ast$im)
+\end{DoxyCompactItemize}

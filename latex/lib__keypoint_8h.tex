@@ -1,0 +1,192 @@
+\hypertarget{lib__keypoint_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+keypoint.h File Reference}
+\label{lib__keypoint_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+keypoint.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+keypoint.\+h}}
+
+
+data structures to store information relative to keypoint  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkeypoint}{keypoint}
+\begin{DoxyCompactList}\small\item\em keypoint structure, related to a keypoint \end{DoxyCompactList}\item 
+struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints}
+\begin{DoxyCompactList}\small\item\em list of pointers to keypoint structures (variable size list) \char`\"{}vector\char`\"{} of keypoint struct (list of variable size) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkeypoint}{keypoint} $\ast$ \hyperlink{lib__keypoint_8h_abfdd3e53164d009f7b41cbdd7f97cbf0}{sift\+\_\+malloc\+\_\+keypoint} (int n\+\_\+ori, int n\+\_\+hist, int n\+\_\+bins)
+\item 
+struct \hyperlink{structkeypoint}{keypoint} $\ast$ \hyperlink{lib__keypoint_8h_a499b238f56bad4018dc99af336d34eb4}{sift\+\_\+malloc\+\_\+keypoint\+\_\+from\+\_\+model\+\_\+and\+\_\+copy} (const struct \hyperlink{structkeypoint}{keypoint} $\ast$key)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__keypoint_8h_a8ad074b95915e1ee6cea746e60413665}{sift\+\_\+free\+\_\+keypoint} (struct \hyperlink{structkeypoint}{keypoint} $\ast$key)
+\item 
+struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$ \hyperlink{lib__keypoint_8h_a8032a6311c734507667f830886139966}{sift\+\_\+malloc\+\_\+keypoints} ()
+\begin{DoxyCompactList}\small\item\em allocate list of keypoints \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__keypoint_8h_aca7d71cb4a97fddd847fc7be6271f696}{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list} (struct \hyperlink{structkeypoint}{keypoint} $\ast$key, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys})
+\begin{DoxyCompactList}\small\item\em add element in list of keypoints \end{DoxyCompactList}\item 
+struct \hyperlink{structkeypoint}{keypoint} $\ast$ \hyperlink{lib__keypoint_8h_a2f68780f2b8369810e1bf706f54073c7}{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list\+P\+A\+S\+C} (struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$keypoints, int n\+\_\+ori, int n\+\_\+hist, int n\+\_\+bins)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__keypoint_8h_ab7c641a62119e8973fbc5a70fd600c7d}{sift\+\_\+free\+\_\+keypoints} (struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys})
+\begin{DoxyCompactList}\small\item\em free list of keypoints \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__keypoint_8h_abd7e80a084bf5897e9e8d2cb73f5a6ac}{sift\+\_\+save\+\_\+keypoints} (const struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, const char $\ast$name, int flag)
+\begin{DoxyCompactList}\small\item\em Save list of keys on a txt filea (3 formats) flag values flag $>$= 0 -\/$>$ prints coordinates (x,y,sigma,theta) flag $>$= 1 -\/$>$ prints descriptor flag $>$= 2 -\/$>$ prints scalespace sample coordinates. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__keypoint_8h_a4ad6ad7bbd3ae2f36168c2e5a0a3ebc8}{sift\+\_\+print\+\_\+keypoints} (const struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, int flag)
+\begin{DoxyCompactList}\small\item\em Save list of keys on the standard output. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__keypoint_8h_aa0291d0f852c1575332aeee4311fb901}{sift\+\_\+read\+\_\+keypoints} (struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, const char $\ast$name, int n\+\_\+hist, int n\+\_\+ori, int n\+\_\+bins, int flag)
+\begin{DoxyCompactList}\small\item\em Read list of keys from a txt file. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__keypoint_8h_a2f40701cb24f6ad3dd4756e4edc41088}{fprintf\+\_\+one\+\_\+keypoint} (F\+I\+L\+E $\ast$f, const struct \hyperlink{structkeypoint}{keypoint} $\ast$k, int n\+\_\+descr, int n\+\_\+bins, int flag)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+data structures to store information relative to keypoint 
+
+\begin{DoxyItemize}
+\item struct keypoint keypoint data structure. \item struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} list of keypoints with variable length.\end{DoxyItemize}
+\begin{DoxyAuthor}{Author}
+Ives Rey-\/\+Otero \href{mailto:ives.rey-otero@cmla.ens-cachan.fr}{\tt ives.\+rey-\/otero@cmla.\+ens-\/cachan.\+fr} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__keypoint_8h_a2f40701cb24f6ad3dd4756e4edc41088}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!fprintf\+\_\+one\+\_\+keypoint@{fprintf\+\_\+one\+\_\+keypoint}}
+\index{fprintf\+\_\+one\+\_\+keypoint@{fprintf\+\_\+one\+\_\+keypoint}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{fprintf\+\_\+one\+\_\+keypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} fprintf\+\_\+one\+\_\+keypoint (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f, }
+\item[{const struct {\bf keypoint} $\ast$}]{k, }
+\item[{int}]{n\+\_\+descr, }
+\item[{int}]{n\+\_\+bins, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_a2f40701cb24f6ad3dd4756e4edc41088}
+\hypertarget{lib__keypoint_8h_aca7d71cb4a97fddd847fc7be6271f696}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list@{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list}}
+\index{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list@{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{struct {\bf keypoint} $\ast$}]{key, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{keys}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_aca7d71cb4a97fddd847fc7be6271f696}
+
+
+add element in list of keypoints 
+
+\hypertarget{lib__keypoint_8h_a2f68780f2b8369810e1bf706f54073c7}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list\+P\+A\+S\+C@{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list\+P\+A\+S\+C}}
+\index{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list\+P\+A\+S\+C@{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list\+P\+A\+S\+C}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list\+P\+A\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf keypoint}$\ast$ sift\+\_\+add\+\_\+keypoint\+\_\+to\+\_\+list\+P\+A\+S\+C (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{keypoints, }
+\item[{int}]{n\+\_\+ori, }
+\item[{int}]{n\+\_\+hist, }
+\item[{int}]{n\+\_\+bins}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_a2f68780f2b8369810e1bf706f54073c7}
+\hypertarget{lib__keypoint_8h_a8ad074b95915e1ee6cea746e60413665}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+free\+\_\+keypoint@{sift\+\_\+free\+\_\+keypoint}}
+\index{sift\+\_\+free\+\_\+keypoint@{sift\+\_\+free\+\_\+keypoint}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+free\+\_\+keypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+free\+\_\+keypoint (
+\begin{DoxyParamCaption}
+\item[{struct {\bf keypoint} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_a8ad074b95915e1ee6cea746e60413665}
+\hypertarget{lib__keypoint_8h_ab7c641a62119e8973fbc5a70fd600c7d}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+free\+\_\+keypoints@{sift\+\_\+free\+\_\+keypoints}}
+\index{sift\+\_\+free\+\_\+keypoints@{sift\+\_\+free\+\_\+keypoints}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+free\+\_\+keypoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+free\+\_\+keypoints (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{keys}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_ab7c641a62119e8973fbc5a70fd600c7d}
+
+
+free list of keypoints 
+
+\hypertarget{lib__keypoint_8h_abfdd3e53164d009f7b41cbdd7f97cbf0}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+malloc\+\_\+keypoint@{sift\+\_\+malloc\+\_\+keypoint}}
+\index{sift\+\_\+malloc\+\_\+keypoint@{sift\+\_\+malloc\+\_\+keypoint}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+malloc\+\_\+keypoint}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf keypoint}$\ast$ sift\+\_\+malloc\+\_\+keypoint (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+ori, }
+\item[{int}]{n\+\_\+hist, }
+\item[{int}]{n\+\_\+bins}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_abfdd3e53164d009f7b41cbdd7f97cbf0}
+\hypertarget{lib__keypoint_8h_a499b238f56bad4018dc99af336d34eb4}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+malloc\+\_\+keypoint\+\_\+from\+\_\+model\+\_\+and\+\_\+copy@{sift\+\_\+malloc\+\_\+keypoint\+\_\+from\+\_\+model\+\_\+and\+\_\+copy}}
+\index{sift\+\_\+malloc\+\_\+keypoint\+\_\+from\+\_\+model\+\_\+and\+\_\+copy@{sift\+\_\+malloc\+\_\+keypoint\+\_\+from\+\_\+model\+\_\+and\+\_\+copy}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+malloc\+\_\+keypoint\+\_\+from\+\_\+model\+\_\+and\+\_\+copy}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf keypoint}$\ast$ sift\+\_\+malloc\+\_\+keypoint\+\_\+from\+\_\+model\+\_\+and\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf keypoint} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_a499b238f56bad4018dc99af336d34eb4}
+\hypertarget{lib__keypoint_8h_a8032a6311c734507667f830886139966}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+malloc\+\_\+keypoints@{sift\+\_\+malloc\+\_\+keypoints}}
+\index{sift\+\_\+malloc\+\_\+keypoints@{sift\+\_\+malloc\+\_\+keypoints}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+malloc\+\_\+keypoints}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+keypoints}$\ast$ sift\+\_\+malloc\+\_\+keypoints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_a8032a6311c734507667f830886139966}
+
+
+allocate list of keypoints 
+
+\hypertarget{lib__keypoint_8h_a4ad6ad7bbd3ae2f36168c2e5a0a3ebc8}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+print\+\_\+keypoints@{sift\+\_\+print\+\_\+keypoints}}
+\index{sift\+\_\+print\+\_\+keypoints@{sift\+\_\+print\+\_\+keypoints}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+print\+\_\+keypoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+print\+\_\+keypoints (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+keypoints} $\ast$}]{keys, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_a4ad6ad7bbd3ae2f36168c2e5a0a3ebc8}
+
+
+Save list of keys on the standard output. 
+
+\hypertarget{lib__keypoint_8h_aa0291d0f852c1575332aeee4311fb901}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+read\+\_\+keypoints@{sift\+\_\+read\+\_\+keypoints}}
+\index{sift\+\_\+read\+\_\+keypoints@{sift\+\_\+read\+\_\+keypoints}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+read\+\_\+keypoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+read\+\_\+keypoints (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{keys, }
+\item[{const char $\ast$}]{name, }
+\item[{int}]{n\+\_\+hist, }
+\item[{int}]{n\+\_\+ori, }
+\item[{int}]{n\+\_\+bins, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_aa0291d0f852c1575332aeee4311fb901}
+
+
+Read list of keys from a txt file. 
+
+Read list of keys from a txt file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys} & = output list of keypoints \\
+\hline
+{\em name} & = input filename\\
+\hline
+{\em n\+\_\+hist} & the descriptor has (n\+\_\+hist$\ast$n\+\_\+hist) weighted coefficients. \\
+\hline
+{\em n\+\_\+ori} & the descriptor has (n\+\_\+hist$\ast$n\+\_\+hist$\ast$n\+\_\+ori) coefficients \\
+\hline
+{\em n\+\_\+bins} & the size of the orientation histogram \\
+\hline
+\end{DoxyParams}
+\hypertarget{lib__keypoint_8h_abd7e80a084bf5897e9e8d2cb73f5a6ac}{}\index{lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}!sift\+\_\+save\+\_\+keypoints@{sift\+\_\+save\+\_\+keypoints}}
+\index{sift\+\_\+save\+\_\+keypoints@{sift\+\_\+save\+\_\+keypoints}!lib\+\_\+keypoint.\+h@{lib\+\_\+keypoint.\+h}}
+\subsubsection[{sift\+\_\+save\+\_\+keypoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+save\+\_\+keypoints (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+keypoints} $\ast$}]{keys, }
+\item[{const char $\ast$}]{name, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\label{lib__keypoint_8h_abd7e80a084bf5897e9e8d2cb73f5a6ac}
+
+
+Save list of keys on a txt filea (3 formats) flag values flag $>$= 0 -\/$>$ prints coordinates (x,y,sigma,theta) flag $>$= 1 -\/$>$ prints descriptor flag $>$= 2 -\/$>$ prints scalespace sample coordinates. 
+
+
+\begin{DoxyItemize}
+\item orientation histogram. 
+\end{DoxyItemize}

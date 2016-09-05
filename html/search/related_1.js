@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['operator_2a',['operator*',['../classlibNumerics_1_1matrix.html#a492932acc21b0979ee8a57409cd091da',1,'libNumerics::matrix::operator*()'],['../classlibNumerics_1_1vector.html#a8ec444552d3b02b68609345a658fad14',1,'libNumerics::vector::operator*()'],['../classlibNumerics_1_1matrix.html#a492932acc21b0979ee8a57409cd091da',1,'libNumerics::matrix::operator*()'],['../classlibNumerics_1_1vector.html#a8ec444552d3b02b68609345a658fad14',1,'libNumerics::vector::operator*()']]],
+  ['operator_3c',['operator&lt;',['../structMatch.html#a40635809cb7add083b19dbcb17d08068',1,'Match::operator&lt;()'],['../structMatch.html#a40635809cb7add083b19dbcb17d08068',1,'Match::operator&lt;()']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../classImage.html#a4be6487c93944783e5935fb7efcee53a',1,'Image::operator&lt;&lt;()'],['../classRGBClass.html#ad37fd52ccd353ec30212f46380150faa',1,'RGBClass::operator&lt;&lt;()'],['../structMatch.html#ac88305bd4206fd892a4830eb695d34c1',1,'Match::operator&lt;&lt;()'],['../structMatch.html#ac88305bd4206fd892a4830eb695d34c1',1,'Match::operator&lt;&lt;()']]],
+  ['operator_3d_3d',['operator==',['../structMatch.html#ac6894d6e77a5126b8452f57f6733dfe1',1,'Match::operator==()'],['../structMatch.html#ac6894d6e77a5126b8452f57f6733dfe1',1,'Match::operator==()'],['../classSimpleString.html#a8bb3fb55107a2023bb828539fa6fe045',1,'SimpleString::operator==()']]],
+  ['operator_3e_3e',['operator&gt;&gt;',['../structMatch.html#afbe52fcdb5652281b46654fda95c1e2c',1,'Match::operator&gt;&gt;()'],['../structMatch.html#afbe52fcdb5652281b46654fda95c1e2c',1,'Match::operator&gt;&gt;()']]]
+];

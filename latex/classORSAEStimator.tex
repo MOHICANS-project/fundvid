@@ -1,0 +1,104 @@
+\hypertarget{classORSAEStimator}{}\section{O\+R\+S\+A\+E\+Stimator Class Reference}
+\label{classORSAEStimator}\index{O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}}
+
+
+Facade class for interfacing with the third-\/party Moisan\textquotesingle{}s O\+R\+S\+A library.  
+
+
+
+
+{\ttfamily \#include $<$orsa\+\_\+estimator.\+h$>$}
+
+
+
+Inheritance diagram for O\+R\+S\+A\+E\+Stimator\+:
+% FIG 0
+
+
+Collaboration diagram for O\+R\+S\+A\+E\+Stimator\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classORSAEStimator_a1390521e388700aeb1f7202f6aa83706}{O\+R\+S\+A\+E\+Stimator} (double \+\_\+precision, int \+\_\+max\+\_\+iterations, int \+\_\+height, int \+\_\+width)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classORSAEStimator}{O\+R\+S\+A\+E\+Stimator} constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classORSAEStimator_a5589de65e839f0a8f145e33bca51565f}{$\sim$\+O\+R\+S\+A\+E\+Stimator} ()
+\item 
+void \hyperlink{classORSAEStimator_aeafb56f7f64260df6676a7de5e909456}{estimate\+F} (const std\+::vector$<$ cv\+::\+Point2f $>$ \&p0, const std\+::vector$<$ cv\+::\+Point2f $>$ \&p1, cv\+::\+Mat \&F, std\+::vector$<$ bool $>$ \&inl\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Estimates fundamental matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Facade class for interfacing with the third-\/party Moisan\textquotesingle{}s O\+R\+S\+A library. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classORSAEStimator_a1390521e388700aeb1f7202f6aa83706}{}\index{O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}!O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}}
+\index{O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}!O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}}
+\subsubsection[{O\+R\+S\+A\+E\+Stimator}]{\setlength{\rightskip}{0pt plus 5cm}O\+R\+S\+A\+E\+Stimator\+::\+O\+R\+S\+A\+E\+Stimator (
+\begin{DoxyParamCaption}
+\item[{double}]{\+\_\+precision, }
+\item[{int}]{\+\_\+max\+\_\+iterations, }
+\item[{int}]{\+\_\+height, }
+\item[{int}]{\+\_\+width}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classORSAEStimator_a1390521e388700aeb1f7202f6aa83706}
+
+
+\hyperlink{classORSAEStimator}{O\+R\+S\+A\+E\+Stimator} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+precision} & the precision of the O\+R\+S\+A algorithm \\
+\hline
+{\em \+\_\+max\+\_\+iterations} & maximum number of iterations of the O\+R\+S\+A algorithm \\
+\hline
+{\em \+\_\+height} & height of the images from which the keypoint have been extracted \\
+\hline
+{\em \+\_\+width} & width of the images from which the keypoint have been extracted \\
+\hline
+\end{DoxyParams}
+\hypertarget{classORSAEStimator_a5589de65e839f0a8f145e33bca51565f}{}\index{O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}!````~O\+R\+S\+A\+E\+Stimator@{$\sim$\+O\+R\+S\+A\+E\+Stimator}}
+\index{````~O\+R\+S\+A\+E\+Stimator@{$\sim$\+O\+R\+S\+A\+E\+Stimator}!O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}}
+\subsubsection[{$\sim$\+O\+R\+S\+A\+E\+Stimator}]{\setlength{\rightskip}{0pt plus 5cm}virtual O\+R\+S\+A\+E\+Stimator\+::$\sim$\+O\+R\+S\+A\+E\+Stimator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classORSAEStimator_a5589de65e839f0a8f145e33bca51565f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classORSAEStimator_aeafb56f7f64260df6676a7de5e909456}{}\index{O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}!estimate\+F@{estimate\+F}}
+\index{estimate\+F@{estimate\+F}!O\+R\+S\+A\+E\+Stimator@{O\+R\+S\+A\+E\+Stimator}}
+\subsubsection[{estimate\+F}]{\setlength{\rightskip}{0pt plus 5cm}void O\+R\+S\+A\+E\+Stimator\+::estimate\+F (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{p0, }
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{p1, }
+\item[{cv\+::\+Mat \&}]{F, }
+\item[{std\+::vector$<$ bool $>$ \&}]{inl\+\_\+mask}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classORSAEStimator_aeafb56f7f64260df6676a7de5e909456}
+
+
+Estimates fundamental matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p0} & keypoints from image 0 \\
+\hline
+{\em p1} & keypoints from image 1 \\
+\hline
+{\em F} & output fundamental matrix \\
+\hline
+{\em inl\+\_\+mask} & mask labeling the inliers found from the estimation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractEstimator_a9d5a1dcb64b35f5996351018a5eb9e0a}{Abstract\+Estimator}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/estimation/\hyperlink{orsa__estimator_8h}{orsa\+\_\+estimator.\+h}\item 
+src/estimation/\hyperlink{orsa__estimator_8cpp}{orsa\+\_\+estimator.\+cpp}\end{DoxyCompactItemize}

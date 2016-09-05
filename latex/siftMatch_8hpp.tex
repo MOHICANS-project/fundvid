@@ -1,0 +1,72 @@
+\hypertarget{siftMatch_8hpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/sift\+Match.hpp File Reference}
+\label{siftMatch_8hpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/sift\+Match.\+hpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/sift\+Match.\+hpp}}
+
+
+S\+I\+F\+T extraction and matching.  
+
+
+{\ttfamily \#include $<$istream$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/lib\+Image/image.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/lib\+Image/image\+\_\+drawing.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/demo/lib\+Image/image\+\_\+io.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/extras/sift/demo\+\_\+lib\+\_\+sift.\+h\char`\"{}}\\*
+Include dependency graph for sift\+Match.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGeometry}{Geometry}
+\begin{DoxyCompactList}\small\item\em Rectangle in image. \end{DoxyCompactList}\item 
+class \hyperlink{classOutRegion}{Out\+Region}
+\begin{DoxyCompactList}\small\item\em Functor to test inclusion in region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{siftMatch_8hpp_a952ec4648a957401919c103d4328ef9e}{operator$<$$<$} (std\+::ostream \&str, \hyperlink{classGeometry}{Geometry} \&geo)
+\begin{DoxyCompactList}\small\item\em Output . \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{siftMatch_8hpp_a7eb34ea94118880552672ebb98fc921d}{operator$>$$>$} (std\+::istream \&str, \hyperlink{classGeometry}{Geometry} \&geo)
+\begin{DoxyCompactList}\small\item\em Input . Format\+: wxh+x0+y0, eg 100x100+0+0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+I\+F\+T extraction and matching. 
+
+\begin{DoxyAuthor}{Author}
+Lionel Moisan, Pascal Monasse, Pierre Moulon
+\end{DoxyAuthor}
+Copyright (c) 2011 Lionel Moisan, Pascal Monasse, Pierre Moulon All rights reserved.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+\subsection{Function Documentation}
+\hypertarget{siftMatch_8hpp_a952ec4648a957401919c103d4328ef9e}{}\index{sift\+Match.\+hpp@{sift\+Match.\+hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!sift\+Match.\+hpp@{sift\+Match.\+hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{str, }
+\item[{{\bf Geometry} \&}]{geo}
+\end{DoxyParamCaption}
+)}\label{siftMatch_8hpp_a952ec4648a957401919c103d4328ef9e}
+
+
+Output . 
+
+\hypertarget{siftMatch_8hpp_a7eb34ea94118880552672ebb98fc921d}{}\index{sift\+Match.\+hpp@{sift\+Match.\+hpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!sift\+Match.\+hpp@{sift\+Match.\+hpp}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{str, }
+\item[{{\bf Geometry} \&}]{geo}
+\end{DoxyParamCaption}
+)}\label{siftMatch_8hpp_a7eb34ea94118880552672ebb98fc921d}
+
+
+Input . Format\+: wxh+x0+y0, eg 100x100+0+0. 
+

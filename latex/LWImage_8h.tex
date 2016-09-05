@@ -1,0 +1,86 @@
+\hypertarget{LWImage_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/extras/lib\+L\+W\+Image/\+L\+W\+Image.h File Reference}
+\label{LWImage_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+L\+W\+Image/\+L\+W\+Image.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+L\+W\+Image/\+L\+W\+Image.\+h}}
+
+
+Light weight image structure.  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/lib\+L\+W\+Image/\+L\+W\+Image.\+cpp\char`\"{}}\\*
+Include dependency graph for L\+W\+Image.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classLWImage}{L\+W\+Image$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em A lightweight image container around an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classLWImage}{L\+W\+Image}$<$ T $>$ \hyperlink{LWImage_8h_ad8f5061b26a95c9d9b2b8c9f3b674bfc}{make\+\_\+image} (T $\ast$\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}, int w, int h, int comps=1)
+\begin{DoxyCompactList}\small\item\em Utility function, avoiding the need to precise the type\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classLWImage}{L\+W\+Image}$<$ T $>$ \hyperlink{LWImage_8h_af614d11ba41bd3a33f9eb9dcf3c80f86}{alloc\+\_\+image} (int w, int h, int comps=1)
+\begin{DoxyCompactList}\small\item\em Do not forget free. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classLWImage}{L\+W\+Image}$<$ T $>$ \hyperlink{LWImage_8h_a337e55e5ed54bfff8fd3aaa91a1b466c}{alloc\+\_\+image} (const \hyperlink{classLWImage}{L\+W\+Image}$<$ T $>$ \&im)
+\begin{DoxyCompactList}\small\item\em Do not forget free. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Light weight image structure. 
+
+\begin{DoxyAuthor}{Author}
+Pascal Monasse
+\end{DoxyAuthor}
+Copyright (c) 2010 Pascal Monasse All rights reserved.
+
+This program is free software\+: you can use, modify and/or redistribute it under the terms of the simplified B\+S\+D License. You should have received a copy of this license along this program. If not, see \href{http://www.opensource.org/licenses/bsd-license.html}{\tt http\+://www.\+opensource.\+org/licenses/bsd-\/license.\+html}. 
+
+\subsection{Function Documentation}
+\hypertarget{LWImage_8h_af614d11ba41bd3a33f9eb9dcf3c80f86}{}\index{L\+W\+Image.\+h@{L\+W\+Image.\+h}!alloc\+\_\+image@{alloc\+\_\+image}}
+\index{alloc\+\_\+image@{alloc\+\_\+image}!L\+W\+Image.\+h@{L\+W\+Image.\+h}}
+\subsubsection[{alloc\+\_\+image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf L\+W\+Image}$<$T$>$ alloc\+\_\+image (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{comps = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{LWImage_8h_af614d11ba41bd3a33f9eb9dcf3c80f86}
+
+
+Do not forget free. 
+
+\hypertarget{LWImage_8h_a337e55e5ed54bfff8fd3aaa91a1b466c}{}\index{L\+W\+Image.\+h@{L\+W\+Image.\+h}!alloc\+\_\+image@{alloc\+\_\+image}}
+\index{alloc\+\_\+image@{alloc\+\_\+image}!L\+W\+Image.\+h@{L\+W\+Image.\+h}}
+\subsubsection[{alloc\+\_\+image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf L\+W\+Image}$<$T$>$ alloc\+\_\+image (
+\begin{DoxyParamCaption}
+\item[{const {\bf L\+W\+Image}$<$ T $>$ \&}]{im}
+\end{DoxyParamCaption}
+)}\label{LWImage_8h_a337e55e5ed54bfff8fd3aaa91a1b466c}
+
+
+Do not forget free. 
+
+\hypertarget{LWImage_8h_ad8f5061b26a95c9d9b2b8c9f3b674bfc}{}\index{L\+W\+Image.\+h@{L\+W\+Image.\+h}!make\+\_\+image@{make\+\_\+image}}
+\index{make\+\_\+image@{make\+\_\+image}!L\+W\+Image.\+h@{L\+W\+Image.\+h}}
+\subsubsection[{make\+\_\+image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf L\+W\+Image}$<$T$>$ make\+\_\+image (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{data, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{comps = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{LWImage_8h_ad8f5061b26a95c9d9b2b8c9f3b674bfc}
+
+
+Utility function, avoiding the need to precise the type\+: 
+
+
+\begin{DoxyCode}
+1 void f(LWImage<unsigned char>&);
+2 unsigned char* data = new unsigned char[10*10];
+3 f( make\_image(data, 10, 10) );
+\end{DoxyCode}
+ 

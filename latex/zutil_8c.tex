@@ -1,0 +1,149 @@
+\hypertarget{zutil_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/zlib/zutil.c File Reference}
+\label{zutil_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/zutil.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/zutil.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/zlib/zutil.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/zlib/gzguts.\+h\char`\"{}}\\*
+Include dependency graph for zutil.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structinternal__state}{internal\+\_\+state}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$Z\+E\+X\+P\+O\+R\+T \hyperlink{zutil_8c_a705cd706dfe534aa9161a253a1c9a81a}{zlib\+Version} ()
+\item 
+u\+Long Z\+E\+X\+P\+O\+R\+T \hyperlink{zutil_8c_a864d90914dbbc92e246503b147b553eb}{zlib\+Compile\+Flags} ()
+\item 
+const char $\ast$Z\+E\+X\+P\+O\+R\+T \hyperlink{zutil_8c_a43d0ecf9c894ba2ed44845a6ffc36209}{z\+Error} (int err)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_aac7aa2bbd8584b96c89e311b6c3409a5}{zmemcpy} (Bytef $\ast$dest, const Bytef $\ast$source, u\+Int len)
+\item 
+int \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_afa24e136b162a10f0ad3b2ed3000b413}{zmemcmp} (Bytef $\ast$s1, const Bytef $\ast$s2, u\+Int len) const
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_a9d1ad31f82b89b791ce9c70c24d3947c}{zmemzero} (Bytef $\ast$dest, u\+Int len)
+\item 
+voidp malloc \hyperlink{zutil_8c_add8b03ae5c2c602b728ebb3b21931371}{O\+F} ((u\+Int size))
+\item 
+voidp calloc \hyperlink{zutil_8c_a2be754c5363f22e1db3e80698a568ead}{O\+F} ((u\+Int items, u\+Int size))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} free \hyperlink{zutil_8c_a8f8149fe81b707d93e4b55388d11a430}{O\+F} ((voidpf ptr))
+\item 
+voidpf \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_a41dc53193e9af4588e7bcbe459f4f834}{zcalloc} (voidpf opaque, unsigned items, unsigned size)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_a03a8230ad4ec43e8916fa91aad05bfd3}{zcfree} (voidpf opaque, voidpf ptr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+z\+\_\+const char $\ast$const \hyperlink{zutil_8c_a6eca777f454e3ba74a93593c4731a434}{z\+\_\+errmsg} \mbox{[}10\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{zutil_8c_add8b03ae5c2c602b728ebb3b21931371}{}\index{zutil.\+c@{zutil.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}voidp malloc O\+F (
+\begin{DoxyParamCaption}
+\item[{(u\+Int size)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_add8b03ae5c2c602b728ebb3b21931371}
+\hypertarget{zutil_8c_a2be754c5363f22e1db3e80698a568ead}{}\index{zutil.\+c@{zutil.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}voidp calloc O\+F (
+\begin{DoxyParamCaption}
+\item[{(u\+Int items, u\+Int size)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a2be754c5363f22e1db3e80698a568ead}
+\hypertarget{zutil_8c_a8f8149fe81b707d93e4b55388d11a430}{}\index{zutil.\+c@{zutil.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} free O\+F (
+\begin{DoxyParamCaption}
+\item[{(voidpf ptr)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a8f8149fe81b707d93e4b55388d11a430}
+\hypertarget{zutil_8c_a41dc53193e9af4588e7bcbe459f4f834}{}\index{zutil.\+c@{zutil.\+c}!zcalloc@{zcalloc}}
+\index{zcalloc@{zcalloc}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{zcalloc}]{\setlength{\rightskip}{0pt plus 5cm}voidpf {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} zcalloc (
+\begin{DoxyParamCaption}
+\item[{voidpf}]{opaque, }
+\item[{unsigned}]{items, }
+\item[{unsigned}]{size}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a41dc53193e9af4588e7bcbe459f4f834}
+\hypertarget{zutil_8c_a03a8230ad4ec43e8916fa91aad05bfd3}{}\index{zutil.\+c@{zutil.\+c}!zcfree@{zcfree}}
+\index{zcfree@{zcfree}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{zcfree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} zcfree (
+\begin{DoxyParamCaption}
+\item[{voidpf}]{opaque, }
+\item[{voidpf}]{ptr}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a03a8230ad4ec43e8916fa91aad05bfd3}
+\hypertarget{zutil_8c_a43d0ecf9c894ba2ed44845a6ffc36209}{}\index{zutil.\+c@{zutil.\+c}!z\+Error@{z\+Error}}
+\index{z\+Error@{z\+Error}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{z\+Error}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Z\+E\+X\+P\+O\+R\+T z\+Error (
+\begin{DoxyParamCaption}
+\item[{int}]{err}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a43d0ecf9c894ba2ed44845a6ffc36209}
+\hypertarget{zutil_8c_a864d90914dbbc92e246503b147b553eb}{}\index{zutil.\+c@{zutil.\+c}!zlib\+Compile\+Flags@{zlib\+Compile\+Flags}}
+\index{zlib\+Compile\+Flags@{zlib\+Compile\+Flags}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{zlib\+Compile\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}u\+Long Z\+E\+X\+P\+O\+R\+T zlib\+Compile\+Flags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a864d90914dbbc92e246503b147b553eb}
+\hypertarget{zutil_8c_a705cd706dfe534aa9161a253a1c9a81a}{}\index{zutil.\+c@{zutil.\+c}!zlib\+Version@{zlib\+Version}}
+\index{zlib\+Version@{zlib\+Version}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{zlib\+Version}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Z\+E\+X\+P\+O\+R\+T zlib\+Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a705cd706dfe534aa9161a253a1c9a81a}
+\hypertarget{zutil_8c_afa24e136b162a10f0ad3b2ed3000b413}{}\index{zutil.\+c@{zutil.\+c}!zmemcmp@{zmemcmp}}
+\index{zmemcmp@{zmemcmp}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{zmemcmp}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} zmemcmp (
+\begin{DoxyParamCaption}
+\item[{Bytef$\ast$}]{s1, }
+\item[{const Bytef$\ast$}]{s2, }
+\item[{u\+Int}]{len}
+\end{DoxyParamCaption}
+) const}\label{zutil_8c_afa24e136b162a10f0ad3b2ed3000b413}
+\hypertarget{zutil_8c_aac7aa2bbd8584b96c89e311b6c3409a5}{}\index{zutil.\+c@{zutil.\+c}!zmemcpy@{zmemcpy}}
+\index{zmemcpy@{zmemcpy}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{zmemcpy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} zmemcpy (
+\begin{DoxyParamCaption}
+\item[{Bytef$\ast$}]{dest, }
+\item[{const Bytef$\ast$}]{source, }
+\item[{u\+Int}]{len}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_aac7aa2bbd8584b96c89e311b6c3409a5}
+\hypertarget{zutil_8c_a9d1ad31f82b89b791ce9c70c24d3947c}{}\index{zutil.\+c@{zutil.\+c}!zmemzero@{zmemzero}}
+\index{zmemzero@{zmemzero}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{zmemzero}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} zmemzero (
+\begin{DoxyParamCaption}
+\item[{Bytef$\ast$}]{dest, }
+\item[{u\+Int}]{len}
+\end{DoxyParamCaption}
+)}\label{zutil_8c_a9d1ad31f82b89b791ce9c70c24d3947c}
+
+
+\subsection{Variable Documentation}
+\hypertarget{zutil_8c_a6eca777f454e3ba74a93593c4731a434}{}\index{zutil.\+c@{zutil.\+c}!z\+\_\+errmsg@{z\+\_\+errmsg}}
+\index{z\+\_\+errmsg@{z\+\_\+errmsg}!zutil.\+c@{zutil.\+c}}
+\subsubsection[{z\+\_\+errmsg}]{\setlength{\rightskip}{0pt plus 5cm}z\+\_\+const char$\ast$ const z\+\_\+errmsg\mbox{[}10\mbox{]}}\label{zutil_8c_a6eca777f454e3ba74a93593c4731a434}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+\textcolor{stringliteral}{"need dictionary"},     
+\textcolor{stringliteral}{"stream end"},          
+\textcolor{stringliteral}{""},                    
+\textcolor{stringliteral}{"file error"},          
+\textcolor{stringliteral}{"stream error"},        
+\textcolor{stringliteral}{"data error"},          
+\textcolor{stringliteral}{"insufficient memory"}, 
+\textcolor{stringliteral}{"buffer error"},        
+\textcolor{stringliteral}{"incompatible version"},
+\textcolor{stringliteral}{""}\}
+\end{DoxyCode}

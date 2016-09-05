@@ -1,0 +1,153 @@
+\hypertarget{classRect}{}\section{Rect Class Reference}
+\label{classRect}\index{Rect@{Rect}}
+
+
+Minimal class for a rectangle.  
+
+
+
+
+{\ttfamily \#include $<$Rect.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRect_aedfa4d8b0bbfdd1ae05f7cf69d05a1c8}{Rect} (int l=0, int t=0, int r=0, int \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}=0)
+\begin{DoxyCompactList}\small\item\em Rectangle constructor. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classRect_a987c08eeb48cb5f045726e40bddf87b3}{grow\+To} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Grow rectangle to include (x,y) \end{DoxyCompactList}\item 
+bool \hyperlink{classRect_a204dd1da368cb6da259165c805e4a8e8}{intersect} (const \hyperlink{classRect}{Rect} \&r2) const 
+\begin{DoxyCompactList}\small\item\em True if the rectangle r2 intersect $\ast$this. \end{DoxyCompactList}\item 
+bool \hyperlink{classRect_ad3b3c0f7a346713fbcd00799391dcca5}{intersect} (const \hyperlink{classRect}{Rect} \&r2, \hyperlink{classRect}{Rect} \&inter) const 
+\begin{DoxyCompactList}\small\item\em Return the same as intersect(r2) and return the common intersection zone. \end{DoxyCompactList}\item 
+bool \hyperlink{classRect_ae06bc5581d6589521ec7e89c2379d6cd}{intersect} (double a, double \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}, double c)
+\begin{DoxyCompactList}\small\item\em Intersection with line of equation a\+X+b\+Y+c=0. \end{DoxyCompactList}\item 
+int \hyperlink{classRect_a6d36a273b5edf7ef2ac5a23b3a562899}{Width} () const 
+\begin{DoxyCompactList}\small\item\em Return width of the rectangle. \end{DoxyCompactList}\item 
+int \hyperlink{classRect_a2f19d1e2ba28954db0d8f3c9385a8539}{Height} () const 
+\begin{DoxyCompactList}\small\item\em Return height of the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classRect_abb300f9f75fcb27d2a27ae5e260d2ed2}{top}
+\item 
+int \hyperlink{classRect_a34f470ffa9b5f83ad3be7764ebd403b4}{bottom}
+\item 
+int \hyperlink{classRect_ab0841a51d249d8560ddca36054fd1e57}{left}
+\item 
+int \hyperlink{classRect_aedfb34dad0634ee71105ddfd2c885243}{right}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Minimal class for a rectangle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRect_aedfa4d8b0bbfdd1ae05f7cf69d05a1c8}{}\index{Rect@{Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!Rect@{Rect}}
+\subsubsection[{Rect}]{\setlength{\rightskip}{0pt plus 5cm}Rect\+::\+Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{l = {\ttfamily 0}, }
+\item[{int}]{t = {\ttfamily 0}, }
+\item[{int}]{r = {\ttfamily 0}, }
+\item[{int}]{b = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRect_aedfa4d8b0bbfdd1ae05f7cf69d05a1c8}
+
+
+Rectangle constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classRect_a987c08eeb48cb5f045726e40bddf87b3}{}\index{Rect@{Rect}!grow\+To@{grow\+To}}
+\index{grow\+To@{grow\+To}!Rect@{Rect}}
+\subsubsection[{grow\+To}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Rect\+::grow\+To (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\label{classRect_a987c08eeb48cb5f045726e40bddf87b3}
+
+
+Grow rectangle to include (x,y) 
+
+\hypertarget{classRect_a2f19d1e2ba28954db0d8f3c9385a8539}{}\index{Rect@{Rect}!Height@{Height}}
+\index{Height@{Height}!Rect@{Rect}}
+\subsubsection[{Height}]{\setlength{\rightskip}{0pt plus 5cm}int Rect\+::\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classRect_a2f19d1e2ba28954db0d8f3c9385a8539}
+
+
+Return height of the rectangle. 
+
+\hypertarget{classRect_a204dd1da368cb6da259165c805e4a8e8}{}\index{Rect@{Rect}!intersect@{intersect}}
+\index{intersect@{intersect}!Rect@{Rect}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool Rect\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rect} \&}]{r2}
+\end{DoxyParamCaption}
+) const}\label{classRect_a204dd1da368cb6da259165c805e4a8e8}
+
+
+True if the rectangle r2 intersect $\ast$this. 
+
+\hypertarget{classRect_ad3b3c0f7a346713fbcd00799391dcca5}{}\index{Rect@{Rect}!intersect@{intersect}}
+\index{intersect@{intersect}!Rect@{Rect}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool Rect\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rect} \&}]{r2, }
+\item[{{\bf Rect} \&}]{inter}
+\end{DoxyParamCaption}
+) const}\label{classRect_ad3b3c0f7a346713fbcd00799391dcca5}
+
+
+Return the same as intersect(r2) and return the common intersection zone. 
+
+\hypertarget{classRect_ae06bc5581d6589521ec7e89c2379d6cd}{}\index{Rect@{Rect}!intersect@{intersect}}
+\index{intersect@{intersect}!Rect@{Rect}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}bool Rect\+::intersect (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)}\label{classRect_ae06bc5581d6589521ec7e89c2379d6cd}
+
+
+Intersection with line of equation a\+X+b\+Y+c=0. 
+
+Resulting segment has endpoints (left,top) and (right,bottom), which are not sorted anymore. \hypertarget{classRect_a6d36a273b5edf7ef2ac5a23b3a562899}{}\index{Rect@{Rect}!Width@{Width}}
+\index{Width@{Width}!Rect@{Rect}}
+\subsubsection[{Width}]{\setlength{\rightskip}{0pt plus 5cm}int Rect\+::\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classRect_a6d36a273b5edf7ef2ac5a23b3a562899}
+
+
+Return width of the rectangle. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classRect_a34f470ffa9b5f83ad3be7764ebd403b4}{}\index{Rect@{Rect}!bottom@{bottom}}
+\index{bottom@{bottom}!Rect@{Rect}}
+\subsubsection[{bottom}]{\setlength{\rightskip}{0pt plus 5cm}int Rect\+::bottom}\label{classRect_a34f470ffa9b5f83ad3be7764ebd403b4}
+\hypertarget{classRect_ab0841a51d249d8560ddca36054fd1e57}{}\index{Rect@{Rect}!left@{left}}
+\index{left@{left}!Rect@{Rect}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}int Rect\+::left}\label{classRect_ab0841a51d249d8560ddca36054fd1e57}
+\hypertarget{classRect_aedfb34dad0634ee71105ddfd2c885243}{}\index{Rect@{Rect}!right@{right}}
+\index{right@{right}!Rect@{Rect}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}int Rect\+::right}\label{classRect_aedfb34dad0634ee71105ddfd2c885243}
+\hypertarget{classRect_abb300f9f75fcb27d2a27ae5e260d2ed2}{}\index{Rect@{Rect}!top@{top}}
+\index{top@{top}!Rect@{Rect}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}int Rect\+::top}\label{classRect_abb300f9f75fcb27d2a27ae5e260d2ed2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/\hyperlink{Rect_8hpp}{Rect.\+hpp}\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/\hyperlink{Rect_8cpp}{Rect.\+cpp}\end{DoxyCompactItemize}

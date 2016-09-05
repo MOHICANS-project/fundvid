@@ -1,0 +1,1229 @@
+\hypertarget{classlibNumerics_1_1matrix}{}\section{lib\+Numerics\+:\+:matrix$<$ T $>$ Class Template Reference}
+\label{classlibNumerics_1_1matrix}\index{lib\+Numerics\+::matrix$<$ T $>$@{lib\+Numerics\+::matrix$<$ T $>$}}
+
+
+Matrix class.  
+
+
+
+
+{\ttfamily \#include $<$matrix.\+h$>$}
+
+
+
+Inheritance diagram for lib\+Numerics\+:\+:matrix$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for lib\+Numerics\+:\+:matrix$<$ T $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibNumerics_1_1matrix_a628bc8789bcdf010406027916b09ad1c}{matrix} (int m, int n)
+\item 
+\hyperlink{classlibNumerics_1_1matrix_a54748c58afab86536812d3488030a1da}{matrix} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+virtual \hyperlink{classlibNumerics_1_1matrix_a766b4304af755c1c8a5859fcb501c9c1}{$\sim$matrix} ()
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \& \hyperlink{classlibNumerics_1_1matrix_a4e57606438dd5b147530e4ceb71d6697}{operator=} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+int \hyperlink{classlibNumerics_1_1matrix_a8597e7b395501191215321e68efdde67}{nrow} () const 
+\begin{DoxyCompactList}\small\item\em The number of rows. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_aa5ab58454cdedcd1141f4b6118d5341b}{ncol} () const 
+\begin{DoxyCompactList}\small\item\em The number of columns. \end{DoxyCompactList}\item 
+T \hyperlink{classlibNumerics_1_1matrix_a17993222c44569236a6e95b1fdc3f739}{operator()} (int i, int j) const 
+\item 
+T \& \hyperlink{classlibNumerics_1_1matrix_a45e6de777eea44f80b07bc95080d965b}{operator()} (int i, int j)
+\item 
+T \hyperlink{classlibNumerics_1_1matrix_a77efab5d0c743c50103f49339f6dcd9e}{operator()} (int i) const 
+\item 
+T \& \hyperlink{classlibNumerics_1_1matrix_aab2b350c54be9b0c97daaf6682acb806}{operator()} (int i)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a5da6aeb9e4f7e2340344be209878da21}{fill} (T a)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ad2640e142aa1d18de84208bbe99b131f}{operator$\ast$} (T a) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_af336615a994f9450a917772ae19e52e8}{operator/} (T a) const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a4f4ae2a4484977c91a69a1f6108dd110}{operator$\ast$=} (T a)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_ae5a2d49fa1997e2a2a384cbb72e3b4a0}{operator/=} (T a)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a0ba161ccac440594410739248c1ecd25}{operator+} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a560e86a5975e72a6de989a3664494124}{operator-\/} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a9f5de4d60ed563d046639e51298149cf}{operator-\/} () const 
+\begin{DoxyCompactList}\small\item\em Matrix opposite. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a1b25c1c07bb9ceaa5a932ca7a095fc7f}{operator$\ast$} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_abbdbe45924362f9cbc5ccf4703483d1f}{operator$\ast$} (const \hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_ad446cea72f7a4ca6e2e1b6f2b3aab64e}{operator+=} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a08c131d90c4385aa33a5cff997858576}{operator-\/=} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ada1a0e75669ecd6be5e1d19f02fd5763}{t} () const 
+\begin{DoxyCompactList}\small\item\em Transpose. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a0e5781d987d2cbb5b7730efcbfbfa8bf}{diag} () const 
+\begin{DoxyCompactList}\small\item\em Diagonal of matrix. \end{DoxyCompactList}\item 
+T \hyperlink{classlibNumerics_1_1matrix_a5e3b2c3b2c1b0489c2a042794e6477f9}{tr} () const 
+\item 
+T \hyperlink{classlibNumerics_1_1matrix_a0642d8f3e189d40bbc81c3da0f2e071c}{det} () const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_acce38f32de9ccd314ea0a62fe0874b21}{inv} () const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a316e65764397ef860e2491e5a7ad30e5}{sym\+Upper} ()
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a3c37373227fa3391346828c94616bc1a}{sym\+Lower} ()
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_aed6daac6f9a67968f9ad13f98c745973}{S\+V\+D} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&U, \hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \&S, \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&\hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V}) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_aad042c4154a1d402b2186955392f6b00}{copy} (int i0, int i1, int j0, int j1) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_abdea96008578d7382c3c5f1f444afed7}{copy\+Cols} (int j0, int j1) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a64fce5c41c4263c75f18f3dfcca06596}{copy\+Rows} (int i0, int i1) const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a75640f0e92b7ed87eb189c9e079998be}{paste} (int i0, int j0, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&block)
+\item 
+\hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ab67c4f9413dcaf8a8352f843894e51a2}{col} (int j) const 
+\begin{DoxyCompactList}\small\item\em Copy column. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a21bffd86cceb2f390cdb3143f377ad04}{row} (int i) const 
+\begin{DoxyCompactList}\small\item\em Copy row. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_a99a20157b3bd99b8a4814e831853adb8}{last\+Col} () const 
+\begin{DoxyCompactList}\small\item\em Index of last column. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_a980d6a73aafcbcdebca70dd8ef3cb34b}{last\+Row} () const 
+\begin{DoxyCompactList}\small\item\em Index of last row. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a26170160d342acc7321ac42355c630fa}{swap\+Rows} (int i0, int i1)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_ab2a597ff7ba97b59afd1fa70184f2b49}{swap\+Cols} (int j0, int j1)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a0c4f934f4179272ad79d37cf0a405379}{read} (const U $\ast$v)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_aa4dc5fe7cd506d20552b865f7c92cfc1}{read} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ U $>$ \&v)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a8ac057f5dbb927f36cb111fd92cc2381}{write} (T $\ast$vect) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix_a628bc8789bcdf010406027916b09ad1c}{matrix} (int m, int n)
+\item 
+\hyperlink{classlibNumerics_1_1matrix_a54748c58afab86536812d3488030a1da}{matrix} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+virtual \hyperlink{classlibNumerics_1_1matrix_a766b4304af755c1c8a5859fcb501c9c1}{$\sim$matrix} ()
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \& \hyperlink{classlibNumerics_1_1matrix_a4e57606438dd5b147530e4ceb71d6697}{operator=} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+int \hyperlink{classlibNumerics_1_1matrix_a8597e7b395501191215321e68efdde67}{nrow} () const 
+\begin{DoxyCompactList}\small\item\em The number of rows. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_aa5ab58454cdedcd1141f4b6118d5341b}{ncol} () const 
+\begin{DoxyCompactList}\small\item\em The number of columns. \end{DoxyCompactList}\item 
+T \hyperlink{classlibNumerics_1_1matrix_a17993222c44569236a6e95b1fdc3f739}{operator()} (int i, int j) const 
+\item 
+T \& \hyperlink{classlibNumerics_1_1matrix_a45e6de777eea44f80b07bc95080d965b}{operator()} (int i, int j)
+\item 
+T \hyperlink{classlibNumerics_1_1matrix_a77efab5d0c743c50103f49339f6dcd9e}{operator()} (int i) const 
+\item 
+T \& \hyperlink{classlibNumerics_1_1matrix_aab2b350c54be9b0c97daaf6682acb806}{operator()} (int i)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a5da6aeb9e4f7e2340344be209878da21}{fill} (T a)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ad2640e142aa1d18de84208bbe99b131f}{operator$\ast$} (T a) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_af336615a994f9450a917772ae19e52e8}{operator/} (T a) const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a4f4ae2a4484977c91a69a1f6108dd110}{operator$\ast$=} (T a)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_ae5a2d49fa1997e2a2a384cbb72e3b4a0}{operator/=} (T a)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a0ba161ccac440594410739248c1ecd25}{operator+} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a560e86a5975e72a6de989a3664494124}{operator-\/} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a9f5de4d60ed563d046639e51298149cf}{operator-\/} () const 
+\begin{DoxyCompactList}\small\item\em Matrix opposite. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a1b25c1c07bb9ceaa5a932ca7a095fc7f}{operator$\ast$} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_abbdbe45924362f9cbc5ccf4703483d1f}{operator$\ast$} (const \hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \&m) const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_ad446cea72f7a4ca6e2e1b6f2b3aab64e}{operator+=} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a08c131d90c4385aa33a5cff997858576}{operator-\/=} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ada1a0e75669ecd6be5e1d19f02fd5763}{t} () const 
+\begin{DoxyCompactList}\small\item\em Transpose. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a0e5781d987d2cbb5b7730efcbfbfa8bf}{diag} () const 
+\begin{DoxyCompactList}\small\item\em Diagonal of matrix. \end{DoxyCompactList}\item 
+T \hyperlink{classlibNumerics_1_1matrix_a5e3b2c3b2c1b0489c2a042794e6477f9}{tr} () const 
+\item 
+T \hyperlink{classlibNumerics_1_1matrix_a0642d8f3e189d40bbc81c3da0f2e071c}{det} () const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_acce38f32de9ccd314ea0a62fe0874b21}{inv} () const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a316e65764397ef860e2491e5a7ad30e5}{sym\+Upper} ()
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a3c37373227fa3391346828c94616bc1a}{sym\+Lower} ()
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_aed6daac6f9a67968f9ad13f98c745973}{S\+V\+D} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&U, \hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \&S, \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&\hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V}) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_aad042c4154a1d402b2186955392f6b00}{copy} (int i0, int i1, int j0, int j1) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_abdea96008578d7382c3c5f1f444afed7}{copy\+Cols} (int j0, int j1) const 
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a64fce5c41c4263c75f18f3dfcca06596}{copy\+Rows} (int i0, int i1) const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a75640f0e92b7ed87eb189c9e079998be}{paste} (int i0, int j0, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&block)
+\item 
+\hyperlink{classlibNumerics_1_1vector}{vector}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ab67c4f9413dcaf8a8352f843894e51a2}{col} (int j) const 
+\begin{DoxyCompactList}\small\item\em Copy column. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a21bffd86cceb2f390cdb3143f377ad04}{row} (int i) const 
+\begin{DoxyCompactList}\small\item\em Copy row. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_a99a20157b3bd99b8a4814e831853adb8}{last\+Col} () const 
+\begin{DoxyCompactList}\small\item\em Index of last column. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_a980d6a73aafcbcdebca70dd8ef3cb34b}{last\+Row} () const 
+\begin{DoxyCompactList}\small\item\em Index of last row. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a26170160d342acc7321ac42355c630fa}{swap\+Rows} (int i0, int i1)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_ab2a597ff7ba97b59afd1fa70184f2b49}{swap\+Cols} (int j0, int j1)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a0c4f934f4179272ad79d37cf0a405379}{read} (const U $\ast$v)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_aa4dc5fe7cd506d20552b865f7c92cfc1}{read} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ U $>$ \&v)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a8ac057f5dbb927f36cb111fd92cc2381}{write} (T $\ast$vect) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a21edf9bfe07321e1e3d794106c98780c}{zeros} (int m)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_afbb85ec38cb88afa01fa31eb0034efce}{zeros} (int m, int n)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ae80e0aa595e75612e6b41de3a3ccc6ae}{ones} (int m)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a94795c1595cf5615479ee44f541f7b60}{ones} (int m, int n)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a2e6b524d7ae4f6e98a1a41ef8431628c}{eye} (int n)
+\begin{DoxyCompactList}\small\item\em Identity matrix. \end{DoxyCompactList}\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a21edf9bfe07321e1e3d794106c98780c}{zeros} (int m)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_afbb85ec38cb88afa01fa31eb0034efce}{zeros} (int m, int n)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_ae80e0aa595e75612e6b41de3a3ccc6ae}{ones} (int m)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a94795c1595cf5615479ee44f541f7b60}{ones} (int m, int n)
+\item 
+static \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a2e6b524d7ae4f6e98a1a41ef8431628c}{eye} (int n)
+\begin{DoxyCompactList}\small\item\em Identity matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_aa2fa7e4f85820dc854c52fcd65359683}{alloc} (int m, int n)
+\begin{DoxyCompactList}\small\item\em Allocate the array value. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a8834c792b39414596e43977d01ffe608}{free} ()
+\begin{DoxyCompactList}\small\item\em Free the array value. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_a2149f81bae93466889943912739988fb}{n\+Elements} () const 
+\begin{DoxyCompactList}\small\item\em Number of elements in the matrix. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \& \hyperlink{classlibNumerics_1_1matrix_a43319acc6c9d6e6c37c3bc47cf1a5dd8}{sub} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&s, int i, int j) const 
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_aa2fa7e4f85820dc854c52fcd65359683}{alloc} (int m, int n)
+\begin{DoxyCompactList}\small\item\em Allocate the array value. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a8834c792b39414596e43977d01ffe608}{free} ()
+\begin{DoxyCompactList}\small\item\em Free the array value. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_a2149f81bae93466889943912739988fb}{n\+Elements} () const 
+\begin{DoxyCompactList}\small\item\em Number of elements in the matrix. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \& \hyperlink{classlibNumerics_1_1matrix_a43319acc6c9d6e6c37c3bc47cf1a5dd8}{sub} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&s, int i, int j) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classlibNumerics_1_1matrix_a385a7057ca792f9bad1ab7b9d1076ea9}{m\+\_\+rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \hyperlink{classlibNumerics_1_1matrix_aee316845e7da8c2a06001e4ba5005f6f}{m\+\_\+cols}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{classlibNumerics_1_1matrix_a2129a3166fc1209becd143b13225e3c4}{p}
+\begin{DoxyCompactList}\small\item\em 1-\/\+D array of coefficients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a492932acc21b0979ee8a57409cd091da}{operator$\ast$} (T a, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\begin{DoxyCompactList}\small\item\em Product by scalar. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a8f11dd81601d24fac99dcd35bfd99281}{cat} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&left, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&right)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a74450cc2b2e883644cff2e3983ebd56f}{swap} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&, \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a492932acc21b0979ee8a57409cd091da}{operator$\ast$} (T a, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&m)
+\begin{DoxyCompactList}\small\item\em Product by scalar. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \hyperlink{classlibNumerics_1_1matrix_a8f11dd81601d24fac99dcd35bfd99281}{cat} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&left, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&right)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1matrix_a74450cc2b2e883644cff2e3983ebd56f}{swap} (\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&, \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ T $>$ \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class lib\+Numerics\+::matrix$<$ T $>$}
+
+Matrix class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlibNumerics_1_1matrix_a628bc8789bcdf010406027916b09ad1c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::{\bf matrix} (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a628bc8789bcdf010406027916b09ad1c}
+\hypertarget{classlibNumerics_1_1matrix_a54748c58afab86536812d3488030a1da}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::{\bf matrix} (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a54748c58afab86536812d3488030a1da}
+\hypertarget{classlibNumerics_1_1matrix_a766b4304af755c1c8a5859fcb501c9c1}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!````~matrix@{$\sim$matrix}}
+\index{````~matrix@{$\sim$matrix}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{$\sim$matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ virtual {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::$\sim${\bf matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classlibNumerics_1_1matrix_a766b4304af755c1c8a5859fcb501c9c1}
+\hypertarget{classlibNumerics_1_1matrix_a628bc8789bcdf010406027916b09ad1c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::{\bf matrix} (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a628bc8789bcdf010406027916b09ad1c}
+\hypertarget{classlibNumerics_1_1matrix_a54748c58afab86536812d3488030a1da}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::{\bf matrix} (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a54748c58afab86536812d3488030a1da}
+\hypertarget{classlibNumerics_1_1matrix_a766b4304af755c1c8a5859fcb501c9c1}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!````~matrix@{$\sim$matrix}}
+\index{````~matrix@{$\sim$matrix}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{$\sim$matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ virtual {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::$\sim${\bf matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classlibNumerics_1_1matrix_a766b4304af755c1c8a5859fcb501c9c1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlibNumerics_1_1matrix_aa2fa7e4f85820dc854c52fcd65359683}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!alloc@{alloc}}
+\index{alloc@{alloc}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{alloc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::alloc (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_aa2fa7e4f85820dc854c52fcd65359683}
+
+
+Allocate the array value. 
+
+\hypertarget{classlibNumerics_1_1matrix_aa2fa7e4f85820dc854c52fcd65359683}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!alloc@{alloc}}
+\index{alloc@{alloc}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{alloc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::alloc (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_aa2fa7e4f85820dc854c52fcd65359683}
+
+
+Allocate the array value. 
+
+\hypertarget{classlibNumerics_1_1matrix_ab67c4f9413dcaf8a8352f843894e51a2}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!col@{col}}
+\index{col@{col}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf vector}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::col (
+\begin{DoxyParamCaption}
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_ab67c4f9413dcaf8a8352f843894e51a2}
+
+
+Copy column. 
+
+\hypertarget{classlibNumerics_1_1matrix_ab67c4f9413dcaf8a8352f843894e51a2}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!col@{col}}
+\index{col@{col}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf vector}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::col (
+\begin{DoxyParamCaption}
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_ab67c4f9413dcaf8a8352f843894e51a2}
+
+
+Copy column. 
+
+\hypertarget{classlibNumerics_1_1matrix_aad042c4154a1d402b2186955392f6b00}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!copy@{copy}}
+\index{copy@{copy}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::copy (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_aad042c4154a1d402b2186955392f6b00}
+\hypertarget{classlibNumerics_1_1matrix_aad042c4154a1d402b2186955392f6b00}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!copy@{copy}}
+\index{copy@{copy}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::copy (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_aad042c4154a1d402b2186955392f6b00}
+\hypertarget{classlibNumerics_1_1matrix_abdea96008578d7382c3c5f1f444afed7}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!copy\+Cols@{copy\+Cols}}
+\index{copy\+Cols@{copy\+Cols}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{copy\+Cols}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::copy\+Cols (
+\begin{DoxyParamCaption}
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_abdea96008578d7382c3c5f1f444afed7}
+\hypertarget{classlibNumerics_1_1matrix_abdea96008578d7382c3c5f1f444afed7}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!copy\+Cols@{copy\+Cols}}
+\index{copy\+Cols@{copy\+Cols}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{copy\+Cols}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::copy\+Cols (
+\begin{DoxyParamCaption}
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_abdea96008578d7382c3c5f1f444afed7}
+\hypertarget{classlibNumerics_1_1matrix_a64fce5c41c4263c75f18f3dfcca06596}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!copy\+Rows@{copy\+Rows}}
+\index{copy\+Rows@{copy\+Rows}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{copy\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::copy\+Rows (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a64fce5c41c4263c75f18f3dfcca06596}
+\hypertarget{classlibNumerics_1_1matrix_a64fce5c41c4263c75f18f3dfcca06596}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!copy\+Rows@{copy\+Rows}}
+\index{copy\+Rows@{copy\+Rows}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{copy\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::copy\+Rows (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a64fce5c41c4263c75f18f3dfcca06596}
+\hypertarget{classlibNumerics_1_1matrix_a0642d8f3e189d40bbc81c3da0f2e071c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!det@{det}}
+\index{det@{det}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{det}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::det (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a0642d8f3e189d40bbc81c3da0f2e071c}
+\hypertarget{classlibNumerics_1_1matrix_a0642d8f3e189d40bbc81c3da0f2e071c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!det@{det}}
+\index{det@{det}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{det}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::det (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a0642d8f3e189d40bbc81c3da0f2e071c}
+\hypertarget{classlibNumerics_1_1matrix_a0e5781d987d2cbb5b7730efcbfbfa8bf}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!diag@{diag}}
+\index{diag@{diag}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{diag}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf vector}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::diag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a0e5781d987d2cbb5b7730efcbfbfa8bf}
+
+
+Diagonal of matrix. 
+
+\hypertarget{classlibNumerics_1_1matrix_a0e5781d987d2cbb5b7730efcbfbfa8bf}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!diag@{diag}}
+\index{diag@{diag}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{diag}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf vector}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::diag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a0e5781d987d2cbb5b7730efcbfbfa8bf}
+
+
+Diagonal of matrix. 
+
+\hypertarget{classlibNumerics_1_1matrix_a2e6b524d7ae4f6e98a1a41ef8431628c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!eye@{eye}}
+\index{eye@{eye}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{eye}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::eye (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1matrix_a2e6b524d7ae4f6e98a1a41ef8431628c}
+
+
+Identity matrix. 
+
+\hypertarget{classlibNumerics_1_1matrix_a2e6b524d7ae4f6e98a1a41ef8431628c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!eye@{eye}}
+\index{eye@{eye}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{eye}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::eye (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1matrix_a2e6b524d7ae4f6e98a1a41ef8431628c}
+
+
+Identity matrix. 
+
+\hypertarget{classlibNumerics_1_1matrix_a5da6aeb9e4f7e2340344be209878da21}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!fill@{fill}}
+\index{fill@{fill}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{fill}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::fill (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a5da6aeb9e4f7e2340344be209878da21}
+\hypertarget{classlibNumerics_1_1matrix_a5da6aeb9e4f7e2340344be209878da21}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!fill@{fill}}
+\index{fill@{fill}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{fill}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::fill (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a5da6aeb9e4f7e2340344be209878da21}
+\hypertarget{classlibNumerics_1_1matrix_a8834c792b39414596e43977d01ffe608}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!free@{free}}
+\index{free@{free}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{free}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::free (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a8834c792b39414596e43977d01ffe608}
+
+
+Free the array value. 
+
+\hypertarget{classlibNumerics_1_1matrix_a8834c792b39414596e43977d01ffe608}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!free@{free}}
+\index{free@{free}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{free}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::free (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a8834c792b39414596e43977d01ffe608}
+
+
+Free the array value. 
+
+\hypertarget{classlibNumerics_1_1matrix_acce38f32de9ccd314ea0a62fe0874b21}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!inv@{inv}}
+\index{inv@{inv}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{inv}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::inv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_acce38f32de9ccd314ea0a62fe0874b21}
+\hypertarget{classlibNumerics_1_1matrix_acce38f32de9ccd314ea0a62fe0874b21}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!inv@{inv}}
+\index{inv@{inv}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{inv}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::inv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_acce38f32de9ccd314ea0a62fe0874b21}
+\hypertarget{classlibNumerics_1_1matrix_a99a20157b3bd99b8a4814e831853adb8}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!last\+Col@{last\+Col}}
+\index{last\+Col@{last\+Col}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{last\+Col}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::last\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_a99a20157b3bd99b8a4814e831853adb8}
+
+
+Index of last column. 
+
+\hypertarget{classlibNumerics_1_1matrix_a99a20157b3bd99b8a4814e831853adb8}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!last\+Col@{last\+Col}}
+\index{last\+Col@{last\+Col}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{last\+Col}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::last\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_a99a20157b3bd99b8a4814e831853adb8}
+
+
+Index of last column. 
+
+\hypertarget{classlibNumerics_1_1matrix_a980d6a73aafcbcdebca70dd8ef3cb34b}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!last\+Row@{last\+Row}}
+\index{last\+Row@{last\+Row}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{last\+Row}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::last\+Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_a980d6a73aafcbcdebca70dd8ef3cb34b}
+
+
+Index of last row. 
+
+\hypertarget{classlibNumerics_1_1matrix_a980d6a73aafcbcdebca70dd8ef3cb34b}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!last\+Row@{last\+Row}}
+\index{last\+Row@{last\+Row}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{last\+Row}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::last\+Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_a980d6a73aafcbcdebca70dd8ef3cb34b}
+
+
+Index of last row. 
+
+\hypertarget{classlibNumerics_1_1matrix_aa5ab58454cdedcd1141f4b6118d5341b}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!ncol@{ncol}}
+\index{ncol@{ncol}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{ncol}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::ncol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_aa5ab58454cdedcd1141f4b6118d5341b}
+
+
+The number of columns. 
+
+\hypertarget{classlibNumerics_1_1matrix_aa5ab58454cdedcd1141f4b6118d5341b}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!ncol@{ncol}}
+\index{ncol@{ncol}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{ncol}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::ncol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_aa5ab58454cdedcd1141f4b6118d5341b}
+
+
+The number of columns. 
+
+\hypertarget{classlibNumerics_1_1matrix_a2149f81bae93466889943912739988fb}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!n\+Elements@{n\+Elements}}
+\index{n\+Elements@{n\+Elements}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{n\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::n\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a2149f81bae93466889943912739988fb}
+
+
+Number of elements in the matrix. 
+
+\hypertarget{classlibNumerics_1_1matrix_a2149f81bae93466889943912739988fb}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!n\+Elements@{n\+Elements}}
+\index{n\+Elements@{n\+Elements}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{n\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::n\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a2149f81bae93466889943912739988fb}
+
+
+Number of elements in the matrix. 
+
+\hypertarget{classlibNumerics_1_1matrix_a8597e7b395501191215321e68efdde67}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!nrow@{nrow}}
+\index{nrow@{nrow}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{nrow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::nrow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_a8597e7b395501191215321e68efdde67}
+
+
+The number of rows. 
+
+\hypertarget{classlibNumerics_1_1matrix_a8597e7b395501191215321e68efdde67}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!nrow@{nrow}}
+\index{nrow@{nrow}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{nrow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::nrow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlibNumerics_1_1matrix_a8597e7b395501191215321e68efdde67}
+
+
+The number of rows. 
+
+\hypertarget{classlibNumerics_1_1matrix_ae80e0aa595e75612e6b41de3a3ccc6ae}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!ones@{ones}}
+\index{ones@{ones}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{ones}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::ones (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classlibNumerics_1_1matrix_ae80e0aa595e75612e6b41de3a3ccc6ae}
+\hypertarget{classlibNumerics_1_1matrix_ae80e0aa595e75612e6b41de3a3ccc6ae}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!ones@{ones}}
+\index{ones@{ones}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{ones}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::ones (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classlibNumerics_1_1matrix_ae80e0aa595e75612e6b41de3a3ccc6ae}
+\hypertarget{classlibNumerics_1_1matrix_a94795c1595cf5615479ee44f541f7b60}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!ones@{ones}}
+\index{ones@{ones}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{ones}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::ones (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1matrix_a94795c1595cf5615479ee44f541f7b60}
+\hypertarget{classlibNumerics_1_1matrix_a94795c1595cf5615479ee44f541f7b60}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!ones@{ones}}
+\index{ones@{ones}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{ones}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::ones (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1matrix_a94795c1595cf5615479ee44f541f7b60}
+\hypertarget{classlibNumerics_1_1matrix_a17993222c44569236a6e95b1fdc3f739}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a17993222c44569236a6e95b1fdc3f739}
+\hypertarget{classlibNumerics_1_1matrix_a17993222c44569236a6e95b1fdc3f739}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a17993222c44569236a6e95b1fdc3f739}
+\hypertarget{classlibNumerics_1_1matrix_a45e6de777eea44f80b07bc95080d965b}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a45e6de777eea44f80b07bc95080d965b}
+\hypertarget{classlibNumerics_1_1matrix_a45e6de777eea44f80b07bc95080d965b}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a45e6de777eea44f80b07bc95080d965b}
+\hypertarget{classlibNumerics_1_1matrix_a77efab5d0c743c50103f49339f6dcd9e}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a77efab5d0c743c50103f49339f6dcd9e}
+\hypertarget{classlibNumerics_1_1matrix_a77efab5d0c743c50103f49339f6dcd9e}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a77efab5d0c743c50103f49339f6dcd9e}
+\hypertarget{classlibNumerics_1_1matrix_aab2b350c54be9b0c97daaf6682acb806}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_aab2b350c54be9b0c97daaf6682acb806}
+\hypertarget{classlibNumerics_1_1matrix_aab2b350c54be9b0c97daaf6682acb806}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_aab2b350c54be9b0c97daaf6682acb806}
+\hypertarget{classlibNumerics_1_1matrix_ad2640e142aa1d18de84208bbe99b131f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_ad2640e142aa1d18de84208bbe99b131f}
+\hypertarget{classlibNumerics_1_1matrix_ad2640e142aa1d18de84208bbe99b131f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_ad2640e142aa1d18de84208bbe99b131f}
+\hypertarget{classlibNumerics_1_1matrix_a1b25c1c07bb9ceaa5a932ca7a095fc7f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a1b25c1c07bb9ceaa5a932ca7a095fc7f}
+\hypertarget{classlibNumerics_1_1matrix_a1b25c1c07bb9ceaa5a932ca7a095fc7f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a1b25c1c07bb9ceaa5a932ca7a095fc7f}
+\hypertarget{classlibNumerics_1_1matrix_abbdbe45924362f9cbc5ccf4703483d1f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf vector}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vector}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_abbdbe45924362f9cbc5ccf4703483d1f}
+\hypertarget{classlibNumerics_1_1matrix_abbdbe45924362f9cbc5ccf4703483d1f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf vector}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vector}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_abbdbe45924362f9cbc5ccf4703483d1f}
+\hypertarget{classlibNumerics_1_1matrix_a4f4ae2a4484977c91a69a1f6108dd110}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a4f4ae2a4484977c91a69a1f6108dd110}
+\hypertarget{classlibNumerics_1_1matrix_a4f4ae2a4484977c91a69a1f6108dd110}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a4f4ae2a4484977c91a69a1f6108dd110}
+\hypertarget{classlibNumerics_1_1matrix_a0ba161ccac440594410739248c1ecd25}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a0ba161ccac440594410739248c1ecd25}
+\hypertarget{classlibNumerics_1_1matrix_a0ba161ccac440594410739248c1ecd25}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a0ba161ccac440594410739248c1ecd25}
+\hypertarget{classlibNumerics_1_1matrix_ad446cea72f7a4ca6e2e1b6f2b3aab64e}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_ad446cea72f7a4ca6e2e1b6f2b3aab64e}
+\hypertarget{classlibNumerics_1_1matrix_ad446cea72f7a4ca6e2e1b6f2b3aab64e}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_ad446cea72f7a4ca6e2e1b6f2b3aab64e}
+\hypertarget{classlibNumerics_1_1matrix_a560e86a5975e72a6de989a3664494124}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a560e86a5975e72a6de989a3664494124}
+\hypertarget{classlibNumerics_1_1matrix_a560e86a5975e72a6de989a3664494124}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a560e86a5975e72a6de989a3664494124}
+\hypertarget{classlibNumerics_1_1matrix_a9f5de4d60ed563d046639e51298149cf}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a9f5de4d60ed563d046639e51298149cf}
+
+
+Matrix opposite. 
+
+\hypertarget{classlibNumerics_1_1matrix_a9f5de4d60ed563d046639e51298149cf}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a9f5de4d60ed563d046639e51298149cf}
+
+
+Matrix opposite. 
+
+\hypertarget{classlibNumerics_1_1matrix_a08c131d90c4385aa33a5cff997858576}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a08c131d90c4385aa33a5cff997858576}
+\hypertarget{classlibNumerics_1_1matrix_a08c131d90c4385aa33a5cff997858576}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a08c131d90c4385aa33a5cff997858576}
+\hypertarget{classlibNumerics_1_1matrix_af336615a994f9450a917772ae19e52e8}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_af336615a994f9450a917772ae19e52e8}
+\hypertarget{classlibNumerics_1_1matrix_af336615a994f9450a917772ae19e52e8}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_af336615a994f9450a917772ae19e52e8}
+\hypertarget{classlibNumerics_1_1matrix_ae5a2d49fa1997e2a2a384cbb72e3b4a0}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_ae5a2d49fa1997e2a2a384cbb72e3b4a0}
+\hypertarget{classlibNumerics_1_1matrix_ae5a2d49fa1997e2a2a384cbb72e3b4a0}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{T}]{a}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_ae5a2d49fa1997e2a2a384cbb72e3b4a0}
+\hypertarget{classlibNumerics_1_1matrix_a4e57606438dd5b147530e4ceb71d6697}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a4e57606438dd5b147530e4ceb71d6697}
+\hypertarget{classlibNumerics_1_1matrix_a4e57606438dd5b147530e4ceb71d6697}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a4e57606438dd5b147530e4ceb71d6697}
+\hypertarget{classlibNumerics_1_1matrix_a75640f0e92b7ed87eb189c9e079998be}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!paste@{paste}}
+\index{paste@{paste}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{paste}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::paste (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{j0, }
+\item[{const {\bf matrix}$<$ T $>$ \&}]{block}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a75640f0e92b7ed87eb189c9e079998be}
+\hypertarget{classlibNumerics_1_1matrix_a75640f0e92b7ed87eb189c9e079998be}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!paste@{paste}}
+\index{paste@{paste}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{paste}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::paste (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{j0, }
+\item[{const {\bf matrix}$<$ T $>$ \&}]{block}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a75640f0e92b7ed87eb189c9e079998be}
+\hypertarget{classlibNumerics_1_1matrix_a0c4f934f4179272ad79d37cf0a405379}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!read@{read}}
+\index{read@{read}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::read (
+\begin{DoxyParamCaption}
+\item[{const U $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a0c4f934f4179272ad79d37cf0a405379}
+\hypertarget{classlibNumerics_1_1matrix_a0c4f934f4179272ad79d37cf0a405379}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!read@{read}}
+\index{read@{read}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::read (
+\begin{DoxyParamCaption}
+\item[{const U $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a0c4f934f4179272ad79d37cf0a405379}
+\hypertarget{classlibNumerics_1_1matrix_aa4dc5fe7cd506d20552b865f7c92cfc1}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!read@{read}}
+\index{read@{read}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::read (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ U $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_aa4dc5fe7cd506d20552b865f7c92cfc1}
+\hypertarget{classlibNumerics_1_1matrix_aa4dc5fe7cd506d20552b865f7c92cfc1}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!read@{read}}
+\index{read@{read}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::read (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ U $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_aa4dc5fe7cd506d20552b865f7c92cfc1}
+\hypertarget{classlibNumerics_1_1matrix_a21bffd86cceb2f390cdb3143f377ad04}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!row@{row}}
+\index{row@{row}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{row}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::row (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a21bffd86cceb2f390cdb3143f377ad04}
+
+
+Copy row. 
+
+\hypertarget{classlibNumerics_1_1matrix_a21bffd86cceb2f390cdb3143f377ad04}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!row@{row}}
+\index{row@{row}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{row}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::row (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a21bffd86cceb2f390cdb3143f377ad04}
+
+
+Copy row. 
+
+\hypertarget{classlibNumerics_1_1matrix_a43319acc6c9d6e6c37c3bc47cf1a5dd8}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!sub@{sub}}
+\index{sub@{sub}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{sub}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::sub (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ T $>$ \&}]{s, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a43319acc6c9d6e6c37c3bc47cf1a5dd8}
+\hypertarget{classlibNumerics_1_1matrix_a43319acc6c9d6e6c37c3bc47cf1a5dd8}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!sub@{sub}}
+\index{sub@{sub}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{sub}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$\& {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::sub (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ T $>$ \&}]{s, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a43319acc6c9d6e6c37c3bc47cf1a5dd8}
+\hypertarget{classlibNumerics_1_1matrix_aed6daac6f9a67968f9ad13f98c745973}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!S\+V\+D@{S\+V\+D}}
+\index{S\+V\+D@{S\+V\+D}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{S\+V\+D}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::{\bf S\+V\+D} (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ T $>$ \&}]{U, }
+\item[{{\bf vector}$<$ T $>$ \&}]{S, }
+\item[{{\bf matrix}$<$ T $>$ \&}]{V}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_aed6daac6f9a67968f9ad13f98c745973}
+\hypertarget{classlibNumerics_1_1matrix_aed6daac6f9a67968f9ad13f98c745973}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!S\+V\+D@{S\+V\+D}}
+\index{S\+V\+D@{S\+V\+D}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{S\+V\+D}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::{\bf S\+V\+D} (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ T $>$ \&}]{U, }
+\item[{{\bf vector}$<$ T $>$ \&}]{S, }
+\item[{{\bf matrix}$<$ T $>$ \&}]{V}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_aed6daac6f9a67968f9ad13f98c745973}
+\hypertarget{classlibNumerics_1_1matrix_ab2a597ff7ba97b59afd1fa70184f2b49}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!swap\+Cols@{swap\+Cols}}
+\index{swap\+Cols@{swap\+Cols}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{swap\+Cols}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::swap\+Cols (
+\begin{DoxyParamCaption}
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_ab2a597ff7ba97b59afd1fa70184f2b49}
+\hypertarget{classlibNumerics_1_1matrix_ab2a597ff7ba97b59afd1fa70184f2b49}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!swap\+Cols@{swap\+Cols}}
+\index{swap\+Cols@{swap\+Cols}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{swap\+Cols}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::swap\+Cols (
+\begin{DoxyParamCaption}
+\item[{int}]{j0, }
+\item[{int}]{j1}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_ab2a597ff7ba97b59afd1fa70184f2b49}
+\hypertarget{classlibNumerics_1_1matrix_a26170160d342acc7321ac42355c630fa}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!swap\+Rows@{swap\+Rows}}
+\index{swap\+Rows@{swap\+Rows}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{swap\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::swap\+Rows (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a26170160d342acc7321ac42355c630fa}
+\hypertarget{classlibNumerics_1_1matrix_a26170160d342acc7321ac42355c630fa}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!swap\+Rows@{swap\+Rows}}
+\index{swap\+Rows@{swap\+Rows}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{swap\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::swap\+Rows (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a26170160d342acc7321ac42355c630fa}
+\hypertarget{classlibNumerics_1_1matrix_a3c37373227fa3391346828c94616bc1a}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!sym\+Lower@{sym\+Lower}}
+\index{sym\+Lower@{sym\+Lower}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{sym\+Lower}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::sym\+Lower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a3c37373227fa3391346828c94616bc1a}
+\hypertarget{classlibNumerics_1_1matrix_a3c37373227fa3391346828c94616bc1a}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!sym\+Lower@{sym\+Lower}}
+\index{sym\+Lower@{sym\+Lower}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{sym\+Lower}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::sym\+Lower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a3c37373227fa3391346828c94616bc1a}
+\hypertarget{classlibNumerics_1_1matrix_a316e65764397ef860e2491e5a7ad30e5}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!sym\+Upper@{sym\+Upper}}
+\index{sym\+Upper@{sym\+Upper}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{sym\+Upper}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::sym\+Upper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a316e65764397ef860e2491e5a7ad30e5}
+\hypertarget{classlibNumerics_1_1matrix_a316e65764397ef860e2491e5a7ad30e5}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!sym\+Upper@{sym\+Upper}}
+\index{sym\+Upper@{sym\+Upper}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{sym\+Upper}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::sym\+Upper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1matrix_a316e65764397ef860e2491e5a7ad30e5}
+\hypertarget{classlibNumerics_1_1matrix_ada1a0e75669ecd6be5e1d19f02fd5763}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!t@{t}}
+\index{t@{t}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_ada1a0e75669ecd6be5e1d19f02fd5763}
+
+
+Transpose. 
+
+\hypertarget{classlibNumerics_1_1matrix_ada1a0e75669ecd6be5e1d19f02fd5763}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!t@{t}}
+\index{t@{t}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_ada1a0e75669ecd6be5e1d19f02fd5763}
+
+
+Transpose. 
+
+\hypertarget{classlibNumerics_1_1matrix_a5e3b2c3b2c1b0489c2a042794e6477f9}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!tr@{tr}}
+\index{tr@{tr}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{tr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::tr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a5e3b2c3b2c1b0489c2a042794e6477f9}
+\hypertarget{classlibNumerics_1_1matrix_a5e3b2c3b2c1b0489c2a042794e6477f9}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!tr@{tr}}
+\index{tr@{tr}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{tr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::tr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a5e3b2c3b2c1b0489c2a042794e6477f9}
+\hypertarget{classlibNumerics_1_1matrix_a8ac057f5dbb927f36cb111fd92cc2381}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!write@{write}}
+\index{write@{write}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::write (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{vect}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a8ac057f5dbb927f36cb111fd92cc2381}
+\hypertarget{classlibNumerics_1_1matrix_a8ac057f5dbb927f36cb111fd92cc2381}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!write@{write}}
+\index{write@{write}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::write (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{vect}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1matrix_a8ac057f5dbb927f36cb111fd92cc2381}
+\hypertarget{classlibNumerics_1_1matrix_a21edf9bfe07321e1e3d794106c98780c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!zeros@{zeros}}
+\index{zeros@{zeros}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{zeros}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::zeros (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classlibNumerics_1_1matrix_a21edf9bfe07321e1e3d794106c98780c}
+\hypertarget{classlibNumerics_1_1matrix_a21edf9bfe07321e1e3d794106c98780c}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!zeros@{zeros}}
+\index{zeros@{zeros}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{zeros}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::zeros (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classlibNumerics_1_1matrix_a21edf9bfe07321e1e3d794106c98780c}
+\hypertarget{classlibNumerics_1_1matrix_afbb85ec38cb88afa01fa31eb0034efce}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!zeros@{zeros}}
+\index{zeros@{zeros}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{zeros}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::zeros (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1matrix_afbb85ec38cb88afa01fa31eb0034efce}
+\hypertarget{classlibNumerics_1_1matrix_afbb85ec38cb88afa01fa31eb0034efce}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!zeros@{zeros}}
+\index{zeros@{zeros}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{zeros}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ static {\bf matrix}$<$T$>$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::zeros (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1matrix_afbb85ec38cb88afa01fa31eb0034efce}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classlibNumerics_1_1matrix_a8f11dd81601d24fac99dcd35bfd99281}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!cat@{cat}}
+\index{cat@{cat}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{cat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ cat (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{left, }
+\item[{const {\bf matrix}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classlibNumerics_1_1matrix_a8f11dd81601d24fac99dcd35bfd99281}
+\hypertarget{classlibNumerics_1_1matrix_a8f11dd81601d24fac99dcd35bfd99281}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!cat@{cat}}
+\index{cat@{cat}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{cat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ cat (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ T $>$ \&}]{left, }
+\item[{const {\bf matrix}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classlibNumerics_1_1matrix_a8f11dd81601d24fac99dcd35bfd99281}
+\hypertarget{classlibNumerics_1_1matrix_a492932acc21b0979ee8a57409cd091da}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T}]{a, }
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classlibNumerics_1_1matrix_a492932acc21b0979ee8a57409cd091da}
+
+
+Product by scalar. 
+
+\hypertarget{classlibNumerics_1_1matrix_a492932acc21b0979ee8a57409cd091da}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf matrix}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T}]{a, }
+\item[{const {\bf matrix}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classlibNumerics_1_1matrix_a492932acc21b0979ee8a57409cd091da}
+
+
+Product by scalar. 
+
+\hypertarget{classlibNumerics_1_1matrix_a74450cc2b2e883644cff2e3983ebd56f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!swap@{swap}}
+\index{swap@{swap}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} swap (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ T $>$ \&}]{, }
+\item[{{\bf matrix}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classlibNumerics_1_1matrix_a74450cc2b2e883644cff2e3983ebd56f}
+\hypertarget{classlibNumerics_1_1matrix_a74450cc2b2e883644cff2e3983ebd56f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!swap@{swap}}
+\index{swap@{swap}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf void} swap (
+\begin{DoxyParamCaption}
+\item[{{\bf matrix}$<$ T $>$ \&}]{, }
+\item[{{\bf matrix}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classlibNumerics_1_1matrix_a74450cc2b2e883644cff2e3983ebd56f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlibNumerics_1_1matrix_aee316845e7da8c2a06001e4ba5005f6f}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!m\+\_\+cols@{m\+\_\+cols}}
+\index{m\+\_\+cols@{m\+\_\+cols}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{m\+\_\+cols}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::m\+\_\+cols\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_aee316845e7da8c2a06001e4ba5005f6f}
+
+
+Number of columns. 
+
+\hypertarget{classlibNumerics_1_1matrix_a385a7057ca792f9bad1ab7b9d1076ea9}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!m\+\_\+rows@{m\+\_\+rows}}
+\index{m\+\_\+rows@{m\+\_\+rows}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{m\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::m\+\_\+rows\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a385a7057ca792f9bad1ab7b9d1076ea9}
+
+
+Number of rows. 
+
+\hypertarget{classlibNumerics_1_1matrix_a2129a3166fc1209becd143b13225e3c4}{}\index{lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}!p@{p}}
+\index{p@{p}!lib\+Numerics\+::matrix@{lib\+Numerics\+::matrix}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T $\ast$ {\bf lib\+Numerics\+::matrix}$<$ T $>$\+::p\hspace{0.3cm}{\ttfamily [protected]}}\label{classlibNumerics_1_1matrix_a2129a3166fc1209becd143b13225e3c4}
+
+
+1-\/\+D array of coefficients. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+Numerics/\hyperlink{extras_2libNumerics_2matrix_8h}{matrix.\+h}\end{DoxyCompactItemize}

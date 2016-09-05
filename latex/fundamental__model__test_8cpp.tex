@@ -1,0 +1,84 @@
+\hypertarget{fundamental__model__test_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/fundamental\+\_\+model\+\_\+test.cpp File Reference}
+\label{fundamental__model__test_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/fundamental\+\_\+model\+\_\+test.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/fundamental\+\_\+model\+\_\+test.\+cpp}}
+{\ttfamily \#include \char`\"{}../../src/lib\+Orsa/fundamental\+\_\+model.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}../../src/testing/testing.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/third\+\_\+party/\+Cpp\+Unit\+Lite/\+Test\+Harness.\+h\char`\"{}}\\*
+Include dependency graph for fundamental\+\_\+model\+\_\+test.\+cpp\+:
+% FIG 0
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{fundamental__model__test_8cpp_a135b9a5c146af9c77824569cff35c6aa}{Expect\+Fundamental\+Properties} (const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&F, const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&pts\+A, int w1, int h1, const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&pts\+B, int w2, int h2, double precision)
+\item 
+{\footnotesize template$<$class Kernel $>$ }\\bool \hyperlink{fundamental__model__test_8cpp_ac9ed0312f1f0f9199191cf670b58747b}{Expect\+Kernel\+Properties} (const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&x1, int w1, int h1, const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&x2, int w2, int h2)
+\item 
+\hyperlink{fundamental__model__test_8cpp_a40de46bc60fdcfb473bbdad18fc7ce46}{T\+E\+S\+T} (Seven\+Point\+Test, Easy\+Case)
+\item 
+\hyperlink{fundamental__model__test_8cpp_ac8386a6399a75fc674cb62dbf8671358}{T\+E\+S\+T} (Seven\+Point\+Test, Real\+Correspondences)
+\item 
+int \hyperlink{fundamental__model__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{}\index{fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}!Mat@{Mat}}
+\index{Mat@{Mat}!fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}}
+\subsubsection[{Mat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf lib\+Numerics\+::matrix}$<$double$>$ {\bf Mat}}\label{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}
+
+
+\subsection{Function Documentation}
+\hypertarget{fundamental__model__test_8cpp_a135b9a5c146af9c77824569cff35c6aa}{}\index{fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}!Expect\+Fundamental\+Properties@{Expect\+Fundamental\+Properties}}
+\index{Expect\+Fundamental\+Properties@{Expect\+Fundamental\+Properties}!fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}}
+\subsubsection[{Expect\+Fundamental\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}bool Expect\+Fundamental\+Properties (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{F, }
+\item[{const {\bf Mat} \&}]{pts\+A, }
+\item[{int}]{w1, }
+\item[{int}]{h1, }
+\item[{const {\bf Mat} \&}]{pts\+B, }
+\item[{int}]{w2, }
+\item[{int}]{h2, }
+\item[{double}]{precision}
+\end{DoxyParamCaption}
+)}\label{fundamental__model__test_8cpp_a135b9a5c146af9c77824569cff35c6aa}
+\hypertarget{fundamental__model__test_8cpp_ac9ed0312f1f0f9199191cf670b58747b}{}\index{fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}!Expect\+Kernel\+Properties@{Expect\+Kernel\+Properties}}
+\index{Expect\+Kernel\+Properties@{Expect\+Kernel\+Properties}!fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}}
+\subsubsection[{Expect\+Kernel\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Kernel $>$ bool Expect\+Kernel\+Properties (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{x1, }
+\item[{int}]{w1, }
+\item[{int}]{h1, }
+\item[{const {\bf Mat} \&}]{x2, }
+\item[{int}]{w2, }
+\item[{int}]{h2}
+\end{DoxyParamCaption}
+)}\label{fundamental__model__test_8cpp_ac9ed0312f1f0f9199191cf670b58747b}
+\hypertarget{fundamental__model__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{fundamental__model__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{fundamental__model__test_8cpp_a40de46bc60fdcfb473bbdad18fc7ce46}{}\index{fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Seven\+Point\+Test}]{, }
+\item[{Easy\+Case}]{}
+\end{DoxyParamCaption}
+)}\label{fundamental__model__test_8cpp_a40de46bc60fdcfb473bbdad18fc7ce46}
+\hypertarget{fundamental__model__test_8cpp_ac8386a6399a75fc674cb62dbf8671358}{}\index{fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!fundamental\+\_\+model\+\_\+test.\+cpp@{fundamental\+\_\+model\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Seven\+Point\+Test}]{, }
+\item[{Real\+Correspondences}]{}
+\end{DoxyParamCaption}
+)}\label{fundamental__model__test_8cpp_ac8386a6399a75fc674cb62dbf8671358}

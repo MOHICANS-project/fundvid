@@ -1,0 +1,301 @@
+\hypertarget{zutil_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/zlib/zutil.h File Reference}
+\label{zutil_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/zutil.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/zutil.\+h}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/zlib/zlib.\+h\char`\"{}}\\*
+Include dependency graph for zutil.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}
+\item 
+\#define \hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local}~static
+\item 
+\#define \hyperlink{zutil_8h_a66466516a4a71f3c78ccc40d203c92e5}{E\+R\+R\+\_\+\+M\+S\+G}(err)~\hyperlink{zutil_8h_a6eca777f454e3ba74a93593c4731a434}{z\+\_\+errmsg}\mbox{[}\hyperlink{zlib_8h_a32916ba675b2d06463da2576b6a49d64}{Z\+\_\+\+N\+E\+E\+D\+\_\+\+D\+I\+C\+T}-\/(err)\mbox{]}
+\item 
+\#define \hyperlink{zutil_8h_a0fcc2fe26110263e812ce50919b6a5c1}{E\+R\+R\+\_\+\+R\+E\+T\+U\+R\+N}(strm,  err)~return (strm-\/$>$msg = \hyperlink{zutil_8h_a66466516a4a71f3c78ccc40d203c92e5}{E\+R\+R\+\_\+\+M\+S\+G}(err), (err))
+\item 
+\#define \hyperlink{zutil_8h_aef084f32d9ca8b9273a1c826b89b979a}{D\+E\+F\+\_\+\+W\+B\+I\+T\+S}~M\+A\+X\+\_\+\+W\+B\+I\+T\+S
+\item 
+\#define \hyperlink{zutil_8h_a19c8e60fa32d4ddf303ce988ba97af61}{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}~M\+A\+X\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L
+\item 
+\#define \hyperlink{zutil_8h_a9f650bc9c1fbd9499098e3a70d295b8a}{S\+T\+O\+R\+E\+D\+\_\+\+B\+L\+O\+C\+K}~0
+\item 
+\#define \hyperlink{zutil_8h_a0f63a9090acfe4f653f117b638b289d1}{S\+T\+A\+T\+I\+C\+\_\+\+T\+R\+E\+E\+S}~1
+\item 
+\#define \hyperlink{zutil_8h_a40a71de753262f20a0bcacc2304e7b19}{D\+Y\+N\+\_\+\+T\+R\+E\+E\+S}~2
+\item 
+\#define \hyperlink{zutil_8h_a7984ceb1ff48ac91172976b91ed43f60}{M\+I\+N\+\_\+\+M\+A\+T\+C\+H}~3
+\item 
+\#define \hyperlink{zutil_8h_ab7a9188dce25dac8d3a970c01b89b0c6}{M\+A\+X\+\_\+\+M\+A\+T\+C\+H}~258
+\item 
+\#define \hyperlink{zutil_8h_a1156d73d88538d122acfa852b95492bd}{P\+R\+E\+S\+E\+T\+\_\+\+D\+I\+C\+T}~0x20 /$\ast$ preset dictionary flag in zlib header $\ast$/
+\item 
+\#define \hyperlink{zutil_8h_a919da7d9b61966c3af796ab42e618bef}{O\+S\+\_\+\+C\+O\+D\+E}~0x03  /$\ast$ assume Unix $\ast$/
+\item 
+\#define \hyperlink{zutil_8h_a7d40e22cfc0ad4087bf371d61290a0f5}{F\+\_\+\+O\+P\+E\+N}(name,  \hyperlink{png_8h_a3eabae3e1e65723a7ec3445646cb7795}{mode})~fopen((name), (\hyperlink{png_8h_a3eabae3e1e65723a7ec3445646cb7795}{mode}))
+\item 
+\#define \hyperlink{zutil_8h_a5c8d8d889189d1461d10df831f3cd40e}{Assert}(cond,  msg)
+\item 
+\#define \hyperlink{zutil_8h_a93bbe97269cf8304b452a4d472dba191}{Trace}(x)
+\item 
+\#define \hyperlink{zutil_8h_a67eab10382e740297e8a59d69f85464e}{Tracev}(x)
+\item 
+\#define \hyperlink{zutil_8h_ae65182ff511f0b12345c20b6533f32d9}{Tracevv}(x)
+\item 
+\#define \hyperlink{zutil_8h_a15ce9096835263938f62694aee7a0a99}{Tracec}(c,  x)
+\item 
+\#define \hyperlink{zutil_8h_a54a66ee51c61d67607b64678b055af6b}{Tracecv}(c,  x)
+\item 
+\#define \hyperlink{zutil_8h_a39679d03501d691bdfc62a3324cb9548}{Z\+A\+L\+L\+O\+C}(strm,  items,  size)~($\ast$((strm)-\/$>$zalloc))((strm)-\/$>$opaque, (items), (size))
+\item 
+\#define \hyperlink{zutil_8h_a71d7c4f186ae3a055367c92db5a8ab18}{Z\+F\+R\+E\+E}(strm,  addr)~($\ast$((strm)-\/$>$zfree))((strm)-\/$>$opaque, (voidpf)(addr))
+\item 
+\#define \hyperlink{zutil_8h_a8a5cef3599266dcaa129ed959a42bcf6}{T\+R\+Y\+\_\+\+F\+R\+E\+E}(s,  p)~\{if (p) \hyperlink{zutil_8h_a71d7c4f186ae3a055367c92db5a8ab18}{Z\+F\+R\+E\+E}(s, p);\}
+\item 
+\#define \hyperlink{zutil_8h_aac7705d985486c2ec7f09c96b349f311}{Z\+S\+W\+A\+P32}(q)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{zutil_8h_af3307af5922c72924a837559c801a8a4}{uch}
+\item 
+typedef \hyperlink{zutil_8h_af3307af5922c72924a837559c801a8a4}{uch} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} \hyperlink{zutil_8h_aaa6fdf02a2fdaf3731f17a19920ddb0b}{uchf}
+\item 
+typedef unsigned short \hyperlink{zutil_8h_a3754180d606d4ed15468d15d9665aa2e}{ush}
+\item 
+typedef \hyperlink{zutil_8h_a3754180d606d4ed15468d15d9665aa2e}{ush} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} \hyperlink{zutil_8h_ab854e4722acf30ada8a7a71b58d1b238}{ushf}
+\item 
+typedef unsigned long \hyperlink{zutil_8h_abd6f60bf9450af2ecb94097a32c19a64}{ulg}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Z\+E\+X\+T\+E\+R\+N u\+Long Z\+E\+X\+P\+O\+R\+T \hyperlink{adler32_8c_a02d5e6475de540c47e56fe0c37178c22}{adler32\+\_\+combine64} \hyperlink{zutil_8h_af4c7589f992eb4a3749eb5346a388481}{O\+F} ((u\+Long, u\+Long, z\+\_\+off\+\_\+t))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_aac7aa2bbd8584b96c89e311b6c3409a5}{zmemcpy} \hyperlink{zutil_8h_a7dfda152913a0f49d451d4ccf9505010}{O\+F} ((Bytef $\ast$dest, const Bytef $\ast$source, u\+Int len))
+\item 
+int \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_afa24e136b162a10f0ad3b2ed3000b413}{zmemcmp} \hyperlink{zutil_8h_a1955fd2c6541c1efd6655ae1f13f2d6b}{O\+F} ((const Bytef $\ast$s1, const Bytef $\ast$s2, u\+Int len))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_a9d1ad31f82b89b791ce9c70c24d3947c}{zmemzero} \hyperlink{zutil_8h_a06f4a75197c392dddbdae31128c49958}{O\+F} ((Bytef $\ast$dest, u\+Int len))
+\item 
+voidpf \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_a41dc53193e9af4588e7bcbe459f4f834}{zcalloc} \hyperlink{zutil_8h_a085a6a51699c29d2fbbb5e04ed624563}{O\+F} ((voidpf opaque, unsigned items, unsigned size))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{zutil_8c_a03a8230ad4ec43e8916fa91aad05bfd3}{zcfree} \hyperlink{zutil_8h_afd7c8a4ea1366968a93bf375c2b9b942}{O\+F} ((voidpf opaque, voidpf ptr))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+z\+\_\+const char $\ast$const \hyperlink{zutil_8h_a6eca777f454e3ba74a93593c4731a434}{z\+\_\+errmsg} \mbox{[}10\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{zutil_8h_a5c8d8d889189d1461d10df831f3cd40e}{}\index{zutil.\+h@{zutil.\+h}!Assert@{Assert}}
+\index{Assert@{Assert}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Assert}]{\setlength{\rightskip}{0pt plus 5cm}\#define Assert(
+\begin{DoxyParamCaption}
+\item[{}]{cond, }
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a5c8d8d889189d1461d10df831f3cd40e}
+\hypertarget{zutil_8h_a19c8e60fa32d4ddf303ce988ba97af61}{}\index{zutil.\+h@{zutil.\+h}!D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L@{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}}
+\index{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L@{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L~M\+A\+X\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}\label{zutil_8h_a19c8e60fa32d4ddf303ce988ba97af61}
+\hypertarget{zutil_8h_aef084f32d9ca8b9273a1c826b89b979a}{}\index{zutil.\+h@{zutil.\+h}!D\+E\+F\+\_\+\+W\+B\+I\+T\+S@{D\+E\+F\+\_\+\+W\+B\+I\+T\+S}}
+\index{D\+E\+F\+\_\+\+W\+B\+I\+T\+S@{D\+E\+F\+\_\+\+W\+B\+I\+T\+S}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{D\+E\+F\+\_\+\+W\+B\+I\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+\_\+\+W\+B\+I\+T\+S~M\+A\+X\+\_\+\+W\+B\+I\+T\+S}\label{zutil_8h_aef084f32d9ca8b9273a1c826b89b979a}
+\hypertarget{zutil_8h_a40a71de753262f20a0bcacc2304e7b19}{}\index{zutil.\+h@{zutil.\+h}!D\+Y\+N\+\_\+\+T\+R\+E\+E\+S@{D\+Y\+N\+\_\+\+T\+R\+E\+E\+S}}
+\index{D\+Y\+N\+\_\+\+T\+R\+E\+E\+S@{D\+Y\+N\+\_\+\+T\+R\+E\+E\+S}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{D\+Y\+N\+\_\+\+T\+R\+E\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+Y\+N\+\_\+\+T\+R\+E\+E\+S~2}\label{zutil_8h_a40a71de753262f20a0bcacc2304e7b19}
+\hypertarget{zutil_8h_a66466516a4a71f3c78ccc40d203c92e5}{}\index{zutil.\+h@{zutil.\+h}!E\+R\+R\+\_\+\+M\+S\+G@{E\+R\+R\+\_\+\+M\+S\+G}}
+\index{E\+R\+R\+\_\+\+M\+S\+G@{E\+R\+R\+\_\+\+M\+S\+G}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{E\+R\+R\+\_\+\+M\+S\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+\_\+\+M\+S\+G(
+\begin{DoxyParamCaption}
+\item[{}]{err}
+\end{DoxyParamCaption}
+)~{\bf z\+\_\+errmsg}\mbox{[}{\bf Z\+\_\+\+N\+E\+E\+D\+\_\+\+D\+I\+C\+T}-\/(err)\mbox{]}}\label{zutil_8h_a66466516a4a71f3c78ccc40d203c92e5}
+\hypertarget{zutil_8h_a0fcc2fe26110263e812ce50919b6a5c1}{}\index{zutil.\+h@{zutil.\+h}!E\+R\+R\+\_\+\+R\+E\+T\+U\+R\+N@{E\+R\+R\+\_\+\+R\+E\+T\+U\+R\+N}}
+\index{E\+R\+R\+\_\+\+R\+E\+T\+U\+R\+N@{E\+R\+R\+\_\+\+R\+E\+T\+U\+R\+N}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{E\+R\+R\+\_\+\+R\+E\+T\+U\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+\_\+\+R\+E\+T\+U\+R\+N(
+\begin{DoxyParamCaption}
+\item[{}]{strm, }
+\item[{}]{err}
+\end{DoxyParamCaption}
+)~return (strm-\/$>$msg = {\bf E\+R\+R\+\_\+\+M\+S\+G}(err), (err))}\label{zutil_8h_a0fcc2fe26110263e812ce50919b6a5c1}
+\hypertarget{zutil_8h_a7d40e22cfc0ad4087bf371d61290a0f5}{}\index{zutil.\+h@{zutil.\+h}!F\+\_\+\+O\+P\+E\+N@{F\+\_\+\+O\+P\+E\+N}}
+\index{F\+\_\+\+O\+P\+E\+N@{F\+\_\+\+O\+P\+E\+N}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{F\+\_\+\+O\+P\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+\_\+\+O\+P\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{{\bf mode}}
+\end{DoxyParamCaption}
+)~fopen((name), ({\bf mode}))}\label{zutil_8h_a7d40e22cfc0ad4087bf371d61290a0f5}
+\hypertarget{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{}\index{zutil.\+h@{zutil.\+h}!local@{local}}
+\index{local@{local}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{local}]{\setlength{\rightskip}{0pt plus 5cm}\#define local~static}\label{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}
+\hypertarget{zutil_8h_ab7a9188dce25dac8d3a970c01b89b0c6}{}\index{zutil.\+h@{zutil.\+h}!M\+A\+X\+\_\+\+M\+A\+T\+C\+H@{M\+A\+X\+\_\+\+M\+A\+T\+C\+H}}
+\index{M\+A\+X\+\_\+\+M\+A\+T\+C\+H@{M\+A\+X\+\_\+\+M\+A\+T\+C\+H}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+M\+A\+T\+C\+H~258}\label{zutil_8h_ab7a9188dce25dac8d3a970c01b89b0c6}
+\hypertarget{zutil_8h_a7984ceb1ff48ac91172976b91ed43f60}{}\index{zutil.\+h@{zutil.\+h}!M\+I\+N\+\_\+\+M\+A\+T\+C\+H@{M\+I\+N\+\_\+\+M\+A\+T\+C\+H}}
+\index{M\+I\+N\+\_\+\+M\+A\+T\+C\+H@{M\+I\+N\+\_\+\+M\+A\+T\+C\+H}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{M\+I\+N\+\_\+\+M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+\_\+\+M\+A\+T\+C\+H~3}\label{zutil_8h_a7984ceb1ff48ac91172976b91ed43f60}
+\hypertarget{zutil_8h_a919da7d9b61966c3af796ab42e618bef}{}\index{zutil.\+h@{zutil.\+h}!O\+S\+\_\+\+C\+O\+D\+E@{O\+S\+\_\+\+C\+O\+D\+E}}
+\index{O\+S\+\_\+\+C\+O\+D\+E@{O\+S\+\_\+\+C\+O\+D\+E}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{O\+S\+\_\+\+C\+O\+D\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+S\+\_\+\+C\+O\+D\+E~0x03  /$\ast$ assume Unix $\ast$/}\label{zutil_8h_a919da7d9b61966c3af796ab42e618bef}
+\hypertarget{zutil_8h_a1156d73d88538d122acfa852b95492bd}{}\index{zutil.\+h@{zutil.\+h}!P\+R\+E\+S\+E\+T\+\_\+\+D\+I\+C\+T@{P\+R\+E\+S\+E\+T\+\_\+\+D\+I\+C\+T}}
+\index{P\+R\+E\+S\+E\+T\+\_\+\+D\+I\+C\+T@{P\+R\+E\+S\+E\+T\+\_\+\+D\+I\+C\+T}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{P\+R\+E\+S\+E\+T\+\_\+\+D\+I\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+E\+S\+E\+T\+\_\+\+D\+I\+C\+T~0x20 /$\ast$ preset dictionary flag in zlib header $\ast$/}\label{zutil_8h_a1156d73d88538d122acfa852b95492bd}
+\hypertarget{zutil_8h_a0f63a9090acfe4f653f117b638b289d1}{}\index{zutil.\+h@{zutil.\+h}!S\+T\+A\+T\+I\+C\+\_\+\+T\+R\+E\+E\+S@{S\+T\+A\+T\+I\+C\+\_\+\+T\+R\+E\+E\+S}}
+\index{S\+T\+A\+T\+I\+C\+\_\+\+T\+R\+E\+E\+S@{S\+T\+A\+T\+I\+C\+\_\+\+T\+R\+E\+E\+S}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{S\+T\+A\+T\+I\+C\+\_\+\+T\+R\+E\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+I\+C\+\_\+\+T\+R\+E\+E\+S~1}\label{zutil_8h_a0f63a9090acfe4f653f117b638b289d1}
+\hypertarget{zutil_8h_a9f650bc9c1fbd9499098e3a70d295b8a}{}\index{zutil.\+h@{zutil.\+h}!S\+T\+O\+R\+E\+D\+\_\+\+B\+L\+O\+C\+K@{S\+T\+O\+R\+E\+D\+\_\+\+B\+L\+O\+C\+K}}
+\index{S\+T\+O\+R\+E\+D\+\_\+\+B\+L\+O\+C\+K@{S\+T\+O\+R\+E\+D\+\_\+\+B\+L\+O\+C\+K}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{S\+T\+O\+R\+E\+D\+\_\+\+B\+L\+O\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+O\+R\+E\+D\+\_\+\+B\+L\+O\+C\+K~0}\label{zutil_8h_a9f650bc9c1fbd9499098e3a70d295b8a}
+\hypertarget{zutil_8h_a93bbe97269cf8304b452a4d472dba191}{}\index{zutil.\+h@{zutil.\+h}!Trace@{Trace}}
+\index{Trace@{Trace}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Trace}]{\setlength{\rightskip}{0pt plus 5cm}\#define Trace(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a93bbe97269cf8304b452a4d472dba191}
+\hypertarget{zutil_8h_a15ce9096835263938f62694aee7a0a99}{}\index{zutil.\+h@{zutil.\+h}!Tracec@{Tracec}}
+\index{Tracec@{Tracec}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Tracec}]{\setlength{\rightskip}{0pt plus 5cm}\#define Tracec(
+\begin{DoxyParamCaption}
+\item[{}]{c, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a15ce9096835263938f62694aee7a0a99}
+\hypertarget{zutil_8h_a54a66ee51c61d67607b64678b055af6b}{}\index{zutil.\+h@{zutil.\+h}!Tracecv@{Tracecv}}
+\index{Tracecv@{Tracecv}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Tracecv}]{\setlength{\rightskip}{0pt plus 5cm}\#define Tracecv(
+\begin{DoxyParamCaption}
+\item[{}]{c, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a54a66ee51c61d67607b64678b055af6b}
+\hypertarget{zutil_8h_a67eab10382e740297e8a59d69f85464e}{}\index{zutil.\+h@{zutil.\+h}!Tracev@{Tracev}}
+\index{Tracev@{Tracev}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Tracev}]{\setlength{\rightskip}{0pt plus 5cm}\#define Tracev(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a67eab10382e740297e8a59d69f85464e}
+\hypertarget{zutil_8h_ae65182ff511f0b12345c20b6533f32d9}{}\index{zutil.\+h@{zutil.\+h}!Tracevv@{Tracevv}}
+\index{Tracevv@{Tracevv}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Tracevv}]{\setlength{\rightskip}{0pt plus 5cm}\#define Tracevv(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_ae65182ff511f0b12345c20b6533f32d9}
+\hypertarget{zutil_8h_a8a5cef3599266dcaa129ed959a42bcf6}{}\index{zutil.\+h@{zutil.\+h}!T\+R\+Y\+\_\+\+F\+R\+E\+E@{T\+R\+Y\+\_\+\+F\+R\+E\+E}}
+\index{T\+R\+Y\+\_\+\+F\+R\+E\+E@{T\+R\+Y\+\_\+\+F\+R\+E\+E}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{T\+R\+Y\+\_\+\+F\+R\+E\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+Y\+\_\+\+F\+R\+E\+E(
+\begin{DoxyParamCaption}
+\item[{}]{s, }
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~\{if (p) {\bf Z\+F\+R\+E\+E}(s, p);\}}\label{zutil_8h_a8a5cef3599266dcaa129ed959a42bcf6}
+\hypertarget{zutil_8h_a39679d03501d691bdfc62a3324cb9548}{}\index{zutil.\+h@{zutil.\+h}!Z\+A\+L\+L\+O\+C@{Z\+A\+L\+L\+O\+C}}
+\index{Z\+A\+L\+L\+O\+C@{Z\+A\+L\+L\+O\+C}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Z\+A\+L\+L\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+A\+L\+L\+O\+C(
+\begin{DoxyParamCaption}
+\item[{}]{strm, }
+\item[{}]{items, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~($\ast$((strm)-\/$>$zalloc))((strm)-\/$>$opaque, (items), (size))}\label{zutil_8h_a39679d03501d691bdfc62a3324cb9548}
+\hypertarget{zutil_8h_a71d7c4f186ae3a055367c92db5a8ab18}{}\index{zutil.\+h@{zutil.\+h}!Z\+F\+R\+E\+E@{Z\+F\+R\+E\+E}}
+\index{Z\+F\+R\+E\+E@{Z\+F\+R\+E\+E}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Z\+F\+R\+E\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+F\+R\+E\+E(
+\begin{DoxyParamCaption}
+\item[{}]{strm, }
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~($\ast$((strm)-\/$>$zfree))((strm)-\/$>$opaque, (voidpf)(addr))}\label{zutil_8h_a71d7c4f186ae3a055367c92db5a8ab18}
+\hypertarget{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{}\index{zutil.\+h@{zutil.\+h}!Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L@{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}}
+\index{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L@{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}\label{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}
+\hypertarget{zutil_8h_aac7705d985486c2ec7f09c96b349f311}{}\index{zutil.\+h@{zutil.\+h}!Z\+S\+W\+A\+P32@{Z\+S\+W\+A\+P32}}
+\index{Z\+S\+W\+A\+P32@{Z\+S\+W\+A\+P32}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{Z\+S\+W\+A\+P32}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+S\+W\+A\+P32(
+\begin{DoxyParamCaption}
+\item[{}]{q}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_aac7705d985486c2ec7f09c96b349f311}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((((q) >> 24) & 0xff) + (((q) >> 8) & 0xff00) + \(\backslash\)
+                    (((q) & 0xff00) << 8) + (((q) & 0xff) << 24))
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{zutil_8h_af3307af5922c72924a837559c801a8a4}{}\index{zutil.\+h@{zutil.\+h}!uch@{uch}}
+\index{uch@{uch}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{uch}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf uch}}\label{zutil_8h_af3307af5922c72924a837559c801a8a4}
+\hypertarget{zutil_8h_aaa6fdf02a2fdaf3731f17a19920ddb0b}{}\index{zutil.\+h@{zutil.\+h}!uchf@{uchf}}
+\index{uchf@{uchf}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{uchf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf uch} {\bf F\+A\+R} {\bf uchf}}\label{zutil_8h_aaa6fdf02a2fdaf3731f17a19920ddb0b}
+\hypertarget{zutil_8h_abd6f60bf9450af2ecb94097a32c19a64}{}\index{zutil.\+h@{zutil.\+h}!ulg@{ulg}}
+\index{ulg@{ulg}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{ulg}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf ulg}}\label{zutil_8h_abd6f60bf9450af2ecb94097a32c19a64}
+\hypertarget{zutil_8h_a3754180d606d4ed15468d15d9665aa2e}{}\index{zutil.\+h@{zutil.\+h}!ush@{ush}}
+\index{ush@{ush}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{ush}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf ush}}\label{zutil_8h_a3754180d606d4ed15468d15d9665aa2e}
+\hypertarget{zutil_8h_ab854e4722acf30ada8a7a71b58d1b238}{}\index{zutil.\+h@{zutil.\+h}!ushf@{ushf}}
+\index{ushf@{ushf}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{ushf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf ush} {\bf F\+A\+R} {\bf ushf}}\label{zutil_8h_ab854e4722acf30ada8a7a71b58d1b238}
+
+
+\subsection{Function Documentation}
+\hypertarget{zutil_8h_af4c7589f992eb4a3749eb5346a388481}{}\index{zutil.\+h@{zutil.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}Z\+E\+X\+T\+E\+R\+N u\+Long Z\+E\+X\+P\+O\+R\+T {\bf adler32\+\_\+combine64} O\+F (
+\begin{DoxyParamCaption}
+\item[{(u\+Long, u\+Long, z\+\_\+off\+\_\+t)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_af4c7589f992eb4a3749eb5346a388481}
+\hypertarget{zutil_8h_a7dfda152913a0f49d451d4ccf9505010}{}\index{zutil.\+h@{zutil.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} {\bf zmemcpy} O\+F (
+\begin{DoxyParamCaption}
+\item[{(Bytef $\ast$dest, const Bytef $\ast$source, u\+Int len)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a7dfda152913a0f49d451d4ccf9505010}
+\hypertarget{zutil_8h_a1955fd2c6541c1efd6655ae1f13f2d6b}{}\index{zutil.\+h@{zutil.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} {\bf zmemcmp} O\+F (
+\begin{DoxyParamCaption}
+\item[{(const Bytef $\ast$s1, const Bytef $\ast$s2, u\+Int len)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a1955fd2c6541c1efd6655ae1f13f2d6b}
+\hypertarget{zutil_8h_a06f4a75197c392dddbdae31128c49958}{}\index{zutil.\+h@{zutil.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} {\bf zmemzero} O\+F (
+\begin{DoxyParamCaption}
+\item[{(Bytef $\ast$dest, u\+Int len)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a06f4a75197c392dddbdae31128c49958}
+\hypertarget{zutil_8h_a085a6a51699c29d2fbbb5e04ed624563}{}\index{zutil.\+h@{zutil.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}voidpf {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} {\bf zcalloc} O\+F (
+\begin{DoxyParamCaption}
+\item[{(voidpf opaque, unsigned items, unsigned size)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_a085a6a51699c29d2fbbb5e04ed624563}
+\hypertarget{zutil_8h_afd7c8a4ea1366968a93bf375c2b9b942}{}\index{zutil.\+h@{zutil.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} {\bf zcfree} O\+F (
+\begin{DoxyParamCaption}
+\item[{(voidpf opaque, voidpf ptr)}]{}
+\end{DoxyParamCaption}
+)}\label{zutil_8h_afd7c8a4ea1366968a93bf375c2b9b942}
+
+
+\subsection{Variable Documentation}
+\hypertarget{zutil_8h_a6eca777f454e3ba74a93593c4731a434}{}\index{zutil.\+h@{zutil.\+h}!z\+\_\+errmsg@{z\+\_\+errmsg}}
+\index{z\+\_\+errmsg@{z\+\_\+errmsg}!zutil.\+h@{zutil.\+h}}
+\subsubsection[{z\+\_\+errmsg}]{\setlength{\rightskip}{0pt plus 5cm}z\+\_\+const char$\ast$ const z\+\_\+errmsg\mbox{[}10\mbox{]}}\label{zutil_8h_a6eca777f454e3ba74a93593c4731a434}

@@ -1,0 +1,81 @@
+\hypertarget{classCmdLine}{}\section{Cmd\+Line Class Reference}
+\label{classCmdLine}\index{Cmd\+Line@{Cmd\+Line}}
+
+
+Command line parsing.  
+
+
+
+
+{\ttfamily \#include $<$cmd\+Line.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCmdLine_adacf99c4b9d37b19c6d7b955f23c073a}{$\sim$\+Cmd\+Line} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classCmdLine_ad6093d65056d86bf3a0fecd45329f7de}{add} (const \hyperlink{classOption}{Option} \&opt)
+\begin{DoxyCompactList}\small\item\em Add an option. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classCmdLine_a777bc2f665289af03cfb37908421c4c0}{process} (int \&argc, char $\ast$argv\mbox{[}$\,$\mbox{]})  throw (std\+::string)
+\begin{DoxyCompactList}\small\item\em Parse of command line acting as a filter. \end{DoxyCompactList}\item 
+bool \hyperlink{classCmdLine_aeb6e864bf140dfc764e89df0cbd6585f}{used} (char c) const 
+\begin{DoxyCompactList}\small\item\em Was the option used in last parsing? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Command line parsing. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCmdLine_adacf99c4b9d37b19c6d7b955f23c073a}{}\index{Cmd\+Line@{Cmd\+Line}!````~Cmd\+Line@{$\sim$\+Cmd\+Line}}
+\index{````~Cmd\+Line@{$\sim$\+Cmd\+Line}!Cmd\+Line@{Cmd\+Line}}
+\subsubsection[{$\sim$\+Cmd\+Line}]{\setlength{\rightskip}{0pt plus 5cm}Cmd\+Line\+::$\sim$\+Cmd\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classCmdLine_adacf99c4b9d37b19c6d7b955f23c073a}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCmdLine_ad6093d65056d86bf3a0fecd45329f7de}{}\index{Cmd\+Line@{Cmd\+Line}!add@{add}}
+\index{add@{add}!Cmd\+Line@{Cmd\+Line}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Cmd\+Line\+::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Option} \&}]{opt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classCmdLine_ad6093d65056d86bf3a0fecd45329f7de}
+
+
+Add an option. 
+
+\hypertarget{classCmdLine_a777bc2f665289af03cfb37908421c4c0}{}\index{Cmd\+Line@{Cmd\+Line}!process@{process}}
+\index{process@{process}!Cmd\+Line@{Cmd\+Line}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Cmd\+Line\+::process (
+\begin{DoxyParamCaption}
+\item[{int \&}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+) throw  std\+::string) \hspace{0.3cm}{\ttfamily [inline]}}\label{classCmdLine_a777bc2f665289af03cfb37908421c4c0}
+
+
+Parse of command line acting as a filter. 
+
+All options are virtually removed from the command line. \hypertarget{classCmdLine_aeb6e864bf140dfc764e89df0cbd6585f}{}\index{Cmd\+Line@{Cmd\+Line}!used@{used}}
+\index{used@{used}!Cmd\+Line@{Cmd\+Line}}
+\subsubsection[{used}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\+Line\+::used (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classCmdLine_aeb6e864bf140dfc764e89df0cbd6585f}
+
+
+Was the option used in last parsing? 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/\hyperlink{cmdLine_8h}{cmd\+Line.\+h}\end{DoxyCompactItemize}

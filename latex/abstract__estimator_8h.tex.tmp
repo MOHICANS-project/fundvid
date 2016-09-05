@@ -1,0 +1,13 @@
+\hypertarget{abstract__estimator_8h}{}\section{src/estimation/abstract\+\_\+estimator.h File Reference}
+\label{abstract__estimator_8h}\index{src/estimation/abstract\+\_\+estimator.\+h@{src/estimation/abstract\+\_\+estimator.\+h}}
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
+Include dependency graph for abstract\+\_\+estimator.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classAbstractEstimator}{Abstract\+Estimator}
+\begin{DoxyCompactList}\small\item\em Interface for fundamental matrix estimation algorithms. \end{DoxyCompactList}\end{DoxyCompactItemize}

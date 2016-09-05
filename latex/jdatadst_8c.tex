@@ -1,0 +1,140 @@
+\hypertarget{jdatadst_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jdatadst.c File Reference}
+\label{jdatadst_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdatadst.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdatadst.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jerror.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jdatadst.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__destination__mgr}{my\+\_\+destination\+\_\+mgr}
+\item 
+struct \hyperlink{structmy__mem__destination__mgr}{my\+\_\+mem\+\_\+destination\+\_\+mgr}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jdatadst_8c_a8acf94def2dcba72a4fce097981e0aa7}{O\+U\+T\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~4096	/$\ast$ choose an efficiently fwrite\textquotesingle{}able size $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__destination__mgr}{my\+\_\+destination\+\_\+mgr} $\ast$ \hyperlink{jdatadst_8c_aaa572679b68ce44ebdaf8e21772ce9a7}{my\+\_\+dest\+\_\+ptr}
+\item 
+typedef \hyperlink{structmy__mem__destination__mgr}{my\+\_\+mem\+\_\+destination\+\_\+mgr} $\ast$ \hyperlink{jdatadst_8c_ac5d49d718556673ca075b97a67ee5b3a}{my\+\_\+mem\+\_\+dest\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$malloc \hyperlink{jdatadst_8c_aef13a9112edda4a9c7d509db9e8abb6c}{J\+P\+P} ((size\+\_\+t size))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} free \hyperlink{jdatadst_8c_a71e083248c713fdce8bbd2aa40652425}{J\+P\+P} ((\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$ptr))
+\item 
+\hyperlink{jdatadst_8c_abc7ed5278b728c7fd1cb2b00d5297c75}{init\+\_\+destination} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatadst_8c_a6f87db22359ee8dec52dbe63e46b4111}{init\+\_\+mem\+\_\+destination} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatadst_8c_ad29423c77a4142a1ec1771aa4a419a09}{empty\+\_\+output\+\_\+buffer} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatadst_8c_a9278b22dbfaf6469c03d35d5af09b745}{empty\+\_\+mem\+\_\+output\+\_\+buffer} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatadst_8c_a6501130b84bb53734f08418196d00dc4}{term\+\_\+destination} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatadst_8c_a2d3ae7c72dd16d65d8454e19042300c7}{term\+\_\+mem\+\_\+destination} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatadst_8c_ac810ca7052903762b138fb7b0084270d}{jpeg\+\_\+stdio\+\_\+dest} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, F\+I\+L\+E $\ast$\hyperlink{jpeglib_8h_ae581849c67336453bd5b81e6518019a9}{outfile})
+\item 
+\hyperlink{jdatadst_8c_a340d34198dc6e1052b498bf4a55a74df}{jpeg\+\_\+mem\+\_\+dest} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, unsigned char $\ast$$\ast$\hyperlink{jpeglib_8h_a41ded6c3d7ffa6c759f426a583de6bc3}{outbuffer}, unsigned long $\ast$\hyperlink{jpeglib_8h_a55032c7f7c9ad8fc2bfd0790ea21e42c}{outsize})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jdatadst_8c_a8acf94def2dcba72a4fce097981e0aa7}{}\index{jdatadst.\+c@{jdatadst.\+c}!O\+U\+T\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{O\+U\+T\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{O\+U\+T\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{O\+U\+T\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{O\+U\+T\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+U\+T\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~4096	/$\ast$ choose an efficiently fwrite\textquotesingle{}able size $\ast$/}\label{jdatadst_8c_a8acf94def2dcba72a4fce097981e0aa7}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jdatadst_8c_aaa572679b68ce44ebdaf8e21772ce9a7}{}\index{jdatadst.\+c@{jdatadst.\+c}!my\+\_\+dest\+\_\+ptr@{my\+\_\+dest\+\_\+ptr}}
+\index{my\+\_\+dest\+\_\+ptr@{my\+\_\+dest\+\_\+ptr}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{my\+\_\+dest\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+destination\+\_\+mgr}$\ast$ {\bf my\+\_\+dest\+\_\+ptr}}\label{jdatadst_8c_aaa572679b68ce44ebdaf8e21772ce9a7}
+\hypertarget{jdatadst_8c_ac5d49d718556673ca075b97a67ee5b3a}{}\index{jdatadst.\+c@{jdatadst.\+c}!my\+\_\+mem\+\_\+dest\+\_\+ptr@{my\+\_\+mem\+\_\+dest\+\_\+ptr}}
+\index{my\+\_\+mem\+\_\+dest\+\_\+ptr@{my\+\_\+mem\+\_\+dest\+\_\+ptr}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{my\+\_\+mem\+\_\+dest\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+mem\+\_\+destination\+\_\+mgr}$\ast$ {\bf my\+\_\+mem\+\_\+dest\+\_\+ptr}}\label{jdatadst_8c_ac5d49d718556673ca075b97a67ee5b3a}
+
+
+\subsection{Function Documentation}
+\hypertarget{jdatadst_8c_a9278b22dbfaf6469c03d35d5af09b745}{}\index{jdatadst.\+c@{jdatadst.\+c}!empty\+\_\+mem\+\_\+output\+\_\+buffer@{empty\+\_\+mem\+\_\+output\+\_\+buffer}}
+\index{empty\+\_\+mem\+\_\+output\+\_\+buffer@{empty\+\_\+mem\+\_\+output\+\_\+buffer}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{empty\+\_\+mem\+\_\+output\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}empty\+\_\+mem\+\_\+output\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_a9278b22dbfaf6469c03d35d5af09b745}
+\hypertarget{jdatadst_8c_ad29423c77a4142a1ec1771aa4a419a09}{}\index{jdatadst.\+c@{jdatadst.\+c}!empty\+\_\+output\+\_\+buffer@{empty\+\_\+output\+\_\+buffer}}
+\index{empty\+\_\+output\+\_\+buffer@{empty\+\_\+output\+\_\+buffer}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{empty\+\_\+output\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}empty\+\_\+output\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_ad29423c77a4142a1ec1771aa4a419a09}
+\hypertarget{jdatadst_8c_abc7ed5278b728c7fd1cb2b00d5297c75}{}\index{jdatadst.\+c@{jdatadst.\+c}!init\+\_\+destination@{init\+\_\+destination}}
+\index{init\+\_\+destination@{init\+\_\+destination}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{init\+\_\+destination}]{\setlength{\rightskip}{0pt plus 5cm}init\+\_\+destination (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_abc7ed5278b728c7fd1cb2b00d5297c75}
+\hypertarget{jdatadst_8c_a6f87db22359ee8dec52dbe63e46b4111}{}\index{jdatadst.\+c@{jdatadst.\+c}!init\+\_\+mem\+\_\+destination@{init\+\_\+mem\+\_\+destination}}
+\index{init\+\_\+mem\+\_\+destination@{init\+\_\+mem\+\_\+destination}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{init\+\_\+mem\+\_\+destination}]{\setlength{\rightskip}{0pt plus 5cm}init\+\_\+mem\+\_\+destination (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_a6f87db22359ee8dec52dbe63e46b4111}
+\hypertarget{jdatadst_8c_a340d34198dc6e1052b498bf4a55a74df}{}\index{jdatadst.\+c@{jdatadst.\+c}!jpeg\+\_\+mem\+\_\+dest@{jpeg\+\_\+mem\+\_\+dest}}
+\index{jpeg\+\_\+mem\+\_\+dest@{jpeg\+\_\+mem\+\_\+dest}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{jpeg\+\_\+mem\+\_\+dest}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+mem\+\_\+dest (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{unsigned char $\ast$$\ast$}]{outbuffer, }
+\item[{unsigned long $\ast$}]{outsize}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_a340d34198dc6e1052b498bf4a55a74df}
+\hypertarget{jdatadst_8c_ac810ca7052903762b138fb7b0084270d}{}\index{jdatadst.\+c@{jdatadst.\+c}!jpeg\+\_\+stdio\+\_\+dest@{jpeg\+\_\+stdio\+\_\+dest}}
+\index{jpeg\+\_\+stdio\+\_\+dest@{jpeg\+\_\+stdio\+\_\+dest}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{jpeg\+\_\+stdio\+\_\+dest}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+stdio\+\_\+dest (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{F\+I\+L\+E $\ast$}]{outfile}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_ac810ca7052903762b138fb7b0084270d}
+\hypertarget{jdatadst_8c_aef13a9112edda4a9c7d509db9e8abb6c}{}\index{jdatadst.\+c@{jdatadst.\+c}!J\+P\+P@{J\+P\+P}}
+\index{J\+P\+P@{J\+P\+P}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{J\+P\+P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void}$\ast$ malloc J\+P\+P (
+\begin{DoxyParamCaption}
+\item[{(size\+\_\+t size)}]{}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_aef13a9112edda4a9c7d509db9e8abb6c}
+\hypertarget{jdatadst_8c_a71e083248c713fdce8bbd2aa40652425}{}\index{jdatadst.\+c@{jdatadst.\+c}!J\+P\+P@{J\+P\+P}}
+\index{J\+P\+P@{J\+P\+P}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{J\+P\+P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} free J\+P\+P (
+\begin{DoxyParamCaption}
+\item[{({\bf void} $\ast$ptr)}]{}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_a71e083248c713fdce8bbd2aa40652425}
+\hypertarget{jdatadst_8c_a6501130b84bb53734f08418196d00dc4}{}\index{jdatadst.\+c@{jdatadst.\+c}!term\+\_\+destination@{term\+\_\+destination}}
+\index{term\+\_\+destination@{term\+\_\+destination}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{term\+\_\+destination}]{\setlength{\rightskip}{0pt plus 5cm}term\+\_\+destination (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_a6501130b84bb53734f08418196d00dc4}
+\hypertarget{jdatadst_8c_a2d3ae7c72dd16d65d8454e19042300c7}{}\index{jdatadst.\+c@{jdatadst.\+c}!term\+\_\+mem\+\_\+destination@{term\+\_\+mem\+\_\+destination}}
+\index{term\+\_\+mem\+\_\+destination@{term\+\_\+mem\+\_\+destination}!jdatadst.\+c@{jdatadst.\+c}}
+\subsubsection[{term\+\_\+mem\+\_\+destination}]{\setlength{\rightskip}{0pt plus 5cm}term\+\_\+mem\+\_\+destination (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatadst_8c_a2d3ae7c72dd16d65d8454e19042300c7}

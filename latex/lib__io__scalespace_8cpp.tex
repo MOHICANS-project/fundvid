@@ -1,0 +1,196 @@
+\hypertarget{lib__io__scalespace_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+io\+\_\+scalespace.cpp File Reference}
+\label{lib__io__scalespace_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+io\+\_\+scalespace.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+io\+\_\+scalespace.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$float.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+discrete.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+io\+\_\+scalespace.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}io\+\_\+png.\+h\char`\"{}}\\*
+Include dependency graph for lib\+\_\+io\+\_\+scalespace.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_ab47ccd15024c3a2631e5d5aca89870d1}{print\+Image} (const float $\ast$image\+In, int w, int h, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Assumes the values of image\+In are ranging from 0 to 1. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_ae39d3c8adb7e7c360d978b387af84c90}{print\+Image\+\_\+\+Linear\+Conversion} (const float $\ast$image\+In, int w, int h, const char $\ast$name)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a1539f054d17ae9afb06dad127cfa23ef}{printrgb} (const float $\ast$rgb, int w, int h, const char $\ast$name)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a8ee97917eef084b7f232f1a3bde57ab6}{gray2hsv} (const float $\ast$gray, float $\ast$rgb, int w, int h, float vmin, float vmax)
+\begin{DoxyCompactList}\small\item\em Gray to false color (using the H\+S\+V colormap) \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a1bdd13b73ec7953580410cd9de141b5f}{print\+\_\+sift\+\_\+scalespace\+\_\+gray} (const struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$scalespace, const char $\ast$basename)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a48be62c36b8c57a1d4f2999c99b8ec3f}{nearestneighbor\+\_\+interp} (const float $\ast$in, int win, int hin, float $\ast$out, int wout, int hout)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_ad943a0352a739e80f30a905c5b5e9b2e}{Msh2\+Lab} (float M, float s, float h, float $\ast$L, float $\ast$a, float $\ast$\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b})
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a2080fcc6a7f24d5eb901a57f48daef21}{Lab2xyz} (float L, float a, float \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}, float $\ast$x, float $\ast$y, float $\ast$z)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_af750bbb3e7446f2078549ea22a23d8bd}{xyz2rgb} (float x, float y, float z, float $\ast$r, float $\ast$g, float $\ast$\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b})
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_af91147c2a3bfe09e4c06a3ee0b890975}{gray2\+Msh2rgb} (const float $\ast$in, float $\ast$out, int w, int h)
+\begin{DoxyCompactList}\small\item\em gray 2 Msh \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a36be9f2e360bb7bcac1b54625b6f3373}{print\+\_\+sift\+\_\+scalespace\+\_\+rgb} (const struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$scalespace, const char $\ast$basename)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a130c0cfb381d9b4d2557e736913e0a54}{print\+\_\+sift\+\_\+scalespace\+\_\+gray\+\_\+nearestneighbor} (const struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$scalespace, const char $\ast$basename)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__io__scalespace_8cpp_a909b04fba1edbc4b77edeaaf479ae03b}{print\+\_\+sift\+\_\+scalespace\+\_\+rgb\+\_\+nointerp} (const struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$scalespace, const char $\ast$basename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__io__scalespace_8cpp_a8ee97917eef084b7f232f1a3bde57ab6}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!gray2hsv@{gray2hsv}}
+\index{gray2hsv@{gray2hsv}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{gray2hsv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} gray2hsv (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{gray, }
+\item[{float $\ast$}]{rgb, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{float}]{vmin, }
+\item[{float}]{vmax}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a8ee97917eef084b7f232f1a3bde57ab6}
+
+
+Gray to false color (using the H\+S\+V colormap) 
+
+for Do\+G illustration in new code \hypertarget{lib__io__scalespace_8cpp_af91147c2a3bfe09e4c06a3ee0b890975}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!gray2\+Msh2rgb@{gray2\+Msh2rgb}}
+\index{gray2\+Msh2rgb@{gray2\+Msh2rgb}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{gray2\+Msh2rgb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} gray2\+Msh2rgb (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{in, }
+\item[{float $\ast$}]{out, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_af91147c2a3bfe09e4c06a3ee0b890975}
+
+
+gray 2 Msh 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & \+: array of w$\ast$h float \\
+\hline
+{\em out} & \+: array of w$\ast$h color points in Msh color space (polar Lab) ... of 3$\ast$w$\ast$h float \\
+\hline
+\end{DoxyParams}
+\hypertarget{lib__io__scalespace_8cpp_a2080fcc6a7f24d5eb901a57f48daef21}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!Lab2xyz@{Lab2xyz}}
+\index{Lab2xyz@{Lab2xyz}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{Lab2xyz}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Lab2xyz (
+\begin{DoxyParamCaption}
+\item[{float}]{L, }
+\item[{float}]{a, }
+\item[{float}]{b, }
+\item[{float $\ast$}]{x, }
+\item[{float $\ast$}]{y, }
+\item[{float $\ast$}]{z}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a2080fcc6a7f24d5eb901a57f48daef21}
+\hypertarget{lib__io__scalespace_8cpp_ad943a0352a739e80f30a905c5b5e9b2e}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!Msh2\+Lab@{Msh2\+Lab}}
+\index{Msh2\+Lab@{Msh2\+Lab}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{Msh2\+Lab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Msh2\+Lab (
+\begin{DoxyParamCaption}
+\item[{float}]{M, }
+\item[{float}]{s, }
+\item[{float}]{h, }
+\item[{float $\ast$}]{L, }
+\item[{float $\ast$}]{a, }
+\item[{float $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_ad943a0352a739e80f30a905c5b5e9b2e}
+\hypertarget{lib__io__scalespace_8cpp_a48be62c36b8c57a1d4f2999c99b8ec3f}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!nearestneighbor\+\_\+interp@{nearestneighbor\+\_\+interp}}
+\index{nearestneighbor\+\_\+interp@{nearestneighbor\+\_\+interp}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{nearestneighbor\+\_\+interp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} nearestneighbor\+\_\+interp (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{in, }
+\item[{int}]{win, }
+\item[{int}]{hin, }
+\item[{float $\ast$}]{out, }
+\item[{int}]{wout, }
+\item[{int}]{hout}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a48be62c36b8c57a1d4f2999c99b8ec3f}
+\hypertarget{lib__io__scalespace_8cpp_a1bdd13b73ec7953580410cd9de141b5f}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!print\+\_\+sift\+\_\+scalespace\+\_\+gray@{print\+\_\+sift\+\_\+scalespace\+\_\+gray}}
+\index{print\+\_\+sift\+\_\+scalespace\+\_\+gray@{print\+\_\+sift\+\_\+scalespace\+\_\+gray}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{print\+\_\+sift\+\_\+scalespace\+\_\+gray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} print\+\_\+sift\+\_\+scalespace\+\_\+gray (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+scalespace} $\ast$}]{scalespace, }
+\item[{const char $\ast$}]{basename}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a1bdd13b73ec7953580410cd9de141b5f}
+\hypertarget{lib__io__scalespace_8cpp_a130c0cfb381d9b4d2557e736913e0a54}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!print\+\_\+sift\+\_\+scalespace\+\_\+gray\+\_\+nearestneighbor@{print\+\_\+sift\+\_\+scalespace\+\_\+gray\+\_\+nearestneighbor}}
+\index{print\+\_\+sift\+\_\+scalespace\+\_\+gray\+\_\+nearestneighbor@{print\+\_\+sift\+\_\+scalespace\+\_\+gray\+\_\+nearestneighbor}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{print\+\_\+sift\+\_\+scalespace\+\_\+gray\+\_\+nearestneighbor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} print\+\_\+sift\+\_\+scalespace\+\_\+gray\+\_\+nearestneighbor (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+scalespace} $\ast$}]{scalespace, }
+\item[{const char $\ast$}]{basename}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a130c0cfb381d9b4d2557e736913e0a54}
+\hypertarget{lib__io__scalespace_8cpp_a36be9f2e360bb7bcac1b54625b6f3373}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!print\+\_\+sift\+\_\+scalespace\+\_\+rgb@{print\+\_\+sift\+\_\+scalespace\+\_\+rgb}}
+\index{print\+\_\+sift\+\_\+scalespace\+\_\+rgb@{print\+\_\+sift\+\_\+scalespace\+\_\+rgb}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{print\+\_\+sift\+\_\+scalespace\+\_\+rgb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} print\+\_\+sift\+\_\+scalespace\+\_\+rgb (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+scalespace} $\ast$}]{scalespace, }
+\item[{const char $\ast$}]{basename}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a36be9f2e360bb7bcac1b54625b6f3373}
+\hypertarget{lib__io__scalespace_8cpp_a909b04fba1edbc4b77edeaaf479ae03b}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!print\+\_\+sift\+\_\+scalespace\+\_\+rgb\+\_\+nointerp@{print\+\_\+sift\+\_\+scalespace\+\_\+rgb\+\_\+nointerp}}
+\index{print\+\_\+sift\+\_\+scalespace\+\_\+rgb\+\_\+nointerp@{print\+\_\+sift\+\_\+scalespace\+\_\+rgb\+\_\+nointerp}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{print\+\_\+sift\+\_\+scalespace\+\_\+rgb\+\_\+nointerp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} print\+\_\+sift\+\_\+scalespace\+\_\+rgb\+\_\+nointerp (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+scalespace} $\ast$}]{scalespace, }
+\item[{const char $\ast$}]{basename}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a909b04fba1edbc4b77edeaaf479ae03b}
+\hypertarget{lib__io__scalespace_8cpp_ab47ccd15024c3a2631e5d5aca89870d1}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!print\+Image@{print\+Image}}
+\index{print\+Image@{print\+Image}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{print\+Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} print\+Image (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{image\+In, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_ab47ccd15024c3a2631e5d5aca89870d1}
+
+
+Assumes the values of image\+In are ranging from 0 to 1. 
+
+\hypertarget{lib__io__scalespace_8cpp_ae39d3c8adb7e7c360d978b387af84c90}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!print\+Image\+\_\+\+Linear\+Conversion@{print\+Image\+\_\+\+Linear\+Conversion}}
+\index{print\+Image\+\_\+\+Linear\+Conversion@{print\+Image\+\_\+\+Linear\+Conversion}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{print\+Image\+\_\+\+Linear\+Conversion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} print\+Image\+\_\+\+Linear\+Conversion (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{image\+In, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_ae39d3c8adb7e7c360d978b387af84c90}
+\hypertarget{lib__io__scalespace_8cpp_a1539f054d17ae9afb06dad127cfa23ef}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!printrgb@{printrgb}}
+\index{printrgb@{printrgb}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{printrgb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} printrgb (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{rgb, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_a1539f054d17ae9afb06dad127cfa23ef}
+\hypertarget{lib__io__scalespace_8cpp_af750bbb3e7446f2078549ea22a23d8bd}{}\index{lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}!xyz2rgb@{xyz2rgb}}
+\index{xyz2rgb@{xyz2rgb}!lib\+\_\+io\+\_\+scalespace.\+cpp@{lib\+\_\+io\+\_\+scalespace.\+cpp}}
+\subsubsection[{xyz2rgb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} xyz2rgb (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z, }
+\item[{float $\ast$}]{r, }
+\item[{float $\ast$}]{g, }
+\item[{float $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\label{lib__io__scalespace_8cpp_af750bbb3e7446f2078549ea22a23d8bd}

@@ -1,0 +1,186 @@
+\hypertarget{lib__sift__anatomy_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+sift\+\_\+anatomy.cpp File Reference}
+\label{lib__sift__anatomy_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+sift\+\_\+anatomy.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$float.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+description.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+discrete.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+sift\+\_\+anatomy.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+util.\+h\char`\"{}}\\*
+Include dependency graph for lib\+\_\+sift\+\_\+anatomy.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lib__sift__anatomy_8cpp_a29c710ee3d2c9687fe19a0948aad2a8b}{M\+A\+X}(i,  j)~( (i)$<$(j) ? (j)\+:(i) )
+\item 
+\#define \hyperlink{lib__sift__anatomy_8cpp_a60907e3df13e5c5eaee6031ee67c6184}{M\+I\+N}(i,  j)~( (i)$<$(j) ? (i)\+:(j) )
+\item 
+\#define \hyperlink{lib__sift__anatomy_8cpp_a996f7be338ccb40d1a2a5abc1ad61759}{A\+B\+S}(x)~((x)$<$0?-\/(x)\+:(x))
+\item 
+\#define \hyperlink{lib__sift__anatomy_8cpp_a002b2f4894492820fe708b1b7e7c5e70}{E\+P\+S\+I\+L\+O\+N}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift__anatomy_8cpp_abe1d6ebd213a3532360cbfb3944cfde7}{scalespace\+\_\+compute} (struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$ss, const float $\ast$image, int im\+\_\+w, int im\+\_\+h, float sigma\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Compute the Gaussian scalespace for S\+I\+F\+T. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift__anatomy_8cpp_a337bb833ac3378b02ed4fa869534b9b4}{scalespace\+\_\+compute\+\_\+gradient} (const struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$scalespace, struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$sx, struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$sy)
+\begin{DoxyCompactList}\small\item\em Compute the 2d gradient of each image in the scale-\/space. \end{DoxyCompactList}\item 
+struct \hyperlink{structsift__parameters}{sift\+\_\+parameters} $\ast$ \hyperlink{lib__sift__anatomy_8cpp_a4b485773016c88425b5fec7c48da7f30}{sift\+\_\+assign\+\_\+default\+\_\+parameters} ()
+\item 
+struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$ \hyperlink{lib__sift__anatomy_8cpp_a87745aebdcee38022bc4e304c8774993}{sift\+\_\+anatomy} (const float $\ast$x, int w, int h, const struct \hyperlink{structsift__parameters}{sift\+\_\+parameters} $\ast$p, struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$ss\mbox{[}4\mbox{]}, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$kk\mbox{[}6\mbox{]})
+\item 
+struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$ \hyperlink{lib__sift__anatomy_8cpp_a6c4f7c92937666891c7ee1be77eb6a5c}{sift\+\_\+anatomy\+\_\+without\+\_\+description} (const float $\ast$x, int w, int h, const struct \hyperlink{structsift__parameters}{sift\+\_\+parameters} $\ast$p, struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$ss\mbox{[}2\mbox{]}, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$kk\mbox{[}5\mbox{]})
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift__anatomy_8cpp_ad9e3f301c94e77a83ef415a2d5d25a65}{sift\+\_\+anatomy\+\_\+only\+\_\+description} (const float $\ast$x, int w, int h, const struct \hyperlink{structsift__parameters}{sift\+\_\+parameters} $\ast$p, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__sift__anatomy_8cpp_a368ead94450c8ccfc1f08ade9a3cb6f2}{sift\+\_\+anatomy\+\_\+orientation\+\_\+and\+\_\+description} (const float $\ast$x, int w, int h, const struct \hyperlink{structsift__parameters}{sift\+\_\+parameters} $\ast$p, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{lib__sift__anatomy_8cpp_a996f7be338ccb40d1a2a5abc1ad61759}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!A\+B\+S@{A\+B\+S}}
+\index{A\+B\+S@{A\+B\+S}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{A\+B\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+B\+S(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x)$<$0?-\/(x)\+:(x))}\label{lib__sift__anatomy_8cpp_a996f7be338ccb40d1a2a5abc1ad61759}
+\hypertarget{lib__sift__anatomy_8cpp_a002b2f4894492820fe708b1b7e7c5e70}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!E\+P\+S\+I\+L\+O\+N@{E\+P\+S\+I\+L\+O\+N}}
+\index{E\+P\+S\+I\+L\+O\+N@{E\+P\+S\+I\+L\+O\+N}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{E\+P\+S\+I\+L\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+P\+S\+I\+L\+O\+N~0}\label{lib__sift__anatomy_8cpp_a002b2f4894492820fe708b1b7e7c5e70}
+\hypertarget{lib__sift__anatomy_8cpp_a29c710ee3d2c9687fe19a0948aad2a8b}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!M\+A\+X@{M\+A\+X}}
+\index{M\+A\+X@{M\+A\+X}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X(
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j}
+\end{DoxyParamCaption}
+)~( (i)$<$(j) ? (j)\+:(i) )}\label{lib__sift__anatomy_8cpp_a29c710ee3d2c9687fe19a0948aad2a8b}
+\hypertarget{lib__sift__anatomy_8cpp_a60907e3df13e5c5eaee6031ee67c6184}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!M\+I\+N@{M\+I\+N}}
+\index{M\+I\+N@{M\+I\+N}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N(
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j}
+\end{DoxyParamCaption}
+)~( (i)$<$(j) ? (i)\+:(j) )}\label{lib__sift__anatomy_8cpp_a60907e3df13e5c5eaee6031ee67c6184}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__sift__anatomy_8cpp_abe1d6ebd213a3532360cbfb3944cfde7}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!scalespace\+\_\+compute@{scalespace\+\_\+compute}}
+\index{scalespace\+\_\+compute@{scalespace\+\_\+compute}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{scalespace\+\_\+compute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} scalespace\+\_\+compute (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{ss, }
+\item[{const float $\ast$}]{image, }
+\item[{int}]{im\+\_\+w, }
+\item[{int}]{im\+\_\+h, }
+\item[{float}]{sigma\+\_\+in}
+\end{DoxyParamCaption}
+)}\label{lib__sift__anatomy_8cpp_abe1d6ebd213a3532360cbfb3944cfde7}
+
+
+Compute the Gaussian scalespace for S\+I\+F\+T. 
+
+in 
+\begin{DoxyParams}{Parameters}
+{\em input} & image of im\+\_\+w X im\+\_\+h \\
+\hline
+{\em sigma\+\_\+in} & \+: assumed level of blur in the image\\
+\hline
+\end{DoxyParams}
+The construction parameters are already stored in scalespace first image in the stack
+
+The rest of the image stack \hypertarget{lib__sift__anatomy_8cpp_a337bb833ac3378b02ed4fa869534b9b4}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!scalespace\+\_\+compute\+\_\+gradient@{scalespace\+\_\+compute\+\_\+gradient}}
+\index{scalespace\+\_\+compute\+\_\+gradient@{scalespace\+\_\+compute\+\_\+gradient}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{scalespace\+\_\+compute\+\_\+gradient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} scalespace\+\_\+compute\+\_\+gradient (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+scalespace} $\ast$}]{scalespace, }
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{sx, }
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{sy}
+\end{DoxyParamCaption}
+)}\label{lib__sift__anatomy_8cpp_a337bb833ac3378b02ed4fa869534b9b4}
+
+
+Compute the 2d gradient of each image in the scale-\/space. 
+
+scalespace  dx\+\_\+scalespace, scalespace structure storing the gradient x-\/component of each image
+
+dy\+\_\+scalespace, scalespace structure storing the gradient y-\/component of each image
+
+The gradients of the auxiliary images are not computed. \hypertarget{lib__sift__anatomy_8cpp_a87745aebdcee38022bc4e304c8774993}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!sift\+\_\+anatomy@{sift\+\_\+anatomy}}
+\index{sift\+\_\+anatomy@{sift\+\_\+anatomy}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{sift\+\_\+anatomy}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+keypoints}$\ast$ sift\+\_\+anatomy (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const struct {\bf sift\+\_\+parameters} $\ast$}]{p, }
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{ss\mbox{[}4\mbox{]}, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{kk\mbox{[}6\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{lib__sift__anatomy_8cpp_a87745aebdcee38022bc4e304c8774993}
+M\+E\+M\+O\+R\+Y A\+L\+L\+O\+C\+A\+T\+I\+O\+N
+
+scale-\/space structure
+
+list-\/of-\/keypoints (Already allocated)
+
+K\+E\+Y\+P\+O\+I\+N\+T D\+E\+T\+E\+C\+T\+I\+O\+N
+
+K\+E\+Y\+P\+O\+I\+N\+T D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N
+
+scalespace structures \hypertarget{lib__sift__anatomy_8cpp_ad9e3f301c94e77a83ef415a2d5d25a65}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!sift\+\_\+anatomy\+\_\+only\+\_\+description@{sift\+\_\+anatomy\+\_\+only\+\_\+description}}
+\index{sift\+\_\+anatomy\+\_\+only\+\_\+description@{sift\+\_\+anatomy\+\_\+only\+\_\+description}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{sift\+\_\+anatomy\+\_\+only\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+anatomy\+\_\+only\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const struct {\bf sift\+\_\+parameters} $\ast$}]{p, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{k}
+\end{DoxyParamCaption}
+)}\label{lib__sift__anatomy_8cpp_ad9e3f301c94e77a83ef415a2d5d25a65}
+\hypertarget{lib__sift__anatomy_8cpp_a368ead94450c8ccfc1f08ade9a3cb6f2}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!sift\+\_\+anatomy\+\_\+orientation\+\_\+and\+\_\+description@{sift\+\_\+anatomy\+\_\+orientation\+\_\+and\+\_\+description}}
+\index{sift\+\_\+anatomy\+\_\+orientation\+\_\+and\+\_\+description@{sift\+\_\+anatomy\+\_\+orientation\+\_\+and\+\_\+description}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{sift\+\_\+anatomy\+\_\+orientation\+\_\+and\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+anatomy\+\_\+orientation\+\_\+and\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const struct {\bf sift\+\_\+parameters} $\ast$}]{p, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{k}
+\end{DoxyParamCaption}
+)}\label{lib__sift__anatomy_8cpp_a368ead94450c8ccfc1f08ade9a3cb6f2}
+\hypertarget{lib__sift__anatomy_8cpp_a6c4f7c92937666891c7ee1be77eb6a5c}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!sift\+\_\+anatomy\+\_\+without\+\_\+description@{sift\+\_\+anatomy\+\_\+without\+\_\+description}}
+\index{sift\+\_\+anatomy\+\_\+without\+\_\+description@{sift\+\_\+anatomy\+\_\+without\+\_\+description}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{sift\+\_\+anatomy\+\_\+without\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+keypoints}$\ast$ sift\+\_\+anatomy\+\_\+without\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{x, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const struct {\bf sift\+\_\+parameters} $\ast$}]{p, }
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{ss\mbox{[}2\mbox{]}, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{kk\mbox{[}5\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{lib__sift__anatomy_8cpp_a6c4f7c92937666891c7ee1be77eb6a5c}
+M\+E\+M\+O\+R\+Y A\+L\+L\+O\+C\+A\+T\+I\+O\+N
+
+scale-\/space structure
+
+list-\/of-\/keypoints (Already allocated)
+
+K\+E\+Y\+P\+O\+I\+N\+T D\+E\+T\+E\+C\+T\+I\+O\+N
+
+scalespace structures \hypertarget{lib__sift__anatomy_8cpp_a4b485773016c88425b5fec7c48da7f30}{}\index{lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}!sift\+\_\+assign\+\_\+default\+\_\+parameters@{sift\+\_\+assign\+\_\+default\+\_\+parameters}}
+\index{sift\+\_\+assign\+\_\+default\+\_\+parameters@{sift\+\_\+assign\+\_\+default\+\_\+parameters}!lib\+\_\+sift\+\_\+anatomy.\+cpp@{lib\+\_\+sift\+\_\+anatomy.\+cpp}}
+\subsubsection[{sift\+\_\+assign\+\_\+default\+\_\+parameters}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+parameters}$\ast$ sift\+\_\+assign\+\_\+default\+\_\+parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{lib__sift__anatomy_8cpp_a4b485773016c88425b5fec7c48da7f30}

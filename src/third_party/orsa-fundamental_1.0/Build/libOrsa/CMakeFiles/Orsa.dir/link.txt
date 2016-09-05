@@ -1,0 +1,2 @@
+/usr/bin/ar cr libOrsa.a  CMakeFiles/Orsa.dir/conditioning.cpp.o CMakeFiles/Orsa.dir/orsa_model.cpp.o CMakeFiles/Orsa.dir/fundamental_model.cpp.o
+/usr/bin/ranlib libOrsa.a

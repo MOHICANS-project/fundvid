@@ -1,0 +1,44 @@
+\hypertarget{fundamentalmat__solver_8cpp}{}\section{src/fundamentalmat\+\_\+solver.cpp File Reference}
+\label{fundamentalmat__solver_8cpp}\index{src/fundamentalmat\+\_\+solver.\+cpp@{src/fundamentalmat\+\_\+solver.\+cpp}}
+{\ttfamily \#include \char`\"{}fundamentalmat\+\_\+solver.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$regex$>$}\\*
+{\ttfamily \#include $<$opencv2/nonfree/nonfree.\+hpp$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\\*
+{\ttfamily \#include $<$opencv2/core/eigen.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}src/estimation/f\+\_\+uncertainty.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/matchers/sift\+\_\+guided\+\_\+matching.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/exceptions/estimation\+\_\+error\+\_\+exception.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/exceptions/optimization\+\_\+exception.\+h\char`\"{}}\\*
+Include dependency graph for fundamentalmat\+\_\+solver.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fundamentalmat__solver_8cpp_a5b8bbfb80386b8be15fc4c979842395c}{raw\+To\+Point2f} (const std\+::vector$<$ \hyperlink{structFVMatcher_1_1FVMatch}{F\+V\+Matcher\+::\+F\+V\+Match} $>$ \&init\+\_\+matches, std\+::vector$<$ cv\+::\+Point2f $>$ \&out0, std\+::vector$<$ cv\+::\+Point2f $>$ \&out1)
+\item 
+void \hyperlink{fundamentalmat__solver_8cpp_ad27fccd98bd3eb1e257b68be9c2c6eee}{permute\+Cov} (const Eigen\+::\+Matrix$<$ double, 9, 9 $>$ \&in\+Cov, const std\+::vector$<$ int $>$ permutation, Eigen\+::\+Matrix$<$ double, 9, 9 $>$ \&out\+Cov)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{fundamentalmat__solver_8cpp_ad27fccd98bd3eb1e257b68be9c2c6eee}{}\index{fundamentalmat\+\_\+solver.\+cpp@{fundamentalmat\+\_\+solver.\+cpp}!permute\+Cov@{permute\+Cov}}
+\index{permute\+Cov@{permute\+Cov}!fundamentalmat\+\_\+solver.\+cpp@{fundamentalmat\+\_\+solver.\+cpp}}
+\subsubsection[{permute\+Cov}]{\setlength{\rightskip}{0pt plus 5cm}void permute\+Cov (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ double, 9, 9 $>$ \&}]{in\+Cov, }
+\item[{const std\+::vector$<$ int $>$}]{permutation, }
+\item[{Eigen\+::\+Matrix$<$ double, 9, 9 $>$ \&}]{out\+Cov}
+\end{DoxyParamCaption}
+)}\label{fundamentalmat__solver_8cpp_ad27fccd98bd3eb1e257b68be9c2c6eee}
+\hypertarget{fundamentalmat__solver_8cpp_a5b8bbfb80386b8be15fc4c979842395c}{}\index{fundamentalmat\+\_\+solver.\+cpp@{fundamentalmat\+\_\+solver.\+cpp}!raw\+To\+Point2f@{raw\+To\+Point2f}}
+\index{raw\+To\+Point2f@{raw\+To\+Point2f}!fundamentalmat\+\_\+solver.\+cpp@{fundamentalmat\+\_\+solver.\+cpp}}
+\subsubsection[{raw\+To\+Point2f}]{\setlength{\rightskip}{0pt plus 5cm}void raw\+To\+Point2f (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf F\+V\+Matcher\+::\+F\+V\+Match} $>$ \&}]{init\+\_\+matches, }
+\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{out0, }
+\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{out1}
+\end{DoxyParamCaption}
+)}\label{fundamentalmat__solver_8cpp_a5b8bbfb80386b8be15fc4c979842395c}

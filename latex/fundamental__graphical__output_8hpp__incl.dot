@@ -1,0 +1,37 @@
+digraph "src/third_party/orsa-fundamental_1.0/src/demo/fundamental_graphical_output.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/third_party/orsa\l-fundamental_1.0/src\l/demo/fundamental_graphical\l_output.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="libOrsa/match.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$match_8hpp.html",tooltip="Match between two image points. "];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="sstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="libOrsa/libNumerics\l/matrix.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$libOrsa_2libNumerics_2matrix_8h.html"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="cassert",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="matrix.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$libOrsa_2libNumerics_2matrix_8cpp.html"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="ccmath_svd.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$libOrsa_2libNumerics_2ccmath__svd_8cpp.html"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="cmath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="cstdlib",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="vector.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$libOrsa_2libNumerics_2vector_8cpp.html"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="libImage/image.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$image_8hpp.html"];
+  Node14 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="cstring",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

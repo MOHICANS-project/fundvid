@@ -1,0 +1,2 @@
+/usr/bin/ar cr libsift.a  CMakeFiles/sift.dir/library.cpp.o CMakeFiles/sift.dir/domain.cpp.o CMakeFiles/sift.dir/splines.cpp.o CMakeFiles/sift.dir/filter.cpp.o CMakeFiles/sift.dir/demo_lib_sift.cpp.o
+/usr/bin/ranlib libsift.a

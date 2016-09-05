@@ -1,0 +1,124 @@
+\hypertarget{testing_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/testing/testing.h File Reference}
+\label{testing_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/testing/testing.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/testing/testing.\+h}}
+{\ttfamily \#include \char`\"{}../../src/extras/lib\+Numerics/matrix.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/third\+\_\+party/\+Cpp\+Unit\+Lite/\+Test\+Harness.\+h\char`\"{}}\\*
+Include dependency graph for testing.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{testing_8h_aa5ae4e7db90233aad3e266f5673953dc}{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}(a,  \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b},  tolerance)
+\item 
+\#define \hyperlink{testing_8h_a84246ff269c6450c722b94460bb8f152}{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R\+\_\+\+Z\+E\+R\+O}(a,  tolerance)
+\item 
+\#define \hyperlink{testing_8h_a09466b1e367e202e15d3c38d23a529ef}{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+Q}(a,  \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b})
+\item 
+\#define \hyperlink{testing_8h_a9a214cd0721024a487808f7760ec65ea}{E\+X\+P\+E\+C\+T\+\_\+\+N\+E\+A\+R}(expected,  actual,  threshold)~\hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L}(expected,actual,threshold);
+\item 
+\#define \hyperlink{testing_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+U\+E}(condition)~\hyperlink{inflate_8h_a164ea0159d5f0b5f12a646f25f99eceaaed65b7dfe470f4e500b15f7074bb7fa2}{C\+H\+E\+C\+K}(condition);
+\item 
+\#define \hyperlink{testing_8h_aeb6c7ae89f440c90c1a1815951c836da}{E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+S\+E}(condition)~\hyperlink{inflate_8h_a164ea0159d5f0b5f12a646f25f99eceaaed65b7dfe470f4e500b15f7074bb7fa2}{C\+H\+E\+C\+K}(!condition);
+\item 
+\#define \hyperlink{testing_8h_a7c198106d8a380a0b194d16c918943d2}{E\+X\+P\+E\+C\+T\+\_\+\+E\+Q}(a,  \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b})~\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L}(a,\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b});
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{testing_8h_a7c198106d8a380a0b194d16c918943d2}{}\index{testing.\+h@{testing.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+E\+Q@{E\+X\+P\+E\+C\+T\+\_\+\+E\+Q}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+E\+Q@{E\+X\+P\+E\+C\+T\+\_\+\+E\+Q}!testing.\+h@{testing.\+h}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+E\+Q(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{{\bf b}}
+\end{DoxyParamCaption}
+)~{\bf C\+H\+E\+C\+K\+\_\+\+E\+Q\+U\+A\+L}(a,{\bf b});}\label{testing_8h_a7c198106d8a380a0b194d16c918943d2}
+\hypertarget{testing_8h_aeb6c7ae89f440c90c1a1815951c836da}{}\index{testing.\+h@{testing.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+S\+E@{E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+S\+E}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+S\+E@{E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+S\+E}!testing.\+h@{testing.\+h}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+F\+A\+L\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)~{\bf C\+H\+E\+C\+K}(!condition);}\label{testing_8h_aeb6c7ae89f440c90c1a1815951c836da}
+\hypertarget{testing_8h_a09466b1e367e202e15d3c38d23a529ef}{}\index{testing.\+h@{testing.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+Q@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+Q}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+Q@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+Q}!testing.\+h@{testing.\+h}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+Q(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{{\bf b}}
+\end{DoxyParamCaption}
+)}\label{testing_8h_a09466b1e367e202e15d3c38d23a529ef}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  bool dims\_match = (a.nrow() == \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.nrow()) && (a.ncol() == \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.ncol()); \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{\(\backslash\)}
+\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{  CHECK\_EQUAL}(a.nrow(),\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.nrow()); \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{\(\backslash\)}
+\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{  CHECK\_EQUAL}(a.ncol(),\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.ncol()); \(\backslash\)
+  if (dims\_match) \{ \(\backslash\)
+    for (\textcolor{keywordtype}{int} r = 0; r < a.nrow(); ++r) \{ \(\backslash\)
+      for (\textcolor{keywordtype}{int} c = 0; c < a.ncol(); ++c) \{ \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{\(\backslash\)}
+\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{        CHECK\_EQUAL}(a(r, c), \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}(r, c)) \(\backslash\)
+      \} \(\backslash\)
+    \} \(\backslash\)
+  \} \(\backslash\)
+\} \textcolor{keywordflow}{while}(\textcolor{keyword}{false});
+\end{DoxyCode}
+\hypertarget{testing_8h_aa5ae4e7db90233aad3e266f5673953dc}{}\index{testing.\+h@{testing.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}!testing.\+h@{testing.\+h}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{{\bf b}, }
+\item[{}]{tolerance}
+\end{DoxyParamCaption}
+)}\label{testing_8h_aa5ae4e7db90233aad3e266f5673953dc}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  bool dims\_match = (a.nrow() == \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.nrow()) && (a.ncol() == \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.ncol()); \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{\(\backslash\)}
+\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{  CHECK\_EQUAL}(a.nrow(),\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.nrow()); \hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{\(\backslash\)}
+\hyperlink{Test_8h_ad8fa79f5d491cc01af302832785e90fe}{  CHECK\_EQUAL}(a.ncol(),\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}.ncol()); \(\backslash\)
+  if (dims\_match) \{ \(\backslash\)
+    for (\textcolor{keywordtype}{int} r = 0; r < a.nrow(); ++r) \{ \(\backslash\)
+      for (\textcolor{keywordtype}{int} c = 0; c < a.ncol(); ++c) \{ \hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{\(\backslash\)}
+\hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{        DOUBLES\_EQUAL}(a(r, c), \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}(r, c), tolerance); \(\backslash\)
+      \} \(\backslash\)
+    \} \(\backslash\)
+  \} \(\backslash\)
+\} \textcolor{keywordflow}{while}(\textcolor{keyword}{false});
+\end{DoxyCode}
+\hypertarget{testing_8h_a84246ff269c6450c722b94460bb8f152}{}\index{testing.\+h@{testing.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R\+\_\+\+Z\+E\+R\+O@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R\+\_\+\+Z\+E\+R\+O}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R\+\_\+\+Z\+E\+R\+O@{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R\+\_\+\+Z\+E\+R\+O}!testing.\+h@{testing.\+h}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R\+\_\+\+Z\+E\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+N\+E\+A\+R\+\_\+\+Z\+E\+R\+O(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{tolerance}
+\end{DoxyParamCaption}
+)}\label{testing_8h_a84246ff269c6450c722b94460bb8f152}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  for (\textcolor{keywordtype}{int} r = 0; r < a.nrow(); ++r) \{ \(\backslash\)
+    for (\textcolor{keywordtype}{int} c = 0; c < a.ncol(); ++c) \{ \hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{\(\backslash\)}
+\hyperlink{Test_8h_a64bb32929e2c1f2ed5521a27e775327e}{      DOUBLES\_EQUAL}(0.0, a(r, c), tolerance) \(\backslash\)
+    \} \(\backslash\)
+  \} \(\backslash\)
+\} \textcolor{keywordflow}{while}(\textcolor{keyword}{false});
+\end{DoxyCode}
+\hypertarget{testing_8h_a9a214cd0721024a487808f7760ec65ea}{}\index{testing.\+h@{testing.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+N\+E\+A\+R@{E\+X\+P\+E\+C\+T\+\_\+\+N\+E\+A\+R}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+N\+E\+A\+R@{E\+X\+P\+E\+C\+T\+\_\+\+N\+E\+A\+R}!testing.\+h@{testing.\+h}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+N\+E\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+N\+E\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual, }
+\item[{}]{threshold}
+\end{DoxyParamCaption}
+)~{\bf D\+O\+U\+B\+L\+E\+S\+\_\+\+E\+Q\+U\+A\+L}(expected,actual,threshold);}\label{testing_8h_a9a214cd0721024a487808f7760ec65ea}
+\hypertarget{testing_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{}\index{testing.\+h@{testing.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+U\+E@{E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+U\+E}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+U\+E@{E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+U\+E}!testing.\+h@{testing.\+h}}
+\subsubsection[{E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T\+\_\+\+T\+R\+U\+E(
+\begin{DoxyParamCaption}
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)~{\bf C\+H\+E\+C\+K}(condition);}\label{testing_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}

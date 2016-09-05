@@ -1,0 +1,77 @@
+\hypertarget{cmdLine_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/cmd\+Line.h File Reference}
+\label{cmdLine_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/cmd\+Line.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/cmd\+Line.\+h}}
+
+
+Command line option parsing.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+Include dependency graph for cmd\+Line.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classOption}{Option}
+\begin{DoxyCompactList}\small\item\em Base class for option/switch. \end{DoxyCompactList}\item 
+class \hyperlink{classOptionSwitch}{Option\+Switch}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classOption}{Option} on/off is called a switch. \end{DoxyCompactList}\item 
+class \hyperlink{classOptionField}{Option\+Field$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classOption}{Option} with an argument of type T, which must be readable by operator$>$$>$ \end{DoxyCompactList}\item 
+class \hyperlink{classCmdLine}{Cmd\+Line}
+\begin{DoxyCompactList}\small\item\em Command line parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOptionSwitch}{Option\+Switch} \hyperlink{cmdLine_8h_a9547979fb9c9f4b40ee87bcf880550f0}{make\+\_\+switch} (char c, std\+::string name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em New switch option. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{classOptionField}{Option\+Field}$<$ T $>$ \hyperlink{cmdLine_8h_ac2637390bc9918337bbe6f01f8247acb}{make\+\_\+option} (char c, T \&field, std\+::string name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em New option with argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Command line option parsing. 
+
+\begin{DoxyAuthor}{Author}
+Pascal Monasse
+\end{DoxyAuthor}
+Copyright (c) 2012-\/2014 Pascal Monasse All rights reserved.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+\subsection{Function Documentation}
+\hypertarget{cmdLine_8h_ac2637390bc9918337bbe6f01f8247acb}{}\index{cmd\+Line.\+h@{cmd\+Line.\+h}!make\+\_\+option@{make\+\_\+option}}
+\index{make\+\_\+option@{make\+\_\+option}!cmd\+Line.\+h@{cmd\+Line.\+h}}
+\subsubsection[{make\+\_\+option}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Option\+Field}$<$T$>$ make\+\_\+option (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{T \&}]{field, }
+\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{cmdLine_8h_ac2637390bc9918337bbe6f01f8247acb}
+
+
+New option with argument. 
+
+\hypertarget{cmdLine_8h_a9547979fb9c9f4b40ee87bcf880550f0}{}\index{cmd\+Line.\+h@{cmd\+Line.\+h}!make\+\_\+switch@{make\+\_\+switch}}
+\index{make\+\_\+switch@{make\+\_\+switch}!cmd\+Line.\+h@{cmd\+Line.\+h}}
+\subsubsection[{make\+\_\+switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Option\+Switch} make\+\_\+switch (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{cmdLine_8h_a9547979fb9c9f4b40ee87bcf880550f0}
+
+
+New switch option. 
+

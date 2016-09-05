@@ -1,0 +1,53 @@
+\hypertarget{lib__matching_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+matching.cpp File Reference}
+\label{lib__matching_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+matching.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+matching.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+keypoint.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+matching.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+util.\+h\char`\"{}}\\*
+Include dependency graph for lib\+\_\+matching.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__matching_8cpp_a287705b775fdb01ed330d7d95bc176ec}{matching} (struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k1, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k2, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$out\+\_\+k1, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$out\+\_\+k2\+A, struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$out\+\_\+k2\+B, float thresh, int flag)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__matching_8cpp_a80c384ff16d48dc660a32e01b883994d}{print\+\_\+pairs} (const struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k1, const struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k2)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__matching_8cpp_a1d5817f31e73ce1d7b1bdadbe4a21976}{save\+\_\+pairs\+\_\+extra} (const char $\ast$name, const struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k1, const struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k2\+A, const struct \hyperlink{structsift__keypoints}{sift\+\_\+keypoints} $\ast$k2\+B)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__matching_8cpp_a287705b775fdb01ed330d7d95bc176ec}{}\index{lib\+\_\+matching.\+cpp@{lib\+\_\+matching.\+cpp}!matching@{matching}}
+\index{matching@{matching}!lib\+\_\+matching.\+cpp@{lib\+\_\+matching.\+cpp}}
+\subsubsection[{matching}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} matching (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{k1, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{k2, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{out\+\_\+k1, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{out\+\_\+k2\+A, }
+\item[{struct {\bf sift\+\_\+keypoints} $\ast$}]{out\+\_\+k2\+B, }
+\item[{float}]{thresh, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\label{lib__matching_8cpp_a287705b775fdb01ed330d7d95bc176ec}
+\hypertarget{lib__matching_8cpp_a80c384ff16d48dc660a32e01b883994d}{}\index{lib\+\_\+matching.\+cpp@{lib\+\_\+matching.\+cpp}!print\+\_\+pairs@{print\+\_\+pairs}}
+\index{print\+\_\+pairs@{print\+\_\+pairs}!lib\+\_\+matching.\+cpp@{lib\+\_\+matching.\+cpp}}
+\subsubsection[{print\+\_\+pairs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} print\+\_\+pairs (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf sift\+\_\+keypoints} $\ast$}]{k1, }
+\item[{const struct {\bf sift\+\_\+keypoints} $\ast$}]{k2}
+\end{DoxyParamCaption}
+)}\label{lib__matching_8cpp_a80c384ff16d48dc660a32e01b883994d}
+\hypertarget{lib__matching_8cpp_a1d5817f31e73ce1d7b1bdadbe4a21976}{}\index{lib\+\_\+matching.\+cpp@{lib\+\_\+matching.\+cpp}!save\+\_\+pairs\+\_\+extra@{save\+\_\+pairs\+\_\+extra}}
+\index{save\+\_\+pairs\+\_\+extra@{save\+\_\+pairs\+\_\+extra}!lib\+\_\+matching.\+cpp@{lib\+\_\+matching.\+cpp}}
+\subsubsection[{save\+\_\+pairs\+\_\+extra}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} save\+\_\+pairs\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const struct {\bf sift\+\_\+keypoints} $\ast$}]{k1, }
+\item[{const struct {\bf sift\+\_\+keypoints} $\ast$}]{k2\+A, }
+\item[{const struct {\bf sift\+\_\+keypoints} $\ast$}]{k2\+B}
+\end{DoxyParamCaption}
+)}\label{lib__matching_8cpp_a1d5817f31e73ce1d7b1bdadbe4a21976}

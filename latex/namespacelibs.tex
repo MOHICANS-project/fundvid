@@ -1,0 +1,699 @@
+\hypertarget{namespacelibs}{}\section{libs Namespace Reference}
+\label{namespacelibs}\index{libs@{libs}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlibs_1_1my__error__mgr}{my\+\_\+error\+\_\+mgr}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{namespacelibs_a90e2a46b7e02c762706ee6be80091c7a}{uchar}
+\item 
+typedef \hyperlink{classImage}{Image}$<$ \hyperlink{namespacelibs_a90e2a46b7e02c762706ee6be80091c7a}{uchar} $>$ \hyperlink{namespacelibs_a16118b81f5f0fc54cea32159a5530299}{Byte\+Image}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752}{Format} \{ \hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a3b3feebbfff158c46cb1a815c2a03d65}{Pnm}, 
+\hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752ae5e58ecfb1afb18e0f4ad9fbbb15e7b3}{Png}, 
+\hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a1c4e75b56624380b0bae2dfa46ade686}{Jpg}, 
+\hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a457d8e698dc3640a6be5692ea8e920c8}{Unknown}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Tin , typename Tout $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_abeed587537acb94f0038d4c685f80709}{convert} (const Tin \&in, Tout \&out)
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a8bd7dd261917146af19dc8515d507c88}{convert$<$ R\+G\+B\+Color, unsigned char $>$} (const \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} \&in, unsigned char \&out)
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_abd6874a8980e98cf69eacdb7f91b5454}{convert$<$ unsigned char, R\+G\+B\+Color $>$} (const unsigned char \&in, \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} \&out)
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a35ff8b219d74a9221bfff6a9e1703994}{convert$<$ R\+G\+B\+Color, R\+G\+B\+A $>$} (const \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} \&in, \hyperlink{classRGBA}{R\+G\+B\+A} \&out)
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_aadc66f050a856edeaf0c8c69edd13d85}{convert$<$ R\+G\+B\+A, R\+G\+B\+Color $>$} (const \hyperlink{classRGBA}{R\+G\+B\+A} \&in, \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} \&out)
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a8e80ce60fb6e92926e78291d51102928}{convert$<$ unsigned char, R\+G\+B\+A $>$} (const unsigned char \&in, \hyperlink{classRGBA}{R\+G\+B\+A} \&out)
+\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a699584c1505cae18fdaf41ad62c7c950}{convert$<$ R\+G\+B\+A, unsigned char $>$} (const \hyperlink{classRGBA}{R\+G\+B\+A} \&in, unsigned char \&out)
+\item 
+{\footnotesize template$<$typename Image\+In , typename Image\+Out $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a3448c04a1b0a918759084d8c8e618870}{convert\+Image} (const Image\+In \&ima\+In, Image\+Out $\ast$ima\+Out)
+\item 
+{\footnotesize template$<$class Image , class Color $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a14b29acc45157fff570b889e3ad29115}{safe\+Put\+Pixel} (int yc, int xc, const Color \&col, \hyperlink{classImage}{Image} $\ast$pim)
+\begin{DoxyCompactList}\small\item\em Put the pixel in the image to the given color only if the point (xc,yc) is inside the image. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Image , class Color $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a0bfb3ff08fcfc98a84bc99fc4a5c25c6}{Draw\+Ellipse} (int xc, int yc, int radius\+A, int radius\+B, const Color \&col, \hyperlink{classImage}{Image} $\ast$pim, double angle=0.\+0)
+\item 
+{\footnotesize template$<$class Image , class Color $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a0932bd20f2ca46688bfcc4da060664af}{Draw\+Circle} (int x, int y, int radius, const Color \&col, \hyperlink{classImage}{Image} $\ast$pim)
+\item 
+{\footnotesize template$<$class Image , class Color $>$ }\\\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespacelibs_a80cf97f96ad723948281afa5e66f942c}{Draw\+Line} (int xa, int ya, int xb, int yb, const Color \&col, \hyperlink{classImage}{Image} $\ast$pim)
+\item 
+\hyperlink{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752}{Format} \hyperlink{namespacelibs_ab1c6acb4edc87092a77e374b1f60437d}{Get\+Format} (const char $\ast$c)
+\item 
+int \hyperlink{namespacelibs_a22deb9b91e45d9bdd4c133844a9b3628}{Read\+Image} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a5a6ca9606546052cbf2f57eb2569a7a6}{Write\+Image} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&ptr, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a20d071ac9b7e93b2c73fea6c5cb82ecf}{Read\+Jpg} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+\hyperlink{namespacelibs_ae3d9972f22717e1b37bfb1c1bb4ff9ce}{jpeg\+\_\+error} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo)
+\item 
+int \hyperlink{namespacelibs_a78d4f9dec931d81700309eb2f55e0524}{Read\+Jpg\+Stream} (F\+I\+L\+E $\ast$file, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_ae167e9755ed191d274866519b1f1f0f3}{Write\+Jpg} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality})
+\item 
+int \hyperlink{namespacelibs_ac031313b64f4a38adfd703fb1fcf84a0}{Write\+Jpg\+Stream} (F\+I\+L\+E $\ast$file, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality})
+\item 
+int \hyperlink{namespacelibs_aef3395c9397fc7be44b6f7fb79220b94}{Read\+Png} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_afc37a774666cd905d9fd7e46628feb35}{Read\+Png\+Stream} (F\+I\+L\+E $\ast$file, vector$<$ unsigned char $>$ $\ast$ptr, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a21882f6f7752c1720a05412cb3e8b4bc}{Write\+Png} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&ptr, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a0a38559601a8a00a5fa2500a2fb35d70}{Write\+Png\+Stream} (F\+I\+L\+E $\ast$file, const vector$<$ unsigned char $>$ \&ptr, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a1c80ecbaf84e21c204664a539cd96f92}{Read\+Pnm} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, vector$<$ unsigned char $>$ $\ast$array, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_ab921438155ebe348b31d5cb46490a343}{Read\+Pnm\+Stream} (F\+I\+L\+E $\ast$file, vector$<$ unsigned char $>$ $\ast$array, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a35c75283787ee9dd136cf9121a45bafd}{Write\+Pnm} (const char $\ast$\hyperlink{cdjpeg_8h_a47b60f696fdf746577cdf42ed791c264}{filename}, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a11a9140d37cc5169fa8892657e31a941}{Write\+Pnm\+Stream} (F\+I\+L\+E $\ast$file, const vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{namespacelibs_a07baf752525291b560e9036e9905ce10}{Read\+Image} (const char $\ast$, \hyperlink{classImage}{Image}$<$ T $>$ $\ast$)
+\begin{DoxyCompactList}\small\item\em Try to load the given file in the image$<$\+T$>$ image. \end{DoxyCompactList}\item 
+int \hyperlink{namespacelibs_a7d9169f2d4916c38c0166586cf939755}{Read\+Image} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\begin{DoxyCompactList}\small\item\em Open an png image with unsigned char as memory target. \end{DoxyCompactList}\item 
+int \hyperlink{namespacelibs_ad2f60d0c6ebf3a56362b55a21babf489}{Read\+Png} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_ace195af6d81306f7dd5e1374e52fac2d}{Read\+Png\+Stream} (F\+I\+L\+E $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{namespacelibs_a299078d410d26bb41a2e22c13f1ae40d}{Write\+Image} (const char $\ast$, const \hyperlink{classImage}{Image}$<$ T $>$ \&)
+\item 
+int \hyperlink{namespacelibs_a87f8bfd0c303e88879ea628b4ac42a70}{Write\+Image} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_a385c16aed3480c8a1924d9441e9e50f7}{Write\+Png} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_ae001b8e0512de6a8fca9f7d413721ee2}{Write\+Png\+Stream} (F\+I\+L\+E $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{namespacelibs_a67277ddab96cb013be33e96ddb4b98ff}{Write\+Jpg} (const char $\ast$, const \hyperlink{classImage}{Image}$<$ T $>$ \&, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality}=90)
+\item 
+int \hyperlink{namespacelibs_a7f21701cab9cc35c4375bf9c5ffc9908}{Write\+Jpg} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality}=90)
+\item 
+int \hyperlink{namespacelibs_ae4e6e197dfd59e7a07bd7ec66fc11752}{Write\+Jpg\+Stream} (F\+I\+L\+E $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth, int \hyperlink{jpeglib_8h_acac7df77df55f2a1bfd8d8d18340b773}{quality}=90)
+\item 
+int \hyperlink{namespacelibs_aee6a1b332895dd0ce936cfc1afb7824a}{Read\+Jpg} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\begin{DoxyCompactList}\small\item\em Open a jpg image with unsigned char as memory target. \end{DoxyCompactList}\item 
+int \hyperlink{namespacelibs_a12fde982bc6282e9a3d6a0b59cc6a2b1}{Read\+Jpg\+Stream} (F\+I\+L\+E $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_aa50771ff6835e3b84083ae83625384f0}{Read\+Pnm} (const char $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a167607e1384098c7d08f1fe00413ecc7}{Read\+Pnm\+Stream} (F\+I\+L\+E $\ast$, std\+::vector$<$ unsigned char $>$ $\ast$, int $\ast$w, int $\ast$h, int $\ast$depth)
+\item 
+int \hyperlink{namespacelibs_a6a898fc190fcae0d8e80b15643ac80bf}{Write\+Pnm} (const char $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+int \hyperlink{namespacelibs_ae8cc629b87a1c7373faf53b42cecbe55}{Write\+Pnm\+Stream} (F\+I\+L\+E $\ast$, const std\+::vector$<$ unsigned char $>$ \&array, int w, int h, int depth)
+\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacelibs_abf82a4e75a7c51affb5ada5bbb6713c2}{Read\+Image} (const char $\ast$path, \hyperlink{classImage}{Image}$<$ unsigned char $>$ $\ast$im)
+\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacelibs_afeeb48d777be860b4e04064a1080fa37}{Read\+Image} (const char $\ast$path, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$im)
+\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacelibs_a3550905ac3a9a44683369036b8913bf2}{Read\+Image} (const char $\ast$path, \hyperlink{classImage}{Image}$<$ \hyperlink{classRGBA}{R\+G\+B\+A} $>$ $\ast$im)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespacelibs_a909774f9c13df8aef0075c534aa1ede0}{Sample\+Nearest} (const \hyperlink{classImage}{Image}$<$ T $>$ \&image, float y, float x)
+\begin{DoxyCompactList}\small\item\em Nearest neighbor interpolation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespacelibs_ad5d5848a49cd969db3fcbd18427a0cdc}{Sample\+Linear} (const \hyperlink{classImage}{Image}$<$ T $>$ \&image, float y, float x)
+\begin{DoxyCompactList}\small\item\em Linear interpolation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} \hyperlink{namespacelibs_a5acb3d8357a8674bde80446bb8bf7b41}{Sample\+Linear$<$ R\+G\+B\+Color $>$} (const \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ \&image, float y, float x)
+\begin{DoxyCompactList}\small\item\em Linear interpolation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacelibs_a16118b81f5f0fc54cea32159a5530299}{}\index{libs@{libs}!Byte\+Image@{Byte\+Image}}
+\index{Byte\+Image@{Byte\+Image}!libs@{libs}}
+\subsubsection[{Byte\+Image}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Image}$<${\bf uchar}$>$ {\bf libs\+::\+Byte\+Image}}\label{namespacelibs_a16118b81f5f0fc54cea32159a5530299}
+\hypertarget{namespacelibs_a90e2a46b7e02c762706ee6be80091c7a}{}\index{libs@{libs}!uchar@{uchar}}
+\index{uchar@{uchar}!libs@{libs}}
+\subsubsection[{uchar}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf libs\+::uchar}}\label{namespacelibs_a90e2a46b7e02c762706ee6be80091c7a}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752}{}\index{libs@{libs}!Format@{Format}}
+\index{Format@{Format}!libs@{libs}}
+\subsubsection[{Format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf libs\+::\+Format}}\label{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Pnm@{Pnm}!libs@{libs}}\index{libs@{libs}!Pnm@{Pnm}}\item[{\em 
+\hypertarget{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a3b3feebbfff158c46cb1a815c2a03d65}{}Pnm\label{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a3b3feebbfff158c46cb1a815c2a03d65}
+}]\index{Png@{Png}!libs@{libs}}\index{libs@{libs}!Png@{Png}}\item[{\em 
+\hypertarget{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752ae5e58ecfb1afb18e0f4ad9fbbb15e7b3}{}Png\label{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752ae5e58ecfb1afb18e0f4ad9fbbb15e7b3}
+}]\index{Jpg@{Jpg}!libs@{libs}}\index{libs@{libs}!Jpg@{Jpg}}\item[{\em 
+\hypertarget{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a1c4e75b56624380b0bae2dfa46ade686}{}Jpg\label{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a1c4e75b56624380b0bae2dfa46ade686}
+}]\index{Unknown@{Unknown}!libs@{libs}}\index{libs@{libs}!Unknown@{Unknown}}\item[{\em 
+\hypertarget{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a457d8e698dc3640a6be5692ea8e920c8}{}Unknown\label{namespacelibs_a85e30cf7dbcb94a3d5e3bd5caf31c752a457d8e698dc3640a6be5692ea8e920c8}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacelibs_abeed587537acb94f0038d4c685f80709}{}\index{libs@{libs}!convert@{convert}}
+\index{convert@{convert}!libs@{libs}}
+\subsubsection[{convert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tin , typename Tout $>$ {\bf void} libs\+::convert (
+\begin{DoxyParamCaption}
+\item[{const Tin \&}]{in, }
+\item[{Tout \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_abeed587537acb94f0038d4c685f80709}
+\hypertarget{namespacelibs_aadc66f050a856edeaf0c8c69edd13d85}{}\index{libs@{libs}!convert$<$ R\+G\+B\+A, R\+G\+B\+Color $>$@{convert$<$ R\+G\+B\+A, R\+G\+B\+Color $>$}}
+\index{convert$<$ R\+G\+B\+A, R\+G\+B\+Color $>$@{convert$<$ R\+G\+B\+A, R\+G\+B\+Color $>$}!libs@{libs}}
+\subsubsection[{convert$<$ R\+G\+B\+A, R\+G\+B\+Color $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf void} {\bf libs\+::convert}$<$ {\bf R\+G\+B\+A}, {\bf R\+G\+B\+Color} $>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+G\+B\+A} \&}]{in, }
+\item[{{\bf R\+G\+B\+Color} \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_aadc66f050a856edeaf0c8c69edd13d85}
+\hypertarget{namespacelibs_a699584c1505cae18fdaf41ad62c7c950}{}\index{libs@{libs}!convert$<$ R\+G\+B\+A, unsigned char $>$@{convert$<$ R\+G\+B\+A, unsigned char $>$}}
+\index{convert$<$ R\+G\+B\+A, unsigned char $>$@{convert$<$ R\+G\+B\+A, unsigned char $>$}!libs@{libs}}
+\subsubsection[{convert$<$ R\+G\+B\+A, unsigned char $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf void} {\bf libs\+::convert}$<$ {\bf R\+G\+B\+A}, unsigned char $>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+G\+B\+A} \&}]{in, }
+\item[{unsigned char \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a699584c1505cae18fdaf41ad62c7c950}
+\hypertarget{namespacelibs_a35ff8b219d74a9221bfff6a9e1703994}{}\index{libs@{libs}!convert$<$ R\+G\+B\+Color, R\+G\+B\+A $>$@{convert$<$ R\+G\+B\+Color, R\+G\+B\+A $>$}}
+\index{convert$<$ R\+G\+B\+Color, R\+G\+B\+A $>$@{convert$<$ R\+G\+B\+Color, R\+G\+B\+A $>$}!libs@{libs}}
+\subsubsection[{convert$<$ R\+G\+B\+Color, R\+G\+B\+A $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf void} {\bf libs\+::convert}$<$ {\bf R\+G\+B\+Color}, {\bf R\+G\+B\+A} $>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+G\+B\+Color} \&}]{in, }
+\item[{{\bf R\+G\+B\+A} \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a35ff8b219d74a9221bfff6a9e1703994}
+\hypertarget{namespacelibs_a8bd7dd261917146af19dc8515d507c88}{}\index{libs@{libs}!convert$<$ R\+G\+B\+Color, unsigned char $>$@{convert$<$ R\+G\+B\+Color, unsigned char $>$}}
+\index{convert$<$ R\+G\+B\+Color, unsigned char $>$@{convert$<$ R\+G\+B\+Color, unsigned char $>$}!libs@{libs}}
+\subsubsection[{convert$<$ R\+G\+B\+Color, unsigned char $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf void} {\bf libs\+::convert}$<$ {\bf R\+G\+B\+Color}, unsigned char $>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+G\+B\+Color} \&}]{in, }
+\item[{unsigned char \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a8bd7dd261917146af19dc8515d507c88}
+\hypertarget{namespacelibs_a8e80ce60fb6e92926e78291d51102928}{}\index{libs@{libs}!convert$<$ unsigned char, R\+G\+B\+A $>$@{convert$<$ unsigned char, R\+G\+B\+A $>$}}
+\index{convert$<$ unsigned char, R\+G\+B\+A $>$@{convert$<$ unsigned char, R\+G\+B\+A $>$}!libs@{libs}}
+\subsubsection[{convert$<$ unsigned char, R\+G\+B\+A $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf void} {\bf libs\+::convert}$<$ unsigned char, {\bf R\+G\+B\+A} $>$ (
+\begin{DoxyParamCaption}
+\item[{const unsigned char \&}]{in, }
+\item[{{\bf R\+G\+B\+A} \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a8e80ce60fb6e92926e78291d51102928}
+\hypertarget{namespacelibs_abd6874a8980e98cf69eacdb7f91b5454}{}\index{libs@{libs}!convert$<$ unsigned char, R\+G\+B\+Color $>$@{convert$<$ unsigned char, R\+G\+B\+Color $>$}}
+\index{convert$<$ unsigned char, R\+G\+B\+Color $>$@{convert$<$ unsigned char, R\+G\+B\+Color $>$}!libs@{libs}}
+\subsubsection[{convert$<$ unsigned char, R\+G\+B\+Color $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf void} {\bf libs\+::convert}$<$ unsigned char, {\bf R\+G\+B\+Color} $>$ (
+\begin{DoxyParamCaption}
+\item[{const unsigned char \&}]{in, }
+\item[{{\bf R\+G\+B\+Color} \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_abd6874a8980e98cf69eacdb7f91b5454}
+\hypertarget{namespacelibs_a3448c04a1b0a918759084d8c8e618870}{}\index{libs@{libs}!convert\+Image@{convert\+Image}}
+\index{convert\+Image@{convert\+Image}!libs@{libs}}
+\subsubsection[{convert\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Image\+In , typename Image\+Out $>$ {\bf void} libs\+::convert\+Image (
+\begin{DoxyParamCaption}
+\item[{const Image\+In \&}]{ima\+In, }
+\item[{Image\+Out $\ast$}]{ima\+Out}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a3448c04a1b0a918759084d8c8e618870}
+\hypertarget{namespacelibs_a0932bd20f2ca46688bfcc4da060664af}{}\index{libs@{libs}!Draw\+Circle@{Draw\+Circle}}
+\index{Draw\+Circle@{Draw\+Circle}!libs@{libs}}
+\subsubsection[{Draw\+Circle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Image , class Color $>$ {\bf void} libs\+::\+Draw\+Circle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{radius, }
+\item[{const Color \&}]{col, }
+\item[{{\bf Image} $\ast$}]{pim}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a0932bd20f2ca46688bfcc4da060664af}
+\hypertarget{namespacelibs_a0bfb3ff08fcfc98a84bc99fc4a5c25c6}{}\index{libs@{libs}!Draw\+Ellipse@{Draw\+Ellipse}}
+\index{Draw\+Ellipse@{Draw\+Ellipse}!libs@{libs}}
+\subsubsection[{Draw\+Ellipse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Image , class Color $>$ {\bf void} libs\+::\+Draw\+Ellipse (
+\begin{DoxyParamCaption}
+\item[{int}]{xc, }
+\item[{int}]{yc, }
+\item[{int}]{radius\+A, }
+\item[{int}]{radius\+B, }
+\item[{const Color \&}]{col, }
+\item[{{\bf Image} $\ast$}]{pim, }
+\item[{double}]{angle = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a0bfb3ff08fcfc98a84bc99fc4a5c25c6}
+\hypertarget{namespacelibs_a80cf97f96ad723948281afa5e66f942c}{}\index{libs@{libs}!Draw\+Line@{Draw\+Line}}
+\index{Draw\+Line@{Draw\+Line}!libs@{libs}}
+\subsubsection[{Draw\+Line}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Image , class Color $>$ {\bf void} libs\+::\+Draw\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{xa, }
+\item[{int}]{ya, }
+\item[{int}]{xb, }
+\item[{int}]{yb, }
+\item[{const Color \&}]{col, }
+\item[{{\bf Image} $\ast$}]{pim}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a80cf97f96ad723948281afa5e66f942c}
+\hypertarget{namespacelibs_ab1c6acb4edc87092a77e374b1f60437d}{}\index{libs@{libs}!Get\+Format@{Get\+Format}}
+\index{Get\+Format@{Get\+Format}!libs@{libs}}
+\subsubsection[{Get\+Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Format} libs\+::\+Get\+Format (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ab1c6acb4edc87092a77e374b1f60437d}
+\hypertarget{namespacelibs_ae3d9972f22717e1b37bfb1c1bb4ff9ce}{}\index{libs@{libs}!jpeg\+\_\+error@{jpeg\+\_\+error}}
+\index{jpeg\+\_\+error@{jpeg\+\_\+error}!libs@{libs}}
+\subsubsection[{jpeg\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}libs\+::jpeg\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ae3d9972f22717e1b37bfb1c1bb4ff9ce}
+\hypertarget{namespacelibs_a07baf752525291b560e9036e9905ce10}{}\index{libs@{libs}!Read\+Image@{Read\+Image}}
+\index{Read\+Image@{Read\+Image}!libs@{libs}}
+\subsubsection[{Read\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int libs\+::\+Read\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf Image}$<$ T $>$ $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a07baf752525291b560e9036e9905ce10}
+
+
+Try to load the given file in the image$<$\+T$>$ image. 
+
+\hypertarget{namespacelibs_a7d9169f2d4916c38c0166586cf939755}{}\index{libs@{libs}!Read\+Image@{Read\+Image}}
+\index{Read\+Image@{Read\+Image}!libs@{libs}}
+\subsubsection[{Read\+Image}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a7d9169f2d4916c38c0166586cf939755}
+
+
+Open an png image with unsigned char as memory target. 
+
+The memory point must be null as input. \hypertarget{namespacelibs_a22deb9b91e45d9bdd4c133844a9b3628}{}\index{libs@{libs}!Read\+Image@{Read\+Image}}
+\index{Read\+Image@{Read\+Image}!libs@{libs}}
+\subsubsection[{Read\+Image}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{vector$<$ unsigned char $>$ $\ast$}]{ptr, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a22deb9b91e45d9bdd4c133844a9b3628}
+\hypertarget{namespacelibs_abf82a4e75a7c51affb5ada5bbb6713c2}{}\index{libs@{libs}!Read\+Image@{Read\+Image}}
+\index{Read\+Image@{Read\+Image}!libs@{libs}}
+\subsubsection[{Read\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ int libs\+::\+Read\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf Image}$<$ unsigned char $>$ $\ast$}]{im}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_abf82a4e75a7c51affb5ada5bbb6713c2}
+\hypertarget{namespacelibs_afeeb48d777be860b4e04064a1080fa37}{}\index{libs@{libs}!Read\+Image@{Read\+Image}}
+\index{Read\+Image@{Read\+Image}!libs@{libs}}
+\subsubsection[{Read\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ int libs\+::\+Read\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{im}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_afeeb48d777be860b4e04064a1080fa37}
+\hypertarget{namespacelibs_a3550905ac3a9a44683369036b8913bf2}{}\index{libs@{libs}!Read\+Image@{Read\+Image}}
+\index{Read\+Image@{Read\+Image}!libs@{libs}}
+\subsubsection[{Read\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ int libs\+::\+Read\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+A} $>$ $\ast$}]{im}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a3550905ac3a9a44683369036b8913bf2}
+\hypertarget{namespacelibs_aee6a1b332895dd0ce936cfc1afb7824a}{}\index{libs@{libs}!Read\+Jpg@{Read\+Jpg}}
+\index{Read\+Jpg@{Read\+Jpg}!libs@{libs}}
+\subsubsection[{Read\+Jpg}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Jpg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_aee6a1b332895dd0ce936cfc1afb7824a}
+
+
+Open a jpg image with unsigned char as memory target. 
+
+The memory point must be null as input. \hypertarget{namespacelibs_a20d071ac9b7e93b2c73fea6c5cb82ecf}{}\index{libs@{libs}!Read\+Jpg@{Read\+Jpg}}
+\index{Read\+Jpg@{Read\+Jpg}!libs@{libs}}
+\subsubsection[{Read\+Jpg}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Jpg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{vector$<$ unsigned char $>$ $\ast$}]{ptr, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a20d071ac9b7e93b2c73fea6c5cb82ecf}
+\hypertarget{namespacelibs_a12fde982bc6282e9a3d6a0b59cc6a2b1}{}\index{libs@{libs}!Read\+Jpg\+Stream@{Read\+Jpg\+Stream}}
+\index{Read\+Jpg\+Stream@{Read\+Jpg\+Stream}!libs@{libs}}
+\subsubsection[{Read\+Jpg\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Jpg\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{, }
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a12fde982bc6282e9a3d6a0b59cc6a2b1}
+\hypertarget{namespacelibs_a78d4f9dec931d81700309eb2f55e0524}{}\index{libs@{libs}!Read\+Jpg\+Stream@{Read\+Jpg\+Stream}}
+\index{Read\+Jpg\+Stream@{Read\+Jpg\+Stream}!libs@{libs}}
+\subsubsection[{Read\+Jpg\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Jpg\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{vector$<$ unsigned char $>$ $\ast$}]{ptr, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a78d4f9dec931d81700309eb2f55e0524}
+\hypertarget{namespacelibs_ad2f60d0c6ebf3a56362b55a21babf489}{}\index{libs@{libs}!Read\+Png@{Read\+Png}}
+\index{Read\+Png@{Read\+Png}!libs@{libs}}
+\subsubsection[{Read\+Png}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Png (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ad2f60d0c6ebf3a56362b55a21babf489}
+\hypertarget{namespacelibs_aef3395c9397fc7be44b6f7fb79220b94}{}\index{libs@{libs}!Read\+Png@{Read\+Png}}
+\index{Read\+Png@{Read\+Png}!libs@{libs}}
+\subsubsection[{Read\+Png}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Png (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{vector$<$ unsigned char $>$ $\ast$}]{ptr, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_aef3395c9397fc7be44b6f7fb79220b94}
+\hypertarget{namespacelibs_ace195af6d81306f7dd5e1374e52fac2d}{}\index{libs@{libs}!Read\+Png\+Stream@{Read\+Png\+Stream}}
+\index{Read\+Png\+Stream@{Read\+Png\+Stream}!libs@{libs}}
+\subsubsection[{Read\+Png\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Png\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{, }
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ace195af6d81306f7dd5e1374e52fac2d}
+\hypertarget{namespacelibs_afc37a774666cd905d9fd7e46628feb35}{}\index{libs@{libs}!Read\+Png\+Stream@{Read\+Png\+Stream}}
+\index{Read\+Png\+Stream@{Read\+Png\+Stream}!libs@{libs}}
+\subsubsection[{Read\+Png\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Png\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{vector$<$ unsigned char $>$ $\ast$}]{ptr, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_afc37a774666cd905d9fd7e46628feb35}
+\hypertarget{namespacelibs_aa50771ff6835e3b84083ae83625384f0}{}\index{libs@{libs}!Read\+Pnm@{Read\+Pnm}}
+\index{Read\+Pnm@{Read\+Pnm}!libs@{libs}}
+\subsubsection[{Read\+Pnm}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Pnm (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_aa50771ff6835e3b84083ae83625384f0}
+\hypertarget{namespacelibs_a1c80ecbaf84e21c204664a539cd96f92}{}\index{libs@{libs}!Read\+Pnm@{Read\+Pnm}}
+\index{Read\+Pnm@{Read\+Pnm}!libs@{libs}}
+\subsubsection[{Read\+Pnm}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Pnm (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{vector$<$ unsigned char $>$ $\ast$}]{array, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a1c80ecbaf84e21c204664a539cd96f92}
+\hypertarget{namespacelibs_a167607e1384098c7d08f1fe00413ecc7}{}\index{libs@{libs}!Read\+Pnm\+Stream@{Read\+Pnm\+Stream}}
+\index{Read\+Pnm\+Stream@{Read\+Pnm\+Stream}!libs@{libs}}
+\subsubsection[{Read\+Pnm\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Pnm\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{, }
+\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a167607e1384098c7d08f1fe00413ecc7}
+\hypertarget{namespacelibs_ab921438155ebe348b31d5cb46490a343}{}\index{libs@{libs}!Read\+Pnm\+Stream@{Read\+Pnm\+Stream}}
+\index{Read\+Pnm\+Stream@{Read\+Pnm\+Stream}!libs@{libs}}
+\subsubsection[{Read\+Pnm\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Read\+Pnm\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{vector$<$ unsigned char $>$ $\ast$}]{array, }
+\item[{int $\ast$}]{w, }
+\item[{int $\ast$}]{h, }
+\item[{int $\ast$}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ab921438155ebe348b31d5cb46490a343}
+\hypertarget{namespacelibs_a14b29acc45157fff570b889e3ad29115}{}\index{libs@{libs}!safe\+Put\+Pixel@{safe\+Put\+Pixel}}
+\index{safe\+Put\+Pixel@{safe\+Put\+Pixel}!libs@{libs}}
+\subsubsection[{safe\+Put\+Pixel}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Image , class Color $>$ {\bf void} libs\+::safe\+Put\+Pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{yc, }
+\item[{int}]{xc, }
+\item[{const Color \&}]{col, }
+\item[{{\bf Image} $\ast$}]{pim}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a14b29acc45157fff570b889e3ad29115}
+
+
+Put the pixel in the image to the given color only if the point (xc,yc) is inside the image. 
+
+/!\textbackslash{} Be careful at the order (Y,X). \hypertarget{namespacelibs_ad5d5848a49cd969db3fcbd18427a0cdc}{}\index{libs@{libs}!Sample\+Linear@{Sample\+Linear}}
+\index{Sample\+Linear@{Sample\+Linear}!libs@{libs}}
+\subsubsection[{Sample\+Linear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T libs\+::\+Sample\+Linear (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ T $>$ \&}]{image, }
+\item[{float}]{y, }
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_ad5d5848a49cd969db3fcbd18427a0cdc}
+
+
+Linear interpolation. 
+
+\hypertarget{namespacelibs_a5acb3d8357a8674bde80446bb8bf7b41}{}\index{libs@{libs}!Sample\+Linear$<$ R\+G\+B\+Color $>$@{Sample\+Linear$<$ R\+G\+B\+Color $>$}}
+\index{Sample\+Linear$<$ R\+G\+B\+Color $>$@{Sample\+Linear$<$ R\+G\+B\+Color $>$}!libs@{libs}}
+\subsubsection[{Sample\+Linear$<$ R\+G\+B\+Color $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ {\bf R\+G\+B\+Color} {\bf libs\+::\+Sample\+Linear}$<$ {\bf R\+G\+B\+Color} $>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ \&}]{image, }
+\item[{float}]{y, }
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a5acb3d8357a8674bde80446bb8bf7b41}
+
+
+Linear interpolation. 
+
+R\+G\+B\+Color specialization. \hypertarget{namespacelibs_a909774f9c13df8aef0075c534aa1ede0}{}\index{libs@{libs}!Sample\+Nearest@{Sample\+Nearest}}
+\index{Sample\+Nearest@{Sample\+Nearest}!libs@{libs}}
+\subsubsection[{Sample\+Nearest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T libs\+::\+Sample\+Nearest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ T $>$ \&}]{image, }
+\item[{float}]{y, }
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacelibs_a909774f9c13df8aef0075c534aa1ede0}
+
+
+Nearest neighbor interpolation. 
+
+\hypertarget{namespacelibs_a299078d410d26bb41a2e22c13f1ae40d}{}\index{libs@{libs}!Write\+Image@{Write\+Image}}
+\index{Write\+Image@{Write\+Image}!libs@{libs}}
+\subsubsection[{Write\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int libs\+::\+Write\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const {\bf Image}$<$ T $>$ \&}]{im}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a299078d410d26bb41a2e22c13f1ae40d}
+\hypertarget{namespacelibs_a87f8bfd0c303e88879ea628b4ac42a70}{}\index{libs@{libs}!Write\+Image@{Write\+Image}}
+\index{Write\+Image@{Write\+Image}!libs@{libs}}
+\subsubsection[{Write\+Image}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a87f8bfd0c303e88879ea628b4ac42a70}
+\hypertarget{namespacelibs_a5a6ca9606546052cbf2f57eb2569a7a6}{}\index{libs@{libs}!Write\+Image@{Write\+Image}}
+\index{Write\+Image@{Write\+Image}!libs@{libs}}
+\subsubsection[{Write\+Image}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const vector$<$ unsigned char $>$ \&}]{ptr, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a5a6ca9606546052cbf2f57eb2569a7a6}
+\hypertarget{namespacelibs_a67277ddab96cb013be33e96ddb4b98ff}{}\index{libs@{libs}!Write\+Jpg@{Write\+Jpg}}
+\index{Write\+Jpg@{Write\+Jpg}!libs@{libs}}
+\subsubsection[{Write\+Jpg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int libs\+::\+Write\+Jpg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const {\bf Image}$<$ T $>$ \&}]{im, }
+\item[{int}]{quality = {\ttfamily 90}}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a67277ddab96cb013be33e96ddb4b98ff}
+\hypertarget{namespacelibs_a7f21701cab9cc35c4375bf9c5ffc9908}{}\index{libs@{libs}!Write\+Jpg@{Write\+Jpg}}
+\index{Write\+Jpg@{Write\+Jpg}!libs@{libs}}
+\subsubsection[{Write\+Jpg}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Jpg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth, }
+\item[{int}]{quality = {\ttfamily 90}}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a7f21701cab9cc35c4375bf9c5ffc9908}
+\hypertarget{namespacelibs_ae167e9755ed191d274866519b1f1f0f3}{}\index{libs@{libs}!Write\+Jpg@{Write\+Jpg}}
+\index{Write\+Jpg@{Write\+Jpg}!libs@{libs}}
+\subsubsection[{Write\+Jpg}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Jpg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth, }
+\item[{int}]{quality}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ae167e9755ed191d274866519b1f1f0f3}
+\hypertarget{namespacelibs_ae4e6e197dfd59e7a07bd7ec66fc11752}{}\index{libs@{libs}!Write\+Jpg\+Stream@{Write\+Jpg\+Stream}}
+\index{Write\+Jpg\+Stream@{Write\+Jpg\+Stream}!libs@{libs}}
+\subsubsection[{Write\+Jpg\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Jpg\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{, }
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth, }
+\item[{int}]{quality = {\ttfamily 90}}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ae4e6e197dfd59e7a07bd7ec66fc11752}
+\hypertarget{namespacelibs_ac031313b64f4a38adfd703fb1fcf84a0}{}\index{libs@{libs}!Write\+Jpg\+Stream@{Write\+Jpg\+Stream}}
+\index{Write\+Jpg\+Stream@{Write\+Jpg\+Stream}!libs@{libs}}
+\subsubsection[{Write\+Jpg\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Jpg\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{const vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth, }
+\item[{int}]{quality}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ac031313b64f4a38adfd703fb1fcf84a0}
+\hypertarget{namespacelibs_a385c16aed3480c8a1924d9441e9e50f7}{}\index{libs@{libs}!Write\+Png@{Write\+Png}}
+\index{Write\+Png@{Write\+Png}!libs@{libs}}
+\subsubsection[{Write\+Png}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Png (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a385c16aed3480c8a1924d9441e9e50f7}
+\hypertarget{namespacelibs_a21882f6f7752c1720a05412cb3e8b4bc}{}\index{libs@{libs}!Write\+Png@{Write\+Png}}
+\index{Write\+Png@{Write\+Png}!libs@{libs}}
+\subsubsection[{Write\+Png}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Png (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const vector$<$ unsigned char $>$ \&}]{ptr, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a21882f6f7752c1720a05412cb3e8b4bc}
+\hypertarget{namespacelibs_ae001b8e0512de6a8fca9f7d413721ee2}{}\index{libs@{libs}!Write\+Png\+Stream@{Write\+Png\+Stream}}
+\index{Write\+Png\+Stream@{Write\+Png\+Stream}!libs@{libs}}
+\subsubsection[{Write\+Png\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Png\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{, }
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ae001b8e0512de6a8fca9f7d413721ee2}
+\hypertarget{namespacelibs_a0a38559601a8a00a5fa2500a2fb35d70}{}\index{libs@{libs}!Write\+Png\+Stream@{Write\+Png\+Stream}}
+\index{Write\+Png\+Stream@{Write\+Png\+Stream}!libs@{libs}}
+\subsubsection[{Write\+Png\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Png\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{const vector$<$ unsigned char $>$ \&}]{ptr, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a0a38559601a8a00a5fa2500a2fb35d70}
+\hypertarget{namespacelibs_a6a898fc190fcae0d8e80b15643ac80bf}{}\index{libs@{libs}!Write\+Pnm@{Write\+Pnm}}
+\index{Write\+Pnm@{Write\+Pnm}!libs@{libs}}
+\subsubsection[{Write\+Pnm}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Pnm (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a6a898fc190fcae0d8e80b15643ac80bf}
+\hypertarget{namespacelibs_a35c75283787ee9dd136cf9121a45bafd}{}\index{libs@{libs}!Write\+Pnm@{Write\+Pnm}}
+\index{Write\+Pnm@{Write\+Pnm}!libs@{libs}}
+\subsubsection[{Write\+Pnm}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Pnm (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a35c75283787ee9dd136cf9121a45bafd}
+\hypertarget{namespacelibs_ae8cc629b87a1c7373faf53b42cecbe55}{}\index{libs@{libs}!Write\+Pnm\+Stream@{Write\+Pnm\+Stream}}
+\index{Write\+Pnm\+Stream@{Write\+Pnm\+Stream}!libs@{libs}}
+\subsubsection[{Write\+Pnm\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Pnm\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{, }
+\item[{const std\+::vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_ae8cc629b87a1c7373faf53b42cecbe55}
+\hypertarget{namespacelibs_a11a9140d37cc5169fa8892657e31a941}{}\index{libs@{libs}!Write\+Pnm\+Stream@{Write\+Pnm\+Stream}}
+\index{Write\+Pnm\+Stream@{Write\+Pnm\+Stream}!libs@{libs}}
+\subsubsection[{Write\+Pnm\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}int libs\+::\+Write\+Pnm\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{const vector$<$ unsigned char $>$ \&}]{array, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{namespacelibs_a11a9140d37cc5169fa8892657e31a941}

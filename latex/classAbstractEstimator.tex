@@ -1,0 +1,85 @@
+\hypertarget{classAbstractEstimator}{}\section{Abstract\+Estimator Class Reference}
+\label{classAbstractEstimator}\index{Abstract\+Estimator@{Abstract\+Estimator}}
+
+
+Interface for fundamental matrix estimation algorithms.  
+
+
+
+
+{\ttfamily \#include $<$abstract\+\_\+estimator.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Estimator\+:
+% FIG 0
+
+
+Collaboration diagram for Abstract\+Estimator\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAbstractEstimator_ae264b354a4a61e7d9af24ca98aed241d}{Abstract\+Estimator} ()
+\item 
+virtual \hyperlink{classAbstractEstimator_a0d3919acb3c173e763ef77b24b2be7a7}{$\sim$\+Abstract\+Estimator} ()
+\item 
+virtual void \hyperlink{classAbstractEstimator_a9d5a1dcb64b35f5996351018a5eb9e0a}{estimate\+F} (const std\+::vector$<$ cv\+::\+Point2f $>$ \&p0, const std\+::vector$<$ cv\+::\+Point2f $>$ \&p1, cv\+::\+Mat \&F, std\+::vector$<$ bool $>$ \&inl\+\_\+mask)=0
+\begin{DoxyCompactList}\small\item\em Estimates fundamental matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for fundamental matrix estimation algorithms. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAbstractEstimator_ae264b354a4a61e7d9af24ca98aed241d}{}\index{Abstract\+Estimator@{Abstract\+Estimator}!Abstract\+Estimator@{Abstract\+Estimator}}
+\index{Abstract\+Estimator@{Abstract\+Estimator}!Abstract\+Estimator@{Abstract\+Estimator}}
+\subsubsection[{Abstract\+Estimator}]{\setlength{\rightskip}{0pt plus 5cm}Abstract\+Estimator\+::\+Abstract\+Estimator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAbstractEstimator_ae264b354a4a61e7d9af24ca98aed241d}
+\hypertarget{classAbstractEstimator_a0d3919acb3c173e763ef77b24b2be7a7}{}\index{Abstract\+Estimator@{Abstract\+Estimator}!````~Abstract\+Estimator@{$\sim$\+Abstract\+Estimator}}
+\index{````~Abstract\+Estimator@{$\sim$\+Abstract\+Estimator}!Abstract\+Estimator@{Abstract\+Estimator}}
+\subsubsection[{$\sim$\+Abstract\+Estimator}]{\setlength{\rightskip}{0pt plus 5cm}virtual Abstract\+Estimator\+::$\sim$\+Abstract\+Estimator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classAbstractEstimator_a0d3919acb3c173e763ef77b24b2be7a7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAbstractEstimator_a9d5a1dcb64b35f5996351018a5eb9e0a}{}\index{Abstract\+Estimator@{Abstract\+Estimator}!estimate\+F@{estimate\+F}}
+\index{estimate\+F@{estimate\+F}!Abstract\+Estimator@{Abstract\+Estimator}}
+\subsubsection[{estimate\+F}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Estimator\+::estimate\+F (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{p0, }
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{p1, }
+\item[{cv\+::\+Mat \&}]{F, }
+\item[{std\+::vector$<$ bool $>$ \&}]{inl\+\_\+mask}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classAbstractEstimator_a9d5a1dcb64b35f5996351018a5eb9e0a}
+
+
+Estimates fundamental matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p0} & keypoints from image 0 \\
+\hline
+{\em p1} & keypoints from image 1 \\
+\hline
+{\em F} & output fundamental matrix \\
+\hline
+{\em inl\+\_\+mask} & mask labeling the inliers found from the estimation \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classORSAEStimator_aeafb56f7f64260df6676a7de5e909456}{O\+R\+S\+A\+E\+Stimator}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/estimation/\hyperlink{abstract__estimator_8h}{abstract\+\_\+estimator.\+h}\end{DoxyCompactItemize}

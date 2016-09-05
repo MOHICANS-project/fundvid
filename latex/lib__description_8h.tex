@@ -1,0 +1,208 @@
+\hypertarget{lib__description_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+description.h File Reference}
+\label{lib__description_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+description.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+description.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__description_8h_a7ea283443cf029f0334de9fa856f993e}{sift\+\_\+accumulate\+\_\+orientation\+\_\+histogram} (float x\+\_\+key, float y\+\_\+key, float sigma\+\_\+key, const float $\ast$grad\+X, const float $\ast$grad\+Y, int w, int h, int nbins, float lambda\+\_\+ori, float $\ast$hist)
+\begin{DoxyCompactList}\small\item\em Accumulate gradient orientation histogram around a keypoint. \end{DoxyCompactList}\item 
+int \hyperlink{lib__description_8h_a2bf9bcaa8e7ba2d5f331a3d3e4280bb7}{sift\+\_\+extract\+\_\+principal\+\_\+orientations} (float $\ast$hist, int nbins, float threshold, float $\ast$principal\+\_\+orientations)
+\begin{DoxyCompactList}\small\item\em Extract principal orientations from gradient orientation histogram. \end{DoxyCompactList}\item 
+float \hyperlink{lib__description_8h_a830d2c78617701f9d6762c3c97ff1da5}{sift\+\_\+extract\+\_\+one\+\_\+orientation} (float $\ast$hist, int nbins)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__description_8h_a3fc2ec7b49a96c16aa2b2cce3e9b5c82}{sift\+\_\+extract\+\_\+feature\+\_\+vector} (float x\+\_\+key, float y\+\_\+key, float sigma\+\_\+key, float theta\+\_\+key, const float $\ast$grad\+X, const float $\ast$grad\+Y, int w, int h, int Nhist, int Nbins, float lambda\+\_\+descr, float $\ast$descr)
+\begin{DoxyCompactList}\small\item\em Extract keypoint feature vector. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__description_8h_a74d9e17491f899aa07c0bc280b0fb62e}{sift\+\_\+threshold\+\_\+and\+\_\+quantize\+\_\+feature\+\_\+vector} (float $\ast$descr, int n, float threshold)
+\begin{DoxyCompactList}\small\item\em Modify descriptor for robustness and speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__description_8h_a7ea283443cf029f0334de9fa856f993e}{}\index{lib\+\_\+description.\+h@{lib\+\_\+description.\+h}!sift\+\_\+accumulate\+\_\+orientation\+\_\+histogram@{sift\+\_\+accumulate\+\_\+orientation\+\_\+histogram}}
+\index{sift\+\_\+accumulate\+\_\+orientation\+\_\+histogram@{sift\+\_\+accumulate\+\_\+orientation\+\_\+histogram}!lib\+\_\+description.\+h@{lib\+\_\+description.\+h}}
+\subsubsection[{sift\+\_\+accumulate\+\_\+orientation\+\_\+histogram}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+accumulate\+\_\+orientation\+\_\+histogram (
+\begin{DoxyParamCaption}
+\item[{float}]{x\+\_\+key, }
+\item[{float}]{y\+\_\+key, }
+\item[{float}]{sigma\+\_\+key, }
+\item[{const float $\ast$}]{im\+X, }
+\item[{const float $\ast$}]{im\+Y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{nbins, }
+\item[{float}]{lambda\+\_\+ori, }
+\item[{float $\ast$}]{hist}
+\end{DoxyParamCaption}
+)}\label{lib__description_8h_a7ea283443cf029f0334de9fa856f993e}
+
+
+Accumulate gradient orientation histogram around a keypoint. 
+
+-\/---I\+N\+P\+U\+T-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+key} & \\
+\hline
+{\em y\+\_\+key} & \\
+\hline
+{\em sigma\+\_\+key} & keypoint coordinates.\\
+\hline
+{\em im\+X} & \\
+\hline
+{\em im\+X} & precomputed gradient relative to the nearest scale.\\
+\hline
+\end{DoxyParams}
+-\/---P\+A\+R\+A\+M-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em lambda\+\_\+ori} & (= 1.\+5)
+\begin{DoxyItemize}
+\item The patch P$^\wedge$ori is ( 6 X lambda\+\_\+ori X sigma\+\_\+key )
+\item The Gaussian window has a standard deviation of lambda\+\_\+ori X sigma\+\_\+key
+\end{DoxyItemize}\\
+\hline
+{\em nbins} & (= 36) number of bins covering the range \mbox{[}0,2pi\mbox{]}\\
+\hline
+\end{DoxyParams}
+-\/---O\+U\+T\+P\+U\+T-\/---  hist the output is vec of bins value
+
+-\/---R\+E\+T\+U\+R\+N-\/--- \begin{DoxyReturn}{Returns}
+count number of pixels contributing to the histogram. 
+\end{DoxyReturn}
+Initialize output vector
+
+Contributing pixels are inside a patch \mbox{[}si\+Min;si\+Max\mbox{]} X \mbox{[}sj\+Min;sj\+Max\mbox{]}
+
+For each pixel inside the patch.
+
+Compute pixel coordinates (s\+X,s\+Y) on keypoint\textquotesingle{}s invariant
+
+Determine the bin index in the circular histogram
+
+Add the contribution to the orientation histogram \hypertarget{lib__description_8h_a3fc2ec7b49a96c16aa2b2cce3e9b5c82}{}\index{lib\+\_\+description.\+h@{lib\+\_\+description.\+h}!sift\+\_\+extract\+\_\+feature\+\_\+vector@{sift\+\_\+extract\+\_\+feature\+\_\+vector}}
+\index{sift\+\_\+extract\+\_\+feature\+\_\+vector@{sift\+\_\+extract\+\_\+feature\+\_\+vector}!lib\+\_\+description.\+h@{lib\+\_\+description.\+h}}
+\subsubsection[{sift\+\_\+extract\+\_\+feature\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+extract\+\_\+feature\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{float}]{x\+\_\+key, }
+\item[{float}]{y\+\_\+key, }
+\item[{float}]{sigma\+\_\+key, }
+\item[{float}]{theta\+\_\+key, }
+\item[{const float $\ast$}]{im\+X, }
+\item[{const float $\ast$}]{im\+Y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{Nhist, }
+\item[{int}]{Nbins, }
+\item[{float}]{lambda\+\_\+descr, }
+\item[{float $\ast$}]{descr}
+\end{DoxyParamCaption}
+)}\label{lib__description_8h_a3fc2ec7b49a96c16aa2b2cce3e9b5c82}
+
+
+Extract keypoint feature vector. 
+
+-\/---I\+N\+P\+U\+T-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+key} & \\
+\hline
+{\em y\+\_\+key} & \\
+\hline
+{\em sigma\+\_\+key} & \\
+\hline
+{\em theta\+\_\+key} & keypoint coordinates.\\
+\hline
+{\em im\+X} & \\
+\hline
+{\em im\+X} & precomputed gradient relative to the nearest scale.\\
+\hline
+\end{DoxyParams}
+-\/---P\+A\+R\+A\+M-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em lambda\+\_\+descr} & (=6)
+\begin{DoxyItemize}
+\item The gaussian window has a standard deviation of lambda\+\_\+descr X=$\ast$ sigma\+\_\+key
+\item The patch P$^\wedge$descr is ( 2 $\ast$ lambda\+\_\+descr $\ast$ sigma\+\_\+key $\ast$ (1+1/\+Nhist) wide
+\end{DoxyItemize}\\
+\hline
+{\em Nhist} & (=4) number of histograms in each of the two directions, \\
+\hline
+{\em Nbins} & (=8) number of bins covering the range \mbox{[}0,2pi\mbox{]}\\
+\hline
+\end{DoxyParams}
+-\/---O\+U\+T\+P\+U\+T-\/---  descr
+
+-\/---R\+E\+T\+U\+R\+N-\/--- \begin{DoxyReturn}{Returns}
+count number of sample contributing to the descriptor 
+\end{DoxyReturn}
+For each pixel inside the patch. \hypertarget{lib__description_8h_a830d2c78617701f9d6762c3c97ff1da5}{}\index{lib\+\_\+description.\+h@{lib\+\_\+description.\+h}!sift\+\_\+extract\+\_\+one\+\_\+orientation@{sift\+\_\+extract\+\_\+one\+\_\+orientation}}
+\index{sift\+\_\+extract\+\_\+one\+\_\+orientation@{sift\+\_\+extract\+\_\+one\+\_\+orientation}!lib\+\_\+description.\+h@{lib\+\_\+description.\+h}}
+\subsubsection[{sift\+\_\+extract\+\_\+one\+\_\+orientation}]{\setlength{\rightskip}{0pt plus 5cm}float sift\+\_\+extract\+\_\+one\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{hist, }
+\item[{int}]{nbins}
+\end{DoxyParamCaption}
+)}\label{lib__description_8h_a830d2c78617701f9d6762c3c97ff1da5}
+\hypertarget{lib__description_8h_a2bf9bcaa8e7ba2d5f331a3d3e4280bb7}{}\index{lib\+\_\+description.\+h@{lib\+\_\+description.\+h}!sift\+\_\+extract\+\_\+principal\+\_\+orientations@{sift\+\_\+extract\+\_\+principal\+\_\+orientations}}
+\index{sift\+\_\+extract\+\_\+principal\+\_\+orientations@{sift\+\_\+extract\+\_\+principal\+\_\+orientations}!lib\+\_\+description.\+h@{lib\+\_\+description.\+h}}
+\subsubsection[{sift\+\_\+extract\+\_\+principal\+\_\+orientations}]{\setlength{\rightskip}{0pt plus 5cm}int sift\+\_\+extract\+\_\+principal\+\_\+orientations (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{hist, }
+\item[{int}]{nbins, }
+\item[{float}]{threshold, }
+\item[{float $\ast$}]{principal\+\_\+orientations}
+\end{DoxyParamCaption}
+)}\label{lib__description_8h_a2bf9bcaa8e7ba2d5f331a3d3e4280bb7}
+
+
+Extract principal orientations from gradient orientation histogram. 
+
+-\/---I\+N\+P\+U\+T-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em hist} & histogram of gradient orientation. \\
+\hline
+{\em nbins} & (=36) number of bins covering range \mbox{[}0,2pi\mbox{]}.\\
+\hline
+\end{DoxyParams}
+-\/---P\+A\+R\+A\+M-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & (0.\+8) local maxima are considered secondary principal orientation if they exceed threshold times the absolute maximum. expressed in percentage of the max value\\
+\hline
+\end{DoxyParams}
+-\/---O\+U\+T\+P\+U\+T-\/---  principal\+\_\+orientations pointer to tab storing principal orientations.
+
+-\/---R\+E\+T\+U\+R\+N-\/--- \begin{DoxyReturn}{Returns}
+nori number of principal orientation ($>$=1) 
+\end{DoxyReturn}
+\hypertarget{lib__description_8h_a74d9e17491f899aa07c0bc280b0fb62e}{}\index{lib\+\_\+description.\+h@{lib\+\_\+description.\+h}!sift\+\_\+threshold\+\_\+and\+\_\+quantize\+\_\+feature\+\_\+vector@{sift\+\_\+threshold\+\_\+and\+\_\+quantize\+\_\+feature\+\_\+vector}}
+\index{sift\+\_\+threshold\+\_\+and\+\_\+quantize\+\_\+feature\+\_\+vector@{sift\+\_\+threshold\+\_\+and\+\_\+quantize\+\_\+feature\+\_\+vector}!lib\+\_\+description.\+h@{lib\+\_\+description.\+h}}
+\subsubsection[{sift\+\_\+threshold\+\_\+and\+\_\+quantize\+\_\+feature\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+threshold\+\_\+and\+\_\+quantize\+\_\+feature\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{descr, }
+\item[{int}]{n, }
+\item[{float}]{threshold}
+\end{DoxyParamCaption}
+)}\label{lib__description_8h_a74d9e17491f899aa07c0bc280b0fb62e}
+
+
+Modify descriptor for robustness and speed. 
+
+
+\begin{DoxyItemize}
+\item Threshold bins exceeding the value of threshold times the l2 norm (to increase robustness to saturation effects)
+\item Normalized the vector (l2 norm = 512)
+\item Quantize vector values (to increase the speed of distance computations)
+\end{DoxyItemize}
+
+-\/---I\+N\+P\+U\+T O\+U\+T\+P\+U\+T-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em descr} & float histogram of length Nhist$\ast$\+Nhist$\ast$\+Nbins (=128)\\
+\hline
+\end{DoxyParams}
+-\/---P\+A\+R\+A\+M-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & threshold applied to the l2-\/norm of the descriptor\\
+\hline
+\end{DoxyParams}
+-\/---O\+U\+T\+P\+U\+T-\/--- 
+\begin{DoxyParams}{Parameters}
+{\em qtdescr} & int histogram of length Nhist$\ast$\+Nhist$\ast$\+Nbins and values in \mbox{[}0..255\mbox{]} \\
+\hline
+\end{DoxyParams}

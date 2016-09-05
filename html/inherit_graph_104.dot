@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOption.html",tooltip="Base class for option/switch. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="OptionField\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptionField.html",tooltip="Option with an argument of type T, which must be readable by operator>> "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="OptionSwitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptionSwitch.html",tooltip="Option on/off is called a switch. "];
+}

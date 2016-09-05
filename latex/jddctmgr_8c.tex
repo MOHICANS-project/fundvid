@@ -1,0 +1,70 @@
+\hypertarget{jddctmgr_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jddctmgr.c File Reference}
+\label{jddctmgr_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jddctmgr.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jddctmgr.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jdct.\+h\char`\"{}}\\*
+Include dependency graph for jddctmgr.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__idct__controller}{my\+\_\+idct\+\_\+controller}
+\item 
+union \hyperlink{unionmultiplier__table}{multiplier\+\_\+table}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jddctmgr_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\item 
+\#define \hyperlink{jddctmgr_8c_a343bd991a4047475beae922445847f86}{P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+S\+L\+O\+W\+\_\+\+T\+A\+B\+L\+E\+S}
+\item 
+\#define \hyperlink{jddctmgr_8c_a60551099e0e59afa6bcdb5f8afc32230}{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}~14
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__idct__controller}{my\+\_\+idct\+\_\+controller} $\ast$ \hyperlink{jddctmgr_8c_aed1a4734bbe951b7a61b6650fcac4693}{my\+\_\+idct\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jddctmgr_8c_a1964f006adb8fb80f57e455f6452aec1}{start\+\_\+pass} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jddctmgr_8c_aa58c9a57d35dfad33e10c13ff613c580}{jinit\+\_\+inverse\+\_\+dct} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jddctmgr_8c_a60551099e0e59afa6bcdb5f8afc32230}{}\index{jddctmgr.\+c@{jddctmgr.\+c}!C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S@{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}}
+\index{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S@{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}!jddctmgr.\+c@{jddctmgr.\+c}}
+\subsubsection[{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S~14}\label{jddctmgr_8c_a60551099e0e59afa6bcdb5f8afc32230}
+\hypertarget{jddctmgr_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jddctmgr.\+c@{jddctmgr.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jddctmgr.\+c@{jddctmgr.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jddctmgr_8c_ad5c3cdfae3019b8223973041a2a1304b}
+\hypertarget{jddctmgr_8c_a343bd991a4047475beae922445847f86}{}\index{jddctmgr.\+c@{jddctmgr.\+c}!P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+S\+L\+O\+W\+\_\+\+T\+A\+B\+L\+E\+S@{P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+S\+L\+O\+W\+\_\+\+T\+A\+B\+L\+E\+S}}
+\index{P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+S\+L\+O\+W\+\_\+\+T\+A\+B\+L\+E\+S@{P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+S\+L\+O\+W\+\_\+\+T\+A\+B\+L\+E\+S}!jddctmgr.\+c@{jddctmgr.\+c}}
+\subsubsection[{P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+S\+L\+O\+W\+\_\+\+T\+A\+B\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+S\+L\+O\+W\+\_\+\+T\+A\+B\+L\+E\+S}\label{jddctmgr_8c_a343bd991a4047475beae922445847f86}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jddctmgr_8c_aed1a4734bbe951b7a61b6650fcac4693}{}\index{jddctmgr.\+c@{jddctmgr.\+c}!my\+\_\+idct\+\_\+ptr@{my\+\_\+idct\+\_\+ptr}}
+\index{my\+\_\+idct\+\_\+ptr@{my\+\_\+idct\+\_\+ptr}!jddctmgr.\+c@{jddctmgr.\+c}}
+\subsubsection[{my\+\_\+idct\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+idct\+\_\+controller}$\ast$ {\bf my\+\_\+idct\+\_\+ptr}}\label{jddctmgr_8c_aed1a4734bbe951b7a61b6650fcac4693}
+
+
+\subsection{Function Documentation}
+\hypertarget{jddctmgr_8c_aa58c9a57d35dfad33e10c13ff613c580}{}\index{jddctmgr.\+c@{jddctmgr.\+c}!jinit\+\_\+inverse\+\_\+dct@{jinit\+\_\+inverse\+\_\+dct}}
+\index{jinit\+\_\+inverse\+\_\+dct@{jinit\+\_\+inverse\+\_\+dct}!jddctmgr.\+c@{jddctmgr.\+c}}
+\subsubsection[{jinit\+\_\+inverse\+\_\+dct}]{\setlength{\rightskip}{0pt plus 5cm}jinit\+\_\+inverse\+\_\+dct (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jddctmgr_8c_aa58c9a57d35dfad33e10c13ff613c580}
+\hypertarget{jddctmgr_8c_a1964f006adb8fb80f57e455f6452aec1}{}\index{jddctmgr.\+c@{jddctmgr.\+c}!start\+\_\+pass@{start\+\_\+pass}}
+\index{start\+\_\+pass@{start\+\_\+pass}!jddctmgr.\+c@{jddctmgr.\+c}}
+\subsubsection[{start\+\_\+pass}]{\setlength{\rightskip}{0pt plus 5cm}start\+\_\+pass (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jddctmgr_8c_a1964f006adb8fb80f57e455f6452aec1}

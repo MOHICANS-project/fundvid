@@ -1,0 +1,158 @@
+\hypertarget{gzwrite_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/zlib/gzwrite.c File Reference}
+\label{gzwrite_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/gzwrite.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/gzwrite.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/zlib/gzguts.\+h\char`\"{}}\\*
+Include dependency graph for gzwrite.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} int \hyperlink{gzwrite_8c_a3fb2532b5691da6f2120dc0c8df10df3}{gz\+\_\+init} \hyperlink{gzwrite_8c_ab2bb6a74d8a540f213c47cd34dab32c5}{O\+F} ((\hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep}))
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} int \hyperlink{gzwrite_8c_a578bb1f539c1df875e6ebe887663d425}{gz\+\_\+comp} \hyperlink{gzwrite_8c_a81445df3df03a8472757a7ce99eabf56}{O\+F} ((\hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep}, int))
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} int \hyperlink{gzwrite_8c_a6fad277f0035b7b2048f6187bb03692c}{gz\+\_\+zero} \hyperlink{gzwrite_8c_a5eb0ac16312161458394c125d5d13a41}{O\+F} ((\hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep}, z\+\_\+off64\+\_\+t))
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} int \hyperlink{gzwrite_8c_a3fb2532b5691da6f2120dc0c8df10df3}{gz\+\_\+init} (\hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep} state)
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} int \hyperlink{gzwrite_8c_a578bb1f539c1df875e6ebe887663d425}{gz\+\_\+comp} (\hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep} state, int flush)
+\item 
+\hyperlink{zutil_8h_a08023ea6765c99d60a6a3840cd07156e}{local} int \hyperlink{gzwrite_8c_a6fad277f0035b7b2048f6187bb03692c}{gz\+\_\+zero} (\hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep} state, z\+\_\+off64\+\_\+t len)
+\item 
+int Z\+E\+X\+P\+O\+R\+T \hyperlink{gzwrite_8c_a93323ef1288f105db8a89e80f2764d3b}{gzwrite} (\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} file, voidpc buf, unsigned len)
+\item 
+int Z\+E\+X\+P\+O\+R\+T \hyperlink{gzwrite_8c_a37f7621e057bd71abdbe2f2480b69935}{gzputc} (\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} file, int c)
+\item 
+int Z\+E\+X\+P\+O\+R\+T \hyperlink{gzwrite_8c_a2760b9a721dd2950d101046d9b57c461}{gzputs} (\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} file, const char $\ast$str)
+\item 
+int Z\+E\+X\+P\+O\+R\+T\+V\+A \hyperlink{gzwrite_8c_a23cb6f01c1de1f861e22091d0ca092ef}{gzprintf} (\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} file, const char $\ast$format, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, int a18, int a19, int a20)
+\item 
+int Z\+E\+X\+P\+O\+R\+T \hyperlink{gzwrite_8c_a6b70d5783d03b12adfd369bd9b7394a2}{gzflush} (\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} file, int flush)
+\item 
+int Z\+E\+X\+P\+O\+R\+T \hyperlink{gzwrite_8c_a20e49f282c69489d3733593736212876}{gzsetparams} (\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} file, int level, int strategy)
+\item 
+int Z\+E\+X\+P\+O\+R\+T \hyperlink{gzwrite_8c_a6f657e5b498bef603821cdf41c8375d4}{gzclose\+\_\+w} (\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} file)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{gzwrite_8c_a578bb1f539c1df875e6ebe887663d425}{}\index{gzwrite.\+c@{gzwrite.\+c}!gz\+\_\+comp@{gz\+\_\+comp}}
+\index{gz\+\_\+comp@{gz\+\_\+comp}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gz\+\_\+comp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} int gz\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+\_\+statep}}]{state, }
+\item[{int}]{flush}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a578bb1f539c1df875e6ebe887663d425}
+\hypertarget{gzwrite_8c_a3fb2532b5691da6f2120dc0c8df10df3}{}\index{gzwrite.\+c@{gzwrite.\+c}!gz\+\_\+init@{gz\+\_\+init}}
+\index{gz\+\_\+init@{gz\+\_\+init}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gz\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} int gz\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+\_\+statep}}]{state}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a3fb2532b5691da6f2120dc0c8df10df3}
+\hypertarget{gzwrite_8c_a6fad277f0035b7b2048f6187bb03692c}{}\index{gzwrite.\+c@{gzwrite.\+c}!gz\+\_\+zero@{gz\+\_\+zero}}
+\index{gz\+\_\+zero@{gz\+\_\+zero}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gz\+\_\+zero}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} int gz\+\_\+zero (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+\_\+statep}}]{state, }
+\item[{z\+\_\+off64\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a6fad277f0035b7b2048f6187bb03692c}
+\hypertarget{gzwrite_8c_a6f657e5b498bef603821cdf41c8375d4}{}\index{gzwrite.\+c@{gzwrite.\+c}!gzclose\+\_\+w@{gzclose\+\_\+w}}
+\index{gzclose\+\_\+w@{gzclose\+\_\+w}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gzclose\+\_\+w}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+E\+X\+P\+O\+R\+T gzclose\+\_\+w (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+File}}]{file}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a6f657e5b498bef603821cdf41c8375d4}
+\hypertarget{gzwrite_8c_a6b70d5783d03b12adfd369bd9b7394a2}{}\index{gzwrite.\+c@{gzwrite.\+c}!gzflush@{gzflush}}
+\index{gzflush@{gzflush}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gzflush}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+E\+X\+P\+O\+R\+T gzflush (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+File}}]{file, }
+\item[{int}]{flush}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a6b70d5783d03b12adfd369bd9b7394a2}
+\hypertarget{gzwrite_8c_a23cb6f01c1de1f861e22091d0ca092ef}{}\index{gzwrite.\+c@{gzwrite.\+c}!gzprintf@{gzprintf}}
+\index{gzprintf@{gzprintf}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gzprintf}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+E\+X\+P\+O\+R\+T\+V\+A gzprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+File}}]{file, }
+\item[{const char $\ast$}]{format, }
+\item[{int}]{a1, }
+\item[{int}]{a2, }
+\item[{int}]{a3, }
+\item[{int}]{a4, }
+\item[{int}]{a5, }
+\item[{int}]{a6, }
+\item[{int}]{a7, }
+\item[{int}]{a8, }
+\item[{int}]{a9, }
+\item[{int}]{a10, }
+\item[{int}]{a11, }
+\item[{int}]{a12, }
+\item[{int}]{a13, }
+\item[{int}]{a14, }
+\item[{int}]{a15, }
+\item[{int}]{a16, }
+\item[{int}]{a17, }
+\item[{int}]{a18, }
+\item[{int}]{a19, }
+\item[{int}]{a20}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a23cb6f01c1de1f861e22091d0ca092ef}
+\hypertarget{gzwrite_8c_a37f7621e057bd71abdbe2f2480b69935}{}\index{gzwrite.\+c@{gzwrite.\+c}!gzputc@{gzputc}}
+\index{gzputc@{gzputc}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gzputc}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+E\+X\+P\+O\+R\+T gzputc (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+File}}]{file, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a37f7621e057bd71abdbe2f2480b69935}
+\hypertarget{gzwrite_8c_a2760b9a721dd2950d101046d9b57c461}{}\index{gzwrite.\+c@{gzwrite.\+c}!gzputs@{gzputs}}
+\index{gzputs@{gzputs}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gzputs}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+E\+X\+P\+O\+R\+T gzputs (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+File}}]{file, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a2760b9a721dd2950d101046d9b57c461}
+\hypertarget{gzwrite_8c_a20e49f282c69489d3733593736212876}{}\index{gzwrite.\+c@{gzwrite.\+c}!gzsetparams@{gzsetparams}}
+\index{gzsetparams@{gzsetparams}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gzsetparams}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+E\+X\+P\+O\+R\+T gzsetparams (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+File}}]{file, }
+\item[{int}]{level, }
+\item[{int}]{strategy}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a20e49f282c69489d3733593736212876}
+\hypertarget{gzwrite_8c_a93323ef1288f105db8a89e80f2764d3b}{}\index{gzwrite.\+c@{gzwrite.\+c}!gzwrite@{gzwrite}}
+\index{gzwrite@{gzwrite}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{gzwrite}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+E\+X\+P\+O\+R\+T gzwrite (
+\begin{DoxyParamCaption}
+\item[{{\bf gz\+File}}]{file, }
+\item[{voidpc}]{buf, }
+\item[{unsigned}]{len}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a93323ef1288f105db8a89e80f2764d3b}
+\hypertarget{gzwrite_8c_ab2bb6a74d8a540f213c47cd34dab32c5}{}\index{gzwrite.\+c@{gzwrite.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} int {\bf gz\+\_\+init} O\+F (
+\begin{DoxyParamCaption}
+\item[{({\bf gz\+\_\+statep})}]{}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_ab2bb6a74d8a540f213c47cd34dab32c5}
+\hypertarget{gzwrite_8c_a81445df3df03a8472757a7ce99eabf56}{}\index{gzwrite.\+c@{gzwrite.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} int {\bf gz\+\_\+comp} O\+F (
+\begin{DoxyParamCaption}
+\item[{({\bf gz\+\_\+statep}, int)}]{}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a81445df3df03a8472757a7ce99eabf56}
+\hypertarget{gzwrite_8c_a5eb0ac16312161458394c125d5d13a41}{}\index{gzwrite.\+c@{gzwrite.\+c}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzwrite.\+c@{gzwrite.\+c}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf local} int {\bf gz\+\_\+zero} O\+F (
+\begin{DoxyParamCaption}
+\item[{({\bf gz\+\_\+statep}, z\+\_\+off64\+\_\+t)}]{}
+\end{DoxyParamCaption}
+)}\label{gzwrite_8c_a5eb0ac16312161458394c125d5d13a41}

@@ -1,0 +1,174 @@
+\hypertarget{gzguts_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/zlib/gzguts.h File Reference}
+\label{gzguts_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/gzguts.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/gzguts.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/zlib/zlib.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+Include dependency graph for gzguts.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgz__state}{gz\+\_\+state}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gzguts_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}
+\item 
+\#define \hyperlink{gzguts_8h_a08023ea6765c99d60a6a3840cd07156e}{local}~static
+\item 
+\#define \hyperlink{gzguts_8h_af252c05931f39dd0b297fe9b8e174b8b}{zstrerror}()~strerror(errno)
+\item 
+\#define \hyperlink{gzguts_8h_a19c8e60fa32d4ddf303ce988ba97af61}{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}~M\+A\+X\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L
+\item 
+\#define \hyperlink{gzguts_8h_ac7601d319250861159389e68594fd72e}{G\+Z\+B\+U\+F\+S\+I\+Z\+E}~8192
+\item 
+\#define \hyperlink{gzguts_8h_afe4b4578cd8417c83de400ece282ac3b}{G\+Z\+\_\+\+N\+O\+N\+E}~0
+\item 
+\#define \hyperlink{gzguts_8h_a97ca7a8b458e75a004e828cb28ac264c}{G\+Z\+\_\+\+R\+E\+A\+D}~7247
+\item 
+\#define \hyperlink{gzguts_8h_a357c4f5723c26966ed9d68c9bd6490c0}{G\+Z\+\_\+\+W\+R\+I\+T\+E}~31153
+\item 
+\#define \hyperlink{gzguts_8h_aae0a1795746b0a2cb7989d2898280a19}{G\+Z\+\_\+\+A\+P\+P\+E\+N\+D}~1     /$\ast$ \hyperlink{png_8h_a3eabae3e1e65723a7ec3445646cb7795}{mode} set to \hyperlink{gzguts_8h_a357c4f5723c26966ed9d68c9bd6490c0}{G\+Z\+\_\+\+W\+R\+I\+T\+E} after the file is opened $\ast$/
+\item 
+\#define \hyperlink{gzguts_8h_a6d13af6430ff1d6f44ece076ff35b04f}{L\+O\+O\+K}~0      /$\ast$ look for a gzip header $\ast$/
+\item 
+\#define \hyperlink{gzguts_8h_a9e77d621548de2a80bc9c5909bfa2b8a}{C\+O\+P\+Y}~1      /$\ast$ \hyperlink{library_8h_af693e0f5e3a3c49c1e62b9eda038610c}{copy} input directly $\ast$/
+\item 
+\#define \hyperlink{gzguts_8h_a9564352992f7a4001386d1c8e2977571}{G\+Z\+I\+P}~2      /$\ast$ decompress a gzip stream $\ast$/
+\item 
+\#define \hyperlink{gzguts_8h_a87ad28552e786eaa1c31fed1950fdff4}{G\+T\+\_\+\+O\+F\+F}(x)~(sizeof(int) == sizeof(z\+\_\+off64\+\_\+t) \&\& (x) $>$ \hyperlink{gzlib_8c_a5999f074c4c2468c0b57c5f365262de5}{gz\+\_\+intmax}())
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structgz__state}{gz\+\_\+state} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$ \hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+voidp malloc \hyperlink{gzguts_8h_add8b03ae5c2c602b728ebb3b21931371}{O\+F} ((u\+Int size))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} free \hyperlink{gzguts_8h_a8f8149fe81b707d93e4b55388d11a430}{O\+F} ((voidpf ptr))
+\item 
+Z\+E\+X\+T\+E\+R\+N \hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File} Z\+E\+X\+P\+O\+R\+T \hyperlink{gzlib_8c_a620dfd97f021034caf83324a44b82461}{gzopen64} \hyperlink{gzguts_8h_aac76b39fa0bae53b6d22bb30e786e97c}{O\+F} ((const char $\ast$, const char $\ast$))
+\item 
+Z\+E\+X\+T\+E\+R\+N z\+\_\+off64\+\_\+t Z\+E\+X\+P\+O\+R\+T \hyperlink{gzlib_8c_a0b826c4ce1c145c4bd5437fc04e83a6b}{gzseek64} \hyperlink{gzguts_8h_a38d034b71b5426e3253b1dbbcd9e3a3b}{O\+F} ((\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File}, z\+\_\+off64\+\_\+t, int))
+\item 
+Z\+E\+X\+T\+E\+R\+N z\+\_\+off64\+\_\+t Z\+E\+X\+P\+O\+R\+T \hyperlink{gzlib_8c_a4e4262939145f46bee50a7913354a7e8}{gztell64} \hyperlink{gzguts_8h_a2ba4df5fd79fa726abea6b0b9950f736}{O\+F} ((\hyperlink{zlib_8h_a8e80bd9e2c359bc5bdabb2e97b4e62bf}{gz\+File}))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{gzlib_8c_abfa9d832c83a5f58ad064e1a617ae910}{gz\+\_\+error} \hyperlink{gzguts_8h_a36ce0a727eede48426b5e0a15ff85fd8}{O\+F} ((\hyperlink{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{gz\+\_\+statep}, int, const char $\ast$))
+\item 
+unsigned \hyperlink{zutil_8h_a59d4d7ef4d73655c759211ec33a5d44f}{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} \hyperlink{gzlib_8c_a5999f074c4c2468c0b57c5f365262de5}{gz\+\_\+intmax} \hyperlink{gzguts_8h_aefb198b657e0692645b197f67da89711}{O\+F} ((\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void}))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gzguts_8h_a9e77d621548de2a80bc9c5909bfa2b8a}{}\index{gzguts.\+h@{gzguts.\+h}!C\+O\+P\+Y@{C\+O\+P\+Y}}
+\index{C\+O\+P\+Y@{C\+O\+P\+Y}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{C\+O\+P\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+P\+Y~1      /$\ast$ {\bf copy} input directly $\ast$/}\label{gzguts_8h_a9e77d621548de2a80bc9c5909bfa2b8a}
+\hypertarget{gzguts_8h_a19c8e60fa32d4ddf303ce988ba97af61}{}\index{gzguts.\+h@{gzguts.\+h}!D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L@{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}}
+\index{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L@{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L~M\+A\+X\+\_\+\+M\+E\+M\+\_\+\+L\+E\+V\+E\+L}\label{gzguts_8h_a19c8e60fa32d4ddf303ce988ba97af61}
+\hypertarget{gzguts_8h_a87ad28552e786eaa1c31fed1950fdff4}{}\index{gzguts.\+h@{gzguts.\+h}!G\+T\+\_\+\+O\+F\+F@{G\+T\+\_\+\+O\+F\+F}}
+\index{G\+T\+\_\+\+O\+F\+F@{G\+T\+\_\+\+O\+F\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{G\+T\+\_\+\+O\+F\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+T\+\_\+\+O\+F\+F(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(sizeof(int) == sizeof(z\+\_\+off64\+\_\+t) \&\& (x) $>$ {\bf gz\+\_\+intmax}())}\label{gzguts_8h_a87ad28552e786eaa1c31fed1950fdff4}
+\hypertarget{gzguts_8h_aae0a1795746b0a2cb7989d2898280a19}{}\index{gzguts.\+h@{gzguts.\+h}!G\+Z\+\_\+\+A\+P\+P\+E\+N\+D@{G\+Z\+\_\+\+A\+P\+P\+E\+N\+D}}
+\index{G\+Z\+\_\+\+A\+P\+P\+E\+N\+D@{G\+Z\+\_\+\+A\+P\+P\+E\+N\+D}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{G\+Z\+\_\+\+A\+P\+P\+E\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+Z\+\_\+\+A\+P\+P\+E\+N\+D~1     /$\ast$ {\bf mode} set to {\bf G\+Z\+\_\+\+W\+R\+I\+T\+E} after the file is opened $\ast$/}\label{gzguts_8h_aae0a1795746b0a2cb7989d2898280a19}
+\hypertarget{gzguts_8h_afe4b4578cd8417c83de400ece282ac3b}{}\index{gzguts.\+h@{gzguts.\+h}!G\+Z\+\_\+\+N\+O\+N\+E@{G\+Z\+\_\+\+N\+O\+N\+E}}
+\index{G\+Z\+\_\+\+N\+O\+N\+E@{G\+Z\+\_\+\+N\+O\+N\+E}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{G\+Z\+\_\+\+N\+O\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+Z\+\_\+\+N\+O\+N\+E~0}\label{gzguts_8h_afe4b4578cd8417c83de400ece282ac3b}
+\hypertarget{gzguts_8h_a97ca7a8b458e75a004e828cb28ac264c}{}\index{gzguts.\+h@{gzguts.\+h}!G\+Z\+\_\+\+R\+E\+A\+D@{G\+Z\+\_\+\+R\+E\+A\+D}}
+\index{G\+Z\+\_\+\+R\+E\+A\+D@{G\+Z\+\_\+\+R\+E\+A\+D}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{G\+Z\+\_\+\+R\+E\+A\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+Z\+\_\+\+R\+E\+A\+D~7247}\label{gzguts_8h_a97ca7a8b458e75a004e828cb28ac264c}
+\hypertarget{gzguts_8h_a357c4f5723c26966ed9d68c9bd6490c0}{}\index{gzguts.\+h@{gzguts.\+h}!G\+Z\+\_\+\+W\+R\+I\+T\+E@{G\+Z\+\_\+\+W\+R\+I\+T\+E}}
+\index{G\+Z\+\_\+\+W\+R\+I\+T\+E@{G\+Z\+\_\+\+W\+R\+I\+T\+E}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{G\+Z\+\_\+\+W\+R\+I\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+Z\+\_\+\+W\+R\+I\+T\+E~31153}\label{gzguts_8h_a357c4f5723c26966ed9d68c9bd6490c0}
+\hypertarget{gzguts_8h_ac7601d319250861159389e68594fd72e}{}\index{gzguts.\+h@{gzguts.\+h}!G\+Z\+B\+U\+F\+S\+I\+Z\+E@{G\+Z\+B\+U\+F\+S\+I\+Z\+E}}
+\index{G\+Z\+B\+U\+F\+S\+I\+Z\+E@{G\+Z\+B\+U\+F\+S\+I\+Z\+E}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{G\+Z\+B\+U\+F\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+Z\+B\+U\+F\+S\+I\+Z\+E~8192}\label{gzguts_8h_ac7601d319250861159389e68594fd72e}
+\hypertarget{gzguts_8h_a9564352992f7a4001386d1c8e2977571}{}\index{gzguts.\+h@{gzguts.\+h}!G\+Z\+I\+P@{G\+Z\+I\+P}}
+\index{G\+Z\+I\+P@{G\+Z\+I\+P}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{G\+Z\+I\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+Z\+I\+P~2      /$\ast$ decompress a gzip stream $\ast$/}\label{gzguts_8h_a9564352992f7a4001386d1c8e2977571}
+\hypertarget{gzguts_8h_a08023ea6765c99d60a6a3840cd07156e}{}\index{gzguts.\+h@{gzguts.\+h}!local@{local}}
+\index{local@{local}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{local}]{\setlength{\rightskip}{0pt plus 5cm}\#define local~static}\label{gzguts_8h_a08023ea6765c99d60a6a3840cd07156e}
+\hypertarget{gzguts_8h_a6d13af6430ff1d6f44ece076ff35b04f}{}\index{gzguts.\+h@{gzguts.\+h}!L\+O\+O\+K@{L\+O\+O\+K}}
+\index{L\+O\+O\+K@{L\+O\+O\+K}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{L\+O\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+O\+K~0      /$\ast$ look for a gzip header $\ast$/}\label{gzguts_8h_a6d13af6430ff1d6f44ece076ff35b04f}
+\hypertarget{gzguts_8h_a59d4d7ef4d73655c759211ec33a5d44f}{}\index{gzguts.\+h@{gzguts.\+h}!Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L@{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}}
+\index{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L@{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}\label{gzguts_8h_a59d4d7ef4d73655c759211ec33a5d44f}
+\hypertarget{gzguts_8h_af252c05931f39dd0b297fe9b8e174b8b}{}\index{gzguts.\+h@{gzguts.\+h}!zstrerror@{zstrerror}}
+\index{zstrerror@{zstrerror}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{zstrerror}]{\setlength{\rightskip}{0pt plus 5cm}\#define zstrerror(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~strerror(errno)}\label{gzguts_8h_af252c05931f39dd0b297fe9b8e174b8b}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}{}\index{gzguts.\+h@{gzguts.\+h}!gz\+\_\+statep@{gz\+\_\+statep}}
+\index{gz\+\_\+statep@{gz\+\_\+statep}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{gz\+\_\+statep}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf gz\+\_\+state} {\bf F\+A\+R}$\ast$ {\bf gz\+\_\+statep}}\label{gzguts_8h_a15adc208a26903dbfe8c57720cf401c8}
+
+
+\subsection{Function Documentation}
+\hypertarget{gzguts_8h_add8b03ae5c2c602b728ebb3b21931371}{}\index{gzguts.\+h@{gzguts.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}voidp malloc O\+F (
+\begin{DoxyParamCaption}
+\item[{(u\+Int size)}]{}
+\end{DoxyParamCaption}
+)}\label{gzguts_8h_add8b03ae5c2c602b728ebb3b21931371}
+\hypertarget{gzguts_8h_a8f8149fe81b707d93e4b55388d11a430}{}\index{gzguts.\+h@{gzguts.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} free O\+F (
+\begin{DoxyParamCaption}
+\item[{(voidpf ptr)}]{}
+\end{DoxyParamCaption}
+)}\label{gzguts_8h_a8f8149fe81b707d93e4b55388d11a430}
+\hypertarget{gzguts_8h_aac76b39fa0bae53b6d22bb30e786e97c}{}\index{gzguts.\+h@{gzguts.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}Z\+E\+X\+T\+E\+R\+N {\bf gz\+File} Z\+E\+X\+P\+O\+R\+T {\bf gzopen64} O\+F (
+\begin{DoxyParamCaption}
+\item[{(const char $\ast$, const char $\ast$)}]{}
+\end{DoxyParamCaption}
+)}\label{gzguts_8h_aac76b39fa0bae53b6d22bb30e786e97c}
+\hypertarget{gzguts_8h_a38d034b71b5426e3253b1dbbcd9e3a3b}{}\index{gzguts.\+h@{gzguts.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}Z\+E\+X\+T\+E\+R\+N z\+\_\+off64\+\_\+t Z\+E\+X\+P\+O\+R\+T {\bf gzseek64} O\+F (
+\begin{DoxyParamCaption}
+\item[{({\bf gz\+File}, z\+\_\+off64\+\_\+t, int)}]{}
+\end{DoxyParamCaption}
+)}\label{gzguts_8h_a38d034b71b5426e3253b1dbbcd9e3a3b}
+\hypertarget{gzguts_8h_a2ba4df5fd79fa726abea6b0b9950f736}{}\index{gzguts.\+h@{gzguts.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}Z\+E\+X\+T\+E\+R\+N z\+\_\+off64\+\_\+t Z\+E\+X\+P\+O\+R\+T {\bf gztell64} O\+F (
+\begin{DoxyParamCaption}
+\item[{({\bf gz\+File})}]{}
+\end{DoxyParamCaption}
+)}\label{gzguts_8h_a2ba4df5fd79fa726abea6b0b9950f736}
+\hypertarget{gzguts_8h_a36ce0a727eede48426b5e0a15ff85fd8}{}\index{gzguts.\+h@{gzguts.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} {\bf gz\+\_\+error} O\+F (
+\begin{DoxyParamCaption}
+\item[{({\bf gz\+\_\+statep}, int, const char $\ast$)}]{}
+\end{DoxyParamCaption}
+)}\label{gzguts_8h_a36ce0a727eede48426b5e0a15ff85fd8}
+\hypertarget{gzguts_8h_aefb198b657e0692645b197f67da89711}{}\index{gzguts.\+h@{gzguts.\+h}!O\+F@{O\+F}}
+\index{O\+F@{O\+F}!gzguts.\+h@{gzguts.\+h}}
+\subsubsection[{O\+F}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf Z\+L\+I\+B\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} {\bf gz\+\_\+intmax} O\+F (
+\begin{DoxyParamCaption}
+\item[{({\bf void})}]{}
+\end{DoxyParamCaption}
+)}\label{gzguts_8h_aefb198b657e0692645b197f67da89711}

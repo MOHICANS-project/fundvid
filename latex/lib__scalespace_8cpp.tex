@@ -1,0 +1,122 @@
+\hypertarget{lib__scalespace_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+scalespace.cpp File Reference}
+\label{lib__scalespace_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+scalespace.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/sift\+\_\+anatomy/lib\+\_\+scalespace.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+discrete.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+scalespace.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+\_\+util.\+h\char`\"{}}\\*
+Include dependency graph for lib\+\_\+scalespace.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$ \hyperlink{lib__scalespace_8cpp_a23f4c580ba36319d790bef9f5cca1287}{sift\+\_\+malloc\+\_\+scalespace} (int n\+Oct, const float $\ast$deltas, const int $\ast$ws, const int $\ast$hs, const int $\ast$n\+Scas, float $\ast$$\ast$sigmas)
+\begin{DoxyCompactList}\small\item\em allocation and attributes modification \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{lib__scalespace_8cpp_acca2d879b2116b50d3e40ef05775398e}{sift\+\_\+free\+\_\+scalespace} (struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$scalespace)
+\item 
+struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$ \hyperlink{lib__scalespace_8cpp_ad4250ae1e6918f76ad9709bb80831aea}{sift\+\_\+malloc\+\_\+scalespace\+\_\+from\+\_\+model} (struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$model\+\_\+sift\+\_\+scalespace)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ A\+L\+L\+O\+C\+A\+T\+I\+O\+N W\+R\+A\+P\+P\+E\+R\+S \end{DoxyCompactList}\item 
+struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$ \hyperlink{lib__scalespace_8cpp_ab7bc04db6867353fc9cbb04aa446e888}{sift\+\_\+malloc\+\_\+scalespace\+\_\+lowe} (int n\+Oct, int n\+Sca, int im\+\_\+w, int im\+\_\+h, float delta\+\_\+min, float sigma\+\_\+min)
+\begin{DoxyCompactList}\small\item\em Allocation of a scalespace with David Lowe\textquotesingle{}s original structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$ \hyperlink{lib__scalespace_8cpp_a4037db5c789b6446ca8c00d2c9216eb1}{sift\+\_\+malloc\+\_\+scalespace\+\_\+dog\+\_\+from\+\_\+scalespace} (struct \hyperlink{structsift__scalespace}{sift\+\_\+scalespace} $\ast$scalespace)
+\begin{DoxyCompactList}\small\item\em allocation for Difference of Gaussian scalespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__scalespace_8cpp_acca2d879b2116b50d3e40ef05775398e}{}\index{lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}!sift\+\_\+free\+\_\+scalespace@{sift\+\_\+free\+\_\+scalespace}}
+\index{sift\+\_\+free\+\_\+scalespace@{sift\+\_\+free\+\_\+scalespace}!lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}}
+\subsubsection[{sift\+\_\+free\+\_\+scalespace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sift\+\_\+free\+\_\+scalespace (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{scalespace}
+\end{DoxyParamCaption}
+)}\label{lib__scalespace_8cpp_acca2d879b2116b50d3e40ef05775398e}
+\hypertarget{lib__scalespace_8cpp_a23f4c580ba36319d790bef9f5cca1287}{}\index{lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}!sift\+\_\+malloc\+\_\+scalespace@{sift\+\_\+malloc\+\_\+scalespace}}
+\index{sift\+\_\+malloc\+\_\+scalespace@{sift\+\_\+malloc\+\_\+scalespace}!lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}}
+\subsubsection[{sift\+\_\+malloc\+\_\+scalespace}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+scalespace}$\ast$ sift\+\_\+malloc\+\_\+scalespace (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Oct, }
+\item[{const float $\ast$}]{deltas, }
+\item[{const int $\ast$}]{ws, }
+\item[{const int $\ast$}]{hs, }
+\item[{const int $\ast$}]{n\+Scas, }
+\item[{float $\ast$$\ast$}]{sigmas}
+\end{DoxyParamCaption}
+)}\label{lib__scalespace_8cpp_a23f4c580ba36319d790bef9f5cca1287}
+
+
+allocation and attributes modification 
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ A\+L\+L\+O\+C\+A\+T\+I\+O\+N
+
+Allocate memory for a scalespace structure and modify attributes that will be used to actually build the scalespace
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Oct} & \+: number of octaves \\
+\hline
+{\em deltas} & \+: intersample distance in each octave of the scalespace \\
+\hline
+{\em ws} & \+: image w in each octave of the scalespace \\
+\hline
+{\em hs} & \+: \\
+\hline
+{\em n\+Scas} & \+: number of images in each octave of the scalespace \\
+\hline
+{\em sigmas} & \+: array of blurs for each image in each octave of the scalespace \\
+\hline
+\end{DoxyParams}
+\hypertarget{lib__scalespace_8cpp_a4037db5c789b6446ca8c00d2c9216eb1}{}\index{lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}!sift\+\_\+malloc\+\_\+scalespace\+\_\+dog\+\_\+from\+\_\+scalespace@{sift\+\_\+malloc\+\_\+scalespace\+\_\+dog\+\_\+from\+\_\+scalespace}}
+\index{sift\+\_\+malloc\+\_\+scalespace\+\_\+dog\+\_\+from\+\_\+scalespace@{sift\+\_\+malloc\+\_\+scalespace\+\_\+dog\+\_\+from\+\_\+scalespace}!lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}}
+\subsubsection[{sift\+\_\+malloc\+\_\+scalespace\+\_\+dog\+\_\+from\+\_\+scalespace}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+scalespace}$\ast$ sift\+\_\+malloc\+\_\+scalespace\+\_\+dog\+\_\+from\+\_\+scalespace (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{scalespace}
+\end{DoxyParamCaption}
+)}\label{lib__scalespace_8cpp_a4037db5c789b6446ca8c00d2c9216eb1}
+
+
+allocation for Difference of Gaussian scalespace. 
+
+Characteristics of a Do\+G scalespace
+\begin{DoxyItemize}
+\item one image less in each octave than the scalespace it is based on
+\item same level of blurs than the scalespace it is based on (this is an approximation) 
+\end{DoxyItemize}\hypertarget{lib__scalespace_8cpp_ad4250ae1e6918f76ad9709bb80831aea}{}\index{lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}!sift\+\_\+malloc\+\_\+scalespace\+\_\+from\+\_\+model@{sift\+\_\+malloc\+\_\+scalespace\+\_\+from\+\_\+model}}
+\index{sift\+\_\+malloc\+\_\+scalespace\+\_\+from\+\_\+model@{sift\+\_\+malloc\+\_\+scalespace\+\_\+from\+\_\+model}!lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}}
+\subsubsection[{sift\+\_\+malloc\+\_\+scalespace\+\_\+from\+\_\+model}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+scalespace}$\ast$ sift\+\_\+malloc\+\_\+scalespace\+\_\+from\+\_\+model (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sift\+\_\+scalespace} $\ast$}]{model\+\_\+sift\+\_\+scalespace}
+\end{DoxyParamCaption}
+)}\label{lib__scalespace_8cpp_ad4250ae1e6918f76ad9709bb80831aea}
+
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ A\+L\+L\+O\+C\+A\+T\+I\+O\+N W\+R\+A\+P\+P\+E\+R\+S 
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ A\+L\+L\+O\+C\+A\+T\+I\+O\+N W\+R\+A\+P\+P\+E\+R\+S
+
+Allocation via copy a scalespace structure
+
+
+\begin{DoxyItemize}
+\item Copy structure (number of octaves, dimensions, sampling rates, levels of blur)
+\item Doesn\textquotesingle{}t copy the image stacks 
+\end{DoxyItemize}\hypertarget{lib__scalespace_8cpp_ab7bc04db6867353fc9cbb04aa446e888}{}\index{lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}!sift\+\_\+malloc\+\_\+scalespace\+\_\+lowe@{sift\+\_\+malloc\+\_\+scalespace\+\_\+lowe}}
+\index{sift\+\_\+malloc\+\_\+scalespace\+\_\+lowe@{sift\+\_\+malloc\+\_\+scalespace\+\_\+lowe}!lib\+\_\+scalespace.\+cpp@{lib\+\_\+scalespace.\+cpp}}
+\subsubsection[{sift\+\_\+malloc\+\_\+scalespace\+\_\+lowe}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sift\+\_\+scalespace}$\ast$ sift\+\_\+malloc\+\_\+scalespace\+\_\+lowe (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Oct, }
+\item[{int}]{n\+Sca, }
+\item[{int}]{im\+\_\+w, }
+\item[{int}]{im\+\_\+h, }
+\item[{float}]{delta\+\_\+min, }
+\item[{float}]{sigma\+\_\+min}
+\end{DoxyParamCaption}
+)}\label{lib__scalespace_8cpp_ab7bc04db6867353fc9cbb04aa446e888}
+
+
+Allocation of a scalespace with David Lowe\textquotesingle{}s original structure. 
+
+Lowe\textquotesingle{}s original structure.
+
+The set of simulated level of blur sigmas\mbox{[}o\mbox{]}\mbox{[}s\mbox{]} = deltas\mbox{[}o\mbox{]}$\ast$sigma\+\_\+min$\ast$pow(2.\+0,(float)s/(float)n\+Sca); 

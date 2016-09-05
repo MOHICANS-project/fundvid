@@ -1,0 +1,123 @@
+\hypertarget{classOption}{}\section{Option Class Reference}
+\label{classOption}\index{Option@{Option}}
+
+
+Base class for option/switch.  
+
+
+
+
+{\ttfamily \#include $<$cmd\+Line.\+h$>$}
+
+
+
+Inheritance diagram for Option\+:
+% FIG 0
+
+
+Collaboration diagram for Option\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOption_a4a99a0e80b5b9f1f684fb844ae92a85c}{Option} (char d, std\+::string name)
+\begin{DoxyCompactList}\small\item\em Optional long name (eg \char`\"{}switch\char`\"{} for --switch) \end{DoxyCompactList}\item 
+virtual \hyperlink{classOption_a51319077627d44640d65010abc14b3c9}{$\sim$\+Option} ()
+\item 
+virtual bool \hyperlink{classOption_a4bb9b2803454fb8cb4e51eeebb7eccd0}{check} (int \&argc, char $\ast$argv\mbox{[}$\,$\mbox{]})=0
+\begin{DoxyCompactList}\small\item\em \hyperlink{classOption}{Option} found at argv\mbox{[}0\mbox{]}? \end{DoxyCompactList}\item 
+virtual \hyperlink{classOption}{Option} $\ast$ \hyperlink{classOption_a38cd76e168098aa9dee95a711a843d61}{clone} () const =0
+\begin{DoxyCompactList}\small\item\em Copy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classOption_a496b793630fcab592951643fe2c651d6}{c}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classOption}{Option} letter (eg \textquotesingle{}s\textquotesingle{} for option -\/s) \end{DoxyCompactList}\item 
+bool \hyperlink{classOption_a5d489d6f18c729f34b37608db593d70a}{used}
+\begin{DoxyCompactList}\small\item\em Does the command line use that option? \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classOption_aa363ef44784c810db2725419c578dc3d}{long\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for option/switch. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classOption_a4a99a0e80b5b9f1f684fb844ae92a85c}{}\index{Option@{Option}!Option@{Option}}
+\index{Option@{Option}!Option@{Option}}
+\subsubsection[{Option}]{\setlength{\rightskip}{0pt plus 5cm}Option\+::\+Option (
+\begin{DoxyParamCaption}
+\item[{char}]{d, }
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classOption_a4a99a0e80b5b9f1f684fb844ae92a85c}
+
+
+Optional long name (eg \char`\"{}switch\char`\"{} for --switch) 
+
+Constructor with short name/long name \hypertarget{classOption_a51319077627d44640d65010abc14b3c9}{}\index{Option@{Option}!````~Option@{$\sim$\+Option}}
+\index{````~Option@{$\sim$\+Option}!Option@{Option}}
+\subsubsection[{$\sim$\+Option}]{\setlength{\rightskip}{0pt plus 5cm}virtual Option\+::$\sim$\+Option (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classOption_a51319077627d44640d65010abc14b3c9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classOption_a4bb9b2803454fb8cb4e51eeebb7eccd0}{}\index{Option@{Option}!check@{check}}
+\index{check@{check}!Option@{Option}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Option\+::check (
+\begin{DoxyParamCaption}
+\item[{int \&}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classOption_a4bb9b2803454fb8cb4e51eeebb7eccd0}
+
+
+\hyperlink{classOption}{Option} found at argv\mbox{[}0\mbox{]}? 
+
+
+
+Implemented in \hyperlink{classOptionField_ac78faa83373a77a7b9149c339ecfd111}{Option\+Field$<$ T $>$}, and \hyperlink{classOptionSwitch_a9ed02f4e091717188affd670c1389b93}{Option\+Switch}.
+
+\hypertarget{classOption_a38cd76e168098aa9dee95a711a843d61}{}\index{Option@{Option}!clone@{clone}}
+\index{clone@{clone}!Option@{Option}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Option}$\ast$ Option\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classOption_a38cd76e168098aa9dee95a711a843d61}
+
+
+Copy. 
+
+
+
+Implemented in \hyperlink{classOptionField_a44641afd5aae01ff1c440e8d00915f6f}{Option\+Field$<$ T $>$}, and \hyperlink{classOptionSwitch_a339139802b4b9669886e7d5e0b712b47}{Option\+Switch}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classOption_a496b793630fcab592951643fe2c651d6}{}\index{Option@{Option}!c@{c}}
+\index{c@{c}!Option@{Option}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}char Option\+::c}\label{classOption_a496b793630fcab592951643fe2c651d6}
+
+
+\hyperlink{classOption}{Option} letter (eg \textquotesingle{}s\textquotesingle{} for option -\/s) 
+
+\hypertarget{classOption_aa363ef44784c810db2725419c578dc3d}{}\index{Option@{Option}!long\+Name@{long\+Name}}
+\index{long\+Name@{long\+Name}!Option@{Option}}
+\subsubsection[{long\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Option\+::long\+Name}\label{classOption_aa363ef44784c810db2725419c578dc3d}
+\hypertarget{classOption_a5d489d6f18c729f34b37608db593d70a}{}\index{Option@{Option}!used@{used}}
+\index{used@{used}!Option@{Option}}
+\subsubsection[{used}]{\setlength{\rightskip}{0pt plus 5cm}bool Option\+::used}\label{classOption_a5d489d6f18c729f34b37608db593d70a}
+
+
+Does the command line use that option? 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/\hyperlink{cmdLine_8h}{cmd\+Line.\+h}\end{DoxyCompactItemize}

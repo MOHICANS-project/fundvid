@@ -1,0 +1,240 @@
+\hypertarget{jdcolor_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jdcolor.c File Reference}
+\label{jdcolor_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdcolor.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdcolor.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jdcolor.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__color__deconverter}{my\+\_\+color\+\_\+deconverter}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jdcolor_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\item 
+\#define \hyperlink{jdcolor_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{S\+C\+A\+L\+E\+B\+I\+T\+S}~16	/$\ast$ speediest right-\/shift on some machines $\ast$/
+\item 
+\#define \hyperlink{jdcolor_8c_ab912dc6f2915fe1226a30465776e2015}{O\+N\+E\+\_\+\+H\+A\+L\+F}~((\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}) 1 $<$$<$ (\hyperlink{jdmerge_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{S\+C\+A\+L\+E\+B\+I\+T\+S}-\/1))
+\item 
+\#define \hyperlink{jdcolor_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+I\+X}(x)~((\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}) ((x) $\ast$ (1\+L$<$$<$\+S\+C\+A\+L\+E\+B\+I\+T\+S) + 0.\+5))
+\item 
+\#define \hyperlink{jdcolor_8c_ab64f3c53a2f6aa67e2bd8cca753b2b23}{R\+\_\+\+Y\+\_\+\+O\+F\+F}~0			/$\ast$ offset to R =$>$ Y section $\ast$/
+\item 
+\#define \hyperlink{jdcolor_8c_a646e8035b3ff387bc70de7e610d21da1}{G\+\_\+\+Y\+\_\+\+O\+F\+F}~(1$\ast$(\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+L\+E}+1))	/$\ast$ offset to G =$>$ Y section $\ast$/
+\item 
+\#define \hyperlink{jdcolor_8c_ad67993d1a8073b128fcc003df9808377}{B\+\_\+\+Y\+\_\+\+O\+F\+F}~(2$\ast$(\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+L\+E}+1))	/$\ast$ etc. $\ast$/
+\item 
+\#define \hyperlink{jdcolor_8c_a032503e76d6f69bc67e99e909c8125da}{T\+A\+B\+L\+E\+\_\+\+S\+I\+Z\+E}~(3$\ast$(\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+L\+E}+1))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__color__deconverter}{my\+\_\+color\+\_\+deconverter} $\ast$ \hyperlink{jdcolor_8c_a9b87b96df3e89c5d0841dee8c4371eca}{my\+\_\+cconvert\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jdcolor_8c_a8f4743d5901ca3d723566bb4384043d8}{build\+\_\+ycc\+\_\+rgb\+\_\+table} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdcolor_8c_ad307a98aad9924840a8b451090af3089}{build\+\_\+bg\+\_\+ycc\+\_\+rgb\+\_\+table} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdcolor_8c_a2f727488a0de72e28c4df7df9e588206}{ycc\+\_\+rgb\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a67c37f85ac6973f14e3526675915db21}{build\+\_\+rgb\+\_\+y\+\_\+table} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdcolor_8c_a3b911e9418c86469fcd805e4cad543f3}{rgb\+\_\+gray\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a586408743e7c5aafb1e8218210e08582}{rgb1\+\_\+rgb\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a5b4c403480a69875d51adc4b37cfc88c}{rgb1\+\_\+gray\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a10a6513245dd0947522596414fbef48d}{rgb\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a8d8bdeb99607c6cfa05ac4de1aaaba11}{null\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a40274d1cad81882bfcf9fc885debca28}{grayscale\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a29fddb9c2d7d70dac32c6c95dd43835c}{gray\+\_\+rgb\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_a2eca7af5e5ad5ea49bb0f1bce2801bc8}{ycck\+\_\+cmyk\+\_\+convert} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} input\+\_\+row, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, int \hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows})
+\item 
+\hyperlink{jdcolor_8c_afe36a8a29123daef52c86a55ffbea85f}{start\+\_\+pass\+\_\+dcolor} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdcolor_8c_a6435424eeae845636860c7ff3667b770}{jinit\+\_\+color\+\_\+deconverter} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jdcolor_8c_ad67993d1a8073b128fcc003df9808377}{}\index{jdcolor.\+c@{jdcolor.\+c}!B\+\_\+\+Y\+\_\+\+O\+F\+F@{B\+\_\+\+Y\+\_\+\+O\+F\+F}}
+\index{B\+\_\+\+Y\+\_\+\+O\+F\+F@{B\+\_\+\+Y\+\_\+\+O\+F\+F}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{B\+\_\+\+Y\+\_\+\+O\+F\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+\_\+\+Y\+\_\+\+O\+F\+F~(2$\ast$({\bf M\+A\+X\+J\+S\+A\+M\+P\+L\+E}+1))	/$\ast$ etc. $\ast$/}\label{jdcolor_8c_ad67993d1a8073b128fcc003df9808377}
+\hypertarget{jdcolor_8c_a740431a9a1d25e39e670cd5f48454ce4}{}\index{jdcolor.\+c@{jdcolor.\+c}!F\+I\+X@{F\+I\+X}}
+\index{F\+I\+X@{F\+I\+X}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{F\+I\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(({\bf I\+N\+T32}) ((x) $\ast$ (1\+L$<$$<$\+S\+C\+A\+L\+E\+B\+I\+T\+S) + 0.\+5))}\label{jdcolor_8c_a740431a9a1d25e39e670cd5f48454ce4}
+\hypertarget{jdcolor_8c_a646e8035b3ff387bc70de7e610d21da1}{}\index{jdcolor.\+c@{jdcolor.\+c}!G\+\_\+\+Y\+\_\+\+O\+F\+F@{G\+\_\+\+Y\+\_\+\+O\+F\+F}}
+\index{G\+\_\+\+Y\+\_\+\+O\+F\+F@{G\+\_\+\+Y\+\_\+\+O\+F\+F}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{G\+\_\+\+Y\+\_\+\+O\+F\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+\_\+\+Y\+\_\+\+O\+F\+F~(1$\ast$({\bf M\+A\+X\+J\+S\+A\+M\+P\+L\+E}+1))	/$\ast$ offset to G =$>$ Y section $\ast$/}\label{jdcolor_8c_a646e8035b3ff387bc70de7e610d21da1}
+\hypertarget{jdcolor_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jdcolor.\+c@{jdcolor.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jdcolor_8c_ad5c3cdfae3019b8223973041a2a1304b}
+\hypertarget{jdcolor_8c_ab912dc6f2915fe1226a30465776e2015}{}\index{jdcolor.\+c@{jdcolor.\+c}!O\+N\+E\+\_\+\+H\+A\+L\+F@{O\+N\+E\+\_\+\+H\+A\+L\+F}}
+\index{O\+N\+E\+\_\+\+H\+A\+L\+F@{O\+N\+E\+\_\+\+H\+A\+L\+F}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{O\+N\+E\+\_\+\+H\+A\+L\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+N\+E\+\_\+\+H\+A\+L\+F~(({\bf I\+N\+T32}) 1 $<$$<$ ({\bf S\+C\+A\+L\+E\+B\+I\+T\+S}-\/1))}\label{jdcolor_8c_ab912dc6f2915fe1226a30465776e2015}
+\hypertarget{jdcolor_8c_ab64f3c53a2f6aa67e2bd8cca753b2b23}{}\index{jdcolor.\+c@{jdcolor.\+c}!R\+\_\+\+Y\+\_\+\+O\+F\+F@{R\+\_\+\+Y\+\_\+\+O\+F\+F}}
+\index{R\+\_\+\+Y\+\_\+\+O\+F\+F@{R\+\_\+\+Y\+\_\+\+O\+F\+F}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{R\+\_\+\+Y\+\_\+\+O\+F\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+\_\+\+Y\+\_\+\+O\+F\+F~0			/$\ast$ offset to R =$>$ Y section $\ast$/}\label{jdcolor_8c_ab64f3c53a2f6aa67e2bd8cca753b2b23}
+\hypertarget{jdcolor_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{}\index{jdcolor.\+c@{jdcolor.\+c}!S\+C\+A\+L\+E\+B\+I\+T\+S@{S\+C\+A\+L\+E\+B\+I\+T\+S}}
+\index{S\+C\+A\+L\+E\+B\+I\+T\+S@{S\+C\+A\+L\+E\+B\+I\+T\+S}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{S\+C\+A\+L\+E\+B\+I\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+A\+L\+E\+B\+I\+T\+S~16	/$\ast$ speediest right-\/shift on some machines $\ast$/}\label{jdcolor_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}
+\hypertarget{jdcolor_8c_a032503e76d6f69bc67e99e909c8125da}{}\index{jdcolor.\+c@{jdcolor.\+c}!T\+A\+B\+L\+E\+\_\+\+S\+I\+Z\+E@{T\+A\+B\+L\+E\+\_\+\+S\+I\+Z\+E}}
+\index{T\+A\+B\+L\+E\+\_\+\+S\+I\+Z\+E@{T\+A\+B\+L\+E\+\_\+\+S\+I\+Z\+E}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{T\+A\+B\+L\+E\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+A\+B\+L\+E\+\_\+\+S\+I\+Z\+E~(3$\ast$({\bf M\+A\+X\+J\+S\+A\+M\+P\+L\+E}+1))}\label{jdcolor_8c_a032503e76d6f69bc67e99e909c8125da}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jdcolor_8c_a9b87b96df3e89c5d0841dee8c4371eca}{}\index{jdcolor.\+c@{jdcolor.\+c}!my\+\_\+cconvert\+\_\+ptr@{my\+\_\+cconvert\+\_\+ptr}}
+\index{my\+\_\+cconvert\+\_\+ptr@{my\+\_\+cconvert\+\_\+ptr}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{my\+\_\+cconvert\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+color\+\_\+deconverter}$\ast$ {\bf my\+\_\+cconvert\+\_\+ptr}}\label{jdcolor_8c_a9b87b96df3e89c5d0841dee8c4371eca}
+
+
+\subsection{Function Documentation}
+\hypertarget{jdcolor_8c_ad307a98aad9924840a8b451090af3089}{}\index{jdcolor.\+c@{jdcolor.\+c}!build\+\_\+bg\+\_\+ycc\+\_\+rgb\+\_\+table@{build\+\_\+bg\+\_\+ycc\+\_\+rgb\+\_\+table}}
+\index{build\+\_\+bg\+\_\+ycc\+\_\+rgb\+\_\+table@{build\+\_\+bg\+\_\+ycc\+\_\+rgb\+\_\+table}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{build\+\_\+bg\+\_\+ycc\+\_\+rgb\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}build\+\_\+bg\+\_\+ycc\+\_\+rgb\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_ad307a98aad9924840a8b451090af3089}
+\hypertarget{jdcolor_8c_a67c37f85ac6973f14e3526675915db21}{}\index{jdcolor.\+c@{jdcolor.\+c}!build\+\_\+rgb\+\_\+y\+\_\+table@{build\+\_\+rgb\+\_\+y\+\_\+table}}
+\index{build\+\_\+rgb\+\_\+y\+\_\+table@{build\+\_\+rgb\+\_\+y\+\_\+table}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{build\+\_\+rgb\+\_\+y\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}build\+\_\+rgb\+\_\+y\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a67c37f85ac6973f14e3526675915db21}
+\hypertarget{jdcolor_8c_a8f4743d5901ca3d723566bb4384043d8}{}\index{jdcolor.\+c@{jdcolor.\+c}!build\+\_\+ycc\+\_\+rgb\+\_\+table@{build\+\_\+ycc\+\_\+rgb\+\_\+table}}
+\index{build\+\_\+ycc\+\_\+rgb\+\_\+table@{build\+\_\+ycc\+\_\+rgb\+\_\+table}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{build\+\_\+ycc\+\_\+rgb\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}build\+\_\+ycc\+\_\+rgb\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a8f4743d5901ca3d723566bb4384043d8}
+\hypertarget{jdcolor_8c_a29fddb9c2d7d70dac32c6c95dd43835c}{}\index{jdcolor.\+c@{jdcolor.\+c}!gray\+\_\+rgb\+\_\+convert@{gray\+\_\+rgb\+\_\+convert}}
+\index{gray\+\_\+rgb\+\_\+convert@{gray\+\_\+rgb\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{gray\+\_\+rgb\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}gray\+\_\+rgb\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a29fddb9c2d7d70dac32c6c95dd43835c}
+\hypertarget{jdcolor_8c_a40274d1cad81882bfcf9fc885debca28}{}\index{jdcolor.\+c@{jdcolor.\+c}!grayscale\+\_\+convert@{grayscale\+\_\+convert}}
+\index{grayscale\+\_\+convert@{grayscale\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{grayscale\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}grayscale\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a40274d1cad81882bfcf9fc885debca28}
+\hypertarget{jdcolor_8c_a6435424eeae845636860c7ff3667b770}{}\index{jdcolor.\+c@{jdcolor.\+c}!jinit\+\_\+color\+\_\+deconverter@{jinit\+\_\+color\+\_\+deconverter}}
+\index{jinit\+\_\+color\+\_\+deconverter@{jinit\+\_\+color\+\_\+deconverter}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{jinit\+\_\+color\+\_\+deconverter}]{\setlength{\rightskip}{0pt plus 5cm}jinit\+\_\+color\+\_\+deconverter (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a6435424eeae845636860c7ff3667b770}
+\hypertarget{jdcolor_8c_a8d8bdeb99607c6cfa05ac4de1aaaba11}{}\index{jdcolor.\+c@{jdcolor.\+c}!null\+\_\+convert@{null\+\_\+convert}}
+\index{null\+\_\+convert@{null\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{null\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}null\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a8d8bdeb99607c6cfa05ac4de1aaaba11}
+\hypertarget{jdcolor_8c_a5b4c403480a69875d51adc4b37cfc88c}{}\index{jdcolor.\+c@{jdcolor.\+c}!rgb1\+\_\+gray\+\_\+convert@{rgb1\+\_\+gray\+\_\+convert}}
+\index{rgb1\+\_\+gray\+\_\+convert@{rgb1\+\_\+gray\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{rgb1\+\_\+gray\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}rgb1\+\_\+gray\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a5b4c403480a69875d51adc4b37cfc88c}
+\hypertarget{jdcolor_8c_a586408743e7c5aafb1e8218210e08582}{}\index{jdcolor.\+c@{jdcolor.\+c}!rgb1\+\_\+rgb\+\_\+convert@{rgb1\+\_\+rgb\+\_\+convert}}
+\index{rgb1\+\_\+rgb\+\_\+convert@{rgb1\+\_\+rgb\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{rgb1\+\_\+rgb\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}rgb1\+\_\+rgb\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a586408743e7c5aafb1e8218210e08582}
+\hypertarget{jdcolor_8c_a10a6513245dd0947522596414fbef48d}{}\index{jdcolor.\+c@{jdcolor.\+c}!rgb\+\_\+convert@{rgb\+\_\+convert}}
+\index{rgb\+\_\+convert@{rgb\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{rgb\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}rgb\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a10a6513245dd0947522596414fbef48d}
+\hypertarget{jdcolor_8c_a3b911e9418c86469fcd805e4cad543f3}{}\index{jdcolor.\+c@{jdcolor.\+c}!rgb\+\_\+gray\+\_\+convert@{rgb\+\_\+gray\+\_\+convert}}
+\index{rgb\+\_\+gray\+\_\+convert@{rgb\+\_\+gray\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{rgb\+\_\+gray\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}rgb\+\_\+gray\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a3b911e9418c86469fcd805e4cad543f3}
+\hypertarget{jdcolor_8c_afe36a8a29123daef52c86a55ffbea85f}{}\index{jdcolor.\+c@{jdcolor.\+c}!start\+\_\+pass\+\_\+dcolor@{start\+\_\+pass\+\_\+dcolor}}
+\index{start\+\_\+pass\+\_\+dcolor@{start\+\_\+pass\+\_\+dcolor}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{start\+\_\+pass\+\_\+dcolor}]{\setlength{\rightskip}{0pt plus 5cm}start\+\_\+pass\+\_\+dcolor (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_afe36a8a29123daef52c86a55ffbea85f}
+\hypertarget{jdcolor_8c_a2f727488a0de72e28c4df7df9e588206}{}\index{jdcolor.\+c@{jdcolor.\+c}!ycc\+\_\+rgb\+\_\+convert@{ycc\+\_\+rgb\+\_\+convert}}
+\index{ycc\+\_\+rgb\+\_\+convert@{ycc\+\_\+rgb\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{ycc\+\_\+rgb\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}ycc\+\_\+rgb\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a2f727488a0de72e28c4df7df9e588206}
+\hypertarget{jdcolor_8c_a2eca7af5e5ad5ea49bb0f1bce2801bc8}{}\index{jdcolor.\+c@{jdcolor.\+c}!ycck\+\_\+cmyk\+\_\+convert@{ycck\+\_\+cmyk\+\_\+convert}}
+\index{ycck\+\_\+cmyk\+\_\+convert@{ycck\+\_\+cmyk\+\_\+convert}!jdcolor.\+c@{jdcolor.\+c}}
+\subsubsection[{ycck\+\_\+cmyk\+\_\+convert}]{\setlength{\rightskip}{0pt plus 5cm}ycck\+\_\+cmyk\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{input\+\_\+row, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{output\+\_\+buf, }
+\item[{int}]{num\+\_\+rows}
+\end{DoxyParamCaption}
+)}\label{jdcolor_8c_a2eca7af5e5ad5ea49bb0f1bce2801bc8}

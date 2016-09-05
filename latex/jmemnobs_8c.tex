@@ -1,0 +1,125 @@
+\hypertarget{jmemnobs_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jmemnobs.c File Reference}
+\label{jmemnobs_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jmemnobs.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jmemnobs.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jmemsys.\+h\char`\"{}}\\*
+Include dependency graph for jmemnobs.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jmemnobs_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$malloc \hyperlink{jmemnobs_8c_aef13a9112edda4a9c7d509db9e8abb6c}{J\+P\+P} ((size\+\_\+t size))
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} free \hyperlink{jmemnobs_8c_a71e083248c713fdce8bbd2aa40652425}{J\+P\+P} ((\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$ptr))
+\item 
+\hyperlink{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}{jpeg\+\_\+get\+\_\+small} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, size\+\_\+t \hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject})
+\item 
+\hyperlink{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}{jpeg\+\_\+free\+\_\+small} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} $\ast$\hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object}, size\+\_\+t \hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject})
+\item 
+\hyperlink{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}{jpeg\+\_\+get\+\_\+large} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, size\+\_\+t \hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject})
+\item 
+\hyperlink{jmemnobs_8c_a4d83eb0bade7588390b123a98d087dc9}{jpeg\+\_\+free\+\_\+large} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$\hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object}, size\+\_\+t \hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject})
+\item 
+\hyperlink{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}{jpeg\+\_\+mem\+\_\+available} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, long \hyperlink{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}{min\+\_\+bytes\+\_\+needed}, long \hyperlink{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}{max\+\_\+bytes\+\_\+needed}, long \hyperlink{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}{already\+\_\+allocated})
+\item 
+\hyperlink{jmemnobs_8c_acc92d6d55a74dc317b12140885f82fae}{jpeg\+\_\+open\+\_\+backing\+\_\+store} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, \hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr} \hyperlink{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}{info}, long \hyperlink{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}{total\+\_\+bytes\+\_\+needed})
+\item 
+\hyperlink{jmemnobs_8c_af4c86e1e04ad0eb37ccee0615bd9e744}{jpeg\+\_\+mem\+\_\+init} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jmemnobs_8c_a82a37a902eddf2062ac83788c377a663}{jpeg\+\_\+mem\+\_\+term} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jmemnobs_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jmemnobs_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Function Documentation}
+\hypertarget{jmemnobs_8c_a4d83eb0bade7588390b123a98d087dc9}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+free\+\_\+large@{jpeg\+\_\+free\+\_\+large}}
+\index{jpeg\+\_\+free\+\_\+large@{jpeg\+\_\+free\+\_\+large}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+free\+\_\+large}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+free\+\_\+large (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{{\bf void} {\bf F\+A\+R} $\ast$}]{object, }
+\item[{size\+\_\+t}]{sizeofobject}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_a4d83eb0bade7588390b123a98d087dc9}
+\hypertarget{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+free\+\_\+small@{jpeg\+\_\+free\+\_\+small}}
+\index{jpeg\+\_\+free\+\_\+small@{jpeg\+\_\+free\+\_\+small}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+free\+\_\+small}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+free\+\_\+small (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{{\bf void} $\ast$}]{object, }
+\item[{size\+\_\+t}]{sizeofobject}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}
+\hypertarget{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+get\+\_\+large@{jpeg\+\_\+get\+\_\+large}}
+\index{jpeg\+\_\+get\+\_\+large@{jpeg\+\_\+get\+\_\+large}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+get\+\_\+large}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+get\+\_\+large (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{size\+\_\+t}]{sizeofobject}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}
+\hypertarget{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+get\+\_\+small@{jpeg\+\_\+get\+\_\+small}}
+\index{jpeg\+\_\+get\+\_\+small@{jpeg\+\_\+get\+\_\+small}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+get\+\_\+small}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+get\+\_\+small (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{size\+\_\+t}]{sizeofobject}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}
+\hypertarget{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+mem\+\_\+available@{jpeg\+\_\+mem\+\_\+available}}
+\index{jpeg\+\_\+mem\+\_\+available@{jpeg\+\_\+mem\+\_\+available}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+mem\+\_\+available}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+mem\+\_\+available (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{long}]{min\+\_\+bytes\+\_\+needed, }
+\item[{long}]{max\+\_\+bytes\+\_\+needed, }
+\item[{long}]{already\+\_\+allocated}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}
+\hypertarget{jmemnobs_8c_af4c86e1e04ad0eb37ccee0615bd9e744}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+mem\+\_\+init@{jpeg\+\_\+mem\+\_\+init}}
+\index{jpeg\+\_\+mem\+\_\+init@{jpeg\+\_\+mem\+\_\+init}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+mem\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+mem\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_af4c86e1e04ad0eb37ccee0615bd9e744}
+\hypertarget{jmemnobs_8c_a82a37a902eddf2062ac83788c377a663}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+mem\+\_\+term@{jpeg\+\_\+mem\+\_\+term}}
+\index{jpeg\+\_\+mem\+\_\+term@{jpeg\+\_\+mem\+\_\+term}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+mem\+\_\+term}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+mem\+\_\+term (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_a82a37a902eddf2062ac83788c377a663}
+\hypertarget{jmemnobs_8c_acc92d6d55a74dc317b12140885f82fae}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!jpeg\+\_\+open\+\_\+backing\+\_\+store@{jpeg\+\_\+open\+\_\+backing\+\_\+store}}
+\index{jpeg\+\_\+open\+\_\+backing\+\_\+store@{jpeg\+\_\+open\+\_\+backing\+\_\+store}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{jpeg\+\_\+open\+\_\+backing\+\_\+store}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+open\+\_\+backing\+\_\+store (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{{\bf backing\+\_\+store\+\_\+ptr}}]{info, }
+\item[{long}]{total\+\_\+bytes\+\_\+needed}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_acc92d6d55a74dc317b12140885f82fae}
+\hypertarget{jmemnobs_8c_aef13a9112edda4a9c7d509db9e8abb6c}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!J\+P\+P@{J\+P\+P}}
+\index{J\+P\+P@{J\+P\+P}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{J\+P\+P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void}$\ast$ malloc J\+P\+P (
+\begin{DoxyParamCaption}
+\item[{(size\+\_\+t size)}]{}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_aef13a9112edda4a9c7d509db9e8abb6c}
+\hypertarget{jmemnobs_8c_a71e083248c713fdce8bbd2aa40652425}{}\index{jmemnobs.\+c@{jmemnobs.\+c}!J\+P\+P@{J\+P\+P}}
+\index{J\+P\+P@{J\+P\+P}!jmemnobs.\+c@{jmemnobs.\+c}}
+\subsubsection[{J\+P\+P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} free J\+P\+P (
+\begin{DoxyParamCaption}
+\item[{({\bf void} $\ast$ptr)}]{}
+\end{DoxyParamCaption}
+)}\label{jmemnobs_8c_a71e083248c713fdce8bbd2aa40652425}

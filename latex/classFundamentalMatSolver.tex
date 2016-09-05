@@ -1,0 +1,112 @@
+\hypertarget{classFundamentalMatSolver}{}\section{Fundamental\+Mat\+Solver Class Reference}
+\label{classFundamentalMatSolver}\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
+
+
+Class containing the template method of the proposed fundamental matrix iterative estimation algorithm.  
+
+
+
+
+{\ttfamily \#include $<$fundamentalmat\+\_\+solver.\+h$>$}
+
+
+
+Collaboration diagram for Fundamental\+Mat\+Solver\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFundamentalMatSolver_a499f89d03b8a4c64737da228fcee4793}{Fundamental\+Mat\+Solver} (\hyperlink{classFramesReader}{Frames\+Reader} $\ast$\+\_\+r1, \hyperlink{classFramesReader}{Frames\+Reader} $\ast$\+\_\+r2, \hyperlink{classFVMatcher_1_1AbstractMatcher}{F\+V\+Matcher\+::\+Abstract\+Matcher} $\ast$\+\_\+init\+\_\+matcher, \hyperlink{classAbstractEstimator}{Abstract\+Estimator} $\ast$\+\_\+estimator, \hyperlink{classFundMatOptimizer}{Fund\+Mat\+Optimizer} $\ast$\+\_\+optimizer, double \+\_\+alpha, int \+\_\+num\+\_\+pts, double \+\_\+epsilon, double \+\_\+sigma\+\_\+high, double \+\_\+sigma\+\_\+low, int \+\_\+depth, double \+\_\+th, int \+\_\+last\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classFundamentalMatSolver}{Fundamental\+Mat\+Solver} constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFundamentalMatSolver_a15aff405ed4f1670053c83bfca672149}{$\sim$\+Fundamental\+Mat\+Solver} ()
+\item 
+cv\+::\+Mat \hyperlink{classFundamentalMatSolver_aaa14f6188fecb5c16a7df7009503d72d}{solve} ()
+\begin{DoxyCompactList}\small\item\em Solve the fundamental matrix iterative estimation problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class containing the template method of the proposed fundamental matrix iterative estimation algorithm. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFundamentalMatSolver_a499f89d03b8a4c64737da228fcee4793}{}\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}!Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
+\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}!Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
+\subsubsection[{Fundamental\+Mat\+Solver}]{\setlength{\rightskip}{0pt plus 5cm}Fundamental\+Mat\+Solver\+::\+Fundamental\+Mat\+Solver (
+\begin{DoxyParamCaption}
+\item[{{\bf Frames\+Reader} $\ast$}]{\+\_\+r1, }
+\item[{{\bf Frames\+Reader} $\ast$}]{\+\_\+r2, }
+\item[{{\bf F\+V\+Matcher\+::\+Abstract\+Matcher} $\ast$}]{\+\_\+init\+\_\+matcher, }
+\item[{{\bf Abstract\+Estimator} $\ast$}]{\+\_\+estimator, }
+\item[{{\bf Fund\+Mat\+Optimizer} $\ast$}]{\+\_\+optimizer, }
+\item[{double}]{\+\_\+alpha, }
+\item[{int}]{\+\_\+num\+\_\+pts, }
+\item[{double}]{\+\_\+epsilon, }
+\item[{double}]{\+\_\+sigma\+\_\+high, }
+\item[{double}]{\+\_\+sigma\+\_\+low, }
+\item[{int}]{\+\_\+depth, }
+\item[{double}]{\+\_\+th, }
+\item[{int}]{\+\_\+last\+\_\+frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classFundamentalMatSolver_a499f89d03b8a4c64737da228fcee4793}
+
+
+\hyperlink{classFundamentalMatSolver}{Fundamental\+Mat\+Solver} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+r1} & frame reader for camera 1 \\
+\hline
+{\em \+\_\+r2} & frame reader for camera 2 \\
+\hline
+{\em \+\_\+init\+\_\+matcher} & matcher for initial fundamental matrix estimation \\
+\hline
+{\em \+\_\+estimator} & fundamental matrix estimator \\
+\hline
+{\em \+\_\+optimizer} & generic fundamental matrix optimizer \\
+\hline
+{\em \+\_\+alpha} & confidence level epipolar band \\
+\hline
+{\em \+\_\+num\+\_\+pts} & clustering parameter (min number of neighbors) \\
+\hline
+{\em \+\_\+epsilon} & clustering parameter (radius of the neighborhood) \\
+\hline
+{\em \+\_\+sigma\+\_\+high} & std for highly confident epipolar bands \\
+\hline
+{\em \+\_\+sigma\+\_\+low} & std for lowly confident epipolar bands \\
+\hline
+{\em \+\_\+depth} & depth of the S\+I\+F\+T knn matcher \\
+\hline
+{\em \+\_\+th} & S\+I\+F\+T ratio threshold \\
+\hline
+{\em \+\_\+last\+\_\+frame} & last frame to be processed \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFundamentalMatSolver_a15aff405ed4f1670053c83bfca672149}{}\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}!````~Fundamental\+Mat\+Solver@{$\sim$\+Fundamental\+Mat\+Solver}}
+\index{````~Fundamental\+Mat\+Solver@{$\sim$\+Fundamental\+Mat\+Solver}!Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
+\subsubsection[{$\sim$\+Fundamental\+Mat\+Solver}]{\setlength{\rightskip}{0pt plus 5cm}virtual Fundamental\+Mat\+Solver\+::$\sim$\+Fundamental\+Mat\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classFundamentalMatSolver_a15aff405ed4f1670053c83bfca672149}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFundamentalMatSolver_aaa14f6188fecb5c16a7df7009503d72d}{}\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}!solve@{solve}}
+\index{solve@{solve}!Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
+\subsubsection[{solve}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Fundamental\+Mat\+Solver\+::solve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classFundamentalMatSolver_aaa14f6188fecb5c16a7df7009503d72d}
+
+
+Solve the fundamental matrix iterative estimation problem. 
+
+\begin{DoxyReturn}{Returns}
+the fundamental matrix computed at last iteration 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{fundamentalmat__solver_8h}{fundamentalmat\+\_\+solver.\+h}\item 
+src/\hyperlink{fundamentalmat__solver_8cpp}{fundamentalmat\+\_\+solver.\+cpp}\end{DoxyCompactItemize}

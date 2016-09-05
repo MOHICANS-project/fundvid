@@ -1,0 +1,22 @@
+digraph "src/third_party/orsa-fundamental_1.0/src/third_party/jpeg/jdct.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jdct.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jcdctmgr.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jcdctmgr_8c.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jddctmgr.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jddctmgr_8c.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jfdctflt.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jfdctflt_8c.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jfdctfst.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jfdctfst_8c.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jfdctint.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jfdctint_8c.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jidctflt.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jidctflt_8c.html"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jidctfst.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jidctfst_8c.html"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/jpeg/jidctint.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jidctint_8c.html"];
+}

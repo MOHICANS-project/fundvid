@@ -1,0 +1,304 @@
+\hypertarget{structMatch}{}\section{Match Struct Reference}
+\label{structMatch}\index{Match@{Match}}
+
+
+Save matching position between two points.  
+
+
+
+
+{\ttfamily \#include $<$match.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structMatch_a990b0300aeee204fd90d6d846b9aea0e}{Match} ()
+\item 
+\hyperlink{structMatch_a7866281a0d6dc60a6072eb7a8286a8b4}{Match} (float ix1, float iy1, float ix2, float iy2, float idist)
+\item 
+\hyperlink{structMatch_a990b0300aeee204fd90d6d846b9aea0e}{Match} ()
+\item 
+\hyperlink{structMatch_a6d4ac71c5dc862952a3c88d5e9d2908a}{Match} (float ix1, float iy1, float ix2, float iy2)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{structMatch_a114d8e35da70144ca8f8c326fe38d568}{load\+Match} (const char $\ast$name\+File, std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+match)
+\begin{DoxyCompactList}\small\item\em Load the corresponding matches from file. \end{DoxyCompactList}\item 
+static bool \hyperlink{structMatch_a78f2c4beb277712897e2a525c553670b}{save\+Match} (const char $\ast$name\+File, const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+match)
+\begin{DoxyCompactList}\small\item\em Save the corresponding matches to file. \end{DoxyCompactList}\item 
+static bool \hyperlink{structMatch_a114d8e35da70144ca8f8c326fe38d568}{load\+Match} (const char $\ast$name\+File, std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+match)
+\begin{DoxyCompactList}\small\item\em Load the corresponding matches from file. \end{DoxyCompactList}\item 
+static bool \hyperlink{structMatch_a78f2c4beb277712897e2a525c553670b}{save\+Match} (const char $\ast$name\+File, const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+match)
+\begin{DoxyCompactList}\small\item\em Save the corresponding matches to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{structMatch_ad9303951c0ba135df63f7395e826ee30}{x1}
+\item 
+float \hyperlink{structMatch_a9f14370878085f208b95442ef5b6221c}{y1}
+\item 
+float \hyperlink{structMatch_a570dcc9633318cd3fb6f269f04f63d1a}{x2}
+\item 
+float \hyperlink{structMatch_ad266af2f32a1b4533e3a66d963bae22c}{y2}
+\item 
+float \hyperlink{structMatch_a391f8676df42073c211a5679cb664f0b}{dist}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structMatch_a40635809cb7add083b19dbcb17d08068}{operator$<$} (const \hyperlink{structMatch}{Match} \&m1, const \hyperlink{structMatch}{Match} \&m2)
+\begin{DoxyCompactList}\small\item\em Lexicographical ordering of matches. Used to remove duplicates. \end{DoxyCompactList}\item 
+bool \hyperlink{structMatch_ac6894d6e77a5126b8452f57f6733dfe1}{operator==} (const \hyperlink{structMatch}{Match} \&m1, const \hyperlink{structMatch}{Match} \&m2)
+\begin{DoxyCompactList}\small\item\em Comparison Operator. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{structMatch_ac88305bd4206fd892a4830eb695d34c1}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structMatch}{Match} \&m)
+\item 
+std\+::istream \& \hyperlink{structMatch_afbe52fcdb5652281b46654fda95c1e2c}{operator$>$$>$} (std\+::istream \&in, \hyperlink{structMatch}{Match} \&m)
+\item 
+bool \hyperlink{structMatch_a40635809cb7add083b19dbcb17d08068}{operator$<$} (const \hyperlink{structMatch}{Match} \&m1, const \hyperlink{structMatch}{Match} \&m2)
+\begin{DoxyCompactList}\small\item\em Lexicographical ordering of matches. Used to remove duplicates. \end{DoxyCompactList}\item 
+bool \hyperlink{structMatch_ac6894d6e77a5126b8452f57f6733dfe1}{operator==} (const \hyperlink{structMatch}{Match} \&m1, const \hyperlink{structMatch}{Match} \&m2)
+\begin{DoxyCompactList}\small\item\em Comparison Operator. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{structMatch_ac88305bd4206fd892a4830eb695d34c1}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structMatch}{Match} \&m)
+\item 
+std\+::istream \& \hyperlink{structMatch_afbe52fcdb5652281b46654fda95c1e2c}{operator$>$$>$} (std\+::istream \&in, \hyperlink{structMatch}{Match} \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Save matching position between two points. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structMatch_a990b0300aeee204fd90d6d846b9aea0e}{}\index{Match@{Match}!Match@{Match}}
+\index{Match@{Match}!Match@{Match}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}Match\+::\+Match (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{structMatch_a990b0300aeee204fd90d6d846b9aea0e}
+\hypertarget{structMatch_a7866281a0d6dc60a6072eb7a8286a8b4}{}\index{Match@{Match}!Match@{Match}}
+\index{Match@{Match}!Match@{Match}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}Match\+::\+Match (
+\begin{DoxyParamCaption}
+\item[{float}]{ix1, }
+\item[{float}]{iy1, }
+\item[{float}]{ix2, }
+\item[{float}]{iy2, }
+\item[{float}]{idist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{structMatch_a7866281a0d6dc60a6072eb7a8286a8b4}
+\hypertarget{structMatch_a990b0300aeee204fd90d6d846b9aea0e}{}\index{Match@{Match}!Match@{Match}}
+\index{Match@{Match}!Match@{Match}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}Match\+::\+Match (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{structMatch_a990b0300aeee204fd90d6d846b9aea0e}
+\hypertarget{structMatch_a6d4ac71c5dc862952a3c88d5e9d2908a}{}\index{Match@{Match}!Match@{Match}}
+\index{Match@{Match}!Match@{Match}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}Match\+::\+Match (
+\begin{DoxyParamCaption}
+\item[{float}]{ix1, }
+\item[{float}]{iy1, }
+\item[{float}]{ix2, }
+\item[{float}]{iy2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{structMatch_a6d4ac71c5dc862952a3c88d5e9d2908a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structMatch_a114d8e35da70144ca8f8c326fe38d568}{}\index{Match@{Match}!load\+Match@{load\+Match}}
+\index{load\+Match@{load\+Match}!Match@{Match}}
+\subsubsection[{load\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static bool Match\+::load\+Match (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\+File, }
+\item[{std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+match}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{structMatch_a114d8e35da70144ca8f8c326fe38d568}
+
+
+Load the corresponding matches from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+File} & The file where matches were saved. \\
+\hline
+{\em vec\+\_\+match} & The loaded corresponding points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if everything was ok, otherwise false. 
+\end{DoxyReturn}
+\hypertarget{structMatch_a114d8e35da70144ca8f8c326fe38d568}{}\index{Match@{Match}!load\+Match@{load\+Match}}
+\index{load\+Match@{load\+Match}!Match@{Match}}
+\subsubsection[{load\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static bool Match\+::load\+Match (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\+File, }
+\item[{std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+match}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{structMatch_a114d8e35da70144ca8f8c326fe38d568}
+
+
+Load the corresponding matches from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+File} & The file where matches were saved. \\
+\hline
+{\em vec\+\_\+match} & The loaded corresponding points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if everything was ok, otherwise false. 
+\end{DoxyReturn}
+\hypertarget{structMatch_a78f2c4beb277712897e2a525c553670b}{}\index{Match@{Match}!save\+Match@{save\+Match}}
+\index{save\+Match@{save\+Match}!Match@{Match}}
+\subsubsection[{save\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static bool Match\+::save\+Match (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\+File, }
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+match}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{structMatch_a78f2c4beb277712897e2a525c553670b}
+
+
+Save the corresponding matches to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+File} & The file where matches will be saved. \\
+\hline
+{\em vec\+\_\+match} & The matches that we want to save. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if everything was ok, otherwise false. 
+\end{DoxyReturn}
+\hypertarget{structMatch_a78f2c4beb277712897e2a525c553670b}{}\index{Match@{Match}!save\+Match@{save\+Match}}
+\index{save\+Match@{save\+Match}!Match@{Match}}
+\subsubsection[{save\+Match}]{\setlength{\rightskip}{0pt plus 5cm}static bool Match\+::save\+Match (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\+File, }
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+match}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{structMatch_a78f2c4beb277712897e2a525c553670b}
+
+
+Save the corresponding matches to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+File} & The file where matches will be saved. \\
+\hline
+{\em vec\+\_\+match} & The matches that we want to save. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if everything was ok, otherwise false. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{structMatch_a40635809cb7add083b19dbcb17d08068}{}\index{Match@{Match}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Match@{Match}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match} \&}]{m1, }
+\item[{const {\bf Match} \&}]{m2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_a40635809cb7add083b19dbcb17d08068}
+
+
+Lexicographical ordering of matches. Used to remove duplicates. 
+
+\hypertarget{structMatch_a40635809cb7add083b19dbcb17d08068}{}\index{Match@{Match}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Match@{Match}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match} \&}]{m1, }
+\item[{const {\bf Match} \&}]{m2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_a40635809cb7add083b19dbcb17d08068}
+
+
+Lexicographical ordering of matches. Used to remove duplicates. 
+
+\hypertarget{structMatch_ac88305bd4206fd892a4830eb695d34c1}{}\index{Match@{Match}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Match@{Match}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Match} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_ac88305bd4206fd892a4830eb695d34c1}
+\hypertarget{structMatch_ac88305bd4206fd892a4830eb695d34c1}{}\index{Match@{Match}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Match@{Match}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Match} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_ac88305bd4206fd892a4830eb695d34c1}
+\hypertarget{structMatch_ac6894d6e77a5126b8452f57f6733dfe1}{}\index{Match@{Match}!operator==@{operator==}}
+\index{operator==@{operator==}!Match@{Match}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match} \&}]{m1, }
+\item[{const {\bf Match} \&}]{m2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_ac6894d6e77a5126b8452f57f6733dfe1}
+
+
+Comparison Operator. 
+
+\hypertarget{structMatch_ac6894d6e77a5126b8452f57f6733dfe1}{}\index{Match@{Match}!operator==@{operator==}}
+\index{operator==@{operator==}!Match@{Match}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match} \&}]{m1, }
+\item[{const {\bf Match} \&}]{m2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_ac6894d6e77a5126b8452f57f6733dfe1}
+
+
+Comparison Operator. 
+
+\hypertarget{structMatch_afbe52fcdb5652281b46654fda95c1e2c}{}\index{Match@{Match}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Match@{Match}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{in, }
+\item[{{\bf Match} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_afbe52fcdb5652281b46654fda95c1e2c}
+\hypertarget{structMatch_afbe52fcdb5652281b46654fda95c1e2c}{}\index{Match@{Match}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Match@{Match}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{in, }
+\item[{{\bf Match} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{structMatch_afbe52fcdb5652281b46654fda95c1e2c}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structMatch_a391f8676df42073c211a5679cb664f0b}{}\index{Match@{Match}!dist@{dist}}
+\index{dist@{dist}!Match@{Match}}
+\subsubsection[{dist}]{\setlength{\rightskip}{0pt plus 5cm}float Match\+::dist}\label{structMatch_a391f8676df42073c211a5679cb664f0b}
+\hypertarget{structMatch_ad9303951c0ba135df63f7395e826ee30}{}\index{Match@{Match}!x1@{x1}}
+\index{x1@{x1}!Match@{Match}}
+\subsubsection[{x1}]{\setlength{\rightskip}{0pt plus 5cm}float Match\+::x1}\label{structMatch_ad9303951c0ba135df63f7395e826ee30}
+\hypertarget{structMatch_a570dcc9633318cd3fb6f269f04f63d1a}{}\index{Match@{Match}!x2@{x2}}
+\index{x2@{x2}!Match@{Match}}
+\subsubsection[{x2}]{\setlength{\rightskip}{0pt plus 5cm}float Match\+::x2}\label{structMatch_a570dcc9633318cd3fb6f269f04f63d1a}
+\hypertarget{structMatch_a9f14370878085f208b95442ef5b6221c}{}\index{Match@{Match}!y1@{y1}}
+\index{y1@{y1}!Match@{Match}}
+\subsubsection[{y1}]{\setlength{\rightskip}{0pt plus 5cm}float Match\+::y1}\label{structMatch_a9f14370878085f208b95442ef5b6221c}
+\hypertarget{structMatch_ad266af2f32a1b4533e3a66d963bae22c}{}\index{Match@{Match}!y2@{y2}}
+\index{y2@{y2}!Match@{Match}}
+\subsubsection[{y2}]{\setlength{\rightskip}{0pt plus 5cm}float Match\+::y2}\label{structMatch_ad266af2f32a1b4533e3a66d963bae22c}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+Match/\hyperlink{match_8h}{match.\+h}\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/\hyperlink{match_8hpp}{match.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\hypertarget{structhuff__entropy__decoder}{}\section{huff\+\_\+entropy\+\_\+decoder Struct Reference}
+\label{structhuff__entropy__decoder}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+
+
+Collaboration diagram for huff\+\_\+entropy\+\_\+decoder\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structjpeg__entropy__decoder}{jpeg\+\_\+entropy\+\_\+decoder} \hyperlink{structhuff__entropy__decoder_a85f304c89441e96be66e49685cf24c3d}{pub}
+\item 
+\hyperlink{structbitread__perm__state}{bitread\+\_\+perm\+\_\+state} \hyperlink{structhuff__entropy__decoder_a06e5f8944ccb6057c6f72b3df2441223}{bitstate}
+\item 
+\hyperlink{structsavable__state}{savable\+\_\+state} \hyperlink{structhuff__entropy__decoder_a0e0efb55a8a5b01e1e49aa9c3fb8dfe6}{saved}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structhuff__entropy__decoder_a412a9c88d74ed51774d25757b602b7ae}{insufficient\+\_\+data}
+\item 
+unsigned int \hyperlink{structhuff__entropy__decoder_af6005b639dada949c62767bed24daa1a}{restarts\+\_\+to\+\_\+go}
+\item 
+\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl} $\ast$ \hyperlink{structhuff__entropy__decoder_a615d2735aebeee55b9820f09700677be}{derived\+\_\+tbls} \mbox{[}\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl} $\ast$ \hyperlink{structhuff__entropy__decoder_adbbf18c6aa3065d9bcf6bf33079733e0}{ac\+\_\+derived\+\_\+tbl}
+\item 
+\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl} $\ast$ \hyperlink{structhuff__entropy__decoder_a277328a6f93b55616bd86b0056098c65}{dc\+\_\+derived\+\_\+tbls} \mbox{[}\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl} $\ast$ \hyperlink{structhuff__entropy__decoder_a19edd8c7e80bfe34c21e6fe35ef90cce}{ac\+\_\+derived\+\_\+tbls} \mbox{[}\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}
+\item 
+\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl} $\ast$ \hyperlink{structhuff__entropy__decoder_a63725587525df86501d2a632152c01c0}{dc\+\_\+cur\+\_\+tbls} \mbox{[}\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}
+\item 
+\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl} $\ast$ \hyperlink{structhuff__entropy__decoder_af9d82cc6c9c90aa6bc3d5fc324967d7c}{ac\+\_\+cur\+\_\+tbls} \mbox{[}\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}
+\item 
+int \hyperlink{structhuff__entropy__decoder_a28830ac6bc49fafca8325b1ec0472a33}{coef\+\_\+limit} \mbox{[}\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structhuff__entropy__decoder_af9d82cc6c9c90aa6bc3d5fc324967d7c}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!ac\+\_\+cur\+\_\+tbls@{ac\+\_\+cur\+\_\+tbls}}
+\index{ac\+\_\+cur\+\_\+tbls@{ac\+\_\+cur\+\_\+tbls}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{ac\+\_\+cur\+\_\+tbls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf d\+\_\+derived\+\_\+tbl}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::ac\+\_\+cur\+\_\+tbls\mbox{[}{\bf D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}}\label{structhuff__entropy__decoder_af9d82cc6c9c90aa6bc3d5fc324967d7c}
+\hypertarget{structhuff__entropy__decoder_adbbf18c6aa3065d9bcf6bf33079733e0}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!ac\+\_\+derived\+\_\+tbl@{ac\+\_\+derived\+\_\+tbl}}
+\index{ac\+\_\+derived\+\_\+tbl@{ac\+\_\+derived\+\_\+tbl}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{ac\+\_\+derived\+\_\+tbl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf d\+\_\+derived\+\_\+tbl}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::ac\+\_\+derived\+\_\+tbl}\label{structhuff__entropy__decoder_adbbf18c6aa3065d9bcf6bf33079733e0}
+\hypertarget{structhuff__entropy__decoder_a19edd8c7e80bfe34c21e6fe35ef90cce}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!ac\+\_\+derived\+\_\+tbls@{ac\+\_\+derived\+\_\+tbls}}
+\index{ac\+\_\+derived\+\_\+tbls@{ac\+\_\+derived\+\_\+tbls}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{ac\+\_\+derived\+\_\+tbls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf d\+\_\+derived\+\_\+tbl}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::ac\+\_\+derived\+\_\+tbls\mbox{[}{\bf N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structhuff__entropy__decoder_a19edd8c7e80bfe34c21e6fe35ef90cce}
+\hypertarget{structhuff__entropy__decoder_a06e5f8944ccb6057c6f72b3df2441223}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!bitstate@{bitstate}}
+\index{bitstate@{bitstate}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{bitstate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bitread\+\_\+perm\+\_\+state} huff\+\_\+entropy\+\_\+decoder\+::bitstate}\label{structhuff__entropy__decoder_a06e5f8944ccb6057c6f72b3df2441223}
+\hypertarget{structhuff__entropy__decoder_a28830ac6bc49fafca8325b1ec0472a33}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!coef\+\_\+limit@{coef\+\_\+limit}}
+\index{coef\+\_\+limit@{coef\+\_\+limit}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{coef\+\_\+limit}]{\setlength{\rightskip}{0pt plus 5cm}int huff\+\_\+entropy\+\_\+decoder\+::coef\+\_\+limit\mbox{[}{\bf D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}}\label{structhuff__entropy__decoder_a28830ac6bc49fafca8325b1ec0472a33}
+\hypertarget{structhuff__entropy__decoder_a63725587525df86501d2a632152c01c0}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!dc\+\_\+cur\+\_\+tbls@{dc\+\_\+cur\+\_\+tbls}}
+\index{dc\+\_\+cur\+\_\+tbls@{dc\+\_\+cur\+\_\+tbls}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{dc\+\_\+cur\+\_\+tbls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf d\+\_\+derived\+\_\+tbl}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::dc\+\_\+cur\+\_\+tbls\mbox{[}{\bf D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+C\+U}\mbox{]}}\label{structhuff__entropy__decoder_a63725587525df86501d2a632152c01c0}
+\hypertarget{structhuff__entropy__decoder_a277328a6f93b55616bd86b0056098c65}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!dc\+\_\+derived\+\_\+tbls@{dc\+\_\+derived\+\_\+tbls}}
+\index{dc\+\_\+derived\+\_\+tbls@{dc\+\_\+derived\+\_\+tbls}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{dc\+\_\+derived\+\_\+tbls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf d\+\_\+derived\+\_\+tbl}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::dc\+\_\+derived\+\_\+tbls\mbox{[}{\bf N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structhuff__entropy__decoder_a277328a6f93b55616bd86b0056098c65}
+\hypertarget{structhuff__entropy__decoder_a615d2735aebeee55b9820f09700677be}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!derived\+\_\+tbls@{derived\+\_\+tbls}}
+\index{derived\+\_\+tbls@{derived\+\_\+tbls}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{derived\+\_\+tbls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf d\+\_\+derived\+\_\+tbl}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::derived\+\_\+tbls\mbox{[}{\bf N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+L\+S}\mbox{]}}\label{structhuff__entropy__decoder_a615d2735aebeee55b9820f09700677be}
+\hypertarget{structhuff__entropy__decoder_a412a9c88d74ed51774d25757b602b7ae}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!insufficient\+\_\+data@{insufficient\+\_\+data}}
+\index{insufficient\+\_\+data@{insufficient\+\_\+data}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{insufficient\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} huff\+\_\+entropy\+\_\+decoder\+::insufficient\+\_\+data}\label{structhuff__entropy__decoder_a412a9c88d74ed51774d25757b602b7ae}
+\hypertarget{structhuff__entropy__decoder_a85f304c89441e96be66e49685cf24c3d}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!pub@{pub}}
+\index{pub@{pub}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{pub}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+entropy\+\_\+decoder} huff\+\_\+entropy\+\_\+decoder\+::pub}\label{structhuff__entropy__decoder_a85f304c89441e96be66e49685cf24c3d}
+\hypertarget{structhuff__entropy__decoder_af6005b639dada949c62767bed24daa1a}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!restarts\+\_\+to\+\_\+go@{restarts\+\_\+to\+\_\+go}}
+\index{restarts\+\_\+to\+\_\+go@{restarts\+\_\+to\+\_\+go}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{restarts\+\_\+to\+\_\+go}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int huff\+\_\+entropy\+\_\+decoder\+::restarts\+\_\+to\+\_\+go}\label{structhuff__entropy__decoder_af6005b639dada949c62767bed24daa1a}
+\hypertarget{structhuff__entropy__decoder_a0e0efb55a8a5b01e1e49aa9c3fb8dfe6}{}\index{huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}!saved@{saved}}
+\index{saved@{saved}!huff\+\_\+entropy\+\_\+decoder@{huff\+\_\+entropy\+\_\+decoder}}
+\subsubsection[{saved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf savable\+\_\+state} huff\+\_\+entropy\+\_\+decoder\+::saved}\label{structhuff__entropy__decoder_a0e0efb55a8a5b01e1e49aa9c3fb8dfe6}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/\hyperlink{jdhuff_8c}{jdhuff.\+c}\end{DoxyCompactItemize}

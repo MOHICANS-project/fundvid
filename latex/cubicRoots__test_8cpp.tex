@@ -1,0 +1,105 @@
+\hypertarget{cubicRoots__test_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/cubic\+Roots\+\_\+test.cpp File Reference}
+\label{cubicRoots__test_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/cubic\+Roots\+\_\+test.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/cubic\+Roots\+\_\+test.\+cpp}}
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include \char`\"{}../../src/third\+\_\+party/\+Cpp\+Unit\+Lite/\+Test\+Harness.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/lib\+Orsa/cubic\+Roots.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/testing/testing.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cerrno$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+Include dependency graph for cubic\+Roots\+\_\+test.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cubicRoots__test_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{cubicRoots__test_8cpp_a61aebb1f5b1688b71075b049646dbc27}{gen\+Rand} ()
+\item 
+float \hyperlink{cubicRoots__test_8cpp_a57ebc18f117452d70372d1b4e5c2f982}{eval} (float coeffs\mbox{[}4\mbox{]}, float x)
+\item 
+float \hyperlink{cubicRoots__test_8cpp_a529b0ba98ad09d3c252c6905b5ac6532}{bound} (float coeffs\mbox{[}4\mbox{]}, float x)
+\item 
+\hyperlink{cubicRoots__test_8cpp_abec2a8b557d68b157c1bdac79af97906}{T\+E\+S\+T} (Cubic\+Roots, Single\+Root)
+\item 
+\hyperlink{cubicRoots__test_8cpp_a5ee2470da2869710871b5954e11ecf8f}{T\+E\+S\+T} (Cubic\+Roots, Three\+Roots)
+\item 
+\hyperlink{cubicRoots__test_8cpp_a4e14437625dae68bf227a6e2e1743d62}{T\+E\+S\+T} (Cubic\+Roots, Triple\+Root)
+\item 
+\hyperlink{cubicRoots__test_8cpp_a2040b8925158babee097aa6c88158391}{T\+E\+S\+T} (Cubic\+Roots, Double\+Root)
+\item 
+int \hyperlink{cubicRoots__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{cubicRoots__test_8cpp_a525335710b53cb064ca56b936120431e}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}}
+\index{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}\label{cubicRoots__test_8cpp_a525335710b53cb064ca56b936120431e}
+
+
+\subsection{Function Documentation}
+\hypertarget{cubicRoots__test_8cpp_a529b0ba98ad09d3c252c6905b5ac6532}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!bound@{bound}}
+\index{bound@{bound}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{bound}]{\setlength{\rightskip}{0pt plus 5cm}float bound (
+\begin{DoxyParamCaption}
+\item[{float}]{coeffs\mbox{[}4\mbox{]}, }
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_a529b0ba98ad09d3c252c6905b5ac6532}
+\hypertarget{cubicRoots__test_8cpp_a57ebc18f117452d70372d1b4e5c2f982}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!eval@{eval}}
+\index{eval@{eval}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}float eval (
+\begin{DoxyParamCaption}
+\item[{float}]{coeffs\mbox{[}4\mbox{]}, }
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_a57ebc18f117452d70372d1b4e5c2f982}
+\hypertarget{cubicRoots__test_8cpp_a61aebb1f5b1688b71075b049646dbc27}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!gen\+Rand@{gen\+Rand}}
+\index{gen\+Rand@{gen\+Rand}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{gen\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}float gen\+Rand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_a61aebb1f5b1688b71075b049646dbc27}
+\hypertarget{cubicRoots__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{cubicRoots__test_8cpp_abec2a8b557d68b157c1bdac79af97906}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Cubic\+Roots}]{, }
+\item[{Single\+Root}]{}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_abec2a8b557d68b157c1bdac79af97906}
+\hypertarget{cubicRoots__test_8cpp_a5ee2470da2869710871b5954e11ecf8f}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Cubic\+Roots}]{, }
+\item[{Three\+Roots}]{}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_a5ee2470da2869710871b5954e11ecf8f}
+\hypertarget{cubicRoots__test_8cpp_a4e14437625dae68bf227a6e2e1743d62}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Cubic\+Roots}]{, }
+\item[{Triple\+Root}]{}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_a4e14437625dae68bf227a6e2e1743d62}
+\hypertarget{cubicRoots__test_8cpp_a2040b8925158babee097aa6c88158391}{}\index{cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}!T\+E\+S\+T@{T\+E\+S\+T}}
+\index{T\+E\+S\+T@{T\+E\+S\+T}!cubic\+Roots\+\_\+test.\+cpp@{cubic\+Roots\+\_\+test.\+cpp}}
+\subsubsection[{T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T (
+\begin{DoxyParamCaption}
+\item[{Cubic\+Roots}]{, }
+\item[{Double\+Root}]{}
+\end{DoxyParamCaption}
+)}\label{cubicRoots__test_8cpp_a2040b8925158babee097aa6c88158391}

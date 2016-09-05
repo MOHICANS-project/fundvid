@@ -1,0 +1,110 @@
+\hypertarget{structmy__upsampler}{}\section{my\+\_\+upsampler Struct Reference}
+\label{structmy__upsampler}\index{my\+\_\+upsampler@{my\+\_\+upsampler}}
+
+
+Collaboration diagram for my\+\_\+upsampler\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structmy__upsampler_a6d4b85127ea561ce45e42fbff490d5d1}{J\+M\+E\+T\+H\+O\+D} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void}, upmethod,(\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} in\+\_\+row\+\_\+group\+\_\+ctr, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structjpeg__upsampler}{jpeg\+\_\+upsampler} \hyperlink{structmy__upsampler_a34dcee6f85a807bcacec127661432823}{pub}
+\item 
+int $\ast$ \hyperlink{structmy__upsampler_a4f008494aac28cbf152a2bf05049dfca}{Cr\+\_\+r\+\_\+tab}
+\item 
+int $\ast$ \hyperlink{structmy__upsampler_a0e7a2bfa2d928b6643497e092ac68205}{Cb\+\_\+b\+\_\+tab}
+\item 
+\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32} $\ast$ \hyperlink{structmy__upsampler_a1a14abca6bd59cb35c4e3ee51f1ed8f5}{Cr\+\_\+g\+\_\+tab}
+\item 
+\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32} $\ast$ \hyperlink{structmy__upsampler_af9bf33b5de13df22004b7f0f99d8195d}{Cb\+\_\+g\+\_\+tab}
+\item 
+\hyperlink{jpeglib_8h_ace11642f14c454c9ddbe2741132f4e68}{J\+S\+A\+M\+P\+R\+O\+W} \hyperlink{structmy__upsampler_a000b6953c558f05f68e56c2c08c12902}{spare\+\_\+row}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structmy__upsampler_a98ee90ab9a83d6d1c16c073826c34e51}{spare\+\_\+full}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structmy__upsampler_a315364082734b3779abccc258a2954e8}{out\+\_\+row\+\_\+width}
+\item 
+\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{structmy__upsampler_a1a6b9998ad6a7501dd5287295fd8adc4}{rows\+\_\+to\+\_\+go}
+\item 
+\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{structmy__upsampler_a72da5ad87430b974aeabce55c30eb653}{color\+\_\+buf} \mbox{[}\hyperlink{jmorecfg_8h_a6d8c910a1fdb6d4762a05f7250e64322}{M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}
+\item 
+upsample1\+\_\+ptr \hyperlink{structmy__upsampler_a3f1f669c2871ccaee6009ec6f96899d3}{methods} \mbox{[}\hyperlink{jmorecfg_8h_a6d8c910a1fdb6d4762a05f7250e64322}{M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}
+\item 
+int \hyperlink{structmy__upsampler_a9e77765267bd21be6cb005b748034d76}{next\+\_\+row\+\_\+out}
+\item 
+int \hyperlink{structmy__upsampler_a05806e1394a2638e4912da137b9d4bcd}{rowgroup\+\_\+height} \mbox{[}\hyperlink{jmorecfg_8h_a6d8c910a1fdb6d4762a05f7250e64322}{M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structmy__upsampler_a4a82028e54b1f7e57b2c1f7d63290f65}{h\+\_\+expand} \mbox{[}\hyperlink{jmorecfg_8h_a6d8c910a1fdb6d4762a05f7250e64322}{M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}
+\item 
+\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8} \hyperlink{structmy__upsampler_a48df5e8df66ba2f1275f54a617eaf888}{v\+\_\+expand} \mbox{[}\hyperlink{jmorecfg_8h_a6d8c910a1fdb6d4762a05f7250e64322}{M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structmy__upsampler_a6d4b85127ea561ce45e42fbff490d5d1}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}}
+\index{J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{J\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}my\+\_\+upsampler\+::\+J\+M\+E\+T\+H\+O\+D (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{, }
+\item[{upmethod}]{, }
+\item[{({\bf j\+\_\+decompress\+\_\+ptr} cinfo, {\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, {\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} in\+\_\+row\+\_\+group\+\_\+ctr, {\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} {\bf output\+\_\+buf})}]{}
+\end{DoxyParamCaption}
+)}\label{structmy__upsampler_a6d4b85127ea561ce45e42fbff490d5d1}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structmy__upsampler_a0e7a2bfa2d928b6643497e092ac68205}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!Cb\+\_\+b\+\_\+tab@{Cb\+\_\+b\+\_\+tab}}
+\index{Cb\+\_\+b\+\_\+tab@{Cb\+\_\+b\+\_\+tab}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{Cb\+\_\+b\+\_\+tab}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ my\+\_\+upsampler\+::\+Cb\+\_\+b\+\_\+tab}\label{structmy__upsampler_a0e7a2bfa2d928b6643497e092ac68205}
+\hypertarget{structmy__upsampler_af9bf33b5de13df22004b7f0f99d8195d}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!Cb\+\_\+g\+\_\+tab@{Cb\+\_\+g\+\_\+tab}}
+\index{Cb\+\_\+g\+\_\+tab@{Cb\+\_\+g\+\_\+tab}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{Cb\+\_\+g\+\_\+tab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+N\+T32}$\ast$ my\+\_\+upsampler\+::\+Cb\+\_\+g\+\_\+tab}\label{structmy__upsampler_af9bf33b5de13df22004b7f0f99d8195d}
+\hypertarget{structmy__upsampler_a72da5ad87430b974aeabce55c30eb653}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!color\+\_\+buf@{color\+\_\+buf}}
+\index{color\+\_\+buf@{color\+\_\+buf}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{color\+\_\+buf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} my\+\_\+upsampler\+::color\+\_\+buf\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}}\label{structmy__upsampler_a72da5ad87430b974aeabce55c30eb653}
+\hypertarget{structmy__upsampler_a1a14abca6bd59cb35c4e3ee51f1ed8f5}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!Cr\+\_\+g\+\_\+tab@{Cr\+\_\+g\+\_\+tab}}
+\index{Cr\+\_\+g\+\_\+tab@{Cr\+\_\+g\+\_\+tab}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{Cr\+\_\+g\+\_\+tab}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+N\+T32}$\ast$ my\+\_\+upsampler\+::\+Cr\+\_\+g\+\_\+tab}\label{structmy__upsampler_a1a14abca6bd59cb35c4e3ee51f1ed8f5}
+\hypertarget{structmy__upsampler_a4f008494aac28cbf152a2bf05049dfca}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!Cr\+\_\+r\+\_\+tab@{Cr\+\_\+r\+\_\+tab}}
+\index{Cr\+\_\+r\+\_\+tab@{Cr\+\_\+r\+\_\+tab}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{Cr\+\_\+r\+\_\+tab}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ my\+\_\+upsampler\+::\+Cr\+\_\+r\+\_\+tab}\label{structmy__upsampler_a4f008494aac28cbf152a2bf05049dfca}
+\hypertarget{structmy__upsampler_a4a82028e54b1f7e57b2c1f7d63290f65}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!h\+\_\+expand@{h\+\_\+expand}}
+\index{h\+\_\+expand@{h\+\_\+expand}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{h\+\_\+expand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} my\+\_\+upsampler\+::h\+\_\+expand\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}}\label{structmy__upsampler_a4a82028e54b1f7e57b2c1f7d63290f65}
+\hypertarget{structmy__upsampler_a3f1f669c2871ccaee6009ec6f96899d3}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!methods@{methods}}
+\index{methods@{methods}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{methods}]{\setlength{\rightskip}{0pt plus 5cm}upsample1\+\_\+ptr my\+\_\+upsampler\+::methods\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}}\label{structmy__upsampler_a3f1f669c2871ccaee6009ec6f96899d3}
+\hypertarget{structmy__upsampler_a9e77765267bd21be6cb005b748034d76}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!next\+\_\+row\+\_\+out@{next\+\_\+row\+\_\+out}}
+\index{next\+\_\+row\+\_\+out@{next\+\_\+row\+\_\+out}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{next\+\_\+row\+\_\+out}]{\setlength{\rightskip}{0pt plus 5cm}int my\+\_\+upsampler\+::next\+\_\+row\+\_\+out}\label{structmy__upsampler_a9e77765267bd21be6cb005b748034d76}
+\hypertarget{structmy__upsampler_a315364082734b3779abccc258a2954e8}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!out\+\_\+row\+\_\+width@{out\+\_\+row\+\_\+width}}
+\index{out\+\_\+row\+\_\+width@{out\+\_\+row\+\_\+width}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{out\+\_\+row\+\_\+width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} my\+\_\+upsampler\+::out\+\_\+row\+\_\+width}\label{structmy__upsampler_a315364082734b3779abccc258a2954e8}
+\hypertarget{structmy__upsampler_a34dcee6f85a807bcacec127661432823}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!pub@{pub}}
+\index{pub@{pub}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{pub}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf jpeg\+\_\+upsampler} my\+\_\+upsampler\+::pub}\label{structmy__upsampler_a34dcee6f85a807bcacec127661432823}
+\hypertarget{structmy__upsampler_a05806e1394a2638e4912da137b9d4bcd}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!rowgroup\+\_\+height@{rowgroup\+\_\+height}}
+\index{rowgroup\+\_\+height@{rowgroup\+\_\+height}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{rowgroup\+\_\+height}]{\setlength{\rightskip}{0pt plus 5cm}int my\+\_\+upsampler\+::rowgroup\+\_\+height\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}}\label{structmy__upsampler_a05806e1394a2638e4912da137b9d4bcd}
+\hypertarget{structmy__upsampler_a1a6b9998ad6a7501dd5287295fd8adc4}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!rows\+\_\+to\+\_\+go@{rows\+\_\+to\+\_\+go}}
+\index{rows\+\_\+to\+\_\+go@{rows\+\_\+to\+\_\+go}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{rows\+\_\+to\+\_\+go}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} my\+\_\+upsampler\+::rows\+\_\+to\+\_\+go}\label{structmy__upsampler_a1a6b9998ad6a7501dd5287295fd8adc4}
+\hypertarget{structmy__upsampler_a98ee90ab9a83d6d1c16c073826c34e51}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!spare\+\_\+full@{spare\+\_\+full}}
+\index{spare\+\_\+full@{spare\+\_\+full}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{spare\+\_\+full}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} my\+\_\+upsampler\+::spare\+\_\+full}\label{structmy__upsampler_a98ee90ab9a83d6d1c16c073826c34e51}
+\hypertarget{structmy__upsampler_a000b6953c558f05f68e56c2c08c12902}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!spare\+\_\+row@{spare\+\_\+row}}
+\index{spare\+\_\+row@{spare\+\_\+row}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{spare\+\_\+row}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+A\+M\+P\+R\+O\+W} my\+\_\+upsampler\+::spare\+\_\+row}\label{structmy__upsampler_a000b6953c558f05f68e56c2c08c12902}
+\hypertarget{structmy__upsampler_a48df5e8df66ba2f1275f54a617eaf888}{}\index{my\+\_\+upsampler@{my\+\_\+upsampler}!v\+\_\+expand@{v\+\_\+expand}}
+\index{v\+\_\+expand@{v\+\_\+expand}!my\+\_\+upsampler@{my\+\_\+upsampler}}
+\subsubsection[{v\+\_\+expand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} my\+\_\+upsampler\+::v\+\_\+expand\mbox{[}{\bf M\+A\+X\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}\mbox{]}}\label{structmy__upsampler_a48df5e8df66ba2f1275f54a617eaf888}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/\hyperlink{jdmerge_8c}{jdmerge.\+c}\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/\hyperlink{jdsample_8c}{jdsample.\+c}\end{DoxyCompactItemize}

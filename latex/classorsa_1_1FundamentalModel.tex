@@ -1,0 +1,183 @@
+\hypertarget{classorsa_1_1FundamentalModel}{}\section{orsa\+:\+:Fundamental\+Model Class Reference}
+\label{classorsa_1_1FundamentalModel}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+
+
+Fundamental 7-\/point model, used for robust estimation.  
+
+
+
+
+{\ttfamily \#include $<$fundamental\+\_\+model.\+hpp$>$}
+
+
+
+Inheritance diagram for orsa\+:\+:Fundamental\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for orsa\+:\+:Fundamental\+Model\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorsa_1_1FundamentalModel_a0286d95782638672c8b69e961dbe440e}{Fundamental\+Model} (const \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \&x1, int w1, int h1, const \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \&x2, int w2, int h2, bool sym\+Error=true)
+\begin{DoxyCompactList}\small\item\em Constructor, computing logalpha0\+\_\+. \end{DoxyCompactList}\item 
+int \hyperlink{classorsa_1_1FundamentalModel_ac3870d76a0670fa5e07c1d72e39120ab}{Size\+Sample} () const 
+\begin{DoxyCompactList}\small\item\em 7 points are required to compute a fundamental matrix. \end{DoxyCompactList}\item 
+int \hyperlink{classorsa_1_1FundamentalModel_a16c8e7f3d6ce21236a2156e8daa4aedb}{Nb\+Models} () const 
+\begin{DoxyCompactList}\small\item\em Up to 3 fundamental matrices are computed from a sample of 7 points. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classorsa_1_1FundamentalModel_ab1a29cf875eb1a5b37d55a7264aeee25}{Dist\+To\+Point} () const 
+\begin{DoxyCompactList}\small\item\em Distance used to distinguish inlier/outlier is to a line. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classorsa_1_1FundamentalModel_a283d79e9cf1f43f334ca04b586329752}{Fit} (const std\+::vector$<$ int $>$ \&indices, std\+::vector$<$ \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} $>$ $\ast$Fs) const 
+\begin{DoxyCompactList}\small\item\em Computes the models associated to indexed sample. \end{DoxyCompactList}\item 
+double \hyperlink{classorsa_1_1FundamentalModel_a8cf06b60d6120bc9ee543376ce5dc0d6}{Error} (const \hyperlink{classorsa_1_1OrsaModel_a522135c09871e55e3757780cc1ce57f5}{Mat} \&F, int index, int $\ast$side=0) const 
+\begin{DoxyCompactList}\small\item\em Square reprojection error for a given point through F. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classorsa_1_1FundamentalModel_a1b305ca23105777011dcf987bdde6998}{Unnormalize} (\hyperlink{classorsa_1_1OrsaModel_aadc7e7fc0708ca6bc623e75cdc66b5e8}{Model} $\ast$model) const 
+\begin{DoxyCompactList}\small\item\em Unnormalize a given model (from normalized to image space). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Fundamental 7-\/point model, used for robust estimation. 
+
+See page 281 of book by Hartley-\/\+Zisserman. The equation is $det(F_1 + \alpha F_2) = 0$. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorsa_1_1FundamentalModel_a0286d95782638672c8b69e961dbe440e}{}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}!Fundamental\+Model@{Fundamental\+Model}}
+\index{Fundamental\+Model@{Fundamental\+Model}!orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+\subsubsection[{Fundamental\+Model}]{\setlength{\rightskip}{0pt plus 5cm}orsa\+::\+Fundamental\+Model\+::\+Fundamental\+Model (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{x1, }
+\item[{int}]{w1, }
+\item[{int}]{h1, }
+\item[{const {\bf Mat} \&}]{x2, }
+\item[{int}]{w2, }
+\item[{int}]{h2, }
+\item[{bool}]{sym\+Error = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{classorsa_1_1FundamentalModel_a0286d95782638672c8b69e961dbe440e}
+
+
+Constructor, computing logalpha0\+\_\+. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorsa_1_1FundamentalModel_ab1a29cf875eb1a5b37d55a7264aeee25}{}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}!Dist\+To\+Point@{Dist\+To\+Point}}
+\index{Dist\+To\+Point@{Dist\+To\+Point}!orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+\subsubsection[{Dist\+To\+Point}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool orsa\+::\+Fundamental\+Model\+::\+Dist\+To\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classorsa_1_1FundamentalModel_ab1a29cf875eb1a5b37d55a7264aeee25}
+
+
+Distance used to distinguish inlier/outlier is to a line. 
+
+
+
+Implements \hyperlink{classorsa_1_1OrsaModel_abf92fafced441e3458792629e0054b37}{orsa\+::\+Orsa\+Model}.
+
+\hypertarget{classorsa_1_1FundamentalModel_a8cf06b60d6120bc9ee543376ce5dc0d6}{}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}!Error@{Error}}
+\index{Error@{Error}!orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}double orsa\+::\+Fundamental\+Model\+::\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{F, }
+\item[{int}]{index, }
+\item[{int $\ast$}]{side = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classorsa_1_1FundamentalModel_a8cf06b60d6120bc9ee543376ce5dc0d6}
+
+
+Square reprojection error for a given point through F. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & The fundamental matrix. \\
+\hline
+{\em index} & The point correspondence. \\
+\hline
+{\em side} & In which image is the error measured? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The square reprojection error. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classorsa_1_1OrsaModel_a397468af3d73039fadc513d9db343104}{orsa\+::\+Orsa\+Model}.
+
+\hypertarget{classorsa_1_1FundamentalModel_a283d79e9cf1f43f334ca04b586329752}{}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}!Fit@{Fit}}
+\index{Fit@{Fit}!orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+\subsubsection[{Fit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Fundamental\+Model\+::\+Fit (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{indices, }
+\item[{std\+::vector$<$ {\bf Mat} $>$ $\ast$}]{models}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classorsa_1_1FundamentalModel_a283d79e9cf1f43f334ca04b586329752}
+
+
+Computes the models associated to indexed sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Indices of points to consider for model estimation. \\
+\hline
+{\em models} & Estimated model(s) from sampled point. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classorsa_1_1OrsaModel_ab08fb727f3802b4b3531e2094069b4df}{orsa\+::\+Orsa\+Model}.
+
+\hypertarget{classorsa_1_1FundamentalModel_a16c8e7f3d6ce21236a2156e8daa4aedb}{}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}!Nb\+Models@{Nb\+Models}}
+\index{Nb\+Models@{Nb\+Models}!orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+\subsubsection[{Nb\+Models}]{\setlength{\rightskip}{0pt plus 5cm}int orsa\+::\+Fundamental\+Model\+::\+Nb\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classorsa_1_1FundamentalModel_a16c8e7f3d6ce21236a2156e8daa4aedb}
+
+
+Up to 3 fundamental matrices are computed from a sample of 7 points. 
+
+
+
+Implements \hyperlink{classorsa_1_1OrsaModel_a4567e2e9a7d39e2bcbbc9af9e9d9ddc7}{orsa\+::\+Orsa\+Model}.
+
+\hypertarget{classorsa_1_1FundamentalModel_ac3870d76a0670fa5e07c1d72e39120ab}{}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}!Size\+Sample@{Size\+Sample}}
+\index{Size\+Sample@{Size\+Sample}!orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+\subsubsection[{Size\+Sample}]{\setlength{\rightskip}{0pt plus 5cm}int orsa\+::\+Fundamental\+Model\+::\+Size\+Sample (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classorsa_1_1FundamentalModel_ac3870d76a0670fa5e07c1d72e39120ab}
+
+
+7 points are required to compute a fundamental matrix. 
+
+
+
+Implements \hyperlink{classorsa_1_1OrsaModel_a3d2e0a09f6ddc02c3b9ee85a1ceb1ee7}{orsa\+::\+Orsa\+Model}.
+
+\hypertarget{classorsa_1_1FundamentalModel_a1b305ca23105777011dcf987bdde6998}{}\index{orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}!Unnormalize@{Unnormalize}}
+\index{Unnormalize@{Unnormalize}!orsa\+::\+Fundamental\+Model@{orsa\+::\+Fundamental\+Model}}
+\subsubsection[{Unnormalize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Fundamental\+Model\+::\+Unnormalize (
+\begin{DoxyParamCaption}
+\item[{{\bf Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classorsa_1_1FundamentalModel_a1b305ca23105777011dcf987bdde6998}
+
+
+Unnormalize a given model (from normalized to image space). 
+
+
+
+Implements \hyperlink{classorsa_1_1OrsaModel_aeadc8d2c929a7740e84ce17396c1cc28}{orsa\+::\+Orsa\+Model}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/\hyperlink{fundamental__model_8hpp}{fundamental\+\_\+model.\+hpp}\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/\hyperlink{fundamental__model_8cpp}{fundamental\+\_\+model.\+cpp}\end{DoxyCompactItemize}

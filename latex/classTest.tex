@@ -1,0 +1,115 @@
+\hypertarget{classTest}{}\section{Test Class Reference}
+\label{classTest}\index{Test@{Test}}
+
+
+{\ttfamily \#include $<$Test.\+h$>$}
+
+
+
+Collaboration diagram for Test\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTest_ad8ba311564adee8c7e172a0f7bd05e9f}{Test} (const \hyperlink{classSimpleString}{Simple\+String} \&test\+Name)
+\item 
+virtual \hyperlink{classTest_ac9dcc51f46141d9ed1e8206ca0011b8c}{$\sim$\+Test} ()
+\item 
+virtual \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classTest_aea30a1dd3a3020152db8a8bbb8e4e3f5}{run} (\hyperlink{classTestResult}{Test\+Result} \&result)=0
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classTest_aa0b9d21384c4f6befebfe26a0753a103}{set\+Next} (\hyperlink{classTest}{Test} $\ast$test)
+\item 
+\hyperlink{classTest}{Test} $\ast$ \hyperlink{classTest_a62a8bda79bdd9d5cf799b55f402ebc0f}{get\+Next} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classTest_a94cc0bdc66d2ded682043fdaf74ffed3}{check} (long expected, long actual, \hyperlink{classTestResult}{Test\+Result} \&result, const \hyperlink{classSimpleString}{Simple\+String} \&file\+Name, long line\+Number)
+\item 
+bool \hyperlink{classTest_a9a24e42445403d8e61ad11998c380f34}{check} (const \hyperlink{classSimpleString}{Simple\+String} \&expected, const \hyperlink{classSimpleString}{Simple\+String} \&actual, \hyperlink{classTestResult}{Test\+Result} \&result, const \hyperlink{classSimpleString}{Simple\+String} \&file\+Name, long line\+Number)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSimpleString}{Simple\+String} \hyperlink{classTest_afe3274b7324d08b652c9a86bc28a3baa}{name\+\_\+}
+\item 
+\hyperlink{classTest}{Test} $\ast$ \hyperlink{classTest_a363307d35aa0a0b2eeded111ba3d3542}{next\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTest_ad8ba311564adee8c7e172a0f7bd05e9f}{}\index{Test@{Test}!Test@{Test}}
+\index{Test@{Test}!Test@{Test}}
+\subsubsection[{Test}]{\setlength{\rightskip}{0pt plus 5cm}Test\+::\+Test (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simple\+String} \&}]{test\+Name}
+\end{DoxyParamCaption}
+)}\label{classTest_ad8ba311564adee8c7e172a0f7bd05e9f}
+\hypertarget{classTest_ac9dcc51f46141d9ed1e8206ca0011b8c}{}\index{Test@{Test}!````~Test@{$\sim$\+Test}}
+\index{````~Test@{$\sim$\+Test}!Test@{Test}}
+\subsubsection[{$\sim$\+Test}]{\setlength{\rightskip}{0pt plus 5cm}virtual Test\+::$\sim$\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classTest_ac9dcc51f46141d9ed1e8206ca0011b8c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTest_a94cc0bdc66d2ded682043fdaf74ffed3}{}\index{Test@{Test}!check@{check}}
+\index{check@{check}!Test@{Test}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}bool Test\+::check (
+\begin{DoxyParamCaption}
+\item[{long}]{expected, }
+\item[{long}]{actual, }
+\item[{{\bf Test\+Result} \&}]{result, }
+\item[{const {\bf Simple\+String} \&}]{file\+Name, }
+\item[{long}]{line\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classTest_a94cc0bdc66d2ded682043fdaf74ffed3}
+\hypertarget{classTest_a9a24e42445403d8e61ad11998c380f34}{}\index{Test@{Test}!check@{check}}
+\index{check@{check}!Test@{Test}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}bool Test\+::check (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simple\+String} \&}]{expected, }
+\item[{const {\bf Simple\+String} \&}]{actual, }
+\item[{{\bf Test\+Result} \&}]{result, }
+\item[{const {\bf Simple\+String} \&}]{file\+Name, }
+\item[{long}]{line\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classTest_a9a24e42445403d8e61ad11998c380f34}
+\hypertarget{classTest_a62a8bda79bdd9d5cf799b55f402ebc0f}{}\index{Test@{Test}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Test@{Test}}
+\subsubsection[{get\+Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Test} $\ast$ Test\+::get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classTest_a62a8bda79bdd9d5cf799b55f402ebc0f}
+\hypertarget{classTest_aea30a1dd3a3020152db8a8bbb8e4e3f5}{}\index{Test@{Test}!run@{run}}
+\index{run@{run}!Test@{Test}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Test\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Test\+Result} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classTest_aea30a1dd3a3020152db8a8bbb8e4e3f5}
+\hypertarget{classTest_aa0b9d21384c4f6befebfe26a0753a103}{}\index{Test@{Test}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!Test@{Test}}
+\subsubsection[{set\+Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Test\+::set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Test} $\ast$}]{test}
+\end{DoxyParamCaption}
+)}\label{classTest_aa0b9d21384c4f6befebfe26a0753a103}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classTest_afe3274b7324d08b652c9a86bc28a3baa}{}\index{Test@{Test}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!Test@{Test}}
+\subsubsection[{name\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Simple\+String} Test\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{classTest_afe3274b7324d08b652c9a86bc28a3baa}
+\hypertarget{classTest_a363307d35aa0a0b2eeded111ba3d3542}{}\index{Test@{Test}!next\+\_\+@{next\+\_\+}}
+\index{next\+\_\+@{next\+\_\+}!Test@{Test}}
+\subsubsection[{next\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Test}$\ast$ Test\+::next\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{classTest_a363307d35aa0a0b2eeded111ba3d3542}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/\+Cpp\+Unit\+Lite/\hyperlink{Test_8h}{Test.\+h}\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/\+Cpp\+Unit\+Lite/\hyperlink{Test_8cpp}{Test.\+cpp}\end{DoxyCompactItemize}

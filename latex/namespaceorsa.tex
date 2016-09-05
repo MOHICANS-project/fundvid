@@ -1,0 +1,207 @@
+\hypertarget{namespaceorsa}{}\section{orsa Namespace Reference}
+\label{namespaceorsa}\index{orsa@{orsa}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorsa_1_1FundamentalModel}{Fundamental\+Model}
+\begin{DoxyCompactList}\small\item\em Fundamental 7-\/point model, used for robust estimation. \end{DoxyCompactList}\item 
+class \hyperlink{classorsa_1_1OrsaModel}{Orsa\+Model}
+\begin{DoxyCompactList}\small\item\em Generic class for model estimation with O\+R\+S\+A algorithm. \end{DoxyCompactList}\item 
+struct \hyperlink{structorsa_1_1UnnormalizerI}{Unnormalizer\+I}
+\begin{DoxyCompactList}\small\item\em Use inverse for unnormalize. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a05e1c628ae168c7e05e52104275198ab}{Preconditioner\+From\+Points} (int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height, \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} $\ast$T)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a6b5299dc61d20ea4a832f8d5f5d05421}{Normalize\+Points} (const \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} \&points, \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} $\ast$normalized\+\_\+points, \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} $\ast$T, int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceorsa_af58082598412906fb626a2995edacb16}{Square} (T x)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a4f88c1cb34bb8688722c3e7d8ef41a8d}{Mean\+And\+Variance\+Along\+Rows} (const \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} \&A, vector$<$ double $>$ $\ast$mean\+\_\+pointer, vector$<$ double $>$ $\ast$variance\+\_\+pointer)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a5a65641df90c8a53ffc7687ae3c5a01b}{Preconditioner\+From\+Points} (const \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} \&points, \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} $\ast$T)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a87aaec1245eeedd272c37cd75c60788d}{Apply\+Transformation\+To\+Points} (const \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} \&points, const \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} \&T, \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} $\ast$transformed\+\_\+points)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a48cde20bdcad49a4e39730ccb995e6ec}{Normalize\+Points} (const \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} \&points, \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} $\ast$normalized\+\_\+points, \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{Mat} $\ast$T)
+\item 
+{\footnotesize template$<$typename Real $>$ }\\int \hyperlink{namespaceorsa_ab41ebe58722491aaa1434a268031f362}{Solve\+Cubic\+Polynomial} (Real a, Real \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}, Real c, Real x\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Find roots of the cubic polynomial \[ x^3 + a*x^2 + b*x + c = 0. \] The number of roots is returned. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Real $>$ }\\int \hyperlink{namespaceorsa_a50375d8484f681825ff22e6f5a65ca74}{Cubic\+Roots} (const Real coeffs\mbox{[}4\mbox{]}, Real roots\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Find real roots of cubic polynomial equation. \end{DoxyCompactList}\item 
+double \hyperlink{namespaceorsa_a108794b95a065355756c616b8e389614}{det3} (const \hyperlink{classorsa_1_1OrsaModel_a3e690ba72d88880cc9d7074350c09104}{Orsa\+Model\+::\+Vec} \&v1, const \hyperlink{classorsa_1_1OrsaModel_a3e690ba72d88880cc9d7074350c09104}{Orsa\+Model\+::\+Vec} \&v2, const \hyperlink{classorsa_1_1OrsaModel_a3e690ba72d88880cc9d7074350c09104}{Orsa\+Model\+::\+Vec} \&v3)
+\begin{DoxyCompactList}\small\item\em Determinant of 3x3 matrix expressed by its columns (v1 v2 v3). \end{DoxyCompactList}\item 
+std\+::pair$<$ double, double $>$ \hyperlink{namespaceorsa_a549d3d8f819944dabf30b57ed2f06460}{display\+\_\+stats} (const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&match, const std\+::vector$<$ int $>$ \&in, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ double $>$ \&F)
+\begin{DoxyCompactList}\small\item\em Display and return average/max error of inliers of fundamental matrix F. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceorsa_a64e49fabb585ae5ef2e5f9c6a40ac8d9}{orsa\+\_\+fundamental} (const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+matchings, int w1, int h1, int w2, int h2, double precision, int nb\+Iter, \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ double $>$ \&F, std\+::vector$<$ int $>$ \&vec\+\_\+inliers)
+\begin{DoxyCompactList}\small\item\em Estimate the fundamental matrix using O\+R\+S\+A method and refinement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{}\index{orsa@{orsa}!Mat@{Mat}}
+\index{Mat@{Mat}!orsa@{orsa}}
+\subsubsection[{Mat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf lib\+Numerics\+::matrix}$<$double$>$ {\bf orsa\+::\+Mat}}\label{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceorsa_a87aaec1245eeedd272c37cd75c60788d}{}\index{orsa@{orsa}!Apply\+Transformation\+To\+Points@{Apply\+Transformation\+To\+Points}}
+\index{Apply\+Transformation\+To\+Points@{Apply\+Transformation\+To\+Points}!orsa@{orsa}}
+\subsubsection[{Apply\+Transformation\+To\+Points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Apply\+Transformation\+To\+Points (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{points, }
+\item[{const {\bf Mat} \&}]{T, }
+\item[{{\bf Mat} $\ast$}]{transformed\+\_\+points}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a87aaec1245eeedd272c37cd75c60788d}
+\hypertarget{namespaceorsa_a50375d8484f681825ff22e6f5a65ca74}{}\index{orsa@{orsa}!Cubic\+Roots@{Cubic\+Roots}}
+\index{Cubic\+Roots@{Cubic\+Roots}!orsa@{orsa}}
+\subsubsection[{Cubic\+Roots}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Real $>$ int orsa\+::\+Cubic\+Roots (
+\begin{DoxyParamCaption}
+\item[{const Real}]{coeffs\mbox{[}4\mbox{]}, }
+\item[{Real}]{roots\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a50375d8484f681825ff22e6f5a65ca74}
+
+
+Find real roots of cubic polynomial equation. 
+
+\[ coeffs[3] x^3 + coeffs[2] x^2 + coeffs[1] x + coeffs[0] = 0. \] The coefficients are in ascending powers, i.\+e. coeffs\mbox{[}i\mbox{]}$\ast$x$^\wedge$i. Return the number of solutions (1 or 3). A triple root is reported only once but a double root is reported twice (so 3 solutions). \hypertarget{namespaceorsa_a108794b95a065355756c616b8e389614}{}\index{orsa@{orsa}!det3@{det3}}
+\index{det3@{det3}!orsa@{orsa}}
+\subsubsection[{det3}]{\setlength{\rightskip}{0pt plus 5cm}double orsa\+::det3 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Orsa\+Model\+::\+Vec} \&}]{v1, }
+\item[{const {\bf Orsa\+Model\+::\+Vec} \&}]{v2, }
+\item[{const {\bf Orsa\+Model\+::\+Vec} \&}]{v3}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespaceorsa_a108794b95a065355756c616b8e389614}
+
+
+Determinant of 3x3 matrix expressed by its columns (v1 v2 v3). 
+
+\hypertarget{namespaceorsa_a549d3d8f819944dabf30b57ed2f06460}{}\index{orsa@{orsa}!display\+\_\+stats@{display\+\_\+stats}}
+\index{display\+\_\+stats@{display\+\_\+stats}!orsa@{orsa}}
+\subsubsection[{display\+\_\+stats}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$double,double$>$ orsa\+::display\+\_\+stats (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{match, }
+\item[{const std\+::vector$<$ int $>$ \&}]{in, }
+\item[{const {\bf matrix}$<$ double $>$ \&}]{F}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a549d3d8f819944dabf30b57ed2f06460}
+
+
+Display and return average/max error of inliers of fundamental matrix F. 
+
+\hypertarget{namespaceorsa_a4f88c1cb34bb8688722c3e7d8ef41a8d}{}\index{orsa@{orsa}!Mean\+And\+Variance\+Along\+Rows@{Mean\+And\+Variance\+Along\+Rows}}
+\index{Mean\+And\+Variance\+Along\+Rows@{Mean\+And\+Variance\+Along\+Rows}!orsa@{orsa}}
+\subsubsection[{Mean\+And\+Variance\+Along\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Mean\+And\+Variance\+Along\+Rows (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A, }
+\item[{vector$<$ double $>$ $\ast$}]{mean\+\_\+pointer, }
+\item[{vector$<$ double $>$ $\ast$}]{variance\+\_\+pointer}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a4f88c1cb34bb8688722c3e7d8ef41a8d}
+\hypertarget{namespaceorsa_a6b5299dc61d20ea4a832f8d5f5d05421}{}\index{orsa@{orsa}!Normalize\+Points@{Normalize\+Points}}
+\index{Normalize\+Points@{Normalize\+Points}!orsa@{orsa}}
+\subsubsection[{Normalize\+Points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Normalize\+Points (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{points, }
+\item[{{\bf Mat} $\ast$}]{normalized\+\_\+points, }
+\item[{{\bf Mat} $\ast$}]{T, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a6b5299dc61d20ea4a832f8d5f5d05421}
+\hypertarget{namespaceorsa_a48cde20bdcad49a4e39730ccb995e6ec}{}\index{orsa@{orsa}!Normalize\+Points@{Normalize\+Points}}
+\index{Normalize\+Points@{Normalize\+Points}!orsa@{orsa}}
+\subsubsection[{Normalize\+Points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Normalize\+Points (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{points, }
+\item[{{\bf Mat} $\ast$}]{normalized\+\_\+points, }
+\item[{{\bf Mat} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a48cde20bdcad49a4e39730ccb995e6ec}
+\hypertarget{namespaceorsa_a64e49fabb585ae5ef2e5f9c6a40ac8d9}{}\index{orsa@{orsa}!orsa\+\_\+fundamental@{orsa\+\_\+fundamental}}
+\index{orsa\+\_\+fundamental@{orsa\+\_\+fundamental}!orsa@{orsa}}
+\subsubsection[{orsa\+\_\+fundamental}]{\setlength{\rightskip}{0pt plus 5cm}bool orsa\+::orsa\+\_\+fundamental (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+matchings, }
+\item[{int}]{w1, }
+\item[{int}]{h1, }
+\item[{int}]{w2, }
+\item[{int}]{h2, }
+\item[{double}]{precision, }
+\item[{int}]{nb\+Iter, }
+\item[{{\bf matrix}$<$ double $>$ \&}]{F, }
+\item[{std\+::vector$<$ int $>$ \&}]{vec\+\_\+inliers}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a64e49fabb585ae5ef2e5f9c6a40ac8d9}
+
+
+Estimate the fundamental matrix using O\+R\+S\+A method and refinement. 
+
+O\+R\+S\+A fundamental matrix estimation.
+
+If the mean error after refinement exceeds the max error of O\+R\+S\+A result, the refinement is not applied. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vec\+\_\+matchings} & List of correspondences. \\
+\hline
+\mbox{\tt in}  & {\em w1,h1} & Dimensions of left image. \\
+\hline
+\mbox{\tt in}  & {\em w2,h2} & Dimensions of right image. \\
+\hline
+\mbox{\tt in}  & {\em precision} & Maximum inlier/outlier threshold (in pixels). \\
+\hline
+\mbox{\tt in}  & {\em nb\+Iter} & Maximal number of iterations for R\+A\+N\+S\+A\+C algorithm. \\
+\hline
+\mbox{\tt out}  & {\em F} & Fundamental matrix between left and right image. \\
+\hline
+\mbox{\tt out}  & {\em vec\+\_\+inliers} & Index of inliers in {\itshape vec\+\_\+matchings}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The status of the estimation. If no meaningful (N\+F\+A$<$1) model is found, the {\itshape F} field is not filled and {\itshape vec\+\_\+inliers} is empty. 
+\end{DoxyReturn}
+\hypertarget{namespaceorsa_a05e1c628ae168c7e05e52104275198ab}{}\index{orsa@{orsa}!Preconditioner\+From\+Points@{Preconditioner\+From\+Points}}
+\index{Preconditioner\+From\+Points@{Preconditioner\+From\+Points}!orsa@{orsa}}
+\subsubsection[{Preconditioner\+From\+Points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Preconditioner\+From\+Points (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{{\bf Mat} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a05e1c628ae168c7e05e52104275198ab}
+\hypertarget{namespaceorsa_a5a65641df90c8a53ffc7687ae3c5a01b}{}\index{orsa@{orsa}!Preconditioner\+From\+Points@{Preconditioner\+From\+Points}}
+\index{Preconditioner\+From\+Points@{Preconditioner\+From\+Points}!orsa@{orsa}}
+\subsubsection[{Preconditioner\+From\+Points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} orsa\+::\+Preconditioner\+From\+Points (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{points, }
+\item[{{\bf Mat} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_a5a65641df90c8a53ffc7687ae3c5a01b}
+\hypertarget{namespaceorsa_ab41ebe58722491aaa1434a268031f362}{}\index{orsa@{orsa}!Solve\+Cubic\+Polynomial@{Solve\+Cubic\+Polynomial}}
+\index{Solve\+Cubic\+Polynomial@{Solve\+Cubic\+Polynomial}!orsa@{orsa}}
+\subsubsection[{Solve\+Cubic\+Polynomial}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Real $>$ int orsa\+::\+Solve\+Cubic\+Polynomial (
+\begin{DoxyParamCaption}
+\item[{Real}]{a, }
+\item[{Real}]{b, }
+\item[{Real}]{c, }
+\item[{Real}]{x\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{namespaceorsa_ab41ebe58722491aaa1434a268031f362}
+
+
+Find roots of the cubic polynomial \[ x^3 + a*x^2 + b*x + c = 0. \] The number of roots is returned. 
+
+\hypertarget{namespaceorsa_af58082598412906fb626a2995edacb16}{}\index{orsa@{orsa}!Square@{Square}}
+\index{Square@{Square}!orsa@{orsa}}
+\subsubsection[{Square}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T orsa\+::\+Square (
+\begin{DoxyParamCaption}
+\item[{T}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespaceorsa_af58082598412906fb626a2995edacb16}

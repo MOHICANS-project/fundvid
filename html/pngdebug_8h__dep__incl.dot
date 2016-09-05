@@ -1,0 +1,38 @@
+digraph "src/third_party/orsa-fundamental_1.0/src/third_party/png/pngdebug.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngdebug.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngpriv.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngpriv_8h.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/png.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$png_8c.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngerror.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngerror_8c.html"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngget.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngget_8c.html"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngmem.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngmem_8c.html"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngpread.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngpread_8c.html"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngread.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngread_8c.html"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngrio.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngrio_8c.html"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngrtran.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngrtran_8c.html"];
+  Node2 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngrutil.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngrutil_8c.html"];
+  Node2 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngset.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngset_8c.html"];
+  Node2 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngtrans.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngtrans_8c.html"];
+  Node2 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngwio.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngwio_8c.html"];
+  Node2 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngwrite.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngwrite_8c.html"];
+  Node2 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngwtran.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngwtran_8c.html"];
+  Node2 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="src/third_party/orsa\l-fundamental_1.0/src\l/third_party/png/pngwutil.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pngwutil_8c.html"];
+}

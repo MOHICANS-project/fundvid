@@ -1,0 +1,65 @@
+\hypertarget{lm__fundmat__optimizer_8cpp}{}\section{src/estimation/lm\+\_\+fundmat\+\_\+optimizer.cpp File Reference}
+\label{lm__fundmat__optimizer_8cpp}\index{src/estimation/lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{src/estimation/lm\+\_\+fundmat\+\_\+optimizer.\+cpp}}
+{\ttfamily \#include \char`\"{}lm\+\_\+fundmat\+\_\+optimizer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}levmar.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/exceptions/optimization\+\_\+exception.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+Include dependency graph for lm\+\_\+fundmat\+\_\+optimizer.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structFdata}{Fdata}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lm__fundmat__optimizer_8cpp_aa7866fa5e4e0ee9b034e9dab6599a9cc}{S\+Q\+R}(x)~((x)$\ast$(x))
+\item 
+\#define \hyperlink{lm__fundmat__optimizer_8cpp_a9b649f4d878e64a80b4cd2cad45f43b3}{F\+A\+B\+S}(x)~(((x)$>$=0)? (x) \+: -\/(x))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lm__fundmat__optimizer_8cpp_aac673e9a6bc9d6fc434ba4371c7097f4}{parametrize7} (const Eigen\+::\+Matrix3d \&F, double $\ast$p, int $\ast$index\+\_\+dependent)
+\item 
+void \hyperlink{lm__fundmat__optimizer_8cpp_a91becf9ff1e9c30f0b36e4e790e8c506}{deparametrize7} (double $\ast$p, const int $\ast$index\+\_\+dependent, Eigen\+::\+Matrix3d \&F)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{lm__fundmat__optimizer_8cpp_a9b649f4d878e64a80b4cd2cad45f43b3}{}\index{lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}!F\+A\+B\+S@{F\+A\+B\+S}}
+\index{F\+A\+B\+S@{F\+A\+B\+S}!lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}}
+\subsubsection[{F\+A\+B\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+B\+S(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(((x)$>$=0)? (x) \+: -\/(x))}\label{lm__fundmat__optimizer_8cpp_a9b649f4d878e64a80b4cd2cad45f43b3}
+\hypertarget{lm__fundmat__optimizer_8cpp_aa7866fa5e4e0ee9b034e9dab6599a9cc}{}\index{lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}!S\+Q\+R@{S\+Q\+R}}
+\index{S\+Q\+R@{S\+Q\+R}!lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}}
+\subsubsection[{S\+Q\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+Q\+R(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x)$\ast$(x))}\label{lm__fundmat__optimizer_8cpp_aa7866fa5e4e0ee9b034e9dab6599a9cc}
+
+
+\subsection{Function Documentation}
+\hypertarget{lm__fundmat__optimizer_8cpp_a91becf9ff1e9c30f0b36e4e790e8c506}{}\index{lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}!deparametrize7@{deparametrize7}}
+\index{deparametrize7@{deparametrize7}!lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}}
+\subsubsection[{deparametrize7}]{\setlength{\rightskip}{0pt plus 5cm}void deparametrize7 (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{p, }
+\item[{const int $\ast$}]{index\+\_\+dependent, }
+\item[{Eigen\+::\+Matrix3d \&}]{F}
+\end{DoxyParamCaption}
+)}\label{lm__fundmat__optimizer_8cpp_a91becf9ff1e9c30f0b36e4e790e8c506}
+\hypertarget{lm__fundmat__optimizer_8cpp_aac673e9a6bc9d6fc434ba4371c7097f4}{}\index{lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}!parametrize7@{parametrize7}}
+\index{parametrize7@{parametrize7}!lm\+\_\+fundmat\+\_\+optimizer.\+cpp@{lm\+\_\+fundmat\+\_\+optimizer.\+cpp}}
+\subsubsection[{parametrize7}]{\setlength{\rightskip}{0pt plus 5cm}void parametrize7 (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix3d \&}]{F, }
+\item[{double $\ast$}]{p, }
+\item[{int $\ast$}]{index\+\_\+dependent}
+\end{DoxyParamCaption}
+)}\label{lm__fundmat__optimizer_8cpp_aac673e9a6bc9d6fc434ba4371c7097f4}

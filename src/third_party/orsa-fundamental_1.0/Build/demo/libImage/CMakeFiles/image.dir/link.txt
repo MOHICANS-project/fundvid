@@ -1,0 +1,2 @@
+/usr/bin/ar cr libimage.a  CMakeFiles/image.dir/image_io.cpp.o
+/usr/bin/ranlib libimage.a

@@ -1,0 +1,32 @@
+digraph "png_image_write_control"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="png_image_write_control",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" image" ,fontname="Helvetica"];
+  Node2 [label="png_image",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpng__image.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" opaque" ,fontname="Helvetica"];
+  Node3 [label="png_control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpng__control.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" info_ptr" ,fontname="Helvetica"];
+  Node4 [label="png_info_def",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpng__info__def.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" palette" ,fontname="Helvetica"];
+  Node5 [label="png_color_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpng__color__struct.html"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" png_ptr" ,fontname="Helvetica"];
+  Node6 [label="png_struct_def",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpng__struct__def.html"];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" palette" ,fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" zstream" ,fontname="Helvetica"];
+  Node7 [label="z_stream_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structz__stream__s.html"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" state" ,fontname="Helvetica"];
+  Node8 [label="internal_state",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structinternal__state.html"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gzhead" ,fontname="Helvetica"];
+  Node9 [label="gz_header_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgz__header__s.html"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bl_desc\nl_desc\nd_desc" ,fontname="Helvetica"];
+  Node10 [label="tree_desc_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structtree__desc__s.html"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" stat_desc" ,fontname="Helvetica"];
+  Node11 [label="static_tree_desc_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstatic__tree__desc__s.html"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" static_tree" ,fontname="Helvetica"];
+  Node12 [label="ct_data_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structct__data__s.html"];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dyn_tree" ,fontname="Helvetica"];
+  Node7 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" strm" ,fontname="Helvetica"];
+  Node12 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bl_tree\ndyn_ltree\ndyn_dtree" ,fontname="Helvetica"];
+}

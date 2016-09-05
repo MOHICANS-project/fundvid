@@ -1,0 +1,180 @@
+\hypertarget{classLWImage}{}\section{L\+W\+Image$<$ T $>$ Class Template Reference}
+\label{classLWImage}\index{L\+W\+Image$<$ T $>$@{L\+W\+Image$<$ T $>$}}
+
+
+A lightweight image container around an array.  
+
+
+
+
+{\ttfamily \#include $<$L\+W\+Image.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLWImage_acc5cb4d5cb85504d6b40c68dfdd3bec5}{L\+W\+Image} ()
+\item 
+\hyperlink{classLWImage_a17e360b58f83aa10181b0e6500cc96c3}{L\+W\+Image} (T $\ast$i\+\_\+data, int i\+\_\+w, int i\+\_\+h, int i\+\_\+comps=1)
+\item 
+\hyperlink{classLWImage_a31d0a5b47939932579579e70eef89d3f}{$\sim$\+L\+W\+Image} ()
+\item 
+bool \hyperlink{classLWImage_a38114f083eb9ee8e0c0ddf13f5486275}{valid} (int x, int y) const 
+\item 
+int \hyperlink{classLWImage_a58eaac30f7f995fc1f2a09d7356a3563}{size\+Buffer} () const 
+\item 
+int \hyperlink{classLWImage_a6ec118ecc5d0b3a2d9885e209d57353c}{step} () const 
+\item 
+int \hyperlink{classLWImage_af7b6521358c87f120dd3704701e17980}{step\+Comp} () const 
+\item 
+T $\ast$ \hyperlink{classLWImage_aad51f572a29b84e286df400fc4cc8c12}{pixel} (int x, int y)
+\item 
+const T $\ast$ \hyperlink{classLWImage_ad7369bc1432ca019ed710878cc99c3cf}{pixel} (int x, int y) const 
+\item 
+const T $\ast$ \hyperlink{classLWImage_accb41f1e71059c84267eb88f010c5469}{pixel\+\_\+ext} (int x, int y) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classLWImage_a97a679b4f4133084fc8afbaa029c3fef}{data}
+\begin{DoxyCompactList}\small\item\em Array of pixels. \end{DoxyCompactList}\item 
+int \hyperlink{classLWImage_a5d5ffb936fcfa5c1459430af6f762baa}{w}
+\begin{DoxyCompactList}\small\item\em Width of image. \end{DoxyCompactList}\item 
+int \hyperlink{classLWImage_a2b5a9db633a94baec577a6db13a96240}{h}
+\begin{DoxyCompactList}\small\item\em Height of image. \end{DoxyCompactList}\item 
+int \hyperlink{classLWImage_afe32b723621c8269897d9a58255bfa86}{comps}
+\begin{DoxyCompactList}\small\item\em Components per pixel. \end{DoxyCompactList}\item 
+bool \hyperlink{classLWImage_ae63104e4602e8801d97407207103728c}{planar}
+\begin{DoxyCompactList}\small\item\em Are components separated (true) or contiguous (false) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class L\+W\+Image$<$ T $>$}
+
+A lightweight image container around an array. 
+
+It is not responsible for allocation/free of the array. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classLWImage_acc5cb4d5cb85504d6b40c68dfdd3bec5}{}\index{L\+W\+Image@{L\+W\+Image}!L\+W\+Image@{L\+W\+Image}}
+\index{L\+W\+Image@{L\+W\+Image}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{L\+W\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf L\+W\+Image}$<$ T $>$\+::{\bf L\+W\+Image} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classLWImage_acc5cb4d5cb85504d6b40c68dfdd3bec5}
+\hypertarget{classLWImage_a17e360b58f83aa10181b0e6500cc96c3}{}\index{L\+W\+Image@{L\+W\+Image}!L\+W\+Image@{L\+W\+Image}}
+\index{L\+W\+Image@{L\+W\+Image}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{L\+W\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf L\+W\+Image}$<$ T $>$\+::{\bf L\+W\+Image} (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{i\+\_\+data, }
+\item[{int}]{i\+\_\+w, }
+\item[{int}]{i\+\_\+h, }
+\item[{int}]{i\+\_\+comps = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{classLWImage_a17e360b58f83aa10181b0e6500cc96c3}
+\hypertarget{classLWImage_a31d0a5b47939932579579e70eef89d3f}{}\index{L\+W\+Image@{L\+W\+Image}!````~L\+W\+Image@{$\sim$\+L\+W\+Image}}
+\index{````~L\+W\+Image@{$\sim$\+L\+W\+Image}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{$\sim$\+L\+W\+Image}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf L\+W\+Image}$<$ T $>$\+::$\sim${\bf L\+W\+Image} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classLWImage_a31d0a5b47939932579579e70eef89d3f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classLWImage_aad51f572a29b84e286df400fc4cc8c12}{}\index{L\+W\+Image@{L\+W\+Image}!pixel@{pixel}}
+\index{pixel@{pixel}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{pixel}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T$\ast$ {\bf L\+W\+Image}$<$ T $>$\+::pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classLWImage_aad51f572a29b84e286df400fc4cc8c12}
+\hypertarget{classLWImage_ad7369bc1432ca019ed710878cc99c3cf}{}\index{L\+W\+Image@{L\+W\+Image}!pixel@{pixel}}
+\index{pixel@{pixel}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{pixel}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const T$\ast$ {\bf L\+W\+Image}$<$ T $>$\+::pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+) const}\label{classLWImage_ad7369bc1432ca019ed710878cc99c3cf}
+\hypertarget{classLWImage_accb41f1e71059c84267eb88f010c5469}{}\index{L\+W\+Image@{L\+W\+Image}!pixel\+\_\+ext@{pixel\+\_\+ext}}
+\index{pixel\+\_\+ext@{pixel\+\_\+ext}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{pixel\+\_\+ext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const T$\ast$ {\bf L\+W\+Image}$<$ T $>$\+::pixel\+\_\+ext (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+) const}\label{classLWImage_accb41f1e71059c84267eb88f010c5469}
+\hypertarget{classLWImage_a58eaac30f7f995fc1f2a09d7356a3563}{}\index{L\+W\+Image@{L\+W\+Image}!size\+Buffer@{size\+Buffer}}
+\index{size\+Buffer@{size\+Buffer}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{size\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf L\+W\+Image}$<$ T $>$\+::size\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classLWImage_a58eaac30f7f995fc1f2a09d7356a3563}
+\hypertarget{classLWImage_a6ec118ecc5d0b3a2d9885e209d57353c}{}\index{L\+W\+Image@{L\+W\+Image}!step@{step}}
+\index{step@{step}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf L\+W\+Image}$<$ T $>$\+::step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classLWImage_a6ec118ecc5d0b3a2d9885e209d57353c}
+\hypertarget{classLWImage_af7b6521358c87f120dd3704701e17980}{}\index{L\+W\+Image@{L\+W\+Image}!step\+Comp@{step\+Comp}}
+\index{step\+Comp@{step\+Comp}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{step\+Comp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf L\+W\+Image}$<$ T $>$\+::step\+Comp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classLWImage_af7b6521358c87f120dd3704701e17980}
+\hypertarget{classLWImage_a38114f083eb9ee8e0c0ddf13f5486275}{}\index{L\+W\+Image@{L\+W\+Image}!valid@{valid}}
+\index{valid@{valid}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf L\+W\+Image}$<$ T $>$\+::valid (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+) const}\label{classLWImage_a38114f083eb9ee8e0c0ddf13f5486275}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classLWImage_afe32b723621c8269897d9a58255bfa86}{}\index{L\+W\+Image@{L\+W\+Image}!comps@{comps}}
+\index{comps@{comps}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{comps}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf L\+W\+Image}$<$ T $>$\+::comps}\label{classLWImage_afe32b723621c8269897d9a58255bfa86}
+
+
+Components per pixel. 
+
+\hypertarget{classLWImage_a97a679b4f4133084fc8afbaa029c3fef}{}\index{L\+W\+Image@{L\+W\+Image}!data@{data}}
+\index{data@{data}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T$\ast$ {\bf L\+W\+Image}$<$ T $>$\+::data}\label{classLWImage_a97a679b4f4133084fc8afbaa029c3fef}
+
+
+Array of pixels. 
+
+\hypertarget{classLWImage_a2b5a9db633a94baec577a6db13a96240}{}\index{L\+W\+Image@{L\+W\+Image}!h@{h}}
+\index{h@{h}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf L\+W\+Image}$<$ T $>$\+::h}\label{classLWImage_a2b5a9db633a94baec577a6db13a96240}
+
+
+Height of image. 
+
+\hypertarget{classLWImage_ae63104e4602e8801d97407207103728c}{}\index{L\+W\+Image@{L\+W\+Image}!planar@{planar}}
+\index{planar@{planar}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{planar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf L\+W\+Image}$<$ T $>$\+::planar}\label{classLWImage_ae63104e4602e8801d97407207103728c}
+
+
+Are components separated (true) or contiguous (false) 
+
+\hypertarget{classLWImage_a5d5ffb936fcfa5c1459430af6f762baa}{}\index{L\+W\+Image@{L\+W\+Image}!w@{w}}
+\index{w@{w}!L\+W\+Image@{L\+W\+Image}}
+\subsubsection[{w}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf L\+W\+Image}$<$ T $>$\+::w}\label{classLWImage_a5d5ffb936fcfa5c1459430af6f762baa}
+
+
+Width of image. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+L\+W\+Image/\hyperlink{LWImage_8h}{L\+W\+Image.\+h}\end{DoxyCompactItemize}

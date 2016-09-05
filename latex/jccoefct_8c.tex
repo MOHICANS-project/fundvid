@@ -1,0 +1,103 @@
+\hypertarget{jccoefct_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jccoefct.c File Reference}
+\label{jccoefct_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jccoefct.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jccoefct.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jccoefct.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__coef__controller}{my\+\_\+coef\+\_\+controller}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jccoefct_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\item 
+\#define \hyperlink{jccoefct_8c_a7f63e02063e8b410fbaf0b1d0a408cfa}{F\+U\+L\+L\+\_\+\+C\+O\+E\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__coef__controller}{my\+\_\+coef\+\_\+controller} $\ast$ \hyperlink{jccoefct_8c_a5d04f73726165ed3ba748a4065eec2e8}{my\+\_\+coef\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jccoefct_8c_a1a64d09a8eaa504dd788c52dfb3cf6d6}{M\+E\+T\+H\+O\+D\+D\+E\+F} (\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean})
+\item 
+\hyperlink{jccoefct_8c_a20406feb4d5cefd170401ea1987f0e83}{start\+\_\+pass\+\_\+coef} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpegint_8h_a1f0803342372ac62b6903c399399c874}{J\+\_\+\+B\+U\+F\+\_\+\+M\+O\+D\+E} pass\+\_\+mode)
+\item 
+\hyperlink{jccoefct_8c_a1b0b1f4c0a7f4ce97c00607f23977d6c}{compress\+\_\+data} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf)
+\item 
+\hyperlink{jccoefct_8c_a19ab982cec31e4aa8f31ee0d809f1fd1}{compress\+\_\+first\+\_\+pass} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf)
+\item 
+\hyperlink{jccoefct_8c_afeb2983cdfa6bbf70ad8e8c2242a6dd1}{compress\+\_\+output} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf)
+\item 
+\hyperlink{jccoefct_8c_a18e5ebb71aaee4d1cc8cbf31b1e4f728}{jinit\+\_\+c\+\_\+coef\+\_\+controller} (\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr} cinfo, \hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{jpegint_8h_a9f676e1b53dd5c4980de805fdd0bc853}{need\+\_\+full\+\_\+buffer})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jccoefct_8c_a7f63e02063e8b410fbaf0b1d0a408cfa}{}\index{jccoefct.\+c@{jccoefct.\+c}!F\+U\+L\+L\+\_\+\+C\+O\+E\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D@{F\+U\+L\+L\+\_\+\+C\+O\+E\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}}
+\index{F\+U\+L\+L\+\_\+\+C\+O\+E\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D@{F\+U\+L\+L\+\_\+\+C\+O\+E\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{F\+U\+L\+L\+\_\+\+C\+O\+E\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+U\+L\+L\+\_\+\+C\+O\+E\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}\label{jccoefct_8c_a7f63e02063e8b410fbaf0b1d0a408cfa}
+\hypertarget{jccoefct_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jccoefct.\+c@{jccoefct.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jccoefct_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jccoefct_8c_a5d04f73726165ed3ba748a4065eec2e8}{}\index{jccoefct.\+c@{jccoefct.\+c}!my\+\_\+coef\+\_\+ptr@{my\+\_\+coef\+\_\+ptr}}
+\index{my\+\_\+coef\+\_\+ptr@{my\+\_\+coef\+\_\+ptr}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{my\+\_\+coef\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+coef\+\_\+controller}$\ast$ {\bf my\+\_\+coef\+\_\+ptr}}\label{jccoefct_8c_a5d04f73726165ed3ba748a4065eec2e8}
+
+
+\subsection{Function Documentation}
+\hypertarget{jccoefct_8c_a1b0b1f4c0a7f4ce97c00607f23977d6c}{}\index{jccoefct.\+c@{jccoefct.\+c}!compress\+\_\+data@{compress\+\_\+data}}
+\index{compress\+\_\+data@{compress\+\_\+data}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{compress\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}compress\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf}
+\end{DoxyParamCaption}
+)}\label{jccoefct_8c_a1b0b1f4c0a7f4ce97c00607f23977d6c}
+\hypertarget{jccoefct_8c_a19ab982cec31e4aa8f31ee0d809f1fd1}{}\index{jccoefct.\+c@{jccoefct.\+c}!compress\+\_\+first\+\_\+pass@{compress\+\_\+first\+\_\+pass}}
+\index{compress\+\_\+first\+\_\+pass@{compress\+\_\+first\+\_\+pass}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{compress\+\_\+first\+\_\+pass}]{\setlength{\rightskip}{0pt plus 5cm}compress\+\_\+first\+\_\+pass (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf}
+\end{DoxyParamCaption}
+)}\label{jccoefct_8c_a19ab982cec31e4aa8f31ee0d809f1fd1}
+\hypertarget{jccoefct_8c_afeb2983cdfa6bbf70ad8e8c2242a6dd1}{}\index{jccoefct.\+c@{jccoefct.\+c}!compress\+\_\+output@{compress\+\_\+output}}
+\index{compress\+\_\+output@{compress\+\_\+output}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{compress\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}compress\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{input\+\_\+buf}
+\end{DoxyParamCaption}
+)}\label{jccoefct_8c_afeb2983cdfa6bbf70ad8e8c2242a6dd1}
+\hypertarget{jccoefct_8c_a18e5ebb71aaee4d1cc8cbf31b1e4f728}{}\index{jccoefct.\+c@{jccoefct.\+c}!jinit\+\_\+c\+\_\+coef\+\_\+controller@{jinit\+\_\+c\+\_\+coef\+\_\+controller}}
+\index{jinit\+\_\+c\+\_\+coef\+\_\+controller@{jinit\+\_\+c\+\_\+coef\+\_\+controller}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{jinit\+\_\+c\+\_\+coef\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}jinit\+\_\+c\+\_\+coef\+\_\+controller (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf boolean}}]{need\+\_\+full\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{jccoefct_8c_a18e5ebb71aaee4d1cc8cbf31b1e4f728}
+\hypertarget{jccoefct_8c_a1a64d09a8eaa504dd788c52dfb3cf6d6}{}\index{jccoefct.\+c@{jccoefct.\+c}!M\+E\+T\+H\+O\+D\+D\+E\+F@{M\+E\+T\+H\+O\+D\+D\+E\+F}}
+\index{M\+E\+T\+H\+O\+D\+D\+E\+F@{M\+E\+T\+H\+O\+D\+D\+E\+F}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{M\+E\+T\+H\+O\+D\+D\+E\+F}]{\setlength{\rightskip}{0pt plus 5cm}M\+E\+T\+H\+O\+D\+D\+E\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{}
+\end{DoxyParamCaption}
+)}\label{jccoefct_8c_a1a64d09a8eaa504dd788c52dfb3cf6d6}
+\hypertarget{jccoefct_8c_a20406feb4d5cefd170401ea1987f0e83}{}\index{jccoefct.\+c@{jccoefct.\+c}!start\+\_\+pass\+\_\+coef@{start\+\_\+pass\+\_\+coef}}
+\index{start\+\_\+pass\+\_\+coef@{start\+\_\+pass\+\_\+coef}!jccoefct.\+c@{jccoefct.\+c}}
+\subsubsection[{start\+\_\+pass\+\_\+coef}]{\setlength{\rightskip}{0pt plus 5cm}start\+\_\+pass\+\_\+coef (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+compress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+\_\+\+B\+U\+F\+\_\+\+M\+O\+D\+E}}]{pass\+\_\+mode}
+\end{DoxyParamCaption}
+)}\label{jccoefct_8c_a20406feb4d5cefd170401ea1987f0e83}

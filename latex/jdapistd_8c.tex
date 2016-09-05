@@ -1,0 +1,82 @@
+\hypertarget{jdapistd_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jdapistd.c File Reference}
+\label{jdapistd_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdapistd.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdapistd.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jdapistd.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jdapistd_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jdapistd_8c_a70c0069d9118c85dbd3c8b287afd474c}{L\+O\+C\+A\+L} (\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean})
+\item 
+\hyperlink{jdapistd_8c_a55c149229e499a5e3a4bf1af0c573d96}{output\+\_\+pass\+\_\+setup} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdapistd_8c_a12e1b94aca911f352de04f175230df95}{jpeg\+\_\+read\+\_\+scanlines} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jpeglib_8h_a2b054ef2df86f637e9837e5af7280734}{scanlines}, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{jpeglib_8h_af2ff114e074584eef283d186edb05e30}{max\+\_\+lines})
+\item 
+\hyperlink{jdapistd_8c_a85072eb9c99797d0e1e1a1111c76dc82}{jpeg\+\_\+read\+\_\+raw\+\_\+data} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} \hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} \hyperlink{jpeglib_8h_af2ff114e074584eef283d186edb05e30}{max\+\_\+lines})
+\item 
+\hyperlink{jdapistd_8c_a8b8a547a3f32480bc23f50ffbd0e6623}{jpeg\+\_\+start\+\_\+output} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, int \hyperlink{jpeglib_8h_aa66f83d802d29a53bc58f203272f2a74}{scan\+\_\+number})
+\item 
+\hyperlink{jdapistd_8c_a789889dfe980070ebf57103ab0b836f4}{jpeg\+\_\+finish\+\_\+output} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jdapistd_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jdapistd.\+c@{jdapistd.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jdapistd.\+c@{jdapistd.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jdapistd_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Function Documentation}
+\hypertarget{jdapistd_8c_a789889dfe980070ebf57103ab0b836f4}{}\index{jdapistd.\+c@{jdapistd.\+c}!jpeg\+\_\+finish\+\_\+output@{jpeg\+\_\+finish\+\_\+output}}
+\index{jpeg\+\_\+finish\+\_\+output@{jpeg\+\_\+finish\+\_\+output}!jdapistd.\+c@{jdapistd.\+c}}
+\subsubsection[{jpeg\+\_\+finish\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+finish\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapistd_8c_a789889dfe980070ebf57103ab0b836f4}
+\hypertarget{jdapistd_8c_a85072eb9c99797d0e1e1a1111c76dc82}{}\index{jdapistd.\+c@{jdapistd.\+c}!jpeg\+\_\+read\+\_\+raw\+\_\+data@{jpeg\+\_\+read\+\_\+raw\+\_\+data}}
+\index{jpeg\+\_\+read\+\_\+raw\+\_\+data@{jpeg\+\_\+read\+\_\+raw\+\_\+data}!jdapistd.\+c@{jdapistd.\+c}}
+\subsubsection[{jpeg\+\_\+read\+\_\+raw\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+read\+\_\+raw\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E}}]{data, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{max\+\_\+lines}
+\end{DoxyParamCaption}
+)}\label{jdapistd_8c_a85072eb9c99797d0e1e1a1111c76dc82}
+\hypertarget{jdapistd_8c_a12e1b94aca911f352de04f175230df95}{}\index{jdapistd.\+c@{jdapistd.\+c}!jpeg\+\_\+read\+\_\+scanlines@{jpeg\+\_\+read\+\_\+scanlines}}
+\index{jpeg\+\_\+read\+\_\+scanlines@{jpeg\+\_\+read\+\_\+scanlines}!jdapistd.\+c@{jdapistd.\+c}}
+\subsubsection[{jpeg\+\_\+read\+\_\+scanlines}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+read\+\_\+scanlines (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{{\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y}}]{scanlines, }
+\item[{{\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N}}]{max\+\_\+lines}
+\end{DoxyParamCaption}
+)}\label{jdapistd_8c_a12e1b94aca911f352de04f175230df95}
+\hypertarget{jdapistd_8c_a8b8a547a3f32480bc23f50ffbd0e6623}{}\index{jdapistd.\+c@{jdapistd.\+c}!jpeg\+\_\+start\+\_\+output@{jpeg\+\_\+start\+\_\+output}}
+\index{jpeg\+\_\+start\+\_\+output@{jpeg\+\_\+start\+\_\+output}!jdapistd.\+c@{jdapistd.\+c}}
+\subsubsection[{jpeg\+\_\+start\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+start\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{int}]{scan\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{jdapistd_8c_a8b8a547a3f32480bc23f50ffbd0e6623}
+\hypertarget{jdapistd_8c_a70c0069d9118c85dbd3c8b287afd474c}{}\index{jdapistd.\+c@{jdapistd.\+c}!L\+O\+C\+A\+L@{L\+O\+C\+A\+L}}
+\index{L\+O\+C\+A\+L@{L\+O\+C\+A\+L}!jdapistd.\+c@{jdapistd.\+c}}
+\subsubsection[{L\+O\+C\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+C\+A\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{}
+\end{DoxyParamCaption}
+)}\label{jdapistd_8c_a70c0069d9118c85dbd3c8b287afd474c}
+\hypertarget{jdapistd_8c_a55c149229e499a5e3a4bf1af0c573d96}{}\index{jdapistd.\+c@{jdapistd.\+c}!output\+\_\+pass\+\_\+setup@{output\+\_\+pass\+\_\+setup}}
+\index{output\+\_\+pass\+\_\+setup@{output\+\_\+pass\+\_\+setup}!jdapistd.\+c@{jdapistd.\+c}}
+\subsubsection[{output\+\_\+pass\+\_\+setup}]{\setlength{\rightskip}{0pt plus 5cm}output\+\_\+pass\+\_\+setup (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdapistd_8c_a55c149229e499a5e3a4bf1af0c573d96}

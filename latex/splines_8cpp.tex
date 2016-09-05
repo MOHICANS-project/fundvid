@@ -1,0 +1,116 @@
+\hypertarget{splines_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/extras/sift/splines.cpp File Reference}
+\label{splines_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/splines.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/splines.\+cpp}}
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/splines.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/library.\+h\char`\"{}}\\*
+Include dependency graph for splines.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{splines_8cpp_a2c9ca1c1c8c873b62ce9603d4cde91c9}{initcausal} (double $\ast$c, int n, double z)
+\item 
+double \hyperlink{splines_8cpp_aa6c12c7bd8658f0481e7871aa1c4d983}{initanticausal} (double $\ast$c, int n, double z)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{splines_8cpp_a824107dec836a82627fd93fab1a0ebc2}{invspline1\+D} (double $\ast$c, int size, double $\ast$z, int npoles)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{splines_8cpp_a0e2179ca1b067b11ac9de3edbfef39e9}{finvspline} (float $\ast$in, int order, float $\ast$out, int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{splines_8cpp_acc1d7c2028239b4e4ecb4563aab1014e}{keys} (float $\ast$c, float t, float a)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{splines_8cpp_a393552a7b9468822624f34fa3e4cf39d}{spline3} (float $\ast$c, float t)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{splines_8cpp_a1f8523120fa58f352f85c8b241ac8a08}{init\+\_\+splinen} (float $\ast$a, int n)
+\item 
+float \hyperlink{splines_8cpp_af1d43b4cb9ff05575d1c66db62e35bb7}{ipow} (float x, int n)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{splines_8cpp_a5862575f381a67fd20c23cbe1019fad1}{splinen} (float $\ast$c, float t, float $\ast$a, int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{splines_8cpp_a0e2179ca1b067b11ac9de3edbfef39e9}{}\index{splines.\+cpp@{splines.\+cpp}!finvspline@{finvspline}}
+\index{finvspline@{finvspline}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{finvspline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} finvspline (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{in, }
+\item[{int}]{order, }
+\item[{float $\ast$}]{out, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_a0e2179ca1b067b11ac9de3edbfef39e9}
+\hypertarget{splines_8cpp_a1f8523120fa58f352f85c8b241ac8a08}{}\index{splines.\+cpp@{splines.\+cpp}!init\+\_\+splinen@{init\+\_\+splinen}}
+\index{init\+\_\+splinen@{init\+\_\+splinen}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{init\+\_\+splinen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} init\+\_\+splinen (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{a, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_a1f8523120fa58f352f85c8b241ac8a08}
+\hypertarget{splines_8cpp_aa6c12c7bd8658f0481e7871aa1c4d983}{}\index{splines.\+cpp@{splines.\+cpp}!initanticausal@{initanticausal}}
+\index{initanticausal@{initanticausal}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{initanticausal}]{\setlength{\rightskip}{0pt plus 5cm}double initanticausal (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{c, }
+\item[{int}]{n, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_aa6c12c7bd8658f0481e7871aa1c4d983}
+\hypertarget{splines_8cpp_a2c9ca1c1c8c873b62ce9603d4cde91c9}{}\index{splines.\+cpp@{splines.\+cpp}!initcausal@{initcausal}}
+\index{initcausal@{initcausal}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{initcausal}]{\setlength{\rightskip}{0pt plus 5cm}double initcausal (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{c, }
+\item[{int}]{n, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_a2c9ca1c1c8c873b62ce9603d4cde91c9}
+\hypertarget{splines_8cpp_a824107dec836a82627fd93fab1a0ebc2}{}\index{splines.\+cpp@{splines.\+cpp}!invspline1\+D@{invspline1\+D}}
+\index{invspline1\+D@{invspline1\+D}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{invspline1\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} invspline1\+D (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{c, }
+\item[{int}]{size, }
+\item[{double $\ast$}]{z, }
+\item[{int}]{npoles}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_a824107dec836a82627fd93fab1a0ebc2}
+\hypertarget{splines_8cpp_af1d43b4cb9ff05575d1c66db62e35bb7}{}\index{splines.\+cpp@{splines.\+cpp}!ipow@{ipow}}
+\index{ipow@{ipow}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{ipow}]{\setlength{\rightskip}{0pt plus 5cm}float ipow (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_af1d43b4cb9ff05575d1c66db62e35bb7}
+\hypertarget{splines_8cpp_acc1d7c2028239b4e4ecb4563aab1014e}{}\index{splines.\+cpp@{splines.\+cpp}!keys@{keys}}
+\index{keys@{keys}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} keys (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{c, }
+\item[{float}]{t, }
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_acc1d7c2028239b4e4ecb4563aab1014e}
+\hypertarget{splines_8cpp_a393552a7b9468822624f34fa3e4cf39d}{}\index{splines.\+cpp@{splines.\+cpp}!spline3@{spline3}}
+\index{spline3@{spline3}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{spline3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} spline3 (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{c, }
+\item[{float}]{t}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_a393552a7b9468822624f34fa3e4cf39d}
+\hypertarget{splines_8cpp_a5862575f381a67fd20c23cbe1019fad1}{}\index{splines.\+cpp@{splines.\+cpp}!splinen@{splinen}}
+\index{splinen@{splinen}!splines.\+cpp@{splines.\+cpp}}
+\subsubsection[{splinen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} splinen (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{c, }
+\item[{float}]{t, }
+\item[{float $\ast$}]{a, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{splines_8cpp_a5862575f381a67fd20c23cbe1019fad1}

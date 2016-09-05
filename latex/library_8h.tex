@@ -1,0 +1,99 @@
+\hypertarget{library_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/extras/sift/library.h File Reference}
+\label{library_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/library.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/library.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8h_af693e0f5e3a3c49c1e62b9eda038610c}{copy} (float $\ast$u, float $\ast$v, int size)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8h_a00d809e4f90a85e5d8a3eccea0713d00}{combine} (float $\ast$u, float a, float $\ast$v, float \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}, float $\ast$w, int size)
+\begin{DoxyCompactList}\small\item\em v = u \end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{library_8h_a2f1ce9c76c23c80c8fa50430aee4d84f}{gauss} (int sflag, float std, int $\ast$size)
+\begin{DoxyCompactList}\small\item\em w=a$\ast$u+b$\ast$v \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8h_a7e988dd8b7f87803bcfb31b652e41ffb}{compute\+\_\+gradient\+\_\+orientation} (float $\ast$igray, float $\ast$grad, int w, int h)
+\begin{DoxyCompactList}\small\item\em 1\+D Gauss kernel \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8h_a035bbb198db36a40b03e4338cfcd7123}{sample} (float $\ast$igray, float $\ast$ogray, float factor, int w, int h)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8h_ade083c65345f952d9eedaf3adec53f3d}{draw\+\_\+line} (float $\ast$igray, int a0, int b0, int a1, int b1, float value, int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{library_8h_a00d809e4f90a85e5d8a3eccea0713d00}{}\index{library.\+h@{library.\+h}!combine@{combine}}
+\index{combine@{combine}!library.\+h@{library.\+h}}
+\subsubsection[{combine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} combine (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{u, }
+\item[{float}]{a, }
+\item[{float $\ast$}]{v, }
+\item[{float}]{b, }
+\item[{float $\ast$}]{w, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{library_8h_a00d809e4f90a85e5d8a3eccea0713d00}
+
+
+v = u 
+
+\hypertarget{library_8h_a7e988dd8b7f87803bcfb31b652e41ffb}{}\index{library.\+h@{library.\+h}!compute\+\_\+gradient\+\_\+orientation@{compute\+\_\+gradient\+\_\+orientation}}
+\index{compute\+\_\+gradient\+\_\+orientation@{compute\+\_\+gradient\+\_\+orientation}!library.\+h@{library.\+h}}
+\subsubsection[{compute\+\_\+gradient\+\_\+orientation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} compute\+\_\+gradient\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{igray, }
+\item[{float $\ast$}]{grad, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{library_8h_a7e988dd8b7f87803bcfb31b652e41ffb}
+
+
+1\+D Gauss kernel 
+
+\hypertarget{library_8h_af693e0f5e3a3c49c1e62b9eda038610c}{}\index{library.\+h@{library.\+h}!copy@{copy}}
+\index{copy@{copy}!library.\+h@{library.\+h}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} copy (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{u, }
+\item[{float $\ast$}]{v, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{library_8h_af693e0f5e3a3c49c1e62b9eda038610c}
+\hypertarget{library_8h_ade083c65345f952d9eedaf3adec53f3d}{}\index{library.\+h@{library.\+h}!draw\+\_\+line@{draw\+\_\+line}}
+\index{draw\+\_\+line@{draw\+\_\+line}!library.\+h@{library.\+h}}
+\subsubsection[{draw\+\_\+line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} draw\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{igray, }
+\item[{int}]{a0, }
+\item[{int}]{b0, }
+\item[{int}]{a1, }
+\item[{int}]{b1, }
+\item[{float}]{value, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{library_8h_ade083c65345f952d9eedaf3adec53f3d}
+\hypertarget{library_8h_a2f1ce9c76c23c80c8fa50430aee4d84f}{}\index{library.\+h@{library.\+h}!gauss@{gauss}}
+\index{gauss@{gauss}!library.\+h@{library.\+h}}
+\subsubsection[{gauss}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ gauss (
+\begin{DoxyParamCaption}
+\item[{int}]{sflag, }
+\item[{float}]{std, }
+\item[{int $\ast$}]{size}
+\end{DoxyParamCaption}
+)}\label{library_8h_a2f1ce9c76c23c80c8fa50430aee4d84f}
+
+
+w=a$\ast$u+b$\ast$v 
+
+\hypertarget{library_8h_a035bbb198db36a40b03e4338cfcd7123}{}\index{library.\+h@{library.\+h}!sample@{sample}}
+\index{sample@{sample}!library.\+h@{library.\+h}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sample (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{igray, }
+\item[{float $\ast$}]{ogray, }
+\item[{float}]{factor, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{library_8h_a035bbb198db36a40b03e4338cfcd7123}

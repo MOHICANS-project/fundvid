@@ -1,0 +1,120 @@
+\hypertarget{jdinput_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jdinput.c File Reference}
+\label{jdinput_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdinput.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdinput.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jdinput.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__input__controller}{my\+\_\+input\+\_\+controller}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jdinput_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__input__controller}{my\+\_\+input\+\_\+controller} $\ast$ \hyperlink{jdinput_8c_a2a7eb13efe69898d5a8cded5fecbe040}{my\+\_\+inputctl\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jdinput_8c_a4bdf8aaef0e2bcd9aeda2b26c83669a5}{M\+E\+T\+H\+O\+D\+D\+E\+F} (int)
+\item 
+\hyperlink{jdinput_8c_a1ff3c3b3d97a3063ca5d58d0a6daa127}{initial\+\_\+setup} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdinput_8c_a90bb8415e7caa7bf6a2ea41084f8956a}{per\+\_\+scan\+\_\+setup} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdinput_8c_afbafda2987fff825fe041f12735682ef}{latch\+\_\+quant\+\_\+tables} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdinput_8c_abc0a94e24edf93bc7f914cf4a698a870}{start\+\_\+input\+\_\+pass} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdinput_8c_a9777f7fabb58d9a42f34510bf0a71d1c}{finish\+\_\+input\+\_\+pass} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdinput_8c_afb73ba0d8349e3c994c8b9cf3e9e2365}{consume\+\_\+markers} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdinput_8c_a93f58ee9099d00fef5d7e3891aa9e54f}{reset\+\_\+input\+\_\+controller} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdinput_8c_a609b3a5a6b80e5481ba21ad6d00a046c}{jinit\+\_\+input\+\_\+controller} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jdinput_8c_ad5c3cdfae3019b8223973041a2a1304b}{}\index{jdinput.\+c@{jdinput.\+c}!J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}}
+\index{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S@{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+S}\label{jdinput_8c_ad5c3cdfae3019b8223973041a2a1304b}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jdinput_8c_a2a7eb13efe69898d5a8cded5fecbe040}{}\index{jdinput.\+c@{jdinput.\+c}!my\+\_\+inputctl\+\_\+ptr@{my\+\_\+inputctl\+\_\+ptr}}
+\index{my\+\_\+inputctl\+\_\+ptr@{my\+\_\+inputctl\+\_\+ptr}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{my\+\_\+inputctl\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+input\+\_\+controller}$\ast$ {\bf my\+\_\+inputctl\+\_\+ptr}}\label{jdinput_8c_a2a7eb13efe69898d5a8cded5fecbe040}
+
+
+\subsection{Function Documentation}
+\hypertarget{jdinput_8c_afb73ba0d8349e3c994c8b9cf3e9e2365}{}\index{jdinput.\+c@{jdinput.\+c}!consume\+\_\+markers@{consume\+\_\+markers}}
+\index{consume\+\_\+markers@{consume\+\_\+markers}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{consume\+\_\+markers}]{\setlength{\rightskip}{0pt plus 5cm}consume\+\_\+markers (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_afb73ba0d8349e3c994c8b9cf3e9e2365}
+\hypertarget{jdinput_8c_a9777f7fabb58d9a42f34510bf0a71d1c}{}\index{jdinput.\+c@{jdinput.\+c}!finish\+\_\+input\+\_\+pass@{finish\+\_\+input\+\_\+pass}}
+\index{finish\+\_\+input\+\_\+pass@{finish\+\_\+input\+\_\+pass}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{finish\+\_\+input\+\_\+pass}]{\setlength{\rightskip}{0pt plus 5cm}finish\+\_\+input\+\_\+pass (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_a9777f7fabb58d9a42f34510bf0a71d1c}
+\hypertarget{jdinput_8c_a1ff3c3b3d97a3063ca5d58d0a6daa127}{}\index{jdinput.\+c@{jdinput.\+c}!initial\+\_\+setup@{initial\+\_\+setup}}
+\index{initial\+\_\+setup@{initial\+\_\+setup}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{initial\+\_\+setup}]{\setlength{\rightskip}{0pt plus 5cm}initial\+\_\+setup (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_a1ff3c3b3d97a3063ca5d58d0a6daa127}
+\hypertarget{jdinput_8c_a609b3a5a6b80e5481ba21ad6d00a046c}{}\index{jdinput.\+c@{jdinput.\+c}!jinit\+\_\+input\+\_\+controller@{jinit\+\_\+input\+\_\+controller}}
+\index{jinit\+\_\+input\+\_\+controller@{jinit\+\_\+input\+\_\+controller}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{jinit\+\_\+input\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}jinit\+\_\+input\+\_\+controller (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_a609b3a5a6b80e5481ba21ad6d00a046c}
+\hypertarget{jdinput_8c_afbafda2987fff825fe041f12735682ef}{}\index{jdinput.\+c@{jdinput.\+c}!latch\+\_\+quant\+\_\+tables@{latch\+\_\+quant\+\_\+tables}}
+\index{latch\+\_\+quant\+\_\+tables@{latch\+\_\+quant\+\_\+tables}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{latch\+\_\+quant\+\_\+tables}]{\setlength{\rightskip}{0pt plus 5cm}latch\+\_\+quant\+\_\+tables (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_afbafda2987fff825fe041f12735682ef}
+\hypertarget{jdinput_8c_a4bdf8aaef0e2bcd9aeda2b26c83669a5}{}\index{jdinput.\+c@{jdinput.\+c}!M\+E\+T\+H\+O\+D\+D\+E\+F@{M\+E\+T\+H\+O\+D\+D\+E\+F}}
+\index{M\+E\+T\+H\+O\+D\+D\+E\+F@{M\+E\+T\+H\+O\+D\+D\+E\+F}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{M\+E\+T\+H\+O\+D\+D\+E\+F}]{\setlength{\rightskip}{0pt plus 5cm}M\+E\+T\+H\+O\+D\+D\+E\+F (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_a4bdf8aaef0e2bcd9aeda2b26c83669a5}
+\hypertarget{jdinput_8c_a90bb8415e7caa7bf6a2ea41084f8956a}{}\index{jdinput.\+c@{jdinput.\+c}!per\+\_\+scan\+\_\+setup@{per\+\_\+scan\+\_\+setup}}
+\index{per\+\_\+scan\+\_\+setup@{per\+\_\+scan\+\_\+setup}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{per\+\_\+scan\+\_\+setup}]{\setlength{\rightskip}{0pt plus 5cm}per\+\_\+scan\+\_\+setup (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_a90bb8415e7caa7bf6a2ea41084f8956a}
+\hypertarget{jdinput_8c_a93f58ee9099d00fef5d7e3891aa9e54f}{}\index{jdinput.\+c@{jdinput.\+c}!reset\+\_\+input\+\_\+controller@{reset\+\_\+input\+\_\+controller}}
+\index{reset\+\_\+input\+\_\+controller@{reset\+\_\+input\+\_\+controller}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{reset\+\_\+input\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}reset\+\_\+input\+\_\+controller (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_a93f58ee9099d00fef5d7e3891aa9e54f}
+\hypertarget{jdinput_8c_abc0a94e24edf93bc7f914cf4a698a870}{}\index{jdinput.\+c@{jdinput.\+c}!start\+\_\+input\+\_\+pass@{start\+\_\+input\+\_\+pass}}
+\index{start\+\_\+input\+\_\+pass@{start\+\_\+input\+\_\+pass}!jdinput.\+c@{jdinput.\+c}}
+\subsubsection[{start\+\_\+input\+\_\+pass}]{\setlength{\rightskip}{0pt plus 5cm}start\+\_\+input\+\_\+pass (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdinput_8c_abc0a94e24edf93bc7f914cf4a698a870}

@@ -1,0 +1,99 @@
+\hypertarget{classFVMatcher_1_1SIFTOpenCVMatcher}{}\section{F\+V\+Matcher\+:\+:S\+I\+F\+T\+Open\+C\+V\+Matcher Class Reference}
+\label{classFVMatcher_1_1SIFTOpenCVMatcher}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher}}
+
+
+S\+I\+F\+T matcher on an image sequence using the Open\+C\+V S\+I\+F\+T implementation.  
+
+
+
+
+{\ttfamily \#include $<$sift\+\_\+opencv\+\_\+matcher.\+h$>$}
+
+
+
+Inheritance diagram for F\+V\+Matcher\+:\+:S\+I\+F\+T\+Open\+C\+V\+Matcher\+:
+% FIG 0
+
+
+Collaboration diagram for F\+V\+Matcher\+:\+:S\+I\+F\+T\+Open\+C\+V\+Matcher\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFVMatcher_1_1SIFTOpenCVMatcher_ae1681d531e472fef00c190091d86c33c}{S\+I\+F\+T\+Open\+C\+V\+Matcher} (cv\+::\+Mat \&\+\_\+image0, cv\+::\+Mat \&\+\_\+image1, int \+\_\+depth=2, bool \+\_\+sym=false, bool \+\_\+apply\+\_\+th=true, float \+\_\+th=0.\+8f)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classFVMatcher_1_1SIFTOpenCVMatcher}{S\+I\+F\+T\+Open\+C\+V\+Matcher} constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFVMatcher_1_1SIFTOpenCVMatcher_ac81197e6ad0999995bcb59486208a1b7}{$\sim$\+S\+I\+F\+T\+Open\+C\+V\+Matcher} ()
+\item 
+std\+::vector$<$ \hyperlink{structFVMatcher_1_1FVMatch}{F\+V\+Matcher\+::\+F\+V\+Match} $>$ \hyperlink{classFVMatcher_1_1SIFTOpenCVMatcher_a28119e90b4d7b71867d604a7aa082e1b}{compute\+Matches} ()
+\begin{DoxyCompactList}\small\item\em Compute matches from the current sources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+I\+F\+T matcher on an image sequence using the Open\+C\+V S\+I\+F\+T implementation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFVMatcher_1_1SIFTOpenCVMatcher_ae1681d531e472fef00c190091d86c33c}{}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher}!S\+I\+F\+T\+Open\+C\+V\+Matcher@{S\+I\+F\+T\+Open\+C\+V\+Matcher}}
+\index{S\+I\+F\+T\+Open\+C\+V\+Matcher@{S\+I\+F\+T\+Open\+C\+V\+Matcher}!F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher}}
+\subsubsection[{S\+I\+F\+T\+Open\+C\+V\+Matcher}]{\setlength{\rightskip}{0pt plus 5cm}F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{\+\_\+image0, }
+\item[{cv\+::\+Mat \&}]{\+\_\+image1, }
+\item[{int}]{\+\_\+depth = {\ttfamily 2}, }
+\item[{bool}]{\+\_\+sym = {\ttfamily false}, }
+\item[{bool}]{\+\_\+apply\+\_\+th = {\ttfamily true}, }
+\item[{float}]{\+\_\+th = {\ttfamily 0.8f}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classFVMatcher_1_1SIFTOpenCVMatcher_ae1681d531e472fef00c190091d86c33c}
+
+
+\hyperlink{classFVMatcher_1_1SIFTOpenCVMatcher}{S\+I\+F\+T\+Open\+C\+V\+Matcher} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+image0} & image from camera 0 \\
+\hline
+{\em \+\_\+image1} & image from camera 1 \\
+\hline
+{\em \+\_\+depth} & depth of the knn matching stage \\
+\hline
+{\em \+\_\+sym} & set to \char`\"{}true\char`\"{} if symmetric matching has to be performed \\
+\hline
+{\em \+\_\+apply\+\_\+th} & set to \char`\"{}true\char`\"{} if S\+I\+F\+T threshold has to be applied \\
+\hline
+{\em \+\_\+th} & S\+I\+F\+T threshold \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFVMatcher_1_1SIFTOpenCVMatcher_ac81197e6ad0999995bcb59486208a1b7}{}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher}!````~S\+I\+F\+T\+Open\+C\+V\+Matcher@{$\sim$\+S\+I\+F\+T\+Open\+C\+V\+Matcher}}
+\index{````~S\+I\+F\+T\+Open\+C\+V\+Matcher@{$\sim$\+S\+I\+F\+T\+Open\+C\+V\+Matcher}!F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher}}
+\subsubsection[{$\sim$\+S\+I\+F\+T\+Open\+C\+V\+Matcher}]{\setlength{\rightskip}{0pt plus 5cm}virtual F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher\+::$\sim$\+S\+I\+F\+T\+Open\+C\+V\+Matcher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classFVMatcher_1_1SIFTOpenCVMatcher_ac81197e6ad0999995bcb59486208a1b7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFVMatcher_1_1SIFTOpenCVMatcher_a28119e90b4d7b71867d604a7aa082e1b}{}\index{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher}!compute\+Matches@{compute\+Matches}}
+\index{compute\+Matches@{compute\+Matches}!F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher@{F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher}}
+\subsubsection[{compute\+Matches}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf F\+V\+Matcher\+::\+F\+V\+Match} $>$ F\+V\+Matcher\+::\+S\+I\+F\+T\+Open\+C\+V\+Matcher\+::compute\+Matches (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classFVMatcher_1_1SIFTOpenCVMatcher_a28119e90b4d7b71867d604a7aa082e1b}
+
+
+Compute matches from the current sources. 
+
+\begin{DoxyReturn}{Returns}
+vector of matches 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classFVMatcher_1_1AbstractMatcher_a201dc53542e0d9a10a08f8418b55d20a}{F\+V\+Matcher\+::\+Abstract\+Matcher}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/matchers/\hyperlink{sift__opencv__matcher_8h}{sift\+\_\+opencv\+\_\+matcher.\+h}\item 
+src/matchers/\hyperlink{sift__opencv__matcher_8cpp}{sift\+\_\+opencv\+\_\+matcher.\+cpp}\end{DoxyCompactItemize}

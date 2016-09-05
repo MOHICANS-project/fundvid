@@ -1,0 +1,963 @@
+cmake_minimum_required(VERSION 2.6)
+#Configuration du projet
+project(multicamnet)
+
+
+#############################################
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+ADD_DEFINITIONS(
+	-std=c++11
+	#CMAKE_CXX_COMPILER=g++-4.8
+)
+
+
+############################################
+
+#find_package(Qt4 4.4.3 COMPONENTS QtCore QtGui QtXml REQUIRED )
+#INCLUDE_DIRECTORIES(/usr/include/qt4) 
+
+#############################################
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5Widgets REQUIRED)
+include_directories(${Qt5Gui_INCLUDES})
+include_directories(${Qt5Widgets_INCLUDES})
+include_directories(./src/src)
+ADD_DEFINITIONS(-DDEBUG -ggdb -O3 -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -fbranch-probabilities)
+SET( EIGEN3_INCLUDE_DIR "/usr/include/eigen3" )
+IF( NOT EIGEN3_INCLUDE_DIR )
+    MESSAGE( FATAL_ERROR "Please point the environment variable EIGEN3_INCLUDE_DIR to the include directory of your Eigen3 installation.")
+ENDIF()
+INCLUDE_DIRECTORIES ( "${EIGEN3_INCLUDE_DIR}" )
+if(COMMAND cmake_policy)
+   cmake_policy(SET CMP0003 NEW)
+endif(COMMAND cmake_policy)
+
+add_definitions(${Qt5Gui_DEFINITIONS})
+add_definitions(${Qt5Widgets_DEFINITIONS})
+
+set(CMAKE_CXX_FLAGS "${Qt5Gui_EXECUTABLE_COMPILE_FLAGS}")
+set(CMAKE_CXX_FLAGS "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
+
+add_subdirectory(src/src)
+add_subdirectory(src/usac-cmake)
+include_directories(src/matchers)
+include_directories(src/epiline_viewer_gui)
+
+LINK_DIRECTORIES(${CMAKE_BINARY_DIR}) 
+
+include_directories(
+	${CONFIG++_INCLUDE_DIR}
+)
+link_directories(
+	${LAPACK_LIBRARY_DIRS}
+)
+#############################################
+
+
+############################ LEVMAR ########################################
+
+# levmar library
+SET(LEVMAR_INCDIR "/usr/lib/levmar-2.6" CACHE PATH "Path to LEVMAR library header")
+SET(LEVMAR_LIBDIR "/usr/lib/levmar-2.6" CACHE PATH "Path to LEVMAR library")
+
+# lapack/blas
+SET(HAVE_LAPACK 1 CACHE BOOL "Do we have LAPACK/BLAS?")
+# the directory where the lapack/blas/f2c libraries reside
+SET(LAPACKBLAS_DIR "/usr/lib" CACHE PATH "Path to lapack/blas libraries")
+#SET(LAPACKBLAS_DIR "C:\Program Files\Intel\MKL\10.2.2.025\ia32\lib" CACHE PATH "Path to lapack/blas libraries") # MKL
+SET(NEED_F2C 1 CACHE BOOL "Do we need either f2c or F77/I77?")
+SET(HAVE_PLASMA 0 CACHE BOOL "Do we have PLASMA parallel linear algebra library?")
+IF(HAVE_PLASMA)
+ SET(PLASMA_DIR "/usr/local/PLASMA" CACHE PATH "Path to PLASMA root")
+ENDIF(HAVE_PLASMA)
+OPTION(BUILD_DEMO "Build demo program?" TRUE)
+
+# actual names for the lapack/blas/f2c libraries
+SET(LAPACKBLAS_LIB_NAMES "lapack;blas" CACHE STRING "The name of the lapack & blas libraries")
+#SET(LAPACKBLAS_LIB_NAMES "mkl_solver_sequential;mkl_intel_c;mkl_sequential;mkl_core" CACHE STRING "The name of the lapack libraries") # MKL
+IF(NEED_F2C)
+  SET(F2C_LIB_NAME f2c CACHE STRING "The name of the f2c or F77/I77 library")
+   #f2c is sometimes equivalent to libF77 & libI77
+  SET(F2C_LIB_NAME "libF77;libI77" CACHE STRING "The name of the f2c or F77/I77 library")
+ELSE(NEED_F2C)
+  SET(F2C_LIB_NAME "" CACHE STRING "The name of the f2c or F77/I77 library")
+ENDIF(NEED_F2C)
+
+# actual names for the PLASMA libraries
+IF(HAVE_PLASMA)
+  SET(PLASMA_LIB_NAMES "plasma;coreblas;quark;lapacke" CACHE STRING "The names of the PLASMA libraries")
+ENDIF(HAVE_PLASMA)
+
+SET(HAVE_HOMEST 0 CACHE BOOL "Do we have HOMEST installed? (for GRIC only)")
+IF(HAVE_HOMEST)
+ SET(HOMEST_INCDIR "/usr/local/homest-1.4" CACHE PATH "Path to HOMEST library header")
+ SET(HOMEST_LIBDIR "/usr/local/homest-1.4" CACHE PATH "Path to HOMEST library")
+ ADD_DEFINITIONS(-DHAVE_HOMEST)
+ENDIF(HAVE_HOMEST)
+
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR})
+INCLUDE_DIRECTORIES(${LEVMAR_INCDIR})
+INCLUDE_DIRECTORIES(${HOMEST_INCDIR})
+
+
+IF(HAVE_PLASMA)
+ INCLUDE_DIRECTORIES(${PLASMA_DIR}/include ${PLASMA_DIR}/quark)
+ENDIF(HAVE_PLASMA)
+
+SET(LIBS ${LIBS} levmar)
+
+  LINK_DIRECTORIES(${CMAKE_BINARY_DIR}) # location of the fundest library
+  LINK_DIRECTORIES(${LAPACKBLAS_DIR})
+  LINK_DIRECTORIES(${LEVMAR_LIBDIR})
+
+# libraries the demo depends on
+  IF(HAVE_PLASMA)
+    LINK_DIRECTORIES(${PLASMA_DIR}/lib)
+    SET(LIBS ${LIBS} ${PLASMA_LIB_NAMES})
+  ENDIF(HAVE_PLASMA)
+  SET(LIBS ${LIBS} ${LAPACKBLAS_LIB_NAMES})
+
+####################################################################
+
+#include(${QT_USE_FILE})
+set(EXECUTABLE_OUTPUT_PATH bin)
+
+## Checking library....
+
+#OpenCV
+Find_Package(OpenCV REQUIRED)
+if ( NOT OpenCV_FOUND )
+    message(FATAL_ERROR "OpenCV not found !")
+endif ( NOT OpenCV_FOUND )
+
+#Boost
+Find_Package(Boost REQUIRED thread serialization system filesystem)
+if ( NOT Boost_FOUND )
+    message(FATAL_ERROR "Boost not found !")
+endif ( NOT Boost_FOUND )
+set(Boost_DIR $ENV{BOOST_ROOT})
+
+# add a target to generate API documentation with Doxygen
+find_package(Doxygen)
+if(DOXYGEN_FOUND)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
+add_custom_target(doc
+${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
+WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+COMMENT "Generating API documentation with Doxygen" VERBATIM
+)
+endif(DOXYGEN_FOUND)
+
+
+#Compilation flags
+set(CMAKE_CXX_FLAGS "-Wall -O3 -mssse3 -fpermissive -pthread")
+
+
+#Configuration de l'exécutable
+
+#file(
+#	GLOB_RECURSE
+#	source_files
+#	src/*
+#) 
+
+add_definitions(-DVL_DISABLE_AVX=1)
+include_directories(src/vlfeat-0.9.20)
+include_directories(src/vlfeat-0.9.20/vl)
+set(vl_sources 
+src/vlfeat-0.9.20/vl/generic.c 
+src/vlfeat-0.9.20/vl/host.c 
+src/vlfeat-0.9.20/vl/vlad.c 
+src/vlfeat-0.9.20/vl/mathop.c 
+src/vlfeat-0.9.20/vl/mathop_sse2.c
+src/vlfeat-0.9.20/vl/random.c 
+src/vlfeat-0.9.20/vl/kdtree.c 
+src/vlfeat-0.9.20/vl/kmeans.c 
+src/vlfeat-0.9.20/vl/gmm.c)
+
+set_source_files_properties(${vl_sources} PROPERTIES LANGUAGE C)
+
+add_library(vlfeat SHARED ${vl_sources})
+
+
+######################################
+file(GLOB GUI_CPP src/epiline_viewer_gui/viewer.cpp src/epiline_viewer_gui/Observable.cpp src/epiline_viewer_gui/ImagePainter.cpp src/epiline_viewer_gui/EpiViewer.cpp src/epiline_viewer_gui/EpiLineViewer.cpp)
+file(GLOB MISC_CPP src/matchers/SIFTSMPMatcher.cpp src/matchers/OrsaSIFTMatcher.cpp src/LMFSolver7.cpp)
+file(GLOB USAC_CPP src/usac-cmake/src/utils/FundmatrixFunctions.cpp src/usac-cmake/src/utils/HomographyFunctions.cpp src/usac-cmake/src/utils/MathFunctions.cpp src/usac-cmake/src/config/ConfigParams.cpp src/usac-cmake/src/config/ConfigParamsFundmatrix.cpp)
+file(GLOB MISC_CPP_2  src/FUncertainty.cpp)
+
+ADD_LIBRARY(myGUI SHARED ${GUI_CPP})
+ADD_LIBRARY(myMISC SHARED ${MISC_CPP})
+ADD_LIBRARY(myMISC2 SHARED ${MISC_CPP_2})
+ADD_LIBRARY(myUSAC SHARED ${USAC_CPP})
+
+
+TARGET_LINK_LIBRARIES(
+  myGUI
+  ${Qt5Gui_LIBRARIES}
+  ${Qt5Widgets_LIBRARIES}
+)
+
+ADD_EXECUTABLE(
+  quantitative_evaluation
+  src/quantitative_evaluation.cpp
+)
+ADD_EXECUTABLE(
+  usac_to_cv
+  src/usac_to_cv_video.cpp
+)
+
+ADD_EXECUTABLE(
+  quantitative_evaluation_iterative
+  src/quantitative_evaluation_iterative_video.cpp
+)
+ADD_EXECUTABLE(
+  ransac_calibration_file
+  src/ransac.cpp
+)
+
+
+ADD_EXECUTABLE(
+  orsa
+  src/orsa.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_video
+  src/orsa_video.cpp
+)
+
+ADD_EXECUTABLE(
+  store_all_errors
+  src/store_all_errors.cpp
+)
+
+
+
+ADD_EXECUTABLE(
+  matchesXml
+  src/matches.cpp
+)
+
+ADD_EXECUTABLE(
+  matchesXmlUSAC
+  src/matches_for_usac.cpp
+)
+
+ADD_EXECUTABLE(
+  convertusac
+  src/convert_matches_usac.cpp
+)
+
+ADD_EXECUTABLE(
+  getRT
+  src/getRTusingSE3.cxx
+)
+
+ADD_EXECUTABLE(
+  matches_checker
+  src/check_matches_video.cpp
+)
+
+ADD_EXECUTABLE(
+  IM_median
+  src/metric_IM_median.cpp
+)
+
+ADD_EXECUTABLE(
+  draw_inl
+  src/drawinl.cpp
+)
+
+ADD_EXECUTABLE(
+  DM1
+  src/metric_DM1.cpp
+)
+ADD_EXECUTABLE(
+  DM2
+  src/metric_DM2.cpp
+)
+
+ADD_EXECUTABLE(
+  calc_covariances
+  src/calc_covariances.cpp
+)
+
+ADD_EXECUTABLE(
+  test_homocalib
+  src/test_homocalib.cpp
+)
+
+ADD_EXECUTABLE(
+  CM
+  src/metric_CM.cpp
+)
+
+ADD_EXECUTABLE(
+  inl_distr
+  src/inliers_distribution.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_video_guided
+  src/orsa_video_guided.cpp
+)
+
+ADD_EXECUTABLE(
+  test_usac_simple
+  src/test_usac_simple.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_video_guided_inlprop
+  src/orsa_video_guided_inlprop.cpp
+)
+
+ADD_EXECUTABLE(
+  ransac_video_guidesmatching_variant_inlprop
+  src/ransac_video_guidesmatching_variant_inlprop.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_video_guidesmatching
+  src/orsa_video_guidesmatching.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_video_guidesmatching_inlprop
+  src/orsa_video_guidesmatching_inlprop.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_video_guidesmatching_variant
+  src/orsa_video_guidesmatching_variant.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_video_guidesmatching_variant_inlprop
+  src/orsa_video_guidesmatching_variant_inlprop.cpp
+)
+
+ADD_EXECUTABLE(
+  usac_video_guidesmatching_variant_inlprop
+  src/usac_video_guidesmatching_variant_inlprop.cpp
+)
+
+ADD_EXECUTABLE(
+  usac_video_guided
+  src/usac_video_guided.cpp
+)
+
+ADD_EXECUTABLE(
+  usac_video_guided_inlprop
+  src/usac_video_guided_inlprop.cpp
+)
+
+ADD_EXECUTABLE(
+  test_band
+  src/test_epipolar_band_check.cpp
+)
+ADD_EXECUTABLE(
+  test_algo
+  src/test_algo.cpp
+)
+
+ADD_EXECUTABLE(
+  core_points
+  src/core_points.cpp
+)
+
+ADD_EXECUTABLE(
+  orsa_punctual_estimation
+  src/orsa_punctual_estimation.cpp
+)
+
+ADD_EXECUTABLE(
+  LM_them_all
+  src/LM_them_all.cpp
+)
+
+TARGET_LINK_LIBRARIES(
+  usac_video_guided_inlprop
+  myUSAC
+  ${CONFIG++_LIBRARY}
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  test_homocalib
+  myUSAC
+  ${CONFIG++_LIBRARY}
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  usac_video_guidesmatching_variant_inlprop
+  myUSAC
+  ${CONFIG++_LIBRARY}
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+ test_usac_simple
+  myUSAC
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${CONFIG++_LIBRARY}
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  test_band
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  orsa_punctual_estimation
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  draw_inl
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  core_points
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  test_algo
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  orsa_video_guided
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  orsa_video_guidesmatching_variant_inlprop
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  ransac_video_guidesmatching_variant_inlprop
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  orsa_video_guidesmatching_variant
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  orsa_video_guidesmatching
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+TARGET_LINK_LIBRARIES(
+  orsa_video_guidesmatching_inlprop
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  orsa_video_guided_inlprop
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  ransac_calibration_file
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  usac_video_guided
+  myUSAC
+  ${CONFIG++_LIBRARY}
+  myGUI
+  myMISC
+  myMISC2
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+
+TARGET_LINK_LIBRARIES(
+   LM_them_all
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+TARGET_LINK_LIBRARIES(
+  inl_distr
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+
+TARGET_LINK_LIBRARIES(
+  getRT
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  CM
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  calc_covariances
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(
+  IM_median
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS}
+  vlfeat 
+)
+TARGET_LINK_LIBRARIES(
+  DM2
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+TARGET_LINK_LIBRARIES(
+  DM1
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  usac_to_cv
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  store_all_errors
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  quantitative_evaluation
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  quantitative_evaluation_iterative
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  convertusac
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+
+TARGET_LINK_LIBRARIES(
+  orsa
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+TARGET_LINK_LIBRARIES(
+  orsa_video
+  myGUI
+  myMISC
+  myUSAC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  matchesXml
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  matchesXmlUSAC
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+
+TARGET_LINK_LIBRARIES(
+  matches_checker
+  myGUI
+  myMISC
+  image
+  sift
+  Orsa
+  ${EXTRA_LIBS}
+  ${LIBS}
+  ${OPENCV_LIBRARIES}
+  ${OpenCV_LIBS} 
+)
+##########################################
+
+
+add_executable(
+	camnet
+	src/main.cc
+	src/sensor.cc
+	src/manager.cc
+	src/key-intercept.cc
+	src/f-w-frame-grabber.cc
+	src/file-frame-grabber.cc
+	src/f-w-connect.cc
+	src/f-w-oneshot-connect.cc
+	src/f-w-exttrig-connect.cc
+	src/file-video-connect.cc
+	src/frame-grabber.cc
+	src/logger.cc
+	src/synchronizer.cc
+	src/frame-displayer.cc
+	src/base-frame-displayer.cc
+	src/multi-frame-displayer.cc
+	src/nicola-displayer.cpp
+	src/multi-synchronizer.cc
+	src/cam-data.cc
+	src/helper-funcs.cc
+	src/f-w-camid.cxx
+
+)
+
+add_executable(
+	matchPointsXml
+	src/matchPointsXml.cc
+)
+
+add_executable(
+	benchmark
+	src/benchmark.cpp
+)
+
+target_link_libraries(
+	matchPointsXml
+	${OpenCV_LIBS}  
+)
+
+
+
+target_link_libraries(
+	benchmark
+	myGUI
+	  myMISC
+	  image
+	  sift
+	  Orsa
+	  ${EXTRA_LIBS}
+	  ${LIBS}
+	  ${OPENCV_LIBRARIES}
+	  ${OpenCV_LIBS} 
+)
+
+#Linking configuration
+
+target_link_libraries(
+	camnet
+	X11
+	GVars3 
+	dc1394
+	${Boost_LIBRARIES}       
+	${OpenCV_LIBS} 
+	cairo
+	gtk-x11-2.0
+	gdk-x11-2.0
+	myGUI
+	myMISC
+	image
+	sift
+	Orsa
+	${EXTRA_LIBS}
+	${LIBS}
+	${OPENCV_LIBRARIES}
+	${OpenCV_LIBS}     
+)
+
+foreach(dir ${DIRS})
+  FILE(GLOB files ${dir}/*.h*)
+  LIST(APPEND h_files ${files})
+endforeach(dir)
+add_custom_target(TAGS etags --members -l c++ ${h_files} ${simple_SRC})

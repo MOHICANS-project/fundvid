@@ -1,0 +1,249 @@
+\hypertarget{classlibNumerics_1_1SVD}{}\section{lib\+Numerics\+:\+:S\+V\+D Class Reference}
+\label{classlibNumerics_1_1SVD}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+
+
+Singular Value Decomposition\+: U diag(\+D) V, U in O(m), V in O(n), D$>$=0.  
+
+
+
+
+{\ttfamily \#include $<$numerics.\+h$>$}
+
+
+
+Collaboration diagram for lib\+Numerics\+:\+:S\+V\+D\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat}
+\item 
+typedef \hyperlink{classlibNumerics_1_1vector}{vector}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}{Vec}
+\item 
+typedef \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat}
+\item 
+typedef \hyperlink{classlibNumerics_1_1vector}{vector}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}{Vec}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibNumerics_1_1SVD_aa0d6c136b19b0699fe99ae4727864158}{S\+V\+D} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \&A)
+\begin{DoxyCompactList}\small\item\em Decompose A into U diag(\+D) V$^\wedge$\+T with U(m,m) and \hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V(n,n)} orthonormal matrices. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_a9c51cf9b849a0ca0ebf237449bbf36f7}{compose} () const 
+\begin{DoxyCompactList}\small\item\em Recompose from \hyperlink{classlibNumerics_1_1SVD}{S\+V\+D}. This should be the initial matrix. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} \hyperlink{classlibNumerics_1_1SVD_a1c0ed0df84c90c90d42227c4b6df1cae}{sv} (int i) const 
+\begin{DoxyCompactList}\small\item\em Return ith greathest singular value. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1SVD_aa0d6c136b19b0699fe99ae4727864158}{S\+V\+D} (const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \&A)
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_ae64a89da8d4dce887c171d757741318b}{compose} () const 
+\item 
+\hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} \hyperlink{classlibNumerics_1_1SVD_a1c0ed0df84c90c90d42227c4b6df1cae}{sv} (int i) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classlibNumerics_1_1SVD_a77af43a6012f1e60696a51a892444c1b}{Nullspace} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A, \hyperlink{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}{Vec} $\ast$nullspace, double ratio\+Extremes=1e-\/2, double ratio2\+Min=.\+5)
+\begin{DoxyCompactList}\small\item\em Solve the linear system Ax = 0 with $\vert$$\vert$x$\vert$$\vert$ = 1.\+0 via \hyperlink{classlibNumerics_1_1SVD}{S\+V\+D}. \end{DoxyCompactList}\item 
+static \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} \hyperlink{classlibNumerics_1_1SVD_aa2abf4ae159234d7282718080a419655}{Inv\+Cond} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A)
+\begin{DoxyCompactList}\small\item\em Inverse of norm-\/2 condition value (ratio of extreme singular values) \end{DoxyCompactList}\item 
+static \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1SVD_a4d9285dfb3d4118e2ce4a5cae22b4480}{Enforce\+Rank2\+\_\+3x3} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A, \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} $\ast$A\+Rank)
+\begin{DoxyCompactList}\small\item\em Make square matrix of rank$<$=2. \end{DoxyCompactList}\item 
+static \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1SVD_a5945d8f411c51cbd8aef9f1ef94755b4}{Nullspace2\+\_\+\+Remap33} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A, \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&f1, \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&f2)
+\begin{DoxyCompactList}\small\item\em Save the two last nullspace vectors as 3x3 matrices. \end{DoxyCompactList}\item 
+static bool \hyperlink{classlibNumerics_1_1SVD_a172568239356247cf1c6cb37ecc7a65a}{Nullspace} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A, \hyperlink{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}{Vec} $\ast$nullspace, double ratio\+Extremes=1e-\/2, double ratio2\+Min=.\+5)
+\item 
+static \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} \hyperlink{classlibNumerics_1_1SVD_a274a137a3f30a85b24ed6a3303f701a7}{Inv\+Cond} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A)
+\item 
+static \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1SVD_a3418e7df7a664148386b52bc60d499f3}{Enforce\+Rank2\+\_\+3x3} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A, \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} $\ast$A\+Rank)
+\item 
+static \hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{classlibNumerics_1_1SVD_ac4ff0ad3317252e1d675919c63d446dd}{Nullspace2\+\_\+\+Remap33} (const \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&A, \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&f1, \hyperlink{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{Mat} \&f2)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_a123cf47ae549129588deccd62c725e24}{U}
+\item 
+\hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_a21d943de3bbc8754a2e9ea41795a6d96}{V}
+\item 
+\hyperlink{classlibNumerics_1_1vector}{vector}$<$ \hyperlink{namespacelibNumerics_ac94c07350f743d00e3dbcb33b6e974b0}{flnum} $>$ \hyperlink{classlibNumerics_1_1SVD_a3617939e2eba979cdd7913029d7200d3}{D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singular Value Decomposition\+: U diag(\+D) V, U in O(m), V in O(n), D$>$=0. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Mat@{Mat}}
+\index{Mat@{Mat}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Mat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf matrix}$<${\bf flnum}$>$ {\bf lib\+Numerics\+::\+S\+V\+D\+::\+Mat}}\label{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}
+\hypertarget{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Mat@{Mat}}
+\index{Mat@{Mat}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Mat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf matrix}$<${\bf flnum}$>$ {\bf lib\+Numerics\+::\+S\+V\+D\+::\+Mat}}\label{classlibNumerics_1_1SVD_af7fa146726f27635a88ef053d5dbd4ab}
+\hypertarget{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Vec@{Vec}}
+\index{Vec@{Vec}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Vec}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf vector}$<${\bf flnum}$>$ {\bf lib\+Numerics\+::\+S\+V\+D\+::\+Vec}}\label{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}
+\hypertarget{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Vec@{Vec}}
+\index{Vec@{Vec}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Vec}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf vector}$<${\bf flnum}$>$ {\bf lib\+Numerics\+::\+S\+V\+D\+::\+Vec}}\label{classlibNumerics_1_1SVD_ad713d0bff81dcdd50acc63e285fb6c0d}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlibNumerics_1_1SVD_aa0d6c136b19b0699fe99ae4727864158}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!S\+V\+D@{S\+V\+D}}
+\index{S\+V\+D@{S\+V\+D}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{S\+V\+D}]{\setlength{\rightskip}{0pt plus 5cm}lib\+Numerics\+::\+S\+V\+D\+::\+S\+V\+D (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ {\bf flnum} $>$ \&}]{A}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1SVD_aa0d6c136b19b0699fe99ae4727864158}
+
+
+Decompose A into U diag(\+D) V$^\wedge$\+T with U(m,m) and \hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V(n,n)} orthonormal matrices. 
+
+\hypertarget{classlibNumerics_1_1SVD_aa0d6c136b19b0699fe99ae4727864158}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!S\+V\+D@{S\+V\+D}}
+\index{S\+V\+D@{S\+V\+D}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{S\+V\+D}]{\setlength{\rightskip}{0pt plus 5cm}lib\+Numerics\+::\+S\+V\+D\+::\+S\+V\+D (
+\begin{DoxyParamCaption}
+\item[{const {\bf matrix}$<$ {\bf flnum} $>$ \&}]{A}
+\end{DoxyParamCaption}
+)}\label{classlibNumerics_1_1SVD_aa0d6c136b19b0699fe99ae4727864158}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlibNumerics_1_1SVD_a9c51cf9b849a0ca0ebf237449bbf36f7}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!compose@{compose}}
+\index{compose@{compose}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{compose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix}$<$ {\bf flnum} $>$ lib\+Numerics\+::\+S\+V\+D\+::compose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1SVD_a9c51cf9b849a0ca0ebf237449bbf36f7}
+
+
+Recompose from \hyperlink{classlibNumerics_1_1SVD}{S\+V\+D}. This should be the initial matrix. 
+
+\hypertarget{classlibNumerics_1_1SVD_ae64a89da8d4dce887c171d757741318b}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!compose@{compose}}
+\index{compose@{compose}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{compose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix}$<${\bf flnum}$>$ lib\+Numerics\+::\+S\+V\+D\+::compose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1SVD_ae64a89da8d4dce887c171d757741318b}
+\hypertarget{classlibNumerics_1_1SVD_a4d9285dfb3d4118e2ce4a5cae22b4480}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Enforce\+Rank2\+\_\+3x3@{Enforce\+Rank2\+\_\+3x3}}
+\index{Enforce\+Rank2\+\_\+3x3@{Enforce\+Rank2\+\_\+3x3}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Enforce\+Rank2\+\_\+3x3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} lib\+Numerics\+::\+S\+V\+D\+::\+Enforce\+Rank2\+\_\+3x3 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A, }
+\item[{{\bf Mat} $\ast$}]{A\+Rank}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_a4d9285dfb3d4118e2ce4a5cae22b4480}
+
+
+Make square matrix of rank$<$=2. 
+
+\hypertarget{classlibNumerics_1_1SVD_a3418e7df7a664148386b52bc60d499f3}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Enforce\+Rank2\+\_\+3x3@{Enforce\+Rank2\+\_\+3x3}}
+\index{Enforce\+Rank2\+\_\+3x3@{Enforce\+Rank2\+\_\+3x3}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Enforce\+Rank2\+\_\+3x3}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf void} lib\+Numerics\+::\+S\+V\+D\+::\+Enforce\+Rank2\+\_\+3x3 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A, }
+\item[{{\bf Mat} $\ast$}]{A\+Rank}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_a3418e7df7a664148386b52bc60d499f3}
+\hypertarget{classlibNumerics_1_1SVD_a274a137a3f30a85b24ed6a3303f701a7}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Inv\+Cond@{Inv\+Cond}}
+\index{Inv\+Cond@{Inv\+Cond}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Inv\+Cond}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf flnum} lib\+Numerics\+::\+S\+V\+D\+::\+Inv\+Cond (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_a274a137a3f30a85b24ed6a3303f701a7}
+\hypertarget{classlibNumerics_1_1SVD_aa2abf4ae159234d7282718080a419655}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Inv\+Cond@{Inv\+Cond}}
+\index{Inv\+Cond@{Inv\+Cond}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Inv\+Cond}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flnum} lib\+Numerics\+::\+S\+V\+D\+::\+Inv\+Cond (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_aa2abf4ae159234d7282718080a419655}
+
+
+Inverse of norm-\/2 condition value (ratio of extreme singular values) 
+
+\hypertarget{classlibNumerics_1_1SVD_a172568239356247cf1c6cb37ecc7a65a}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Nullspace@{Nullspace}}
+\index{Nullspace@{Nullspace}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Nullspace}]{\setlength{\rightskip}{0pt plus 5cm}static bool lib\+Numerics\+::\+S\+V\+D\+::\+Nullspace (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A, }
+\item[{{\bf Vec} $\ast$}]{nullspace, }
+\item[{double}]{ratio\+Extremes = {\ttfamily 1e-\/2}, }
+\item[{double}]{ratio2\+Min = {\ttfamily .5}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_a172568239356247cf1c6cb37ecc7a65a}
+\hypertarget{classlibNumerics_1_1SVD_a77af43a6012f1e60696a51a892444c1b}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Nullspace@{Nullspace}}
+\index{Nullspace@{Nullspace}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Nullspace}]{\setlength{\rightskip}{0pt plus 5cm}bool lib\+Numerics\+::\+S\+V\+D\+::\+Nullspace (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A, }
+\item[{{\bf Vec} $\ast$}]{nullspace, }
+\item[{double}]{ratio\+Extremes = {\ttfamily 1e-\/2}, }
+\item[{double}]{ratio2\+Min = {\ttfamily .5}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_a77af43a6012f1e60696a51a892444c1b}
+
+
+Solve the linear system Ax = 0 with $\vert$$\vert$x$\vert$$\vert$ = 1.\+0 via \hyperlink{classlibNumerics_1_1SVD}{S\+V\+D}. 
+
+Check if there is a single singular value such that S\+V/max\+S\+V$<$ratio\+Extremes. However if the two lowest S\+V satisfy this, accept if min\+S\+V/min\+S\+V2$<$ratio2\+Min. This indicates whether the solution is unique. \hypertarget{classlibNumerics_1_1SVD_ac4ff0ad3317252e1d675919c63d446dd}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Nullspace2\+\_\+\+Remap33@{Nullspace2\+\_\+\+Remap33}}
+\index{Nullspace2\+\_\+\+Remap33@{Nullspace2\+\_\+\+Remap33}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Nullspace2\+\_\+\+Remap33}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf void} lib\+Numerics\+::\+S\+V\+D\+::\+Nullspace2\+\_\+\+Remap33 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A, }
+\item[{{\bf Mat} \&}]{f1, }
+\item[{{\bf Mat} \&}]{f2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_ac4ff0ad3317252e1d675919c63d446dd}
+\hypertarget{classlibNumerics_1_1SVD_a5945d8f411c51cbd8aef9f1ef94755b4}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!Nullspace2\+\_\+\+Remap33@{Nullspace2\+\_\+\+Remap33}}
+\index{Nullspace2\+\_\+\+Remap33@{Nullspace2\+\_\+\+Remap33}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{Nullspace2\+\_\+\+Remap33}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} lib\+Numerics\+::\+S\+V\+D\+::\+Nullspace2\+\_\+\+Remap33 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mat} \&}]{A, }
+\item[{{\bf Mat} \&}]{f1, }
+\item[{{\bf Mat} \&}]{f2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlibNumerics_1_1SVD_a5945d8f411c51cbd8aef9f1ef94755b4}
+
+
+Save the two last nullspace vectors as 3x3 matrices. 
+
+\hypertarget{classlibNumerics_1_1SVD_a1c0ed0df84c90c90d42227c4b6df1cae}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!sv@{sv}}
+\index{sv@{sv}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{sv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flnum} lib\+Numerics\+::\+S\+V\+D\+::sv (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1SVD_a1c0ed0df84c90c90d42227c4b6df1cae}
+\hypertarget{classlibNumerics_1_1SVD_a1c0ed0df84c90c90d42227c4b6df1cae}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!sv@{sv}}
+\index{sv@{sv}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{sv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flnum} lib\+Numerics\+::\+S\+V\+D\+::sv (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{classlibNumerics_1_1SVD_a1c0ed0df84c90c90d42227c4b6df1cae}
+
+
+Return ith greathest singular value. 
+
+It is safer than picking directly in D as it checks against out of bounds. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classlibNumerics_1_1SVD_a3617939e2eba979cdd7913029d7200d3}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!D@{D}}
+\index{D@{D}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vector}$<$ {\bf flnum} $>$ lib\+Numerics\+::\+S\+V\+D\+::\+D}\label{classlibNumerics_1_1SVD_a3617939e2eba979cdd7913029d7200d3}
+\hypertarget{classlibNumerics_1_1SVD_a123cf47ae549129588deccd62c725e24}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!U@{U}}
+\index{U@{U}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix}$<$ {\bf flnum} $>$ lib\+Numerics\+::\+S\+V\+D\+::\+U}\label{classlibNumerics_1_1SVD_a123cf47ae549129588deccd62c725e24}
+\hypertarget{classlibNumerics_1_1SVD_a21d943de3bbc8754a2e9ea41795a6d96}{}\index{lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}!V@{V}}
+\index{V@{V}!lib\+Numerics\+::\+S\+V\+D@{lib\+Numerics\+::\+S\+V\+D}}
+\subsubsection[{V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matrix}$<$ {\bf flnum} $>$ lib\+Numerics\+::\+S\+V\+D\+::\+V}\label{classlibNumerics_1_1SVD_a21d943de3bbc8754a2e9ea41795a6d96}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+Numerics/\hyperlink{extras_2libNumerics_2numerics_8h}{numerics.\+h}\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/lib\+Numerics/\hyperlink{extras_2libNumerics_2numerics_8cpp}{numerics.\+cpp}\end{DoxyCompactItemize}

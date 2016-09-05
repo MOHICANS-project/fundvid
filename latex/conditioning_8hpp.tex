@@ -1,0 +1,35 @@
+\hypertarget{conditioning_8hpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/conditioning.hpp File Reference}
+\label{conditioning_8hpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/conditioning.\+hpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/conditioning.\+hpp}}
+{\ttfamily \#include \char`\"{}../../src/extras/lib\+Numerics/matrix.\+h\char`\"{}}\\*
+Include dependency graph for conditioning.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structorsa_1_1UnnormalizerI}{orsa\+::\+Unnormalizer\+I}
+\begin{DoxyCompactList}\small\item\em Use inverse for unnormalize. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceorsa}{orsa}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \hyperlink{namespaceorsa_a313ec0d31d0828c8410a7f348a5e5263}{orsa\+::\+Mat}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a5a65641df90c8a53ffc7687ae3c5a01b}{orsa\+::\+Preconditioner\+From\+Points} (const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&points, \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} $\ast$T)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a87aaec1245eeedd272c37cd75c60788d}{orsa\+::\+Apply\+Transformation\+To\+Points} (const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&points, const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&T, \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} $\ast$transformed\+\_\+points)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a48cde20bdcad49a4e39730ccb995e6ec}{orsa\+::\+Normalize\+Points} (const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&points, \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} $\ast$normalized\+\_\+points, \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} $\ast$T)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a05e1c628ae168c7e05e52104275198ab}{orsa\+::\+Preconditioner\+From\+Points} (int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height, \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} $\ast$T)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{namespaceorsa_a6b5299dc61d20ea4a832f8d5f5d05421}{orsa\+::\+Normalize\+Points} (const \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} \&points, \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} $\ast$normalized\+\_\+points, \hyperlink{fundamental__model__test_8cpp_affbd7fad3144504d7bc7c0e933956246}{Mat} $\ast$T, int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height)
+\end{DoxyCompactItemize}

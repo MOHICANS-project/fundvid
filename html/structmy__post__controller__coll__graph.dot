@@ -1,0 +1,13 @@
+digraph "my_post_controller"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="my_post_controller",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" whole_image" ,fontname="Helvetica"];
+  Node2 [label="jvirt_sarray_control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjvirt__sarray__control.html"];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" b_s_info" ,fontname="Helvetica"];
+  Node3 [label="backing_store_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbacking__store__struct.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pub" ,fontname="Helvetica"];
+  Node4 [label="jpeg_d_post_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__d__post__controller.html"];
+}

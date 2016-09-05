@@ -1,0 +1,20 @@
+\hypertarget{libOrsa_2orsa__fundamental_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/orsa\+\_\+fundamental.cpp File Reference}
+\label{libOrsa_2orsa__fundamental_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/orsa\+\_\+fundamental.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/orsa\+\_\+fundamental.\+cpp}}
+{\ttfamily \#include \char`\"{}orsa\+\_\+fundamental.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fundamental\+\_\+model.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+Include dependency graph for orsa\+\_\+fundamental.\+cpp\+:
+% FIG 0
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceorsa}{orsa}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ double, double $>$ \hyperlink{namespaceorsa_a549d3d8f819944dabf30b57ed2f06460}{orsa\+::display\+\_\+stats} (const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&match, const std\+::vector$<$ int $>$ \&in, const \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ double $>$ \&F)
+\begin{DoxyCompactList}\small\item\em Display and return average/max error of inliers of fundamental matrix F. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceorsa_a64e49fabb585ae5ef2e5f9c6a40ac8d9}{orsa\+::orsa\+\_\+fundamental} (const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+matchings, int w1, int h1, int w2, int h2, double precision, int nb\+Iter, \hyperlink{classlibNumerics_1_1matrix}{matrix}$<$ double $>$ \&F, std\+::vector$<$ int $>$ \&vec\+\_\+inliers)
+\begin{DoxyCompactList}\small\item\em Estimate the fundamental matrix using O\+R\+S\+A method and refinement. \end{DoxyCompactList}\end{DoxyCompactItemize}

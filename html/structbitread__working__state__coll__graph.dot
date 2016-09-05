@@ -1,0 +1,48 @@
+digraph "bitread_working_state"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="bitread_working_state",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cinfo" ,fontname="Helvetica"];
+  Node2 [label="jpeg_decompress_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__decompress__struct.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cquantize" ,fontname="Helvetica"];
+  Node3 [label="jpeg_color_quantizer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__color__quantizer.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quant_tbl_ptrs" ,fontname="Helvetica"];
+  Node4 [label="JQUANT_TBL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structJQUANT__TBL.html"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ac_huff_tbl_ptrs\ndc_huff_tbl_ptrs" ,fontname="Helvetica"];
+  Node5 [label="JHUFF_TBL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structJHUFF__TBL.html"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" idct" ,fontname="Helvetica"];
+  Node6 [label="jpeg_inverse_dct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__inverse__dct.html"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cur_comp_info\ncomp_info" ,fontname="Helvetica"];
+  Node7 [label="jpeg_component_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__component__info.html"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quant_table" ,fontname="Helvetica"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" src" ,fontname="Helvetica"];
+  Node8 [label="jpeg_source_mgr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__source__mgr.html"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" coef" ,fontname="Helvetica"];
+  Node9 [label="jpeg_d_coef_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__d__coef__controller.html"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" coef_arrays" ,fontname="Helvetica"];
+  Node10 [label="jvirt_barray_control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjvirt__barray__control.html"];
+  Node10 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" b_s_info" ,fontname="Helvetica"];
+  Node11 [label="backing_store_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbacking__store__struct.html"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" marker_list" ,fontname="Helvetica"];
+  Node12 [label="jpeg_marker_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__marker__struct.html"];
+  Node12 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node13 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cconvert" ,fontname="Helvetica"];
+  Node13 [label="jpeg_color_deconverter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__color__deconverter.html"];
+  Node14 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entropy" ,fontname="Helvetica"];
+  Node14 [label="jpeg_entropy_decoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__entropy__decoder.html"];
+  Node15 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" marker" ,fontname="Helvetica"];
+  Node15 [label="jpeg_marker_reader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__marker__reader.html"];
+  Node16 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" main" ,fontname="Helvetica"];
+  Node16 [label="jpeg_d_main_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__d__main__controller.html"];
+  Node17 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" upsample" ,fontname="Helvetica"];
+  Node17 [label="jpeg_upsampler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__upsampler.html"];
+  Node18 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" inputctl" ,fontname="Helvetica"];
+  Node18 [label="jpeg_input_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__input__controller.html"];
+  Node19 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" post" ,fontname="Helvetica"];
+  Node19 [label="jpeg_d_post_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__d__post__controller.html"];
+  Node20 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" master" ,fontname="Helvetica"];
+  Node20 [label="jpeg_decomp_master",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__decomp__master.html"];
+}

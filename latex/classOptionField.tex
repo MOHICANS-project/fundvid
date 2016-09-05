@@ -1,0 +1,111 @@
+\hypertarget{classOptionField}{}\section{Option\+Field$<$ T $>$ Class Template Reference}
+\label{classOptionField}\index{Option\+Field$<$ T $>$@{Option\+Field$<$ T $>$}}
+
+
+\hyperlink{classOption}{Option} with an argument of type T, which must be readable by operator$>$$>$  
+
+
+
+
+{\ttfamily \#include $<$cmd\+Line.\+h$>$}
+
+
+
+Inheritance diagram for Option\+Field$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Option\+Field$<$ T $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOptionField_ad7651005016a2b98ffc53207f9dce681}{Option\+Field} (char \hyperlink{classOption_a496b793630fcab592951643fe2c651d6}{c}, T \&field, std\+::string name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. The result with be stored in variable . \end{DoxyCompactList}\item 
+bool \hyperlink{classOptionField_ac78faa83373a77a7b9149c339ecfd111}{check} (int \&argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Find option in argv\mbox{[}0\mbox{]} and argument in argv\mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+bool \hyperlink{classOptionField_ab5ae96fe39a59866635eacfba07a4957}{read\+\_\+param} (const std\+::string \&param)
+\begin{DoxyCompactList}\small\item\em Decode the string as template type T. \end{DoxyCompactList}\item 
+\hyperlink{classOption}{Option} $\ast$ \hyperlink{classOptionField_a44641afd5aae01ff1c440e8d00915f6f}{clone} () const 
+\begin{DoxyCompactList}\small\item\em Copy. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\bool \hyperlink{classOptionField_a0782cd5c0e54c4d8798b440dea4b2cad}{read\+\_\+param} (const std\+::string \&param)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class Option\+Field$<$ T $>$}
+
+\hyperlink{classOption}{Option} with an argument of type T, which must be readable by operator$>$$>$ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classOptionField_ad7651005016a2b98ffc53207f9dce681}{}\index{Option\+Field@{Option\+Field}!Option\+Field@{Option\+Field}}
+\index{Option\+Field@{Option\+Field}!Option\+Field@{Option\+Field}}
+\subsubsection[{Option\+Field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Option\+Field}$<$ T $>$\+::{\bf Option\+Field} (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{T \&}]{field, }
+\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classOptionField_ad7651005016a2b98ffc53207f9dce681}
+
+
+Constructor. The result with be stored in variable . 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classOptionField_ac78faa83373a77a7b9149c339ecfd111}{}\index{Option\+Field@{Option\+Field}!check@{check}}
+\index{check@{check}!Option\+Field@{Option\+Field}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf Option\+Field}$<$ T $>$\+::check (
+\begin{DoxyParamCaption}
+\item[{int \&}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classOptionField_ac78faa83373a77a7b9149c339ecfd111}
+
+
+Find option in argv\mbox{[}0\mbox{]} and argument in argv\mbox{[}1\mbox{]}. 
+
+Throw an exception (type std\+::string) if the argument cannot be read. 
+
+Implements \hyperlink{classOption_a4bb9b2803454fb8cb4e51eeebb7eccd0}{Option}.
+
+\hypertarget{classOptionField_a44641afd5aae01ff1c440e8d00915f6f}{}\index{Option\+Field@{Option\+Field}!clone@{clone}}
+\index{clone@{clone}!Option\+Field@{Option\+Field}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Option}$\ast$ {\bf Option\+Field}$<$ T $>$\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classOptionField_a44641afd5aae01ff1c440e8d00915f6f}
+
+
+Copy. 
+
+
+
+Implements \hyperlink{classOption_a38cd76e168098aa9dee95a711a843d61}{Option}.
+
+\hypertarget{classOptionField_ab5ae96fe39a59866635eacfba07a4957}{}\index{Option\+Field@{Option\+Field}!read\+\_\+param@{read\+\_\+param}}
+\index{read\+\_\+param@{read\+\_\+param}!Option\+Field@{Option\+Field}}
+\subsubsection[{read\+\_\+param}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf Option\+Field}$<$ T $>$\+::read\+\_\+param (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classOptionField_ab5ae96fe39a59866635eacfba07a4957}
+
+
+Decode the string as template type T. 
+
+\hypertarget{classOptionField_a0782cd5c0e54c4d8798b440dea4b2cad}{}\index{Option\+Field@{Option\+Field}!read\+\_\+param@{read\+\_\+param}}
+\index{read\+\_\+param@{read\+\_\+param}!Option\+Field@{Option\+Field}}
+\subsubsection[{read\+\_\+param}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ bool {\bf Option\+Field}$<$ std\+::string $>$\+::read\+\_\+param (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classOptionField_a0782cd5c0e54c4d8798b440dea4b2cad}
+Generic method would do $>$$>$\+\_\+field (stops at space) and signal unused chars. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/\hyperlink{cmdLine_8h}{cmd\+Line.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\hypertarget{structjpeg__upsampler}{}\section{jpeg\+\_\+upsampler Struct Reference}
+\label{structjpeg__upsampler}\index{jpeg\+\_\+upsampler@{jpeg\+\_\+upsampler}}
+
+
+{\ttfamily \#include $<$jpegint.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structjpeg__upsampler_a01ac725bfe78e05e7671547504a95346}{J\+M\+E\+T\+H\+O\+D} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void}, \hyperlink{jddctmgr_8c_a1964f006adb8fb80f57e455f6452aec1}{start\+\_\+pass},(\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo))
+\item 
+\hyperlink{structjpeg__upsampler_a23e9af5ee7259d39179063e3ece9fb8f}{J\+M\+E\+T\+H\+O\+D} (\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void}, upsample,(\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, \hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} $\ast$in\+\_\+row\+\_\+group\+\_\+ctr, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} in\+\_\+row\+\_\+groups\+\_\+avail, \hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} \hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} $\ast$out\+\_\+row\+\_\+ctr, \hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+O\+N} out\+\_\+rows\+\_\+avail))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{structjpeg__upsampler_af1ed2e1ca01280221b9c1305fc557e45}{need\+\_\+context\+\_\+rows}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structjpeg__upsampler_a01ac725bfe78e05e7671547504a95346}{}\index{jpeg\+\_\+upsampler@{jpeg\+\_\+upsampler}!J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}}
+\index{J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}!jpeg\+\_\+upsampler@{jpeg\+\_\+upsampler}}
+\subsubsection[{J\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+upsampler\+::\+J\+M\+E\+T\+H\+O\+D (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{, }
+\item[{{\bf start\+\_\+pass}}]{, }
+\item[{({\bf j\+\_\+decompress\+\_\+ptr} cinfo)}]{}
+\end{DoxyParamCaption}
+)}\label{structjpeg__upsampler_a01ac725bfe78e05e7671547504a95346}
+\hypertarget{structjpeg__upsampler_a23e9af5ee7259d39179063e3ece9fb8f}{}\index{jpeg\+\_\+upsampler@{jpeg\+\_\+upsampler}!J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}}
+\index{J\+M\+E\+T\+H\+O\+D@{J\+M\+E\+T\+H\+O\+D}!jpeg\+\_\+upsampler@{jpeg\+\_\+upsampler}}
+\subsubsection[{J\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+upsampler\+::\+J\+M\+E\+T\+H\+O\+D (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{, }
+\item[{upsample}]{, }
+\item[{({\bf j\+\_\+decompress\+\_\+ptr} cinfo, {\bf J\+S\+A\+M\+P\+I\+M\+A\+G\+E} input\+\_\+buf, {\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} $\ast$in\+\_\+row\+\_\+group\+\_\+ctr, {\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} in\+\_\+row\+\_\+groups\+\_\+avail, {\bf J\+S\+A\+M\+P\+A\+R\+R\+A\+Y} {\bf output\+\_\+buf}, {\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} $\ast$out\+\_\+row\+\_\+ctr, {\bf J\+D\+I\+M\+E\+N\+S\+I\+O\+N} out\+\_\+rows\+\_\+avail)}]{}
+\end{DoxyParamCaption}
+)}\label{structjpeg__upsampler_a23e9af5ee7259d39179063e3ece9fb8f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structjpeg__upsampler_af1ed2e1ca01280221b9c1305fc557e45}{}\index{jpeg\+\_\+upsampler@{jpeg\+\_\+upsampler}!need\+\_\+context\+\_\+rows@{need\+\_\+context\+\_\+rows}}
+\index{need\+\_\+context\+\_\+rows@{need\+\_\+context\+\_\+rows}!jpeg\+\_\+upsampler@{jpeg\+\_\+upsampler}}
+\subsubsection[{need\+\_\+context\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} jpeg\+\_\+upsampler\+::need\+\_\+context\+\_\+rows}\label{structjpeg__upsampler_af1ed2e1ca01280221b9c1305fc557e45}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/\hyperlink{jpegint_8h}{jpegint.\+h}\end{DoxyCompactItemize}

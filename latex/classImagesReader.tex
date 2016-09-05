@@ -1,0 +1,131 @@
+\hypertarget{classImagesReader}{}\section{Images\+Reader Class Reference}
+\label{classImagesReader}\index{Images\+Reader@{Images\+Reader}}
+
+
+A class for reading an image sequence stored inside a folder.  
+
+
+
+
+{\ttfamily \#include $<$imagesreader.\+h$>$}
+
+
+
+Inheritance diagram for Images\+Reader\+:
+% FIG 0
+
+
+Collaboration diagram for Images\+Reader\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImagesReader_a66aac81ae2489d91131e23beb63c8b74}{Images\+Reader} (std\+::string \+\_\+folder, std\+::string \+\_\+base, std\+::string \+\_\+extension, std\+::string log\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classImagesReader}{Images\+Reader} class. \end{DoxyCompactList}\item 
+virtual \hyperlink{classImagesReader_a4a63d54e2fa19c800db7c383e8570dbd}{$\sim$\+Images\+Reader} ()
+\item 
+bool \hyperlink{classImagesReader_a3fcbb1229da2f0cbb068b46b3b766fa5}{get\+Next\+Frame} (cv\+::\+Mat \&out)
+\begin{DoxyCompactList}\small\item\em Get the next frame in the sequence. \end{DoxyCompactList}\item 
+void \hyperlink{classImagesReader_a0b9527a0e9cb70b8ae1006208d715826}{reinitialize\+Stream} ()
+\begin{DoxyCompactList}\small\item\em Method for re-\/starting the image sequence reading from the beginning. \end{DoxyCompactList}\item 
+int \hyperlink{classImagesReader_ab5af03f18a9a0d85244922fa8b1dad4a}{get\+Frame\+Index} ()
+\begin{DoxyCompactList}\small\item\em Get the sequence number of the last frame which has been read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for reading an image sequence stored inside a folder. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classImagesReader_a66aac81ae2489d91131e23beb63c8b74}{}\index{Images\+Reader@{Images\+Reader}!Images\+Reader@{Images\+Reader}}
+\index{Images\+Reader@{Images\+Reader}!Images\+Reader@{Images\+Reader}}
+\subsubsection[{Images\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}Images\+Reader\+::\+Images\+Reader (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{\+\_\+folder, }
+\item[{std\+::string}]{\+\_\+base, }
+\item[{std\+::string}]{\+\_\+extension, }
+\item[{std\+::string}]{log\+\_\+path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classImagesReader_a66aac81ae2489d91131e23beb63c8b74}
+
+
+Constructor for \hyperlink{classImagesReader}{Images\+Reader} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+folder} & the directory containing the sequence of images \\
+\hline
+{\em \+\_\+base} & the base name of the file eg. foo1.\+png \\
+\hline
+{\em \+\_\+extension} & the extension of the image files (look at the Open\+C\+V documentation for the supported ones) \\
+\hline
+{\em \+\_\+log\+\_\+path} & the path of the log file containing the list of frame numbers of the image sequence \\
+\hline
+\end{DoxyParams}
+\hypertarget{classImagesReader_a4a63d54e2fa19c800db7c383e8570dbd}{}\index{Images\+Reader@{Images\+Reader}!````~Images\+Reader@{$\sim$\+Images\+Reader}}
+\index{````~Images\+Reader@{$\sim$\+Images\+Reader}!Images\+Reader@{Images\+Reader}}
+\subsubsection[{$\sim$\+Images\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}virtual Images\+Reader\+::$\sim$\+Images\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classImagesReader_a4a63d54e2fa19c800db7c383e8570dbd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classImagesReader_ab5af03f18a9a0d85244922fa8b1dad4a}{}\index{Images\+Reader@{Images\+Reader}!get\+Frame\+Index@{get\+Frame\+Index}}
+\index{get\+Frame\+Index@{get\+Frame\+Index}!Images\+Reader@{Images\+Reader}}
+\subsubsection[{get\+Frame\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int Images\+Reader\+::get\+Frame\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classImagesReader_ab5af03f18a9a0d85244922fa8b1dad4a}
+
+
+Get the sequence number of the last frame which has been read. 
+
+\begin{DoxyReturn}{Returns}
+the frame\textquotesingle{}s sequence number 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classFramesReader_ad4cc333eb51477d4f527ce38c7efb523}{Frames\+Reader}.
+
+\hypertarget{classImagesReader_a3fcbb1229da2f0cbb068b46b3b766fa5}{}\index{Images\+Reader@{Images\+Reader}!get\+Next\+Frame@{get\+Next\+Frame}}
+\index{get\+Next\+Frame@{get\+Next\+Frame}!Images\+Reader@{Images\+Reader}}
+\subsubsection[{get\+Next\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}bool Images\+Reader\+::get\+Next\+Frame (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classImagesReader_a3fcbb1229da2f0cbb068b46b3b766fa5}
+
+
+Get the next frame in the sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & structure where the frame content is written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the frame is correctly read, false if the end of the sequence is reached 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classFramesReader_a031675760ddfb5594834586b6c297454}{Frames\+Reader}.
+
+\hypertarget{classImagesReader_a0b9527a0e9cb70b8ae1006208d715826}{}\index{Images\+Reader@{Images\+Reader}!reinitialize\+Stream@{reinitialize\+Stream}}
+\index{reinitialize\+Stream@{reinitialize\+Stream}!Images\+Reader@{Images\+Reader}}
+\subsubsection[{reinitialize\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}void Images\+Reader\+::reinitialize\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classImagesReader_a0b9527a0e9cb70b8ae1006208d715826}
+
+
+Method for re-\/starting the image sequence reading from the beginning. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/reader/\hyperlink{imagesreader_8h}{imagesreader.\+h}\item 
+src/reader/\hyperlink{imagesreader_8cpp}{imagesreader.\+cpp}\end{DoxyCompactItemize}

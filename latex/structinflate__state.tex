@@ -1,0 +1,191 @@
+\hypertarget{structinflate__state}{}\section{inflate\+\_\+state Struct Reference}
+\label{structinflate__state}\index{inflate\+\_\+state@{inflate\+\_\+state}}
+
+
+{\ttfamily \#include $<$inflate.\+h$>$}
+
+
+
+Collaboration diagram for inflate\+\_\+state\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inflate_8h_a164ea0159d5f0b5f12a646f25f99ecea}{inflate\+\_\+mode} \hyperlink{structinflate__state_a9c7906fee7eeeb450b13576531ca639d}{mode}
+\item 
+int \hyperlink{structinflate__state_ab3cbcd2c5ff3b0b8b34ef402a13afdf7}{last}
+\item 
+int \hyperlink{structinflate__state_a990d157b5c0d4ba178c3361de9ce6561}{wrap}
+\item 
+int \hyperlink{structinflate__state_a2eb1cd634ed6baade952ffa5938ebcdc}{havedict}
+\item 
+int \hyperlink{structinflate__state_a9dcf6151443750d75b2283d0a3e62c39}{flags}
+\item 
+unsigned \hyperlink{structinflate__state_ae3d433011714e673b22e82156acc4416}{dmax}
+\item 
+unsigned long \hyperlink{structinflate__state_ae597e4f5c37b9f7881015384bf826371}{check}
+\item 
+unsigned long \hyperlink{structinflate__state_af9d1071eb75b1ee37a151ccec8dfee95}{total}
+\item 
+\hyperlink{zlib_8h_a40e9dcc294796d99b25e98fb06477fc8}{gz\+\_\+headerp} \hyperlink{structinflate__state_aac35b33a559009eb4bc0e2bdd8e9b5c6}{head}
+\item 
+unsigned \hyperlink{structinflate__state_a71f844b589ac450f17d69f3692a8c5cc}{wbits}
+\item 
+unsigned \hyperlink{structinflate__state_acca16ca86216760eaf307bf71e15e470}{wsize}
+\item 
+unsigned \hyperlink{structinflate__state_a6b56aabe80412784eadc1068981c9d00}{whave}
+\item 
+unsigned \hyperlink{structinflate__state_a1c3ec583646b68713e5c92151064a6dd}{wnext}
+\item 
+unsigned char \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$ \hyperlink{structinflate__state_a9cc4c0bde426383731394dcf91c40673}{window}
+\item 
+unsigned long \hyperlink{structinflate__state_a5a91b1c59e52f1aa7eda75b86b05b843}{hold}
+\item 
+unsigned \hyperlink{structinflate__state_ab37c3563f306f29e6ded8e933af14365}{bits}
+\item 
+unsigned \hyperlink{structinflate__state_a5179d4c9b332d976cce7c6cce6bdf3c1}{length}
+\item 
+unsigned \hyperlink{structinflate__state_af1e38258e8585b1a37854066ef9d939c}{offset}
+\item 
+unsigned \hyperlink{structinflate__state_a5b7b0be77d61e8468716c7f265dd0780}{extra}
+\item 
+\hyperlink{structcode}{code} const \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$ \hyperlink{structinflate__state_a4560e1eb3318f7ea41896be84de0679a}{lencode}
+\item 
+\hyperlink{structcode}{code} const \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$ \hyperlink{structinflate__state_a19f7ae2fe2682cb1163860f6991a107f}{distcode}
+\item 
+unsigned \hyperlink{structinflate__state_a3ff97e6b230d7551fc848ff9de0236e9}{lenbits}
+\item 
+unsigned \hyperlink{structinflate__state_a98952f3f8f420a05b567f080aca0eb4b}{distbits}
+\item 
+unsigned \hyperlink{structinflate__state_a62b5ea8559856b315b6c89d9114c2109}{ncode}
+\item 
+unsigned \hyperlink{structinflate__state_a489b005f4fe214353cd80b77b4f23194}{nlen}
+\item 
+unsigned \hyperlink{structinflate__state_a4415e5e51efdd0c8672e4c601caa4762}{ndist}
+\item 
+unsigned \hyperlink{structinflate__state_a4a2b15912256bcf7b39980e15095ba58}{have}
+\item 
+\hyperlink{structcode}{code} \hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+A\+R} $\ast$ \hyperlink{structinflate__state_a872bf267d91efb4143e9cfb812e670bb}{next}
+\item 
+unsigned short \hyperlink{structinflate__state_aa0620e64487c48635f6c3a11a0aeb99d}{lens} \mbox{[}320\mbox{]}
+\item 
+unsigned short \hyperlink{structinflate__state_a85403907f7f5b9d355821ffa2591456c}{work} \mbox{[}288\mbox{]}
+\item 
+\hyperlink{structcode}{code} \hyperlink{structinflate__state_af9581f523a7d8d47fba6cdd73eaf1edc}{codes} \mbox{[}\hyperlink{inftrees_8h_acef2f42f16f168d23ec870bd60a3b5f1}{E\+N\+O\+U\+G\+H}\mbox{]}
+\item 
+int \hyperlink{structinflate__state_a98b40fe23b7177bc8cd1d9d73edad593}{sane}
+\item 
+int \hyperlink{structinflate__state_ab666ce74a806fc77200ced9bc385cb0b}{back}
+\item 
+unsigned \hyperlink{structinflate__state_a0e3af9175f6d3b30f83af69062ba4dec}{was}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structinflate__state_ab666ce74a806fc77200ced9bc385cb0b}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!back@{back}}
+\index{back@{back}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}int inflate\+\_\+state\+::back}\label{structinflate__state_ab666ce74a806fc77200ced9bc385cb0b}
+\hypertarget{structinflate__state_ab37c3563f306f29e6ded8e933af14365}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!bits@{bits}}
+\index{bits@{bits}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{bits}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::bits}\label{structinflate__state_ab37c3563f306f29e6ded8e933af14365}
+\hypertarget{structinflate__state_ae597e4f5c37b9f7881015384bf826371}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!check@{check}}
+\index{check@{check}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long inflate\+\_\+state\+::check}\label{structinflate__state_ae597e4f5c37b9f7881015384bf826371}
+\hypertarget{structinflate__state_af9581f523a7d8d47fba6cdd73eaf1edc}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!codes@{codes}}
+\index{codes@{codes}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{codes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf code} inflate\+\_\+state\+::codes\mbox{[}{\bf E\+N\+O\+U\+G\+H}\mbox{]}}\label{structinflate__state_af9581f523a7d8d47fba6cdd73eaf1edc}
+\hypertarget{structinflate__state_a98952f3f8f420a05b567f080aca0eb4b}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!distbits@{distbits}}
+\index{distbits@{distbits}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{distbits}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::distbits}\label{structinflate__state_a98952f3f8f420a05b567f080aca0eb4b}
+\hypertarget{structinflate__state_a19f7ae2fe2682cb1163860f6991a107f}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!distcode@{distcode}}
+\index{distcode@{distcode}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{distcode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf code} const {\bf F\+A\+R}$\ast$ inflate\+\_\+state\+::distcode}\label{structinflate__state_a19f7ae2fe2682cb1163860f6991a107f}
+\hypertarget{structinflate__state_ae3d433011714e673b22e82156acc4416}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!dmax@{dmax}}
+\index{dmax@{dmax}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{dmax}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::dmax}\label{structinflate__state_ae3d433011714e673b22e82156acc4416}
+\hypertarget{structinflate__state_a5b7b0be77d61e8468716c7f265dd0780}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!extra@{extra}}
+\index{extra@{extra}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{extra}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::extra}\label{structinflate__state_a5b7b0be77d61e8468716c7f265dd0780}
+\hypertarget{structinflate__state_a9dcf6151443750d75b2283d0a3e62c39}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!flags@{flags}}
+\index{flags@{flags}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}int inflate\+\_\+state\+::flags}\label{structinflate__state_a9dcf6151443750d75b2283d0a3e62c39}
+\hypertarget{structinflate__state_a4a2b15912256bcf7b39980e15095ba58}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!have@{have}}
+\index{have@{have}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{have}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::have}\label{structinflate__state_a4a2b15912256bcf7b39980e15095ba58}
+\hypertarget{structinflate__state_a2eb1cd634ed6baade952ffa5938ebcdc}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!havedict@{havedict}}
+\index{havedict@{havedict}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{havedict}]{\setlength{\rightskip}{0pt plus 5cm}int inflate\+\_\+state\+::havedict}\label{structinflate__state_a2eb1cd634ed6baade952ffa5938ebcdc}
+\hypertarget{structinflate__state_aac35b33a559009eb4bc0e2bdd8e9b5c6}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!head@{head}}
+\index{head@{head}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gz\+\_\+headerp} inflate\+\_\+state\+::head}\label{structinflate__state_aac35b33a559009eb4bc0e2bdd8e9b5c6}
+\hypertarget{structinflate__state_a5a91b1c59e52f1aa7eda75b86b05b843}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!hold@{hold}}
+\index{hold@{hold}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{hold}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long inflate\+\_\+state\+::hold}\label{structinflate__state_a5a91b1c59e52f1aa7eda75b86b05b843}
+\hypertarget{structinflate__state_ab3cbcd2c5ff3b0b8b34ef402a13afdf7}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!last@{last}}
+\index{last@{last}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{last}]{\setlength{\rightskip}{0pt plus 5cm}int inflate\+\_\+state\+::last}\label{structinflate__state_ab3cbcd2c5ff3b0b8b34ef402a13afdf7}
+\hypertarget{structinflate__state_a3ff97e6b230d7551fc848ff9de0236e9}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!lenbits@{lenbits}}
+\index{lenbits@{lenbits}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{lenbits}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::lenbits}\label{structinflate__state_a3ff97e6b230d7551fc848ff9de0236e9}
+\hypertarget{structinflate__state_a4560e1eb3318f7ea41896be84de0679a}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!lencode@{lencode}}
+\index{lencode@{lencode}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{lencode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf code} const {\bf F\+A\+R}$\ast$ inflate\+\_\+state\+::lencode}\label{structinflate__state_a4560e1eb3318f7ea41896be84de0679a}
+\hypertarget{structinflate__state_a5179d4c9b332d976cce7c6cce6bdf3c1}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!length@{length}}
+\index{length@{length}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::length}\label{structinflate__state_a5179d4c9b332d976cce7c6cce6bdf3c1}
+\hypertarget{structinflate__state_aa0620e64487c48635f6c3a11a0aeb99d}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!lens@{lens}}
+\index{lens@{lens}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{lens}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short inflate\+\_\+state\+::lens\mbox{[}320\mbox{]}}\label{structinflate__state_aa0620e64487c48635f6c3a11a0aeb99d}
+\hypertarget{structinflate__state_a9c7906fee7eeeb450b13576531ca639d}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!mode@{mode}}
+\index{mode@{mode}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inflate\+\_\+mode} inflate\+\_\+state\+::mode}\label{structinflate__state_a9c7906fee7eeeb450b13576531ca639d}
+\hypertarget{structinflate__state_a62b5ea8559856b315b6c89d9114c2109}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!ncode@{ncode}}
+\index{ncode@{ncode}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{ncode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::ncode}\label{structinflate__state_a62b5ea8559856b315b6c89d9114c2109}
+\hypertarget{structinflate__state_a4415e5e51efdd0c8672e4c601caa4762}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!ndist@{ndist}}
+\index{ndist@{ndist}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{ndist}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::ndist}\label{structinflate__state_a4415e5e51efdd0c8672e4c601caa4762}
+\hypertarget{structinflate__state_a872bf267d91efb4143e9cfb812e670bb}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!next@{next}}
+\index{next@{next}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf code} {\bf F\+A\+R}$\ast$ inflate\+\_\+state\+::next}\label{structinflate__state_a872bf267d91efb4143e9cfb812e670bb}
+\hypertarget{structinflate__state_a489b005f4fe214353cd80b77b4f23194}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!nlen@{nlen}}
+\index{nlen@{nlen}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{nlen}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::nlen}\label{structinflate__state_a489b005f4fe214353cd80b77b4f23194}
+\hypertarget{structinflate__state_af1e38258e8585b1a37854066ef9d939c}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!offset@{offset}}
+\index{offset@{offset}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::offset}\label{structinflate__state_af1e38258e8585b1a37854066ef9d939c}
+\hypertarget{structinflate__state_a98b40fe23b7177bc8cd1d9d73edad593}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!sane@{sane}}
+\index{sane@{sane}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{sane}]{\setlength{\rightskip}{0pt plus 5cm}int inflate\+\_\+state\+::sane}\label{structinflate__state_a98b40fe23b7177bc8cd1d9d73edad593}
+\hypertarget{structinflate__state_af9d1071eb75b1ee37a151ccec8dfee95}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!total@{total}}
+\index{total@{total}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{total}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long inflate\+\_\+state\+::total}\label{structinflate__state_af9d1071eb75b1ee37a151ccec8dfee95}
+\hypertarget{structinflate__state_a0e3af9175f6d3b30f83af69062ba4dec}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!was@{was}}
+\index{was@{was}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{was}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::was}\label{structinflate__state_a0e3af9175f6d3b30f83af69062ba4dec}
+\hypertarget{structinflate__state_a71f844b589ac450f17d69f3692a8c5cc}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!wbits@{wbits}}
+\index{wbits@{wbits}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{wbits}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::wbits}\label{structinflate__state_a71f844b589ac450f17d69f3692a8c5cc}
+\hypertarget{structinflate__state_a6b56aabe80412784eadc1068981c9d00}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!whave@{whave}}
+\index{whave@{whave}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{whave}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::whave}\label{structinflate__state_a6b56aabe80412784eadc1068981c9d00}
+\hypertarget{structinflate__state_a9cc4c0bde426383731394dcf91c40673}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!window@{window}}
+\index{window@{window}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{window}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf F\+A\+R}$\ast$ inflate\+\_\+state\+::window}\label{structinflate__state_a9cc4c0bde426383731394dcf91c40673}
+\hypertarget{structinflate__state_a1c3ec583646b68713e5c92151064a6dd}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!wnext@{wnext}}
+\index{wnext@{wnext}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{wnext}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::wnext}\label{structinflate__state_a1c3ec583646b68713e5c92151064a6dd}
+\hypertarget{structinflate__state_a85403907f7f5b9d355821ffa2591456c}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!work@{work}}
+\index{work@{work}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{work}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short inflate\+\_\+state\+::work\mbox{[}288\mbox{]}}\label{structinflate__state_a85403907f7f5b9d355821ffa2591456c}
+\hypertarget{structinflate__state_a990d157b5c0d4ba178c3361de9ce6561}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!wrap@{wrap}}
+\index{wrap@{wrap}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{wrap}]{\setlength{\rightskip}{0pt plus 5cm}int inflate\+\_\+state\+::wrap}\label{structinflate__state_a990d157b5c0d4ba178c3361de9ce6561}
+\hypertarget{structinflate__state_acca16ca86216760eaf307bf71e15e470}{}\index{inflate\+\_\+state@{inflate\+\_\+state}!wsize@{wsize}}
+\index{wsize@{wsize}!inflate\+\_\+state@{inflate\+\_\+state}}
+\subsubsection[{wsize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned inflate\+\_\+state\+::wsize}\label{structinflate__state_acca16ca86216760eaf307bf71e15e470}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/zlib/\hyperlink{inflate_8h}{inflate.\+h}\end{DoxyCompactItemize}

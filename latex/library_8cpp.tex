@@ -1,0 +1,114 @@
+\hypertarget{library_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/extras/sift/library.cpp File Reference}
+\label{library_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/library.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/library.\+cpp}}
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/sift/library.\+h\char`\"{}}\\*
+Include dependency graph for library.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{library_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8cpp_af693e0f5e3a3c49c1e62b9eda038610c}{copy} (float $\ast$u, float $\ast$v, int size)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8cpp_a00d809e4f90a85e5d8a3eccea0713d00}{combine} (float $\ast$u, float a, float $\ast$v, float \hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}, float $\ast$w, int size)
+\begin{DoxyCompactList}\small\item\em v = u \end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{library_8cpp_a2f1ce9c76c23c80c8fa50430aee4d84f}{gauss} (int sflag, float std, int $\ast$size)
+\begin{DoxyCompactList}\small\item\em w=a$\ast$u+b$\ast$v \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8cpp_a7e988dd8b7f87803bcfb31b652e41ffb}{compute\+\_\+gradient\+\_\+orientation} (float $\ast$igray, float $\ast$grad, int w, int h)
+\begin{DoxyCompactList}\small\item\em 1\+D Gauss kernel \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8cpp_a4a8d3ce481c0a4be81fa54c0b6dadf0f}{sample} (float $\ast$igray, float $\ast$ogray, float factor, int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{library_8cpp_ae6d1175c94d04eaae445b90e128a7390}{draw\+\_\+line} (float $\ast$igray, int a0, int b0, int a1, int b1, float value, int w, int h)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{library_8cpp_a525335710b53cb064ca56b936120431e}{}\index{library.\+cpp@{library.\+cpp}!\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}}
+\index{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}!library.\+cpp@{library.\+cpp}}
+\subsubsection[{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}\label{library_8cpp_a525335710b53cb064ca56b936120431e}
+
+
+\subsection{Function Documentation}
+\hypertarget{library_8cpp_a00d809e4f90a85e5d8a3eccea0713d00}{}\index{library.\+cpp@{library.\+cpp}!combine@{combine}}
+\index{combine@{combine}!library.\+cpp@{library.\+cpp}}
+\subsubsection[{combine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} combine (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{u, }
+\item[{float}]{a, }
+\item[{float $\ast$}]{v, }
+\item[{float}]{b, }
+\item[{float $\ast$}]{w, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{library_8cpp_a00d809e4f90a85e5d8a3eccea0713d00}
+
+
+v = u 
+
+\hypertarget{library_8cpp_a7e988dd8b7f87803bcfb31b652e41ffb}{}\index{library.\+cpp@{library.\+cpp}!compute\+\_\+gradient\+\_\+orientation@{compute\+\_\+gradient\+\_\+orientation}}
+\index{compute\+\_\+gradient\+\_\+orientation@{compute\+\_\+gradient\+\_\+orientation}!library.\+cpp@{library.\+cpp}}
+\subsubsection[{compute\+\_\+gradient\+\_\+orientation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} compute\+\_\+gradient\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{igray, }
+\item[{float $\ast$}]{grad, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{library_8cpp_a7e988dd8b7f87803bcfb31b652e41ffb}
+
+
+1\+D Gauss kernel 
+
+\hypertarget{library_8cpp_af693e0f5e3a3c49c1e62b9eda038610c}{}\index{library.\+cpp@{library.\+cpp}!copy@{copy}}
+\index{copy@{copy}!library.\+cpp@{library.\+cpp}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} copy (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{u, }
+\item[{float $\ast$}]{v, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{library_8cpp_af693e0f5e3a3c49c1e62b9eda038610c}
+\hypertarget{library_8cpp_ae6d1175c94d04eaae445b90e128a7390}{}\index{library.\+cpp@{library.\+cpp}!draw\+\_\+line@{draw\+\_\+line}}
+\index{draw\+\_\+line@{draw\+\_\+line}!library.\+cpp@{library.\+cpp}}
+\subsubsection[{draw\+\_\+line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} draw\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{igray, }
+\item[{int}]{a0, }
+\item[{int}]{b0, }
+\item[{int}]{a1, }
+\item[{int}]{b1, }
+\item[{float}]{value, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{library_8cpp_ae6d1175c94d04eaae445b90e128a7390}
+\hypertarget{library_8cpp_a2f1ce9c76c23c80c8fa50430aee4d84f}{}\index{library.\+cpp@{library.\+cpp}!gauss@{gauss}}
+\index{gauss@{gauss}!library.\+cpp@{library.\+cpp}}
+\subsubsection[{gauss}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ gauss (
+\begin{DoxyParamCaption}
+\item[{int}]{sflag, }
+\item[{float}]{std, }
+\item[{int $\ast$}]{size}
+\end{DoxyParamCaption}
+)}\label{library_8cpp_a2f1ce9c76c23c80c8fa50430aee4d84f}
+
+
+w=a$\ast$u+b$\ast$v 
+
+\hypertarget{library_8cpp_a4a8d3ce481c0a4be81fa54c0b6dadf0f}{}\index{library.\+cpp@{library.\+cpp}!sample@{sample}}
+\index{sample@{sample}!library.\+cpp@{library.\+cpp}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} sample (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{igray, }
+\item[{float $\ast$}]{ogray, }
+\item[{float}]{factor, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{library_8cpp_a4a8d3ce481c0a4be81fa54c0b6dadf0f}

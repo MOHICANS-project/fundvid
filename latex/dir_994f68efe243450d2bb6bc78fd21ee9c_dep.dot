@@ -1,0 +1,11 @@
+digraph "src/third_party/orsa-fundamental_1.0/src/libOrsa/libNumerics" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_71f19c5c742a2e99bd24c6f780db6125 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="libOrsa" fontname="Helvetica", fontsize="10", URL="dir_71f19c5c742a2e99bd24c6f780db6125.html"]
+  dir_994f68efe243450d2bb6bc78fd21ee9c [shape=box, label="libNumerics", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_994f68efe243450d2bb6bc78fd21ee9c.html"];
+  }
+  dir_4a27f9e785ec53a1db7bb603f435ba9e [shape=box label="third_party" fillcolor="white" style="filled" color="red" URL="dir_4a27f9e785ec53a1db7bb603f435ba9e.html"];
+  dir_994f68efe243450d2bb6bc78fd21ee9c->dir_4a27f9e785ec53a1db7bb603f435ba9e [headlabel="2", labeldistance=1.5 headhref="dir_000020_000023.html"];
+}

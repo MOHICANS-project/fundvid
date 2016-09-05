@@ -1,0 +1,103 @@
+\hypertarget{jerror_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jerror.c File Reference}
+\label{jerror_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jerror.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jerror.\+c}}
+{\ttfamily \#include \char`\"{}../../../src\+\_\+orsa/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jerror.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jversion.\+h\char`\"{}}\\*
+Include dependency graph for jerror.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jerror_8c_a73efe787c131b385070f25d18b7c9aa4}{E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}~1
+\item 
+\#define \hyperlink{jerror_8c_a2cf1ff20bd8937b11087da4ae16fb2a4}{J\+M\+E\+S\+S\+A\+G\+E}(\hyperlink{structcode}{code},  string)~string ,
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jerror_8c_ac6efeb7cb80ae59d9ccdf1a16e20b2ff}{error\+\_\+exit} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jerror_8c_ac726e73416c0b5394af1a4275dd61346}{output\+\_\+message} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jerror_8c_a0f5ad91b180dbac82fb322091d5b390a}{emit\+\_\+message} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, int msg\+\_\+level)
+\item 
+\hyperlink{jerror_8c_a67e2834aaaecd3d95b274bf47f96cd2a}{format\+\_\+message} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo, char $\ast$buffer)
+\item 
+\hyperlink{jerror_8c_acd2c85048aefc02e56fc620974c5564b}{reset\+\_\+error\+\_\+mgr} (\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jerror_8c_aaadd0c536abf0e0c2d165ce2d727d9e8}{jpeg\+\_\+std\+\_\+error} (struct \hyperlink{structjpeg__error__mgr}{jpeg\+\_\+error\+\_\+mgr} $\ast$err)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$const \hyperlink{jerror_8c_afa7cc8e31762a79ba497b9bce74ce2fc}{jpeg\+\_\+std\+\_\+message\+\_\+table} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jerror_8c_a73efe787c131b385070f25d18b7c9aa4}{}\index{jerror.\+c@{jerror.\+c}!E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E~1}\label{jerror_8c_a73efe787c131b385070f25d18b7c9aa4}
+\hypertarget{jerror_8c_a2cf1ff20bd8937b11087da4ae16fb2a4}{}\index{jerror.\+c@{jerror.\+c}!J\+M\+E\+S\+S\+A\+G\+E@{J\+M\+E\+S\+S\+A\+G\+E}}
+\index{J\+M\+E\+S\+S\+A\+G\+E@{J\+M\+E\+S\+S\+A\+G\+E}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{J\+M\+E\+S\+S\+A\+G\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+M\+E\+S\+S\+A\+G\+E(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf code}, }
+\item[{}]{string}
+\end{DoxyParamCaption}
+)~string ,}\label{jerror_8c_a2cf1ff20bd8937b11087da4ae16fb2a4}
+
+
+\subsection{Function Documentation}
+\hypertarget{jerror_8c_a0f5ad91b180dbac82fb322091d5b390a}{}\index{jerror.\+c@{jerror.\+c}!emit\+\_\+message@{emit\+\_\+message}}
+\index{emit\+\_\+message@{emit\+\_\+message}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{emit\+\_\+message}]{\setlength{\rightskip}{0pt plus 5cm}emit\+\_\+message (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{int}]{msg\+\_\+level}
+\end{DoxyParamCaption}
+)}\label{jerror_8c_a0f5ad91b180dbac82fb322091d5b390a}
+\hypertarget{jerror_8c_ac6efeb7cb80ae59d9ccdf1a16e20b2ff}{}\index{jerror.\+c@{jerror.\+c}!error\+\_\+exit@{error\+\_\+exit}}
+\index{error\+\_\+exit@{error\+\_\+exit}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{error\+\_\+exit}]{\setlength{\rightskip}{0pt plus 5cm}error\+\_\+exit (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jerror_8c_ac6efeb7cb80ae59d9ccdf1a16e20b2ff}
+\hypertarget{jerror_8c_a67e2834aaaecd3d95b274bf47f96cd2a}{}\index{jerror.\+c@{jerror.\+c}!format\+\_\+message@{format\+\_\+message}}
+\index{format\+\_\+message@{format\+\_\+message}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{format\+\_\+message}]{\setlength{\rightskip}{0pt plus 5cm}format\+\_\+message (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo, }
+\item[{char $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}\label{jerror_8c_a67e2834aaaecd3d95b274bf47f96cd2a}
+\hypertarget{jerror_8c_aaadd0c536abf0e0c2d165ce2d727d9e8}{}\index{jerror.\+c@{jerror.\+c}!jpeg\+\_\+std\+\_\+error@{jpeg\+\_\+std\+\_\+error}}
+\index{jpeg\+\_\+std\+\_\+error@{jpeg\+\_\+std\+\_\+error}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{jpeg\+\_\+std\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+std\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{struct {\bf jpeg\+\_\+error\+\_\+mgr} $\ast$}]{err}
+\end{DoxyParamCaption}
+)}\label{jerror_8c_aaadd0c536abf0e0c2d165ce2d727d9e8}
+\hypertarget{jerror_8c_ac726e73416c0b5394af1a4275dd61346}{}\index{jerror.\+c@{jerror.\+c}!output\+\_\+message@{output\+\_\+message}}
+\index{output\+\_\+message@{output\+\_\+message}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{output\+\_\+message}]{\setlength{\rightskip}{0pt plus 5cm}output\+\_\+message (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jerror_8c_ac726e73416c0b5394af1a4275dd61346}
+\hypertarget{jerror_8c_acd2c85048aefc02e56fc620974c5564b}{}\index{jerror.\+c@{jerror.\+c}!reset\+\_\+error\+\_\+mgr@{reset\+\_\+error\+\_\+mgr}}
+\index{reset\+\_\+error\+\_\+mgr@{reset\+\_\+error\+\_\+mgr}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{reset\+\_\+error\+\_\+mgr}]{\setlength{\rightskip}{0pt plus 5cm}reset\+\_\+error\+\_\+mgr (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+common\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jerror_8c_acd2c85048aefc02e56fc620974c5564b}
+
+
+\subsection{Variable Documentation}
+\hypertarget{jerror_8c_afa7cc8e31762a79ba497b9bce74ce2fc}{}\index{jerror.\+c@{jerror.\+c}!jpeg\+\_\+std\+\_\+message\+\_\+table@{jpeg\+\_\+std\+\_\+message\+\_\+table}}
+\index{jpeg\+\_\+std\+\_\+message\+\_\+table@{jpeg\+\_\+std\+\_\+message\+\_\+table}!jerror.\+c@{jerror.\+c}}
+\subsubsection[{jpeg\+\_\+std\+\_\+message\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ const jpeg\+\_\+std\+\_\+message\+\_\+table\mbox{[}$\,$\mbox{]}}\label{jerror_8c_afa7cc8e31762a79ba497b9bce74ce2fc}

@@ -1,0 +1,119 @@
+\hypertarget{demo__lib__sift_8h}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/extras/sift/demo\+\_\+lib\+\_\+sift.h File Reference}
+\label{demo__lib__sift_8h}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/demo\+\_\+lib\+\_\+sift.\+h@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/extras/sift/demo\+\_\+lib\+\_\+sift.\+h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}../../../src/extras/lib\+Match/match.\+h\char`\"{}}\\*
+Include dependency graph for demo\+\_\+lib\+\_\+sift.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkeypoint}{keypoint}
+\begin{DoxyCompactList}\small\item\em keypoint structure, related to a keypoint \end{DoxyCompactList}\item 
+struct \hyperlink{structsiftPar}{sift\+Par}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{demo__lib__sift_8h_a3084318119345a92d7ba2de55777af45}{Ori\+Size}~8
+\begin{DoxyCompactList}\small\item\em Description For each octave\+: \end{DoxyCompactList}\item 
+\#define \hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size}~4
+\item 
+\#define \hyperlink{demo__lib__sift_8h_a260696a4c14b7bf151c6e8d23289fa78}{Vec\+Length}~\hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size} $\ast$ \hyperlink{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{Index\+Size} $\ast$ \hyperlink{demo__lib__sift_8h_a3084318119345a92d7ba2de55777af45}{Ori\+Size}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \hyperlink{structkeypoint}{keypoint} $>$ \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist}
+\item 
+typedef std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \hyperlink{demo__lib__sift_8h_a9dd1efc4e68780ad8514aece4af00223}{matchingslist}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8h_a37fa4dbbbbd70b1e58d30b4a10bd8db9}{default\+\_\+sift\+\_\+parameters} (\hyperlink{structsiftPar}{sift\+Par} \&par)
+\begin{DoxyCompactList}\small\item\em S\+I\+F\+T. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8h_a852a0dd7feaf286691ebbac49e1541b4}{compute\+\_\+sift\+\_\+keypoints} (float $\ast$input, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&\hyperlink{splines_8h_acc1d7c2028239b4e4ecb4563aab1014e}{keys}, int \hyperlink{png_8h_ad46179dbe9c68fdcea52b34c3480ec0f}{width}, int height, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{demo__lib__sift_8h_ad68534d4cc31e47f33d12f9afcd16f2b}{compute\+\_\+sift\+\_\+matches} (\hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&keys1, \hyperlink{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{keypointslist} \&keys2, \hyperlink{demo__lib__sift_8h_a9dd1efc4e68780ad8514aece4af00223}{matchingslist} \&matchings, \hyperlink{structsiftPar}{sift\+Par} \&par)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!Index\+Size@{Index\+Size}}
+\index{Index\+Size@{Index\+Size}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{Index\+Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define Index\+Size~4}\label{demo__lib__sift_8h_a70e8b9b833ca79dee4f64a8720562f1f}
+\hypertarget{demo__lib__sift_8h_a3084318119345a92d7ba2de55777af45}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!Ori\+Size@{Ori\+Size}}
+\index{Ori\+Size@{Ori\+Size}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{Ori\+Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define Ori\+Size~8}\label{demo__lib__sift_8h_a3084318119345a92d7ba2de55777af45}
+
+
+Description For each octave\+: 
+
+
+\begin{DoxyItemize}
+\item Divide in par.\+Scales scales
+\item Convolve and compute differences of convolved scales
+\end{DoxyItemize}
+
+Look for a 3x3 multiscale extrema and contraste enough and with no predominant direction (no 1d edge) For each extrema
+\begin{DoxyItemize}
+\item Compute orientation histogram in neighborhood.
+\item Generate a keypoint for each mode with this orientation For each keypoint
+\begin{DoxyItemize}
+\item Create vector 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{demo__lib__sift_8h_a260696a4c14b7bf151c6e8d23289fa78}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!Vec\+Length@{Vec\+Length}}
+\index{Vec\+Length@{Vec\+Length}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{Vec\+Length}]{\setlength{\rightskip}{0pt plus 5cm}\#define Vec\+Length~{\bf Index\+Size} $\ast$ {\bf Index\+Size} $\ast$ {\bf Ori\+Size}}\label{demo__lib__sift_8h_a260696a4c14b7bf151c6e8d23289fa78}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!keypointslist@{keypointslist}}
+\index{keypointslist@{keypointslist}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{keypointslist}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf keypoint}$>$ {\bf keypointslist}}\label{demo__lib__sift_8h_a303bcebc0d95324df92d71eead47c308}
+\hypertarget{demo__lib__sift_8h_a9dd1efc4e68780ad8514aece4af00223}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!matchingslist@{matchingslist}}
+\index{matchingslist@{matchingslist}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{matchingslist}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf Match}$>$ {\bf matchingslist}}\label{demo__lib__sift_8h_a9dd1efc4e68780ad8514aece4af00223}
+
+
+\subsection{Function Documentation}
+\hypertarget{demo__lib__sift_8h_a852a0dd7feaf286691ebbac49e1541b4}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!compute\+\_\+sift\+\_\+keypoints@{compute\+\_\+sift\+\_\+keypoints}}
+\index{compute\+\_\+sift\+\_\+keypoints@{compute\+\_\+sift\+\_\+keypoints}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{compute\+\_\+sift\+\_\+keypoints}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} compute\+\_\+sift\+\_\+keypoints (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{input, }
+\item[{{\bf keypointslist} \&}]{keys, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8h_a852a0dd7feaf286691ebbac49e1541b4}
+Make zoom of image if necessary
+
+Apply initial smoothing to input image to raise its smoothing to par.\+Init\+Sigma. We assume image from camera has smoothing of sigma = 0.\+5, which becomes sigma = 1.\+0 if image has been doubled. increase = sqrt(Init$^\wedge$2 -\/ Current$^\wedge$2)
+
+Convolve by par.\+Init\+Sigma at each step inside Octave\+Keypoints by steps of Subsample of factor 2 while reasonable image size
+
+Keep reducing image by factors of 2 until one dimension is smaller than minimum size at which a feature could be detected. \hypertarget{demo__lib__sift_8h_ad68534d4cc31e47f33d12f9afcd16f2b}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!compute\+\_\+sift\+\_\+matches@{compute\+\_\+sift\+\_\+matches}}
+\index{compute\+\_\+sift\+\_\+matches@{compute\+\_\+sift\+\_\+matches}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{compute\+\_\+sift\+\_\+matches}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} compute\+\_\+sift\+\_\+matches (
+\begin{DoxyParamCaption}
+\item[{{\bf keypointslist} \&}]{keys1, }
+\item[{{\bf keypointslist} \&}]{keys2, }
+\item[{{\bf matchingslist} \&}]{matchings, }
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8h_ad68534d4cc31e47f33d12f9afcd16f2b}
+\hypertarget{demo__lib__sift_8h_a37fa4dbbbbd70b1e58d30b4a10bd8db9}{}\index{demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}!default\+\_\+sift\+\_\+parameters@{default\+\_\+sift\+\_\+parameters}}
+\index{default\+\_\+sift\+\_\+parameters@{default\+\_\+sift\+\_\+parameters}!demo\+\_\+lib\+\_\+sift.\+h@{demo\+\_\+lib\+\_\+sift.\+h}}
+\subsubsection[{default\+\_\+sift\+\_\+parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} default\+\_\+sift\+\_\+parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf sift\+Par} \&}]{par}
+\end{DoxyParamCaption}
+)}\label{demo__lib__sift_8h_a37fa4dbbbbd70b1e58d30b4a10bd8db9}
+
+
+S\+I\+F\+T. 
+

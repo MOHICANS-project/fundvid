@@ -1,0 +1,99 @@
+\hypertarget{classFramesReader}{}\section{Frames\+Reader Class Reference}
+\label{classFramesReader}\index{Frames\+Reader@{Frames\+Reader}}
+
+
+Interface for reading frame sequences.  
+
+
+
+
+{\ttfamily \#include $<$frames\+\_\+reader.\+h$>$}
+
+
+
+Inheritance diagram for Frames\+Reader\+:
+% FIG 0
+
+
+Collaboration diagram for Frames\+Reader\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFramesReader_a58387168f406907d9c42aaae01a6f848}{Frames\+Reader} ()
+\item 
+virtual \hyperlink{classFramesReader_aae5a8e0eeb6a4a2f9470381727e04daf}{$\sim$\+Frames\+Reader} ()
+\item 
+virtual bool \hyperlink{classFramesReader_a031675760ddfb5594834586b6c297454}{get\+Next\+Frame} (cv\+::\+Mat \&frame)=0
+\begin{DoxyCompactList}\small\item\em Get the next frame in the sequence. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classFramesReader_ad4cc333eb51477d4f527ce38c7efb523}{get\+Frame\+Index} ()=0
+\begin{DoxyCompactList}\small\item\em Get the sequence number of the last frame which has been read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for reading frame sequences. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFramesReader_a58387168f406907d9c42aaae01a6f848}{}\index{Frames\+Reader@{Frames\+Reader}!Frames\+Reader@{Frames\+Reader}}
+\index{Frames\+Reader@{Frames\+Reader}!Frames\+Reader@{Frames\+Reader}}
+\subsubsection[{Frames\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}Frames\+Reader\+::\+Frames\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classFramesReader_a58387168f406907d9c42aaae01a6f848}
+\hypertarget{classFramesReader_aae5a8e0eeb6a4a2f9470381727e04daf}{}\index{Frames\+Reader@{Frames\+Reader}!````~Frames\+Reader@{$\sim$\+Frames\+Reader}}
+\index{````~Frames\+Reader@{$\sim$\+Frames\+Reader}!Frames\+Reader@{Frames\+Reader}}
+\subsubsection[{$\sim$\+Frames\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}virtual Frames\+Reader\+::$\sim$\+Frames\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classFramesReader_aae5a8e0eeb6a4a2f9470381727e04daf}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFramesReader_ad4cc333eb51477d4f527ce38c7efb523}{}\index{Frames\+Reader@{Frames\+Reader}!get\+Frame\+Index@{get\+Frame\+Index}}
+\index{get\+Frame\+Index@{get\+Frame\+Index}!Frames\+Reader@{Frames\+Reader}}
+\subsubsection[{get\+Frame\+Index}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Frames\+Reader\+::get\+Frame\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classFramesReader_ad4cc333eb51477d4f527ce38c7efb523}
+
+
+Get the sequence number of the last frame which has been read. 
+
+\begin{DoxyReturn}{Returns}
+the frame\textquotesingle{}s sequence number 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classImagesReader_ab5af03f18a9a0d85244922fa8b1dad4a}{Images\+Reader}.
+
+\hypertarget{classFramesReader_a031675760ddfb5594834586b6c297454}{}\index{Frames\+Reader@{Frames\+Reader}!get\+Next\+Frame@{get\+Next\+Frame}}
+\index{get\+Next\+Frame@{get\+Next\+Frame}!Frames\+Reader@{Frames\+Reader}}
+\subsubsection[{get\+Next\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Frames\+Reader\+::get\+Next\+Frame (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classFramesReader_a031675760ddfb5594834586b6c297454}
+
+
+Get the next frame in the sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & structure where the frame content is written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the frame is correctly read, false if the end of the sequence is reached 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classImagesReader_a3fcbb1229da2f0cbb068b46b3b766fa5}{Images\+Reader}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/reader/\hyperlink{frames__reader_8h}{frames\+\_\+reader.\+h}\end{DoxyCompactItemize}

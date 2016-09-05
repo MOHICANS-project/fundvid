@@ -1,0 +1,58 @@
+\hypertarget{fundamental__model_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/lib\+Orsa/fundamental\+\_\+model.cpp File Reference}
+\label{fundamental__model_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/fundamental\+\_\+model.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/lib\+Orsa/fundamental\+\_\+model.\+cpp}}
+
+
+Fundamental matrix model.  
+
+
+{\ttfamily \#include \char`\"{}../../src/lib\+Orsa/fundamental\+\_\+model.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/lib\+Orsa/cubic\+Roots.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../src/extras/lib\+Numerics/numerics.\+h\char`\"{}}\\*
+Include dependency graph for fundamental\+\_\+model.\+cpp\+:
+% FIG 0
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceorsa}{orsa}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fundamental__model_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{namespaceorsa_a108794b95a065355756c616b8e389614}{orsa\+::det3} (const Orsa\+Model\+::\+Vec \&v1, const Orsa\+Model\+::\+Vec \&v2, const Orsa\+Model\+::\+Vec \&v3)
+\begin{DoxyCompactList}\small\item\em Determinant of 3x3 matrix expressed by its columns (v1 v2 v3). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fundamental matrix model. 
+
+\begin{DoxyAuthor}{Author}
+Pascal Monasse, Pierre Moulon
+\end{DoxyAuthor}
+Copyright (c) 2011-\/2015 Pascal Monasse, Pierre Moulon All rights reserved.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}.
+
+\begin{DoxyAuthor}{Author}
+Pascal Monasse, Pierre Moulon
+\end{DoxyAuthor}
+Copyright (c) 2011 Pascal Monasse, Pierre Moulon All rights reserved.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{fundamental__model_8cpp_a525335710b53cb064ca56b936120431e}{}\index{fundamental\+\_\+model.\+cpp@{fundamental\+\_\+model.\+cpp}!\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}}
+\index{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S@{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}!fundamental\+\_\+model.\+cpp@{fundamental\+\_\+model.\+cpp}}
+\subsubsection[{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+E\+S}\label{fundamental__model_8cpp_a525335710b53cb064ca56b936120431e}

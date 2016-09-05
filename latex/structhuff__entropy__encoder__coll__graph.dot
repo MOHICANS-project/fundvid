@@ -1,0 +1,43 @@
+digraph "huff_entropy_encoder"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="huff_entropy_encoder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ac_derived_tbls\ndc_derived_tbls" ];
+  Node2 [label="c_derived_tbl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structc__derived__tbl.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pub" ];
+  Node3 [label="jpeg_entropy_encoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__entropy__encoder.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" saved" ];
+  Node4 [label="savable_state",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsavable__state.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cinfo" ];
+  Node5 [label="jpeg_compress_struct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__compress__struct.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prep" ];
+  Node6 [label="jpeg_c_prep_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__c__prep__controller.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quant_tbl_ptrs" ];
+  Node7 [label="JQUANT_TBL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structJQUANT__TBL.html"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ac_huff_tbl_ptrs\ndc_huff_tbl_ptrs" ];
+  Node8 [label="JHUFF_TBL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structJHUFF__TBL.html"];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" master" ];
+  Node9 [label="jpeg_comp_master",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__comp__master.html"];
+  Node10 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cur_comp_info\ncomp_info" ];
+  Node10 [label="jpeg_component_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__component__info.html"];
+  Node7 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quant_table" ];
+  Node3 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entropy" ];
+  Node11 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" downsample" ];
+  Node11 [label="jpeg_downsampler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__downsampler.html"];
+  Node12 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" coef" ];
+  Node12 [label="jpeg_c_coef_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__c__coef__controller.html"];
+  Node13 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" marker" ];
+  Node13 [label="jpeg_marker_writer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__marker__writer.html"];
+  Node14 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fdct" ];
+  Node14 [label="jpeg_forward_dct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__forward__dct.html"];
+  Node15 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dest" ];
+  Node15 [label="jpeg_destination_mgr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__destination__mgr.html"];
+  Node16 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" main" ];
+  Node16 [label="jpeg_c_main_controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__c__main__controller.html"];
+  Node17 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" script_space\nscan_info" ];
+  Node17 [label="jpeg_scan_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__scan__info.html"];
+  Node18 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cconvert" ];
+  Node18 [label="jpeg_color_converter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structjpeg__color__converter.html"];
+}

@@ -1,0 +1,116 @@
+\hypertarget{jdatasrc_8c}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/third\+\_\+party/jpeg/jdatasrc.c File Reference}
+\label{jdatasrc_8c}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdatasrc.\+c@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/third\+\_\+party/jpeg/jdatasrc.\+c}}
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jerror.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jinclude.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../../src/third\+\_\+party/jpeg/jpeglib.\+h\char`\"{}}\\*
+Include dependency graph for jdatasrc.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmy__source__mgr}{my\+\_\+source\+\_\+mgr}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jdatasrc_8c_a8f53190540130db759820c0d9ab78f60}{I\+N\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~4096	/$\ast$ choose an efficiently fread\textquotesingle{}able size $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structmy__source__mgr}{my\+\_\+source\+\_\+mgr} $\ast$ \hyperlink{jdatasrc_8c_a49288434c1d7bc0883779c6489426881}{my\+\_\+src\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{jdatasrc_8c_ada3118e56d083499ce141e98ec116648}{init\+\_\+source} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatasrc_8c_aa4da9436fa5844fbcf0451c90895929c}{init\+\_\+mem\+\_\+source} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatasrc_8c_aa3542f61993ed4a526694556fac65941}{fill\+\_\+input\+\_\+buffer} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatasrc_8c_ac81725797eefec4799bd039532059596}{fill\+\_\+mem\+\_\+input\+\_\+buffer} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatasrc_8c_ae539a6d1c36b54a0ef6168fecdc8379e}{skip\+\_\+input\+\_\+data} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, long num\+\_\+bytes)
+\item 
+\hyperlink{jdatasrc_8c_a0337cf4ba81c0f78c48b5de379cca33e}{term\+\_\+source} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo)
+\item 
+\hyperlink{jdatasrc_8c_a5c64dcb64988502d3d2a261bb6397554}{jpeg\+\_\+stdio\+\_\+src} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, F\+I\+L\+E $\ast$\hyperlink{jpeglib_8h_af19157da745ecb3f2b088c8f3a10c0a7}{infile})
+\item 
+\hyperlink{jdatasrc_8c_a1f38fdb8af9205acdd9bfd3aec9b1ff1}{jpeg\+\_\+mem\+\_\+src} (\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr} cinfo, unsigned char $\ast$\hyperlink{jpeglib_8h_a828fdafb2e2281d9af5baa9fd262004a}{inbuffer}, unsigned long \hyperlink{jpeglib_8h_a609b2edbe33c38c33f36820d1df5cc6f}{insize})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jdatasrc_8c_a8f53190540130db759820c0d9ab78f60}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!I\+N\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{I\+N\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{I\+N\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{I\+N\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{I\+N\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+P\+U\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~4096	/$\ast$ choose an efficiently fread\textquotesingle{}able size $\ast$/}\label{jdatasrc_8c_a8f53190540130db759820c0d9ab78f60}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{jdatasrc_8c_a49288434c1d7bc0883779c6489426881}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!my\+\_\+src\+\_\+ptr@{my\+\_\+src\+\_\+ptr}}
+\index{my\+\_\+src\+\_\+ptr@{my\+\_\+src\+\_\+ptr}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{my\+\_\+src\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf my\+\_\+source\+\_\+mgr}$\ast$ {\bf my\+\_\+src\+\_\+ptr}}\label{jdatasrc_8c_a49288434c1d7bc0883779c6489426881}
+
+
+\subsection{Function Documentation}
+\hypertarget{jdatasrc_8c_aa3542f61993ed4a526694556fac65941}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!fill\+\_\+input\+\_\+buffer@{fill\+\_\+input\+\_\+buffer}}
+\index{fill\+\_\+input\+\_\+buffer@{fill\+\_\+input\+\_\+buffer}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{fill\+\_\+input\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}fill\+\_\+input\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_aa3542f61993ed4a526694556fac65941}
+\hypertarget{jdatasrc_8c_ac81725797eefec4799bd039532059596}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!fill\+\_\+mem\+\_\+input\+\_\+buffer@{fill\+\_\+mem\+\_\+input\+\_\+buffer}}
+\index{fill\+\_\+mem\+\_\+input\+\_\+buffer@{fill\+\_\+mem\+\_\+input\+\_\+buffer}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{fill\+\_\+mem\+\_\+input\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}fill\+\_\+mem\+\_\+input\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_ac81725797eefec4799bd039532059596}
+\hypertarget{jdatasrc_8c_aa4da9436fa5844fbcf0451c90895929c}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!init\+\_\+mem\+\_\+source@{init\+\_\+mem\+\_\+source}}
+\index{init\+\_\+mem\+\_\+source@{init\+\_\+mem\+\_\+source}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{init\+\_\+mem\+\_\+source}]{\setlength{\rightskip}{0pt plus 5cm}init\+\_\+mem\+\_\+source (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_aa4da9436fa5844fbcf0451c90895929c}
+\hypertarget{jdatasrc_8c_ada3118e56d083499ce141e98ec116648}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!init\+\_\+source@{init\+\_\+source}}
+\index{init\+\_\+source@{init\+\_\+source}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{init\+\_\+source}]{\setlength{\rightskip}{0pt plus 5cm}init\+\_\+source (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_ada3118e56d083499ce141e98ec116648}
+\hypertarget{jdatasrc_8c_a1f38fdb8af9205acdd9bfd3aec9b1ff1}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!jpeg\+\_\+mem\+\_\+src@{jpeg\+\_\+mem\+\_\+src}}
+\index{jpeg\+\_\+mem\+\_\+src@{jpeg\+\_\+mem\+\_\+src}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{jpeg\+\_\+mem\+\_\+src}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+mem\+\_\+src (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{unsigned char $\ast$}]{inbuffer, }
+\item[{unsigned long}]{insize}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_a1f38fdb8af9205acdd9bfd3aec9b1ff1}
+\hypertarget{jdatasrc_8c_a5c64dcb64988502d3d2a261bb6397554}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!jpeg\+\_\+stdio\+\_\+src@{jpeg\+\_\+stdio\+\_\+src}}
+\index{jpeg\+\_\+stdio\+\_\+src@{jpeg\+\_\+stdio\+\_\+src}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{jpeg\+\_\+stdio\+\_\+src}]{\setlength{\rightskip}{0pt plus 5cm}jpeg\+\_\+stdio\+\_\+src (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{F\+I\+L\+E $\ast$}]{infile}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_a5c64dcb64988502d3d2a261bb6397554}
+\hypertarget{jdatasrc_8c_ae539a6d1c36b54a0ef6168fecdc8379e}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!skip\+\_\+input\+\_\+data@{skip\+\_\+input\+\_\+data}}
+\index{skip\+\_\+input\+\_\+data@{skip\+\_\+input\+\_\+data}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{skip\+\_\+input\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}skip\+\_\+input\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo, }
+\item[{long}]{num\+\_\+bytes}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_ae539a6d1c36b54a0ef6168fecdc8379e}
+\hypertarget{jdatasrc_8c_a0337cf4ba81c0f78c48b5de379cca33e}{}\index{jdatasrc.\+c@{jdatasrc.\+c}!term\+\_\+source@{term\+\_\+source}}
+\index{term\+\_\+source@{term\+\_\+source}!jdatasrc.\+c@{jdatasrc.\+c}}
+\subsubsection[{term\+\_\+source}]{\setlength{\rightskip}{0pt plus 5cm}term\+\_\+source (
+\begin{DoxyParamCaption}
+\item[{{\bf j\+\_\+decompress\+\_\+ptr}}]{cinfo}
+\end{DoxyParamCaption}
+)}\label{jdatasrc_8c_a0337cf4ba81c0f78c48b5de379cca33e}

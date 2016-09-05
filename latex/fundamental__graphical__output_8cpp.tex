@@ -1,0 +1,171 @@
+\hypertarget{fundamental__graphical__output_8cpp}{}\section{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.0/src/demo/fundamental\+\_\+graphical\+\_\+output.cpp File Reference}
+\label{fundamental__graphical__output_8cpp}\index{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/fundamental\+\_\+graphical\+\_\+output.\+cpp@{src/third\+\_\+party/orsa-\/fundamental\+\_\+1.\+0/src/demo/fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+
+
+Graphical output to show fundamental matrix estimation.  
+
+
+{\ttfamily \#include \char`\"{}fundamental\+\_\+graphical\+\_\+output.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include \char`\"{}demo/warping.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+Image/image\+\_\+drawing.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib\+Image/image\+\_\+io.\+hpp\char`\"{}}\\*
+Include dependency graph for fundamental\+\_\+graphical\+\_\+output.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structMatch}{Match} \hyperlink{fundamental__graphical__output_8cpp_a772bd905d3bf8937d0cf5a9ece6422ef}{inv} (const \hyperlink{structMatch}{Match} \&m)
+\begin{DoxyCompactList}\small\item\em Inverse match. \end{DoxyCompactList}\item 
+\hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \hyperlink{fundamental__graphical__output_8cpp_adc7a2b94c98c3c8203d48569ddcc9b50}{zoomtrans} (double z, double dx, double dy)
+\begin{DoxyCompactList}\small\item\em Return 3x3 zoom-\/translation matrix. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{fundamental__graphical__output_8cpp_ae5dc9a6f825c91569b3bab2dbe151675}{draw\+\_\+points} (const \hyperlink{structMatch}{Match} \&m, \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} col, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$im, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&T1, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&T2)
+\begin{DoxyCompactList}\small\item\em Draw endpoints of the match in concatenated image. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{fundamental__graphical__output_8cpp_aa452eaf7f0016ce5cfcda8ab3047a0d1}{display\+\_\+error} (const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&F, const \hyperlink{structMatch}{Match} \&m, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&H, \hyperlink{classRect}{Rect} R, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$out)
+\begin{DoxyCompactList}\small\item\em Show epipolar line corresponding to (m.\+x1,m.\+y1) and orthogonal projection of (m.\+x2,m.\+y2) on this line. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{fundamental__graphical__output_8cpp_a1f476956edfdc6221bf0c8f8a45b003b}{display\+\_\+match} (const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+matchings, std\+::vector$<$ int $>$ \&vec\+\_\+inliers, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ $\ast$F, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&H1, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&H2, const \hyperlink{classRect}{Rect} \&R1, const \hyperlink{classRect}{Rect} \&R2, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$in, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$out)
+\begin{DoxyCompactList}\small\item\em Output inlier and oulier matches in image files. \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{fundamental__graphical__output_8cpp_a58ac817d29961a7f9b6238ecc023ce1d}{draw\+\_\+small\+\_\+epi} (const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&F, const \hyperlink{structMatch}{Match} \&m, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ \&T, double half\+Length, \hyperlink{classImage}{Image}$<$ \hyperlink{pixelTypes_8hpp_a0bffee690fce7a74e4191ec31022d33b}{R\+G\+B\+Color} $>$ $\ast$out)
+\begin{DoxyCompactList}\small\item\em Draw portion of epipolar line associated to (m.\+x1,m.\+y1). \end{DoxyCompactList}\item 
+\hyperlink{png_8h_aa8c59027f9ab2769342f248709d68d17}{void} \hyperlink{fundamental__graphical__output_8cpp_a00226bf9c72ade78aedae187bf8c6377}{fundamental\+\_\+graphical\+\_\+output} (const \hyperlink{classImage}{Image}$<$ unsigned char $>$ \&image1, const \hyperlink{classImage}{Image}$<$ unsigned char $>$ \&image2, const std\+::vector$<$ \hyperlink{structMatch}{Match} $>$ \&vec\+\_\+all, std\+::vector$<$ int $>$ vec\+\_\+in, const \hyperlink{classlibNumerics_1_1matrix}{lib\+Numerics\+::matrix}$<$ double $>$ $\ast$F, const char $\ast$file\+In, const char $\ast$file\+Out, const char $\ast$file\+Epi)
+\begin{DoxyCompactList}\small\item\em Graphical output for estimated fundamental matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Graphical output to show fundamental matrix estimation. 
+
+\begin{DoxyAuthor}{Author}
+Lionel Moisan, Pascal Monasse, Pierre Moulon
+\end{DoxyAuthor}
+Copyright (c) 2016 Lionel Moisan, Pascal Monasse, Pierre Moulon All rights reserved.
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+\subsection{Function Documentation}
+\hypertarget{fundamental__graphical__output_8cpp_aa452eaf7f0016ce5cfcda8ab3047a0d1}{}\index{fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}!display\+\_\+error@{display\+\_\+error}}
+\index{display\+\_\+error@{display\+\_\+error}!fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+\subsubsection[{display\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} display\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{F, }
+\item[{const {\bf Match} \&}]{m, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{H, }
+\item[{{\bf Rect}}]{R, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\label{fundamental__graphical__output_8cpp_aa452eaf7f0016ce5cfcda8ab3047a0d1}
+
+
+Show epipolar line corresponding to (m.\+x1,m.\+y1) and orthogonal projection of (m.\+x2,m.\+y2) on this line. 
+
+Epipolar line is clipped inside rectangle  and coordinates are transformed by homography  before display. \hypertarget{fundamental__graphical__output_8cpp_a1f476956edfdc6221bf0c8f8a45b003b}{}\index{fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}!display\+\_\+match@{display\+\_\+match}}
+\index{display\+\_\+match@{display\+\_\+match}!fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+\subsubsection[{display\+\_\+match}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} display\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+matchings, }
+\item[{std\+::vector$<$ int $>$ \&}]{vec\+\_\+inliers, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ $\ast$}]{F, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{H1, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{H2, }
+\item[{const {\bf Rect} \&}]{R1, }
+\item[{const {\bf Rect} \&}]{R2, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{in, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\label{fundamental__graphical__output_8cpp_a1f476956edfdc6221bf0c8f8a45b003b}
+
+
+Output inlier and oulier matches in image files. 
+
+\hypertarget{fundamental__graphical__output_8cpp_ae5dc9a6f825c91569b3bab2dbe151675}{}\index{fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}!draw\+\_\+points@{draw\+\_\+points}}
+\index{draw\+\_\+points@{draw\+\_\+points}!fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+\subsubsection[{draw\+\_\+points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} draw\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match} \&}]{m, }
+\item[{{\bf R\+G\+B\+Color}}]{col, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{im, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{T1, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{T2}
+\end{DoxyParamCaption}
+)}\label{fundamental__graphical__output_8cpp_ae5dc9a6f825c91569b3bab2dbe151675}
+
+
+Draw endpoints of the match in concatenated image. 
+
+\hypertarget{fundamental__graphical__output_8cpp_a58ac817d29961a7f9b6238ecc023ce1d}{}\index{fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}!draw\+\_\+small\+\_\+epi@{draw\+\_\+small\+\_\+epi}}
+\index{draw\+\_\+small\+\_\+epi@{draw\+\_\+small\+\_\+epi}!fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+\subsubsection[{draw\+\_\+small\+\_\+epi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} draw\+\_\+small\+\_\+epi (
+\begin{DoxyParamCaption}
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{F, }
+\item[{const {\bf Match} \&}]{m, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ \&}]{T, }
+\item[{double}]{half\+Length, }
+\item[{{\bf Image}$<$ {\bf R\+G\+B\+Color} $>$ $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\label{fundamental__graphical__output_8cpp_a58ac817d29961a7f9b6238ecc023ce1d}
+
+
+Draw portion of epipolar line associated to (m.\+x1,m.\+y1). 
+
+The center of the segment is the projection of (m.\+x2,m.\+y2) on the line. \hypertarget{fundamental__graphical__output_8cpp_a00226bf9c72ade78aedae187bf8c6377}{}\index{fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}!fundamental\+\_\+graphical\+\_\+output@{fundamental\+\_\+graphical\+\_\+output}}
+\index{fundamental\+\_\+graphical\+\_\+output@{fundamental\+\_\+graphical\+\_\+output}!fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+\subsubsection[{fundamental\+\_\+graphical\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} fundamental\+\_\+graphical\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{const {\bf Image}$<$ unsigned char $>$ \&}]{image1, }
+\item[{const {\bf Image}$<$ unsigned char $>$ \&}]{image2, }
+\item[{const std\+::vector$<$ {\bf Match} $>$ \&}]{vec\+\_\+all, }
+\item[{std\+::vector$<$ int $>$}]{vec\+\_\+in, }
+\item[{const {\bf lib\+Numerics\+::matrix}$<$ double $>$ $\ast$}]{F, }
+\item[{const char $\ast$}]{file\+In, }
+\item[{const char $\ast$}]{file\+Out, }
+\item[{const char $\ast$}]{file\+Epi}
+\end{DoxyParamCaption}
+)}\label{fundamental__graphical__output_8cpp_a00226bf9c72ade78aedae187bf8c6377}
+
+
+Graphical output for estimated fundamental matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image1,image2} & Left and right images. \\
+\hline
+{\em vec\+\_\+all} & All correspondences. \\
+\hline
+{\em vec\+\_\+in} & Index in vec\+\_\+all of inliers. \\
+\hline
+{\em F} & Estimated fundamental matrix (null pointer if failure). \\
+\hline
+{\em file\+In} & File name of inlier correspondences (can be null). \\
+\hline
+{\em file\+Out} & File name of outlier correspondences (can be null). \\
+\hline
+{\em file\+Epi} & File name of output epipolar lines (can be null). \\
+\hline
+\end{DoxyParams}
+\hypertarget{fundamental__graphical__output_8cpp_a772bd905d3bf8937d0cf5a9ece6422ef}{}\index{fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}!inv@{inv}}
+\index{inv@{inv}!fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+\subsubsection[{inv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Match} inv (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{fundamental__graphical__output_8cpp_a772bd905d3bf8937d0cf5a9ece6422ef}
+
+
+Inverse match. 
+
+\hypertarget{fundamental__graphical__output_8cpp_adc7a2b94c98c3c8203d48569ddcc9b50}{}\index{fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}!zoomtrans@{zoomtrans}}
+\index{zoomtrans@{zoomtrans}!fundamental\+\_\+graphical\+\_\+output.\+cpp@{fundamental\+\_\+graphical\+\_\+output.\+cpp}}
+\subsubsection[{zoomtrans}]{\setlength{\rightskip}{0pt plus 5cm}{\bf lib\+Numerics\+::matrix}$<$double$>$ zoomtrans (
+\begin{DoxyParamCaption}
+\item[{double}]{z, }
+\item[{double}]{dx, }
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+)}\label{fundamental__graphical__output_8cpp_adc7a2b94c98c3c8203d48569ddcc9b50}
+
+
+Return 3x3 zoom-\/translation matrix. 
+
