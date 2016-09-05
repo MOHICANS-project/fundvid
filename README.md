@@ -17,7 +17,7 @@ The project includes a modified version of the Lionel Moisan's ORSA estimation f
 Build instructions here..............
 
 ## How to use the demo
-An example configuration file is provided in the *example* folder, and includes all the parameters and the input data accepted by the program. The description of the meaning of each entry is already included in the configuration file.
+An example configuration file is provided in the [example](src/example) folder, and includes all the parameters and the input data accepted by the program. The description of the meaning of each entry is already included in the configuration file.
 
 ## Licensing
 This software is released under the GPL3 license. See the [LICENSE](LICENSE) file for more information.
