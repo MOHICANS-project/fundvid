@@ -1,4 +1,4 @@
-# fundvid-demo
+# fundvid
 **Fundamental matrix estimation from synchronized video stream**
 
 ## Authors
