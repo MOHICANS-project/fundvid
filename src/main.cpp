@@ -47,16 +47,16 @@ int main(int argc, char **argv) {
 	std::string logf=GVars3::GV3::get<std::string>("log_path");
 
 	std::string fname=GVars3::GV3::get<std::string>("first_img_name");
-	if(!std::regex_match(fname.c_str(),std::regex("[A-Za-z]+\\d+[.]{1}\\w+",std::regex_constants::extended))){
+	if(!std::regex_match(fname.c_str(),std::regex("[A-Za-z]+\\d+[.]{1}\\w+"))){
 		std::cerr << "Image file name formatting error" << std::endl;
 		return 2;
 	}
 
 	std::smatch match;
-	std::regex_search(fname,match,std::regex("([A-Za-z]+)\\d+[.]{1}\\w+",std::regex_constants::extended));
+	std::regex_search(fname,match,std::regex("([A-Za-z]+)\\d+[.]{1}\\w+"));
 	std::string base=match[1].str();
 	std::smatch match2;
-	std::regex_search(fname,match2,std::regex("[A-Za-z]+\\d+[.]{1}(\\w+)",std::regex_constants::extended));
+	std::regex_search(fname,match2,std::regex("[A-Za-z]+\\d+[.]{1}(\\w+)"));
 	std::string ext=match2[1].str();
 
 	double alpha=GVars3::GV3::get<double>("alpha");
