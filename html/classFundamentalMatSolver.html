@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -112,6 +113,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa14f6188fecb5c16a7df7009503d72d"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFundamentalMatSolver.html#aaa14f6188fecb5c16a7df7009503d72d">solve</a> ()</td></tr>
 <tr class="memdesc:aaa14f6188fecb5c16a7df7009503d72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the fundamental matrix iterative estimation problem.  <a href="#aaa14f6188fecb5c16a7df7009503d72d">More...</a><br /></td></tr>
 <tr class="separator:aaa14f6188fecb5c16a7df7009503d72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572160dbf6b86cf73d286ccb7e4e16db"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; cv::Point2f &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFundamentalMatSolver.html#a572160dbf6b86cf73d286ccb7e4e16db">getInliersImage0</a> () const </td></tr>
+<tr class="memdesc:a572160dbf6b86cf73d286ccb7e4e16db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inliers from image 0 getter.  <a href="#a572160dbf6b86cf73d286ccb7e4e16db">More...</a><br /></td></tr>
+<tr class="separator:a572160dbf6b86cf73d286ccb7e4e16db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76b13f602843bbbeb8d558f324bf9df"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; cv::Point2f &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFundamentalMatSolver.html#aa76b13f602843bbbeb8d558f324bf9df">getInliersImage1</a> () const </td></tr>
+<tr class="memdesc:aa76b13f602843bbbeb8d558f324bf9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inliers from image 1 getter.  <a href="#aa76b13f602843bbbeb8d558f324bf9df">More...</a><br /></td></tr>
+<tr class="separator:aa76b13f602843bbbeb8d558f324bf9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class containing the template method of the proposed fundamental matrix iterative estimation algorithm. </p>
@@ -260,6 +267,58 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a572160dbf6b86cf73d286ccb7e4e16db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;cv::Point2f&gt;&amp; FundamentalMatSolver::getInliersImage0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inliers from image 0 getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vector of inlier points of image 0 found at the last estimation. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa76b13f602843bbbeb8d558f324bf9df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;cv::Point2f&gt;&amp; FundamentalMatSolver::getInliersImage1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inliers from image 1 getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vector of inlier points of image 1 found at the last estimation. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aaa14f6188fecb5c16a7df7009503d72d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -285,7 +344,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 2 2016 17:51:47 for F Video Estimator by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 6 2016 15:35:29 for F Video Estimator by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -3,10 +3,11 @@ var indexSectionsWithContent =
   0: "acdefgilmnoprsw~",
   1: "aefilos",
   2: "f",
-  3: "aefilmos",
+  3: "aefilmors",
   4: "acdefgilmoprsw~",
   5: "dinp",
-  6: "fs"
+  6: "fs",
+  7: "f"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "defines"
+  6: "defines",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Files",
   4: "Functions",
   5: "Variables",
-  6: "Macros"
+  6: "Macros",
+  7: "Pages"
 };
 

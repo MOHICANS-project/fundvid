@@ -1,0 +1,58 @@
+{\bfseries Fundamental matrix estimation from syncrhonized video stream}
+
+\subsection*{Authors}
+
+Nicola Pellicanò (\href{mailto:nicola.pellicano@u-psud.fr}{\tt nicola.\+pellicano@u-\/psud.\+fr})
+
+Emanuel Aldea (\href{mailto:emanuel.aldea@u-psud.fr}{\tt emanuel.\+aldea@u-\/psud.\+fr})
+
+Sylvie Le Hégarat-\/\+Mascle (\href{mailto:sylvie.le-hegarat@u-psud.fr}{\tt sylvie.\+le-\/hegarat@u-\/psud.\+fr})
+
+S\+A\+T\+I\+E -\/ C\+N\+R\+S U\+M\+R 8029
+
+Paris-\/\+Sud University, Paris-\/\+Saclay University, France
+
+\subsection*{Overview}
+
+The project implements a demo version of the algorithm for fundamental matrix estimation presented in the paper
+
+{\itshape Robust Wide Baseline Pose Estimation from Video}, Nicola Pellicanò, Emanuel Aldea, Sylvie Le Hégarat-\/\+Mascle, accepted for presentation at I\+C\+P\+R 2016.
+
+You are pleased to cite this paper if you want to reuse this software.
+
+The algorithm performs the estimation of the fundamental matrix of a wide baseline stereo pair by processing frames extracted from synchronized videos, addressing the limitations of single image pairs estimations and naive temporal accumulation of matches.
+
+This work is part of the project \char`\"{}\+M\+O\+H\+I\+C\+A\+N\+S \+: Towards Modelling High-\/density Crowds for Assisting Planning and Safety\char`\"{}. For more information about this project see \href{http://hebergement.u-psud.fr/emi/MOHICANS/index.html}{\tt here}
+
+\subsection*{Dependencies and build}
+
+The library has four dependencies from third party software\+:
+\begin{DoxyItemize}
+\item \href{http://opencv.org}{\tt Open\+C\+V} (Computer vision package)
+\item \href{https://github.com/edrosten/gvars}{\tt gvars} (Configuration library)
+\item \href{http://users.ics.forth.gr/~lourakis/levmar/}{\tt levmar} (Library for Levenberg-\/\+Marquardt non linear optimization)
+\item \href{http://eigen.tuxfamily.org/index.php?title=Main_Page}{\tt eigen} (Linear algebra library)
+\end{DoxyItemize}
+
+The project includes a modified version of the Lionel Moisan\textquotesingle{}s O\+R\+S\+A estimation framework. For more information see \href{http://www.ipol.im/pub/art/2016/147/}{\tt here}
+
+\subsection*{How to use the demo}
+
+An example configuration file is provided in the \href{src/example}{\tt example} folder, and includes all the parameters and the input data accepted by the program. The description of the meaning of each entry is already included in the configuration file.
+
+\subsection*{Licensing}
+
+This software is released under the G\+P\+L3 license. See the \mbox{[}L\+I\+C\+E\+N\+S\+E\mbox{]}(L\+I\+C\+E\+N\+S\+E) file for more information.
+
+\subsection*{Bug reports}
+
+For any question and bug report please contact \href{mailto:nicola.pellicano@u-psud.fr}{\tt nicola.\+pellicano@u-\/psud.\+fr}.
+
+\subsection*{Notes on the current version}
+
+
+\begin{DoxyItemize}
+\item The code at the actual state accepts frames as a sequence of images. The sequence for each camera is stored inside a separate folder, and image frames at same instant have the same name (ex.\+cam0/img65.png and cam1/img65.\+png). An interface is included to make simple the extension to new forms of input gathering in the future.
+\item O\+R\+S\+A estimator implementation is the default, but extensibility to other estimators (like R\+A\+N\+S\+A\+C) is provided.
+\item Interfaces for adding different non linear optimizers and different matchers (used at initialization stage) are provided. 
+\end{DoxyItemize}

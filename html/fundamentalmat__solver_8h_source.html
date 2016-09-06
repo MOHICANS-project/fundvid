@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -126,31 +127,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">double</span> th;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> last_frame;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> refinement(<span class="keyword">const</span> cv::vector&lt;cv::Point2f&gt; &amp; inl0,<span class="keyword">const</span> cv::vector&lt;cv::Point2f&gt; &amp; inl1,Eigen::Matrix3d &amp; eF);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> labelCorePoints(<span class="keyword">const</span> std::vector&lt;cv::Point2f&gt; &amp; matches,std::vector&lt;bool&gt; &amp; is_core);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::vector&lt;cv::Point2f&gt; inliers_image0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::vector&lt;cv::Point2f&gt; inliers_image1;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classFundamentalMatSolver.html#a499f89d03b8a4c64737da228fcee4793">   63</a></span>&#160;    <a class="code" href="classFundamentalMatSolver.html#a499f89d03b8a4c64737da228fcee4793">FundamentalMatSolver</a>(<a class="code" href="classFramesReader.html">FramesReader</a>* _r1,<a class="code" href="classFramesReader.html">FramesReader</a>* _r2,<a class="code" href="classFVMatcher_1_1AbstractMatcher.html">FVMatcher::AbstractMatcher</a>* _init_matcher,<a class="code" href="classAbstractEstimator.html">AbstractEstimator</a>* _estimator,<a class="code" href="classFundMatOptimizer.html">FundMatOptimizer</a>* _optimizer,<span class="keywordtype">double</span> _alpha, <span class="keywordtype">int</span> _num_pts, <span class="keywordtype">double</span> _epsilon, <span class="keywordtype">double</span> _sigma_high, <span class="keywordtype">double</span> _sigma_low,<span class="keywordtype">int</span> _depth,<span class="keywordtype">double</span> _th,<span class="keywordtype">int</span> _last_frame):</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                r1(_r1),r2(_r2),init_matcher(_init_matcher),estimator(_estimator),optimizer(_optimizer),alpha(_alpha),num_pts(_num_pts),epsilon(_epsilon),sigma_high(_sigma_high),sigma_low(_sigma_low),depth(_depth),th(_th),last_frame(_last_frame){};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classFundamentalMatSolver.html#a15aff405ed4f1670053c83bfca672149">   66</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classFundamentalMatSolver.html#a15aff405ed4f1670053c83bfca672149">~FundamentalMatSolver</a>(){</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">delete</span> r1;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">delete</span> r2;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">delete</span> init_matcher;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">delete</span> estimator;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">delete</span> optimizer;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    };</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;     cv::Mat <a class="code" href="classFundamentalMatSolver.html#aaa14f6188fecb5c16a7df7009503d72d">solve</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SRC_FUNDAMENTALMAT_SOLVER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classFundamentalMatSolver_html_a499f89d03b8a4c64737da228fcee4793"><div class="ttname"><a href="classFundamentalMatSolver.html#a499f89d03b8a4c64737da228fcee4793">FundamentalMatSolver::FundamentalMatSolver</a></div><div class="ttdeci">FundamentalMatSolver(FramesReader *_r1, FramesReader *_r2, FVMatcher::AbstractMatcher *_init_matcher, AbstractEstimator *_estimator, FundMatOptimizer *_optimizer, double _alpha, int _num_pts, double _epsilon, double _sigma_high, double _sigma_low, int _depth, double _th, int _last_frame)</div><div class="ttdoc">FundamentalMatSolver constructor. </div><div class="ttdef"><b>Definition:</b> fundamentalmat_solver.h:63</div></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> refinement(<span class="keyword">const</span> cv::vector&lt;cv::Point2f&gt; &amp; inl0,<span class="keyword">const</span> cv::vector&lt;cv::Point2f&gt; &amp; inl1,Eigen::Matrix3d &amp; eF);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> labelCorePoints(<span class="keyword">const</span> std::vector&lt;cv::Point2f&gt; &amp; matches,std::vector&lt;bool&gt; &amp; is_core);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classFundamentalMatSolver.html#a499f89d03b8a4c64737da228fcee4793">   66</a></span>&#160;    <a class="code" href="classFundamentalMatSolver.html#a499f89d03b8a4c64737da228fcee4793">FundamentalMatSolver</a>(<a class="code" href="classFramesReader.html">FramesReader</a>* _r1,<a class="code" href="classFramesReader.html">FramesReader</a>* _r2,<a class="code" href="classFVMatcher_1_1AbstractMatcher.html">FVMatcher::AbstractMatcher</a>* _init_matcher,<a class="code" href="classAbstractEstimator.html">AbstractEstimator</a>* _estimator,<a class="code" href="classFundMatOptimizer.html">FundMatOptimizer</a>* _optimizer,<span class="keywordtype">double</span> _alpha, <span class="keywordtype">int</span> _num_pts, <span class="keywordtype">double</span> _epsilon, <span class="keywordtype">double</span> _sigma_high, <span class="keywordtype">double</span> _sigma_low,<span class="keywordtype">int</span> _depth,<span class="keywordtype">double</span> _th,<span class="keywordtype">int</span> _last_frame):</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                r1(_r1),r2(_r2),init_matcher(_init_matcher),estimator(_estimator),optimizer(_optimizer),alpha(_alpha),num_pts(_num_pts),epsilon(_epsilon),sigma_high(_sigma_high),sigma_low(_sigma_low),depth(_depth),th(_th),last_frame(_last_frame){};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classFundamentalMatSolver.html#a15aff405ed4f1670053c83bfca672149">   69</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classFundamentalMatSolver.html#a15aff405ed4f1670053c83bfca672149">~FundamentalMatSolver</a>(){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">delete</span> r1;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">delete</span> r2;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">delete</span> init_matcher;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">delete</span> estimator;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">delete</span> optimizer;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;     cv::Mat <a class="code" href="classFundamentalMatSolver.html#aaa14f6188fecb5c16a7df7009503d72d">solve</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classFundamentalMatSolver.html#a572160dbf6b86cf73d286ccb7e4e16db">   87</a></span>&#160;    <span class="keyword">const</span> std::vector&lt;cv::Point2f&gt;&amp; <a class="code" href="classFundamentalMatSolver.html#a572160dbf6b86cf73d286ccb7e4e16db">getInliersImage0</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> inliers_image0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classFundamentalMatSolver.html#aa76b13f602843bbbeb8d558f324bf9df">   95</a></span>&#160;    <span class="keyword">const</span> std::vector&lt;cv::Point2f&gt;&amp; <a class="code" href="classFundamentalMatSolver.html#aa76b13f602843bbbeb8d558f324bf9df">getInliersImage1</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> inliers_image1;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SRC_FUNDAMENTALMAT_SOLVER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classFundamentalMatSolver_html_a499f89d03b8a4c64737da228fcee4793"><div class="ttname"><a href="classFundamentalMatSolver.html#a499f89d03b8a4c64737da228fcee4793">FundamentalMatSolver::FundamentalMatSolver</a></div><div class="ttdeci">FundamentalMatSolver(FramesReader *_r1, FramesReader *_r2, FVMatcher::AbstractMatcher *_init_matcher, AbstractEstimator *_estimator, FundMatOptimizer *_optimizer, double _alpha, int _num_pts, double _epsilon, double _sigma_high, double _sigma_low, int _depth, double _th, int _last_frame)</div><div class="ttdoc">FundamentalMatSolver constructor. </div><div class="ttdef"><b>Definition:</b> fundamentalmat_solver.h:66</div></div>
 <div class="ttc" id="lm__fundmat__optimizer_8h_html"><div class="ttname"><a href="lm__fundmat__optimizer_8h.html">lm_fundmat_optimizer.h</a></div></div>
 <div class="ttc" id="abstract__estimator_8h_html"><div class="ttname"><a href="abstract__estimator_8h.html">abstract_estimator.h</a></div></div>
 <div class="ttc" id="classFVMatcher_1_1AbstractMatcher_html"><div class="ttname"><a href="classFVMatcher_1_1AbstractMatcher.html">FVMatcher::AbstractMatcher</a></div><div class="ttdoc">Interface for getting keypoints matches from two sources. </div><div class="ttdef"><b>Definition:</b> abstract_matcher.h:33</div></div>
+<div class="ttc" id="classFundamentalMatSolver_html_a572160dbf6b86cf73d286ccb7e4e16db"><div class="ttname"><a href="classFundamentalMatSolver.html#a572160dbf6b86cf73d286ccb7e4e16db">FundamentalMatSolver::getInliersImage0</a></div><div class="ttdeci">const std::vector&lt; cv::Point2f &gt; &amp; getInliersImage0() const </div><div class="ttdoc">Inliers from image 0 getter. </div><div class="ttdef"><b>Definition:</b> fundamentalmat_solver.h:87</div></div>
+<div class="ttc" id="classFundamentalMatSolver_html_aa76b13f602843bbbeb8d558f324bf9df"><div class="ttname"><a href="classFundamentalMatSolver.html#aa76b13f602843bbbeb8d558f324bf9df">FundamentalMatSolver::getInliersImage1</a></div><div class="ttdeci">const std::vector&lt; cv::Point2f &gt; &amp; getInliersImage1() const </div><div class="ttdoc">Inliers from image 1 getter. </div><div class="ttdef"><b>Definition:</b> fundamentalmat_solver.h:95</div></div>
 <div class="ttc" id="frames__reader_8h_html"><div class="ttname"><a href="frames__reader_8h.html">frames_reader.h</a></div></div>
-<div class="ttc" id="classFundamentalMatSolver_html_a15aff405ed4f1670053c83bfca672149"><div class="ttname"><a href="classFundamentalMatSolver.html#a15aff405ed4f1670053c83bfca672149">FundamentalMatSolver::~FundamentalMatSolver</a></div><div class="ttdeci">virtual ~FundamentalMatSolver()</div><div class="ttdef"><b>Definition:</b> fundamentalmat_solver.h:66</div></div>
+<div class="ttc" id="classFundamentalMatSolver_html_a15aff405ed4f1670053c83bfca672149"><div class="ttname"><a href="classFundamentalMatSolver.html#a15aff405ed4f1670053c83bfca672149">FundamentalMatSolver::~FundamentalMatSolver</a></div><div class="ttdeci">virtual ~FundamentalMatSolver()</div><div class="ttdef"><b>Definition:</b> fundamentalmat_solver.h:69</div></div>
 <div class="ttc" id="classFramesReader_html"><div class="ttname"><a href="classFramesReader.html">FramesReader</a></div><div class="ttdoc">Interface for reading frame sequences. </div><div class="ttdef"><b>Definition:</b> frames_reader.h:18</div></div>
 <div class="ttc" id="classFundMatOptimizer_html"><div class="ttname"><a href="classFundMatOptimizer.html">FundMatOptimizer</a></div><div class="ttdoc">Generic interface for fundamental matrix optimization. </div><div class="ttdef"><b>Definition:</b> fundmat_optimizer.h:17</div></div>
 <div class="ttc" id="classFundamentalMatSolver_html_aaa14f6188fecb5c16a7df7009503d72d"><div class="ttname"><a href="classFundamentalMatSolver.html#aaa14f6188fecb5c16a7df7009503d72d">FundamentalMatSolver::solve</a></div><div class="ttdeci">cv::Mat solve()</div><div class="ttdoc">Solve the fundamental matrix iterative estimation problem. </div><div class="ttdef"><b>Definition:</b> fundamentalmat_solver.cpp:100</div></div>
@@ -160,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 2 2016 17:51:47 for F Video Estimator by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 6 2016 15:35:29 for F Video Estimator by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
