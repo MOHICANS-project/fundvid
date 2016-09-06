@@ -34,6 +34,8 @@ The library has four dependencies from third party software:
 
 The project includes a modified version of the Lionel Moisan's ORSA estimation framework. For more information see [here] (http://www.ipol.im/pub/art/2016/147/)
 
+**Important**: *gcc 4.9* or higher is needed for building. 
+
 
 ## How to use the demo
 An example configuration file is provided in the [example](src/example) folder, and includes all the parameters and the input data accepted by the program. The description of the meaning of each entry is already included in the configuration file. 
