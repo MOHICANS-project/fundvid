@@ -154,6 +154,15 @@ cv::Mat FundamentalMatSolver::solve(){
 	eigen2cv(ecurrentCov,currentCov);
 
 	cv::Mat image0,image1;
+
+	inliers_image0.clear();
+	inliers_image1.clear();
+	for (size_t i = 0; i < currentMatches0.size(); ++i) {
+		inliers_image0.push_back(currentMatches0[i]);
+		inliers_image1.push_back(currentMatches1[i]);
+	}
+
+
 	while(r1->getNextFrame(image0) && r2->getNextFrame(image1) && (last_frame<0 || r2->getFrameIndex()<=last_frame)){
 
 		std::cout << "Estimation frame "<< r1->getFrameIndex() << " in progress..." << std::endl;
