@@ -21,7 +21,11 @@ Collaboration diagram for Fundamental\+Mat\+Solver\+:
 virtual \hyperlink{classFundamentalMatSolver_a15aff405ed4f1670053c83bfca672149}{$\sim$\+Fundamental\+Mat\+Solver} ()
 \item 
 cv\+::\+Mat \hyperlink{classFundamentalMatSolver_aaa14f6188fecb5c16a7df7009503d72d}{solve} ()
-\begin{DoxyCompactList}\small\item\em Solve the fundamental matrix iterative estimation problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Solve the fundamental matrix iterative estimation problem. \end{DoxyCompactList}\item 
+const std\+::vector$<$ cv\+::\+Point2f $>$ \& \hyperlink{classFundamentalMatSolver_a572160dbf6b86cf73d286ccb7e4e16db}{get\+Inliers\+Image0} () const 
+\begin{DoxyCompactList}\small\item\em Inliers from image 0 getter. \end{DoxyCompactList}\item 
+const std\+::vector$<$ cv\+::\+Point2f $>$ \& \hyperlink{classFundamentalMatSolver_aa76b13f602843bbbeb8d558f324bf9df}{get\+Inliers\+Image1} () const 
+\begin{DoxyCompactList}\small\item\em Inliers from image 1 getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -90,6 +94,34 @@ Class containing the template method of the proposed fundamental matrix iterativ
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classFundamentalMatSolver_a572160dbf6b86cf73d286ccb7e4e16db}{}\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}!get\+Inliers\+Image0@{get\+Inliers\+Image0}}
+\index{get\+Inliers\+Image0@{get\+Inliers\+Image0}!Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
+\subsubsection[{get\+Inliers\+Image0}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$cv\+::\+Point2f$>$\& Fundamental\+Mat\+Solver\+::get\+Inliers\+Image0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classFundamentalMatSolver_a572160dbf6b86cf73d286ccb7e4e16db}
+
+
+Inliers from image 0 getter. 
+
+\begin{DoxyReturn}{Returns}
+the vector of inlier points of image 0 found at the last estimation. 
+\end{DoxyReturn}
+\hypertarget{classFundamentalMatSolver_aa76b13f602843bbbeb8d558f324bf9df}{}\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}!get\+Inliers\+Image1@{get\+Inliers\+Image1}}
+\index{get\+Inliers\+Image1@{get\+Inliers\+Image1}!Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
+\subsubsection[{get\+Inliers\+Image1}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$cv\+::\+Point2f$>$\& Fundamental\+Mat\+Solver\+::get\+Inliers\+Image1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classFundamentalMatSolver_aa76b13f602843bbbeb8d558f324bf9df}
+
+
+Inliers from image 1 getter. 
+
+\begin{DoxyReturn}{Returns}
+the vector of inlier points of image 1 found at the last estimation. 
+\end{DoxyReturn}
 \hypertarget{classFundamentalMatSolver_aaa14f6188fecb5c16a7df7009503d72d}{}\index{Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}!solve@{solve}}
 \index{solve@{solve}!Fundamental\+Mat\+Solver@{Fundamental\+Mat\+Solver}}
 \subsubsection[{solve}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Fundamental\+Mat\+Solver\+::solve (
