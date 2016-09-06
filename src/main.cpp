@@ -124,9 +124,9 @@ int main(int argc, char **argv) {
 		std::string outfolder(argv[2]);
 		std::string outfundamental=outfolder+"/f.txt";
 		out.open(outfundamental.c_str());
-		out << Fsol.at<float>(0,0) << " " << Fsol.at<float>(0,1) << " " << Fsol.at<float>(0,2) << std::endl;
-		out << Fsol.at<float>(1,0) << " " << Fsol.at<float>(1,1) << " " << Fsol.at<float>(1,2) << std::endl;
-		out << Fsol.at<float>(2,0) << " " << Fsol.at<float>(2,1) << " " << Fsol.at<float>(2,2) << std::endl;
+		out << Fsol.at<double>(0,0) << " " << Fsol.at<double>(0,1) << " " << Fsol.at<double>(0,2) << std::endl;
+		out << Fsol.at<double>(1,0) << " " << Fsol.at<double>(1,1) << " " << Fsol.at<double>(1,2) << std::endl;
+		out << Fsol.at<double>(2,0) << " " << Fsol.at<double>(2,1) << " " << Fsol.at<double>(2,2) << std::endl;
 		out.close();
 		std::cout << "Output fundamental matrix:\n" << std::endl;
 		std::cout << Fsol << std::endl;
