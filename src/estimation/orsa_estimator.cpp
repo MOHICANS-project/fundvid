@@ -103,9 +103,9 @@ void ORSAEStimator::estimateF(const std::vector<cv::Point2f> & p0,const std::vec
 		throw EstimationErrorException();
 	}
 
-	F.at<float>(0,0)=Fx(0,0);F.at<float>(0,1)=Fx(0,1);F.at<float>(0,2)=Fx(0,2);
-	F.at<float>(1,0)=Fx(1,0);F.at<float>(1,1)=Fx(1,1);F.at<float>(1,2)=Fx(1,2);
-	F.at<float>(2,0)=Fx(2,0);F.at<float>(2,1)=Fx(2,1);F.at<float>(2,2)=Fx(2,2);
+	F.at<double>(0,0)=Fx(0,0);F.at<double>(0,1)=Fx(0,1);F.at<double>(0,2)=Fx(0,2);
+	F.at<double>(1,0)=Fx(1,0);F.at<double>(1,1)=Fx(1,1);F.at<double>(1,2)=Fx(1,2);
+	F.at<double>(2,0)=Fx(2,0);F.at<double>(2,1)=Fx(2,1);F.at<double>(2,2)=Fx(2,2);
 	F=F.t();
 
 	for (size_t i = 0; i < vec_inliers.size(); ++i) {

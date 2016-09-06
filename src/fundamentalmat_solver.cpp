@@ -117,7 +117,7 @@ cv::Mat FundamentalMatSolver::solve(){
 	//Initial estimation of the F matrix
 	std::cout << "Estimation frame "<< r1->getFrameIndex() << " in progress..." << std::endl;
 	cv::Mat F;
-	F=cv::Mat::zeros(3,3,cv::DataType<float>::type);
+	F=cv::Mat::zeros(3,3,cv::DataType<double>::type);
 
 	std::vector<bool> mask(ptt0.size());
 	try{
@@ -205,7 +205,7 @@ cv::Mat FundamentalMatSolver::solve(){
 		}
 
 		std::vector<bool> mask2(tot0.size());
-		F=cv::Mat::zeros(3,3,cv::DataType<float>::type);
+		F=cv::Mat::zeros(3,3,cv::DataType<double>::type);
 
 		try{
 			estimator->estimateF(tot0,tot1,F,mask2);

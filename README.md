@@ -40,6 +40,8 @@ The project includes a modified version of the Lionel Moisan's ORSA estimation f
 ## How to use the demo
 An example configuration file is provided in the [example](src/example) folder, and includes all the parameters and the input data accepted by the program. The description of the meaning of each entry is already included in the configuration file. 
 
+A small dataset is included as an example of the usage of the library. For the full dataset containing the entire video sequence you can download it from the [project website](http://hebergement.u-psud.fr/emi/MOHICANS/index.html). 
+
 ## Licensing
 This software is released under the GPL3 license. See the [LICENSE](LICENSE) file for more information.
 
