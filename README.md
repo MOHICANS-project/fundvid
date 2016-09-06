@@ -10,14 +10,16 @@ The project implements a demo version of the algorithm for fundamental matrix es
 The algorithms performs the estimation of the fundamental matrix of a wide baseline stereo pair by processing frames extracted from synchronized videos, addressing the limitations of single image pairs estimations and naive temporal accumulation of matches.
 
 ## Dependencies and build
-The library has two dependencies from third party software:
+The library has four dependencies from third party software:
+  * [OpenCV](http://opencv.org) (Computer vision package)
+  * [gvars] (https://github.com/edrosten/gvars) (Configuration library)
   * [levmar](http://users.ics.forth.gr/~lourakis/levmar/) (Library for Levenberg-Marquardt non linear optimization) 
   * [eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) (Linear algebra library)
 The project includes a modified version of the Lionel Moisan's ORSA estimation framework. For more information see [here] (http://www.ipol.im/pub/art/2016/147/)
 Build instructions here..............
 
 ## How to use the demo
-An example configuration file is provided in the *example* folder, and includes all the parameters and the input data accepted by the program. The description of the meaning of each entry is already included in the configuration file.
+An example configuration file is provided in the [example](src/example) folder, and includes all the parameters and the input data accepted by the program. The description of the meaning of each entry is already included in the configuration file.
 
 ## Licensing
 This software is released under the GPL3 license. See the [LICENSE](LICENSE) file for more information.
