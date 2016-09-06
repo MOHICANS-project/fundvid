@@ -213,6 +213,14 @@ cv::Mat FundamentalMatSolver::solve(){
 				currentMatches1.push_back(tot1[i]);
 			}
 		}
+
+		inliers_image0.clear();
+		inliers_image1.clear();
+		for (size_t i = 0; i < currentMatches0.size(); ++i) {
+			inliers_image0.push_back(currentMatches0[i]);
+			inliers_image1.push_back(currentMatches1[i]);
+		}
+
 		refinement(currentMatches0,currentMatches1,eF);
 		eigen2cv(eF,F);
 		optimizer->getCovarF(raw_covar);

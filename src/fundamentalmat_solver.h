@@ -40,6 +40,9 @@ class FundamentalMatSolver {
 	double th;
 	int last_frame;
 
+	std::vector<cv::Point2f> inliers_image0;
+	std::vector<cv::Point2f> inliers_image1;
+
 	void refinement(const cv::vector<cv::Point2f> & inl0,const cv::vector<cv::Point2f> & inl1,Eigen::Matrix3d & eF);
 	void labelCorePoints(const std::vector<cv::Point2f> & matches,std::vector<bool> & is_core);
 
@@ -76,6 +79,22 @@ public:
 	 * @return the fundamental matrix computed at last iteration
 	 */
 	 cv::Mat solve();
+
+	 /**
+	  * Inliers from image 0 getter.
+	  * @return the vector of inlier points of image 0 found at the last estimation.
+	  */
+	const std::vector<cv::Point2f>& getInliersImage0() const {
+		return inliers_image0;
+	}
+
+	/**
+	  * Inliers from image 1 getter.
+	  * @return the vector of inlier points of image 1 found at the last estimation.
+	  */
+	const std::vector<cv::Point2f>& getInliersImage1() const {
+		return inliers_image1;
+	}
 };
 
 #endif /* SRC_FUNDAMENTALMAT_SOLVER_H_ */

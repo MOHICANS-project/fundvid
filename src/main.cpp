@@ -31,13 +31,15 @@
  * Main function.
  * List of input arguments:
  * 	- argv[1] config file
- * 	- argv[2] output F file
+ * 	- argv[2] output folder
  */
 int main(int argc, char **argv) {
 
 	GVars3::GUI.LoadFile(argv[1]);
 	if(argc!=3){
-		std::cerr<< "Wrong number of input arguments: 1 expected" << std::endl;
+		std::cerr<< "Wrong number of input arguments (2 expected):" << std::endl;
+		std::cerr<< "1. configuration file path" << std::endl;
+		std::cerr<< "2. output folder" << std::endl;
 		return 1;
 	}
 	std::string im0f=GVars3::GV3::get<std::string>("images0_folder");
@@ -119,12 +121,30 @@ int main(int argc, char **argv) {
 	try{
 		cv::Mat Fsol=solver->solve();
 		std::ofstream out;
-		out.open(argv[2]);
+		std::string outfolder(argv[2]);
+		std::string outfundamental=outfolder+"/f.txt";
+		out.open(outfundamental.c_str());
 		out << Fsol.at<float>(0,0) << " " << Fsol.at<float>(0,1) << " " << Fsol.at<float>(0,2) << std::endl;
 		out << Fsol.at<float>(1,0) << " " << Fsol.at<float>(1,1) << " " << Fsol.at<float>(1,2) << std::endl;
 		out << Fsol.at<float>(2,0) << " " << Fsol.at<float>(2,1) << " " << Fsol.at<float>(2,2) << std::endl;
 		out.close();
+		std::cout << "Output fundamental matrix:\n" << std::endl;
 		std::cout << Fsol << std::endl;
+		std::vector<cv::Point2f> inl0=solver->getInliersImage0();
+		std::vector<cv::Point2f> inl1=solver->getInliersImage1();
+		std::string outinl0=outfolder+"/inliers0.txt";
+		out.open(outinl0.c_str());
+		for (size_t i = 0; i < inl0.size(); ++i) {
+			out << inl0[i].x << " "<<inl0[i].y << std::endl;
+		}
+		out.close();
+		std::string outinl1=outfolder+"/inliers1.txt";
+		out.open(outinl1.c_str());
+		for (size_t i = 0; i < inl1.size(); ++i) {
+			out << inl1[i].x << " "<<inl1[i].y << std::endl;
+		}
+		out.close();
+
 	}catch(EstimationErrorException & e){
 		std::cerr << e.what() << std::endl;
 	}catch(OptimizationException & e){
