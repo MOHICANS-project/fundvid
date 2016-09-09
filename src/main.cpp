@@ -18,6 +18,7 @@
 #include <regex>
 
 #include "reader/imagesreader.h"
+#include "reader/boostreader.h"
 #include "matchers/sift_opencv_matcher.h"
 #include "estimation/orsa_estimator.h"
 #include "estimation/lm_fundmat_optimizer.h"
@@ -104,8 +105,11 @@ int main(int argc, char **argv) {
 	float precision=GVars3::GV3::get<float>("precision");
 
 
-	ImagesReader* r1=new ImagesReader(im0f,base,ext,logf);
-	ImagesReader* r2=new ImagesReader(im1f,base,ext,logf);
+	//ImagesReader* r1=new ImagesReader(im0f,base,ext,logf);
+	//ImagesReader* r2=new ImagesReader(im1f,base,ext,logf);
+	FramesReader* r1=new BoostReader(im0f,ext);
+	FramesReader* r2=new BoostReader(im1f,ext);
+	
 	cv::Mat image0,image1;
 	r1->getNextFrame(image0);
 	r2->getNextFrame(image1);

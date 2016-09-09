@@ -119,7 +119,7 @@ if ( NOT OpenCV_FOUND )
 endif ( NOT OpenCV_FOUND )
 
 #Boost
-Find_Package(Boost REQUIRED thread serialization system filesystem)
+Find_Package(Boost REQUIRED system filesystem)
 if ( NOT Boost_FOUND )
     message(FATAL_ERROR "Boost not found !")
 endif ( NOT Boost_FOUND )
@@ -159,7 +159,7 @@ include_directories(src/third_party/orsa-fundamental_1.0/src)
 add_subdirectory(src/third_party/orsa-fundamental_1.0/src)
 ######################################
 
-file(GLOB IO  src/reader/imagesreader.cpp)
+file(GLOB IO  src/reader/imagesreader.cpp src/reader/boostreader.cpp)
 file(GLOB Match src/matchers/sift_opencv_matcher.cpp src/matchers/sift_guided_matching.cpp)
 file(GLOB Misc src/exceptions/optimization_exception.cpp src/estimation/orsa_estimator.cpp src/estimation/lm_fundmat_optimizer.cpp src/estimation/f_uncertainty.cpp src/fundamentalmat_solver.cpp)
 
@@ -185,6 +185,8 @@ TARGET_LINK_LIBRARIES(
   ${LIBS}
   ${OPENCV_LIBRARIES}
   ${OpenCV_LIBS}
+  boost_system
+  boost_filesystem
 )
 
 
