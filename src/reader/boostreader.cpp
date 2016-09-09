@@ -6,10 +6,15 @@
  */
 
 #include "boostreader.h"
+#include <boost/algorithm/string/predicate.hpp>
+#include <regex>
 
- using namespace boost::filesystem;
+using namespace boost::filesystem;
 
-BoostReader::BoostReader(std::string _folder, std::string _extension):folder(_folder),extension(_extension){
+
+
+
+BoostReader::BoostReader(std::string _folder, std::string _extension, std::string _base):folder(_folder),extension(_extension),base(_base){
 	image_index=-1;
 	
 	//extension must have a . in order to mean the same thing as boost .extension() result
@@ -27,7 +32,7 @@ BoostReader::BoostReader(std::string _folder, std::string _extension):folder(_fo
 
 				for (std::vector<path>::const_iterator it (allNames.begin()); it != allNames.end(); ++it){
 					if(it->has_extension()){
-						if (!extension.compare(it->extension().c_str())){
+						if (!extension.compare(it->extension().c_str()) && boost::starts_with(it->filename().c_str(),base.c_str())){
 							//they are the same
 							imageNames.push_back(it->filename().c_str());
 						}
@@ -45,7 +50,7 @@ BoostReader::BoostReader(std::string _folder, std::string _extension):folder(_fo
 
 	}
 	catch(const filesystem_error& err){
-		std::cout << err.what() << std::endl;
+		std::cerr << err.what() << std::endl;
 	}
 
 }
@@ -56,7 +61,11 @@ bool BoostReader::getNextFrame(cv::Mat & out){
 
 	if(image_index < imageNames.size()){
 		std::string imgpath=folder+"/"+ imageNames[image_index];
-		std::cout << "Reading " << imgpath << std::endl;
+		//std::cout << "Reading " << imgpath << std::endl;
+		std::smatch match;
+		std::regex_search(imageNames[image_index],match,std::regex("[A-Za-z]+(\\d+)[.]{1}\\w+"));
+		std::string idx=match[1].str();
+		frame_index=stoi(idx);
 		out=cv::imread(imgpath,0);
 		return true;
 	}

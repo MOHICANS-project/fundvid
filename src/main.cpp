@@ -45,7 +45,7 @@ int main(int argc, char **argv) {
 	}
 	std::string im0f=GVars3::GV3::get<std::string>("images0_folder");
 	std::string im1f=GVars3::GV3::get<std::string>("images1_folder");
-	std::string logf=GVars3::GV3::get<std::string>("log_path");
+	//std::string logf=GVars3::GV3::get<std::string>("log_path");
 
 	std::string fname=GVars3::GV3::get<std::string>("first_img_name");
 	if(!std::regex_match(fname.c_str(),std::regex("[A-Za-z]+\\d+[.]{1}\\w+"))){
@@ -107,8 +107,8 @@ int main(int argc, char **argv) {
 
 	//ImagesReader* r1=new ImagesReader(im0f,base,ext,logf);
 	//ImagesReader* r2=new ImagesReader(im1f,base,ext,logf);
-	FramesReader* r1=new BoostReader(im0f,ext);
-	FramesReader* r2=new BoostReader(im1f,ext);
+	FramesReader* r1=new BoostReader(im0f,ext,base);
+	FramesReader* r2=new BoostReader(im1f,ext,base);
 	
 	cv::Mat image0,image1;
 	r1->getNextFrame(image0);

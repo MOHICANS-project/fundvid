@@ -28,11 +28,12 @@ class BoostReader : public FramesReader{
 
 	std::string folder;
 	std::vector<std::string> imageNames;
-	//std::string base;
+	std::string base;
 	//std::ifstream log_file;
 	std::string extension;
 
 	int image_index;
+	int frame_index;
 
 
 public:
@@ -40,14 +41,15 @@ public:
 	 * Constructor for BoostReader class.
 	 * @param _folder the directory containing the sequence of images
 	 * @param _extension the extension of the image files (look at the OpenCV documentation for the supported ones); only files with the specified extension will be considered
+	 * @param _base base name of an image
 	 */
-	BoostReader(std::string _folder, std::string _extension);
+	BoostReader(std::string _folder, std::string _extension,std::string _base);
 	virtual ~BoostReader(){};
 
 	bool getNextFrame(cv::Mat & out);
 
 	int getFrameIndex(){
-		return image_index;
+		return frame_index;
 	}
 };
 
