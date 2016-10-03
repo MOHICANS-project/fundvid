@@ -79,8 +79,9 @@ bool exec_orsa(const std::vector<Match>& vec_matchings, int w1,int h1, int w2,in
 
   if(model.orsa(vec_inliers, numiter, &precision, &F, false)>0.0)
     return false;
-  std::pair<double,double> err; // (RMSE,max)
+  std::pair<double,double> err; // (RMS,Emax)
   err = stats(vec_matchings, vec_inliers, F);
+
   libNumerics::matrix<double> F2(3,3);
   if( model.ComputeModel(vec_inliers,&F2) ) // Re-estimate with all inliers
   {
@@ -89,27 +90,60 @@ bool exec_orsa(const std::vector<Match>& vec_matchings, int w1,int h1, int w2,in
 
   } else
     std::cerr << "Warning: error in refinement, result is suspect" <<std::endl;
+
   return true;
 }
 
-void ORSAEStimator::estimateF(const std::vector<cv::Point2f> & p0,const std::vector<cv::Point2f> & p1,cv::Mat & F, std::vector<bool> & inl_mask){
+void exec_mark_inliers(const std::vector<Match>& vec_matchings, libNumerics::matrix<double>& F, std::vector<bool> & inl_mask)
+{
+    
+    for (size_t i = 0; i < vec_matchings.size(); ++i) {
+      double xa =vec_matchings[i].x1, ya = vec_matchings[i].y1;
+      double xb = vec_matchings[i].x2, yb = vec_matchings[i].y2;
+
+      double a, b, c, d;
+      // Transfer error in image 2
+      a = F(0,0) * xa + F(1,0) * ya + F(2,0);
+      b = F(0,1) * xa + F(1,1) * ya + F(2,1);
+      c = F(0,2) * xa + F(1,2) * ya + F(2,2);
+      d = a*xb + b*yb + c;
+      double err =  (d*d) / (a*a + b*b);
+      if(err < 1.0)      
+        inl_mask[i] = true;
+      else
+        inl_mask[i] = false;
+    }
+}
+
+
+void ORSAEStimator::estimateF(const std::vector<cv::Point2f> & p0,const std::vector<cv::Point2f> & p1,cv::Mat & F, std::vector<bool> & inl_mask, bool FundExternalInit){
 	libNumerics::matrix<double> Fx(3,3); //Used by ORSA library
 	std::vector<int> vec_inliers;
 	std::vector<Match> vec_matchings;
 	point2ftoOrsaMatch(p0,p1,vec_matchings);
 
-	bool ok=exec_orsa(vec_matchings,width,height,width,height,precision,Fx,vec_inliers,max_iterations);
-	if(!ok){
-		throw EstimationErrorException();
-	}
+  if(FundExternalInit){
+    //TODO check the transpose thingie
+    Fx(0,0)=F.at<double>(0,0);Fx(0,1)=F.at<double>(1,0);Fx(0,2)=F.at<double>(2,0);
+    Fx(1,0)=F.at<double>(0,1);Fx(1,1)=F.at<double>(1,1);Fx(1,2)=F.at<double>(2,1);
+    Fx(2,0)=F.at<double>(0,2);Fx(2,1)=F.at<double>(1,2);Fx(2,2)=F.at<double>(2,2);
+    
+    exec_mark_inliers(vec_matchings, Fx, inl_mask);
+  }
+  else{
+    bool ok=exec_orsa(vec_matchings,width,height,width,height,precision,Fx,vec_inliers,max_iterations);
+    if(!ok){
+	   	throw EstimationErrorException();
+    }
 
-	F.at<double>(0,0)=Fx(0,0);F.at<double>(0,1)=Fx(0,1);F.at<double>(0,2)=Fx(0,2);
-	F.at<double>(1,0)=Fx(1,0);F.at<double>(1,1)=Fx(1,1);F.at<double>(1,2)=Fx(1,2);
-	F.at<double>(2,0)=Fx(2,0);F.at<double>(2,1)=Fx(2,1);F.at<double>(2,2)=Fx(2,2);
-	F=F.t();
 
-	for (size_t i = 0; i < vec_inliers.size(); ++i) {
-		inl_mask[vec_inliers[i]]=true;
-	}
+    F.at<double>(0,0)=Fx(0,0);F.at<double>(0,1)=Fx(0,1);F.at<double>(0,2)=Fx(0,2);
+    F.at<double>(1,0)=Fx(1,0);F.at<double>(1,1)=Fx(1,1);F.at<double>(1,2)=Fx(1,2);
+    F.at<double>(2,0)=Fx(2,0);F.at<double>(2,1)=Fx(2,1);F.at<double>(2,2)=Fx(2,2);
+    F=F.t();
+    for (size_t i = 0; i < vec_inliers.size(); ++i) {
+      inl_mask[vec_inliers[i]]=true;
+    }
+  }
 
 }

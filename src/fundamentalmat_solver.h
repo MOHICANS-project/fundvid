@@ -39,6 +39,7 @@ class FundamentalMatSolver {
 	int depth;
 	double th;
 	int last_frame;
+	std::string initFPath;
 
 	std::vector<cv::Point2f> inliers_image0;
 	std::vector<cv::Point2f> inliers_image1;
@@ -62,9 +63,10 @@ public:
 	 * @param _depth depth of the SIFT knn matcher
 	 * @param _th SIFT ratio threshold
 	 * @param _last_frame last frame to be processed
+	 * @param _initFPath path to an external F initialization
 	 */
-	FundamentalMatSolver(FramesReader* _r1,FramesReader* _r2,FVMatcher::AbstractMatcher* _init_matcher,AbstractEstimator* _estimator,FundMatOptimizer* _optimizer,double _alpha, int _num_pts, double _epsilon, double _sigma_high, double _sigma_low,int _depth,double _th,int _last_frame):
-								r1(_r1),r2(_r2),init_matcher(_init_matcher),estimator(_estimator),optimizer(_optimizer),alpha(_alpha),num_pts(_num_pts),epsilon(_epsilon),sigma_high(_sigma_high),sigma_low(_sigma_low),depth(_depth),th(_th),last_frame(_last_frame){};
+	FundamentalMatSolver(FramesReader* _r1,FramesReader* _r2,FVMatcher::AbstractMatcher* _init_matcher,AbstractEstimator* _estimator,FundMatOptimizer* _optimizer,double _alpha, int _num_pts, double _epsilon, double _sigma_high, double _sigma_low,int _depth,double _th,int _last_frame,std::string _initFPath):
+								r1(_r1),r2(_r2),init_matcher(_init_matcher),estimator(_estimator),optimizer(_optimizer),alpha(_alpha),num_pts(_num_pts),epsilon(_epsilon),sigma_high(_sigma_high),sigma_low(_sigma_low),depth(_depth),th(_th),last_frame(_last_frame),initFPath(_initFPath){};
 
 	virtual ~FundamentalMatSolver(){
 		delete r1;

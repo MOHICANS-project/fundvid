@@ -109,6 +109,9 @@ cv::Mat FundamentalMatSolver::solve(){
 	std::vector<cv::Point2f> ptt1;
 	rawToPoint2f(init_matches,ptt0,ptt1);
 
+	
+
+
 	std::vector<int> permutation(9);
 	permutation[0]=0;permutation[1]=3;permutation[2]=6;
 	permutation[3]=1;permutation[4]=4;permutation[5]=7;
@@ -119,9 +122,17 @@ cv::Mat FundamentalMatSolver::solve(){
 	cv::Mat F;
 	F=cv::Mat::zeros(3,3,cv::DataType<double>::type);
 
+	bool initFFlag = false;
+	if(initFPath.length() > 0){
+		initFFlag = true;
+		cv::FileStorage fs;
+        fs.open(initFPath, cv::FileStorage::READ);
+		fs["Fundamental"] >> F;
+	}
+
 	std::vector<bool> mask(ptt0.size());
 	try{
-		estimator->estimateF(ptt0,ptt1,F,mask);
+		estimator->estimateF(ptt0,ptt1,F,mask,initFFlag);
 	}catch(EstimationErrorException & e){
 		throw e;
 	}
@@ -138,6 +149,8 @@ cv::Mat FundamentalMatSolver::solve(){
 			currentMatches1.push_back(ptt1[i]);
 		}
 	}
+
+	
 
 	refinement(currentMatches0,currentMatches1,eF);
 	eigen2cv(eF,F);

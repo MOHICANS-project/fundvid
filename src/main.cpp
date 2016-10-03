@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
 		std::cerr << "Error in the number_iterations parameter: good values are greater than 0." << std::endl;
 		return 6;
 	}
-		int num_pts=GVars3::GV3::get<int>("num_pts");
+	int num_pts=GVars3::GV3::get<int>("num_pts");
 	if(num_pts<=0){
 		std::cerr << "Error in the num_pts parameter: good values are greater than 0." << std::endl;
 		return 7;
@@ -104,6 +104,9 @@ int main(int argc, char **argv) {
 	int last_frame=GVars3::GV3::get<int>("last_frame");
 	float precision=GVars3::GV3::get<float>("precision");
 
+	std::string initFPath=GVars3::GV3::get<std::string>("initF");
+	
+	
 
 	//ImagesReader* r1=new ImagesReader(im0f,base,ext,logf);
 	//ImagesReader* r2=new ImagesReader(im1f,base,ext,logf);
@@ -121,7 +124,7 @@ int main(int argc, char **argv) {
 
 
 
-	FundamentalMatSolver* solver=new FundamentalMatSolver(r1,r2,in_matcher,orsa,optimizer,alpha,num_pts,epsilon,sigma_high,sigma_low,depth,th,last_frame);
+	FundamentalMatSolver* solver=new FundamentalMatSolver(r1,r2,in_matcher,orsa,optimizer,alpha,num_pts,epsilon,sigma_high,sigma_low,depth,th,last_frame,initFPath);
 	try{
 		cv::Mat Fsol=solver->solve();
 		std::ofstream out;

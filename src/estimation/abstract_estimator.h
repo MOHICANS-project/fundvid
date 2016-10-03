@@ -26,8 +26,9 @@ public:
 	 * @param p1 keypoints from image 1
 	 * @param F  output fundamental matrix
 	 * @param inl_mask mask labeling the inliers found from the estimation
+	 * @param FundExternalInit flag which makes the class use F "as is"; this is to be used only for initializing F with a predefined value in the beginning
 	 */
-	virtual void estimateF(const std::vector<cv::Point2f> & p0,const std::vector<cv::Point2f> & p1,cv::Mat & F, std::vector<bool> & inl_mask)=0;
+	virtual void estimateF(const std::vector<cv::Point2f> & p0,const std::vector<cv::Point2f> & p1,cv::Mat & F, std::vector<bool> & inl_mask, bool FundExternalInit=false)=0;
 };
 
 #endif /* SRC_ESTIMATION_ABSTRACT_ESTIMATOR_H_ */

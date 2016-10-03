@@ -36,7 +36,7 @@ public:
 	ORSAEStimator(double _precision, int _max_iterations, int _height,int _width):precision(_precision),max_iterations(_max_iterations),height(_height),width(_width){};
 	virtual ~ORSAEStimator(){};
 
-	void estimateF(const std::vector<cv::Point2f> & p0,const std::vector<cv::Point2f> & p1,cv::Mat & F, std::vector<bool> & inl_mask);
+	void estimateF(const std::vector<cv::Point2f> & p0,const std::vector<cv::Point2f> & p1,cv::Mat & F, std::vector<bool> & inl_mask, bool FundExternalInit);
 };
 
 
