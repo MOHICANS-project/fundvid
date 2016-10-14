@@ -31,6 +31,8 @@ The library has four dependencies from third party software:
   * [gvars] (https://github.com/edrosten/gvars) (Configuration library)
   * [levmar](http://users.ics.forth.gr/~lourakis/levmar/) (Library for Levenberg-Marquardt non linear optimization) 
   * [eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) (Linear algebra library)
+  * [Boost](http://http://www.boost.org/) (For filesystem support)
+  
 
 The project includes a modified version of the Lionel Moisan's ORSA estimation framework. For more information see [here] (http://www.ipol.im/pub/art/2016/147/).
 
