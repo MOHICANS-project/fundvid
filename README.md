@@ -51,9 +51,9 @@ A small dataset is included as an example of the usage of the library. You can e
 ./estimate_fundamental example/default_config.cfg results
 ```
 The program will write three files in the *[output-directory]* :
-1. f.txt : the 3x3 estimated fundamental matrix
-2. inliers0.txt: inlier points from first image
-3. inliers1.txt: inlier points from second image
+1. *f.txt* : the  estimated 3x3 fundamental matrix
+2. *inliers0.txt*: inlier points from first image
+3. *inliers1.txt*: inlier points from second image
 
 ## Licensing
 Please refer to the accompanying [LICENSE](LICENSE) file for more information.
