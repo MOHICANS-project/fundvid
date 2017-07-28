@@ -6,8 +6,7 @@
  */
 
 #include "lm_fundmat_optimizer.h"
-
-#include "levmar.h"
+#include <levmar.h>
 #include "src/exceptions/optimization_exception.h"
 #include <cmath>
 

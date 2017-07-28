@@ -28,9 +28,10 @@ class BoostReader : public FramesReader{
 
 	std::string folder;
 	std::vector<std::string> imageNames;
+    std::string extension;
 	std::string base;
 	//std::ifstream log_file;
-	std::string extension;
+
 
 	int image_index;
 	int frame_index;
@@ -44,7 +45,7 @@ public:
 	 * @param _base base name of an image
 	 */
 	BoostReader(std::string _folder, std::string _extension,std::string _base);
-	virtual ~BoostReader(){};
+    virtual ~BoostReader(){}
 
 	bool getNextFrame(cv::Mat & out);
 

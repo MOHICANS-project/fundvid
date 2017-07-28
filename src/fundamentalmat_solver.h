@@ -43,6 +43,10 @@ class FundamentalMatSolver {
 	std::vector<cv::Point2f> inliers_image0;
 	std::vector<cv::Point2f> inliers_image1;
 
+#ifdef DEBUG
+    int experiment_number;
+#endif
+
 	void refinement(const cv::vector<cv::Point2f> & inl0,const cv::vector<cv::Point2f> & inl1,Eigen::Matrix3d & eF);
 	void labelCorePoints(const std::vector<cv::Point2f> & matches,std::vector<bool> & is_core);
 
@@ -95,6 +99,12 @@ public:
 	const std::vector<cv::Point2f>& getInliersImage1() const {
 		return inliers_image1;
 	}
+
+#ifdef DEBUG
+    void setExperimentNumber(int _experiment_number){
+        experiment_number=_experiment_number;
+    }
+#endif
 };
 
 #endif /* SRC_FUNDAMENTALMAT_SOLVER_H_ */

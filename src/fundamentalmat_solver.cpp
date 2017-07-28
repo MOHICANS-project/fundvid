@@ -97,6 +97,16 @@ void permuteCov(const Eigen::Matrix<double,9,9> & inCov, const std::vector<int> 
 	}
 }
 
+void saveFxml(const cv::Mat & F, int index, int expnum){
+    std::string path("debug/fLM");
+    path+=std::to_string(index)+"-"+std::to_string(expnum)+".xml";
+    cv::FileStorage fout(path,cv::FileStorage::WRITE);
+    if(fout.isOpened()){
+        fout << "Fundamental" << F;
+        fout.release();
+    }
+}
+
 cv::Mat FundamentalMatSolver::solve(){
 
 	cv::initModule_nonfree();
@@ -141,6 +151,9 @@ cv::Mat FundamentalMatSolver::solve(){
 
 	refinement(currentMatches0,currentMatches1,eF);
 	eigen2cv(eF,F);
+#ifdef DEBUG
+    saveFxml(F,r1->getFrameIndex(),experiment_number);
+#endif
 
 	Eigen::Matrix<double,9,9> ecurrentCov;
 	double raw_covar[9][9];
@@ -232,6 +245,9 @@ cv::Mat FundamentalMatSolver::solve(){
 
 		refinement(currentMatches0,currentMatches1,eF);
 		eigen2cv(eF,F);
+#ifdef DEBUG
+    saveFxml(F,r1->getFrameIndex(),experiment_number);
+#endif
 		optimizer->getCovarF(raw_covar);
 		for (size_t i = 0; i < 9; ++i) {
 			for (size_t j = 0; j < 9; ++j) {

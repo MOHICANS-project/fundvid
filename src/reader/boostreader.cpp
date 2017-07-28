@@ -59,7 +59,7 @@ bool BoostReader::getNextFrame(cv::Mat & out){
 	
 	image_index ++;
 
-	if(image_index < imageNames.size()){
+    if(image_index < (int)imageNames.size()){
 		std::string imgpath=folder+"/"+ imageNames[image_index];
 		//std::cout << "Reading " << imgpath << std::endl;
 		std::smatch match;
