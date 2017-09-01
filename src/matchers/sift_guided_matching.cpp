@@ -79,6 +79,8 @@ void SIFTGuidedMatching::filter_band_matches(const std::vector<cv::KeyPoint> & k
 	Ftransposed=F.t();
 	int height=image0.rows;
 	int width=image1.cols;
+    int numlow=0;
+    int numhigh=0;
 	for (size_t i = 0; i < initmatches.size(); ++i) {
 		if(initmatches[i].size()==0)continue;
 		std::vector<cv::DMatch> band;
@@ -119,9 +121,11 @@ void SIFTGuidedMatching::filter_band_matches(const std::vector<cv::KeyPoint> & k
 			if(white){
 				fu.setSigma(sigma_low);
 				fu_inv.setSigma(sigma_low);
+                numlow++;
 			}else{
 				fu.setSigma(sigma_high);
 				fu_inv.setSigma(sigma_high);
+                numhigh++;
 			}
 
 			Eigen::Vector3d xp;
@@ -155,6 +159,9 @@ void SIFTGuidedMatching::filter_band_matches(const std::vector<cv::KeyPoint> & k
 		}
 		if(band.size()>0) bandmatches.push_back(band);
 	}
+//#ifdef DEBUG
+//    std::cout << "Sigma high: " << numhigh << " vs Sigma low: " << numlow << std::endl;
+//#endif
 }
 
 void SIFTGuidedMatching::filter_ratio_matches(const std::vector< std::vector<cv::DMatch> > & bandmatches, std::vector<cv::DMatch> & out_matches){

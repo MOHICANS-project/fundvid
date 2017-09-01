@@ -33,73 +33,83 @@
  * List of input arguments:
  * 	- argv[1] config file
  * 	- argv[2] output folder
+ *  - argv[3] experiment number (debug mode only)
  */
 int main(int argc, char **argv) {
 
 	GVars3::GUI.LoadFile(argv[1]);
-	if(argc!=3){
-		std::cerr<< "Wrong number of input arguments (2 expected):" << std::endl;
+    if(argc<3){
+        std::cerr<< "Wrong number of input arguments :" << std::endl;
 		std::cerr<< "1. configuration file path" << std::endl;
 		std::cerr<< "2. output folder" << std::endl;
-		return 1;
+#ifdef DEBUG
+        std::cerr<< "3. experiment number (DEBUG MODE ONLY)" << std::endl;
+#endif
+        return 1;
 	}
 	std::string im0f=GVars3::GV3::get<std::string>("images0_folder");
 	std::string im1f=GVars3::GV3::get<std::string>("images1_folder");
 	//std::string logf=GVars3::GV3::get<std::string>("log_path");
 
 	std::string fname=GVars3::GV3::get<std::string>("first_img_name");
-	if(!std::regex_match(fname.c_str(),std::regex("[A-Za-z]+\\d+[.]{1}\\w+"))){
+    if(!std::regex_match(fname.c_str(),std::regex("[A-Za-z_]+\\d+[.]{1}\\w+"))){
 		std::cerr << "Image file name formatting error" << std::endl;
 		return 2;
 	}
 
+    int dt=GVars3::GV3::get<double>("dt");
+    if(dt<=0){
+        std::cerr << "Error in the dt parameter: good values are greater than 0." << std::endl;
+        return 3;
+    }
+
 	std::smatch match;
-	std::regex_search(fname,match,std::regex("([A-Za-z]+)\\d+[.]{1}\\w+"));
+    std::regex_search(fname,match,std::regex("([A-Za-z_]+)\\d+[.]{1}\\w+"));
 	std::string base=match[1].str();
 	std::smatch match2;
-	std::regex_search(fname,match2,std::regex("[A-Za-z]+\\d+[.]{1}(\\w+)"));
+    std::regex_search(fname,match2,std::regex("[A-Za-z_]+\\d+[.]{1}(\\w+)"));
 	std::string ext=match2[1].str();
 
 	double alpha=GVars3::GV3::get<double>("alpha");
 	if(alpha<=0 || alpha>=1) {
 		std::cerr << "Error in the alpha parameter: good values are in the interval ]0,1[." << std::endl;
-		return 3;
+        return 4;
 	}
 
 	int depth=GVars3::GV3::get<int>("k_depth");
 	if(depth<=0){
 		std::cerr << "Error in the k_depth parameter: good values are greater than 0." << std::endl;
-		return 4;
+        return 5;
 	}
 	double th=GVars3::GV3::get<double>("SIFT_th");
 	if(th<=0 || th>=1) {
 		std::cerr << "Error in the SIFT_th parameter: good values are in the interval ]0,1[." << std::endl;
-		return 5;
+        return 6;
 	}
 	int num_iter=GVars3::GV3::get<int>("number_iterations");
 	if(num_iter<=0) {
 		std::cerr << "Error in the number_iterations parameter: good values are greater than 0." << std::endl;
-		return 6;
+        return 7;
 	}
 		int num_pts=GVars3::GV3::get<int>("num_pts");
 	if(num_pts<=0){
 		std::cerr << "Error in the num_pts parameter: good values are greater than 0." << std::endl;
-		return 7;
+        return 8;
 	}
 	float epsilon=GVars3::GV3::get<float>("epsilon");
 	if(epsilon<=0){
 		std::cerr << "Error in the epsilon parameter: good values are greater than 0." << std::endl;
-		return 8;
+        return 9;
 	}
 	double sigma_high=GVars3::GV3::get<double>("sigma_high");
 	if(sigma_high<=0){
 		std::cerr << "Error in the sigma_high parameter: good values are greater than 0." << std::endl;
-		return 9;
+        return 10;
 	}
 	double sigma_low=GVars3::GV3::get<double>("sigma_low");
 	if(sigma_low<=0){
 		std::cerr << "Error in the sigma_low parameter: good values are greater than 0." << std::endl;
-		return 10;
+        return 11;
 	}
 	int last_frame=GVars3::GV3::get<int>("last_frame");
 	float precision=GVars3::GV3::get<float>("precision");
@@ -107,8 +117,9 @@ int main(int argc, char **argv) {
 
 	//ImagesReader* r1=new ImagesReader(im0f,base,ext,logf);
 	//ImagesReader* r2=new ImagesReader(im1f,base,ext,logf);
-	FramesReader* r1=new BoostReader(im0f,ext,base);
-	FramesReader* r2=new BoostReader(im1f,ext,base);
+
+    FramesReader* r1=new BoostReader(im0f,ext,base,fname,dt);
+    FramesReader* r2=new BoostReader(im1f,ext,base,fname,dt);
 	
 	cv::Mat image0,image1;
 	r1->getNextFrame(image0);
@@ -120,9 +131,12 @@ int main(int argc, char **argv) {
 	LMFundMatOptimizer* optimizer=new LMFundMatOptimizer(true);
 
 
+    FundamentalMatSolver* solver=new FundamentalMatSolver(r1,r2,in_matcher,orsa,optimizer,alpha,num_pts,epsilon,sigma_high,sigma_low,depth,th,last_frame);
+#ifdef DEBUG
+    solver->setExperimentNumber(atoi(argv[3]));
+#endif
 
-	FundamentalMatSolver* solver=new FundamentalMatSolver(r1,r2,in_matcher,orsa,optimizer,alpha,num_pts,epsilon,sigma_high,sigma_low,depth,th,last_frame);
-	try{
+    try{
 		cv::Mat Fsol=solver->solve();
 		std::ofstream out;
 		std::string outfolder(argv[2]);

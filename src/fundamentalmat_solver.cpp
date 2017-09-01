@@ -107,7 +107,20 @@ void saveFxml(const cv::Mat & F, int index, int expnum){
     }
 }
 
+void saveInliersxml(std::vector<cv::Point2f> matches0,std::vector<cv::Point2f> matches1,int index,int expnum){
+     std::string path("debug/inliers");
+     path+=std::to_string(index)+"-"+std::to_string(expnum)+".xml";
+     cv::FileStorage fout(path,cv::FileStorage::WRITE);
+     if(fout.isOpened()){
+         fout << "Points0" << matches0 << "Points1" << matches1;
+         fout.release();
+     }
+
+}
+
+
 cv::Mat FundamentalMatSolver::solve(){
+
 
 	cv::initModule_nonfree();
 	srand((unsigned int)time(0));
@@ -126,6 +139,10 @@ cv::Mat FundamentalMatSolver::solve(){
 
 	//Initial estimation of the F matrix
 	std::cout << "Estimation frame "<< r1->getFrameIndex() << " in progress..." << std::endl;
+    if(r1->getFrameIndex()!=r2->getFrameIndex()){
+        std::cerr << "ERROR: Frames are misaligned. Check that your dataset is symmetric for the two cameras. Exiting." << std::endl;
+        exit(1);
+    }
 	cv::Mat F;
 	F=cv::Mat::zeros(3,3,cv::DataType<double>::type);
 
@@ -153,6 +170,7 @@ cv::Mat FundamentalMatSolver::solve(){
 	eigen2cv(eF,F);
 #ifdef DEBUG
     saveFxml(F,r1->getFrameIndex(),experiment_number);
+    saveInliersxml(currentMatches0,currentMatches1,r1->getFrameIndex(),experiment_number);
 #endif
 
 	Eigen::Matrix<double,9,9> ecurrentCov;
@@ -177,6 +195,8 @@ cv::Mat FundamentalMatSolver::solve(){
 
 
 	while(r1->getNextFrame(image0) && r2->getNextFrame(image1) && (last_frame<0 || r2->getFrameIndex()<=last_frame)){
+
+
 
 		std::cout << "Estimation frame "<< r1->getFrameIndex() << " in progress..." << std::endl;
 
@@ -205,7 +225,9 @@ cv::Mat FundamentalMatSolver::solve(){
 		std::vector<cv::Point2f> new_p1;
 		rawToPoint2f(new_matches,new_p0,new_p1);
 
-
+#ifdef DEBUG
+      std::cout << " Estimating new F with " << currentMatches0.size() << " + " << new_p0.size() << std::endl;
+#endif
 		std::vector<cv::Point2f> tot0;
 		std::vector<cv::Point2f> tot1;
 		for (size_t i = 0; i < currentMatches0.size(); ++i) {
@@ -236,6 +258,10 @@ cv::Mat FundamentalMatSolver::solve(){
 			}
 		}
 
+#ifdef DEBUG
+      std::cout << "Ending up with " << currentMatches0.size() << " inliers"<<std::endl;
+#endif
+
 		inliers_image0.clear();
 		inliers_image1.clear();
 		for (size_t i = 0; i < currentMatches0.size(); ++i) {
@@ -247,6 +273,7 @@ cv::Mat FundamentalMatSolver::solve(){
 		eigen2cv(eF,F);
 #ifdef DEBUG
     saveFxml(F,r1->getFrameIndex(),experiment_number);
+    saveInliersxml(currentMatches0,currentMatches1,r1->getFrameIndex(),experiment_number);
 #endif
 		optimizer->getCovarF(raw_covar);
 		for (size_t i = 0; i < 9; ++i) {

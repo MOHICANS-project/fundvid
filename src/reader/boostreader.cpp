@@ -12,11 +12,20 @@
 using namespace boost::filesystem;
 
 
+int BoostReader::getImageIndex(std::string imagename)
+{
+    std::smatch match;
+    std::regex_search(imagename,match,std::regex("[A-Za-z_]+(\\d+)[.]{1}\\w+"));
+    std::string idx=match[1].str();
+    //frame_index=stoi(idx);
+    return stoi(idx);
+}
 
 
-BoostReader::BoostReader(std::string _folder, std::string _extension, std::string _base):folder(_folder),extension(_extension),base(_base){
-	image_index=-1;
-	
+BoostReader::BoostReader(std::string _folder, std::string _extension, std::string _base, std::string _first_imgname,int _dt):folder(_folder),extension(_extension),base(_base),dt(_dt){
+    firstImageIndex=getImageIndex(_first_imgname);
+    frame_index=firstImageIndex-dt; //first dt increment will lead to start at firstImageIndex
+    image_index=-1; //last processed frame position in the folder
 	//extension must have a . in order to mean the same thing as boost .extension() result
 	if(extension[0] != '.')
 		extension = std::string(".")+extension;
@@ -41,6 +50,11 @@ BoostReader::BoostReader(std::string _folder, std::string _extension, std::strin
 
 				std::sort(imageNames.begin(), imageNames.end(), doj::alphanum_less<std::string>());
 
+                for(auto & name : imageNames) {
+                   frameIndices.push_back(getImageIndex(name));
+                }
+
+
 			}
 			else
 				std::cout << p << "is not a folder. Check  your config file and your data folder." << std::endl;
@@ -55,17 +69,23 @@ BoostReader::BoostReader(std::string _folder, std::string _extension, std::strin
 
 }
 
+
 bool BoostReader::getNextFrame(cv::Mat & out){
 	
-	image_index ++;
-
-    if(image_index < (int)imageNames.size()){
+    frame_index +=dt;
+    image_index++; //start from the image after
+    if(frame_index < frameIndices[frameIndices.size()-1]){
+        int pos=-1;
+        for (size_t i = image_index; i < frameIndices.size(); ++i) {
+            if(frameIndices[i]>=frame_index){
+                //if greater a jump occurred: select the next image
+                pos=i;
+                frame_index=frameIndices[i];
+                break;
+            }
+        }
+        image_index=pos;
 		std::string imgpath=folder+"/"+ imageNames[image_index];
-		//std::cout << "Reading " << imgpath << std::endl;
-		std::smatch match;
-		std::regex_search(imageNames[image_index],match,std::regex("[A-Za-z]+(\\d+)[.]{1}\\w+"));
-		std::string idx=match[1].str();
-		frame_index=stoi(idx);
 		out=cv::imread(imgpath,0);
 		return true;
 	}

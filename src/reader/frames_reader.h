@@ -17,8 +17,8 @@
  */
 class FramesReader {
 public:
-	FramesReader(){};
-	virtual ~FramesReader(){};
+    FramesReader(){}
+    virtual ~FramesReader(){}
 	/**
 	 * Get the next frame in the sequence.
 	 * @param frame structure where the frame content is written

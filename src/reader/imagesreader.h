@@ -39,7 +39,7 @@ public:
 	 */
 	ImagesReader(std::string _folder, std::string _base,std::string _extension, std::string log_path):folder(_folder),base(_base)
 																								,extension(_extension){log_file.open(log_path.c_str());image_index=-1;};
-	virtual ~ImagesReader(){log_file.close();};
+    virtual ~ImagesReader(){log_file.close();}
 
 	bool getNextFrame(cv::Mat & out);
 

@@ -112,6 +112,13 @@ std::vector<FVMatcher::FVMatch> SIFTOpenCVMatcher::computeMatches(){
 		out.push_back(m);
 	}
 
+#ifdef DEBUG
+    std::string path("debug/fLM.png");
+    cv::Mat outim;
+    cv::drawMatches(image0,keys0,image1,keys1,matches,outim);
+    cv::imwrite(path,outim);
+#endif
+
 	return out;
 }
 
