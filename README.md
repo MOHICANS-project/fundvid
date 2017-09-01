@@ -44,6 +44,17 @@ An example configuration file is provided in the [example](src/example) folder, 
 
 A small dataset is included as an example of the usage of the library. You can evaluate the solution provided by using the ground truth matches present inside an .xml file in the same folder.  For the full dataset containing the entire video sequence you can download it from the [project website](http://hebergement.u-psud.fr/emi/MOHICANS/index.html). 
 
+```
+#Program launch parameters
+./estimate_fundamental [path-config-file] [output-directory]
+#Example
+./estimate_fundamental example/default_config.cfg results
+```
+The program will write three files in the *[output-directory]* :
+1. *f.txt* : the  estimated 3x3 fundamental matrix
+2. *inliers0.txt*: inlier points from first image
+3. *inliers1.txt*: inlier points from second image
+
 ## Licensing
 Please refer to the accompanying [LICENSE](LICENSE) file for more information.
 
