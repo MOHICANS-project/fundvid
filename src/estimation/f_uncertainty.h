@@ -33,8 +33,9 @@ public:
 	 * @param _sigma standard deviation used in epipolar band covariance
 	 */
 	FUncertainty(Eigen::Matrix3d _F,Eigen::Matrix<double,9,9> _Cov,double _sigma):
-			F(_F),Cov(_Cov),sigma(_sigma){};
-	virtual ~FUncertainty(){};
+			F(_F), Cov(_Cov), sigma(_sigma) {}
+
+	virtual ~FUncertainty() {}
 
 	/**
 	 * Evaluates the covariance of the epipolar line drawn from the given point.

@@ -73,16 +73,17 @@ bool checkMatch(Eigen::Vector3d & xp, cv::Mat & Fold, double k_squared, Eigen::M
 void SIFTGuidedMatching::filter_band_matches(const std::vector<cv::KeyPoint> & keys0,const std::vector<cv::KeyPoint> & keys1,const std::vector< std::vector<cv::DMatch> > & initmatches, std::vector< std::vector<cv::DMatch> > & bandmatches, bool cam){
 	Eigen::Matrix3d eF;
 	cv::Mat F;
-	eF=fu.getF();
+	eF = fu->getF();
 	eigen2cv(eF,F);
 	cv::Mat Ftransposed;
 	Ftransposed=F.t();
 	int height=image0.rows;
 	int width=image1.cols;
-    int numlow=0;
-    int numhigh=0;
+
+	//std::vector<std::pair<double,double>> inliersPairs;
+
 	for (size_t i = 0; i < initmatches.size(); ++i) {
-		if(initmatches[i].size()==0)continue;
+		if (initmatches[i].empty())continue;
 		std::vector<cv::DMatch> band;
 		//Mantain only matches inside the band
 		for (size_t mmm = 0; mmm < initmatches[i].size(); ++mmm) {
@@ -95,43 +96,32 @@ void SIFTGuidedMatching::filter_band_matches(const std::vector<cv::KeyPoint> & k
 				point1=keys1[initmatches[i][mmm].queryIdx].pt;
 			}
 
+			//check if close to core point: TO DELETE
 			bool white=false;
-			for (size_t k = 0; k < inliers0.size(); ++k) {
-				if(is_core0[k]){
-					cv::Point2f checkp=inliers0[k];
-					if(((point0.x-checkp.x)*(point0.x-checkp.x)+(point0.y-checkp.y)*(point0.y-checkp.y))<=epsilon*epsilon){
-						white=true;
-						break;
-					}
-				}
-			}
-			if(!white){
-				int count=0;
-				for (size_t k = 0; k < inliers0.size(); ++k) {
-					cv::Point2f checkp=inliers0[k];
-					if(((point0.x-checkp.x)*(point0.x-checkp.x)+(point0.y-checkp.y)*(point0.y-checkp.y))<=epsilon*epsilon){
-						count++;
-					}
-					if(count>=num_pts){
-						white=true;
-						break;
-					}
-				}
-			}
+//			for (size_t k = 0; k < inliers0.size(); ++k) {
+//				if(is_core0[k]){
+//					cv::Point2f checkp=inliers0[k];
+//					if(((point0.x-checkp.x)*(point0.x-checkp.x)+(point0.y-checkp.y)*(point0.y-checkp.y))<=100*100){
+//						white=true;
+//						break;
+//					}
+//				}
+//			}
+
 			if(white){
-				fu.setSigma(sigma_low);
-				fu_inv.setSigma(sigma_low);
-                numlow++;
+				fu->setSigma(sigmaFunction->getMinSigma());
+				fu_inv->setSigma(sigmaFunction->getMinSigma());
 			}else{
-				fu.setSigma(sigma_high);
-				fu_inv.setSigma(sigma_high);
-                numhigh++;
+				double density = densityEstimator->estimateDensity(std::make_pair(point0.x, point0.y));
+				double sigma = sigmaFunction->evaluateSigma(density);
+				fu->setSigma(sigma);
+				fu_inv->setSigma(sigma);
 			}
 
 			Eigen::Vector3d xp;
 			xp << point0.x, point0.y,1;
 			Eigen::Matrix3d Cov_line;
-			fu.getEpipolarLineCovariance(xp,Cov_line);
+			fu->getEpipolarLineCovariance(xp, Cov_line);
 			Eigen::Vector3d xptest;
 			xptest << point1.x, point1.y, 1;
 			if(!checkMatch(xp,F,k_squared,Cov_line,xptest,height,width)){
@@ -145,7 +135,7 @@ void SIFTGuidedMatching::filter_band_matches(const std::vector<cv::KeyPoint> & k
 			Eigen::Vector3d xp2;
 			xp2 << point1.x, point1.y, 1;
 			Eigen::Matrix3d Cov_line2;
-			fu_inv.getEpipolarLineCovariance(xp2,Cov_line2);
+			fu_inv->getEpipolarLineCovariance(xp2, Cov_line2);
 			Eigen::Vector3d xptest2;
 			xptest2 << point0.x, point0.y, 1;
 			if(!checkMatch(xp2,Ftransposed,k_squared,Cov_line2,xptest2,height,width)){
@@ -157,7 +147,7 @@ void SIFTGuidedMatching::filter_band_matches(const std::vector<cv::KeyPoint> & k
 			}
 			band.push_back(initmatches[i][mmm]);
 		}
-		if(band.size()>0) bandmatches.push_back(band);
+		if (!band.empty()) bandmatches.push_back(band);
 	}
 //#ifdef DEBUG
 //    std::cout << "Sigma high: " << numhigh << " vs Sigma low: " << numlow << std::endl;

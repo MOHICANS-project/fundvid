@@ -16,6 +16,12 @@
 #include <iostream>
 #include <cstdlib>
 #include <regex>
+#include <memory>
+#include <src/density_estimator/kernel_density_estimator.h>
+#include <src/kernels/histogram_kernel.h>
+#include <src/sigma_functions/sigma_step_function.h>
+#include <src/kernels/epanechnikov_kernel.h>
+#include <src/sigma_functions/sigma_sigmoid_function.h>
 
 #include "reader/imagesreader.h"
 #include "reader/boostreader.h"
@@ -34,6 +40,7 @@
  * 	- argv[1] config file
  * 	- argv[2] output folder
  *  - argv[3] experiment number (debug mode only)
+ *  - argv[4] debug folder
  */
 int main(int argc, char **argv) {
 
@@ -44,6 +51,7 @@ int main(int argc, char **argv) {
 		std::cerr<< "2. output folder" << std::endl;
 #ifdef DEBUG
         std::cerr<< "3. experiment number (DEBUG MODE ONLY)" << std::endl;
+        std::cerr << "3. debug folder (DEBUG MODE ONLY)" << std::endl;
 #endif
         return 1;
 	}
@@ -57,7 +65,7 @@ int main(int argc, char **argv) {
 		return 2;
 	}
 
-    int dt=GVars3::GV3::get<double>("dt");
+    int dt = GVars3::GV3::get<int>("dt");
     if(dt<=0){
         std::cerr << "Error in the dt parameter: good values are greater than 0." << std::endl;
         return 3;
@@ -111,6 +119,9 @@ int main(int argc, char **argv) {
 		std::cerr << "Error in the sigma_low parameter: good values are greater than 0." << std::endl;
         return 11;
 	}
+
+    std::string kernel = GVars3::GV3::get<std::string>("kernel");
+
 	int last_frame=GVars3::GV3::get<int>("last_frame");
 	float precision=GVars3::GV3::get<float>("precision");
 
@@ -118,22 +129,46 @@ int main(int argc, char **argv) {
 	//ImagesReader* r1=new ImagesReader(im0f,base,ext,logf);
 	//ImagesReader* r2=new ImagesReader(im1f,base,ext,logf);
 
-    FramesReader* r1=new BoostReader(im0f,ext,base,fname,dt);
-    FramesReader* r2=new BoostReader(im1f,ext,base,fname,dt);
-	
+    std::shared_ptr<FramesReader> r1(new BoostReader(im0f, ext, base, fname, dt));
+    std::shared_ptr<FramesReader> r2(new BoostReader(im1f, ext, base, fname, dt));
+
 	cv::Mat image0,image1;
 	r1->getNextFrame(image0);
 	r2->getNextFrame(image1);
-	FVMatcher::SIFTOpenCVMatcher* in_matcher=new FVMatcher::SIFTOpenCVMatcher(image0,image1,2,true,true,th);
+    std::shared_ptr<FVMatcher::AbstractMatcher> in_matcher(
+            new FVMatcher::SIFTOpenCVMatcher(image0, image1, 2, true, true, th));
 	int height=image0.rows;
 	int width=image1.cols;
-	ORSAEStimator* orsa=new ORSAEStimator(precision,num_iter,height,width);
-	LMFundMatOptimizer* optimizer=new LMFundMatOptimizer(true);
+    std::shared_ptr<AbstractEstimator> orsa(new ORSAEStimator(precision, num_iter, height, width));
+    std::shared_ptr<FundMatOptimizer> optimizer(new LMFundMatOptimizer(true));
+
+    std::unique_ptr<Kernel> kernel_ptr(new HistogramKernel(epsilon));
+    if (kernel == "e")kernel_ptr.reset(new EpanechnikovKernel(epsilon));
+
+#ifdef DEBUG
+    kernel_ptr->declare();
+#endif
 
 
-    FundamentalMatSolver* solver=new FundamentalMatSolver(r1,r2,in_matcher,orsa,optimizer,alpha,num_pts,epsilon,sigma_high,sigma_low,depth,th,last_frame);
+    std::shared_ptr<DensityEstimator> densityEstimator(new KernelDensityEstimator(std::move(kernel_ptr), epsilon));
+
+    //estimate crosspoint
+    std::vector<std::pair<double, double>> fakePoints;
+    for (int i = 0; i < num_pts; i++)fakePoints.emplace_back(0.0, epsilon / 2);
+    densityEstimator->initEstimator(fakePoints);
+    double crosspoint = densityEstimator->estimateDensity(std::make_pair(0.0, 0.0));
+    std::cout << "Cross point density: " << crosspoint << std::endl;
+
+    //std::shared_ptr<SigmaFunction> sigmaFunction(new SigmaStepFunction(sigma_low,sigma_high,crosspoint));
+    double steepness = (2.0 / crosspoint) * log(0.99 / 0.01);
+    std::shared_ptr<SigmaFunction> sigmaFunction(
+            new SigmaSigmoidFunction(sigma_low, sigma_high, crosspoint, steepness));
+
+    auto solver = new FundamentalMatSolver(r1, r2, in_matcher, orsa, optimizer, densityEstimator, sigmaFunction, alpha,
+                                           depth, th, last_frame);
 #ifdef DEBUG
     solver->setExperimentNumber(atoi(argv[3]));
+    if (argc >= 5)solver->setDebugFolder(argv[4]); else solver->setDebugFolder("debug");
 #endif
 
     try{

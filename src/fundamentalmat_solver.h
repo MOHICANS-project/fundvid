@@ -12,6 +12,9 @@
 #include "reader/frames_reader.h"
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
+#include <src/density_estimator/density_estimator.h>
+#include <src/sigma_functions/sigma_function.h>
+#include <memory>
 
 #include "matchers/abstract_matcher.h"
 
@@ -25,85 +28,93 @@
 
 class FundamentalMatSolver {
 
-	FramesReader* r1;
-	FramesReader* r2;
-	FVMatcher::AbstractMatcher* init_matcher;
-	AbstractEstimator* estimator;
-	FundMatOptimizer* optimizer;
+    std::shared_ptr<FramesReader> r1;
+    std::shared_ptr<FramesReader> r2;
+    std::shared_ptr<FVMatcher::AbstractMatcher> init_matcher;
+    std::shared_ptr<AbstractEstimator> estimator;
+    std::shared_ptr<FundMatOptimizer> optimizer;
+    std::shared_ptr<DensityEstimator> densityEstimator;
+    std::shared_ptr<SigmaFunction> sigmaFunction;
 
-	double alpha;
-	int num_pts;
-	double epsilon;
-	double sigma_high;
-	double sigma_low;
-	int depth;
-	double th;
-	int last_frame;
+    double alpha;
+    int depth;
+    double th;
+    int last_frame;
 
-	std::vector<cv::Point2f> inliers_image0;
-	std::vector<cv::Point2f> inliers_image1;
+    std::vector<cv::Point2f> inliers_image0;
+    std::vector<cv::Point2f> inliers_image1;
 
 #ifdef DEBUG
     int experiment_number;
+    std::string debug_folder;
 #endif
 
-	void refinement(const cv::vector<cv::Point2f> & inl0,const cv::vector<cv::Point2f> & inl1,Eigen::Matrix3d & eF);
-	void labelCorePoints(const std::vector<cv::Point2f> & matches,std::vector<bool> & is_core);
+    void refinement(const cv::vector<cv::Point2f> &inl0, const cv::vector<cv::Point2f> &inl1, Eigen::Matrix3d &eF);
+
+    void labelCorePoints(const std::vector<cv::Point2f> &matches, std::vector<bool> &is_core);
 
 public:
-	/**
-	 * FundamentalMatSolver constructor.
-	 * @param _r1 frame reader for camera 1
-	 * @param _r2 frame reader for camera 2
-	 * @param _init_matcher matcher for initial fundamental matrix estimation
-	 * @param _estimator fundamental matrix estimator
-	 * @param _optimizer generic fundamental matrix optimizer
-	 * @param _alpha confidence level epipolar band
-	 * @param _num_pts clustering parameter (min number of neighbors)
-	 * @param _epsilon clustering parameter (radius of the neighborhood)
-	 * @param _sigma_high std for highly confident epipolar bands
-	 * @param _sigma_low std for lowly confident epipolar bands
-	 * @param _depth depth of the SIFT knn matcher
-	 * @param _th SIFT ratio threshold
-	 * @param _last_frame last frame to be processed
-	 */
-	FundamentalMatSolver(FramesReader* _r1,FramesReader* _r2,FVMatcher::AbstractMatcher* _init_matcher,AbstractEstimator* _estimator,FundMatOptimizer* _optimizer,double _alpha, int _num_pts, double _epsilon, double _sigma_high, double _sigma_low,int _depth,double _th,int _last_frame):
-								r1(_r1),r2(_r2),init_matcher(_init_matcher),estimator(_estimator),optimizer(_optimizer),alpha(_alpha),num_pts(_num_pts),epsilon(_epsilon),sigma_high(_sigma_high),sigma_low(_sigma_low),depth(_depth),th(_th),last_frame(_last_frame){};
+    /**
+     * FundamentalMatSolver constructor.
+     * @param _r1 frame reader for camera 1
+     * @param _r2 frame reader for camera 2
+     * @param _init_matcher matcher for initial fundamental matrix estimation
+     * @param _estimator fundamental matrix estimator
+     * @param _optimizer generic fundamental matrix optimizer
+     * @param densityEstimator estimate inliers local density
+     * @param sigmaFunction provides a value for sigma as a function of the local density
+     * @param _alpha confidence level epipolar band
+     * @param _depth depth of the SIFT knn matcher
+     * @param _th SIFT ratio threshold
+     * @param _last_frame last frame to be processed
+     */
+    FundamentalMatSolver(std::shared_ptr<FramesReader> &r1,
+                         std::shared_ptr<FramesReader> &r2,
+                         std::shared_ptr<FVMatcher::AbstractMatcher> &init_matcher,
+                         std::shared_ptr<AbstractEstimator> &estimator,
+                         std::shared_ptr<FundMatOptimizer> &optimizer,
+                         std::shared_ptr<DensityEstimator> &densityEstimator,
+                         std::shared_ptr<SigmaFunction> &sigmaFunction, double _alpha, int _depth,
+                         double _th, int _last_frame) :
+            r1(r1), r2(r2), init_matcher(init_matcher),
+            estimator(estimator), optimizer(optimizer),
+            densityEstimator(densityEstimator), sigmaFunction(sigmaFunction), alpha(_alpha),
+            depth(_depth), th(_th), last_frame(_last_frame) {};
 
-	virtual ~FundamentalMatSolver(){
-		delete r1;
-		delete r2;
-		delete init_matcher;
-		delete estimator;
-		delete optimizer;
-	};
+    virtual ~FundamentalMatSolver() = default;
 
-	/**
-	 * Solve the fundamental matrix iterative estimation problem.
-	 * @return the fundamental matrix computed at last iteration
-	 */
-	 cv::Mat solve();
+    /**
+     * Solve the fundamental matrix iterative estimation problem.
+     * @return the fundamental matrix computed at last iteration
+     */
+    cv::Mat solve();
 
-	 /**
-	  * Inliers from image 0 getter.
-	  * @return the vector of inlier points of image 0 found at the last estimation.
-	  */
-	const std::vector<cv::Point2f>& getInliersImage0() const {
-		return inliers_image0;
-	}
+    /**
+     * Inliers from image 0 getter.
+     * @return the vector of inlier points of image 0 found at the last estimation.
+     */
+    const std::vector<cv::Point2f> &getInliersImage0() const {
+        return inliers_image0;
+    }
 
-	/**
-	  * Inliers from image 1 getter.
-	  * @return the vector of inlier points of image 1 found at the last estimation.
-	  */
-	const std::vector<cv::Point2f>& getInliersImage1() const {
-		return inliers_image1;
-	}
+    /**
+      * Inliers from image 1 getter.
+      * @return the vector of inlier points of image 1 found at the last estimation.
+      */
+    const std::vector<cv::Point2f> &getInliersImage1() const {
+        return inliers_image1;
+    }
 
 #ifdef DEBUG
-    void setExperimentNumber(int _experiment_number){
-        experiment_number=_experiment_number;
+
+    void setExperimentNumber(int _experiment_number) {
+        experiment_number = _experiment_number;
     }
+
+    void setDebugFolder(char *folder) {
+        debug_folder = std::string(folder);
+    }
+
 #endif
 };
 

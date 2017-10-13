@@ -152,6 +152,7 @@ set(CMAKE_CXX_FLAGS "-Wall -O3 -mssse3 -fpermissive -pthread")
 add_definitions(-DVL_DISABLE_AVX=1)
 
 include_directories(src/reader)
+include_directories(src/test)
 include_directories(src/matchers)
 include_directories(src/estimation)
 include_directories(src/exceptions)
@@ -165,12 +166,21 @@ file(GLOB Misc src/exceptions/optimization_exception.cpp src/estimation/orsa_est
 
 ADD_LIBRARY(myIO SHARED ${IO})
 ADD_LIBRARY(myMatch SHARED ${Match})
-ADD_LIBRARY(myMisc SHARED ${Misc})
+ADD_LIBRARY(myMisc SHARED ${Misc} src/sigma_functions/sigma_step_function.cpp src/sigma_functions/sigma_step_function.h src/sigma_functions/sigma_function.h src/sigma_functions/sigma_sigmoid_function.cpp src/sigma_functions/sigma_sigmoid_function.h src/density_estimator/density_estimator.h src/density_estimator/kernel_density_estimator.cpp src/density_estimator/kernel_density_estimator.h src/kernels/kernel.h src/kernels/epanechnikov_kernel.cpp src/kernels/epanechnikov_kernel.h src/kernels/histogram_kernel.cpp src/kernels/histogram_kernel.h)
 
 ADD_EXECUTABLE(
   estimate_fundamental
   src/main.cpp
 )
+
+ADD_EXECUTABLE(
+        density_test
+        src/test/density_test.cpp
+        src/kernels/kernel.h)
+
+ADD_EXECUTABLE(
+        density_map_test
+        src/test/density_map_test.cpp)
 
 TARGET_LINK_LIBRARIES(
   estimate_fundamental
@@ -187,6 +197,21 @@ TARGET_LINK_LIBRARIES(
   ${OpenCV_LIBS}
   boost_system
   boost_filesystem
+)
+
+TARGET_LINK_LIBRARIES(
+        density_map_test
+        myMisc
+        Orsa
+        levmar
+        GVars3
+        ${CONFIG++_LIBRARY}
+        ${EXTRA_LIBS}
+        ${LIBS}
+        ${OPENCV_LIBRARIES}
+        ${OpenCV_LIBS}
+        myIO
+        myMatch
 )
 
 

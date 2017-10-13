@@ -26,7 +26,7 @@ class SIFTOpenCVMatcher : public AbstractMatcher{
 	int depth;
 	bool sym;
 	bool apply_th;
-	float th;
+	double th;
 
 
 public:
@@ -39,10 +39,13 @@ public:
 	 * @param _apply_th set to "true" if SIFT threshold has to be applied
 	 * @param _th SIFT threshold
 	 */
-	SIFTOpenCVMatcher(cv::Mat & _image0,cv::Mat & _image1,int _depth=2,bool _sym=false,bool _apply_th=true,float _th=0.8f):
+	SIFTOpenCVMatcher(cv::Mat &_image0, cv::Mat &_image1, int _depth = 2, bool _sym = false, bool _apply_th = true,
+					  double _th = 0.8) :
 														image0(_image0),image1(_image1),depth(_depth>=2?_depth:2),sym(_sym),apply_th(_apply_th),th(_th>0&&_th<1?_th:0.8){};
-	virtual ~SIFTOpenCVMatcher(){};
-	std::vector<FVMatcher::FVMatch> computeMatches();
+
+	~SIFTOpenCVMatcher() override = default;;
+
+	std::vector<FVMatcher::FVMatch> computeMatches() override;
 };
 
 } /* namespace FVMatcher */
