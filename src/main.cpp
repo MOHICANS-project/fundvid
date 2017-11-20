@@ -182,7 +182,13 @@ int main(int argc, char **argv) {
 #endif
 
     try{
-		cv::Mat Fsol=solver->solve();
+
+        cv::FileStorage fs("/mnt/dfb2ead7-9641-4658-8517-aee3c9acb560/Hamlyn-undistorted/F.xml", cv::FileStorage::READ);
+        cv::Mat Finit;
+        fs["Fundamental"] >> Finit;
+        fs.release();
+
+        cv::Mat Fsol = solver->solve(Finit);
 		std::ofstream out;
 		std::string outfolder(argv[2]);
 		std::string outfundamental=outfolder+"/f.txt";
