@@ -131,7 +131,7 @@ void saveInliersPercentages(std::vector<double> percs, int expnum, const std::st
 }
 
 
-cv::Mat FundamentalMatSolver::solve(){
+cv::Mat FundamentalMatSolver::solve(const cv::Mat &Finit) {
 
 
 	cv::initModule_nonfree();
@@ -156,7 +156,44 @@ cv::Mat FundamentalMatSolver::solve(){
         exit(1);
     }
 	cv::Mat F;
+    Eigen::Matrix3d eF;
 	F=cv::Mat::zeros(3,3,cv::DataType<double>::type);
+    Eigen::Matrix<double, 9, 9> ecurrentCov;
+    cv::Mat image0, image1;
+    if (cv::norm(Finit) > 0) {
+        size_t target = ptt0.size();
+        ptt0.clear();
+        ptt1.clear();
+#ifdef DEBUG
+        std::cout << "Estimating with init F: target number of matches is " << target << std::endl;
+#endif
+        F = Finit;
+        cv2eigen(F, eF);
+        ecurrentCov = Eigen::Matrix<double, 9, 9>::Zero();
+        std::vector<std::pair<double, double>> empty;
+        densityEstimator->initEstimator(empty);
+        while (ptt0.size() < target && r1->getNextFrame(image0) && r2->getNextFrame(image1)) {
+            std::shared_ptr<FUncertainty> func(new FUncertainty(eF, ecurrentCov, image0.cols));
+            Eigen::Matrix3d eFoldtransposed = eF.transpose() * 1;
+            Eigen::Matrix<double, 9, 9> eCovoldtransposed;
+            permuteCov(ecurrentCov, permutation, eCovoldtransposed);
+            std::shared_ptr<FUncertainty> func2(new FUncertainty(eFoldtransposed, eCovoldtransposed, image0.cols));
+            FVMatcher::SIFTGuidedMatching guided = FVMatcher::SIFTGuidedMatching(func, func2, image0, image1,
+                                                                                 ptt0, ptt1,
+                                                                                 std::vector<bool>(ptt0.size(), false),
+                                                                                 std::vector<bool>(ptt0.size(), false),
+                                                                                 densityEstimator, sigmaFunction,
+                                                                                 depth, th, k_squared);
+            std::vector<FVMatcher::FVMatch> new_matches = guided.computeMatches();
+            std::vector<cv::Point2f> new_p0;
+            std::vector<cv::Point2f> new_p1;
+            rawToPoint2f(new_matches, new_p0, new_p1);
+            for (size_t i = 0; i < new_p0.size(); ++i) {
+                ptt0.push_back(new_p0[i]);
+                ptt1.push_back(new_p1[i]);
+            }
+        }
+    }
 
 	std::vector<bool> mask(ptt0.size());
 	try{
@@ -164,8 +201,8 @@ cv::Mat FundamentalMatSolver::solve(){
 	}catch(EstimationErrorException & e){
 		throw e;
 	}
-	Eigen::Matrix3d eF;
-	cv2eigen(F,eF);
+
+    cv2eigen(F, eF);
 
 	//Select only inliers as current matches set
 	std::vector<cv::Point2f> currentMatches0;
@@ -193,8 +230,8 @@ cv::Mat FundamentalMatSolver::solve(){
 	saveInliersxml(currentMatches0, currentMatches1, r1->getFrameIndex(), experiment_number, debug_folder);
 #endif
 
-	Eigen::Matrix<double,9,9> ecurrentCov;
-	double raw_covar[9][9];
+
+    double raw_covar[9][9];
 	optimizer->getCovarF(raw_covar);
 	for (size_t i = 0; i < 9; ++i) {
 		for (size_t j = 0; j < 9; ++j) {
@@ -204,9 +241,8 @@ cv::Mat FundamentalMatSolver::solve(){
 	cv::Mat currentCov=cv::Mat(9,9, CV_64FC1);
 	eigen2cv(ecurrentCov,currentCov);
 
-	cv::Mat image0,image1;
 
-	inliers_image0.clear();
+    inliers_image0.clear();
 	inliers_image1.clear();
 	for (size_t i = 0; i < currentMatches0.size(); ++i) {
 		inliers_image0.push_back(currentMatches0[i]);

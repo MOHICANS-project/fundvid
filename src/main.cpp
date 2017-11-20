@@ -59,11 +59,18 @@ int main(int argc, char **argv) {
 	std::string im1f=GVars3::GV3::get<std::string>("images1_folder");
 	//std::string logf=GVars3::GV3::get<std::string>("log_path");
 
-	std::string fname=GVars3::GV3::get<std::string>("first_img_name");
-    if(!std::regex_match(fname.c_str(),std::regex("[A-Za-z_]+\\d+[.]{1}\\w+"))){
-		std::cerr << "Image file name formatting error" << std::endl;
-		return 2;
-	}
+    std::string fname1 = GVars3::GV3::get<std::string>("first_img_name0");
+    if (!std::regex_match(fname1.c_str(), std::regex(R"([A-Za-z_\d]+[\-]*+(\d+)[.]{1}\w+)"))) {
+        std::cerr << "Image file name 0 formatting error" << std::endl;
+        return 2;
+    }
+
+
+    std::string fname2 = GVars3::GV3::get<std::string>("first_img_name1");
+    if (!std::regex_match(fname2.c_str(), std::regex(R"([A-Za-z_\d]+[\-]*+(\d+)[.]{1}\w+)"))) {
+        std::cerr << "Image file name 1 formatting error" << std::endl;
+        return 2;
+    }
 
     int dt = GVars3::GV3::get<int>("dt");
     if(dt<=0){
@@ -71,12 +78,15 @@ int main(int argc, char **argv) {
         return 3;
     }
 
-	std::smatch match;
-    std::regex_search(fname,match,std::regex("([A-Za-z_]+)\\d+[.]{1}\\w+"));
-	std::string base=match[1].str();
-	std::smatch match2;
-    std::regex_search(fname,match2,std::regex("[A-Za-z_]+\\d+[.]{1}(\\w+)"));
-	std::string ext=match2[1].str();
+//	std::smatch match;
+//    std::regex_search(fname,match,std::regex("([A-Za-z_]+)\\d+[.]{1}\\w+"));
+//	std::string base=match[1].str();
+//	std::smatch match2;
+//    std::regex_search(fname,match2,std::regex("[A-Za-z_]+\\d+[.]{1}(\\w+)"));
+//	std::string ext=match2[1].str();
+
+    std::string base = GVars3::GV3::get<std::string>("base");
+    std::string ext = GVars3::GV3::get<std::string>("extension");
 
 	double alpha=GVars3::GV3::get<double>("alpha");
 	if(alpha<=0 || alpha>=1) {
@@ -129,8 +139,8 @@ int main(int argc, char **argv) {
 	//ImagesReader* r1=new ImagesReader(im0f,base,ext,logf);
 	//ImagesReader* r2=new ImagesReader(im1f,base,ext,logf);
 
-    std::shared_ptr<FramesReader> r1(new BoostReader(im0f, ext, base, fname, dt));
-    std::shared_ptr<FramesReader> r2(new BoostReader(im1f, ext, base, fname, dt));
+    std::shared_ptr<FramesReader> r1(new BoostReader(im0f, ext, base, fname1, dt));
+    std::shared_ptr<FramesReader> r2(new BoostReader(im1f, ext, base, fname1, dt));
 
 	cv::Mat image0,image1;
 	r1->getNextFrame(image0);

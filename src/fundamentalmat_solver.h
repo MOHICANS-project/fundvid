@@ -87,7 +87,7 @@ public:
      * Solve the fundamental matrix iterative estimation problem.
      * @return the fundamental matrix computed at last iteration
      */
-    cv::Mat solve();
+    cv::Mat solve(const cv::Mat &Finit = cv::Mat::zeros(3, 3, cv::DataType<double>::type));
 
     /**
      * Inliers from image 0 getter.

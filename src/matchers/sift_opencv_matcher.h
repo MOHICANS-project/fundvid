@@ -43,7 +43,7 @@ public:
 					  double _th = 0.8) :
 														image0(_image0),image1(_image1),depth(_depth>=2?_depth:2),sym(_sym),apply_th(_apply_th),th(_th>0&&_th<1?_th:0.8){};
 
-	~SIFTOpenCVMatcher() override = default;;
+	~SIFTOpenCVMatcher() override = default;
 
 	std::vector<FVMatcher::FVMatch> computeMatches() override;
 };
