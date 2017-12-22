@@ -12,6 +12,7 @@
 #include <opencv2/nonfree/nonfree.hpp>
 #include <opencv2/core/eigen.hpp>
 #include <fstream>
+#include <src/sigma_functions/sigma_step_function.h>
 
 #include "src/estimation/f_uncertainty.h"
 #include "src/matchers/sift_guided_matching.h"
@@ -161,10 +162,10 @@ cv::Mat FundamentalMatSolver::solve(const cv::Mat &Finit) {
     Eigen::Matrix<double, 9, 9> ecurrentCov;
     cv::Mat image0, image1;
     if (cv::norm(Finit) > 0) {
-        size_t target = ptt0.size();
+        size_t target = ptt0.size() * 5;
         ptt0.clear();
         ptt1.clear();
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
         std::cout << "Estimating with init F: target number of matches is " << target << std::endl;
 #endif
         F = Finit;
@@ -225,7 +226,7 @@ cv::Mat FundamentalMatSolver::solve(const cv::Mat &Finit) {
 	eigen2cv(eF,F);
 
 
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
 	saveFxml(F, r1->getFrameIndex(), experiment_number, debug_folder);
 	saveInliersxml(currentMatches0, currentMatches1, r1->getFrameIndex(), experiment_number, debug_folder);
 #endif
@@ -290,7 +291,7 @@ cv::Mat FundamentalMatSolver::solve(const cv::Mat &Finit) {
 		std::vector<cv::Point2f> new_p1;
 		rawToPoint2f(new_matches,new_p0,new_p1);
 
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
       std::cout << " Estimating new F with " << currentMatches0.size() << " + " << new_p0.size() << std::endl;
 #endif
 		std::vector<cv::Point2f> tot0;
@@ -327,7 +328,7 @@ cv::Mat FundamentalMatSolver::solve(const cv::Mat &Finit) {
 		inlsperc.push_back(1.0 * numinl / mask2.size());
 
 
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
       std::cout << "Ending up with " << currentMatches0.size() << " inliers"<<std::endl;
 #endif
 
@@ -340,7 +341,7 @@ cv::Mat FundamentalMatSolver::solve(const cv::Mat &Finit) {
 
 		refinement(currentMatches0,currentMatches1,eF);
 		eigen2cv(eF,F);
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
 		saveFxml(F, r1->getFrameIndex(), experiment_number, debug_folder);
 		saveInliersxml(currentMatches0, currentMatches1, r1->getFrameIndex(), experiment_number, debug_folder);
 		//saveInliersxml(tot0,tot1,r1->getFrameIndex(),experiment_number);
@@ -353,7 +354,7 @@ cv::Mat FundamentalMatSolver::solve(const cv::Mat &Finit) {
 		}
 		eigen2cv(ecurrentCov,currentCov);
 	}
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
 	std::cout << "Saving inliers percentages " << std::endl;
 	saveInliersPercentages(inlsperc, experiment_number, debug_folder);
 #endif

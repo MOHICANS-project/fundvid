@@ -17,7 +17,7 @@ public:
     double K(std::pair<double, double> s, const std::vector<std::pair<double, double>> &data) override;
 
     void declare() {
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
         std::cout << "Initialising Histogram Kernel" << std::endl;
 #endif
     }

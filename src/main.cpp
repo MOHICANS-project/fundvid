@@ -49,7 +49,7 @@ int main(int argc, char **argv) {
         std::cerr<< "Wrong number of input arguments :" << std::endl;
 		std::cerr<< "1. configuration file path" << std::endl;
 		std::cerr<< "2. output folder" << std::endl;
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
         std::cerr<< "3. experiment number (DEBUG MODE ONLY)" << std::endl;
         std::cerr << "3. debug folder (DEBUG MODE ONLY)" << std::endl;
 #endif
@@ -155,7 +155,7 @@ int main(int argc, char **argv) {
     std::unique_ptr<Kernel> kernel_ptr(new HistogramKernel(epsilon));
     if (kernel == "e")kernel_ptr.reset(new EpanechnikovKernel(epsilon));
 
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
     kernel_ptr->declare();
 #endif
 
@@ -176,19 +176,20 @@ int main(int argc, char **argv) {
 
     auto solver = new FundamentalMatSolver(r1, r2, in_matcher, orsa, optimizer, densityEstimator, sigmaFunction, alpha,
                                            depth, th, last_frame);
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
     solver->setExperimentNumber(atoi(argv[3]));
     if (argc >= 5)solver->setDebugFolder(argv[4]); else solver->setDebugFolder("debug");
 #endif
 
     try{
 
-        cv::FileStorage fs("/mnt/dfb2ead7-9641-4658-8517-aee3c9acb560/Hamlyn-undistorted/F.xml", cv::FileStorage::READ);
-        cv::Mat Finit;
-        fs["Fundamental"] >> Finit;
-        fs.release();
+        //cv::FileStorage fs("/mnt/dfb2ead7-9641-4658-8517-aee3c9acb560/Hamlyn-undistorted/F.xml", cv::FileStorage::READ);
+        //cv::FileStorage fs("/mnt/dfb2ead7-9641-4658-8517-aee3c9acb560/Hamlyn-undistorted/F.xml", cv::FileStorage::READ);
+        //cv::Mat Finit;
+        //fs["Fundamental"] >> Finit;
+        //fs.release();
 
-        cv::Mat Fsol = solver->solve(Finit);
+        cv::Mat Fsol = solver->solve();
 		std::ofstream out;
 		std::string outfolder(argv[2]);
 		std::string outfundamental=outfolder+"/f.txt";

@@ -15,7 +15,7 @@ using namespace boost::filesystem;
 int BoostReader::getImageIndex(std::string imagename)
 {
     std::smatch match;
-    std::regex_search(imagename, match, std::regex(R"([A-Za-z_\d]+[\-]*+(\d+)[.]{1}\w+)"));
+    std::regex_search(imagename, match, std::regex(R"([A-Za-z]+[\-_]*+(\d+)[.]{1}\w+)"));
     std::string idx=match[1].str();
     //frame_index=stoi(idx);
     return stoi(idx);
@@ -51,6 +51,9 @@ BoostReader::BoostReader(std::string _folder, std::string _extension, std::strin
 				std::sort(imageNames.begin(), imageNames.end(), doj::alphanum_less<std::string>());
 
                 for(auto & name : imageNames) {
+#ifdef ENABLE_DEBUG
+                    std::cout << name << " " << getImageIndex(name) << std::endl;
+#endif
                    frameIndices.push_back(getImageIndex(name));
                 }
 

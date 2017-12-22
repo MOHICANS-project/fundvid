@@ -44,7 +44,7 @@ class FundamentalMatSolver {
     std::vector<cv::Point2f> inliers_image0;
     std::vector<cv::Point2f> inliers_image1;
 
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
     int experiment_number;
     std::string debug_folder;
 #endif
@@ -105,7 +105,7 @@ public:
         return inliers_image1;
     }
 
-#ifdef DEBUG
+#ifdef ENABLE_DEBUG
 
     void setExperimentNumber(int _experiment_number) {
         experiment_number = _experiment_number;

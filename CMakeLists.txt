@@ -140,6 +140,7 @@ endif(DOXYGEN_FOUND)
 #Compilation flags
 set(CMAKE_CXX_FLAGS "-Wall -O3 -mssse3 -fpermissive -pthread")
 
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DENABLE_DEBUG")
 
 #Configuration de l'exécutable
 
