@@ -36,7 +36,7 @@ ADD_SUBDIRECTORY(libOrsa)
 ADD_SUBDIRECTORY(extras)
 
 # Demo directory
-ADD_SUBDIRECTORY(demo)
+# ADD_SUBDIRECTORY(demo)
 
 INSTALL(FILES CMakeLists.txt DESTINATION src)
 INSTALL(FILES testing/testing.h DESTINATION src/testing)

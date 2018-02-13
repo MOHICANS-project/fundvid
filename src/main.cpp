@@ -130,8 +130,8 @@ int main(int argc, char **argv) {
         return 11;
 	}
 
-    std::string kernel = GVars3::GV3::get<std::string>("kernel");
 
+    std::string kernel = GVars3::GV3::get<std::string>("kernel");
 	int last_frame=GVars3::GV3::get<int>("last_frame");
 	float precision=GVars3::GV3::get<float>("precision");
 
@@ -177,7 +177,7 @@ int main(int argc, char **argv) {
     auto solver = new FundamentalMatSolver(r1, r2, in_matcher, orsa, optimizer, densityEstimator, sigmaFunction, alpha,
                                            depth, th, last_frame);
 #ifdef ENABLE_DEBUG
-    solver->setExperimentNumber(atoi(argv[3]));
+    if (argc >= 4)solver->setExperimentNumber(atoi(argv[3])); else solver->setExperimentNumber(0);
     if (argc >= 5)solver->setDebugFolder(argv[4]); else solver->setDebugFolder("debug");
 #endif
 
@@ -189,7 +189,33 @@ int main(int argc, char **argv) {
         //fs["Fundamental"] >> Finit;
         //fs.release();
 
-        cv::Mat Fsol = solver->solve();
+        int estimation_mode = GVars3::GV3::get<int>("mode");
+        cv::Mat Fsol;
+        if (estimation_mode > 0) {
+            std::string finit_path = GVars3::GV3::get<std::string>("finit");
+            std::ifstream fff(finit_path);
+            if (!fff.is_open()) {
+                std::cout << "File not found (Finit)" << std::endl;
+                return 1;
+            }
+            double a, b, c, d, e, f, g, h, i;
+            fff >> a >> b >> c >> d >> e >> f >> g >> h >> i;
+            cv::Mat Finit(3, 3, CV_64FC1);
+            Finit.at<double>(0, 0) = a;
+            Finit.at<double>(0, 1) = b;
+            Finit.at<double>(0, 2) = c;
+            Finit.at<double>(1, 0) = d;
+            Finit.at<double>(1, 1) = e;
+            Finit.at<double>(1, 2) = f;
+            Finit.at<double>(2, 0) = g;
+            Finit.at<double>(2, 1) = h;
+            Finit.at<double>(2, 2) = i;
+            fff.close();
+            Fsol = solver->solve(Finit);
+        } else {
+            Fsol = solver->solve();
+        }
+
 		std::ofstream out;
 		std::string outfolder(argv[2]);
 		std::string outfundamental=outfolder+"/f.txt";

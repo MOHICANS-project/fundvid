@@ -21,7 +21,7 @@ include_directories(${ZLIB_INCLUDE_DIRS})
 find_package(PNG)
 if(NOT PNG_FOUND)
     add_subdirectory(../../third_party/png ../../third_party/png)
-    d_subdirectory(../third_party/png ../third_party/png)
+    add_subdirectory(../third_party/png ../third_party/png)
 endif(NOT PNG_FOUND)
 include_directories(${PNG_INCLUDE_DIRS})
 
