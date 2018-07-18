@@ -2,6 +2,7 @@
 // Created by nicola on 04/10/17.
 //
 #include <boost/geometry.hpp>
+#include <iostream>
 
 
 #include <boost/geometry/index/rtree.hpp>

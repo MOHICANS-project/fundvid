@@ -183,6 +183,10 @@ ADD_EXECUTABLE(
         density_map_test
         src/test/density_map_test.cpp)
 
+ADD_EXECUTABLE(
+        matchPointsXml
+        src/gt_annotation/matchPointsXml.cc)
+
 TARGET_LINK_LIBRARIES(
   estimate_fundamental
   myIO
@@ -215,6 +219,11 @@ TARGET_LINK_LIBRARIES(
         myMatch
 )
 
+TARGET_LINK_LIBRARIES(
+        matchPointsXml
+        ${OPENCV_LIBRARIES}
+        ${OpenCV_LIBS}
+)
 
 foreach(dir ${DIRS})
   FILE(GLOB files ${dir}/*.h*)

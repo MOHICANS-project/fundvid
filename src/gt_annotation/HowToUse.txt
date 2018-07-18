@@ -1,0 +1,10 @@
+Workflow: 
+
+1) click on a bucket in the first image (you may keep clicking and changing the bucket)
+2) press SPACE once you decide on what bucket to work, the bucked is now selected
+3) in the small window with the zoomed bucked, click on 
+ - 'f' to start selecting the required number of control points 
+ - 'p' to select (as a polygon) in a rectangular bucket only the subarea which is visible in the other view 
+ - 'd' - mark the bucket as entirely not visible (no points will be required for labeling it)
+4) click on the corresponding bucket in the second image, and press SPACE when the corresponding point is clicked (a match notification will appear in the console)
+
